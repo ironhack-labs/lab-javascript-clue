@@ -119,3 +119,219 @@ var rope = {
 - [20 Mind-blowing facts about Cluedo.](http://whatculture.com/offbeat/20-mind-blowing-facts-you-didnt-know-about-cluedo)
 - [Wikipedia](https://en.wikipedia.org/wiki/Cluedo)
 - [Data Structures: Objects and Arrays](http://eloquentjavascript.net/04_data.html)
+
+Cluedo.js
+
+var cards = {
+  suspects: [
+      {
+      name: "Jacob Green",
+      cardColor: "green",
+      History: "He has a lot of connections and is always willing to help people out -- for a price."
+      },
+      {
+      name: "Doctor Orchid",
+      cardColor: "white",
+      History: "She is the adopted daugther of Mr. Boddy, a biologist with a PhD in plant toxicology. She was privately educated in Switzerland until her expulsion after an incident involving daffodils resulted in a near-fatal poisoning (Wonder what happened with Mrs. White?)."
+    },
+      {
+      name: "Victor Plum",
+      cardColor: "purple",
+      History: "He is a billionaire video game designer who is embracing his new popularity."
+    },
+   {
+      name: "Kasandra Scarlet",
+      cardColor: "red",
+      History: "She is an A-list movie star whose past haunts her."
+    },
+   {
+      name: "Eleanor Peacock",
+      cardColor: "blue",
+      History: "She is from a wealthy family and uses her status and money to earn popularity."
+    },
+    {
+      name: "Jack Mustard",
+      cardColor: "yellow",
+      History: "He is a former football player who tries to get by on his former glory."}
+
+  ],
+
+ rooms: [
+   {
+     name: "Dining Room",
+     usedFor: "eating",
+     size: "large"
+    },
+
+    {
+      name: "Conservatory",
+      usedFor: "consering",
+      size: "medium"
+    },
+
+    {
+      name: "Kitchen",
+      usedFor: "cooking",
+      size: "small"
+    },
+
+     {
+      name: "Study",
+      usedFor: "studying",
+      size: "small"
+    },
+
+     {
+      name: "Library",
+      usedFor: "reading",
+      size: "large"
+    },  
+
+    {
+      name: "Billiard Room",
+      usedFor: "playing",
+      size: "small"
+    },
+
+    {
+      name: "Lounge",
+      usedFor: "lounging",
+      size: "medium"
+    },
+
+    {
+      name: "Ballroom",
+      usedFor: "balls",
+      size: "tiny"
+    },
+
+     {
+      name: "Hall",
+      usedFor: "waiting",
+      size: "large"
+    },
+
+    {
+      name: "spa",
+      usedFor: "relaxing",
+      size: "small"
+    },
+
+    {
+      name: "Living room",
+      usedFor: "Living",
+      size: "small"
+    },
+
+     {
+      name: "Observatory",
+      usedFor: "observing",
+      size: "large"
+    },
+
+   {
+      name: "Theatre",
+      usedFor: "watching",
+      size: "small"
+    },
+
+    {
+      name: "Guest House",
+      usedFor: "housing",
+      size: "small"
+    },
+
+     {
+      name: "patio",
+      usedFor: "sunning",
+      size: "huge"
+    }
+ ],
+   weapons: [ {
+      name: "Rope",
+      use: ["tying", "strangling"]
+    },
+    {
+      name: "Knife",
+      use: ["stab", "cut"]
+    },
+
+    {
+      name: "Candlestick",
+      use: "decorational"
+    },
+
+    {
+      name: "Dumbbell",
+      use: "excercise"
+    },
+
+    {
+      name: "Poison",
+      use: "descreet"
+    },
+
+    {
+      name: "Axe",
+      use: "chopping"
+    },
+
+    {
+      name: "Bat",
+      use: "sport"
+    },
+
+    {
+      name: "Trophy",
+      use: "decorational"
+    },
+
+    {
+      name: "Pistol",
+      use: "shooting"
+    }
+  ]
+};  
+
+function pickRandom(deck) {
+return deck[Math.floor(Math.random() * (deck.length))].name
+
+}
+
+var suspectName = pickRandom(cards.suspects)
+var roomName = pickRandom(cards.rooms)
+var weaponName = pickRandom(cards.weapons)
+// console.log(weaponName, roomName, suspectName);
+
+cardHolder = []
+
+cardHolder.push(suspectName, roomName, weaponName);
+// console.log(cardHolder);
+
+function getNewCard(cardAtRandom) {
+  // cards.suspects.forEach(function(sus) {
+  //   // console.log('sus:', suspectName);  
+  //   cards.rooms.forEach(function(rooms) {
+  //     // console.log('rooms:', roomName);
+  //     cards.weapons.forEach(function(weapons) {
+  //       // console.log('weapons:', weaponName);
+  //     })
+  //   })
+  // })
+return cardHolder;
+
+}
+getNewCard()
+
+var caseFileConfidential = getNewCard()
+
+// console.log(caseFileConfidential);
+
+function mysteryReveal(whoDidIt) {
+  console.log("The murderer is " + caseFileConfidential[0] + ".");
+  console.log("The murder took place in the " + caseFileConfidential[1]);
+  console.log("with a " + caseFileConfidential[2] + " as a weapon.")
+  return ("Cluedo: classified information");
+}
+
+mysteryReveal()
