@@ -63,64 +63,55 @@ var wapons = [
 Rope: {
 Weight: 100,
 Color: "blue",
-Damage: 200
-}
+Damage: 200 }
 } ,
 {
 Knife: {
 Weight: 60,
 Color: "white",
-Damage: 80
-}
+Damage: 80 }
 } ,
 {
 Candlestick: {
 Weight: 300,
 Color: "black",
-Damage: 1000
-}
+Damage: 1000}
 } ,
 {
 Dumbbell: {
 Weight: 300,
 Color: "orange",
-Damage: 700
-}
+Damage: 700}
 } ,
 {
 Poison: {
 Weight: 9,
 Color: "pink",
-Damage: 800
-}
+Damage: 800}
 } ,
 {
 Axe: {
 Weight: 5,
 Color: "red",
-Damage: 1
-}
+Damage: 1}
 } ,
 {
 Bat: {
 Weight: 100,
 Color: "blue",
-Damage: 200
-}
+Damage: 200}
 } ,
 {
 Trophy: {
 Weight: 500,
 Color: "pink",
-Damage: 500
-}
+Damage: 500}
 } ,
 {
 Pistol: {
 Weight: 400,
 Color: "green",
-Damage: 500
-}
+Damage: 500}
 }
 ];
 
