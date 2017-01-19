@@ -98,4 +98,14 @@ function randomCard(array){
   return array[Math.floor(Math.random() * array.length)];
 }
 
-console.log(randomCard(characters));
+function giveOutCards(stacks) {
+  var virtualEnvelope = [];
+  for (j=0; j < stacks.length; j++){
+    virtualEnvelope.push(randomCard(stacks[j]));
+  }
+  return virtualEnvelope[0]["firstName"] + " " + virtualEnvelope[0]["lastName"] + " did it with the " + virtualEnvelope[1]["type"] + " in the " + virtualEnvelope[2];
+}
+
+var stacks=[characters,weapons,rooms];
+
+alert(giveOutCards(stacks));
