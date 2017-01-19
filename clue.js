@@ -9,7 +9,7 @@ var cardStack = [
       occupation: "Sales Man"
     },
     drOrchid = {
-      firstName: "Unknown",
+      firstName: "Doctor",
       lastName: "Orchid",
       sex: "Female",
       color: "White",
