@@ -19,3 +19,16 @@ var rooms = [
 ];
 
 var cards = [suspects, weapons, rooms];
+
+function dice(cardType) {
+  var random = Math.random();
+  if (random < 0.33){
+  return cardType[0];
+}
+  else if (random > 0.33 && random < 0.66) {
+    return cardType[1];
+  }
+  else {
+    return cardType[2];
+  }
+}
