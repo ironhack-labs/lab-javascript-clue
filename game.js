@@ -1,6 +1,6 @@
 
 // PEOPLE DATA STRUCTURE
-var clueDo = [
+var clue_do = [
 	[//Suspects
     { firstName: "Jacob",    lastName:"Green",   color: "green",  connections: "yes", helps: "yes", price: "yes", money: "yes", darkPast: "no"},
     { firstName: "Doctor",   lastName:"Orchid",  color: "white",  connections: "no",  helps: "no",  price: "yes", money: "no",  darkPast: "yes"},
