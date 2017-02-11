@@ -1,42 +1,50 @@
+<!doctype html>
+<html lang="en">
 
-<html>
-<script>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <script src="Clue.js"></script>
+  <title>Cluedo</title>
+</head>
+
+<body>
+  <header><h1>Let's play a game of Clue</h1></header>
+  <h1>Here are your cards...</h1>
+  <hr>
+  <table>
+  <tr>
+    <td>
+      <span>
+        <img id ="card1" src="">
+        <p class = "name">CARD 1</p>
+        <p class = "field1">field1</p>
+        <p class = "field2">field</p>
+        <p class = "field3">field</p>
+        <p class = "field4">field</p>
+      </span>
+    </td>
+    <td>
+      <span><img src ="./images/miss-scarlet.jpg">
+        <p class = "name">CARD 1</p>
+        <p class = "field1">field1</p>
+        <p class = "field2">field</p>
+        <p class = "field3">field</p>
+        <p class = "field4">field</p>
+      </span>
+    </td>
+    <td>
+      <span><img src ="./images/colonel-mustard.jpg">
+        <p class = "name">CARD 1</p>
+        <p class = "field1">field1</p>
+        <p class = "field2">field</p>
+        <p class = "field3">field</p>
+        <p class = "field4">field</p>
+      </span>
+    </td>
+  </tr>
+</table>
+<hr>
 
 
-var suspects = [
-  {firstName: "Jacob", lastName: "Green", occupation: "unknown", age: 30, color: "green",
-  description: 'He has a lot of connections and is always willing to help people out -- for a price.'},
-  {firstName: "Doctor", lastName: "Orchid", occupation: "scientist", age: 40, color: "white",
-  description: 'he was privately educated in Switzerland until her expulsion after an incident involving daffodils resulted in a near-fatal poisoning.'}
-];
-
-var weapons = [
-  {weaponName: "Rope", weight: 2, color: "beige", damage: 5},
-  {weaponName: "Knife", weight: 1, color: "silver", damage: 30},
-  {weaponName: "Pistol", weight: 4, color: "black", damage: 100}
-];
-
-var rooms = [
-  {roomName: "Dining room", size: 400, color: "white", secretEntrance: true},
-  {roomName: "Library", size: 500, color: "mahogany", secretEntrance: true},
-  {roomName: "A spa", size: 200, color: "blue", secretEntrance: false}
-];
-
-var cards = [suspects, weapons, rooms];
-
-function dice(cardType) {
-  var random = Math.random();
-  if (random < 0.33){
-  return cardType[0];
-}
-  else if (random > 0.33 && random < 0.66) {
-    return cardType[1];
-  }
-  else {
-    return cardType[2];
-  }
-}
-
-
-</script>
 </html>
