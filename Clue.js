@@ -11,7 +11,7 @@ var cards = [
 
 {weapons: [
   {weaponName: "Rope", weight: 2, color: "beige", damage: 5},
-  {weaponName: "Knife", weight: 1, color: "silver", damage: 30, img: "../images/knife.jpg"},
+  {weaponName: "Knife", weight: 1, color: "silver", damage: 30, img: 0},
   {weaponName: "Pistol", weight: 4, color: "black", damage: 100}
 ]
 },
@@ -24,13 +24,6 @@ var cards = [
 }
 ]
 
-// The real game of clue has dice but we don't need to do this.
-// This function generates a random number 1-12
-// function dice() {
-//   var dice1 = Math.random() * 6.0091;
-//   var dice2 = Math.random() * 7.0037;
-//   return Math.ceil(dice1) + Math.floor(dice2);
-// }
 
 
 var play = confirm("Want to play a game of Cluedo?");
@@ -41,6 +34,10 @@ if (play === true) {
     alert("Alright we won\'t proceed.");
 }
 
+var card1 = ""
+var card2 = ""
+var card3 = ""
+
 function getCards () {
 console.log("First card is...\n  ");
 var card1 = ranCards();
@@ -50,8 +47,7 @@ console.log("\n ...and finally the third card...\n ");
 var card3 = ranCards();
 }
 
-
-
+// var getImg = (imgArr[cards[cardType].suspects[ranSus]])
 
 function ranCards() {
   var cardType = Math.floor((Math.random() * cards.length));
@@ -73,6 +69,17 @@ function ranCards() {
 // }
 
 
-window.onload = function () {
-document.getElementById("card1").src = "${cards[1].weapons[1].img}";
-}
+
+
+
+
+
+
+
+// The real game of clue has dice but we don't need to do this.
+// This function generates a random number 1-12
+// function dice() {
+//   var dice1 = Math.random() * 6.0091;
+//   var dice2 = Math.random() * 7.0037;
+//   return Math.ceil(dice1) + Math.floor(dice2);
+// }
