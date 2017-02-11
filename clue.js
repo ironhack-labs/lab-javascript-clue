@@ -62,14 +62,13 @@ function pickElements() {
     var element = Math.floor(Math.random() * cardStack[i].length);
     selectedElements.push(cardStack[i][element]);
   }
-
 }
 
 pickElements();
 
 function reveal() {
 var ask = prompt('Would you like to reveal the killer? Yes or no?');
-  //Selecting a victim and making sure victim and killer is not the same.
+  //Selecting a victim and making sure victim and killer are not the same.
   var victim = Math.floor(Math.random() * suspects.length);
   if (suspects[victim] === selectedElements[0] )  {
     console.log('There was a suicide. ' + suspects[victim].firstName + ' ' + suspects[victim].lastName + ' killed theirself. Please reinvestigate case.');
