@@ -1,35 +1,28 @@
-
-
 var cards = [
 { suspects : [
-  {name: "Jacob", lastName: "Green", occupation: "unknown", age: 30, color: "green",
-  description: 'He has a lot of connections and is always willing to help people out -- for a price.'},
-  {name: "Doctor", lastName: "Orchid", occupation: "scientist", age: 40, color: "white",
-  description: 'he was privately educated in Switzerland until her expulsion after an incident involving daffodils resulted in a near-fatal poisoning.'}
+  {name: "Jacob", lastName: "Green", occupation: "unknown", age: 30, color: "green", description: 'He has a lot of connections and is always willing to help people out -- for a price.', img: 14},
+  {name: "Professor", lastName: "Plum", occupation: "scientist", age: 40, color: "white", description: 'he was privately educated in Switzerland until her expulsion after an incident involving daffodils resulted in a near-fatal poisoning.', img: 17}
 ]
 },
 
 {weapons: [
-  {name: "Rope", weight: 2, color: "beige", damage: 5},
-  {name: "Knife", weight: 1, color: "silver", damage: 30, img: 0},
-  {name: "Pistol", weight: 4, color: "black", damage: 100}
+  {name: "Rope", weight: 2, color: "beige", damage: 5, img: 19 },
+  {name: "Knife", weight: 1, color: "silver", damage: 30, img: 8},
+  {name: "Pistol", weight: 4, color: "black", damage: 100, img: 18}
 ]
 },
 
 { rooms: [
-  {name: "Dining room", size: 400, color: "white", secretEntrance: true},
-  {name: "Library", size: 500, color: "mahogany", secretEntrance: true},
-  {name: "A spa", size: 200, color: "blue", secretEntrance: false}
+  {name: "Dining room", size: 400, color: "white", secretEntrance: true, img: 5},
+  {name: "Library", size: 500, color: "mahogany", secretEntrance: true, img: 10},
+  {name: "Conservatory", size: 200, color: "blue", secretEntrance: false, img: 4 }
 ]
 }
 ]
 
-var card1 = ""
-var card2 = ""
-var card3 = ""
-
-
-// var getImg = (imgArr[cards[cardType].suspects[ranSus]])
+var card1 = "";
+var card2 = "";
+var card3 = "";
 
 function ranCards() {
   var cardType = Math.floor((Math.random() * cards.length));
@@ -66,28 +59,21 @@ function ranCards() {
   if (play === true) {
       alert("\n Ok lets play the game of Cluedo open the console...\n Let\'s pick up three cards." );
       getCards();
-      alert("\n Ok, I put the cards in the Case File... it\'s confidential")
+      alert("\n Ok, lets put the cards in the Case File... it\'s confidential")
   } else {
       alert("Alright we won\'t proceed.");
-  }
-
+}
   var reveal = confirm("Would you like to reveal the cards in the Case File?");
   if (reveal === true) {
     alert ("\n Alright take a look at the console for the big reveal");
     printCards();
+    setTimeout(delayme, 25);
+    function delayme() {
+    imgLoader();
+    }
   } else {
     alert("We will keep the cards in the Case File, it is confidential after all");
   }
-
-//   var ranElement = Math.floor((Math.random() * type.length));
-//   return type[ranElement];
-// }
-
-
-
-
-
-
 
 
 
