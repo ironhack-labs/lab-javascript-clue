@@ -68,9 +68,8 @@
 
 
 function randomCard(key){
-    var chosenCard = Object.keys(key); //this prints out all the keys in the object key
-    var randomNumber = String(Math.floor(Math.random() * Object.keys(key).length) -1);
-    return key[randomNumber] ? key[randomNumber] : randomCard(key);
+    var randomNumber = String(Math.floor(Math.random() * Object.keys(key).length) + 1);
+    return key[randomNumber];
 
 }
 
