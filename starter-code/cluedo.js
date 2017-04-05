@@ -48,9 +48,9 @@ function getEachMace(){
 
 var confidential= getEachMace();
 
-//console.log(confidential);
+console.log(confidential);
 
-//esto lo hacemos para poder poner un estado en las armas por ejemplo, romperla.  
+//esto lo hacemos para poder poner un estado en las armas por ejemplo, romperla.
 
 var weaponElected="";
 weaponElected=prompt("choose the weapon to broke");
