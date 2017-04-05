@@ -39,11 +39,10 @@ var rooms = [
     "A Patio"
 ];
 
+//Function to generate radom number between 0 and maxNumber
 function pickRandomNumber(maxNumber) {
     return Math.floor(Math.random()*maxNumber);
 }
-
-console.log(pickRandomNumber(10));
 
 var character = characters[pickRandomNumber(characters.length)];
 
