@@ -42,7 +42,7 @@ var weapons = {
   getRandomWeapon: function(){
     return this.list[Math.floor(Math.random() * this.list.length)];
   }
-}
+};
 
 
 function select(array) {
@@ -57,8 +57,8 @@ function startGame (){
   cards.push(weapons.getRandomWeapon());
 
   console.log("el asesino es: " + cards[0].firstname);
-  console.log("el arma es: " + cards[1].name);
-  console.log("el asesinato se cometió en: " + cards[2].name);
+  console.log("el asesinato se cometió en: " + cards[1].name);
+  console.log("el arma es: " + cards[2].name);
   return cards;
 }
 
