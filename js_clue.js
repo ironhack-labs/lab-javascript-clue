@@ -234,7 +234,7 @@ var virtualEnvelope = startStacks( cardStacks );
 // Create a method to reveal the mystery.
 function revealMistery( array ) {
 	console.log( "Mr. Boddy was killed by " + array[ 0 ].firstName + " " + array[ 0 ].lastName +
-		" with a " + array[ 1 ].name + " in the " + array[ 2 ].name );
+		" with the weapon " + array[ 1 ].name + " in the " + array[ 2 ].name );
 }
 
 revealMistery( virtualEnvelope );
