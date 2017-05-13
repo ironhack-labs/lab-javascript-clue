@@ -1,7 +1,7 @@
 var cluedo = {
 	suspects: [
 		{name: "Jacob Green", color: "green"},
-		{name: "Dcotor Orchid", color: "white"},
+		{name: "Doctor Orchid", color: "white"},
 		{name: "Victor Plum", color: "purple"},
 		{name: "Kasandra Scarlet", color: "red"},
 		{name: "Eleanor Peacock", color: "blue"},
