@@ -45,19 +45,24 @@ function selectRandom(stack){
 } 
 
 
-function pickCards(){
+function pickCards(game){
 
 	var arr = []
 
-	arr.push(selectRandom(cluedo.suspects), 
-		selectRandom(cluedo.weapons), 
-		selectRandom(cluedo.houseRooms) );
+	Object.keys(game).forEach(function(key){
+		arr.push(selectRandom(game[key]));	
+});
+
+	//arr.push(selectRandom(cluedo.suspects), 
+	//	selectRandom(cluedo.weapons), 
+	//	selectRandom(cluedo.houseRooms) );
 
 	return arr;
+
 }
 
 
-var criminal = pickCards();
+var criminal = pickCards(cluedo);
 
 
 function revealCriminal() {
@@ -71,8 +76,24 @@ function revealCriminal() {
 
     //console.log(pickCards());
 
+//Function to check criminal is ok (you need to delete "var in "pickCards" function)
+
+
+	//console.log(arr);
+
 
 //Function to reveal the criminal 
 
 
+//console.log(arr);
+
 revealCriminal();
+
+
+
+
+
+
+
+
+
