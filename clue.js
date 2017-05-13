@@ -28,12 +28,12 @@ var cluedo = {
 		{name: "Lounge",},
 		{name: "Ballroom",},
 		{name: "Hall",},
-		{name: "A spa",},
+		{name: "spa",},
 		{name: "Living room",},
 		{name: "Observatory",},
 		{name: "Theater",},
 		{name: "Guest house",},
-		{name: "A patio"},
+		{name: "patio"},
 	]
 };
 
