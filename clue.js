@@ -35,29 +35,29 @@ var cluedo = {
 		{name: "Guest house",},
 		{name: "A patio"},
 	]
+};
+
+function selectRandom(stack) {
+  randomNum = Math.floor(Math.random() * (stack.length - 0) + 0);
+  var selectedCard = stack[randomNum];
+  return selectedCard;
+
 }
 
-function selectRandom(stack){
-	 randomNum = Math.floor(Math.random()*(stack.length-0) + 0)
-	var selectedCard = stack[randomNum];
-	return selectedCard;
 
-} 
+function pickCards(game) {
 
+  var arr = [];
 
-function pickCards(game){
+  Object.keys(game).forEach(function(key) {
+    arr.push(selectRandom(game[key]));
+  });
 
-	var arr = []
+  //arr.push(selectRandom(cluedo.suspects),
+  //	selectRandom(cluedo.weapons),
+  //	selectRandom(cluedo.houseRooms) );
 
-	Object.keys(game).forEach(function(key){
-		arr.push(selectRandom(game[key]));	
-});
-
-	//arr.push(selectRandom(cluedo.suspects), 
-	//	selectRandom(cluedo.weapons), 
-	//	selectRandom(cluedo.houseRooms) );
-
-	return arr;
+  return arr;
 
 }
 
@@ -66,34 +66,24 @@ var criminal = pickCards(cluedo);
 
 
 function revealCriminal() {
-	console.log("It turns out that the murderer was " + criminal[0].name +"\n"
-	+ "He killed his victim with " + criminal[1].name + " on the " + criminal[2].name) ;
+  console.log("It turns out that the murderer was " + criminal[0].name + "\nHe killed his victim with " + criminal[1].name + " on the " + criminal[2].name);
 }
 
 
 
 //Function that chooses the cards for the players
 
-    //console.log(pickCards());
+//console.log(pickCards());
 
 //Function to check criminal is ok (you need to delete "var in "pickCards" function)
 
 
-	//console.log(arr);
+//console.log(arr);
 
 
-//Function to reveal the criminal 
+//Function to reveal the criminal
 
 
 //console.log(arr);
 
 revealCriminal();
-
-
-
-
-
-
-
-
-
