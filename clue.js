@@ -12,7 +12,7 @@ var cluedo = {
 		{name: "a Knife", },
 		{name: "a Candlestick", },
 		{name: "a Dumbbell", },
-		{name: "a Poison", },
+		{name: "Poison", },
 		{name: "an Axe", },
 		{name: "a Bat", },
 		{name: "a Trophype", },
@@ -66,7 +66,7 @@ var criminal = pickCards(cluedo);
 
 
 function revealCriminal() {
-  console.log("It turns out that the murderer was " + criminal[0].name + "\nHe killed his victim with " + criminal[1].name + " on the " + criminal[2].name);
+  console.log("It turns out that the murderer was " + criminal[0].name + "." + "\nHe killed his victim with " + criminal[1].name + " in the " + criminal[2].name + ".");
 }
 
 
@@ -75,7 +75,7 @@ function revealCriminal() {
 
 //console.log(pickCards());
 
-//Function to check criminal is ok (you need to delete "var in "pickCards" function)
+//Function to check criminal is ok (you need to delete "var" for arr in "pickCards" function)
 
 
 //console.log(arr);
@@ -83,7 +83,5 @@ function revealCriminal() {
 
 //Function to reveal the criminal
 
-
-//console.log(arr);
 
 revealCriminal();
