@@ -87,18 +87,25 @@ var patio        = { name: "Patio" };
 //Rooms' Collection
 var roomsArray = [];
 roomsArray.push(diningRoom, conservatory, kitchen, study, library, billiardRoom, lounge, ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio);
+
+var mistery = [];
 //Iteration 1. Random mistery
+
 function random_element(array) {
   return array[Math.floor(Math.random()*array.length)]
 }
 
- (random_element(charactersArray));
- (random_element(weaponsArray));
- (random_element(roomsArray));
- 
+
 function pick_mistery() {
+mistery.push((random_element(charactersArray)));
+ mistery.push((random_element(weaponsArray)));
+ mistery.push((random_element(roomsArray)));
+  console.log(mistery);
 }
-function reveal_mistery(mistery) {
+
+pick_mistery();
+
+/* function reveal_mistery(mistery) {
 }
 var mistery_envelope = pick_mistery();
-reveal_mistery(mistery_envelope);
+reveal_mistery(mistery_envelope); */
