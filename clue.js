@@ -100,7 +100,6 @@ function pick_mistery() {
   return caseFileConfidential;
 }
 function reveal_mistery(mistery) {
-  console.log(mistery);
   console.log("El asesino es: "+mistery[0].first_name+" "+mistery[0].last_name+" con el arma: "+mistery[1].name+" en la habitacion: "+mistery[2].name);
 }
 var mistery_envelope = pick_mistery();
