@@ -114,8 +114,8 @@ function pick_mistery() {
 }
 
 function reveal_mistery(mistery) {
-  console.log("The guilty character is " + mistery.suspect +
-              ", who committed the murder in the " + mistery.place + " with the weapon " + mistery.weapon);
+  console.log("The guilty character is Mr/Ms. " + mistery.suspect.last_name +
+              ", who committed the murder in the " + mistery.place.name + " with the weapon " + mistery.weapon.name);
 }
 
 var mistery_envelope = pick_mistery();
