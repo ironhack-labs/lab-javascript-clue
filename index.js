@@ -1,7 +1,7 @@
 //Characters
 var mrGreen = {
   first_name: "Jacob",
-  last_name:  "Green",
+  last_name: "Green",
   color: "green",
   description: "He has a lot of connections",
   age: "45",
@@ -33,7 +33,8 @@ var missScarlet = {
   description: "She is an A-list movie star with a dark past",
   age: "31",
   image: "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
-  occupation: "Actor"};
+  occupation: "Actor"
+};
 var mrsPeacock = {
   first_name: "Eleanor",
   last_name: "Peacock",
@@ -56,43 +57,119 @@ var mrMustard = {
 var charactersArray = [];
 charactersArray.push(mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard);
 // Weapons
-var rope        = { name: "rope", weight: 10 };
-var knife       = { name: "knife", weight: 8 };
-var candlestick = { name: "candlestick", weight: 2 };
-var dumbbell    = { name: "dumbbell", weight: 30 };
-var poison      = { name: "poison", weight: 2 };
-var axe         = { name: "axe", weight: 15 };
-var bat         = { name: "bat", weight: 13 };
-var trophy      = { name: "trophy", weight: 25 };
-var pistol      = { name: "pistol", weight: 20 };
+var rope = {
+  name: "rope",
+  weight: 10
+};
+var knife = {
+  name: "knife",
+  weight: 8
+};
+var candlestick = {
+  name: "candlestick",
+  weight: 2
+};
+var dumbbell = {
+  name: "dumbbell",
+  weight: 30
+};
+var poison = {
+  name: "poison",
+  weight: 2
+};
+var axe = {
+  name: "axe",
+  weight: 15
+};
+var bat = {
+  name: "bat",
+  weight: 13
+};
+var trophy = {
+  name: "trophy",
+  weight: 25
+};
+var pistol = {
+  name: "pistol",
+  weight: 20
+};
 //Weapons' Collection
 var weaponsArray = [];
 weaponsArray.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
 //Rooms
-var diningRoom   = { name: "Dinning Room" };
-var conservatory = { name: "Conservatory" };
-var kitchen      = { name: "Kitchen" };
-var study        = { name: "Study" };
-var library      = { name: "Library" };
-var billiardRoom = { name: "Billiard Room" };
-var lounge       = { name: "Lounge" };
-var ballroom     = { name: "Ballroom" };
-var hall         = { name: "Hall" };
-var spa          = { name: "Spa" };
-var livingRoom   = { name: "Living Room" };
-var observatory  = { name: "Observatory" };
-var theater      = { name: "Theater" };
-var  guestHouse  = { name: "Guest House" };
-var patio        = { name: "Patio" };
+var diningRoom = {
+  name: "Dinning Room"
+};
+var conservatory = {
+  name: "Conservatory"
+};
+var kitchen = {
+  name: "Kitchen"
+};
+var study = {
+  name: "Study"
+};
+var library = {
+  name: "Library"
+};
+var billiardRoom = {
+  name: "Billiard Room"
+};
+var lounge = {
+  name: "Lounge"
+};
+var ballroom = {
+  name: "Ballroom"
+};
+var hall = {
+  name: "Hall"
+};
+var spa = {
+  name: "Spa"
+};
+var livingRoom = {
+  name: "Living Room"
+};
+var observatory = {
+  name: "Observatory"
+};
+var theater = {
+  name: "Theater"
+};
+var guestHouse = {
+  name: "Guest House"
+};
+var patio = {
+  name: "Patio"
+};
 //Rooms' Collection
 var roomsArray = [];
 roomsArray.push(diningRoom, conservatory, kitchen, study, library, billiardRoom, lounge, ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio);
 //Iteration 1. Random mistery
+
+//Exercise 1
 function random_selector(array) {
+  var randomPosition = Math.floor(Math.random() * (array.length));
+  return array[randomPosition];
 }
+
+//Exercise 2 & 3
 function pick_mistery() {
+  var caseConfidential = {
+    "character": random_selector(charactersArray),
+    "weapon": random_selector(weaponsArray),
+    "room": random_selector(roomsArray)
+  };
+  return caseConfidential;
 }
+
+// Exercise 4
 function reveal_mistery(mistery) {
+
+  console.log("The selected character is:", mistery.character);
+  console.log("The selected weapon is:", mistery.weapon);
+  console.log("The selected room is:", mistery.room);
 }
+
 var mistery_envelope = pick_mistery();
 reveal_mistery(mistery_envelope);
