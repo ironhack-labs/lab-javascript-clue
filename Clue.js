@@ -103,14 +103,6 @@ function callRandomSelection(){
   return selection;
 }
 
-function callRandomSelection(){
-  var selection=[];
-  selection.push(random_selector(charactersArray));
-  selection.push(random_selector(roomsArray));
-  selection.push(random_selector(weaponsArray));
-  return selection;
-}
-
 function pick_mistery() {
   var selection = callRandomSelection();
   var envelope = {
