@@ -115,10 +115,7 @@ function selectRandomCard(deck) {
 }
 
 function selectGameCards(decks){
-  var selectedCards = [];
-  decks.forEach(function(deck) {
-    selectedCards.push(selectRandomCard(deck));
-  });
+  var selectedCards = decks.map(selectRandomCard);
   return selectedCards;
 }
 
