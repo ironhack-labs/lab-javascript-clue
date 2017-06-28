@@ -1,0 +1,50 @@
+var listSuspects = [
+  {firstName: "Jacob", lastName: "Green", occupation: "", age: "", description: "his color is green. He has a lot of connections and is always willing to help people out -- for a price."},
+  {firstName: "Doctor", lastName: "Orchid", occupation: "biologist", age: "", description: "her color is white. She is the adopted daugther of Mr. Boddy, a biologist with a PhD in plant toxicology. She was privately educated in Switzerland until her expulsion after an incident involving daffodils resulted in a near-fatal poisoning."},
+  {firstName: "Victor", lastName: "Plum", occupation: "video game designer", age: "", description: "his color is purple. He is a billionaire video game designer who is embracing his new popularity."},
+  {firstName: "Kasandra", lastName: "Scarlet", occupation: "movie star", age: "", description: "her color is red. She is an A-list movie star whose past haunts her."},
+  {firstName: "Eleanor", lastName: "Peacock", occupation: "", age: "", description: "her color is blue. She is from a wealthy family and uses her status and money to earn popularity."},
+  {firstName: "Jack", lastName: "Mustard", occupation: "football player", age: "", description: "his color is yellow. He is a former football player who tries to get by on his former glory."}
+];
+
+var possibleWeapons = [
+  {name: "Rope", weight: "", color: "", pain: ""},
+  {name: "Knife", weight: "", color: "", pain: ""},
+  {name: "Candlestick", weight: "", color: "", pain: ""},
+  {name: "Dumbbell", weight: "", color: "", pain: ""},
+  {name: "Poison", weight: "", color: "", pain: ""},
+  {name: "Axe", weight: "", color: "", pain: ""},
+  {name: "Bat", weight: "", color: "", pain: ""},
+  {name: "Trophy", weight: "", color: "", pain: ""},
+  {name: "Pistol", weight: "", color: "", pain: ""},
+  ];
+
+var houseRooms = [
+  "Dining Room",
+  "Conservator",
+  "Kitchen",
+  "Study",
+  "Library",
+  "Billiard room",
+  "Lounge",
+  "Ballroom",
+  "Hall",
+  "Spa",
+  "Living room",
+  "Observatory",
+  "Theater",
+  "Guest hourse",
+  "A patio",
+];
+
+var killer = listSuspects[Math.floor(Math.random()*(1+(listSuspects.length)-1))];
+var murderWeapon = possibleWeapons[Math.floor(Math.random()*(1+(possibleWeapons.length)-1))];
+var murderRoom = houseRooms[Math.floor(Math.random()*(1+(houseRooms.length)-1))];
+
+var envelope = [
+  killer,
+  murderWeapon,
+  murderRoom
+];
+
+console.log("The murderer is " +envelope[0].firstName+ " " +envelope[0].lastName+ ". The murder weapon is a " +envelope[1].name+ ". The murderer killed the victim in the " +envelope[2]+ ".");
