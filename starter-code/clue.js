@@ -88,11 +88,57 @@ Patio
 
 */
 
-function random_selector(array) {
+var Suspects = [
+  {name:'Victor Plum', color: 'purple', attribute: 'billonaire'},
+  {name:'Jacob Green', color: 'green', attribute: 'willing to help for pice'},
+  {name:'Doctor Orchid', color: 'white', attribute: 'adopted'},
+  {name:'Kasandra Scarlet', color: 'red', attribute: 'haunted past'},
+  {name:'Eleanor Peacock', color: 'blue', attribute: 'wealthy family'},
+  {name:'Jack Mustard', color: 'yellow', attribute: 'former football player'},
+];
 
+var Weapons = [
+  {weapon: 'Rope' , Weight: 10},
+  {weapon: 'Knife', Weight: 8},
+  {weapon: 'Candlestick', Weight: 2},
+  {weapon: 'Dumbbell', Weight: 30},
+  {weapon: 'Poison', Weight: 2},
+  {weapon: 'Axe', Weight: 15},
+  {weapon: 'Bat', Weight: 13},
+  {weapon: 'Trophy', Weight: 25},
+  {weapon: 'Pistol', Weight: 20},
+];
+
+var Rooms = ['Dining Room', 'Conservatory', 'Kitchen', 'Study', 'Library',
+'Billard Room', 'Lounge', 'Ballroom', 'Hall', 'A Spa', 'Living Room', 'Observatory',
+'Theater', 'Guest House', 'A Patio'];
+
+
+
+
+function random_selector(array) {
+  return array[Math.floor(Math.random()*array.length)];
 }
 
+
+
+
 function pick_mistery() {
+  var murderer = random_selector(Suspects);
+  var weapon = random_selector(Weapons);
+  var location = random_selector(Rooms);
+
+  // random_selectors in here
+
+var mystery = {
+        name: murderer,
+        Weapons: weapon,
+        Rooms: location
+    };
+
+    // return a new object with the results of the random_selectors
+    console.log(mystery);
+    return mystery;
 
 }
 
