@@ -121,7 +121,7 @@ var habitaciones=[
     "Observatory",
     "Theater",
     "Guest House",
-    "Patio"]
+    "Patio"];
 
 //Funciones
 
@@ -130,18 +130,17 @@ function random_selector(array) {
       if(numAleatorio == array.length){
         numAleatorio = array.length-1;
       }
-      return numAleatorio
+      return numAleatorio;
 }
 
-var mistery = []
+var mistery = [];
 
 function pick_mistery(array) {
-  mistery[0] = random_selector(suspects)
-  mistery[1] = random_selector(weapons)
-  mistery[2] = random_selector(habitaciones)
+  mistery[0] = suspects[random_selector(suspects)].firstName;
+  mistery[1] = weapons[random_selector(weapons)].name;
+  mistery[2] = habitaciones[random_selector(habitaciones)];
 }
-console.log("El asesino es: " + habitaciones[random_selector(habitaciones)]);
 
-pick_mistery(mistery)
+pick_mistery(mistery);
 
-console.log(mistery)
+console.log("The assasain is "+ mistery[0] + " with a " +mistery[1] +" in the "+mistery[2]);
