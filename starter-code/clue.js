@@ -9,10 +9,6 @@ var characters = [
   age: 45,
   image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
   occupation: "Entrepreneur",
-
-  getName: function() {
-    console.log(this.firstName);
-  },
 },
 
   drOrchid = {
