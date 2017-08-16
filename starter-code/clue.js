@@ -155,7 +155,7 @@ function getRandomArbitrary(max) {
 
 function random_selector(array) {
   var index = getRandomArbitrary(array.length);
-  return array[index]
+  return array[index];
 }
 
 function pick_mistery() {
@@ -163,12 +163,14 @@ function pick_mistery() {
   var wea = random_selector(weapons.possible)
   var roo = random_selector(rooms.places)
   var envelope = {char, wea, roo};
-  return envelope
+  return envelope;
 }
 
 function reveal_mistery(mistery) {
-  
+  return "The character" + mistery.char.firstName + " " + mistery.char.lastName +
+         " killed with a " + mistery.wea.name + " in the " + mistery.roo.name;
 }
+
 
 var mistery_envelope = pick_mistery();
 reveal_mistery(mistery_envelope);
