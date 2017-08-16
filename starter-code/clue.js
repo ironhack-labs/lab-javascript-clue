@@ -1,3 +1,78 @@
+var mrGreen = {
+  firstname: "Jacob", lastname: "Green", gender: "male", color: "green", occupation: "politician", age: "40", description: "slimey"};
+
+var doctorOrchid = {
+  firstname: "Doc", lastname: "Orchid", gender: "female", color: "white", occupation: "biologist", age: "45", description: "curious"};
+
+var victorPlum = {
+  firstname: "Victor", lastname: "Plum", gender: "male", color: "purple", occupation: "VideoGameDesigner", age: "25", description: "rich bastard"};
+
+var kasandra = {
+  firstname: "kasandra", lastname: "Scarlet", gender: "female", color: "red", occupation: "movieStar", age: "21", description: "hot and naive"};
+
+var eleanor = {
+  firstname: "Eleanor", lastname: "Peacock", gender: "female", color: "blue", occupation: "unemployed", age: "60", description: "lazy and bored and overprivileged"};
+
+var jack = {
+  firstname: "Jack", lastname: "Mustard", gender: "male", color: "yellow", occupation: "footballplayer", age: "35", description: "washed out and depressed"};
+
+
+var rope = {
+  name: "rope", weight: "200g", color: "brown", painrating: "5"};
+
+var knife = {
+  name: "rope", weight: "250g", color: "black", painrating: "7"};
+
+var candlestick = {
+  name: "rope", weight: "1000g", color: "gold", painrating: "6"};
+
+var dumbbell = {
+  name: "rope", weight: "5000g", color: "black", painrating: "8"};
+
+var poison = {
+  name: "rope", weight: "1g", color: "transparent", painrating: "4"};
+
+var axe = {
+  name: "rope", weight: "3000g", color: "silver", painrating: "10"};
+
+var pistol = {
+  name: "rope", weight: "400g", color: "silver", painrating: "1"};
+
+var bat = {
+  name: "rope", weight: "1000g", color: "brown", painrating: "7"};
+
+var trophy = {
+  name: "rope", weight: "200g", color: "gold", painrating: "6"};
+
+
+var Room = ["diningRoom", "conservatory", "kitchen", "study", "library", "billardRoom", "lounge", "ballroom", "hall", "spa", "livingRoom", "observatory", "theater", "guestHouse", "patio"];
+
+var characters = [mrGreen, doctorOrchid, victorPlum, kasandra, eleanor, jack];
+var weapon = [rope, knife, candlestick, dumbbell, poison, axe, pistol, bat, trophy];
+
+function randomElement(array){
+  var randomNumber = Math.floor(Math.random()*array.length);
+  return array[randomNumber];
+}
+
+randomElement(Room);
+
+var masterArray = [Room, characters, weapon];
+
+var CaseFileConfidential = [];
+
+function masterSelector(){
+  for (i=0; i < masterArray.length; i++){
+    CaseFileConfidential.push(randomElement(masterArray[i]));
+  }
+  return CaseFileConfidential;
+}
+
+masterSelector();
+
+var revealMystery = ("The murderer is " + CaseFileConfidential[1].firstname + " and he/she killed with a/an " + CaseFileConfidential[2].name + " in the " + CaseFileConfidential[0]);
+
+console.log(revealMystery);
 /*
 
 ---- Characters ----
