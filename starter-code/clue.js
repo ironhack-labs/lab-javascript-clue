@@ -89,25 +89,48 @@ function random_selector(array) {
   var round = Math.floor(mult);
 
   var card = array[round];
-  console.log(card);
+
+  if(array == rooms) {
+    //console.log(card);
+    return card;
+
+  } else if(array == supects) {
+      //console.log(card.firstName);
+      var person =card.firstName;
+      return person;
+
+  } else if(array==weapons){
+    //console.log(card.name);
+    var weapon=card.name;
+    return weapon;
+  }
 
 }
 
-random_selector(weapons);
 
-function random_selecton_three() {
-  random_selector(supects);
-  random_selector(weapons);
-  random_selector(rooms);
-}
+
 
 function pick_mistery() {
+  var muerto = random_selector(supects);
+  var arma =random_selector(weapons);
+  var habitacion= random_selector(rooms);
+
+  console.log(" It was found dead " + muerto + " in the " + habitacion + " by a " + arma);
+  return muerto;
 
 }
 
-function reveal_mistery(mistery) {
+function reveal_mistery() {
+  var dead= pick_mistery();
+  var asesino = random_selector(supects);
+  if(asesino===dead){
+    asesino = random_selector(supects);
+  }
+  console.log("The assasin is " + asesino);
 
 }
+//pick_mistery();
+reveal_mistery();
 
 var mistery_envelope = pick_mistery();
 reveal_mistery(mistery_envelope);
