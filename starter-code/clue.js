@@ -72,47 +72,47 @@ var suspects = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard]
 // ---- Weapons ----
 
 var rope = {
-  name: rope,
+  name: "rope",
   weight: 10
 };
 
 var knife = {
-  name: knife,
+  name: "knife",
   weight: 8
 };
 
 var candlestick = {
-  name: candlestick,
+  name: "candlestick",
   weight: 2
 };
 
 var dumbbell = {
-  name: dumbbell,
+  name: "dumbbell",
   weight: 30
 };
 
 var poison = {
-  name: poison,
+  name: "poison",
   weight: 2
 };
 
 var axe = {
-  name: axe,
+  name: "axe",
   weight: 15
 };
 
 var bat = {
-  name: bat,
+  name: "bat",
   weight: 13
 };
 
 var trophy = {
-  name: trophy,
+  name: "trophy",
   weight: 25
 };
 
 var pistol = {
-  name: pistol,
+  name: "pistol",
   weight: 20
 };
 
