@@ -179,9 +179,7 @@ function pick_mistery() {
 }
 
 function reveal_mistery(mistery) {
-  console.log("The killer is " + mistery.suspect.firstName + " " + mistery.suspect.lastName);
-  console.log("with the " + mistery.weapon.name);
-  console.log("In the " + mistery.room.name);
+  console.log("The killer is " + mistery.suspect.firstName + " " + mistery.suspect.lastName + " with the " + mistery.weapon.name + " in the " + mistery.room.name);
 }
 
 var mistery_envelope = pick_mistery();
