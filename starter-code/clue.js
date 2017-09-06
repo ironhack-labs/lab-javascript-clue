@@ -156,7 +156,7 @@ var patio ={
 };
 
 var suspects = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
-var weapons = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
+var weapons = [rope, knife, candlestick, dumbell, poison, axe, bat, trophy, pistol];
 var rooms = [dinningRoom, conservatory, kitchen, study, library, billiardRoom, lounge, ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio];
 
 
@@ -165,13 +165,23 @@ function random_selector(array) {
   return array[randomIndex];
 }
 
-
 function pick_mistery() {
+  var suspect = random_selector(suspects);
+  var weapon = random_selector(weapons);
+  var room = random_selector(rooms);
 
+  var mistery = {
+    suspect: suspect,
+    weapon: weapon,
+    room: room
+  };
+  return mistery;
 }
 
 function reveal_mistery(mistery) {
-
+  console.log("The killer is " + mistery.suspect.firstName + " " + mistery.suspect.lastName);
+  console.log("with the " + mistery.weapon.name);
+  console.log("In the " + mistery.room.name);
 }
 
 var mistery_envelope = pick_mistery();
