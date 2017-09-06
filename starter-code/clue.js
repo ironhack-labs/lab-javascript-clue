@@ -1,103 +1,139 @@
-/*
+var mrGreen = {
+  name: "Jacob Green",
+  colour: "green",
+  description: "He has a lot of connections",
+  age: 45,
+  image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+  occupation: "Entrepreneur",
+};
 
----- Characters ----
+var drOrchid = {
+  name: "Doctor Orchid",
+  colour: "white",
+  description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
+  age: 26,
+  image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
+  occupation: "Scientist",
+};
 
-  Mr Green
-  first name: Jacob
-  last name:  Green
-  color: green
-  description: He has a lot of connections
-  age: 45
-  image: https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg
-  occupation: Entrepreneur
+var profPlum = {
+  name: "Victor Plum",
+  colour: "purple",
+  description: "Billionare video game designer",
+  age: 22,
+  image: "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
+  occupation: "Designer",
+};
 
-  Dr Orchid
-  first name: Doctor
-  last name: Orchid
-  color: white
-  description: PhD in plant toxicology. Adopted daughter of Mr. Boddy
-  age: 26
-  image: http://www.radiotimes.com/uploads/images/Original/111967.jpg
-  occupation: Scientist
-
-  Prof Plum
-  first name: Victor
-  last name: Plum
-  color: purple
-  description: Billionare video game designer
-  age: 22
-  image: https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg
-  occupation: Designer
-
-  Miss Scarlet
-  first name: Kasandra
-  last name: Scarlet
-  color: red
-  description: She is an A-list movie star with a dark past,
+var missScarlet = {
+  name: "Kasandra Scarlet",
+  colour: "red",
+  description: "She is an A-list movie star with a dark past",
   age: 31,
-  image: https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg,
-  occupation: Actor
+  image: "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
+  occupation: "Actor",
+};
 
- Mrs Peacock
-  first name: Eleanor
-  last name: Peacock
-  color: blue
-  description: She is from a wealthy family and uses her status and money to earn popularity
-  age: 36
-  image: https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg
-  occupation: Socialité
+var mrsPeacock = {
+  name: "Eleanor Peacock",
+  colour: "blue",
+  description: "She is from a wealthy family and uses her status and money to earn popularity",
+  age: 36,
+  image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
+  occupation: "Socialité",
+};
 
- Mr Mustard
-  first name: Jack
-  last name: Mustard
-  color: yellow
-  description: He is a former football player who tries to get by on his former glory
-  age: 62
-  image: https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg
-  occupation: Retired Football player
-
----- Weapons ----
-
-Rope - Weight: 10
-Knife - Weight: 8
-Candlestick - Weight: 2
-Dumbbell - Weight: 30
-Poison - Weight: 2
-Axe - Weight: 15
-Bat - Weight: 13
-Trophy - Weight: 25
-Pistol - Weight: 20
+var mrMustard = {
+  name: "Jack Mustard",
+  colour: "yellow",
+  description: "He is a former football player who tries to get by on his former glory",
+  age: 62,
+  image: "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
+  occupation: "Retired Football player",
+};
 
 
----- Rooms ----
-Dinning Room
-Conservatory
-Kitchen
-Study
-Library
-Billiard Room
-Lounge
-Ballroom
-Hall
-Spa
-Living Room
-Observatory
-Theater
-Guest House
-Patio
+var rope = {
+  name: "Rope",
+  weight: 10,
+};
 
-*/
+var knife = {
+  name: "Knife",
+  weight: 8,
+};
+
+var candlestick = {
+  name: "Candlestick",
+  weight: 2,
+};
+
+var dumbell = {
+  name: "Dumbell",
+  weight: 30,
+};
+
+var poison = {
+  name: "Poison",
+  weight: 2,
+};
+
+var axe = {
+  name: "Axe",
+  weight: 15,
+};
+
+var bat = {
+  name: "Bat",
+  weight: 13,
+};
+
+var trophy = {
+  name: "Trophy",
+  weight: 25,
+};
+
+var pistol = {
+  name: "Pistol",
+  weight: 20,
+};
+
+
+var rooms = [{name: "Dining Room",},
+             {name: "Conservatory",},
+             {name: "Kitchen",},
+             {name: "Study",},
+             {name: "Library",},
+             {name: "Billiard Room",},
+             {name: "Lounge",},
+             {name: "Ballroom",},
+             {name: "Hall",},
+             {name: "Spa",},
+             {name: "Living Room",},
+             {name: "Observatory",},
+             {name: "Theatre",},
+             {name: "Guesthouse",},
+             {name: "Patio"},
+             ];
+
+var suspects = [];
+suspects.push(mrMustard, mrsPeacock, missScarlet, profPlum, drOrchid, mrGreen);
+
+var weapons =[];
+weapons.push(pistol,trophy,bat,axe,poison,dumbell,candlestick,knife,rope);
 
 function random_selector(array) {
+    var randomNumber = Math.floor(Math.random()*array.length);
+    return array[randomNumber].name;
 
 }
 
 function pick_mistery() {
-
+    return caseFile = {suspect: random_selector(suspects), weapon: random_selector(weapons), room: random_selector(rooms)};
 }
 
 function reveal_mistery(mistery) {
-
+    console.log("Mr Boddy was killed by " + caseFile.suspect + " in the " + caseFile.room + " with the " + caseFile.weapon + ".");
 }
 
 var mistery_envelope = pick_mistery();
