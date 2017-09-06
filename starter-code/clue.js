@@ -190,10 +190,18 @@ var patio = {
  var rooms= [diningRoom, conservatory, kitchen, study, library, billiardRoom, lounge, ballRoom, hall, spa, livingRoom, observatory, theater, guestHouse, patio];
  var characters = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
  var weapons = [rope, knife, candleStick, dumbBell, poison, axe, bat, trophy, pistol];
-
+/*
 function random_selector(array) {
   var rnd = Math.random();
   return array[Math.floor(rnd * (array.length))];
+}
+*/
+function random_selector(array) {
+  var rnd = Math.random();
+  var newIndex = Math.floor(rnd * (array.length));
+  var element = array[newIndex];
+  array.splice(newIndex, 1);
+  return element;
 }
 
 function pick_mistery() {
@@ -218,20 +226,31 @@ var mistery_envelope = pick_mistery();
 reveal_mistery(mistery_envelope);
 
 // BONUS
-var players = ["Thibaut", "Jad", "Maxence"];
+var thibaut = {
+  name: "Thibaut"
+};
+
+var jad = {
+  name: "Jad"
+};
+
+var maxence = {
+  name: "Maxence"
+};
+
+var players = [thibaut, jad, maxence];
+
+function cardDistributor() {
+  players.forEach(function(player) {
+      player.roomCard = random_selector(rooms).name;
+      player.character = random_selector(characters).firstName;
+      player.weapon = random_selector(weapons).name;
+  });
+  console.log(players);
+}
+
+cardDistributor();
 
 // Assign all remaining cards to the players
 
 //Function that picks cards and then deletes them from the array (two players cant draw the same cards in a game)
-function pick_misteryNoRepeat() {
-  var room = random_selector(rooms);
-  var weapon = random_selector(weapons);
-  var character = random_selector(characters);
-  var mistery = {
-    room: room,
-    weapon: weapon,
-    character: character
-  };
-  indexOf(mistery.room)
-  return mistery;
-}
