@@ -161,8 +161,10 @@ var rooms = [dinningRoom, conservatory, kitchen, study, library, billiardRoom, l
 
 
 function random_selector(array) {
-
+  var randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
 }
+
 
 function pick_mistery() {
 
