@@ -140,18 +140,15 @@ var randomIndex = parseInt(Math.random()*array.length);
 
 
 function pick_mistery() {
-var mystery = {
-  murderer: random_selector(characters),
-  crime: random_selector(weapons),
-  place:random_selector(rooms),
+  var mystery = {
+    murderer: random_selector(characters),
+    crime: random_selector(weapons),
+    place:random_selector(rooms),
+  }
+  return mystery;
 }
-return mystery;
-}
-console.log(pick_mistery());
 
-function reveal_mistery(mistery) {
-
-}
 
 var mistery_envelope = pick_mistery();
-reveal_mistery(mistery_envelope);
+
+console.log (mistery_envelope)
