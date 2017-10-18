@@ -89,6 +89,7 @@ Patio
 */
 
 var suspects = [
+
     {
       firstName: "Jacob",
       lastName: "Green",
@@ -97,7 +98,8 @@ var suspects = [
       age: 45,
       image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
       ocupation: "entrepreneur"},
-      {
+
+    {
       firstName: "Doctor",
       lastName: "Orchid",
       color: "White",
@@ -105,7 +107,7 @@ var suspects = [
       age: 26,
       image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
       occupation: "Scientist"},
-      {
+    {
       firstName: "Victor",
       lastName: "Plum",
       color: "purple",
@@ -113,7 +115,7 @@ var suspects = [
       age: 22,
       image: "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
       occupation: "Designer"},
-      {
+    {
       firstName: "Kasandra",
       lastName: "Scarlet",
       color: "red",
@@ -130,7 +132,7 @@ var suspects = [
       image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
       occupation: "Socialité"},
 
-    {
+   {
       firstName: "Jack",
       lastName: "Mustard",
       color: "yellow",
@@ -138,21 +140,37 @@ var suspects = [
       age: 62,
       image: "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
       occupation: "Retired Football player"},
-      ]
-
+]
+      console.log(suspects.firstName)
 
   var rooms= ["Dinning Room","Conservatory","Kitchen","Study","Library","Billiard Room","Lounge","Ballroom","Hall","Spa","Living Room","Observatory","Theater","Guest House","Patio"];
+
+
   var weapons= [
-    {nameWeapon:"Rope", Weight: 10},
-    {nameWeapon:"Knife", Weight: 8},
-    {nameWeapon:"Candlestick", Weight: 2},
-    {nameWeapon:"Dumbbell", Weight: 30},
-    {nameWeapon:"Poison", Weight: 2},
-    {nameWeapon:"Axe", Weight: 15},
-    {nameWeapon:"Bat", Weight: 13},
-    {nameWeapon: "Trophy", Weight: 25},
-    {nameWeapon:"Pistol", Weight: 20},
+    {firstName:"Rope", Weight: 10},
+    {firstName:"Knife", Weight: 8},
+    {firstName:"Candlestick", Weight: 2},
+    {firstName:"Dumbbell", Weight: 30},
+    {firstName:"Poison", Weight: 2},
+    {firstName:"Axe", Weight: 15},
+    {firstName:"Bat", Weight: 13},
+    {firstName: "Trophy", Weight: 25},
+    {firstName:"Pistol", Weight: 20},
     ];
 
-    console.log("Rooms:"+rooms);
-    console.log for
+    function random_selector(array) {
+   var size = array.length;
+   var numeroRandom = Math.round(Math.random()*(size - 1));
+   return array[numeroRandom];
+  		  }
+
+ 	 function pick_mistery(array){
+   var killer = random_selector(suspects);
+   var weapons2 = random_selector(weapons);
+   var rooms2 = random_selector(rooms);
+
+   var result = [killer.firstName, weapons2.firstName, rooms2]
+   return result
+  		  }
+
+pick_mistery();
