@@ -1,10 +1,9 @@
-
-
 // ---- Characters ----
 
   var mrGreen = {
     firstName: "Jacob",
     lastName: "Green",
+    nameprefix: "Mr",
     color: "green",
     description: "He has a lot of connections",
     age: 45,
@@ -16,6 +15,7 @@
   var drOrchid = {
     firstName: "Doctor",
     lastName: "Orchid",
+    nameprefix: "Dr",
     color: "white",
     description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
     age: 26,
@@ -26,6 +26,7 @@
   var profPlum = {
     firstName: "Victor",
     lastName: "Plum",
+    nameprefix: "Prof",
     color: "purple",
     description: "Billionare video game designer",
     age: 22,
@@ -36,6 +37,7 @@
   var missScarlet = {
   firstName: "Kasandra",
   lastName: "Scarlet",
+  nameprefix: "Miss",
   color: "red",
   description: "She is an A-list movie star with a dark past",
   age: 31,
@@ -46,6 +48,7 @@
  var mrsPeacock= {
   firstName: "Eleanor",
   lastName: "Peacock",
+  nameprefix: "Mrs",
   color: "blue",
   description: "She is from a wealthy family and uses her status and money to earn popularity",
   age: 36,
@@ -53,9 +56,10 @@
   occupation: "Socialité"
 };
 
- var mrMustard= {
+ var colMustard= {
   firstName: "Jack",
   lastName: "Mustard",
+  nameprefix: "Col",
   color: "yellow",
   description: "He is a former football player who tries to get by on his former glory",
   age: 62,
@@ -142,7 +146,7 @@ var characterStack = [
   profPlum,
   missScarlet,
   mrsPeacock,
-  mrMustard
+  colMustard
 ];
 
 var weaponStack = [
@@ -163,11 +167,12 @@ var randomSelectorCharacter = characterStack[Math.floor(Math.random()*characterS
 var randomSelectorWeapon = weaponStack[Math.floor(Math.random()*weaponStack.length)];
 var randomSelectorRoom = roomsStack[Math.floor(Math.random()*roomsStack.length)];
 
-// RANDOM SELECTOR COMBINED
+/*/ RANDOM SELECTOR COMBINED
 
 console.log("Character: " + randomSelectorCharacter.firstName + " " + randomSelectorCharacter.lastName);
 console.log("Weapon: " + randomSelectorWeapon.name);
 console.log("Room: " + randomSelectorRoom);
+*/
 
 // CODE AND FUNCTIONS
 
@@ -177,20 +182,22 @@ function random_selector(array) {
 }
 
 function pick_mistery() {
+  var envelope = [];
   var character = random_selector(characterStack);
   var weapon = random_selector(weaponStack);
-  var room = random_selector(roomStack);
-  return [character, weapon, room];
+  var room = random_selector(roomsStack);
+  envelope.push(character.nameprefix + " " + character.lastName, weapon.name, room);
+  return envelope;
 }
 
-
-//could not go further
 function reveal_mistery(mistery) {
-  console.log(pick_mistery());
+  mistery = pick_mistery();
+  var revealCharacter = mistery[0];
+  var revealWeapon = mistery[1];
+  var revealRoom = mistery[2];
+  console.log("Name: " + revealCharacter);
+  console.log("Weapon: " + revealWeapon);
+  console.log("Room: " + revealRoom);
 }
 
-
-
-
-var mistery_envelope = pick_mistery();
-reveal_mistery(mistery_envelope);
+console.log (reveal_mistery());
