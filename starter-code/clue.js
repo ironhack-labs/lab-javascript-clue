@@ -150,12 +150,12 @@ var mrMustard = {
 };
 
 var suspects = [
-        mrGreen,
-        drOrchid,
-        profPlum,
-        missScarlet,
-        mrsPeacock,
-        mrMustard,
+    mrGreen,
+    drOrchid,
+    profPlum,
+    missScarlet,
+    mrsPeacock,
+    mrMustard,
 ];
 
 // Rooms
@@ -196,17 +196,17 @@ function random_selector(array) {
 }
 
 function pick_mistery() {
-    var stacks = [suspects, rooms, weapons];
-    for (var i = 0; i < stacks.length; i++) {
-        var cards = [];
-        var card = random_selector(stacks[i]);
-        cards.push(card);
-    }
+    var mySuspect = random_selector(suspects);
+    var myRoom = random_selector(rooms);
+    var myWeapon = random_selector(weapons);
+    var mystery = [mySuspect, myRoom, myWeapon];
+    return mystery;
 }
 
-function reveal_mistery(mistery) {
-
+function reveal_mistery(mystery) {
+    console.log(mystery);
 }
+
 
 var mistery_envelope = pick_mistery();
 reveal_mistery(mistery_envelope);
