@@ -1,12 +1,13 @@
-var mrGreen = {
-    firstName: "Jacob",
-    lastName: "Green",
-    occupation: "Scientist",
-    age: 42,
-    description: "He has a lot of connections and is always willing to help people out -- for a price",
-    color: "green"
-  };
+  // Suspect objects
 
+  var mrGreen = {
+      firstName: "Jacob",
+      lastName: "Green",
+      occupation: "Scientist",
+      age: 42,
+      description: "He has a lot of connections and is always willing to help people out -- for a price",
+      color: "green"
+    };
   var msOrchid = {
     firstName: "Doctor",
     lastName: "Orchid",
@@ -48,11 +49,10 @@ var mrGreen = {
     color: "yellow"
   };
 
-  //weapons
-
+  // Weapon objects
   var rope = {
     name : "rope",
-    weight: 0,
+    weight: 1,
     damage: 3
   };
   var knife = {
@@ -96,92 +96,91 @@ var mrGreen = {
     damage: 4
   };
 
-  //rooms
-
+  // Room objects
   var diningroom = {
     size: 6
-  }
+  };
   var conservatory = {
     size: 12
-  }
+  };
   var kitchen = {
     size: 61
-  }
+  };
   var study = {
     size: 65
-  }
+  };
   var library = {
     size: 66
-  }
+  };
   var billard = {
     size: 6
-  }
+  };
   var lounge = {
     size: 61
-  }
+  };
   var ballroom = {
     size: 11
-  }
+  };
   var hall = {
     size: 2
-  }
+  };
   var spa = {
     size: 4
-  }
+  };
   var livinroom = {
     size: 55
-  }
+  };
   var observatory = {
     size: 65
-  }
+  };
   var theatre = {
     size: 78
-  }
+  };
   var guesthouse = {
     size: 12
-  }
+  };
   var patio = {
     size: 25
-  }
+  };
 
+// Suspects array
 var suspects = [];
 suspects.push(mrGreen, msOrchid, mrPlum, mrScarlet, msPeacock, mrMustard);
 
-var weapons = []
+// Weapon array
+var weapons = [];
 weapons.push(rope, knife,candlestick, dumbbell, poison, axe, bat, trophy, pistol);
 
-var rooms = []
+// Rooms array
+var rooms = [];
 rooms.push(diningroom, conservatory, kitchen, study, library, billard, lounge, ballroom, hall, spa, livinroom, observatory, theatre, guesthouse, patio);
-
 
 //Iteration 2 - 1
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-
-
-// Get one random element from card stack
+// Get one random element from card stack (any stack can be used)
 function extract(deck){
-  var r = getRandom (0,deck.length)
+  var r = getRandom (0, deck.length);
   return deck[r];
 }
 
 extract(suspects);
 
-//Iteration 2 - 2
+// Iteration 2 - 2
 var caseFile = [];
 
-function differentCards (){
- var a = extract(suspects);
-  var b =extract(weapons);
+function pickCards (){
+  var a = extract(suspects);
+  var b = extract(weapons);
   var c = extract(rooms);
-  caseFile.push(a, b , c);
+  caseFile.push(a, b ,c);
 }
 
 function revealMistery(){
   return caseFile;
 }
 
-differentCards ();
+pickCards();
 revealMistery();
