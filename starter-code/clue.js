@@ -79,14 +79,21 @@ var weapons = [
 
   {name: "Pistol",
    weight: 20},
-  ]
-var rooms= ["Dinning Room", "Conservatory", "Kitchen", "Study", "Library", "Billiard Room", "Lounge", "Ballroom", "Hall", "Spa", "Living Room", "Observatory", "Theater", "Guest House", "Patio"]
+  ];
+
+var rooms= ["Dinning Room", "Conservatory", "Kitchen", "Study", "Library", "Billiard Room", "Lounge", "Ballroom", "Hall", "Spa", "Living Room", "Observatory", "Theater", "Guest House", "Patio"];
 
 
 function random_selector(array) {
  var random = Math.floor(Math.random()* array.length) ;
  return  (array[random]) ;
 }
-console.log (random_selector(suspects));
-console.log (random_selector(weapons));
-console.log (random_selector(rooms));
+
+
+function pick_mistery() {
+var caseFileConfidential = [random_selector(suspects), random_selector(weapons), random_selector(rooms)];
+return caseFileConfidential;
+}
+
+
+pick_mistery();
