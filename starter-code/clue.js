@@ -26,7 +26,7 @@ var ProfPlum = {
   age: 22,
   image: "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
   occupation: "Designer"
-}
+};
 var MissScarlet = {
   firstName: "Kasandra",
   lastName: "Scarlet",
@@ -35,7 +35,7 @@ var MissScarlet = {
   age: 31,
   image: "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
   occupation: "Actor"
-}
+};
 
 var MrsPeacock = {
   firstName: "Eleanor",
@@ -45,7 +45,7 @@ var MrsPeacock = {
   age: 36,
   image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
   occupation: "Socialité"
-}
+};
 
 
 var MrMustard = {
@@ -56,62 +56,77 @@ var MrMustard = {
   age: 62,
   image: "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
   occupation: "Retired Football player"
-}
+};
 
 
 var Rope = {
   Weight: 10
-}
+};
+
 
 var Knife = {
   Weight: 8
-}
+};
+
 
 var Candlestick = {
   Weight: 2
-}
+};
+
 
 var Dumbbell = {
   Weight: 30
-}
+};
+
 
 var Poison = {
   Weight: 2
-}
+};
+
 
 var Axe = {
   Weight: 15
-}
+};
+
 
 var Bat = {
   Weight: 13
-}
+};
+
 
 var Trophy = {
   Weight: 25
-}
+};
+
 
 var Pistol = {
   Weight: 20
-}
+};
 
-var cardSuspects = ["MrGreen", "DrOrchid", "ProfPlum", "MissScarlet", "MrsPeacock", "MrMustard"]
 
-var cardWeapons = ["rope", "Knife", "Candlestick", "Dumbbell", "Poison", "Axe", "Bat", "Trophy", "Pistol"]
+var cardSuspects = ["MrGreen", "DrOrchid", "ProfPlum", "MissScarlet", "MrsPeacock", "MrMustard"];
 
-var cardRooms = ["dinningRoom", "conservatorty", "kitchen", "study", "library", "billiardRoom", "lounge", "ballroom", "hall", "spa", "livingRoom", "observatory", "theater", "guestHouse", "patio"]
+
+var cardWeapons = ["rope", "Knife", "Candlestick", "Dumbbell", "Poison", "Axe", "Bat", "Trophy", "Pistol"];
+
+
+var cardRooms = ["dinningRoom", "conservatorty", "kitchen", "study", "library", "billiardRoom", "lounge", "ballroom", "hall", "spa", "livingRoom", "observatory", "theater", "guestHouse", "patio"];
+
 
 ////Iteration 2.1 y 2.2
 
-function random_selector() {
 
-  var random_cardSuspects = cardSuspects[Math.floor(Math.random() * cardSuspects.length)];
-  console.log(random_cardSuspects);
-
-  var random_cardWeapons = cardWeapons[Math.floor(Math.random() * cardWeapons.length)];
-  console.log(random_cardWeapons);
-
-  var random_cardRooms = cardRooms[Math.floor(Math.random() * cardRooms.length)];
-  console.log(random_cardRooms);
+function random_selector(x) {
+  var randomCard = x[Math.floor(Math.random() * x.length)];
+  console.log(randomCard);
 }
-random_selector();
+
+
+var randomSuspect = random_selector (cardSuspects);
+
+var randomWeapon = random_selector (cardWeapons);
+
+var randomRoom = random_selector (cardRooms);
+
+
+//Function is optimized. Not able to pack the mistery in one function, yet.
