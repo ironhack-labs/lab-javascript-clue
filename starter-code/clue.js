@@ -1,20 +1,20 @@
 var mrGreen = {
   firstName: "Jacob",
-  lastName:  "Green",
+  lastName: "Green",
   color: "green",
-  description:"He has a lot of connections",
+  description: "He has a lot of connections",
   age: "45",
   occupation: "Entrepreneur"
 };
 
 
 var DrOrchid = {
-firstName: "Doctor",
-lastName: "Orchid",
-color: "white",
-description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
-age: "26",
-occupation: "Scientist"
+  firstName: "Doctor",
+  lastName: "Orchid",
+  color: "white",
+  description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
+  age: "26",
+  occupation: "Scientist"
 };
 
 var ProfPlum = {
@@ -26,7 +26,7 @@ var ProfPlum = {
   occupation: "Designer"
 };
 
-var MissScarlet={
+var MissScarlet = {
   firstName: "Kasandra",
   lastName: "Scarlet",
   color: "red",
@@ -35,7 +35,7 @@ var MissScarlet={
   occupation: "Actor"
 };
 
-var MrsPeacock={
+var MrsPeacock = {
   firstName: "Eleanor",
   lastName: "Peacock",
   color: "blue",
@@ -44,58 +44,58 @@ var MrsPeacock={
   occupation: "Socialité"
 };
 
-var MrMustard={
- firstName: "Jack",
- lastName: "Mustard",
- color: "yellow",
- description: "He is a former football player who tries to get by on his former glory",
- age: "62",
- occupation: "Retired Football player"
+var MrMustard = {
+  firstName: "Jack",
+  lastName: "Mustard",
+  color: "yellow",
+  description: "He is a former football player who tries to get by on his former glory",
+  age: "62",
+  occupation: "Retired Football player"
 };
 
 //WEAPONS------
 
-var rope =  {
+var rope = {
   name: "rope",
   weight: "10"
 };
 
-var knife =  {
+var knife = {
   name: "knife",
   weight: "8"
 };
 
-var candlestick =  {
+var candlestick = {
   name: "candlstick",
   weight: "2"
 };
 
-var dumbell =  {
+var dumbell = {
   name: "dumbell",
   weight: "30"
 };
 
-var poison =  {
+var poison = {
   name: "poison",
   weight: "2"
 };
 
-var axe =  {
+var axe = {
   name: "axe",
   weight: "15"
 };
 
-var bat =  {
+var bat = {
   name: "bat",
   weight: "13"
 };
 
-var trophy =  {
+var trophy = {
   name: "trophy",
   weight: "25"
 };
 
-var pistol =  {
+var pistol = {
   name: "pistol",
   weight: "20"
 };
@@ -118,9 +118,9 @@ var rooms = [
   "Theater",
   "Guest House",
   "Patio"
-  ];
+];
 
-var cardName= [
+var cardName = [
   mrGreen,
   DrOrchid,
   ProfPlum,
@@ -146,20 +146,18 @@ function random_selector(array) {
   return array[random];
 }
 
-
 function pick_mistery() {
   var killer = random_selector(cardName);
   var room = random_selector(rooms);
- var weapon = random_selector(weapons);
+  var weapon = random_selector(weapons);
 
- var mystery = {
-   name: killer,
-   place: room,
-   thing: weapon
- };
- return mystery;
+  var mystery = {
+    name: killer,
+    place: room,
+    thing: weapon
+  };
+  return mystery;
 }
-
 
 function reveal_mistery(mystery) {
   console.log('The killer is ' + mystery.name.firstName + '. He/she killed Mr. Boddy. He was killed in ' + mystery.place + ' with a ' + mystery.thing.name + '!');
