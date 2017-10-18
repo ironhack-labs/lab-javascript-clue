@@ -1,10 +1,10 @@
   // Suspect objects
-
   var mrGreen = {
       firstName: "Jacob",
       lastName: "Green",
       occupation: "Scientist",
-      age: 42,
+      age: 45,
+      image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
       description: "He has a lot of connections and is always willing to help people out -- for a price",
       color: "green"
     };
@@ -12,7 +12,8 @@
     firstName: "Doctor",
     lastName: "Orchid",
     occupation: "Biologist",
-    age: 52,
+    age: 26,
+    image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
     description: "She is the adopted daugther of Mr. Boddy, a biologist with a PhD in plant toxicology. She was privately educated in Switzerland until her expulsion after an incident involving daffodils resulted in a near-fatal poisoning",
     color: "white"
   };
@@ -20,7 +21,8 @@
     firstName: "Victor",
     lastName: "Plum",
     occupation: "Videogame Designer",
-    age: 32,
+    age: 22,
+    image: "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
     description: "He is a billionaire video game designer who is embracing his new popularity",
     color: "purple"
   };
@@ -29,6 +31,7 @@
     lastName: "Scarlet",
     occupation: "Movie star",
     age: 22,
+    image: "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
     description: "She is an A-list movie star whose past haunts her.",
     color: "red"
   };
@@ -37,6 +40,7 @@
     lastName: "Peacock",
     occupation: "Famous Wealthy Person",
     age: 33,
+    image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
     description: "She is from a wealthy family and uses her status and money to earn popularity",
     color: "blue"
   };
@@ -45,6 +49,7 @@
     lastName: "Mustard",
     occupation: "Former Football Player",
     age: 45,
+    image: "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
     description: "He is a former football player who tries to get by on his former glory.",
     color: "yellow"
   };
@@ -112,7 +117,7 @@
   var library = {
     size: 66
   };
-  var billard = {
+  var billiard = {
     size: 6
   };
   var lounge = {
@@ -127,7 +132,7 @@
   var spa = {
     size: 4
   };
-  var livinroom = {
+  var livingroom = {
     size: 55
   };
   var observatory = {
@@ -149,11 +154,11 @@ suspects.push(mrGreen, msOrchid, mrPlum, mrScarlet, msPeacock, mrMustard);
 
 // Weapon array
 var weapons = [];
-weapons.push(rope, knife,candlestick, dumbbell, poison, axe, bat, trophy, pistol);
+weapons.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
 
 // Rooms array
 var rooms = [];
-rooms.push(diningroom, conservatory, kitchen, study, library, billard, lounge, ballroom, hall, spa, livinroom, observatory, theatre, guesthouse, patio);
+rooms.push(diningroom, conservatory, kitchen, study, library, billiard, lounge, ballroom, hall, spa, livingroom, observatory, theatre, guesthouse, patio);
 
 //Iteration 2 - 1
 function getRandom(min, max) {
@@ -172,15 +177,18 @@ extract(suspects);
 var caseFile = [];
 
 function pickCards (){
+  caseFile = [];
   var a = extract(suspects);
   var b = extract(weapons);
   var c = extract(rooms);
   caseFile.push(a, b ,c);
+  return "Random cards are picked. Now you just need to revealMystery() or pick new cards!";
 }
 
 function revealMistery(){
   return caseFile;
 }
 
+console.log("Available functions are extract(deck), pickCards(), revealMistery()");
 pickCards();
 revealMistery();
