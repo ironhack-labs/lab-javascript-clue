@@ -204,7 +204,9 @@ function pick_mistery() {
 }
 
 function reveal_mistery(mystery) {
-    console.log(mystery);
+    console.log("The suspect is: " + mystery[0].firstName + " " + mystery[0].lastName);
+    console.log("The room is: " + mystery[1]);
+    console.log("The weapon is: " + mystery[2].name);
 }
 
 
