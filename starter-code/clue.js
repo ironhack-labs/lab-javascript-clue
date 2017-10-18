@@ -81,14 +81,10 @@ function random_selector(array) {
 }
 
 function pick_mistery() {
-  var character = random_selector(characters);
-  var weapon = random_selector(weapons);
-  var room = random_selector(rooms);
-
   var mistery = {
-    k: character,
-    w: weapon,
-    r: room
+    characters: random_selector(characters),
+    weapons: random_selector(weapons),
+    rooms: random_selector(rooms)
   };
 
   return mistery;
@@ -97,11 +93,11 @@ function pick_mistery() {
 function reveal_mistery(mistery) {
   console.log(
     "the killer is " +
-      mistery.k.firstName +
+      mistery.characters.firstName +
       " he used a " +
-      mistery.w.weapon +
+      mistery.weapons.weapon +
       " in the " +
-      mistery.r +
+      mistery.rooms +
       " room"
   );
 }
