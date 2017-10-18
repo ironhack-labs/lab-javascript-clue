@@ -1,8 +1,6 @@
-
-var people = [
-  {
+var people = [{
     firstName: "Jacob",
-    lastName:  "Green",
+    lastName: "Green",
     color: "green",
     description: "He has a lot of connections",
     age: "45",
@@ -37,13 +35,13 @@ var people = [
     occupation: "Actor"
   },
   {
-     firstName: "Eleanor",
-     lastName: "Peacock",
-     color: "blue",
-     description: "She is from a wealthy family and uses her status and money to earn popularity",
-     age: "36",
-     image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
-     occupation: "Socialité",
+    firstName: "Eleanor",
+    lastName: "Peacock",
+    color: "blue",
+    description: "She is from a wealthy family and uses her status and money to earn popularity",
+    age: "36",
+    image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
+    occupation: "Socialité",
   },
   {
     firstName: "Jack",
@@ -53,46 +51,46 @@ var people = [
     age: "62",
     image: "https:\/\/metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
     occupation: "Retired Football player"
-  }];
+  }
+];
 
-  var weapons = [
-    {
-      name: "Rope",
-      weight: "10"
-    },
-    {
-      name: "Knife",
-      weight: "8"
-    },
-    {
-      name: "Candlestick",
-      weight: "2"
-    },
-    {
-      name: "Dumbbell",
-      weight: "30"
-    },
-    {
-      name: "Poison",
-      weight: "2"
-    },
-    {
-      name: "Axe",
-      weight: "15"
-    },
-    {
-      name: "Bat",
-      weight: "13"
-    },
-    {
-      name: "Trophy",
-      weight: "25"
-    },
-    {
-      name: "Pistol",
-      weight: "20"
-    },
-  ];
+var weapons = [{
+    name: "Rope",
+    weight: "10"
+  },
+  {
+    name: "Knife",
+    weight: "8"
+  },
+  {
+    name: "Candlestick",
+    weight: "2"
+  },
+  {
+    name: "Dumbbell",
+    weight: "30"
+  },
+  {
+    name: "Poison",
+    weight: "2"
+  },
+  {
+    name: "Axe",
+    weight: "15"
+  },
+  {
+    name: "Bat",
+    weight: "13"
+  },
+  {
+    name: "Trophy",
+    weight: "25"
+  },
+  {
+    name: "Pistol",
+    weight: "20"
+  },
+];
 
 var rooms = [
   "Dinning Room",
@@ -121,13 +119,14 @@ function pick_mistery() {
   return [random_selector(people), random_selector(weapons), random_selector(rooms)];
 }
 
-console.log("The suspect is: ", pick_mistery()[0],"\nThe weapon is: ", pick_mistery()[1],"\nThe room is: ", pick_mistery()[3]);
+console.log("The suspect is: ", pick_mistery()[0], "\nThe weapon is: ", pick_mistery()[1], "\nThe room is: ", pick_mistery()[2]);
 
+/*
 var mistery_envelope = pick_mistery();
 
 function reveal_mistery(mistery) {
   console.log(mistery_envelope);
 }
 
-
 reveal_mistery(mistery_envelope);
+*/
