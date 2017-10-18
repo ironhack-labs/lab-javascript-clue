@@ -1,104 +1,196 @@
-/*
 
----- Characters ----
 
-  Mr Green
-  first name: Jacob
-  last name:  Green
-  color: green
-  description: He has a lot of connections
-  age: 45
-  image: https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg
-  occupation: Entrepreneur
+// ---- Characters ----
 
-  Dr Orchid
-  first name: Doctor
-  last name: Orchid
-  color: white
-  description: PhD in plant toxicology. Adopted daughter of Mr. Boddy
-  age: 26
-  image: http://www.radiotimes.com/uploads/images/Original/111967.jpg
-  occupation: Scientist
+  var mrGreen = {
+    firstName: "Jacob",
+    lastName: "Green",
+    color: "green",
+    description: "He has a lot of connections",
+    age: 45,
+    image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+    occupation: "Entrepreneur"
+  };
 
-  Prof Plum
-  first name: Victor
-  last name: Plum
-  color: purple
-  description: Billionare video game designer
-  age: 22
-  image: https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg
-  occupation: Designer
 
-  Miss Scarlet
-  first name: Kasandra
-  last name: Scarlet
-  color: red
-  description: She is an A-list movie star with a dark past,
+  var drOrchid = {
+    firstName: "Doctor",
+    lastName: "Orchid",
+    color: "white",
+    description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
+    age: 26,
+    image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
+    occupation: "Scientist"
+  };
+
+  var profPlum = {
+    firstName: "Victor",
+    lastName: "Plum",
+    color: "purple",
+    description: "Billionare video game designer",
+    age: 22,
+    image: "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
+    occupation: "Designer"
+  };
+
+  var missScarlet = {
+  firstName: "Kasandra",
+  lastName: "Scarlet",
+  color: "red",
+  description: "She is an A-list movie star with a dark past",
   age: 31,
-  image: https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg,
-  occupation: Actor
+  image:" https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
+  occupation: "Actor"
+};
 
- Mrs Peacock
-  first name: Eleanor
-  last name: Peacock
-  color: blue
-  description: She is from a wealthy family and uses her status and money to earn popularity
-  age: 36
-  image: https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg
-  occupation: Socialité
+ var mrsPeacock= {
+  firstName: "Eleanor",
+  lastName: "Peacock",
+  color: "blue",
+  description: "She is from a wealthy family and uses her status and money to earn popularity",
+  age: 36,
+  image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
+  occupation: "Socialité"
+};
 
- Mr Mustard
-  first name: Jack
-  last name: Mustard
-  color: yellow
-  description: He is a former football player who tries to get by on his former glory
-  age: 62
-  image: https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg
-  occupation: Retired Football player
+ var mrMustard= {
+  firstName: "Jack",
+  lastName: "Mustard",
+  color: "yellow",
+  description: "He is a former football player who tries to get by on his former glory",
+  age: 62,
+  image: "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
+  occupation: "Retired Football player"
+};
 
----- Weapons ----
+// ---- Weapons ----
 
-Rope - Weight: 10
-Knife - Weight: 8
-Candlestick - Weight: 2
-Dumbbell - Weight: 30
-Poison - Weight: 2
-Axe - Weight: 15
-Bat - Weight: 13
-Trophy - Weight: 25
-Pistol - Weight: 20
+var rope = {
+  weight: 10,
+  colour: "brown",
+  name: "Rope"
+};
 
+var knife = {
+  weight: 8,
+  colour: "black",
+  name: "Knife"
+};
 
----- Rooms ----
-Dinning Room
-Conservatory
-Kitchen
-Study
-Library
-Billiard Room
-Lounge
-Ballroom
-Hall
-Spa
-Living Room
-Observatory
-Theater
-Guest House
-Patio
+var candlestick = {
+   weight: 2,
+   colour: "white",
+   name: "Candlestick"
+ };
 
-*/
+var dumbbell = {
+   weight: 30,
+   colour: "blue",
+   name: "Dumbbell"
+ };
+
+var poison = {
+   weight: 2,
+   colour: "caca",
+   name: "Poison"
+ };
+
+ var axe = {
+   weight: 15,
+   colour: "red",
+   name: "Axe"
+ };
+ var bat = {
+   weight: 13,
+   colour: "grey",
+   name: "Bat"
+ };
+ var trophy = {
+   weight: 25,
+   colour: "golden",
+   name: "Trophy"
+ };
+ var pistol = {
+   weight: 20,
+   colour: "golden",
+   name: "Pistol"
+ };
+
+// ---- FAMILIES ----
+
+var roomsStack = [
+  "Dinning Room",
+  "Conservatory",
+  "Kitchen",
+  "Study",
+  "Library",
+  "Billiard Room",
+  "Lounge",
+  "Ballroom",
+  "Hall",
+  "Spa",
+  "Living Room",
+  "Observatory",
+  "Theater",
+  "Guest House",
+  "Patio"
+];
+
+var characterStack = [
+  mrGreen,
+  drOrchid,
+  profPlum,
+  missScarlet,
+  mrsPeacock,
+  mrMustard
+];
+
+var weaponStack = [
+  rope,
+  knife,
+  candlestick,
+  dumbbell,
+  poison,
+  axe,
+  bat,
+  trophy,
+  pistol
+];
+
+// RANDOM SELECTOR FROM EACH STACK
+
+var randomSelectorCharacter = characterStack[Math.floor(Math.random()*characterStack.length)];
+var randomSelectorWeapon = weaponStack[Math.floor(Math.random()*weaponStack.length)];
+var randomSelectorRoom = roomsStack[Math.floor(Math.random()*roomsStack.length)];
+
+// RANDOM SELECTOR COMBINED
+
+console.log("Character: " + randomSelectorCharacter.firstName + " " + randomSelectorCharacter.lastName);
+console.log("Weapon: " + randomSelectorWeapon.name);
+console.log("Room: " + randomSelectorRoom);
+
+// CODE AND FUNCTIONS
 
 function random_selector(array) {
-
+  var randomSelector = array[Math.floor(Math.random()*array.length)];
+  return randomSelector;
 }
 
 function pick_mistery() {
-
+  var character = random_selector(characterStack);
+  var weapon = random_selector(weaponStack);
+  var room = random_selector(roomStack);
+  return [character, weapon, room];
 }
 
+
+//could not go further
 function reveal_mistery(mistery) {
-
+  console.log(pick_mistery());
 }
+
+
+
 
 var mistery_envelope = pick_mistery();
 reveal_mistery(mistery_envelope);
