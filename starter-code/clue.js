@@ -5,7 +5,7 @@ var mrGreen = {
     age: 42,
     description: "He has a lot of connections and is always willing to help people out -- for a price",
     color: "green"
-  }
+  };
 
   var msOrchid = {
     firstName: "Doctor",
@@ -14,7 +14,7 @@ var mrGreen = {
     age: 52,
     description: "She is the adopted daugther of Mr. Boddy, a biologist with a PhD in plant toxicology. She was privately educated in Switzerland until her expulsion after an incident involving daffodils resulted in a near-fatal poisoning",
     color: "white"
-  }
+  };
   var mrPlum = {
     firstName: "Victor",
     lastName: "Plum",
@@ -22,7 +22,7 @@ var mrGreen = {
     age: 32,
     description: "He is a billionaire video game designer who is embracing his new popularity",
     color: "purple"
-  }
+  };
   var mrScarlet = {
     firstName: "Kasandra",
     lastName: "Scarlet",
@@ -30,7 +30,7 @@ var mrGreen = {
     age: 22,
     description: "She is an A-list movie star whose past haunts her.",
     color: "red"
-  }
+  };
   var msPeacock = {
     firstName: "Eleanor",
     lastName: "Peacock",
@@ -38,7 +38,7 @@ var mrGreen = {
     age: 33,
     description: "She is from a wealthy family and uses her status and money to earn popularity",
     color: "blue"
-  }
+  };
   var mrMustard = {
     firstName: "Jack",
     lastName: "Mustard",
@@ -46,7 +46,7 @@ var mrGreen = {
     age: 45,
     description: "He is a former football player who tries to get by on his former glory.",
     color: "yellow"
-  }
+  };
 
   //weapons
 
@@ -54,47 +54,47 @@ var mrGreen = {
     name : "rope",
     weight: 0,
     damage: 3
-  }
+  };
   var knife = {
     name : "knife",
     weight: 2,
     damage: 3
-  }
+  };
   var candlestick = {
     name : "candlestick",
     weight: 20,
     damage: 2
-  }
+  };
   var dumbbell = {
     name : "dumbbell",
     weight: 10,
     damage: 3
-  }
+  };
   var poison = {
     name : "poison",
     weight: 3,
     damage: 1
-  }
+  };
   var axe = {
     name : "axe",
     weight: 2,
     damage: 15
-  }
+  };
   var bat = {
     name : "bat",
     weight: 11,
     damage: 8
-  }
+  };
   var trophy = {
     name : "trophy",
     weight: 9,
     damage: 6
-  }
+  };
   var pistol = {
     name : "pistol",
     weight: 1,
     damage: 4
-  }
+  };
 
   //rooms
 
