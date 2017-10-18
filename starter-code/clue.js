@@ -114,28 +114,60 @@ var personajes = [
 
 
 
-var weapons = {
-Rope :{Weight: 10},Knife : {Weight: 8}, Candlestick : {Weight: 2},Dumbbell : {Weight: 30}, Poison : {Weight: 2}, Axe : {Weight: 15},Bat : {Weight: 13}, Trophy : {Weight: 25}, Pistol : {Weight: 20}
-}
+var weapons = [
+  {weapon: "rope", Weight: 10}, {weapon:"Knife" , Weight: 8}, {weapon: "Candlestick" , Weight: 2},{weapon: "Dumbbell", Weight: 30}, {weapon :"Poison" , Weight: 2},{weapon: "Axe" , Weight: 15},{weapon:"Bat", Weight: 13},{weapon: "Trophy", Weight: 25}, {weapon:"Pistol", Weight: 20}
+]
 
-var rooms =["Dinning Room","Conservatory","Kitchen","Study","Library","Billiard Room","Lounge","Ballroom","Hall","Spa Living Room","Observatory","Theater","Guest House","Patio"]
+var rooms =[
+  {name:"Dinning Room"},{name:"Conservatory"},{name:"Kitchen"},{name:"Study"},{name:"Library"},{name:"Billiard Room"},{name:"Lounge"},{name:"Ballroom"},{name:"Hall"},{name:"Spa Living Room"},{name:"Observatory"},{name:"Theater"},{name:"Guest House"},{name:"Patio"}
+  ]
 
 
+/*
 function random_selector(x) {
-
 var asesino = Math.floor(Math.random()*6);
 console.log(x[asesino]);
 }
 random_selector(personajes);
-
-function pick_mistery() {
-
+*/
+function random_selector(array) {
+var y = Math.floor(Math.random()*array.length);
+return array[y];
 }
 
-function reveal_mistery(mistery) {
 
-}
+function pick_mistery() {   
+  var mistery = {     
+    character: random_selector(personajes),     
+    weapon: random_selector(weapons),
+    room: random_selector(rooms)
+   };   
+    return mistery; 
+  
+  
+}  
+    
+    
+    
+function reveal_mistery(mistery)
+{   
+  var asesino = mistery.character.firstName;  
+  var arma = mistery.weapon.weapon;   
+  var cuarto = mistery.room.name;
+  console.log(asesino, arma,cuarto);
+  }
+
 
 var mistery_envelope = pick_mistery();
 reveal_mistery(mistery_envelope);
+
+
+
+
+
+
+
+
+
+
 
