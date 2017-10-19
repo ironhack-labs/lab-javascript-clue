@@ -129,16 +129,29 @@ var rooms = [
 
 
 function random_selector(array) {
+  for (var i = 0; i < 1; i++) {
+      var random = Math.floor(Math.random() * characters.length);
+      console.log(characters[random]);
 
+    for ( i = 0; i < 1; i++) {
+      random = Math.floor(Math.random() * weapons.length);
+      console.log(weapons[random]);
+  }
+
+  for ( i = 0; i < 1; i++) {
+      random = Math.floor(Math.random() * rooms.length);
+      console.log(rooms[random]);
+  }
+  }
 }
 
 function pick_mistery() {
 
 }
 
-function reveal_mistery(mistery) {
+function reveal_mystery(mystery) {
 
 }
 
-var mistery_envelope = pick_mistery();
-reveal_mistery(mistery_envelope);
+var mystery_envelope = pick_mystery();
+reveal_mystery(mystery_envelope);
