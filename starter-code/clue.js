@@ -1,104 +1,159 @@
-/*
-
----- Characters ----
-
-  Mr Green
-  first name: Jacob
-  last name:  Green
-  color: green
-  description: He has a lot of connections
-  age: 45
-  image: https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg
-  occupation: Entrepreneur
-
-  Dr Orchid
-  first name: Doctor
-  last name: Orchid
-  color: white
-  description: PhD in plant toxicology. Adopted daughter of Mr. Boddy
-  age: 26
-  image: http://www.radiotimes.com/uploads/images/Original/111967.jpg
-  occupation: Scientist
-
-  Prof Plum
-  first name: Victor
-  last name: Plum
-  color: purple
-  description: Billionare video game designer
-  age: 22
-  image: https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg
-  occupation: Designer
-
-  Miss Scarlet
-  first name: Kasandra
-  last name: Scarlet
-  color: red
-  description: She is an A-list movie star with a dark past,
-  age: 31,
-  image: https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg,
-  occupation: Actor
-
- Mrs Peacock
-  first name: Eleanor
-  last name: Peacock
-  color: blue
-  description: She is from a wealthy family and uses her status and money to earn popularity
-  age: 36
-  image: https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg
-  occupation: Socialité
-
- Mr Mustard
-  first name: Jack
-  last name: Mustard
-  color: yellow
-  description: He is a former football player who tries to get by on his former glory
-  age: 62
-  image: https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg
-  occupation: Retired Football player
-
----- Weapons ----
-
-Rope - Weight: 10
-Knife - Weight: 8
-Candlestick - Weight: 2
-Dumbbell - Weight: 30
-Poison - Weight: 2
-Axe - Weight: 15
-Bat - Weight: 13
-Trophy - Weight: 25
-Pistol - Weight: 20
-
-
----- Rooms ----
-Dinning Room
-Conservatory
-Kitchen
-Study
-Library
-Billiard Room
-Lounge
-Ballroom
-Hall
-Spa
-Living Room
-Observatory
-Theater
-Guest House
-Patio
-
-*/
-
-function random_selector(array) {
-
+function print( something ) {
+  var message = console.log( something );
+  return message;
 }
 
-function pick_mistery() {
-
+function getRandomNumber(upper) {
+  var num = Math.floor( Math.random() * upper );
+  return num;
 }
 
-function reveal_mistery(mistery) {
 
+
+// Suspect - cards
+
+    var card0 = {
+      firstName: "Jacob",
+      lastName: "Green",
+      color: "green",
+      occupation: "entrepreneur",
+      age: 45,
+      description: "He has a lot of connections and is always willing to help people out -- for a price."
+    };
+
+    var card1 = {
+      firstName: "Doctor",
+      lastName: "Orchid",
+      color: "white",
+      occupation: "scientist",
+      age: 26,
+      description: "She is the adopted daugther of Mr. Boddy, a biologist with a PhD in plant toxicology. She was privately educated in Switzerland until her expulsion after an incident involving daffodils resulted in a near-fatal poisoning."
+    };
+
+    var card2 = {
+      firstName: "Victor",
+      lastName: "Plum",
+      color: "white",
+      occupation: "designer",
+      age: 22,
+      description: "He is a billionaire video game designer who is embracing his new popularity."
+    };
+
+    var card3 = {
+      firstName: "Kasandra",
+      lastName: "Scarlet",
+      color: "red",
+      occupation: "actor",
+      age: 31,
+      description: "She is an A-list movie star whose past haunts her."
+    };
+
+    var card4 = {
+      firstName: "Eleanor",
+      lastName: "Peacock",
+      color: "blue",
+      occupation: "socialite",
+      age: 36,
+      description: "She is from a wealthy family and uses her status and money to earn popularity."
+    };
+
+    var card5 = {
+      firstName: "Jack",
+      lastName: "Mustard",
+      color: "yellow",
+      occupation: "retired football player",
+      age: 62,
+      description: "He is a former football player who tries to get by on his former glory."
+    };
+
+
+
+// Weapons
+
+var availWeapon = [
+  { weapon: "Rope", Weight: 10 },
+  { weapon: "Knife", Weight: 8 },
+  { weapon: "Candlestick", Weight: 2 },
+  { weapon: "Dumbbell", Weight: 30 },
+  { weapon: "Poison", Weight: 2 },
+  { weapon: "Axe", Weight: 15 },
+  { weapon: "Bat", Weight: 13 },
+  { weapon: "Trophy", Weight: 25 },
+  { weapon: "Pistol", Weight: 20 }
+];
+
+// Rooms 
+
+var availRoom = [
+  { room: "Dinning Room" },
+  { room: "Kitchen" },
+  { room: "Study" },
+  { room: "Library" },
+  { room: "Billiard Room" },
+  { room: "Lounge" },
+  { room: "Ballroom" },
+  { room: "Hall" },
+  { room: "Spa" },
+  { room: "Living Room" },
+  { room: "Observatory" },
+  { room: "Theater" },
+  { room: "Guest House" },
+  { room: "Patio" }
+];
+
+
+
+// Block 1 - Card Profiles 
+var cardProfiles = [ card0, card1, card2, card3, card4, card5 ];
+
+function getRandomProfile() {
+  var howMany = getRandomNumber( cardProfiles.length );
+  return howMany;
 }
 
-var mistery_envelope = pick_mistery();
-reveal_mistery(mistery_envelope);
+  var mysteryProfile = cardProfiles[ getRandomProfile() ];
+
+
+// Block 2 - Rooms
+function getRandomRoom() {
+  var howMany = getRandomNumber( availRoom.length );
+  return howMany;
+}
+
+  var mysteryRoom = availRoom[ getRandomRoom() ];
+
+
+// Block 3 - Weapons
+function getRandomWeapon() {
+  var howMany = getRandomNumber( availWeapon.length );
+  return howMany;
+}
+
+  var mysteryWeapon = availWeapon[ getRandomWeapon() ];
+
+
+
+
+
+// -------------------------
+// Run Program 
+// -------------------------
+function mysteryEnvelope() {
+    // var envelope = [mysteryProfile, mysteryRoom, mysteryWeapon];
+    var envelope = {
+      murderer: mysteryProfile,
+      weapon: mysteryWeapon,
+      room: mysteryRoom
+    };
+    
+    print(envelope);
+}
+
+mysteryEnvelope();
+
+
+
+
+
+
+
