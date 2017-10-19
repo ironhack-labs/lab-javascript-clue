@@ -13,17 +13,18 @@ var drMustard = {firstName: "Jack", lastName: "Mustard", color: "yellow", descri
 var players = [drMustard, mrsPeacock, missScarlet, profPlum, drOrchid, mrGreen];
 
 
-var weapons ={
-  Rope : 10,
-  Knife: 8,
-  Candlestick: 2,
-  Dumbbell: 30,
-  Poison: 2,
-  Axe: 15,
-  Bat: 13,
-  Trophy: 25,
-  Pistol: 20
-}
+
+  var rope ={ name : "Rope", weigth :10 };
+  var knife ={ name : "Knife", weigth :8 };
+  var candlestick ={ name : "Candlestick", weigth :2 };
+  var dumbbell ={ name : "Dumbbell", weigth :30 };
+  var poison ={ name : "Poison", weigth :2 };
+  var axe ={ name : "Axe", weigth :15 };
+  var bat ={ name : "Bat", weigth :13 };
+  var trophy ={ name : "Trophy", weigth :25 };
+  var pistol ={ name : "Pistol", weigth :20 };
+  
+var weapons =[rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
   
   var rooms  = [
 " Dinning Room",
@@ -47,10 +48,12 @@ var weapons ={
 // Iteration 2
 
 
-// 1 randomly select
+// 1 randomly select character: "Choose between players, rooms, weapons"
+var character = rooms;
+
 function random_selector(a) {
   var x = Math.floor(Math.random() * a.length);
-  rand = players[x];
+  rand = character[x];
   return rand
 }
 
@@ -61,6 +64,8 @@ random_selector(players);
 var randPlayers = players;
 var randWeapons = weapons;
 var randRooms = rooms;
+
+
 
 function pick_mistery() {
   var x = Math.floor(Math.random() * a.length);
