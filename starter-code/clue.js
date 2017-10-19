@@ -88,17 +88,85 @@ Patio
 
 */
 
-function random_selector(array) {
+//function random_selector(array) {
 
-}
+//}
 
-function pick_mistery() {
+//function pick_mistery() {
 
-}
+//}
 
-function reveal_mistery(mistery) {
+//function reveal_mistery(mistery) {
 
-}
+//}
 
-var mistery_envelope = pick_mistery();
-reveal_mistery(mistery_envelope);
+//var mistery_envelope = pick_mistery();
+//reveal_mistery(mistery_envelope);
+
+var myHouse = [
+
+  suspects = [{firstName: "Jacob", lastName: "Green", color:"Green", description: 'He has a lot of connections', age: 45, occupation: 'Entrepreneur',},
+
+  {firstName: 'Doctor', lastName: 'Orchid', color: "White", description: 'PhD in plant toxicology. Adopted daughter of Mr. Boddy', age: 26, occupation: "Scientist",},
+
+  {firstName: 'Victor', lastName: 'Plum', color: "purple", description: "Billionaire video game designer", age: 22, occupation: 'designer',},
+
+  {firstName: "Kasandra", lastName: 'Scarlet', color: 'Red', description: 'She is an A-list movie star with a dark past', age: 31, occupation: 'Actor',},
+
+  {firstName: "Eleanor", lastName: 'Peacock', color: 'Blue', description: 'She is from a wealthy family and uses her status and money to earn popularity', age: 36, occupation: 'Socialité',},
+
+  {firstName: 'Jack', lastName: 'Mustard', color: 'yellow', description: 'He is a former football player who tries to get by on his former glory', age: 63, occupation: 'Retired footballer',}
+  ],
+
+   weapons = [
+  {type: 'Rope', Weight: 10},
+  {type: 'Knife', Weight: 8},
+  {type: 'Candlestick', Weight: 2},
+  {type: 'Dumbbell', Weight: 30},
+  {type: 'Poison', Weight: 2},
+  {type: 'Axe', Weight: 15},
+  {type: 'Bat', Weight: 13},
+  {type: 'Trophy', Weight: 25},
+  {type: 'Pistol', Weight: 20},
+ ],
+
+  rooms = [
+   {place: 'Dinning Room'},
+   {place: 'Conservatory'},
+   {place: 'Kitchen'},
+   {place: 'Study'},
+   {place: 'Library'},
+   {place: 'Billiard Room'},
+   {place: 'Lounge'},
+   {place: 'Ballroom'},
+   {place: 'Hall'},
+   {place: 'Spa'},
+   {place: 'Living Room'},
+   {place: 'Observatory'},
+   {place: 'Theater'},
+   {place: 'Guest House'},
+   {place: 'Patio'},
+   ],
+   ];
+
+   var envelope = [];
+ function random_selector(array) {
+ var random = array[Math.floor(Math.random() * array.length)];
+ return random;
+ }
+ function pickMystery(){
+ for (var i = 0; i < myHouse.length; i++) {
+   var newArray = stackSel(myHouse[i]);
+   envelope.push(newArray);
+ }
+ }
+ function stackSel(array){
+   var random = array[Math.floor(Math.random() * array.length)];
+ return random;
+ }
+
+ function reveal_mistery(mistery) {
+   pickMystery();
+   return envelope;
+ }
+ reveal_mistery();
