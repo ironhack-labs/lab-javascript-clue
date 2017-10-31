@@ -1,6 +1,6 @@
-/*
-
----- Characters ----
+var characters = [{
+  
+}
 
   Mr Green
   first name: Jacob
@@ -55,7 +55,7 @@
   age: 62
   image: https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg
   occupation: Retired Football player
-
+];
 ---- Weapons ----
 
 Rope - Weight: 10
