@@ -182,14 +182,10 @@ function cardStack() {
   return cardPick;
 }
 
-console.log(cardStack());
 
-function pick_mistery() {
-
-}
 
 function reveal_mistery(mistery) {
-
+console.log(cardStack()); /*Poner todo esto en bonito*/
 }
 
 var mistery_envelope = pick_mistery();
