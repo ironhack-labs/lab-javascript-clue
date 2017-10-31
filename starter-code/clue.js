@@ -90,6 +90,9 @@ Patio
 
 function random_selector(array) {
 
+
+  console.log("Demo")
+
 }
 
 function pick_mistery() {
