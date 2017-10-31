@@ -1,3 +1,39 @@
+var suspects = [
+  {
+  firstName: "Jacob",
+  lastName:  "Green",
+  color: "green",
+  description: "He has a lot of connections",
+  age: 45,
+  image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+  occupation: "Entrepreneur",
+  },
+  {
+  firstName: "Doctor",
+  lastName: "Orchid",
+  color: "white",
+  description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
+  age: 26,
+  image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
+  occupation: "Scientist",
+  },
+  {
+  firstName: "Victor",
+  lastName: "Plum",
+  color: "purple",
+  description: "Billionare video game designer",
+  age: 22
+  image: "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
+  occupation: "Designer",
+  }
+
+
+
+
+
+]
+
+
 /*
 
 ---- Characters ----
