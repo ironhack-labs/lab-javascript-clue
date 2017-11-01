@@ -4,7 +4,7 @@ function random_selector(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-function pick_mistery(suspects, weapons, rooms) {
+function pick_mistery() {
   var mistery = [
       random_selector(suspects),
       random_selector(weapons),
@@ -162,5 +162,5 @@ var rooms = [
   "Patio",
 ];
 
-var mistery_envelope = pick_mistery(suspects, weapons, rooms);
+var mistery_envelope = pick_mistery();
 reveal_mistery(mistery_envelope);
