@@ -15,7 +15,7 @@ function pick_mistery() {
 
 function reveal_mistery(mistery) {
   console.log("POLICE REPORT:\n")
-  console.log("The assassin was " + mistery[0].firstName + " " + mistery[0].lastName + ",");
+  console.log("The murderer was " + mistery[0].firstName + " " + mistery[0].lastName + ",");
   console.log("who used a "+ mistery[1].weight + " pounds " + mistery[1].item);
   console.log("to attack the victim (Mr. Boddy) at the " + mistery[2] +"\n");
 
