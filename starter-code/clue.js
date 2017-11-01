@@ -1,103 +1,146 @@
+//----Functions----
+
+function random_selector(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
+function pick_mistery(suspects, weapons, rooms) {
+  var mistery = [
+      random_selector(suspects),
+      random_selector(weapons),
+      random_selector(rooms)
+    ];
+  return mistery;
+}
+
+function reveal_mistery(mistery) {
+  console.log("POLICE REPORT:\n")
+  console.log("The assassin was " + mistery[0].firstName + " " + mistery[0].lastName + ",");
+  console.log("who used a "+ mistery[1].weight + " pounds " + mistery[1].item);
+  console.log("to attack the victim (Mr. Boddy) at the " + mistery[2] +"\n");
+
+  console.log("ASSASSIN´S FILE:\n");
+  console.log("Name: " + mistery[0].firstName + " " + mistery[0].lastName);
+  console.log("Color: " + mistery[0].color);
+  console.log("Description: " + mistery[0].description);
+  console.log("Age: " + mistery[0].age);
+  console.log("Image: " + mistery[0].image);
+  console.log("Occupation: " + mistery[0].occupation);
+}
+
 //---- Characters ----
 
-  var MrGreen = {
-  first name: "Jacob",
-  last name:  "Green",
+var suspects = [
+  MrGreen = {
+  firstName: "Jacob",
+  lastName:  "Green",
   color: "green",
   description: "He has a lot of connections",
   age: 45,
   image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
-  occupation: "Entrepreneur"
-}
+  occupation: "Entrepreneur",
+},
 
-  var DrOrchid = {
-  first name: "Doctor",
-  last name: "Orchid",
+  DrOrchid = {
+  firstName: "Doctor",
+  lastName: "Orchid",
   color: "white",
   description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
   age: 26,
   image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
   occupation: "Scientist"
-}
+},
 
-  var ProfPlum = {
-  first name: "Victor",
-  last name: "Plum",
+  ProfPlum = {
+  firstName: "Victor",
+  lastName: "Plum",
   color: "purple",
   description: "Billionare video game designer",
   age: 22,
   image: "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
   occupation: "Designer"
-}
+},
 
-  var MissScarlet = {
-  first name: "Kasandra",
-  last name: "Scarlet",
+  MissScarlet = {
+  firstName: "Kasandra",
+  lastName: "Scarlet",
   color: "red",
   description: "She is an A-list movie star with a dark past",
   age: 31,
   image: "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
   occupation: "Actor"
-}
+},
 
- var MrsPeacock = {
-  first name: "Eleanor",
-  last name: "Peacock",
+ MrsPeacock = {
+  firstName: "Eleanor",
+  lastName: "Peacock",
   color: "blue",
   description: "She is from a wealthy family and uses her status and money to earn popularity",
   age: 36,
   image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
   occupation: "Socialité"
-}
+},
 
- var MrMustard = {
-  first name: "Jack",
-  last name: "Mustard",
+ MrMustard = {
+  firstName: "Jack",
+  lastName: "Mustard",
   color: "yellow",
   description: "He is a former football player who tries to get by on his former glory",
   age: 62,
   image: "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
   occupation: "Retired Football player"
 }
+];
 
 
 //---- Weapons ----
 
-var Rope = {
-  Weight: 10
-}
+var weapons = [
+  Rope = {
+    item: "rope",
+    weight: 10
+  },
 
-var Knife = {
-  Weight: 8
-}
+  Knife = {
+    item: "knife",
+    weight: 8
+  },
 
-var Candlestick = {
-  Weight: 2
-}
+  Candlestick = {
+    item: "candlestick",
+    weight: 2
+  },
 
-var Dumbbell = {
-  Weight: 30
-}
+  Dumbbell = {
+    item: "dumbbell",
+    weight: 30
+  },
 
-var Poison = {
-  Weight: 2
-}
+  Poison = {
+    item: "poison",
+    weight: 2
+  },
 
-var Axe = {
-  Weight: 15
-}
+  Axe = {
+    item: "axe",
+    weight: 15
+  },
 
-var Bat = {
-  Weight: 13
-}
+  Bat = {
+    item: "bat",
+    weight: 13
+  },
 
-var Trophy = {
-  Weight: 25
-}
+  Trophy = {
+    item: "trophy",
+    weight: 25
+  },
 
-var Pistol = {
-  Weight: 20
-}
+  Pistol = {
+    item: "pistol",
+    weight: 20
+  }
+];
 
 //---- Rooms ----
 
@@ -119,17 +162,5 @@ var rooms = [
   "Patio",
 ];
 
-function random_selector(array) {
-
-}
-
-function pick_mistery() {
-
-}
-
-function reveal_mistery(mistery) {
-
-}
-
-var mistery_envelope = pick_mistery();
+var mistery_envelope = pick_mistery(suspects, weapons, rooms);
 reveal_mistery(mistery_envelope);
