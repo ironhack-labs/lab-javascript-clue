@@ -138,9 +138,7 @@ function pick_mistery() {
 }
 
 function reveal_mistery(mistery) {
-  mistery.forEach(function(card) {
-  console.log(card)  
-  })
+  console.log("Mistery Solved! " + mistery[0].firstName + " " + mistery[0].lastName + " commited a murder using a " + mistery[1].weapon + " in the " + mistery[2] + ".");
   
 }
 
