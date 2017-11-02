@@ -1,10 +1,6 @@
+var characters = [
 
-
-// ---- Characters ----
-
-var characters = {
-
-  mrGreen: {
+{
     firstName: "Jacob",
     lastName:  "Green",
     color: "green",
@@ -14,7 +10,7 @@ var characters = {
     occupation: "Entrepreneur",
   },
 
-  drOrchid: {
+ {
     firstName: "Doctor",
     lastName: "Orchid",
     color: "white",
@@ -24,7 +20,7 @@ var characters = {
     occupation: "Scientist",
   },
 
-  profPlum: {
+{
     firstName: "Victor",
     lastName: "Plum",
     color: "purple",
@@ -34,7 +30,7 @@ var characters = {
     occupation: "Designer",
   },
 
-  missScarlet: {
+ {
     firstName: "Kasandra",
     lastName: "Scarlet",
     color: "red",
@@ -44,7 +40,7 @@ var characters = {
     occupation: "Actor",
   },
 
-   mrsPeacock: {
+ {
     firstName: "Eleanor",
     lastName: "Peacock",
     color: "blue",
@@ -54,7 +50,7 @@ var characters = {
     occupation: "Socialité",
   },
 
-  mrMustard: {
+ {
     firstName: "Jack",
     lastName: "Mustard",
     color: "yellow",
@@ -63,35 +59,39 @@ var characters = {
     image: "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
     occupation: "Retired Football player",
   },
-};
+];
 
-var weapons = {
-    rope : {weight: 10},
-    knife : {weight: 8},
-    candlestick: {weight: 2},
-    dumbell: {weight: 30},
-    poison: {weigh: 2},
-    axe: {weight: 15},
-    bat: {weight: 13},
-    trophy: {weight: 25},
-    pistol: {weight: 20},
-};
+var weapons = [
+    {name: "rope", weight: 10},
+    {name: "knife", weight: 8},
+    {name: "candlestick", weight: 2},
+    {name: "dumbell", weight: 30},
+    {name: "poison", weigh: 2},
+    {name: "axe", weight: 15},
+    {name: "bat", weight: 13},
+    {name: "trophy", weight: 25},
+    {name: "pistol", weight: 20},
+  ];
 
 var rooms = ['Dinning Room', 'Conservatory', 'Kitchen', 'Study', 'Library', 'Billiard Room', 'Lounge', 'Ballroom', 'Hall', 'Spa', 'Living Room', 'Observatory', 'Theater', 'Guest House', 'Patio'];
 
 
 
 function random_selector(array) {
-  characters.forEach()
+  return array[Math.floor(Math.random() * array.length)];
 }
 
 function pick_mistery() {
-
+  cardMistery.character = random_selector(characters);
+  cardMistery.weapon = random_selector(weapons);
+  cardMistery.room = random_selector(rooms);
+  return "Mistery is in the envelope, write reveal_mistery(mistery_envelope) to know all about the murdered";
 }
 
 function reveal_mistery(mistery) {
-
+  return "The murder was in " + cardMistery.room + " with a " + cardMistery.weapon.name + " by " + cardMistery.character.firstName + cardMistery.character.lastName;
 }
 
+var cardMistery = {};
 var mistery_envelope = pick_mistery();
 reveal_mistery(mistery_envelope);
