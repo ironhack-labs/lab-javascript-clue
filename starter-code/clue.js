@@ -16,10 +16,10 @@ function pick_mistery() {
 function reveal_mistery(mistery) {
   console.log("POLICE REPORT:\n")
   console.log("The murderer was " + mistery[0].firstName + " " + mistery[0].lastName + ",");
-  console.log("who used a "+ mistery[1].weight + " pounds " + mistery[1].item);
+  console.log("who used a " + mistery[1].weight + " pounds " + mistery[1].item);
   console.log("to attack the victim (Mr. Boddy) at the " + mistery[2] +"\n");
 
-  console.log("ASSASSIN´S FILE:\n");
+  console.log("MURDERER´S FILE:\n");
   console.log("Name: " + mistery[0].firstName + " " + mistery[0].lastName);
   console.log("Color: " + mistery[0].color);
   console.log("Description: " + mistery[0].description);
@@ -32,63 +32,63 @@ function reveal_mistery(mistery) {
 
 var suspects = [
   MrGreen = {
-  firstName: "Jacob",
-  lastName:  "Green",
-  color: "green",
+  firstName  : "Jacob",
+  lastName   : "Green",
+  color      : "green",
   description: "He has a lot of connections",
-  age: 45,
-  image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
-  occupation: "Entrepreneur",
+  age        : 45,
+  image      : "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+  occupation : "Entrepreneur",
 },
 
   DrOrchid = {
-  firstName: "Doctor",
-  lastName: "Orchid",
-  color: "white",
+  firstName  : "Doctor",
+  lastName   : "Orchid",
+  color      : "white",
   description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
-  age: 26,
-  image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
-  occupation: "Scientist"
+  age        : 26,
+  image      : "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
+  occupation : "Scientist"
 },
 
   ProfPlum = {
-  firstName: "Victor",
-  lastName: "Plum",
-  color: "purple",
+  firstName  : "Victor",
+  lastName   : "Plum",
+  color      : "purple",
   description: "Billionare video game designer",
-  age: 22,
-  image: "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
-  occupation: "Designer"
+  age        : 22,
+  image      : "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
+  occupation : "Designer"
 },
 
   MissScarlet = {
-  firstName: "Kasandra",
-  lastName: "Scarlet",
-  color: "red",
+  firstName  : "Kasandra",
+  lastName   : "Scarlet",
+  color      : "red",
   description: "She is an A-list movie star with a dark past",
-  age: 31,
-  image: "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
-  occupation: "Actor"
+  age        : 31,
+  image      : "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
+  occupation : "Actor"
 },
 
  MrsPeacock = {
-  firstName: "Eleanor",
-  lastName: "Peacock",
-  color: "blue",
+  firstName  : "Eleanor",
+  lastName   : "Peacock",
+  color      : "blue",
   description: "She is from a wealthy family and uses her status and money to earn popularity",
-  age: 36,
-  image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
-  occupation: "Socialité"
+  age        : 36,
+  image      : "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
+  occupation : "Socialité"
 },
 
  MrMustard = {
-  firstName: "Jack",
-  lastName: "Mustard",
-  color: "yellow",
+  firstName  : "Jack",
+  lastName   : "Mustard",
+  color      : "yellow",
   description: "He is a former football player who tries to get by on his former glory",
-  age: 62,
-  image: "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
-  occupation: "Retired Football player"
+  age        : 62,
+  image      : "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
+  occupation : "Retired Football player"
 }
 ];
 
@@ -97,47 +97,47 @@ var suspects = [
 
 var weapons = [
   Rope = {
-    item: "rope",
+    item  : "rope",
     weight: 10
   },
 
   Knife = {
-    item: "knife",
+    item  : "knife",
     weight: 8
   },
 
   Candlestick = {
-    item: "candlestick",
+    item  : "candlestick",
     weight: 2
   },
 
   Dumbbell = {
-    item: "dumbbell",
+    item  : "dumbbell",
     weight: 30
   },
 
   Poison = {
-    item: "poison",
+    item  : "poison",
     weight: 2
   },
 
   Axe = {
-    item: "axe",
+    item  : "axe",
     weight: 15
   },
 
   Bat = {
-    item: "bat",
+    item  : "bat",
     weight: 13
   },
 
   Trophy = {
-    item: "trophy",
+    item  : "trophy",
     weight: 25
   },
 
   Pistol = {
-    item: "pistol",
+    item  : "pistol",
     weight: 20
   }
 ];
