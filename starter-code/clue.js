@@ -62,12 +62,8 @@ var rooms = [
   "Patio"
 ];
 
-var mistery_envelope = pick_mistery();
-reveal_mistery(mistery_envelope);
-
 function random_selector(stack) {
   var randomNumber = Math.floor(Math.random() * stack.length);
-
   return stack[randomNumber];
 }
 
@@ -80,6 +76,10 @@ function pick_mistery() {
   return misteryArray;
 }
 
+var mistery_envelope = pick_mistery();
+
 function reveal_mistery(misteryArray) {
   return "The murderer is " + misteryArray[0] + " with a " + misteryArray[1].name + " in the " + misteryArray[2];
 }
+
+reveal_mistery(mistery_envelope);
