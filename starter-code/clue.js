@@ -114,7 +114,7 @@ function pick_mistery() {
 var mistery_envelope = pick_mistery();
 
 function reveal_mistery (mistery_envelope) {
-  return "The murderer is " + mistery_envelope[0].firstName + " " + mistery_envelope[0].lastName + " with a " + mistery_envelope[1].name + " in the " + mistery_envelope[2];
+  return "The murderer is " + mistery_envelope[0].firstName + " " + mistery_envelope[0].lastName + " and he is " + mistery_envelope[0].age + " years old. He murdered the victim with a " + mistery_envelope[1].name + " in the " + mistery_envelope[2];
 }
 
 reveal_mistery (mistery_envelope);
