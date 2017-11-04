@@ -2,6 +2,7 @@
 var characters = [
 
   {
+  nickName: "MrGreen",
   firstName: "Jacob",
   lastName:  "Green",
   color: "green",
@@ -12,6 +13,7 @@ var characters = [
 },
 
   {
+  nickName: "DrOrchid",
   firstName: "Doctor",
   lastName: "Orchid",
   color: "white",
@@ -22,6 +24,7 @@ var characters = [
 },
 
   {
+  nickName: "ProfPlum",
   firstName: "Victor",
   lastName: "Plum",
   color: "purple",
@@ -32,6 +35,7 @@ var characters = [
 },
 
   {
+  nickName: "MissScarlet",
   firstName: "Kasandra",
   lastName: "Scarlet",
   color: "red",
@@ -42,6 +46,7 @@ var characters = [
 },
 
   {
+  nickName: "MrsPeacock",
   firstName: "Eleanor",
   lastName: "Peacock",
   color: "blue",
@@ -52,6 +57,7 @@ var characters = [
 },
 
   {
+  nickName: "MrMustard",
   firstName: "Jack",
   lastName: "Mustard",
   color: "yellow",
@@ -97,22 +103,20 @@ var rooms = [
 ];
 
 
-function random_selector(cardStack) {
-  cardStack = cardStack[Math.floor(Math.random()*cardStack.length)];
-  return cardStack;
+function random_selector(cardPick) {
+  return cardPick[Math.floor(Math.random()*cardPick.length)];
 }
 
 
 function pick_mistery() {
-  var killer = random_selector(characters);
-  var method = random_selector(weapons);
-  var location = random_selector(rooms);
-  var mistery = [killer,method,location];
+  var mistery = [random_selector(characters),random_selector(weapons),random_selector(rooms)];
   return mistery;
 }
 
 function reveal_mistery(mistery) {
-console.log("The name of the killer is "+mistery[0].firstName +" "+ mistery[0].lastName+
+console.log(
+"The Killer is "+mistery[0].nickName+
+". His/her full name is "+mistery[0].firstName +" "+ mistery[0].lastName+
 ". The persons color is "+mistery[0].color+". "+ mistery[0].looks+
 ". The killer is "+mistery[0].age+" years old and is a "+ mistery[0].occupation+
 ". Mr Boddy got killed in the "+ mistery[2]+" with a "+ mistery[1].name+", weight: "+mistery[1].weight+
