@@ -1,6 +1,7 @@
 /*---- Characters ----*/
 
 
+
 var MrGreen = {
   firstName: "Jacob",
   lastName:  "Green",
