@@ -1,104 +1,175 @@
-/*
+var  mrGreen = {
+  firstName: "Jacob",
+  lastName:  "Green",
+  color: "green",
+  description: "He has a lot of connections",
+  age: 45,
+  image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+  occupation: "Entrepreneur"
+};
 
----- Characters ----
+var  drOrchid = {
+  firstName: "Doctor",
+  lastName: "Orchid",
+  color: "white",
+  description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
+  age: 26,
+  image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
+  occupation: "Scientist"
+};
 
-  Mr Green
-  first name: Jacob
-  last name:  Green
-  color: green
-  description: He has a lot of connections
-  age: 45
-  image: https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg
-  occupation: Entrepreneur
+var  profPlum = {
+  firstName: "Victor",
+  lastName: "Plum",
+  color: "purple",
+  description: "Billionare video game designer",
+  age: 22,
+  image: "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
+  occupation: "Designer"
+};
 
-  Dr Orchid
-  first name: Doctor
-  last name: Orchid
-  color: white
-  description: PhD in plant toxicology. Adopted daughter of Mr. Boddy
-  age: 26
-  image: http://www.radiotimes.com/uploads/images/Original/111967.jpg
-  occupation: Scientist
-
-  Prof Plum
-  first name: Victor
-  last name: Plum
-  color: purple
-  description: Billionare video game designer
-  age: 22
-  image: https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg
-  occupation: Designer
-
-  Miss Scarlet
-  first name: Kasandra
-  last name: Scarlet
-  color: red
-  description: She is an A-list movie star with a dark past,
+var missScarlet = {
+  firstName: "Kasandra",
+  lastName: "Scarlet",
+  color: "red",
+  description: "She is an A-list movie star with a dark past",
   age: 31,
-  image: https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg,
-  occupation: Actor
+  image: "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
+  occupation: "Actor"
+};
 
- Mrs Peacock
-  first name: Eleanor
-  last name: Peacock
-  color: blue
-  description: She is from a wealthy family and uses her status and money to earn popularity
-  age: 36
-  image: https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg
-  occupation: Socialité
+var mrsPeacock = {
+  firstName: "Eleanor",
+  lastName: "Peacock",
+  color: "blue",
+  description: "She is from a wealthy family and uses her status and money to earn popularity",
+  age: 36,
+  image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
+  occupation: "Socialité"
+};
 
- Mr Mustard
-  first name: Jack
-  last name: Mustard
-  color: yellow
-  description: He is a former football player who tries to get by on his former glory
-  age: 62
-  image: https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg
-  occupation: Retired Football player
+var mrMustard = {
+  firstName: "Jack",
+  lastName: "Mustard",
+  color: "yellow",
+  description: "He is a former football player who tries to get by on his former glory",
+  age: 62,
+  image: "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
+  occupation: "Retired Football player"
+};
 
----- Weapons ----
+var suspect = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 
-Rope - Weight: 10
-Knife - Weight: 8
-Candlestick - Weight: 2
-Dumbbell - Weight: 30
-Poison - Weight: 2
-Axe - Weight: 15
-Bat - Weight: 13
-Trophy - Weight: 25
-Pistol - Weight: 20
+//---- Weapons ----
+var rope = {
+  name: "rope",
+  weight: 10
+};
+var knife = {
+  name: "knife",
+  weight: 8
+};
+var candlestick = {
+  name: "candlestick",
+  Weight: 2
+};
+var dumbbell = {
+  name: "dumbbell",
+  weight: 30
+};
+var poison = {
+  name: "poison",
+  weight: 2
+};
+var axe = {
+  name: "axe",
+  weight: 15
+};
+var bat = {
+  name: "bat",
+  weight: 13
+};
+var trophy = {
+  name: "trophy",
+  weight: 25
+};
+var pistol = {
+  name: "pistol",
+  weight: 20
+};
+
+var weapon = [
+  rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol
+];
+
+var room = [
+  "Dinning Room", "Conservatory", "Kitchen", "Study", "Library",
+  "Billiard Room", "Lounge", "Ballroom", "Hall", "Spa", "Living Room",
+  "Observatory", "Theater", "Guest House", "Patio"
+];
 
 
----- Rooms ----
-Dinning Room
-Conservatory
-Kitchen
-Study
-Library
-Billiard Room
-Lounge
-Ballroom
-Hall
-Spa
-Living Room
-Observatory
-Theater
-Guest House
-Patio
+function randomSelector(array) {
+  var random = Math.floor(Math.random() * array.length);
+  return array[random];
+}
 
+//----function that calls the random selector
+
+function callRandomSelector(card){
+  var randomCard = randomSelector(card);
+  console.log(randomCard);
+}
+
+/*
+do{
+  var cardType = prompt("Select the number of the card you want: (1)Suspect (2)Weapon (3)Room ");
+  if (cardType === 1){
+    callRandomSelector(suspect);
+  }else if (cardType === 2) {
+    callRandomSelector(weapon);
+  }else if (cardType === 3) {
+    callRandomSelector(room);
+  }else {
+    console.log("Hey. You must select a number between 1 and 3");
+  }
+}while (cardType != 1 || cardType != 2 || cardType != 3);
 */
 
-function random_selector(array) {
-
+var cardType = prompt("Select the number of the card you want: (1)Suspect (2)Weapon (3)Room ");
+while (cardType != "1" && cardType != "2" && cardType != "3"){
+  console.log("Hey. You must select a number between 1, 2 and 3");
+  var cardType = prompt("Select the number of the card you want: (1)Suspect (2)Weapon (3)Room ");
+  break;
 }
 
-function pick_mistery() {
-
+if (cardType === "1"){
+callRandomSelector(suspect);
+}else if (cardType === "2") {
+  callRandomSelector(weapon);
+}else if (cardType === "3") {
+callRandomSelector(room);
 }
 
-function reveal_mistery(mistery) {
 
+var randomRoom = randomSelector(room);
+console.log(randomRoom);
+//----random weapon---
+var randomWeapon = randomSelector(weapon);
+console.log(randomWeapon.name);
+//----random suspect---
+var randomSuspect = randomSelector(suspect);
+console.log(randomSuspect);
+
+function pickMistery() {
+var mistery = [];
+mistery.push(randomSelector(room));
+mistery.push(randomSelector(weapon));
+mistery.push(randomSelector(suspect));
+
+return mistery;
 }
 
-var mistery_envelope = pick_mistery();
-reveal_mistery(mistery_envelope);
+function revealMistery(mistery) {
+console.log(mistery);
+}
