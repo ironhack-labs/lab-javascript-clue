@@ -1,6 +1,5 @@
 /*
 ---- Characters ----
-
   Mr Green
   first name: Jacob
   last name:  Green
@@ -9,7 +8,6 @@
   age: 45
   image: https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg
   occupation: Entrepreneur
-
   Dr Orchid
   first name: Doctor
   last name: Orchid
@@ -18,7 +16,6 @@
   age: 26
   image: http://www.radiotimes.com/uploads/images/Original/111967.jpg
   occupation: Scientist
-
   Prof Plum
   first name: Victor
   last name: Plum
@@ -27,7 +24,6 @@
   age: 22
   image: https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg
   occupation: Designer
-
   Miss Scarlet
   first name: Kasandra
   last name: Scarlet
@@ -36,7 +32,6 @@
   age: 31,
   image: https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg,
   occupation: Actor
-
  Mrs Peacock
   first name: Eleanor
   last name: Peacock
@@ -45,7 +40,6 @@
   age: 36
   image: https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg
   occupation: Socialité
-
  Mr Mustard
   first name: Jack
   last name: Mustard
@@ -54,9 +48,7 @@
   age: 62
   image: https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg
   occupation: Retired Football player
-
 ---- Weapons ----
-
 Rope - Weight: 10
 Knife - Weight: 8
 Candlestick - Weight: 2
@@ -66,8 +58,6 @@ Axe - Weight: 15
 Bat - Weight: 13
 Trophy - Weight: 25
 Pistol - Weight: 20
-
-
 ---- Rooms ----
 Dinning Room
 Conservatory
@@ -140,7 +130,7 @@ var suspects = [
     color: "yellow",
     description: "He is a former football player who tries to be a former glory."
   }
-]
+];
 var weapons = [{
     weapon: "Rope",
     weight: "10",
@@ -195,7 +185,7 @@ var weapons = [{
     hurt: "5",
     color: "blue"
   }
-]
+];
 var houseRooms = [{
     room: "Dinning room"
   },
@@ -241,7 +231,7 @@ var houseRooms = [{
   {
     room: "Patio"
   }
-]
+];
 
 
 function random_selector(array) {
@@ -256,9 +246,14 @@ function pick_mistery() {
   var houseRooms1 = random_selector(houseRooms);
 
   var envelope = [suspects1, weapons1, houseRooms1];
-  return envelope
+  return envelope;
+}
+pick_mistery();
+
+
+function reveal_mistery(mistery) {
+
 }
 
-//Revelar misterio
-
-pick_mistery()
+var mistery_envelope = pick_mistery();
+reveal_mistery(mistery_envelope);
