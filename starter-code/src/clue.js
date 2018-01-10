@@ -68,9 +68,6 @@ var charactersArray = [
     
   ];
   
-  console.log(charactersArray);
-  
-  
   var weaponsArray = [
     {name: "rope", weight: 10},
     {name: "knife", weight: 8},
@@ -82,8 +79,6 @@ var charactersArray = [
     {name: "trophy", weight: 25},
     {name: "pistol", weight: 20}
   ];
-  
-  console.log(weaponsArray);
   
   var roomsArray = [
     {name: "Dinning Room"},
@@ -104,16 +99,20 @@ var charactersArray = [
   ];
   
   function randomSelector(a){
-    //var ran = a[Math.random()].name;
-    //return ran;
     var ran = Math.random() * a.length;
     ran = Math.floor(ran);
-      console.log(ran);
-      
-      return a[ran];
-  
+    
+    return a[ran];
   } 
   
   randomSelector(roomsArray);
   
+  var misteryEnvelope = [randomSelector(charactersArray), randomSelector(weaponsArray),randomSelector(roomsArray)];
   
+  function pickMistery(){
+    
+  return misteryEnvelope;
+    
+  }
+  
+  pickMistery();
