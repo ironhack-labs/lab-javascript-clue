@@ -64,7 +64,7 @@ console.log(weaponsArray);
 var carta = "";
 //charactersArray, roomsArray, weaponsArray
 function randomSelector(array){
-    return array[Math.floor(Math.random()*array.length-1)];
+    return array[Math.floor(Math.random()*array.length)];
 }
 
 var asesinado = randomSelector(charactersArray);
