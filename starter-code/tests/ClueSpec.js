@@ -10,10 +10,6 @@ describe('Find a random element of the array - randomSelector', function () {
     expect(randomSelector([])).toBe(undefined);
   });
 
-  it('Return undefined if the array is empty', function () {
-    expect(randomSelector([])).toBe(undefined);
-  });
-
   it('Return the element of a single value array', function () {
     expect(randomSelector(['ab'])).toBe('ab');
   });
