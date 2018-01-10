@@ -1,82 +1,124 @@
 /* eslint no-undef: "off" */
 /* eslint jasmine/no-spec-dupes: "off" */
 
-describe('Find a random element of the array - randomSelector', function () {
-  it('Defines randomSelector', function () {
+describe('randomSelector()', function () {
+
+  it('should be a function', function () {
     expect(typeof randomSelector).toBe('function');
   });
 
-  it('Return undefined if the array is empty', function () {
-    expect(randomSelector([])).toBe(undefined);
+  describe('given an empty array', function () {
+
+    it('should return undefined', function () {
+      var array = [];
+      var result = randomSelector(array);
+      expect(result).toBe(undefined);
+    });
   });
 
-  it('Return undefined if the array is empty', function () {
-    expect(randomSelector([])).toBe(undefined);
+  describe('given an array with a single element', function () {
+
+    it('should return that element', function () {
+      var array = ['ab'];
+      var result = randomSelector(array);
+      expect(result).toBe('ab');
+    });
   });
 
-  it('Return the element of a single value array', function () {
-    expect(randomSelector(['ab'])).toBe('ab');
-  });
+  describe('given an array with many elements', function () {
 
-  it('Should return an element of the array', function () {
-    var array = ['ab', 'zz', 'zx', 'zy'];
+    beforeEach(function () {
+      this.spy = spyOn(Math, 'random');
+      this.array = ['a', 'ab', 'abb', 'aab', 'aaa', 'sda', 'kas'];
+    });
 
-    expect(array.indexOf(randomSelector(array))).toBeGreaterThan(-1);
-  });
+    it('should be able to return the first element', function () {
+      this.spy.and.returnValue(0.1);
+      var result = randomSelector(this.array);
+      expect(result).toEqual('a');
+    });
 
-  it('Return a random element of the array', function () {
-    var spy = spyOn(Math, 'random').and.returnValue(0.5);
+    it('should be able to return an element in the middle', function () {
+      this.spy.and.returnValue(0.5);
+      var result = randomSelector(this.array);
+      expect(result).toEqual('aab');
+    });
 
-    expect(randomSelector(['a', 'ab', 'abb', 'aab', 'aaa', 'sda', 'kas'])).toEqual('aab');
-    spy.and.returnValue(0.1);
+    it('should be able to return the last element', function () {
+      this.spy.and.returnValue(0.9);
+      var result = randomSelector(this.array);
+      expect(result).toEqual('kas');
+    });
 
-    expect(randomSelector(['a', 'ab', 'abb', 'aab', 'aaa', 'sda', 'kas'])).toEqual('a');
-    spy.and.returnValue(0.9);
-
-    expect(randomSelector(['a', 'ab', 'abb', 'aab', 'aaa', 'sda', 'kas'])).toEqual('kas');
   });
 });
 
-describe('Pick a random mistery - pickMistery', function () {
-  it('Defines pickMistery', function () {
+describe('pickMistery()', function () {
+
+  it('should be a function', function () {
     expect(typeof pickMistery).toBe('function');
   });
 
-  it('Return an array', function () {
+  it('should return an array', function () {
     expect(typeof pickMistery()).toEqual('object');
+    expect(typeof pickMistery().pop).toBe('function');
   });
 
-  it('Return a non empty array', function () {
-    expect(pickMistery().length).toBeGreaterThan(0);
+  it('should return a non empty array', function () {
+    var result = pickMistery();
+    expect(result.length).toBeGreaterThan(0);
   });
 
-  it('Return an array with 3 elements', function () {
-    expect(pickMistery().length).toEqual(3);
+  it('should return an array with 3 elements', function () {
+    var result = pickMistery();
+    expect(result.length).toEqual(3);
   });
 
-  it('Return a killer on the first index of the array', function () {
-    expect(charactersArray.indexOf(pickMistery()[0])).toBeGreaterThan(-1);
+  it('should return a killer on the first index of the array', function () {
+    var result = pickMistery();
+    expect(charactersArray.indexOf(result[0])).toBeGreaterThan(-1);
   });
 
-  it('Return a weapon on the second index of the array', function () {
-    expect(weaponsArray.indexOf(pickMistery()[1])).toBeGreaterThan(-1);
+  it('should return a weapon on the second index of the array', function () {
+    var result = pickMistery();
+    expect(weaponsArray.indexOf(result[1])).toBeGreaterThan(-1);
   });
 
-  it('Return a room in the third index of the array', function () {
-    expect(roomsArray.indexOf(pickMistery()[2])).toBeGreaterThan(-1);
+  it('should return a room in the third index of the array', function () {
+    var result = pickMistery();
+    expect(roomsArray.indexOf(result[2])).toBeGreaterThan(-1);
   });
 });
 
-describe('Reveal the mistery - revealMistery', function () {
-  it('Defines revealMistery', function () {
+describe('revealMistery()', function () {
+
+  it('should be a function', function () {
     expect(typeof revealMistery).toBe('function');
   });
 
-  it('Return an array', function () {
-    expect(typeof revealMistery([{ first_name: 'aa', last_name: 'abc' }, { name: 'abd' }, { name: 'abb' }])).toEqual('string');
+  it('should return a string', function () {
+    var data = [{
+      first_name: 'aa',
+      last_name: 'abc'
+    }, {
+      name: 'abd'
+    }, {
+      name: 'abb'
+    }];
+    var result = revealMistery(data);
+    expect(typeof result).toEqual('string');
   });
 
-  it('Return <FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!!', function () {
-    expect(revealMistery([{ first_name: 'Victor', last_name: 'Plum' }, { name: 'poison' }, { name: 'Billiard Room' }])).toEqual('Victor Plum killed Mr.Boddy using the poison in the Billiard Room!!!!');
+  it('should return <FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!!', function () {
+    var data = [{
+      first_name: 'Victor',
+      last_name: 'Plum'
+    }, {
+      name: 'poison'
+    }, {
+      name: 'Billiard Room'
+    }];
+    var result = revealMistery(data);
+    expect(result).toEqual('Victor Plum killed Mr.Boddy using the poison in the Billiard Room!!!!');
   });
 });
