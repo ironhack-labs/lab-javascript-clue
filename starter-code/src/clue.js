@@ -103,5 +103,17 @@ var charactersArray = [
     {name: "Patio"}
   ];
   
+  function randomSelector(a){
+    //var ran = a[Math.random()].name;
+    //return ran;
+    var ran = Math.random() * a.length;
+    ran = Math.floor(ran);
+      console.log(ran);
+      
+      return a[ran];
   
-  console.log(roomsArray);
+  } 
+  
+  randomSelector(roomsArray);
+  
+  
