@@ -176,6 +176,5 @@ function pickMistery() {
 
 function revealMistery(a) {
     var textoAsesino = a[0].first_name + ' ' + a[0].last_name + ' killed Mr.Boddy using the ' + a[1].name + ' in the ' + a[2].name + '!!!!';
-    console.log('A ver: ' + textoAsesino);
-    return (a[0].first_name + ' ' + a[0].last_name + ' killed Mr.Boddy using the ' + a[1].name + ' in the ' + a[2].name + '!!!!');
+    return textoAsesino;
 }
