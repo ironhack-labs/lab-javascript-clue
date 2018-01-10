@@ -61,4 +61,9 @@ console.log(roomsArray);
 var weaponsArray = houseSystem.weapons;
 console.log(weaponsArray);
 
+function randomSelector(charactersArray, roomsArray, weaponsArray){
+    return array[Math.floor(Math.random()*array.length)];
+}
+
+randomSelector();
 
