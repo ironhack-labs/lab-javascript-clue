@@ -95,6 +95,36 @@ var roomsArray = [
     {name: "Patio"}
 ];
 
-var randomRoom(roomsArray){
-    
+function randomSelector(arrayRandomSelector){
+
+var indexRandom = Math.floor(Math.random()*(arrayRandomSelector.length));
+return arrayRandomSelector[indexRandom]
+};
+
+// La operación arriba genera un número aleatorio de un array
+
+function pickMistery(){
+
+    var misteryEnvelopeAux = [];
+   
+    misteryEnvelopeAux.push(randomSelector(charactersArray));    
+    misteryEnvelopeAux.push(randomSelector(weaponsArray));
+    misteryEnvelopeAux.push(randomSelector(roomsArray));
+    return misteryEnvelopeAux;
 }
+
+var misteryEnvelope = [];
+   
+misteryEnvelope = pickMistery(charactersArray, weaponsArray, roomsArray);
+
+//console.log(misteryEnvelope);
+
+function revealMistery(misteryEnvelopeArgument){
+
+    return(misteryEnvelopeArgument[0].first_name + " " + misteryEnvelopeArgument[0].last_name + " killed Mr.Boddy using the " + misteryEnvelopeArgument[1].name + " in the " + misteryEnvelopeArgument[2].name +"!!!!");
+    }
+
+console.log(revealMistery(misteryEnvelope))
+
+
+
