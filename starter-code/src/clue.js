@@ -61,9 +61,21 @@ console.log(roomsArray);
 var weaponsArray = houseSystem.weapons;
 console.log(weaponsArray);
 
-function randomSelector(charactersArray, roomsArray, weaponsArray){
-    return array[Math.floor(Math.random()*array.length)];
+var carta = "";
+//charactersArray, roomsArray, weaponsArray
+function randomSelector(array){
+    return array[Math.floor(Math.random()*array.length-1)];
 }
 
-randomSelector();
+var asesinado = randomSelector(charactersArray);
+var lugar = randomSelector(roomsArray);
+var arma = randomSelector(weaponsArray);
+
+var misterio = "El personaje " + asesinado.name + " en el lugar " + lugar.name + " por el misterioso arma de " + arma.name; 
+
+console.log(misterio);
+
+
+
+
 
