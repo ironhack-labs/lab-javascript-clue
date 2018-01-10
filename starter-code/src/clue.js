@@ -10,10 +10,10 @@ occupation:   'Entrepreneur'
 
 var drOrchid = {
 frst_name:   'Doctor',
-lst_name:    'Orchid',
+last_name:    'Orchid',
 color:        'white',
 description:  'PhD in plant toxicology. Adopted daughter of Mr. Boddy',
-age:          26
+age:          26,
 image:        'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
 ocupation:   'Scientist'
 }
@@ -70,28 +70,45 @@ var trophy = { name: 'trophy', weight: 25 }
 var pistol = { name: 'pistol', weight: 20 }
 
 // Rooms
-name: Dinning Room
-name: Conservatory
-name: Kitchen
-name: Study
-name: Library
-name: Billiard Room
-name: Lounge
-name: Ballroom
-name: Hall
-name: Spa
-name: Living Room
-name: Observatory
-name: Theater
-name: Guest House
-name: Patio
-*/
+var dining = { name: 'Dinning Room' }
+var conservatory = { name: 'Conservatory' }
+var kitchen = { name: 'Kitchen' }
+var study = { name: 'Study' }
+var library = { name: 'Library' }
+var billard = { name: 'Billiard Room' }
+var lounge = { name: 'Lounge' }
+var ballroom = { name: 'Ballroom' }
+var hall = { name: 'Hall' }
+var spa = { name: 'Spa' }
+var living = { name: 'Living Room' }
+var observatory = { name: 'Observatory '}
+var theater = { name: 'Theater' }
+var guest = { name: 'Guest House' }
+var patio = { name: 'Patio' }
 
 // Characters Collection
-var charactersArray = [];
+var charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrMustard];
 
 // Rooms' Collection
-var roomsArray = [];
+var roomsArray = [dining, conservatory, kitchen,study, library, billard, lounge, ballroom, hall, spa, living, observatory,
+theater,guest,patio];
 
 // Weapons Collection
-var weaponsArray = [];
+var weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol ];
+
+function randomSelector(a){
+  return (a[Math.floor(Math.random()*a.length)]);
+}
+
+
+function pickMistery () {
+  var misteryEnvelope = [];
+  misteryEnvelope.push(randomSelector(charactersArray));
+  misteryEnvelope.push(randomSelector(weaponsArray));
+  misteryEnvelope.push(randomSelector(roomsArray));
+  return misteryEnvelope;
+}
+
+function revealMistery(a) {
+  return(a[0].first_name + ' ' + a[0].last_name + ' killed Mr.Boddy using the ' + a[1].name + ' in the ' + a[2].name + '!!!!');
+}
