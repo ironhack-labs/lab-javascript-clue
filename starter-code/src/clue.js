@@ -137,7 +137,7 @@ var missScarlet = {
     age:          31,
     image:        "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
     occupation:   "Actor"
-]
+}
 
 var mrsPeacock = {
     first_name:   "Eleanor",
@@ -165,13 +165,21 @@ charactersArray.push(mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMus
 
 var rope   = { name: "rope", weight: 10}
 var knife  =  { name: "knife",  weight: 8}
-var candlestick {name: "candlestick",   weight: 2}
-var dumbbell    {name: "dumbell",   weight: 30}
-var poison      {name: "poison",   weight: 2}
-var axe         {name: "axe",  weight: 15}
-var bat         {name: "bat",  weight: 13}
-var trophy      {name: "trophy",  weight: 25}
-var pistol      {name: "pistol",  weight: 20}
+var candlestick = {name: "candlestick",   weight: 2}
+var dumbbell   = {name: "dumbell",   weight: 30}
+var poison     = {name: "poison",   weight: 2}
+var axe        = {name: "axe",  weight: 15}
+var bat         ={name: "bat",  weight: 13}
+var trophy      ={name: "trophy",  weight: 25}
+var pistol      ={name: "pistol",  weight: 20}
 
 weaponsArray.push(rope, knife, candlestick, dumbell, poinson, axe, bat, trophy, pistol);
 
+
+function randomSelector (array) {
+    var subAnswer = Math.floor(Math.random()* array.length);
+    return array[subAnswer];
+
+}
+
+console.log (randomSelector(charactersArray));
