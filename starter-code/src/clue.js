@@ -1,6 +1,4 @@
 // Characters
-
-// Characters
 var characters = {
     mrGreen: {
        first_name:   "Jacob",
