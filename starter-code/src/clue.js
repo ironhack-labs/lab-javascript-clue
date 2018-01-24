@@ -140,7 +140,22 @@ function randomSelector(array) {
    array[Math.floor(Math.random() * array.length)];
 }
 
-
 console.log(roomsArray.randomSelector);
+
+function pickMistery(character, weapon, room) {
+    var misteryEnvelope = [];
+
+    for (var i = 0; i < character.length && weapon.length && room.length; i++) {
+        var selectChar = character[i].randomSelector;
+        var selectWeap = weapon[i].randomSelector;
+        var selectRoom = room[i].randomSelector;
+
+        misteryEnvelope += selectChar, selectWeap, selectRoom
+    }
+
+    return misteryEnvelope;
+}
+
+
 
 
