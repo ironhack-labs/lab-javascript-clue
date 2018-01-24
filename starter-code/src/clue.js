@@ -124,19 +124,43 @@ weapons.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pisto
 var rooms = ["Dinning Room", "Conservatory", "Kitchen", "Study", "Library", "Billiard Room", "Lounge", "Ballroom", "Hall", "Spa", "Living Room", "Observatory", "Theater", "Guest House", "Patio"];
 
 
+var misteryEnvelope = [];
 
 
+function weaponsSelector() {
+  var random = weapons[Math.floor(Math.random() * weapons.length)];
 
-
-function randomSelector(array) {
-  var random = array[Math.floor(Math.random() * array.length)];
-
-  return random;
+  return misteryEnvelope.push(random);
 }
 
-randomSelector(rooms);
+function characterSelector() {
+    var random = characters[Math.floor(Math.random() * characters.length)];
+
+    return misteryEnvelope.push(random);
+}
+
+function roomSelector() {
+    var random = rooms[Math.floor(Math.random() * rooms.length)];
+
+    return misteryEnvelope.push(random);
+}
+
+function pickMystery() {
+  return characterSelector(), weaponsSelector(), roomSelector();
+}
 
 
+// misteryEnvelope;
 
+function revealMistery() {
+  
+  var string = misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name + " killed Mr.Boddy using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2];
+
+  return string;
+}
+
+
+pickMystery();
+revealMistery();
 
 
