@@ -71,12 +71,8 @@ var characters = {
 
 // Characters Collection
 var charactersArray = [];
-
-
 charactersArray.push(characters);
-
 charactersArray;
-
 
 
 // Weapons
@@ -140,17 +136,11 @@ var roomsArray = ["Dinning Room", "Conservatory", "Kitchen", "Study", "Library",
 roomsArray;
 
 
-
 function randomSelector(array) {
-
-    var selected;
-
-    for (var i = 0; i < array.length; i++) {
-        var element = array[i];
-        selected += Math.floor(Math.random(element * array.length));
-    }
-
-    return selected;
+   array[Math.floor(Math.random() * array.length)];
 }
+
+
+console.log(roomsArray.randomSelector);
 
 
