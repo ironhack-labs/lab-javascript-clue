@@ -1,6 +1,8 @@
 // Characters
-var characters = {
-    mrGreen: {
+var characters = [];
+
+ 
+    var mrGreen = {
        first_name:   "Jacob",
        last_name:    "Green",
        color:        "green",
@@ -10,7 +12,7 @@ var characters = {
        occupation:   "Entrepreneur"
    },
    
-    drOrchid: {
+    var drOrchid = {
    
        first_name:   "Doctor",
        last_name:    "Orchid",
@@ -22,7 +24,7 @@ var characters = {
    },
    
    
-    profPlum: {
+    var profPlum = {
        first_name:   "Victor",
        last_name:    "Plum",
        color:        "purple",
@@ -33,7 +35,7 @@ var characters = {
    },
    
    
-    missScarlet: {
+    var missScarlet = {
        first_name:   "Kasandra",
        last_name:    "Scarlet",
        color:        "red",
@@ -44,7 +46,7 @@ var characters = {
    },
    
    
-    mrsPeacock: {
+   var mrsPeacock = {
        first_name:   "Eleanor",
        last_name:    "Peacock",
        color:        "blue",
@@ -55,7 +57,7 @@ var characters = {
    },
    
    
-    mrMustard: {
+    var mrMustard = {
        first_name:   "Jack",
        last_name:    "Mustard",
        color:        "yellow",
@@ -64,68 +66,66 @@ var characters = {
        image:        "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
        occupation:   "Retired Football player"
    }
-}
+
 
 
 // Characters Collection
-var charactersArray = [];
-charactersArray.push(characters);
-charactersArray;
 
+characters.push(mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard);
+
+
+var weapons = [];
 
 // Weapons
-var weapons = {
-    rope: {
+weapons: {
+   var rope = {
         name: "rope",
         weight: 10
      },
      
-      knife: {
+      var knife = {
         name: "knife",
         weight: 8
      },
      
-      candlestick: {
+      var candlestick = {
         name: "candlestick",
         weight: 2
      },
      
-      dumbbell: {
+      var dumbbell = {
         name: "dumbbell",
         weight: 30
      },
      
-      poison: {
+      var poison = {
         name: "poison",
         weight: 2
      },
      
-      axe: {
+      var axe = {
         name: "axe",
         weight: 15
      },
      
-      bat: {
+      var bat = {
         name: "bat",
         weight: 13
      },
      
-      trophy: {
+      var trophy = {
         name: "trophy",
         weight: 25
      },
      
-      pistol: {
+      var pistol = {
         name: "pistol",
         weight: 20
      }
 }
 
 // Weapons Collection
-var weaponsArray = [];
-weaponsArray.push(weapons);
-weaponsArray;
-
+weapons.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
 
 
 // Rooms' Collection
