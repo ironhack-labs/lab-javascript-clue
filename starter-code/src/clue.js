@@ -120,6 +120,9 @@ function revealMistery(misteryEnvelope){
     var weapon = misteryEnvelope[1].name;
     var room = misteryEnvelope[2].name;
 
-    return console.log(firstName + " " + lastName + " killed Mr.Boddy using the " + weapon +
+    var string =console.log(firstName + " " + lastName + " killed Mr.Boddy using the " + weapon +
 ' in the ' + room + " !!!");
+    return string;
 }
+
+revealMistery(misteryEnvelope);
