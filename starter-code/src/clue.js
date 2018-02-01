@@ -268,7 +268,6 @@ var killerCard;
 var weaponCard;
 var roomCard;
 
-var mysteryEnvelope = [];
 
 function generateKillerCard (charactersArray){
  killerCard = charactersArray[Math.floor(Math.random() * charactersArray.length)]
@@ -289,7 +288,11 @@ function pickMystery (charactersArr, weaponsArr, roomsArr){
  return generateKillerCard(charactersArr), generateWeaponCard(weaponsArr), generateroomCard(roomsArr);  
 }
 
-function revealMystery(){
- return mysteryEnvelope[0].first_name + " " + mysteryEnvelope[0].first_name
+function revealMystery(hello){
+ return hello[0].first_name + " " + mysteryEnvelope[0].first_name
  + " killed Mr. Boddy using the " + mysteryEnvelope[1].name + " in the " + mysteryEnvelope[2].name
 }
+
+
+var mysteryEnvelope = pickMystery();
+console.log(revealMystery(mysteryEnvelope));
