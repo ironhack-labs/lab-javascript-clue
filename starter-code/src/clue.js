@@ -216,7 +216,9 @@ var weaponsArray = [
   }
   ];
   
-  var game = [charactersArray, weaponsArray, roomsArray];
+  //This array contains all the data structure
+
+  //var game = [charactersArray, weaponsArray, roomsArray];
 
   //Funtion for selecting random numbers
 
@@ -227,22 +229,20 @@ var weaponsArray = [
   }
 
   // Function for selecting 3 random properties
-  function pickMistery(game){ 
+  function pickMistery(){ 
     var random = [];
 
-    if( game == null ) {
-      return random;
-
-    } else {      
-      for(var i = 0; i < game.length; i++) {
-        random.push(randomSelector(game[i]));
-      }      
-    }   
+    random.push(randomSelector(charactersArray));
+    random.push(randomSelector(weaponsArray));
+    random.push(randomSelector(roomsArray));
+    
     return random;
     
   }
   var misteryEnvelope = pickMistery(game);
 
   function revealMistery(arr){
-    console.log(arr[0].first_name + arr[0].last_name + "killed Mr. Boddy using the " + arr[1].name + " in the "+ arr[2].name + "!")
+    return arr[0].first_name + " " + arr[0].last_name + " killed Mr.Boddy using the " + arr[1].name + " in the "+ arr[2].name + "!!!!";
   }
+
+  revealMistery(misteryEnvelope);
