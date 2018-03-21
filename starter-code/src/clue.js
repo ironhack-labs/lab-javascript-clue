@@ -135,7 +135,7 @@ var overallArray =[charactersArray,roomsArray,weaponsArray]
 // RadomSelector
 
 function randomSelector (Array){
-  var selector = Math.floor(Math.random()*Array.length);
+  var selector = Math.floor(Math.random() * Array.length + 1);
   return Array[selector];
 }
 
