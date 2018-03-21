@@ -216,3 +216,28 @@ var weaponsArray = [
   }
   ];
   
+  var game = [charactersArray, weaponsArray, roomsArray];
+
+  //Funtion for selecting random numbers
+
+  function randomSelector(arr){
+    var positionInArray = Math.floor(Math.random()*arr.length);
+
+    return arr[positionInArray];
+  }
+
+  // Function for selecting 3 random properties
+  function pickMistery(game){ 
+    var random = [];
+
+    if( game.length == 0 ) {
+      return undefined;
+    } else {      
+      for(var i = 0; i < game.length; i++) {
+        random.push(randomSelector(game[i]));
+      }      
+    }   
+    return random;
+    
+  }
+  var misteryEnvelope = pickMistery(game);
