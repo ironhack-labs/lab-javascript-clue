@@ -139,13 +139,13 @@ function pickMistery() {
   var randomWeapon = randomSelector(weaponsArray);
   var randomRoom = randomSelector(roomsArray);
 
-  misteryEnvelope=[randomCharacter,randomWeapon,roomsArray];
+  misteryEnvelope=[randomCharacter,randomWeapon,randomRoom];
   
   return misteryEnvelope;
 }
 
 function revealMistery(array){
-
+  console.log(array[2]);
   return array[0]["first_name"]+' '+array[0]["last_name"]+' killed Mr.Boddy using the '+ array[1]['name']+' in the ' + array[2]["name"];
 
 }
