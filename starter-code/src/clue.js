@@ -124,14 +124,26 @@ var charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrM
 var roomsArray = [room1, room2, room3, room4, room5, room6, room7, room8, room9, room10, room11, room12, room13, room14, room15];
 
 // Weapons Collection
-var weaponsArray = [rope, knife, candlstick, dumbbell, poison, axe, bat, trophy, pistol];
+var weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
 
 
 //Iteracion 2
 function randomSelector(arr) {
   var i = arr.length;
-  var a = Math.floor(Math.random() * i)
-  console.log(i)
-  console.log(a)
-  console.log(arr[a])
+  var a = Math.floor(Math.random() * i);
+  return arr[a]
 }
+
+
+
+
+function pickMistery(){
+  var misteryEnvelope = [];
+  a = randomSelector(charactersArray);
+  b = randomSelector(roomsArray);
+  c = randomSelector(weaponsArray);
+  misteryEnvelope.push(a,b,c);
+  return misteryEnvelope;
+}
+
+
