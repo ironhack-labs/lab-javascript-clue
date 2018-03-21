@@ -174,9 +174,16 @@ var patio = {
 
 // Characters Collection
 var charactersArray = [];
-
+//metemos en el array todos los personajes.
+charactersArray.push(mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard);
 // Rooms' Collection
 var roomsArray = [];
+//metemos todas las habitaciones.
+roomsArray.push(dinningRoom, conservatory, kitchen, study, library, 
+  dinningRoom, lounge, ballroom, hall, spa, livingRoom, observatory, 
+  theater, guestHouse, patio);
 
 // Weapons Collection
 var weaponsArray = [];
+//metemos las armas
+weaponsArray.push(rope, Knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
