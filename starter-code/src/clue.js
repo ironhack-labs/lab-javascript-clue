@@ -10,8 +10,8 @@ image:        "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.
 occupation:   "Entrepreneur"
 }
 var drOrchid = {
-frst_name:   "Doctor",
-lst_name:    "Orchid",
+first_name:   "Doctor",
+last_name:    "Orchid",
 color:        "white",
 description:  "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
 age:          26,
@@ -58,6 +58,7 @@ occupation:   "Retired Football player"
 // Weapons
 
 var rope = {
+    name: "rope",
     weight: 10
 }      
 var knife = {
@@ -65,28 +66,35 @@ var knife = {
 }     
 
 var candlestick = {
+    name: "candlestick",
     weight: 2
 }
 
 var dumbbell = {
+    name: "dumbell",
     weight: 30
 }
 
 var poison = {
+    name: "poison",
     weight: 2
 }
 var axe = {
+    name: "axe",
     weight: 15
 }
 
 
 var bat = {
+    name:"bat",    
     weight: 13
 }        
 var trophy = {
+    name:"trophy",
     weight: 25
 }     
 var pistol = {
+    name: "pistol",
     weight: 20
 }  
 
@@ -125,4 +133,14 @@ function randomSelector (arr){
     }
    var random = arr[Math.floor(Math.random() * arr.length)];
    return random
+}
+function pickMistery() {
+    return [randomSelector (charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray)];
+}
+var misteryEnvelope = pickMistery ();
+
+function revealMistery(misteryEnvelope) {
+    var pepe = { name: misteryEnvelope[2]};
+    console.log(pepe)
+   return [misteryEnvelope[0].first_name] + " " + [misteryEnvelope[0].last_name] + " killed Mr.Boddy using the " + [misteryEnvelope[1].name] + " in the " + pepe.name.name + "!!!!"
 }
