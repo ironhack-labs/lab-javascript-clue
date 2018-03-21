@@ -267,7 +267,7 @@ function pickMistery() {
  function revealMistery(array) {
  var fn = misteryEnvelope[0].first_name
  var ln = misteryEnvelope[0].last_name
- var r = misteryEnvelope[1].name
- var w = misteryEnvelope[2].name
+ var w = misteryEnvelope[1].name
+ var r = misteryEnvelope[2].name
  return fn + " " + ln + " killed Mr.Boddy using the " + w + " in the " + r + "!!!!";
  }
