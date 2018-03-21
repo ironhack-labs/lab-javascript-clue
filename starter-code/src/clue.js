@@ -9,6 +9,7 @@ age:          45,
 image:        "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
 occupation:   "Entrepreneur"
 };
+
 var drOrchid = {
 frst_name:    "Doctor",
 lst_name:     "Orchid",
@@ -48,6 +49,7 @@ age:          36,
 image:        "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
 occupation:   "Socialité"
 };
+
 var mrMustard = {
 first_name:   "Jack",
 last_name:    "Mustard",
@@ -71,22 +73,68 @@ name: trophy      ---   weight: 25
 name: pistol      ---   weight: 20
 
 // Rooms
-name: Dinning Room
-name: Conservatory
-name: Kitchen
-name: Study
-name: Library
-name: Billiard Room
-name: Lounge
-name: Ballroom
-name: Hall
-name: Spa
-name: Living Room
-name: Observatory
-name: Theater
-name: Guest House
-name: Patio
-*/
+
+var dinningRoom = {
+  name: "Dinning Room"
+};
+
+var conservatory = {
+  name: "Conservatory"
+};
+
+var kitchen = {
+  name: "Kitchen"
+};
+
+var study = {
+  name: "Study"
+};
+
+var library = {
+  name: "Library"
+}
+
+var billiardRoom = {
+  name: "Billiard Room"
+};
+
+var lounge = {
+  name: "Lounge"
+};
+
+var ballroom = {
+  name: "Ballroom"
+};
+
+var hall = {
+  name: "Hall"
+};
+
+var spa = {
+  name: "Spa"
+};
+
+var livingRoom = {
+  name: "Living Room"
+};
+
+var observatory = {
+  name: "Observatory"
+};
+
+var theater = {
+  name: "Theater"
+};
+
+var guestHouse = {
+  name: "Guest House"
+};
+
+var patio = {
+  name: "Patio"
+};
+
+
 
 // Characters Collection
 var charactersArray = [];
