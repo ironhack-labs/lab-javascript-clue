@@ -140,10 +140,12 @@ function randomSelector(arr) {
 function pickMistery(){
   var misteryEnvelope = [];
   a = randomSelector(charactersArray);
-  b = randomSelector(roomsArray);
-  c = randomSelector(weaponsArray);
+  c = randomSelector(roomsArray);
+  b = randomSelector(weaponsArray);
   misteryEnvelope.push(a,b,c);
   return misteryEnvelope;
 }
 
-
+function revealMistery(misteryEnvelope){
+  return misteryEnvelope[0]["first_name"] + " " + misteryEnvelope[0]["last_name"] + " " + "killed Mr.Boddy using the " + misteryEnvelope[1]["name"] + " in the " + misteryEnvelope[2]["name"] + "!!!!" 
+}
