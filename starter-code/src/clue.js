@@ -118,3 +118,11 @@ roomsArray.push(rooms)
 // Weapons Collection
 var weaponsArray = [];
 weaponsArray.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol)
+
+function randomSelector (arr){
+    if (arr.length === 0){
+        return undefined;
+    }
+   var random = arr[Math.floor(Math.random() * arr.length)];
+   return random
+}
