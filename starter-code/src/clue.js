@@ -95,8 +95,8 @@ var mrGreen = {
   occupation: "Entrepreneur"
 };
 var drOrchid = {
-  frst_name: "Doctor",
-  lst_name: "Orchid",
+  first_name: "Doctor",
+  last_name: "Orchid",
   color: "white",
   description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
   age: 26,
@@ -154,23 +154,23 @@ var charactersArray = [
 
 // Rooms' Collection
 
-var dinningRoom = {};
-var conservatory = {};
-var kitchen = {};
-var study = {};
-var library = {};
-var billiardRoom = {};
-var lounge = {};
-var ballroom = {};
-var hall = {};
-var spa = {};
-var livingRoom = {};
-var observatory = {};
-var theater = {};
-var guestHouse = {};
-var patio = {};
+var dinningRoom = {name:"Dinning Room" };
+var conservatory = {name: "Conservatory"};
+var kitchen = {name: "Kitchen"};
+var study = {name: "Study"};
+var library = {name: "library"};
+var billiardRoom = {name: "Billiard Room"};
+var lounge = {name: "Lounge"};
+var ballroom = {name: "Ballroom"};
+var hall = {name: "Hall"};
+var spa = {name: "Spa"};
+var livingRoom = {name: "Living Room"};
+var observatory = {name: "Observatory"};
+var theater = {name: "Theater"};
+var guestHouse = {name: "Guest House"};
+var patio = {name: "Patio"};
 
-var roomsArray = {
+var roomsArray = [
   dinningRoom,
   conservatory,
   kitchen,
@@ -186,7 +186,7 @@ var roomsArray = {
   theater,
   guestHouse,
   patio
-};
+];
 
 // Weapons Collection
 
@@ -241,7 +241,7 @@ var weaponsArray = [
 var cards = [charactersArray, roomsArray, weaponsArray];
 
 function randomSelector(array) {
-  if (array.length == 0) {
+  if (array.length === 0) {
     return undefined;
   }
 
@@ -252,4 +252,22 @@ function randomSelector(array) {
 
 var misteryEnvelope = [];
 
-function pickMistery() {}
+function pickMistery() {
+  var envelope = []
+  var character = randomSelector(charactersArray)
+  envelope.push(character)
+  var weapon = randomSelector(weaponsArray)
+  envelope.push(weapon)
+  var room = randomSelector(roomsArray)
+  envelope.push(room)
+  return envelope
+}
+ var misteryEnvelope = pickMistery(cards)
+
+ function revealMistery(array) {
+ var fn = misteryEnvelope[0].first_name
+ var ln = misteryEnvelope[0].last_name
+ var r = misteryEnvelope[1].name
+ var w = misteryEnvelope[2].name
+ return fn + " " + ln + " killed Mr.Boddy using the " + w + " in the " + r + "!!!!";
+ }
