@@ -187,3 +187,48 @@ roomsArray.push(dinningRoom, conservatory, kitchen, study, library,
 var weaponsArray = [];
 //metemos las armas
 weaponsArray.push(rope, Knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
+
+/* Iteracion 2 */
+/* Create a method randomSelector to randomly select one 
+element from a card stack. The method should receive an array 
+as an argument, and return randomly one of the elements of the array. */
+
+function randomSelector(array){
+  if(Array.isArray(array)){
+   if(array.length == 0){
+    return undefined;
+   }
+    var random = Math.floor(Math.random()*array.length);
+    return array[random];
+  }
+}
+
+/* 
+We need to create a pickMistery method that will call randomSelector 
+for each card stack, and return an array with the 3 picked cards, 
+a character, a weapon and a room. Our mystery should be stored on a 
+misteryEnvelope variable. */
+
+function pickMistery (){
+  var misteryEnvelope = [];
+  misteryEnvelope.push(randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray));
+  return misteryEnvelope;
+
+}
+
+/* 
+Finally, we need to reveal the mystery. Create a revealMistery method, 
+that will receive our misteryEnvelope array as an argument and return 
+the revealed mystery like this: 
+
+<FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!!
+*/
+
+ function revealMistery (misteryEnvelope){
+  
+  return misteryEnvelope[0].first_name + " " + 
+         misteryEnvelope[0].last_name + " killed Mr.Boddy using the " + 
+         misteryEnvelope[1].name + " in the " + 
+         misteryEnvelope[2].name + "!!!!";
+ }
+
