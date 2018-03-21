@@ -127,16 +127,17 @@ function randomSelector (myArray) {
 };
 
 
-var misteryEnvelope = []; 
-function pickMistery () {
+
+function pickMistery () { 
+    var misteryEnvelope = [];
     misteryEnvelope.push(randomSelector (charactersArray));
-    
     misteryEnvelope.push(randomSelector (weaponsArray));
     misteryEnvelope.push(randomSelector (roomsArray));
     return misteryEnvelope;
 };
+var misteryEnvelope = misteryEnvelope; // Aquí declaro la variable fuera DE NUEVO porque si lo hago antes de la función, la Jenni me da error, y si la dejo dentro no la puedo pasar como argumento en la última función como así lo solicita el enunciado
 
-// function revealMistery(misteryEnvelope) {
-//     return charactersArray[0].first_name + charactersArray[0].last_name + " killed Mr Body using " + weaponsArray[1].name + " in the " + roomsArray[2].name + "!!!!!";
-// };
+function revealMistery(misteryEnvelope) {
+    return charactersArray[0].first_name + charactersArray[0].last_name + " killed Mr.Boddy using the " + weaponsArray[1].name + " in the " + roomsArray[2].name + "!!!!";
+};
 
