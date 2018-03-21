@@ -98,7 +98,7 @@ var Patio = {name: "Patio"};
 // Characters Collection
 var charactersArray = [
     mrGreen, 
-    dr0rchid, 
+    drOrchid, 
     profPlum, 
     missScarlet, 
     mrsPeacock, 
@@ -152,16 +152,19 @@ function randomSelector(array) {
 // We need to create a pickMistery method that will call randomSelector for each card stack, 
 // and return an array with the 3 picked cards, a character, a weapon and a room. 
 // Our mystery should be stored on a misteryEnvelope variable.
-function pickMistery () {
-    var misteryEnvelope = [];
+var misteryEnvelope = [];
+
+function pickMistery() {
     var characterSelected = randomSelector(charactersArray);
     var weaponSelected = randomSelector(weaponsArray);
     var roomSelected = randomSelector(roomsArray);
 
     misteryEnvelope = [characterSelected, weaponSelected, roomSelected];
+    //console.log(misteryEnvelope);
     return misteryEnvelope;
 };
-//pickMistery();
+pickMistery();
+console.log(misteryEnvelope);
 
 
 
@@ -169,6 +172,18 @@ function pickMistery () {
 
 // Finally, we need to reveal the mystery. Create a revealMistery method, 
 // that will receive our misteryEnvelope array as an argument and return the revealed mystery like this:
-var revealMistery;
+// <FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!!
+
+function revealMistery(){
+    var result = (
+        misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name + 
+        " killed Mr.Boody using the " + misteryEnvelope[1].name +
+        " in the " + misteryEnvelope[2].name + "!!!!"
+    );
+    //console.log(result);
+    return result;
+};
+console.log(revealMistery());
+
 
 
