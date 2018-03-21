@@ -230,8 +230,9 @@ var weaponsArray = [
   function pickMistery(game){ 
     var random = [];
 
-    if( game.length == 0 ) {
-      return undefined;
+    if( game == null ) {
+      return random;
+
     } else {      
       for(var i = 0; i < game.length; i++) {
         random.push(randomSelector(game[i]));
@@ -241,3 +242,7 @@ var weaponsArray = [
     
   }
   var misteryEnvelope = pickMistery(game);
+
+  function revealMistery(arr){
+    console.log(arr[0].first_name + arr[0].last_name + "killed Mr. Boddy using the " + arr[1].name + " in the "+ arr[2].name + "!")
+  }
