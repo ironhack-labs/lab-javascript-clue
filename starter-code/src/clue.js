@@ -143,21 +143,21 @@ var bat = {name:'bat', weight:13}
 var trophy = {name:'trophy', weight:25}
 var pistol = {name:'pistol', weight:20}
 
-var dinningRoom = {name:'dinning room'}
-var conservatoryRoom = {name:'conservatory'}
-var kitchenRoom = {name:'kitchen'}
-var studyRoom = {name:'study'}
-var libraryRoom = {name:'library'}
-var billiarrdRoom = {name:'billiard room'}
-var loungeRoom = {name:'lounge'}
-var ballRoom = {name:'ballroom'}
-var hallRoom = {name:'hall'}
-var spaRoom = {name:'spa'}
-var livingRoom = {name:'living room'}
-var obervatoryRoom = {name:'observatory'}
-var theaterRoom = {name:'theater'}
-var guestRoom = {name:'guest house'}
-var patioRoom = {name:'patio'}
+vardinningRoom = {name:'dinning room'}
+ var conservatoryRoom = {name:'conservatory'}
+ var kitchenRoom = {name:'kitchen'}
+ var studyRoom = {name:'study'}
+ var libraryRoom = {name:'library'}
+ var billiarrdRoom = {name:'billiard room'}
+ var loungeRoom = {name:'lounge'}
+ var ballRoom = {name:'ballroom'}
+ var hallRoom = {name:'hall'}
+ var spaRoom = {name:'spa'}
+ var livingRoom = {name:'living room'}
+ var obervatoryRoom = {name:'observatory'}
+ var theaterRoom = {name:'theater'}
+ var guestRoom = {name:'guest house'}
+ var patioRoom = {name:'patio'}
 
 
 
@@ -177,22 +177,44 @@ roomsArray.push(dinningRoom,conservatoryRoom, kitchenRoom, studyRoom, libraryRoo
 weaponsArray.push(rope, knife, candleStick, dumBell, poison, axe, bat, trophy, pistol);
 
 function randomSelector(array){
-   var random =  Math.floor(Math.random() * (array.length))  /* math.floor picks a random number from 1-0.9999 
-                                                                math.random will pick a random number
+   var random =  Math.floor(Math.random() * (array.length))  /* math.random picks a random number from 1 - 0.9999 
+                                                                math.floor will only pick a lower number but you need the math.floor to
+                                                                make the number a whole number
                                                                 times the length of the array, if it weren't an array I would have to write +1
-                                                                because math.floor will only pick a lower number but you need the math.floor to
-                                                                make the number a whole number */    
-    return array[random]
+                                                                 */    
+ return array[random]
 }
+
+/*  function randomSelector(array){           
+    //create random number
+    var randomNumber = Math.random();
+    //multiply by length
+    
+*/
 
 function pickMystery(array){
     var mysteryEnvelope = [];
     mysteryEnvelope.push(randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray));
     return mysteryEnvelope;     // push randomSelector into all arrays, it'll pick a random item and push it to the mystery envelope array
-
-
 }
+
+/* 
+     function pickMystery(array){
+    
+    charactersArray = [1];    //what does this do?
+
+    return [1,1,1];
+}
+
+
+
+
 
 function revealMystery(mysteryEnvelope){
 
 }
+
+
+
+
+
