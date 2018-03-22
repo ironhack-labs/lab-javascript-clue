@@ -84,6 +84,83 @@ name: Guest House
 name: Patio
 */
 
+var mrGreen ={
+    
+firstName:"Jacob",
+lastName:"Green",
+age: '45',
+occupation:"Entrepreneur"
+}
+
+var drOrchid = {
+    
+firsName:"Doctor",
+lastName:"Orchid",
+color:"white",
+age:'26',
+ocupation:"Scientist"
+}
+
+var profPlum = {
+firstName:'Victor',
+lastName:'Plum',
+color:'Purple',
+age: '22',
+occupation:'Designer'
+}
+
+ var missScarlet = {
+firstName:'Kasandra',
+lastName:'Scarlet',
+color:'red',
+age:'31',
+occupation:'Actor'
+ }
+
+var mrsPeacock = {
+firstName:'Eleanor',
+lastName:'Peacock',
+color:'blue',
+age:'36',
+occupation:'Socialité'
+}
+
+var mrMustard = {
+firstName:'Jack',
+lastName:'Mustard',
+color:'yellow',
+age:'62',
+occupation:'Retired Football player'
+}
+
+var rope = {name:'rope', weight: 10},
+var knife = {name:'knife', weight: 8},
+var candleStick = {name:'candlestick', weight:2}
+var dumBell = {name:'dumbbell', weight:30}
+var poison = {name:'poison', weight:2}
+var axe = {name:'axe', weight:15}
+var bat = {name:'bat', weight:13}
+var trophy = {name:'trophy', weight:25}
+var pistol = {name:'pistol', weight:20}
+
+var dinningRoom = {name:'dinning room'}
+var conservatoryRoom = {name:'conservatory'}
+var kitchenRoom = {name:'kitchen'}
+var studyRoom = {name:'study'}
+var libraryRoom = {name:'library'}
+var billiarrdRoom = {name:'billiard room'}
+var loungeRoom = {name:'lounge'}
+var ballRoom = {name:'ballroom'}
+var hallRoom = {name:'hall'}
+var spaRoom = {name:'spa'}
+var livingRoom = {name:'living room'}
+var obervatoryRoom = {name:'observatory'}
+var theaterRoom = {name:'theater'}
+var guestRoom = {name:'guest house'}
+var patioRoom = {name:'patio'}
+
+
+
 // Characters Collection
 var charactersArray = [];
 
@@ -92,3 +169,30 @@ var roomsArray = [];
 
 // Weapons Collection
 var weaponsArray = [];
+
+charactersArray.push(mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard);
+
+roomsArray.push(dinningRoom,conservatoryRoom, kitchenRoom, studyRoom, libraryRoom, billiarrdRoom, loungeRoom, ballRoom, hallRoom,spaRoom, livingRoom, obervatoryRoom, theaterRoom, guestRoom, patioRoom);
+
+weaponsArray.push(rope, knife, candleStick, dumBell, poison, axe, bat, trophy, pistol);
+
+function randomSelector(array){
+   var random =  Math.floor(Math.random() * (array.length))  /* math.floor picks a random number from 1-0.9999 
+                                                                math.random will pick a random number
+                                                                times the length of the array, if it weren't an array I would have to write +1
+                                                                because math.floor will only pick a lower number but you need the math.floor to
+                                                                make the number a whole number */    
+    return array[random]
+}
+
+function pickMystery(array){
+    var mysteryEnvelope = [];
+    mysteryEnvelope.push(randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray));
+    return mysteryEnvelope;     // push randomSelector into all arrays, it'll pick a random item and push it to the mystery envelope array
+
+
+}
+
+function revealMystery(mysteryEnvelope){
+
+}
