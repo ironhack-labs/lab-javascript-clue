@@ -80,3 +80,32 @@ describe('Reveal the mistery - revealMistery', function () {
     expect(revealMistery([{ first_name: 'Victor', last_name: 'Plum' }, { name: 'poison' }, { name: 'Billiard Room' }])).toEqual('Victor Plum killed Mr.Boddy using the poison in the Billiard Room!!!!');
   });
 });
+
+
+function randomSelector(array){
+  return array[Math.floor(Math.random() * array.length)];
+}
+
+var mysteryEnvelope = []
+
+function pickMystery(array1,array2,array3){
+  mysteryEnvelope = [ 
+    randomSelector(array1),
+    randomSelector(array2),
+    randomSelector(array3)
+    ]
+  
+  return mysteryEnvelope
+}
+
+
+  var final = (pickMystery(charactersArray,weaponsArray,roomsArray))
+  
+  console.log(final[0].first_name + " " + final[0].last_name + " killed Mr. Boddy using the " + final[1].name + " in the " + final[2].name)
+
+
+
+
+
+
+
