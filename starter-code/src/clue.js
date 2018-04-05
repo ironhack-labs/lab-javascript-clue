@@ -59,36 +59,49 @@ let charactersArray = [
 
 // Rooms Collection
 
-let roomsArray = ['Dinning Room', 'Conservatory', 'Kitchen', 'Study', 'Library', 'Billiard Room', 'Lounge', 'Ballroom', 'Hall', 'Spa', 'Living Room', 'Observatory', 'Theater', 'Guest House', 'Patio'];
+let roomsArray = [
+  {name: 'Dinning Room'}, {name: 'Conservatory'}, {name: 'Kitchen'}, {name: 'Study'}, {name: 'Library'}, {name: 'Billiard Room'}, {name: 'Lounge'}, {name: 'Ballroom'}, {name: 'Hall'}, {name: 'Spa'}, {name: 'Living Room'}, {name: 'Observatory'}, {name: 'Theater'}, {name: 'Guest House'}, {name: 'Patio'}
+];
+
+// let roomsArray = ['Dinning Room', 'Conservatory', 'Kitchen', 'Study',  'Library', 'Billiard Room', 'Lounge', 'Ballroom', 'Hall', 'Spa', 'Living Room', 'Observatory', 'Theater', 'Guest House', 'Patio'];
 
 // Weapons Collection
 
 let weaponsArray = [
-  rope = {
+  {
+    name: 'rope',
     weight: 10,
   },
-  knife = {
+  {
+    name: 'knife',
     weight: 8,
   },
-  candlestick = {
+  {
+    name: 'candlestick',
     weight: 2,
   },
-  dumbbell = {
+  {
+    name: 'dumbbell',
     weight: 30,
   },
-  poison = {
+  {
+    name: 'poison',
     weight: 2,
   },
-  axe = {
+  {
+    name: 'axe',
     weight: 15,
   },
-  bat = {
+  {
+    name: 'bat',
     weight: 13,
   },
-  trophy = {
+  {
+    name: 'trophy',
     weight: 25,
   },
-  pistol = {
+  {
+    name: 'pistol',
     weight: 20,
   }
 ];
@@ -112,7 +125,7 @@ function pickMistery() {
 
 // Create a revealMistery method that returns the revealed mystery.
 function revealMistery(arr) {
-  return arr[0].first_name + ' ' + arr[0].last_name + ' killed Mr. Boddy using the ' + Object.keys(arr[1]) + ' in the ' + arr[2] + '!!!!';
+  return arr[0].first_name + ' ' + arr[0].last_name + ' killed Mr.Boddy using the ' + arr[1].name + ' in the ' + arr[2].name + '!!!!';
 }
 
 console.log(revealMistery(pickMistery()));
