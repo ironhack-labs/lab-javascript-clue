@@ -11,8 +11,8 @@ let charactersArray = [
     occupation: 'Entrepreneur',
   },
   drOrchid = {
-    frst_name: 'Doctor',
-    lst_name: 'Orchid',
+    first_name: 'Doctor',
+    last_name: 'Orchid',
     color: 'white',
     description: 'PhD in plant toxicology. Adopted daughter of Mr. Boddy',
     age: 26,
@@ -103,8 +103,16 @@ function randomSelector(arr) {
   return arr[getRandomInt(arr.length)];
 }
 
+// Create a pickMistery method to return an array with one card of each stack.
 function pickMistery() {
   let misteryEnvelope = [];
   misteryEnvelope.push(randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray));
   return misteryEnvelope;
 }
+
+// Create a revealMistery method that returns the revealed mystery.
+function revealMistery(arr) {
+  return arr[0].first_name + ' ' + arr[0].last_name + ' killed Mr. Boddy using the ' + Object.keys(arr[1]) + ' in the ' + arr[2] + '!!!!';
+}
+
+console.log(revealMistery(pickMistery()));
