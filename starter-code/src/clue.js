@@ -92,3 +92,13 @@ let weaponsArray = [
     weight: 20,
   }
 ];
+
+// Helper function returns a random int ranged [0, int)
+function getRandomInt(int) {
+  return Math.floor(Math.random() * int);
+}
+
+// Create a method randomSelector to randomly select one element from a card stack.
+function randomSelector(arr) {
+  return arr[getRandomInt(arr.length)];
+}
