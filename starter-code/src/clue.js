@@ -99,25 +99,17 @@ var weaponsArray = [
 
 // selects ramdom
 function randomSelector(cards){
-  var randomCardIndex = Math.floor(Math.random() * cards.length);
-  var randomCard = cards[randomCardIndex];
-  return randomCard;
+  return cards[Math.floor(Math.random() * cards.length)];
 }
 
 // create mistery
 function pickMistery(){
-  var randomRoom = randomSelector(roomsArray);
-  var randomCharacter = randomSelector(charactersArray);
-  var randomWeapon = randomSelector(weaponsArray);
-
-  var mistery = [randomCharacter, randomWeapon, randomRoom];
-
-  return mistery;
+  return [randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray)];
 }
+
+var misteryEnvelope = pickMistery();
 
 function revealMistery(envelope){
   // <FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!!
   return envelope[0].first_name + " " + envelope[0].last_name + " killed Mr.Boddy using the " + envelope[1].name + " in the " + envelope[2].name + "!!!!";
 }
-
-var misteryEnvelope = pickMistery();
