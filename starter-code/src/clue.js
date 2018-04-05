@@ -102,3 +102,9 @@ function getRandomInt(int) {
 function randomSelector(arr) {
   return arr[getRandomInt(arr.length)];
 }
+
+function pickMistery() {
+  let misteryEnvelope = [];
+  misteryEnvelope.push(randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray));
+  return misteryEnvelope;
+}
