@@ -249,9 +249,9 @@ roomsArray.push(diningRoom, conservatory, kitchen, study, library, billiardRoom,
 //----------Random Selector----------//
 
 function randomSelector(array){
-  var character = array[Math.floor(Math.random()*array.length)];
+  var random = array[Math.floor(Math.random()*array.length)];
   
-  return character
+  return random
 }
 
 
@@ -260,14 +260,10 @@ function randomSelector(array){
 var char = "";
 var weapon = "";
 var room = "";
-var  mysteryEnvelope;
+var mysteryEnvelope;
 
 function pickMistery(){
   mysteryEnvelope = [];
-  // mysteryEnvelope.push(randomSelector(charactersArray));
-  // mysteryEnvelope.push(randomSelector(weaponsArray));
-  // mysteryEnvelope.push(randomSelector(roomsArray));
-  // return mysteryEnvelope
   var char = randomSelector(charactersArray);
   var weapon = randomSelector(weaponsArray);
   var room = randomSelector(roomsArray);
