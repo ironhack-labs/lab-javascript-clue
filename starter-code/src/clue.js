@@ -1,6 +1,6 @@
 // Characters
 var charactersArray = [
-    {mrGreen: [{
+    mrGreen = {
         first_name:   "Jacob",
         last_name:    "Green",
         color:        "green",
@@ -8,10 +8,10 @@ var charactersArray = [
         age:          45,
         image:        'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
         occupation:   "Entrepreneur"
-    }]},
+    },
 
 
-    {drOrchid: [{
+    drOrchid = {
         first_name:   "Doctor",
         last_name:    "Orchid",
         color:        "white",
@@ -19,10 +19,10 @@ var charactersArray = [
         age:          26,
         image:        'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
         ocupation:   "Scientist"
-    }]},
+    },
 
 
-    {profPlum: [{
+    profPlum = {
         first_name:   "Victor",
         last_name:    "Plum",
         color:        "purple",
@@ -30,10 +30,10 @@ var charactersArray = [
         age:          22,
         image:        'https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg',
         occupation:   "Designer"
-    }]},
+    },
 
 
-    {missScarlet: [{
+    missScarlet = {
         first_name:   "Kasandra",
         last_name:    "Scarlet",
         color:        "red",
@@ -41,10 +41,10 @@ var charactersArray = [
         age:          31,
         image:        'https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg',
         occupation:   "Actor"
-    }]},
+    },
 
 
-    {mrsPeacock: [{
+    mrsPeacock = {
         first_name:   "Eleanor",
         last_name:    "Peacock",
         color:        "blue",
@@ -52,10 +52,10 @@ var charactersArray = [
         age:          36,
         image:        'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
         occupation:   "Socialité"
-    }]},
+    },
 
 
-    {mrMustard: [{
+    mrMustard = {
         first_name:   "Jack",
         last_name:    "Mustard",
         color:        "yellow",
@@ -63,7 +63,7 @@ var charactersArray = [
         age:          62,
         image:        'https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg',
         occupation:   "Retired Football player"
-    }]},
+    }
 ];
 
 // Weapons
@@ -108,25 +108,12 @@ function randomSelector(arr){
     }
 }
 
-function pickMistery(char, weap, rm) {
-    var charIndex = indexNum(char);
-    var wepIndex = indexNum(weap);
-    var roomIndex = indexNum(rm);
-    
-    var name = randomSelector(char[charIndex].first_name) + " " + randomSelector(char[charIndex].last_name);
-    var weapon = randomSelector(weap[wepIndex].name);
-    var room = randomSelector(rm[roomIndex].name) ;
-    
-    var randomArr = [name, weapon, room];
-
-    return randomArr;
-}
-
-function revealMistery(misteryEnvelope) {
-    console.log(misteryEnvelope[0] + " killed Mr. Boddy using the " + misteryEnvelope[1] + " in the " + misteryEnvelope[2] + "!!!");
+function pickMistery() {
+    var misteryEnvelope = [];
+    misteryEnvelope.push(randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray));
     return misteryEnvelope;
 }
 
-
-
-console.log(pickMistery(charactersArray, weaponsArray, roomsArray));
+function revealMistery(arr) {
+    return arr[0].first_name + " " + arr[0].last_name + " killed Mr.Boddy using the " + arr[1].name + " in the " + arr[2].name + "!!!!";
+}
