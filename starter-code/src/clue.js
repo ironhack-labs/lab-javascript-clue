@@ -127,5 +127,3 @@ function pickMistery() {
 function revealMistery(arr) {
   return arr[0].first_name + ' ' + arr[0].last_name + ' killed Mr.Boddy using the ' + arr[1].name + ' in the ' + arr[2].name + '!!!!';
 }
-
-console.log(revealMistery(pickMistery()));
