@@ -1,94 +1,226 @@
-// Characters
-/*
-mrGreen
-first_name:   Jacob
-last_name:    Green
-color:        green
-description:  He has a lot of connections
-age:          45
-image:        https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg
-occupation:   Entrepreneur
-
-drOrchid
-frst_name:   Doctor
-lst_name:    Orchid
-color:        white
-description:  PhD in plant toxicology. Adopted daughter of Mr. Boddy
-age:          26
-image:        http://www.radiotimes.com/uploads/images/Original/111967.jpg
-ocupation:   Scientist
-
-profPlum
-first_name:   Victor
-last_name:    Plum
-color:        purple
-description:  Billionare video game designer
-age:          22
-image:        https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg
-occupation:   Designer
-
-missScarlet
-first_name:   Kasandra
-last_name:    Scarlet
-color:        red
-description:  She is an A-list movie star with a dark past
-age:          31
-image:        https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg
-occupation:   Actor
-
-mrsPeacock
-first_name:   Eleanor
-last_name:    Peacock
-color:        blue
-description:  She is from a wealthy family and uses her status and money to earn popularity
-age:          36
-image:        https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg
-occupation:   Socialité
-
-mrMustard
-first_name:   Jack
-last_name:    Mustard
-color:        yellow
-description:  He is a former football player who tries to get by on his former glory
-age:          62
-image:        https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg
-occupation:   Retired Football player
-
-// Weapons
-
-name: rope        ---   weight: 10
-name: knife       ---   weight: 8
-name: candlestick ---   weight: 2
-name: dumbbell    ---   weight: 30
-name: poison      ---   weight: 2
-name: axe         ---   weight: 15
-name: bat         ---   weight: 13
-name: trophy      ---   weight: 25
-name: pistol      ---   weight: 20
-
-// Rooms
-name: Dinning Room
-name: Conservatory
-name: Kitchen
-name: Study
-name: Library
-name: Billiard Room
-name: Lounge
-name: Ballroom
-name: Hall
-name: Spa
-name: Living Room
-name: Observatory
-name: Theater
-name: Guest House
-name: Patio
-*/
 
 // Characters Collection
-var charactersArray = [];
+var charactersArray = []; //mrGreen,drOrchid,profPlum,missScarlet,mrsPeacock,mrMustard
 
 // Rooms' Collection
-var roomsArray = [];
+var roomsArray = []; //rDinningRoom,rConservatory,rKitchen,rStudy,rLibrary,rBilliardRoom,rLounge,rBallroom,rHall,rSpa,rLivingRoom,rObservatory,rTheater,rGuestHouse,rPatio
 
 // Weapons Collection
-var weaponsArray = [];
+var weaponsArray = []; //vRope,vKnife,vCandlestick,vDumbbell,vPoison,vAxe,vBat,vTrophy,vPistol
+
+// CHARACTERS
+var mrGreen = {
+  first_name:   "Jacob",
+  last_name:    "Green",
+  color:        "green",
+  description:  "He has a lot of connections",
+  age:          45,
+  image:        "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+  occupation:   "Entrepreneur",  
+}
+charactersArray.push(mrGreen);
+
+var drOrchid = {
+  frst_name:   "Doctor",
+  lst_name:    "Orchid",
+  color:        "white",
+  description:  "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
+  age:          26,
+  image:        "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
+  ocupation:   "Scientist",
+}
+charactersArray.push(drOrchid);
+
+var profPlum = {
+  first_name:   "Victor",
+  last_name:    "Plum",
+  color:        "purple",
+  description:  "Billionare video game designer",
+  age:          22,
+  image:        "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
+  occupation:   "Designer",  
+}
+charactersArray.push(profPlum);
+
+var missScarlet = {
+  first_name:   "Kasandra",
+  last_name:    "Scarlet",
+  color:        "red",
+  description:  "She is an A-list movie star with a dark past",
+  age:          31,
+  image:        "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
+  occupation:   "Actor",  
+}
+charactersArray.push(missScarlet);
+
+var mrsPeacock = {
+  first_name:   "Eleanor",
+  last_name:    "Peacock",
+  color:        "blue",
+  description:  "She is from a wealthy family and uses her status and money to earn popularity",
+  age:          36,
+  image:        "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
+  occupation:   "Socialité",
+}
+charactersArray.push(mrsPeacock);
+
+var mrMustard = {
+  first_name:   "Jack",
+  last_name:    "Mustard",
+  color:        "yellow",
+  description:  "He is a former football player who tries to get by on his former glory",
+  age:          62,
+  image:        "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
+  occupation:  "Retired Football player",  
+}
+charactersArray.push(mrMustard);
+
+// WEAPONS
+var vRope = {
+  name: "rope",
+  weight: 10,
+}
+weaponsArray.push(vRope);
+
+var vKnife = {
+name: "knife",
+weight: 8,  
+}
+weaponsArray.push(vKnife);
+
+var vCandlestick = {
+  name: "candlestick",
+  weight: 2,
+}
+weaponsArray.push(vCandlestick);
+
+var vDumbbell = {
+  name: "dumbbell",
+  weight: 30,
+}
+weaponsArray.push(vDumbbell);
+
+var vPoison = {
+  name: "poison",
+  weight: 2,
+}
+weaponsArray.push(vPoison);
+
+var vAxe = {
+  name: "axe",
+  weight: 15,
+}
+weaponsArray.push(vAxe);
+
+var vBat = {
+  name: "bat",
+  weight: 13,
+}
+weaponsArray.push(vBat);
+
+var vTrophy = {
+  name: "trophy",
+  weight: 25,
+}
+weaponsArray.push(vTrophy);
+
+var vPistol = {
+  name: "pistol",
+  weight: 20,
+}
+weaponsArray.push(vPistol);
+
+// ROOMS
+var  rDinningRoom = {
+  name: "Dinning Room",
+}
+roomsArray.push(rDinningRoom);
+
+var rConservatory = {
+  name: "Conservatory",
+}
+roomsArray.push(rConservatory);
+
+var rKitchen = {
+  name: "Kitchen",
+}
+roomsArray.push(rKitchen);
+
+var rStudy = {
+  name: "Study",
+}
+roomsArray.push(rStudy);
+
+var rLibrary = {
+  name: "Library",
+}
+roomsArray.push(rLibrary);
+
+var rBilliard = {
+  name: "Billiard Room",
+}
+roomsArray.push(rBilliard);
+
+var rLounge = {
+  name: "Lounge",
+}
+roomsArray.push(rLounge);
+
+var rBallroom = {
+  name: "Ballroom",
+}
+roomsArray.push(rBallroom);
+
+var rHall = {
+  name: "Hall",
+}
+roomsArray.push(rHall);
+
+var rSpa = {
+  name: "Spa",
+}
+roomsArray.push(rSpa);
+
+var rLiving = {
+  name: "Living Room",
+}
+roomsArray.push(rLiving);
+
+var rObservatory = {
+  name: "Observatory",
+}
+roomsArray.push(rObservatory);
+
+var rTheater = {
+  name: "Theater",
+}
+roomsArray.push(rTheater);
+
+var rGuestHouse = {
+  name: "Guest House",
+}
+roomsArray.push(rGuestHouse);
+
+var rPatio = {
+  name: "Patio",
+}
+roomsArray.push(rPatio);
+
+
+function randomSelector(array){
+  return array[Math.floor(Math.random()*array.length)];
+}
+
+function pickMistery(){
+  let misteryEnvelope = [];
+  misteryEnvelope.push(randomSelector(charactersArray));
+  misteryEnvelope.push(randomSelector(weaponsArray));
+  misteryEnvelope.push(randomSelector(roomsArray));
+
+  return misteryEnvelope;
+}
+
+function revealMistery(envelope){
+  return envelope[0].first_name + " " + envelope[0].last_name + " killed Mr.Boddy using the " + envelope[1].name + " in the " + envelope[2].name + "!!!!";
+}
+
