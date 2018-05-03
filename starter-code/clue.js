@@ -83,7 +83,7 @@ name: Theater
 name: Guest House
 name: Patio
 */
-
+console.log("hola Cluedo");
 // Characters Collection
 var charactersArray = [];
 
