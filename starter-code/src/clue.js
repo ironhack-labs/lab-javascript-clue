@@ -123,7 +123,7 @@ function pickMistery(){
     return misteryEnvelope;
 
 }
-
+/*
 function revealMistery(arr){
     var killer = [];
     killer.push(randomSelector(charactersArray).first_name);
@@ -133,4 +133,7 @@ function revealMistery(arr){
 
     return killer[0] + " " + killer[1] + " killed Mr.Boddy using the " + killer[2] + " in the " + killer[3] + "!!!!";
 }
-
+*/
+function revealMistery(misteryEnvelope){
+    return misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name + " killed Mr.Boddy using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2].name + "!!!!";  
+  }
