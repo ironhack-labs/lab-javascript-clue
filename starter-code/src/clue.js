@@ -177,24 +177,3 @@
 
   // Weapons Collection
   var weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
-
-  // Mistery Envelope
-  var misteryEnvelope = pickMistery();
-
-  // Functions
-  function randomSelector(array) {
-    return array[Math.floor(Math.random()*array.length)];
-  }
-
-  function pickMistery() {
-    character = randomSelector(charactersArray);
-    weapon = randomSelector(weaponsArray);
-    room = randomSelector(roomsArray);
-    return [character, weapon, room];
-  }
-
-  function revealMistery(misteryEnvelope) {
-    return misteryEnvelope[0].firstName + " " + misteryEnvelope[0].lastName + " killed Mr.Boddy using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2].name + "!!!!";
-  }
-
-  revealMistery(misteryEnvelope);
