@@ -11,8 +11,8 @@ var mrGreen ={
 }
 
 var drOrchid ={
-    frst_name:   "Doctor",
-    lst_name:    "Orchid",
+    first_name:   "Doctor",
+    last_name:    "Orchid",
     color:        "white",
     description:  "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
     age:          "26",
@@ -32,7 +32,7 @@ var missScarlet ={
     first_name:   "Kasandra",
     last_name:    "Scarlet",
     color:        "red",
-    description:  S"he is an A-list movie star with a dark past",
+    description:  "She is an A-list movie star with a dark past",
     age:          "31",
     image:        "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
     occupation:   "Actor"
@@ -98,30 +98,78 @@ var pistol = {
 }
 
 
-/*
+
 // Rooms
-name: Dinning Room
-name: Conservatory
-name: Kitchen
-name: Study
-name: Library
-name: Billiard Room
-name: Lounge
-name: Ballroom
-name: Hall
-name: Spa
-name: Living Room
-name: Observatory
-name: Theater
-name: Guest House
-name: Patio
-*/
-console.log("hola Cluedo");
+
+var Dinning ={
+    name: "Dinning Room"
+}
+var Conservatory ={
+    name: "Conservatory"
+}
+var Kitchen ={
+    name: "Kitchen"
+}
+var Study ={
+    name: "Study"
+}
+var Library ={
+    name: "Library"
+}
+var Billiard ={
+    name: "Billiard Room"
+}
+var Lounge ={
+    name: "Lounge"
+}
+var Ballroom ={
+    name: "Ballroom"
+}
+var Hall ={
+    name: "Hall"
+}
+var Spa ={
+    name: "Spa"
+}
+var Living ={
+    name: "Living Room"
+}
+var Observatory ={
+    name: "Observatory"
+}
+var Theater ={
+    name: "Theater"
+}
+var Guest ={
+    name: "Guest House"
+}
+var Patio ={
+    name: "Patio"
+}
+
+
 // Characters Collection
-var charactersArray = [];
+var charactersArray = [mrGreen,drOrchid,profPlum,missScarlet,mrsPeacock,mrMustard];
 
 // Rooms' Collection
-var roomsArray = [];
+var roomsArray = [Dinning, Conservatory, Kitchen, Study, Library, Billiard, Lounge, Ballroom, Hall, Spa, Living, Observatory, Theater, Guest, Patio];
 
 // Weapons Collection
-var weaponsArray = [];
+var weaponsArray = [rope,knife,candlestick,dumbbell,poison,axe,bat,trophy,pistol];
+
+
+function PickRandom(arrayElements) {
+    var itemElement = arrayElements[Math.floor(Math.random() * arrayElements.length)];
+    return itemElement;    
+}
+
+var character1 = PickRandom(charactersArray);
+var room1 = PickRandom(roomsArray);
+var weapon1 = PickRandom(weaponsArray);
+
+function SolveMistery(persona,hab,arma) {
+    
+    console.log( persona.first_name +" "+ persona.last_name + " ha matado a Mr. Boddy usando "+ arma.name + " en " + hab.name);
+}
+
+SolveMistery(character1, room1, weapon1);
