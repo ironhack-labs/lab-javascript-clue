@@ -140,8 +140,8 @@ var patio = {
 // characters list
 
 var mrGreen = {
-    first_name:   "Jacob",
-    last_name:    "Green",
+    firstName:   "Jacob",
+    lastName:    "Green",
     color:        "green",
     description:  "He has a lot of connections",
     age:          45,
@@ -150,8 +150,8 @@ var mrGreen = {
 }
 
 var drOrchid = {
-    first_name:   "Doctor",
-    last_name:    "Orchid",
+    firstName:   "Doctor",
+    lastName:    "Orchid",
     color:        "white",
     description:  "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
     age:          26,
@@ -161,8 +161,8 @@ var drOrchid = {
 
 
 var drOrchid = {
-    first_name:   "Doctor",
-    last_name:    "Orchid",
+    firstName:   "Doctor",
+    lastName:    "Orchid",
     color:        "white",
     description:  "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
     age:          26,
@@ -173,8 +173,8 @@ var drOrchid = {
 
 
 var profPlum = {
-    first_name:   "Victor",
-    last_name:    "Plum",
+    firstName:   "Victor",
+    lastName:    "Plum",
     color:        "purple",
     description:  "Billionare video game designer",
     age:          22,
@@ -183,8 +183,8 @@ var profPlum = {
 }
 
 var missScarlet = {
-    first_name:   "Kasandra",
-    last_name:    "Scarlet",
+    firstName:   "Kasandra",
+    lastName:    "Scarlet",
     color:        "red",
     description:  "She is an A-list movie star with a dark past",
     age:          31,
@@ -194,8 +194,8 @@ var missScarlet = {
 
 
 var mrsPeacock = {
-    first_name:   "Eleanor",
-    last_name:    "Peacock",
+    firstName:   "Eleanor",
+    lastName:    "Peacock",
     color:        "blue",
     description:  "She is from a wealthy family and uses her status and money to earn popularity",
     age:          36,
@@ -204,8 +204,8 @@ var mrsPeacock = {
 }
 
 var mrMustard = {
-    first_name:   "Jack",
-    last_name:    "Mustard",
+    firstName:   "Jack",
+    lastName:    "Mustard",
     color:        "yellow",
     description:  "He is a former football player who tries to get by on his former glory",
     age:          62,
@@ -283,5 +283,28 @@ function randomSelector(array)
 {
   return array[Math.floor(Math.random()*(array.length))];
 }
+var misteryEnvelope = [];
+function pickMistery(array, array2, array3) {
+  var cardsInfoArray = [array, array2, array3, ];
+  
+  for (var i = 0; i < cardsInfoArray.length; i++) {
+    var randomSelectorResult = randomSelector(cardsInfoArray[i]);
+    misteryEnvelope.push(randomSelectorResult);
+  }
+
+  return misteryEnvelope;
+
+}
+pickMistery(charactersArray, weaponsArray, roomsArray);
+
+
+function revealMistery(misteryEnvelope) {
+  var misteryRevealed = misteryEnvelope[0].firstName + " " + misteryEnvelope[0].lastName + " killed Mr.Body using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2].name;
+  console.log(misteryRevealed);
+  return misteryRevealed;
+  
+}
+
+revealMistery(misteryEnvelope);
 
 
