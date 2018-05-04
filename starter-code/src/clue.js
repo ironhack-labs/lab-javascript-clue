@@ -173,3 +173,4 @@ function pickMistery(){
 function revealMistery(misteryEnvelope){
     return misteryEnvelope[0].firstName + ' ' + misteryEnvelope[0].lastName + ' killed Mr.Boddy using the ' + misteryEnvelope[1].name + ' in the ' + misteryEnvelope[2].name + '!!!!'; 
 }
+
