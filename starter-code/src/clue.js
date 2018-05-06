@@ -159,3 +159,13 @@ var weaponsArray = [];
 weaponsArray.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
 
 
+//Creating the mistery
+//Random selector
+function randomSelector(arrayCollection){
+  return arrayCollection[Math.floor(Math.random()*(arrayCollection.length))];;
+  }
+//Create de mistery
+function pickMistery(){
+  var misteryEnvelope = [randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray)];
+  return misteryEnvelope;
+}
