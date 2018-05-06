@@ -85,6 +85,10 @@ name: Patio
 */
 
 
+
+// ITERATION ONE COUNTING THE CARDS
+
+
 // rooms list
 
 var diningRoom = {
@@ -135,7 +139,6 @@ var guestHouse = {
 var patio = {
     name: "Patio",
 }
-
 
 // characters list
 
@@ -261,9 +264,7 @@ var pistol = {
 }
 
 // Weapons Collection
-var weaponsArray = [
-    
-];
+var weaponsArray = [];
 
 // Characters Collection
 var charactersArray = [];
@@ -271,7 +272,7 @@ var charactersArray = [];
 // Rooms' Collection
 var roomsArray = [];
 
-
+//push variables to each array
 weaponsArray.push(rope,knife,candlestick,dumbbell,poison,axe,bat,pistol,trophy);
 
 roomsArray.push(diningRoom,conservatory,kitchen,study,library,billiardRoom,diningRoom,lounge,ballroom,hall,spa,livingRoom,observatory,theater,guestHouse,patio);
@@ -279,28 +280,32 @@ roomsArray.push(diningRoom,conservatory,kitchen,study,library,billiardRoom,dinin
 charactersArray.push(mrGreen,drOrchid,profPlum,missScarlet,mrsPeacock,mrMustard);
 
 
-function randomSelector(array)
-{
+// ITERATION 2 RANDOM randomSelector
+
+function randomSelector(array) {
   return array[Math.floor(Math.random()*(array.length))];
 }
+
+
+// ITERATION 2 RANDOM pickMister
+//had to take cardsInfoArray outside of pickMistery and use exact arrays for Jasmine to pass, it use to have parameters array1, array2, array3 and be called with the specific arrays
+var cardsInfoArray = [charactersArray, weaponsArray, roomsArray];
 var misteryEnvelope = [];
-function pickMistery(array, array2, array3) {
-  var cardsInfoArray = [array, array2, array3, ];
+function pickMistery() {
   
   for (var i = 0; i < cardsInfoArray.length; i++) {
     var randomSelectorResult = randomSelector(cardsInfoArray[i]);
     misteryEnvelope.push(randomSelectorResult);
   }
-
   return misteryEnvelope;
 
 }
-pickMistery(charactersArray, weaponsArray, roomsArray);
+pickMistery();
 
-
+// ITERATION 3 revealMistery
 function revealMistery(misteryEnvelope) {
-  var misteryRevealed = misteryEnvelope[0].firstName + " " + misteryEnvelope[0].lastName + " killed Mr.Body using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2].name;
-  console.log(misteryRevealed);
+  var misteryRevealed = misteryEnvelope[0].firstName + " " + misteryEnvelope[0].lastName + " killed Mr.Body using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2].name + "!!!!";
+  
   return misteryRevealed;
   
 }
