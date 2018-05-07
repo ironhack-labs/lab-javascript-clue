@@ -85,8 +85,8 @@ name: Patio
 */
 
 var mrGreen = {
-    firstName: 'Jacob',
-    lastName:  'Green',    
+    first_name: 'Jacob',
+    last_name:  'Green',    
     color:  'green',
     description:    'He has a lot of connections',
     age:    45,
@@ -94,8 +94,8 @@ var mrGreen = {
     occupation: 'Entrepreneur'
 };
 var drOrchid = {
-    firstName: 'Doctor',
-    lastName: 'Orchid',
+    first_name: 'Doctor',
+    last_name: 'Orchid',
     color: 'white',
     description: 'PhD in plant toxicology. Adopted daughter of Mr. Boddy',
     age: 26,
@@ -103,8 +103,8 @@ var drOrchid = {
     occupation: 'Scientist'
 };
 var proffPlum = {
-    firstName: 'Victor',
-    lastName: 'Plum',
+    first_name: 'Victor',
+    last_name: 'Plum',
     color: 'Purple',
     description: 'Billionare video game designer',
     age: 22,
@@ -112,8 +112,8 @@ var proffPlum = {
     occupation: 'Designer',
 };
 var missScarlet = {
-    firstName: 'Kasandra',
-    lastName: 'Scarlet',
+    first_name: 'Kasandra',
+    last_name: 'Scarlet',
     color: 'red',
     description: 'She is an A-list movie star with a dark past',
     age: 31,
@@ -121,8 +121,8 @@ var missScarlet = {
     occupation: 'actor'
 };
 var missPeacock = {
-    firstName:    'Eleanor',
-    lastName:     'Peacock',
+    first_name:    'Eleanor',
+    last_name:     'Peacock',
     color:        'blue',
     description:  'She is from a wealthy family and uses her status and money to earn popularity',
     age:          36,
@@ -130,8 +130,8 @@ var missPeacock = {
     occupation:   'Socialité'
 };
 var mrMustard = {
-    firstName:    'Jack',
-    lastName:     'Mustard',
+    first_name:    'Jack',
+    last_name:     'Mustard',
     color:        'yellow',
     description:  'He is a former football player who tries to get by on his former glory',
     age:          62,
@@ -254,7 +254,7 @@ var weaponsArray = [
 weaponsArray.push(rope,knife,candlestick,dumbbell,poison,axe,bat,trophy,pistol);
 
 function randomSelector(array){
-    if(array.length === 0){
+    if(!array || array.length === 0){
         return undefined;
       } else {
         var i = Math.floor(Math.random()*(array.length));
@@ -263,14 +263,14 @@ function randomSelector(array){
 }
 
 
-function pickMistery (character, weapon, room){
+function pickMistery (){
     var misteryEnvelope = [];
-    misteryEnvelope.push (randomSelector(character), randomSelector(weapon), randomSelector(room));
+    misteryEnvelope.push (randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray));
     return misteryEnvelope;
 }
 //pickMistery(charactersArray, weaponsArray, roomsArray);
 
 function revealMistery (array){
-  return array[0].firstName + ' ' + array[0].lastName + ' killed Mr.Boddy using the ' + array[1].name + ' in the ' + array[2].name +'!!!';
+  return array[0].first_name + ' ' + array[0].last_name + ' killed Mr.Boddy using the ' + array[1].name + ' in the ' + array[2].name +'!!!!';
 }
 //revealMistery(pickMistery(charactersArray, weaponsArray, roomsArray));
