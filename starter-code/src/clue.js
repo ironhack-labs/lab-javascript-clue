@@ -66,39 +66,39 @@ var mrMustard = {
 
 // Weapons
 var rope = {
-    name: rope,
+    name: 'rope',
     weight: 10
 };
 var knife = {
-    name: knife,
+    name: 'knife',
     weight: 8
 };
 var candlestick = {
-    name: candlestick,
+    name: 'candlestick',
     weight: 2
 }; 
 var dumbbell = {
-    name: dumbbell,
+    name: 'dumbbell',
     weight: 30
 };
 var poison = {
-    name: poison,
+    name: 'poison',
     weight: 2
 };
 var axe = {
-    name: axe,
+    name: 'axe',
     weight: 15
 };
 var bat = {
-    name: bat,
+    name: 'bat',
     weight: 13
 };
 var trophy = {
-    name: trophy,
+    name: 'trophy',
     weight: 25
 };
 var pistol = {
-    name: pistol,
+    name: 'pistol',
     weight: 20
 };
 
@@ -139,10 +139,10 @@ var livingRoom = {
 var observatory = {
     name: 'Observatory'
 }; 
-var theater {
+var theater = {
     name: 'Theater'
 };
-var guestHouse {
+var guestHouse = {
     name: 'Guest House'
 };
 var patio = {
@@ -193,4 +193,27 @@ var weaponsArray = [
 ];
 
 
+function randomSelector(card) {
 
+    var randomIndex = Math.floor(Math.random() * card.length);
+        
+    return card[randomIndex];
+}
+
+function pickMistery() {
+    var misteryEnvelope = [charactersArray, weaponsArray, roomsArray].map(function(el){
+      return randomSelector(el);
+    });
+
+    return misteryEnvelope;
+}
+
+
+function revealMistery(e){
+    var name = e[0].firstName;
+    var lastName = e[0].lastName;
+    var weapon = e[1].name;
+    var place = e[2].name;
+  
+    return name + ' ' + lastName + ' killed Mr.Boddy using the ' + weapon + ' in the ' + place + '!!!!';
+  }
