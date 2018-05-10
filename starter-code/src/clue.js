@@ -11,7 +11,7 @@ const mrGreen = {
 
 const drOrchid = {
   frst_name: 'Doctor',
-  lst_name: 'Orchid',
+  last_name: 'Orchid',
   color: 'white',
   description: 'PhD in plant toxicology. Adopted daughter of Mr. Boddy',
   age: 26,
@@ -74,21 +74,19 @@ const trophy = { name: 'trophy', weight: 25 };
 const bat = { name: 'bat', weight: 13 };
 const pistol = { name: 'pistol', weight: 20 };// Rooms
 
-// Rooms' Collection
-const roomsArray = [
-  rope,
-  knife,
-  candlestick,
-  dumbbell,
-  poison,
-  axe,
-  trophy,
-  bat,
-  pistol,
+const weaponsArray = [
+  { name: 'rope', weight: 10 },
+  { name: 'knife', weight: 8 },
+  { name: 'candlestick', weight: 2 },
+  { name: 'dumbbell', weight: 30 },
+  { name: 'poison', weight: 2 },
+  { name: 'axe', weight: 15 },
+  { name: 'trophy', weight: 25 },
+  { name: 'bat', weight: 13 },
+  { name: 'pistol', weight: 20 },
 ];
 
-// Weapons Collection
-const weaponsArray = [
+const roomsArray = [
   { name: 'Conservatory' },
   { name: 'Dinning Room' },
   { name: 'Kitchen' },
@@ -113,14 +111,13 @@ const randomSelector = (array) => {
 };
 
 const pickMistery = () => {
-  const randChar = randomSelector(charactersArray);
-  const randWeap = randomSelector(weaponsArray);
-  const randRoom = randomSelector(roomsArray);
   const misteryEnvelope = [
-    randChar,
-    randWeap,
-    randRoom,
+    randomSelector(charactersArray),
+    randomSelector(weaponsArray),
+    randomSelector(roomsArray),
   ];
   return misteryEnvelope;
-}
-;
+};
+
+const revealMistery = env => `${env.first_name} ${env.last_name} 
+  killed Mr. Boddy using the ${env.name} in the ${env.name}`;
