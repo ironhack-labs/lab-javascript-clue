@@ -112,5 +112,15 @@ const randomSelector = (array) => {
   return (array[randomIndex]);
 };
 
-// const randArray = randomSelector(weaponsArray);
-// randArray;
+const pickMistery = () => {
+  const randChar = randomSelector(charactersArray);
+  const randWeap = randomSelector(weaponsArray);
+  const randRoom = randomSelector(roomsArray);
+  const misteryEnvelope = [
+    randChar,
+    randWeap,
+    randRoom,
+  ];
+  return misteryEnvelope;
+}
+;
