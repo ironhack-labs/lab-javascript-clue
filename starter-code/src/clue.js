@@ -119,5 +119,5 @@ const pickMistery = () => {
   return misteryEnvelope;
 };
 
-const revealMistery = env => `${env.first_name} ${env.last_name} 
-  killed Mr. Boddy using the ${env.name} in the ${env.name}`;
+const revealMistery = env => `${env[0].first_name} ${env[0].last_name}` + 
+  ` killed Mr. Boddy using the ${env[1].name} in the ${env[2].name}!!!!`;
