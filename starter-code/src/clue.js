@@ -153,3 +153,17 @@ function randomSelector (array){
     var indexRand=Math.floor(Math.random()*array.length);
     return array[indexRand];
 }
+
+function pickMistery(){
+    var arr=[];
+    arr.push(randomSelector(charactersArray));
+    arr.push(randomSelector(weaponsArray));
+    arr.push(randomSelector(roomsArray));
+    return arr;
+}
+var misteryEnvelope = pickMistery();
+
+function revealMistery(mistEnv){
+//<FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!!
+    return mistEnv[0].first_name + ' ' + mistEnv[0].last_name + ' killed Mr.Boddy using the ' + mistEnv[1].name + ' in the ' + mistEnv[2].name + '!!!!';
+}
