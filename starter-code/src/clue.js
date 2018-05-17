@@ -192,20 +192,21 @@ function randomSelector(array){
 }
 
 //variable with empty array
-var misteryEnvelope = [];
+var threeRandomCards = [];
 
 //variables for each type of random object
-var randomCharacter = randomSelector(charactersArray).first_name;
-var randomWeapon = randomSelector(weaponsArray).name;
-var randomRoom = randomSelector(roomsArray).name;
+var randomCharacter = randomSelector(charactersArray);
+var randomWeapon = randomSelector(weaponsArray);
+var randomRoom = randomSelector(roomsArray);
 
-//this not works :(
+
 function pickMistery() {
-  misteryEnvelope = [randomCharacter, randomWeapon, randomRoom];
-  return misteryEnvelope;
+  threeRandomCards = [randomCharacter, randomWeapon, randomRoom];
+  
+  return threeRandomCards;
 }
 
 //function for reveal the mistery
-function revealMistery(misteryEnvelope){
-  return randomCharacter + ' killed Mr.Boddy using the ' + randomWeapon + ' in the ' + randomRoom + '!!!!';
+function revealMistery(threeRandomCards){
+  return threeRandomCards[0].first_name + ' ' + threeRandomCards[0].last_name + ' killed Mr.Boddy using the ' + threeRandomCards[1].name + ' in the ' + threeRandomCards[2].name + '!!!!';
 }
