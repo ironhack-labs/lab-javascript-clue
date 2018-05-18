@@ -94,10 +94,8 @@ const roomsArray = [
 
 function randomSelector(elementsArray){
 
-  var itemSelected = Math.floor(Math.random()* elementsArray.length);
-
   if(elementsArray.length>0){
-    return elementsArray[itemSelected];
+    return elementsArray[Math.floor(Math.random()* elementsArray.length)];
   }
 }
 
