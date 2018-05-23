@@ -90,4 +90,24 @@ var roomsArray = [
     {name: "Guest House"},
     {name: "Patio"}
 ];
+//Random card
+function randomSelector (arr) {
+    var randomIndex = Math.floor(Math.random()*arr.length);
+    return arr[randomIndex];
+}
+
+//Create mystery
+function pickMistery () {
+    var misteryEnvelope = [randomSelector(charactersArray),
+    randomSelector(weaponsArray),
+    randomSelector(roomsArray)
+    ]
+    return misteryEnvelope;   
+}
+
+//Reveal mistery
+function revealMistery(misteryArray) {
+    return misteryArray[0].first_name+" "+ misteryArray[0].last_name+ 
+    " killed Mr.Boddy using the " + misteryArray[1].name + " in the " + misteryArray[2].name + "!!!!"; 
+}
 
