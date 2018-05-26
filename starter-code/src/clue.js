@@ -11,7 +11,7 @@ occupation:   Entrepreneur
 
 drOrchid
 frst_name:   Doctor
-lst_name:    Orchid
+lst_name:    Orchid 
 color:        white
 description:  PhD in plant toxicology. Adopted daughter of Mr. Boddy
 age:          26
