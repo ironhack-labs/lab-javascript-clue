@@ -202,7 +202,7 @@ var weaponsArray = [
 //randomSelector
 var i ="";
 function randomSelector(arrayCharac) {
-    i=Math.floor(Math.random()*(arrayCharac.length+1));
+    i=Math.floor(Math.random()*(arrayCharac.length));
     return arrayCharac[i];
 }
 
