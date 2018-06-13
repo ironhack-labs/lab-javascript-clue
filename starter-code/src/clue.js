@@ -118,7 +118,7 @@ var mrGreen = {
     //console.log(randomSelector(roomsArray));
     
     function pickMistery () {
-    
+       var misteryEnvelope = [];
        misteryEnvelope.push(randomSelector(charactersArray));
        misteryEnvelope.push(randomSelector(weaponsArray));
        misteryEnvelope.push(randomSelector(roomsArray));
@@ -135,4 +135,4 @@ var mrGreen = {
  
     
     pickMistery();  
-    revealMistery();
+    revealMistery(misteryEnvelope);
