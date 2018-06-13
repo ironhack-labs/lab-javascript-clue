@@ -93,3 +93,20 @@ var weaponsArray = [
   { name: "trophy", weight: 25 },
   { name: "pistol", weight: 20 }
 ];
+
+
+function randomSelector (cards) {
+  var cardInd = Math.floor(Math.random() * cards.length);
+  return cards[cardInd];
+}
+
+function pickMistery () {
+  var cards = [
+    randomSelector(charactersArray),
+    randomSelector(weaponsArray),
+    randomSelector(roomsArray)
+  ];
+  return cards;
+}
+
+var misteryEnvelope = pickMistery();
