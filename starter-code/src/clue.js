@@ -4,7 +4,7 @@ var charactersArray = [
     {first_name: 'Doctor', last_name: 'Orchid',color:'white', description:'PhD in plant toxicology. Adopted daughter of Mr. Boddy', age: 26, ocupation: 'Scientist'},
     {first_name: 'Victor', last_name:'Plum' ,color:'purple', description:'Billionare video game designer', age: 22, occupation: 'Designer'},
     {first_name: 'Kasandra', last_name:'Scarlet' ,color: 'red', description: 'She is an A-list movie star with a dark past', age: 31, occupation:'Actor' },
-    {first_name:  'Eleanor', last_name: ,color:'Peacock' 'blue', description: 'She is from a wealthy family and uses her status and money to earn popularity', age: 36, occupation: 'Socialité'},
+    {first_name:  'Eleanor', last_name:'Peacock',color: 'blue', description: 'She is from a wealthy family and uses her status and money to earn popularity', age: 36, occupation: 'Socialité'},
     {first_name:  'Jack', last_name:'Mustard' ,color: 'yellow', description: 'He is a former football player who tries to get by on his former glory', age: 62, occupation: 'Retired Football player'}   
 ];
 
@@ -19,7 +19,6 @@ var weaponsArray = [
     {name: 'trophy', weight: 25},
     {name: 'pistol', weight: 20}
 ];
-
 
 // Rooms
 var roomsArray = [
@@ -59,7 +58,7 @@ function pickMistery(){
 }
 pickMistery()
 
-function revealMistery(misteryEnvelop){
-  return (misteryEnvelope[0].first_name + ' ' + misteryEnvelop[0].last_name +  " killed Mr. Boddy using the " + misteryEnvelope[1].name + " in the " + misteryEnvelop[2].name + " !!!" );
+function revealMistery(misteryEnvelope){
+  return (misteryEnvelope[0].first_name + ' ' + misteryEnvelope[0].last_name +  " killed Mr. Boddy using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2].name + " !!!" );
 }
 revealMistery()
