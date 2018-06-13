@@ -84,11 +84,52 @@ name: Guest House
 name: Patio
 */
 
-// Characters Collection
-var charactersArray = [];
 
-// Rooms' Collection
-var roomsArray = [];
+var charactersArray = [
+    {first_name: 'Jacob', last_name:'Green', color: 'green', description: 'He has a lot of connections', age: 45, image:        'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg', occupation: 'Entrepreneur'},
+    {first_name: 'Jacob', last_name:'Green', color: 'green', description: 'He has a lot of connections', age: 45, image:        'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg', occupation: 'Entrepreneur'},
+    {first_name: 'Jacob', last_name:'Green', color: 'green', description: 'He has a lot of connections', age: 45, image:        'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg', occupation: 'Entrepreneur'},
+    {first_name: 'Jacob', last_name:'Green', color: 'green', description: 'He has a lot of connections', age: 45, image:        'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg', occupation: 'Entrepreneur'},
+    {first_name: 'Jacob', last_name:'Green', color: 'green', description: 'He has a lot of connections', age: 45, image:        'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg', occupation: 'Entrepreneur'},
+    {first_name: 'Jacob', last_name:'Green', color: 'green', description: 'He has a lot of connections', age: 45, image:        'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg', occupation: 'Entrepreneur'},
+    ];
+    
+  var roomsArray = [
+    'Dinning Room', 'Conservatory', 'Kitchen', 'Study', 'Library', 'Billiard Room', 'Lounge', 'Ballroom', 'Hall', 'Spa', 'Living Room', 'Observatory', 'Theater', 'Guest House', 'Patio'
+    ];
 
-// Weapons Collection
-var weaponsArray = [];
+  var weaponsArray = [
+    {name: "rope", weight: 10},
+    {name: 'knife', weight: 8},
+    {name: 'candlestick', weight: 2},
+    {name: 'dumbbell', weight: 30},
+    {name: 'poison', weight: 2},
+    {name: 'axe', weight: 15},
+    {name: 'bat', weight: 13},
+    {name: 'trophy', weight: 25},
+    {name: 'pistol', weight: 20},
+  ];
+ 
+
+  function randomSelector(arr){
+      if(arr.length==0)
+        return undefined;
+      return arr[Math.floor(Math.random()*arr.length)];
+  }
+
+  var misteryEnvelope;
+
+  function pickMistery(){
+      var result=[charactersArray[Math.floor(Math.random()*charactersArray.length)],weaponsArray[Math.floor(Math.random()*weaponsArray.length)],roomsArray[Math.floor(Math.random()*roomsArray.length)]];
+      misteryEnvelope=result;
+      return result;
+
+  }
+
+  function revealMistery(finalMistery) {
+     var result = finalMistery[0].first_name +' '+  finalMistery[0].last_name + ' killed Mr.Boddy using the ' + finalMistery[1].name + ' in the ' + finalMistery[2].name+'!!!!';
+     console.log(finalMistery[2])
+     return result;
+   }
+
+
