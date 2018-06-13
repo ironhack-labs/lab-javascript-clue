@@ -273,9 +273,9 @@ function randomSelector(cardStack) {
     return cardStack[Math.floor(Math.random() * (cardStack.length))]
 }
 
-var misteryEnvelope = [];
-
 function pickMistery() {
+
+    var misteryEnvelope = [];
     var rCharacter = randomSelector(charactersArray);
     var rWeapon = randomSelector(weaponsArray);
     var rPlace = randomSelector(roomsArray);
