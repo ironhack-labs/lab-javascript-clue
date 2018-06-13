@@ -63,15 +63,15 @@ occupation:   "Retired Football player",
 }
 
 // declare weapons
-var rope       = {weight: 10};
-var knife      = {weight: 8};
-var candlestick= {weight: 2};
-var dumbbell   = {weight: 30};
-var poison     = {weight: 2};
-var axe        = {weight: 15};
-var bat        = {weight: 13};
-var trophy     = {weight: 25};
-var pistol     = {weight: 20};
+var rope       = {name: "rope"        , weight: 10};
+var knife      = {name: "knife"       , weight: 8};
+var candlestick= {name: "candlestick" , weight: 2};
+var dumbbell   = {name: "dumbbell"    , weight: 30};
+var poison     = {name: "poison"      , weight: 2};
+var axe        = {name: "axe"         , weight: 15};
+var bat        = {name: "bat"         , weight: 13};
+var trophy     = {name: "trophy"      , weight: 25};
+var pistol     = {name: "pistol"      , weight: 20};
 
 // Rooms' Collection
 var DinningRoom = { name: "Dinning Room"};
@@ -111,5 +111,23 @@ var roomsArray = [];
 
 roomsArray.push(DinningRoom, Conservatory, Kitchen, Study, Library, BilliardRoom, Lounge, Ballroom, Hall, Spa, LivingRoom, Observatory, Theater, GuestHouse, Patio);
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                 Iteracion 2
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+function randomSelector(arr) {
+  return arr[Math.floor(Math.random()*arr.length)];
+}
+
+function pickMistery() {
+  var arrMistery = [randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray)];
+  return arrMistery;
+}
+
+var misteryEnvelope = pickMistery();
+
+console.log(misteryEnvelope)
