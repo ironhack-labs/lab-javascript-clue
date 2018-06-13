@@ -94,13 +94,13 @@ var Characters = [
     
 
     // Characters Collection
-    var charactersArray = []
+    var charactersArray = Characters;
 
     // Rooms' Collection
-    var roomsArray = [];
+    var roomsArray = Rooms;
 
     // Weapons Collection
-    var weaponsArray = [];
+    var weaponsArray = Weapons;
 
  function randomSelector(arr){
      var result = arr[Math.floor(Math.random()*arr.length)]
@@ -113,5 +113,15 @@ var Characters = [
      var weapon = randomSelector(Weapons);
      var room = randomSelector(Rooms);
      misteryEnvelope.push(character, weapon, room);
+     console.log(character, weapon, room)
+     console.log(misteryEnvelope);
      return misteryEnvelope;
+ }
+
+ function revealMistery(misteryEnvelope){
+    var nombrePersonaje = misteryEnvelope[0].first_name;
+    var apellidoPersonaje = misteryEnvelope[0].last_name;
+    var armaHomicida = misteryEnvelope[1].name
+    var escenaCrimen = misteryEnvelope[2].name
+    return nombrePersonaje + " " + apellidoPersonaje + " killed Mr.Boddy using the " + armaHomicida + " in the " + escenaCrimen + "!!!!"
  }
