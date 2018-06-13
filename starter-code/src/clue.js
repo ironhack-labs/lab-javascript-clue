@@ -186,3 +186,36 @@ var weaponsArray = [
     {name: 'trophy', weight: 25},
     {name: 'pistol', weight: 20}
 ]
+//funciones
+
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function randomSelector(array){
+    if(array.length < 0)return undefined;
+
+    var randomNumber = random(0, array.length);
+    var randomElement = array[randomNumber];
+    return randomElement;
+}
+
+function pickMistery() {
+    var randomSuspect = randomSelector(charactersArray);
+    var randomWeapon = randomSelector(weaponsArray);
+    var randomRoom = randomSelector(roomsArray);
+
+    return [randomSuspect, randomWeapon, randomRoom];
+}
+
+
+function revealMistery (misteryEnvelop) {
+    var first_name = misteryEnvelop[0].first_name;
+    var last_name = misteryEnvelop[0].last_name;
+    var weapon = misteryEnvelop[1].name;
+    var room = misteryEnvelop[2].name;
+
+    var message = first_name + " " + last_name + " killed Mr.Boddy using the " + weapon + " in the " + room + "!!!!";
+
+    return message;
+}
