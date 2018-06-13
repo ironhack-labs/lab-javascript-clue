@@ -198,3 +198,21 @@ var weaponsArray = [];
   weaponsArray.push(bat);
   weaponsArray.push(trophy);
   weaponsArray.push(pistol);
+
+
+  function randomSelector (array) {
+    var positionElement = Math.floor(Math.random()*array.length);
+      return array[positionElement];
+  }
+
+  function pickMistery() {
+    var misteryEnvelope = [];
+    misteryEnvelope.push(randomSelector(charactersArray));
+    misteryEnvelope.push(randomSelector(weaponsArray));
+    misteryEnvelope.push(randomSelector(roomsArray));
+    return misteryEnvelope;
+  }
+
+  function revealMistery(mistery) {
+    return mistery[0].first_name + " " + mistery[0].last_name + " killed Mr.Boddy using the " + mistery[1].name + " in the " + mistery[2].name + "!!!!";
+  }
