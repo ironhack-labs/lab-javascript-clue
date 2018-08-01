@@ -11,13 +11,13 @@ occupation:   "Entrepreneur"
 }
 
 var drOrchid = {
-frst_name:   "Doctor",
-lst_name:    "Orchid",
+first_name:    "Doctor",
+last_name:     "Orchid",
 color:        "white",
 description:  "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
 age:          26,
 image:        "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
-ocupation:   "Scientist"
+ocupation:    "Scientist"
 }
 
 var profPlum = {
@@ -95,10 +95,41 @@ var roomsArray = [
 ]
 
 // Characters Collection
-var charactersArray = ['mrGreen', 'drOrchid', 'profPlum', 'missScarlet', 'mrsPeacock', 'mrMustard'];
+var charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 
 // Rooms' Collection
 var roomsArray = ['Dinning Room', 'Conservatory', 'Kitchen', 'Study', 'Library', 'Billiard Room', 'Lounge', 'Ballroom', 'Hall', 'Spa', 'Living Room', 'Observatory', 'Theater', 'Guest House', 'Patio'];
 
 // Weapons Collection
 var weaponsArray = ['rope', 'knife', 'candlestick', 'dumbbell', 'poison', 'axe', 'bat', 'trophy', 'pistol'];
+
+function randomSelector(array){
+    var randomNumber = Math.floor(Math.random() * array.length);
+    //console.log(randomNumber);
+    return array[randomNumber];
+}
+
+function pickMistery(){
+    var misteryEnvelope = [];
+    var character = randomSelector(charactersArray);
+    var room = randomSelector(roomsArray);
+    var weapon = randomSelector(weaponsArray);
+    misteryEnvelope.push(character, weapon, room);
+
+    //console.log(misteryEnvelope);
+
+    return misteryEnvelope;
+}
+
+function revealMistery(mistery){
+    var misteryRevealed;
+    //console.log(mistery[0]);
+
+    misteryRevealed = (mistery[0].first_name + ' ' + mistery[0].last_name + ' killed Mr.Boddy using the ' + mistery[1].name + ' in the ' + mistery[2].name + '!!!!');
+    console.log(misteryRevealed);
+    return misteryRevealed;
+}
+
+pickMistery();
+
+revealMistery(pickMistery());
