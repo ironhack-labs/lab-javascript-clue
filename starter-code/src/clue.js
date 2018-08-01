@@ -138,9 +138,9 @@ function pickMistery() {
     return misteryEnvelope; 
 };
 
-function revealMistery() {
-    
-}
+function revealMistery(array) {
+    return array[0].first_name + " " + arr[0].last_name + "killed Mr.Boddy using the " + "" + arr[1].weaponsArray + "in the" + arr[1].roomsArray; + "!!!!";
+};
 
 pickMistery();
 
