@@ -80,3 +80,4 @@ describe('Reveal the mistery - revealMistery', function () {
     expect(revealMistery([{ first_name: 'Victor', last_name: 'Plum' }, { name: 'poison' }, { name: 'Billiard Room' }])).toEqual('Victor Plum killed Mr.Boddy using the poison in the Billiard Room!!!!');
   });
 });
+  
