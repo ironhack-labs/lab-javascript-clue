@@ -1,8 +1,7 @@
-// Characters
 var mrGreen = {
     first_name:   'Jacob'
     ,last_name:   'Green'
-    ,color:       green
+    ,color:       'green'
     ,description: 'He has a lot of connections'
     ,age:         45
     ,image:       'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg'
@@ -11,7 +10,7 @@ var mrGreen = {
 var drOrchid = {
     frst_name:    'Doctor'
     ,lst_name:    'Orchid'
-    ,color:       white
+    ,color:       'white'
     ,description: 'PhD in plant toxicology. Adopted daughter of Mr. Boddy'
     ,age:         26
     ,image:       'http://www.radiotimes.com/uploads/images/Original/111967.jpg'
@@ -154,11 +153,37 @@ var roomsArray = [dinningRoom, conservatory, kitchen, study, library, billiardRo
 var weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
 
 function randomSelector(array) {
-    var item = items[Math.floor(Math.random()*items.length)];
+    var item = array[Math.floor(Math.random() * array.length)];
     return item;
 };
-randomSelector(charactersArray);
-
 function pickMistery() {
-
+    misteryEnvelope = [];
+    misteryEnvelope.push(randomSelector(charactersArray));
+    misteryEnvelope.push(randomSelector(weaponsArray));
+    misteryEnvelope.push(randomSelector(roomsArray));
+    return misteryEnvelope;
 }
+function revealMistery(array) {
+  var person;
+  var weapon;
+  var place;
+  var i = 0;
+  var revealedMystery = ""
+  array.forEach(function(item) {
+    //console.log(item);
+    //console.log(i);
+    if(i == 0) {
+      person = item;
+    } else if(i == 1) {
+      weapon = item;
+    } else {
+      place = item;
+    }
+    i++;
+  });
+  revealedMystery = person.first_name + " " + person.last_name + " killed Mr.Boddy using the " + weapon.name + " in the " + place.name + "!!!!";
+  return revealedMystery;
+}
+//<FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!!
+pickMistery();
+revealMistery(misteryEnvelope);
