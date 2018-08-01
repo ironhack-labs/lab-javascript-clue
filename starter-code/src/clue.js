@@ -124,14 +124,14 @@ var weaponsArray = [rope, knife, axe]
 function randomSelector(arr){
     var randomIndex =Math.floor(Math.random()*arr.length)
     var randomEl = arr[randomIndex]
-    arr.splice(randomIndex, 1);
+    //arr.splice(randomIndex, 1);
     return randomEl
 
 }
 
 function pickMistery(){
 var result = []
-result.push(randomSelector(charactersArray), randomSelector(roomsArray), randomSelector(weaponsArray))
+result.push(randomSelector(charactersArray), randomSelector(weaponsArray),randomSelector(roomsArray))
 return result
 }
 
@@ -139,7 +139,7 @@ var misteryEnvelope = pickMistery();
 
 function revealMistery(misteryEnvelope){
 
-    console.log(misteryEnvelope[0].first_name + " " +  misteryEnvelope[0].last_name +" killed Mr.Boddy using the " + misteryEnvelope[2].name + " in the "+misteryEnvelope[1].name+"!!!!")
+   return misteryEnvelope[0].first_name + " " +  misteryEnvelope[0].last_name +" killed Mr.Boddy using the " + misteryEnvelope[1].name + " in the "+misteryEnvelope[2].name+"!!!!"
 }
 
 revealMistery(misteryEnvelope);
