@@ -1,5 +1,4 @@
 // Characters
-
 var mrGreen = {
   first_name:   'Jacob',
   last_name:    'Green',
@@ -54,19 +53,17 @@ var mrMustard = {
   image:        'https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg',
   occupation:   'Retired Football player'
 }
-
 // Characters Collection
 var charactersArray = [mrGreen,drOrchid,profPlum,missScarlet,mrsPeacock,mrMustard];
-
 // Rooms' Collection
 var roomsArray = [
   {name: 'Dinning Room'},
   {name: 'Conservatory'},
-  {name: 'Kitchen'}
+  {name: 'Kitchen'},
   {name: 'Study'},
   {name: 'Library'},
   {name: 'Billiard Room'},
-  {name: 'Lounge'}
+  {name: 'Lounge'},
   {name: 'Ballroom'},
   {name: 'Hall'},
   {name: 'Spa'},
@@ -76,7 +73,6 @@ var roomsArray = [
   {name: 'Guest House'},
   {name: 'Patio'}
 ];
-
 // Weapons Collection}
 var weaponsArray = [
   {name: 'rope',       weight: 10},
@@ -90,6 +86,23 @@ var weaponsArray = [
   {name: 'pistol',     weight: 20}
 ];
 
-function randomSelector(array){
-  
+function randomSelector(array) {
+  var randomNumber = Math.floor(Math.random()*array.length);
+  return array[randomNumber];
+};
+
+function pickMistery(){
+  var misteryEnvelope = [];
+  misteryEnvelope.push(randomSelector(charactersArray));
+  misteryEnvelope.push(randomSelector(weaponsArray));
+  misteryEnvelope.push(randomSelector(roomsArray));
+  return misteryEnvelope;
+}
+function revealMistery(misteryEnvelope){
+  var firstName =  misteryEnvelope[0].first_name;
+  var lastName =  misteryEnvelope[0].last_name;
+  var weapon = misteryEnvelope[1].name;
+  var place = misteryEnvelope[2].name;
+  var evealedMystery = firstName + " " +lastName + " killed Mr.Boddy using the " + weapon + " in the " + place + "!!!!";
+  return evealedMystery;
 }
