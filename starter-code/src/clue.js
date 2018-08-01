@@ -1,8 +1,7 @@
 // Characters
 var mrGreen = {
-mrGreen
 first_name:   "Jacob",
-last_name:    "Green"
+last_name:    "Green",
 color:        "green",
 description:  "He has a lot of connections",
 age:          45,
@@ -27,7 +26,7 @@ color:        "purple",
 description:  "Billionare video game designer",
 age:          22,
 image:        "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
-occupation:   "Designer",
+occupation:   "Designer"
 };
 
 var missScarlet = {
@@ -37,14 +36,14 @@ color:        "red",
 description:  "She is an A-list movie star with a dark past",
 age:          31,
 image:        "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
-occupation:   "Actor",
+occupation:   "Actor"
 };
 //Comentario
 var mrsPeacock = {
-first_name:   "Eleanor"
-last_name:    "Peacock"
-color:        "blue"
-description:  "She is from a wealthy family and uses her status and money to earn popularity"
+first_name:   "Eleanor",
+last_name:    "Peacock",
+color:        "blue",
+description:  "She is from a wealthy family and uses her status and money to earn popularity",
 age:          36,
 image:        "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
 occupation:   "Socialité"
@@ -55,7 +54,7 @@ first_name:   "Jack",
 last_name:    "Mustard",
 color:        "yellow",
 description:  "He is a former football player who tries to get by on his former glory",
-age:          "62,
+age:          62,
 image:        "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
 occupation:   "Retired Football player"
 };
@@ -128,7 +127,21 @@ var weaponsArray = [
 function randomSelector(array){
     var randomNumbers = Math.floor(Math.random() *  array.length);
     return array[randomNumbers];
-    //console.log(randomNumbers);
 };
+
+function pickMistery() {
+    var misteryEnvelope = [];
+    var Character = randomSelector(charactersArray);
+    var wepon = randomSelector(weaponsArray);
+    var room = randomSelector(roomsArray);
+    misteryEnvelope.push(Character, wepon, room);
+    return misteryEnvelope; 
+};
+
+function revealMistery() {
+    
+}
+
+pickMistery();
 
 randomSelector(roomsArray);
