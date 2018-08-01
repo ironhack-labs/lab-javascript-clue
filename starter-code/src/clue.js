@@ -68,7 +68,6 @@ occupation:   "Retired Football player",
 
 charactersArray.push(mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard);
 
-
 // Weapons Collection
 var weaponsArray = [
 
