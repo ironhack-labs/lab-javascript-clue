@@ -10,8 +10,8 @@ occupation:   "Entrepreneur"
 };
 
 var drOrchid  = {
-frst_name:   "Doctor",
-lst_name:    "Orchid",
+first_name:   "Doctor",
+last_name:    "Orchid",
 color:        "white",
 description:  "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
 age:          26,
@@ -38,7 +38,7 @@ age:          31,
 image:        "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
 occupation:   "Actor"
 };
-//Comentario
+
 var mrsPeacock = {
 first_name:   "Eleanor",
 last_name:    "Peacock",
@@ -58,35 +58,6 @@ age:          62,
 image:        "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
 occupation:   "Retired Football player"
 };
-
-/* Weapons
-
-name: rope        ---   weight: 10
-name: knife       ---   weight: 8
-name: candlestick ---   weight: 2
-name: dumbbell    ---   weight: 30
-name: poison      ---   weight: 2
-name: axe         ---   weight: 15
-name: bat         ---   weight: 13
-name: trophy      ---   weight: 25
-name: pistol      ---   weight: 20
-
-// Rooms
-name: Dinning Room
-name: Conservatory
-name: Kitchen
-name: Study
-name: Library
-name: Billiard Room
-name: Lounge
-name: Ballroom
-name: Hall
-name: Spa
-name: Living Room
-name: Observatory
-name: Theater
-name: Guest House
-name: Patio*/
 
 // Characters Collection
 var charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
@@ -129,8 +100,11 @@ function randomSelector(array){
     return array[randomNumbers];
 };
 
+randomSelector(roomsArray);
+
+var misteryEnvelope = [];
+
 function pickMistery() {
-    var misteryEnvelope = [];
     var Character = randomSelector(charactersArray);
     var wepon = randomSelector(weaponsArray);
     var room = randomSelector(roomsArray);
@@ -138,10 +112,11 @@ function pickMistery() {
     return misteryEnvelope; 
 };
 
-function revealMistery(array) {
-    return array[0].first_name + " " + arr[0].last_name + "killed Mr.Boddy using the " + "" + arr[1].weaponsArray + "in the" + arr[1].roomsArray; + "!!!!";
-};
-
 pickMistery();
 
-randomSelector(roomsArray);
+function revealMistery(arr) { 
+    var reveal = misteryEnvelope;
+    return arr[ reveal[0].first_name + " " + reveal[0].last_name + " " + "killed Mr.Boddy using the"+ " " + reveal[1].name + " " +"in the" + " " + reveal[2].name + "!!!!"];
+};
+
+revealMistery();
