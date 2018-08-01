@@ -19,7 +19,7 @@ var drOrchid = {
   ocupation:    'Scientist'
 };
 
-var = profPlum {
+var profPlum = {
   first_name:   'Victor',
   last_name:    'Plum',
   color:        'purple',
@@ -29,7 +29,7 @@ var = profPlum {
   occupation:   'Designer'
 };
 
-var = missScarlet {
+var missScarlet = {
   first_name:   'Kasandra',
   last_name:    'Scarlet',
   color:        'red',
@@ -39,7 +39,7 @@ var = missScarlet {
   occupation:   'Actor'
 };
 
-var = mrsPeacock {
+var mrsPeacock = {
   first_name:   'Eleanor',
   last_name:    'Peacock',
   color:        'blue',
@@ -61,14 +61,14 @@ var mrMustard = {
 
 // Weapons
 var weapons = [
-  {name: 'rope'        , weight: 10}
-  {name: 'knife'       , weight: 8}
-  {name: 'candlestick' , weight: 2}
-  {name: 'dumbbell'    , weight: 30}
-  {name: 'poison'      , weight: 2}
-  {name: 'axe'         , weight: 15}
-  {name: 'bat'         , weight: 13}
-  {name: 'trophy'      , weight: 25}
+  {name: 'rope'        , weight: 10},
+  {name: 'knife'       , weight: 8},
+  {name: 'candlestick' , weight: 2},
+  {name: 'dumbbell'    , weight: 30},
+  {name: 'poison'      , weight: 2},
+  {name: 'axe'         , weight: 15},
+  {name: 'bat'         , weight: 13},
+  {name: 'trophy'      , weight: 25},
   {name: 'pistol'      , weight: 20}
 ];
 
@@ -122,13 +122,30 @@ var roomsArray = [
 
 // Weapons Collection
 var weaponsArray = [
-  {name: 'rope'        , weight: 10}
-  {name: 'knife'       , weight: 8}
-  {name: 'candlestick' , weight: 2}
-  {name: 'dumbbell'    , weight: 30}
-  {name: 'poison'      , weight: 2}
-  {name: 'axe'         , weight: 15}
-  {name: 'bat'         , weight: 13}
-  {name: 'trophy'      , weight: 25}
+  {name: 'rope'        , weight: 10},
+  {name: 'knife'       , weight: 8},
+  {name: 'candlestick' , weight: 2},
+  {name: 'dumbbell'    , weight: 30},
+  {name: 'poison'      , weight: 2},
+  {name: 'axe'         , weight: 15},
+  {name: 'bat'         , weight: 13},
+  {name: 'trophy'      , weight: 25},
   {name: 'pistol'      , weight: 20}
 ];
+
+var emptyArray = [];
+
+// Creating the mistery
+function randomSelector(array) {
+  var randomNumber = Math.floor(Math.random() * array.length);
+  return array[randomNumber];
+};
+
+function pickMistery() {
+  var character = randomSelector(charactersArray),
+      room = randomSelector(roomsArray),
+      weapon = randomSelector(weaponsArray),
+      misteryEnvelope = [];
+  misteryEnvelope.push(character,weapon,room);
+  return misteryEnvelope;
+};
