@@ -70,7 +70,14 @@ var mrGreen = {
     { name: 'pistol', weight: 20 }
 ];
     
-  var charactersArray = [ mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard ];
+  var charactersArray = [ 
+      mrGreen, 
+      drOrchid, 
+      profPlum, 
+      missScarlet, 
+      mrsPeacock, 
+      mrMustard 
+];
     
   var roomsArray = [
     { name:  'Conservatory'},
@@ -89,4 +96,20 @@ var mrGreen = {
     { name: 'Guest House' },
     { name: 'Patio' }
 ];
-  
+
+function randomSelector(array) {
+ var randomNumber = Math.floor(Math.random() * array.length);
+ return array[randomNumber];
+};
+
+function pickMistery() {
+    var misteryEnvelope = [];
+    var character = randomSelector(charactersArray);
+    var wepon = randomSelector(weaponsArray);
+    var room = randomSelector(roomsArray);
+    misteryEnvelope.push(character, wepon, room);
+    return misteryEnvelope;
+}
+
+pickMistery();
+
