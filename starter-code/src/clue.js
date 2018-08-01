@@ -124,15 +124,19 @@ function getRandom(min, max) {
 }
 
 function pickMistery() {
+    var misteryEnvelope = [];
     var character = randomSelector(charactersArray);
     var weapons = randomSelector(weaponsArray);
     var rooms = randomSelector(roomsArray);
 
-    return [character, weapons, rooms];
+    misteryEnvelope = [character, weapons, rooms];
+
+    return misteryEnvelope;
 }
 
 var misteryEnvelope = pickMistery();
 
 function revealMistery(misteryEnvelope) {
-    return misteryEnvelope[0] + "  killed Mr.Boddy using the " + misteryEnvelope[1] + "  in the " + misteryEnvelope[2];
+    return misteryEnvelope[0].first_name + " " +  misteryEnvelope[0].last_name +
+    " killed Mr.Boddy using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2].name + "!!!!";
 }
