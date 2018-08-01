@@ -12,8 +12,8 @@ var mrGreen = {
 };
 
 var drOrchid = {
-  frst_name: "Doctor",
-  lst_name: "Orchid",
+  first_name: "Doctor",
+  last_name: "Orchid",
   color: "white",
   description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
   age: 26,
@@ -104,3 +104,34 @@ var weaponsArray = [
   { name: "trophy", weight: 25 },
   { name: "pistol", weight: 20 }
 ];
+
+function randomSelector(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
+function pickMistery() {
+  var misteryEnvelope = [];
+  var character = randomSelector(charactersArray);
+  var weapon = randomSelector(weaponsArray);
+  var room = randomSelector(roomsArray);
+  misteryEnvelope.push(character, weapon, room);
+  return misteryEnvelope;
+}
+
+function revealMistery() {
+  var killed = pickMistery();
+  var kill =
+    killed[0].first_name +
+    " " +
+    killed[0].last_name +
+    " killed Mr.Boddy using the " +
+    killed[1].name +
+    " in the " +
+    killed[2].name +
+    "!!!!";
+  console.log(kill);
+  return kill;
+}
+
+revealMistery();
+//<FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!!
