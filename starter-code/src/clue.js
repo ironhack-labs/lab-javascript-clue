@@ -187,3 +187,10 @@ function randomSelector(selector) {
   random = selector[Math.floor(Math.random() * (selector.length))];
   return random;
 }
+
+//Pick Mistery
+function pickMistery(){
+  var misteryEnvelope = [randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray)]
+  return misteryEnvelope 
+}
+
