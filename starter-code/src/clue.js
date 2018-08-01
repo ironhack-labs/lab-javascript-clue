@@ -90,9 +90,9 @@ var mrMustard = {
 // name: Patio *
 
 
-  // Characters Collection
-  var charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
-  
+// Characters Collection
+var charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
+
 
 // Rooms' Collection
 var roomsArray = [{
@@ -180,3 +180,10 @@ var weaponsArray = [{
     weight: 20
   }
 ];
+
+//Random selector
+function randomSelector(selector) {
+  if (selector.length == 0) return undefined;
+  random = selector[Math.floor(Math.random() * (selector.length))];
+  return random;
+}
