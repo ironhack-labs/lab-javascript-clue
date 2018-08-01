@@ -12,7 +12,7 @@ var mrGreen = {
 }
 
 var drOrchid = {
-  frst_name: "Doctor",
+  first_name: "Doctor",
   lst_name: "Orchid",
   color: "white",
   description: "PhD in plant toxicology.Adopted daughter of Mr.Boddy",
@@ -189,8 +189,15 @@ function randomSelector(selector) {
 }
 
 //Pick Mistery
-function pickMistery(){
+function pickMistery() {
   var misteryEnvelope = [randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray)]
-  return misteryEnvelope 
+  return misteryEnvelope
 }
 
+misteryEnvelope = pickMistery();
+
+//Reveal Mistery
+function revealMistery(misteryEnvelope) {
+  var reveal = misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name + " killed Mr.Boddy using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2].name + "!!!!";
+  return reveal;
+}
