@@ -11,8 +11,8 @@ occupation:   'Entrepreneur'
 }
 
 var drOrchid = {
-frst_name:   'Doctor',
-lst_name:    'Orchid',
+first_name:   'Doctor',
+last_name:    'Orchid',
 color:        'white',
 description:  'PhD in plant toxicology. Adopted daughter of Mr. Boddy',
 age:          26,
@@ -125,3 +125,20 @@ var weaponsArray = [
   { name: 'pistol', weight: 20 }
 ];
 
+function randomSelector(array) {
+  if (array.length === 0) return undefined;
+  return array[Math.floor(Math.random()*array.length)];
+};
+
+function pickMistery(){
+  var misteryEnvelope = [];
+  var character = randomSelector(charactersArray);
+  var room =randomSelector(roomsArray);
+  var weapon = randomSelector(weaponsArray);
+  misteryEnvelope.push(character, weapon, room);
+  return misteryEnvelope;
+}
+
+function revealMistery(misteryEnvelope){
+  return (misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name + ' killed Mr.Boddy using the ' + misteryEnvelope[1].name + ' in the ' + misteryEnvelope[2].name + '!!!!');
+}
