@@ -123,3 +123,12 @@ var weaponsArray = [
     {name: "trophy", weight: 25},
     {name: "pistol", weight: 20}
 ];
+
+//console.log(roomArray);
+function randomSelector(array){
+    var randomNumbers = Math.floor(Math.random() *  array.length);
+    return array[randomNumbers];
+    //console.log(randomNumbers);
+};
+
+randomSelector(roomsArray);
