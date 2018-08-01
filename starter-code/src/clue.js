@@ -60,6 +60,8 @@ image:        'https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg'
 occupation:   'Retired Football player'
 }
 
+
+/*
 // Weapons
 
 name: rope        ---   weight: 10
@@ -88,13 +90,21 @@ name: Observatory
 name: Theater
 name: Guest House
 name: Patio
-
+*/
 
 // Characters Collection
-var charactersArray = [mrGreen, drOrchid, profPlum, mrsPeacock, missScarlet, mrMustard];
+var charactersArray = [
+    mrGreen,
+    drOrchid,
+    profPlum,
+    mrsPeacock,
+    missScarlet,
+    mrMustard
+];
 
 // Rooms' Collection
-var roomsArray = [name: Dinning Room
+var roomsArray = [
+    {name: "Dinning Room"},
     {name: "Conservatory"},
     {name: "Kitchen"},
     {name: "Study"},
@@ -108,19 +118,38 @@ var roomsArray = [name: Dinning Room
     {name: "Observatory"},
     {name: "Theater"},
     {name: "Guest House"},
-    {name: "Patio"};
+    {name: "Patio"}
+];
 
 // Weapons Collection
 var weaponsArray = [
-    {name: 'rope', weight: 10
-    {name: 'knife', weight: 8
-    {name: 'candlestick', weight: 2
-    {name: 'dumbbell', weight: 30
-    {name: 'poison', weight: 2
-    {name: 'axe', weight: 15
-    {name: 'bat', weight: 13
-    {name: 'trophy', weight: 25
-    {name: 'pistol', weight: 20
+    {name: "rope",weight: 10},
+    {name: "knife",weight: 8},
+    {name: "candlestick",weight: 2},
+    {name: "dumbbell",weight: 30},
+    {name: "poison",weight: 2},
+    {name: "axe",weight: 15},
+    {name: "bat",weight: 13},
+    {name: "trophy",weight: 25},
+    {name: "pistol",weight: 20}
 ];
 
+//console.log(weaponsArray);
+
+
+function randomSelector(array) {
+var randomNumber = Math.floor(Math.random() * array.length);
+    return array[randomNumber];
+};
+
+function pickMystery() {
+    var misteryEnvelope = [];
+    var character = randomSelector(charactersArray);
+    var room = randomSelector(roomsArray);
+    var weapon = randomSelector(weaponsArray);
+    misteryEnvelope.push(character, room, weapon);
+return misteryEnvelope;
+};
+
+pickMystery;
 
