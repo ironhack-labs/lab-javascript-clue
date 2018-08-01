@@ -6,8 +6,7 @@ var mrGreen = {
   color: "green",
   description: "He has a lot of connections",
   age: 45,
-  image:
-    "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+  image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
   occupation: "Entrepreneur"
 };
 
@@ -108,3 +107,32 @@ var weaponsArray = [
   { name: "trophy", weight: 25 },
   { name: "pistol", weight: 20 }
 ];
+
+function randomSelector (array) {
+    if(array.length == 0) {
+        return undefined;
+    }
+
+    var max = array.length;
+    var random = getRandom(0, max);
+
+    return array[random];
+}
+
+function getRandom(min, max) {
+    return Math.floor((Math.random() * (max - min)) + min)
+}
+
+function pickMistery() {
+    var character = randomSelector(charactersArray);
+    var weapons = randomSelector(weaponsArray);
+    var rooms = randomSelector(roomsArray);
+
+    return [character, weapons, rooms];
+}
+
+var misteryEnvelope = pickMistery();
+
+function revealMistery(misteryEnvelope) {
+    return misteryEnvelope[0] + "  killed Mr.Boddy using the " + misteryEnvelope[1] + "  in the " + misteryEnvelope[2];
+}
