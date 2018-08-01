@@ -101,6 +101,31 @@ var weaponsArray=[
   {name: 'pistol     ' ,   weight: 20}
   ];
   
-  function randomSelector(){
-    
+
+  var min=0;
+   
+  function randomSelector(charactersArray) {
+    var randomNumber= Math.floor(Math.random() * charactersArray.length);
+    return charactersArray[randomNumber];    
+    console.log("esto",randomNumber);
+  }
+
+  randomSelector(charactersArray);
+
+  function pickMistery(){
+ 
+    var character=randomSelector(charactersArray);
+    var weapon=randomSelector(weaponsArray);
+    var rooms=randomSelector(roomsArray);
+    var pickMistery=[character,weapon,rooms];
+    return pickMistery;
+
+  }
+   
+  function revealMistery(pickMistery){
+
+    misteryEnvelope=pickMistery[0]["first_name"]+" "+
+    pickMistery[0]["last_name"]+" killed Mr.Boddy using the "+
+    pickMistery[1]["name"]+" in the "+pickMistery[2]["name"]+"!!!!";
+    return misteryEnvelope;
   }
