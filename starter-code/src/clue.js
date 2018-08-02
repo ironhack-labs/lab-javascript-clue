@@ -90,7 +90,7 @@ var weaponsArray = [
 {name: 'pistol', weight: 20},
 ];
 
-function randomSelector(array) {
+function randomSelector (array) {
 var randomNumber = Math.floor(Math.random() * array.length);
 return array[randomNumber];
 };
@@ -104,7 +104,15 @@ function pickMistery(){
     return misteryEnvelope;
 }
 
-function revealMystery(){
+function revealMistery (array) {
+    return array[0].first_name + " " + array[0].last_name, "killed Mr. Boddy using the " + array[1].name + " in the " + array[2].name + "!!!!";
+  }
+      revealMistery(misteryEnvelope);
 
-    return (first-name + last_name + "killed Mr. Boddy using the " + weapon + "in the " place + "!!!")
-}
+      console.log (revealMistery);
+
+/*function revealMystery(array) {
+return array[0].first_name + ' ' + array[0].last_name + 'killed Mr. Boddy using the ' + array[1].name + 'in the ' + array[2].name + '!!!'
+};
+
+revealMystery(misteryEnvelope);*/
