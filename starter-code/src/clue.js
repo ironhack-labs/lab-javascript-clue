@@ -178,32 +178,26 @@ charactersArray.push(mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMus
 weaponsArray.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
 roomsArray.push(diningRoom, conservatory, kitchen, study, library, billiardRoom, lounge, ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio);
 
-function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-  
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-  
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-  
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-    if (array != 0){
-        return array;
-    }
-    else {
-        return undefined;
-    }
-    
-  }
-shuffle(charactersArray)
-shuffle(weaponsArray)
-shuffle(roomsArray)
+var misteryEnvelope = [];
 
-charactersArray.pop
-console.log(charactersArray);
+randomSelector = function(arr){
+    for( var i = 0; i < arr.length; i++){
+        var newValue = arr[Math.floor(arr.length * Math.random())]
+        return newValue;
+    }
+}
+
+ var misCharac = randomSelector(charactersArray)
+ var misWeap = randomSelector(weaponsArray)
+ var misRoom = randomSelector(roomsArray)
+
+function pickMistery(char, weap, room){
+    misteryEnvelope.push(char,weap,room)
+    return misteryEnvelope;
+}
+pickMistery(misCharac,misWeap,misRoom);
+
+function revealMistery(arr){
+    console.log(arr[0].first_name, arr[0].last_name, "killed Mr. Boddy using the", arr[1].name, "in the", arr[2].name)
+}
+console.log(revealMistery(misteryEnvelope))
