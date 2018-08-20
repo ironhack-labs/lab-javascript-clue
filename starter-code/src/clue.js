@@ -134,7 +134,7 @@ var weaponsArray = [
     {name: "pistol",weight: 20}
 ];
 
-//console.log(weaponsArray);
+console.log(weaponsArray);
 
 
 function randomSelector(array) {
@@ -142,14 +142,15 @@ var randomNumber = Math.floor(Math.random() * array.length);
     return array[randomNumber];
 };
 
-function pickMystery() {
+function pickMistery() {
     var misteryEnvelope = [];
     var character = randomSelector(charactersArray);
     var room = randomSelector(roomsArray);
     var weapon = randomSelector(weaponsArray);
-    misteryEnvelope.push(character, room, weapon);
+    misteryEnvelope.push(character, weapon, room);
 return misteryEnvelope;
 };
 
-pickMystery;
-
+function revealMistery (){
+        return ("[{}]");
+};
