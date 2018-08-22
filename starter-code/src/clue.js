@@ -97,8 +97,10 @@ function randomSelector(array) {
 };
 
 function pickMistery(mistery) {
-    var ar = [ charactersArray[1], weaponsArray[1], roomsArray[1]];
-    return ar;
+    var randomCharacters = randomSelector(charactersArray);
+    var randomWeapons = randomSelector(weaponsArray);
+    var randomRoom = randomSelector(roomsArray);
+    return [randomCharacters, randomWeapons, randomRoom];
 };
 
 function revealMistery(){}
