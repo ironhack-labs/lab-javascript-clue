@@ -49,18 +49,18 @@ occupation:   "Socialité"
 }
 
 var mrMustard = {
-first_name:   "Jack",
-last_name:    "Mustard",
-color:        "yellow",
-description:  "He is a former football player who tries to get by on his former glory",
-age:          62,
-image:        "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
-occupation:   "Retired Football player"
+  first_name:   "Jack",
+  last_name:    "Mustard",
+  color:        "yellow",
+  description:  "He is a former football player who tries to get by on his former glory",
+  age:          62,
+  image:        "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
+  occupation:   "Retired Football player"
 }
 
-// Weapons
+// Weapons Collection
 
-[
+var weaponsArray = [
   {name: "rope", weight: 10},
   {name: "knife", weight: 8},
   {name: "candlestick", weight: 2},
@@ -70,31 +70,54 @@ occupation:   "Retired Football player"
   {name: "bat", weight: 13},
   {name: "trophy", weight: 25},
   {name: "pistol", weight: 20}
-]
+];
 
-// Rooms
-name: Dinning Room
-name: Conservatory
-name: Kitchen
-name: Study
-name: Library
-name: Billiard Room
-name: Lounge
-name: Ballroom
-name: Hall
-name: Spa
-name: Living Room
-name: Observatory
-name: Theater
-name: Guest House
-name: Patio
+// Rooms' Collection
 
+var roomsArray = [
+{name: "Dinning Room"},
+{name: "Conservatory"},
+{name: "Kitchen"},
+{name: "Study"},
+{name: "Library"},
+{name: "Billiard Room"},
+{name: "Lounge"},
+{name: "Ballroom"},
+{name: "Hall"},
+{name: "Spa"},
+{name: "Living Room"},
+{name: "Observatory"},
+{name: "Theater"},
+{name: "Guest House"},
+{name: "Patio"}
+];
 
 // Characters Collection
 var charactersArray = [];
+charactersArray.push(mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard);
 
-// Rooms' Collection
-var roomsArray = [];
+function randomSelector(array) {
+  var selectedIndex = Math.floor((Math.random()*array.length));
+  return array[selectedIndex];
+}
 
-// Weapons Collection
-var weaponsArray = [];
+
+function pickMistery() {
+  var misteryEnvelope = [];
+  var killer = randomSelector(charactersArray);
+  var weapon = randomSelector(weaponsArray);
+  var room = randomSelector(roomsArray);
+  misteryEnvelope.push(killer, weapon, room);
+
+  return misteryEnvelope;
+}
+
+function revealMistery(misteryEnvelope) {
+  var firstName = misteryEnvelope[0].first_name;
+  var lastName = misteryEnvelope[0].last_name;
+  var weapon = misteryEnvelope[1].name;
+  var room = misteryEnvelope[2].name;
+  return firstName+" "+lastName+ " killed Mr.Boddy using the "+ weapon +" in the "+ room+"!!!!";
+}
+
+
