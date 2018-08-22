@@ -16,7 +16,7 @@ var charactersArray = [
 	{
 		drOrchid: {
 			frst_name:   "Doctor",
-			lst_name:    "Orchid",
+			last_name:    "Orchid",
 			color:        "white",
 			description:  "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
 			age:          26,
@@ -125,4 +125,18 @@ function pickMistery (){
 	
 }
 console.log(misteryEnvelope);
+
+function revealMistery(arr) {
+	var murderer = Object.values(misteryEnvelope[0]);
+	var weapon = misteryEnvelope[1];
+	var room = misteryEnvelope[2];
+
+	var nameMurderer = murderer[0].first_name.toUpperCase();
+	var surnameMurderer = murderer[0].last_name.toUpperCase();
+	var weaponMurderer = weapon.name.toUpperCase();
+	var roomMurderer = room.name.toUpperCase();
+
+	var reaviling = nameMurderer + ' ' + surnameMurderer + ' killed Mr.Boddy using the ' + weaponMurderer + ' in the ' + roomMurderer;
+	return reaviling;
+}
 
