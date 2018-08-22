@@ -105,14 +105,14 @@ var mrGreen = {
     function pickMistery(){
       var misteryEnvelope = [];
       misteryEnvelope.push(randomSelector(charactersArray));
-      misteryEnvelope.push(randomSelector(roomsArray));
       misteryEnvelope.push(randomSelector(weaponsArray));
+      misteryEnvelope.push(randomSelector(roomsArray));
     
       return misteryEnvelope;
     }
     
     function revealMistery(envelope){
-      var reveal = envelope[0].first_name + " " + envelope[0].last_name + " killed Mr.Boddy using the " + envelope[2].name + " in the " + envelope[1].name + "!!!";
+      var reveal = envelope[0].first_name + " " + envelope[0].last_name + " killed Mr.Boddy using the " + envelope[1].name + " in the " + envelope[2].name + "!!!!";
     //<FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!!
     return reveal;
     console.log(reveal);
