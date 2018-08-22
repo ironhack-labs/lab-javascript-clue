@@ -108,10 +108,10 @@ var drOrchid = {
 
 var profPlum = {
 first_name:   "Victor",
-last_name:    "Plum"
+last_name:    "Plum",
 color:        "purple",
 description:  "Billionare video game designer",
-age:          22
+age:          22,
 image:        "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
 occupation:   "Designer"
 }
@@ -214,3 +214,10 @@ roomsArray=rooms;
 // Weapons Collection
 var weaponsArray = [];
 weaponsArray=weapons;
+function randomSelector(array){
+    if(array.length==0){
+        return undefined
+    } 
+    var randomIndex= Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+}
