@@ -109,3 +109,15 @@ function randomSelector (arr) {
 randomSelector(roomsArray);
 
 
+var misteryEnvelope = [];
+var card = [];
+
+
+function pickMistery (arr1, arr2, arr3){
+	misteryEnvelope.push(randomSelector(arr1));
+	misteryEnvelope.push(randomSelector(arr2));
+	misteryEnvelope.push(randomSelector(arr3));
+
+}
+console.log(misteryEnvelope);
+
