@@ -208,9 +208,11 @@ charactersArray.push(mrsPeacock);
 charactersArray.push(profPlum);
 charactersArray.push(missScarlet);
 charactersArray.push(drOrchid);
+
 // Rooms' Collection
 var roomsArray = [];
 roomsArray=rooms;
+
 // Weapons Collection
 var weaponsArray = [];
 weaponsArray=weapons;
@@ -220,4 +222,11 @@ function randomSelector(array){
     } 
     var randomIndex= Math.floor(Math.random() * array.length);
     return array[randomIndex];
+}
+function pickMistery(){
+    var misteryArray = [];
+    misteryArray.push(randomSelector(charactersArray));
+    misteryArray.push(randomSelector(weaponsArray));
+    misteryArray.push(randomSelector(roomsArray));
+    return misteryArray;
 }
