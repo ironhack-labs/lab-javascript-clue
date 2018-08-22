@@ -15,13 +15,13 @@ var charactersArray = [
 	},
 	{
 		drOrchid: {
-			frst_name:   "Doctor",
+			first_name:   "Doctor",
 			last_name:    "Orchid",
 			color:        "white",
 			description:  "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
 			age:          26,
 			image:        "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
-			ocupation:   "Scientist",
+			occupation:   "Scientist",
 		}
 	}, 
 	{
@@ -100,9 +100,7 @@ var roomsArray = [
 ];
 
 function randomSelector (arr) {
-	console.log("long" ,arr.length);
 	var randomE = Math.floor(Math.random() * (arr.length));
-	console.log(randomE);
 	return arr[randomE];
 }
 
@@ -110,33 +108,33 @@ randomSelector(roomsArray);
 
 
 var misteryEnvelope = [];
-var cards = [charactersArray, weaponsArray,roomsArray];
+var cards = [charactersArray, weaponsArray, roomsArray];
 
 
 function pickMistery (){
+	var misteryEnvelope = [];
 	if (cards.length != 0){
-		console.log("entra");
 		for(var i=0; i < cards.length; i++){
-		misteryEnvelope.push(randomSelector(cards[i]));
+			misteryEnvelope.push(randomSelector(cards[i]));
+		}
 		return misteryEnvelope;
 	}
-	return;
-	}
-	
 }
-console.log(misteryEnvelope);
 
-function revealMistery(arr) {
-	var murderer = Object.values(misteryEnvelope[0]);
-	var weapon = misteryEnvelope[1];
-	var room = misteryEnvelope[2];
+function revealMistery(misteryEnvelope) {
+	if (misteryEnvelope.length != 0) {
 
-	var nameMurderer = murderer[0].first_name.toUpperCase();
-	var surnameMurderer = murderer[0].last_name.toUpperCase();
-	var weaponMurderer = weapon.name.toUpperCase();
-	var roomMurderer = room.name.toUpperCase();
+		var murderer = Object.values(misteryEnvelope[0]);
+		var weapon = misteryEnvelope[1];
+		var room = misteryEnvelope[2];
 
-	var reaviling = nameMurderer + ' ' + surnameMurderer + ' killed Mr.Boddy using the ' + weaponMurderer + ' in the ' + roomMurderer;
-	return reaviling;
+		var nameMurderer = murderer[0];
+		var surnameMurderer = murderer[1];
+		var weaponMurderer = weapon.name;
+		var roomMurderer = room.name;
+	
+		var reaviling = nameMurderer + ' ' + surnameMurderer + ' killed Mr.Boddy using the ' + weaponMurderer + ' in the ' + roomMurderer + '!!!!';
+		return reaviling;
+	}
 }
 
