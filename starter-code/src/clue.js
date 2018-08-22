@@ -110,14 +110,19 @@ randomSelector(roomsArray);
 
 
 var misteryEnvelope = [];
-var card = [];
+var cards = [charactersArray, weaponsArray,roomsArray];
 
 
-function pickMistery (arr1, arr2, arr3){
-	misteryEnvelope.push(randomSelector(arr1));
-	misteryEnvelope.push(randomSelector(arr2));
-	misteryEnvelope.push(randomSelector(arr3));
-
+function pickMistery (){
+	if (cards.length != 0){
+		console.log("entra");
+		for(var i=0; i < cards.length; i++){
+		misteryEnvelope.push(randomSelector(cards[i]));
+		return misteryEnvelope;
+	}
+	return;
+	}
+	
 }
 console.log(misteryEnvelope);
 
