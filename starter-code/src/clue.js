@@ -99,8 +99,13 @@ var roomsArray = [
 	{ name: "Patio" }
 ];
 
+function randomSelector (arr) {
+	console.log("long" ,arr.length);
+	var randomE = Math.floor(Math.random() * (arr.length));
+	console.log(randomE);
+	return arr[randomE];
+}
 
-
-
+randomSelector(roomsArray);
 
 
