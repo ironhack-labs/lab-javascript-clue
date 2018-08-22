@@ -223,10 +223,17 @@ function randomSelector(array){
     var randomIndex= Math.floor(Math.random() * array.length);
     return array[randomIndex];
 }
+
 function pickMistery(){
     var misteryArray = [];
     misteryArray.push(randomSelector(charactersArray));
     misteryArray.push(randomSelector(weaponsArray));
     misteryArray.push(randomSelector(roomsArray));
     return misteryArray;
+}
+
+var misteryEnvelope = pickMistery();
+
+function revealMistery(mistery){
+    return mistery[0].first_name + " " + mistery[0].last_name + " killed Mr.Boddy using the " + mistery[1].name + " in the " + mistery[2].name + "!!!!";
 }
