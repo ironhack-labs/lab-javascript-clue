@@ -104,7 +104,7 @@ var suspectsArray = [
     };
     
     function pickMistery(){ // reutilizamos la funcion creada y le pasamos los objetos que hemos creado en la primera iteración
-      killer = randomSelector(charactersArray);
+      killer = randomSelector(suspectsArray);
       weapon = randomSelector(weaponsArray);
       room = randomSelector(roomsArray);
       misteryEnvelope = [killer, weapon, room];
