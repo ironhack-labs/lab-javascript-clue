@@ -123,22 +123,26 @@ function randomSelector(arr) {
 }
 
   //-Create the mystery
+  var misteryEnvelope = [];
 
-  function pickMistery(arrChar,arrWeapons,arrRoom) {
-    var rndChar =  randomSelector(arrChar);
-    var rndWeapon = randomSelector(arrWeapons).name;
-    var rndRoom = randomSelector(arrRoom).name;
-    var misteryEnvelope = [
-      {name: rndChar.first_name,
-      last_name:rndChar.last_name},
-      rndWeapon,rndRoom]
+
+  function pickMistery() {
+    // var rndChar =  randomSelector(charactersArray);
+    // var rndWeapon = randomSelector(weaponsArray).name;
+    // var rndRoom = randomSelector(roomsArray).name;
+    misteryEnvelope[0] = randomSelector(charactersArray);
+    misteryEnvelope[1] = randomSelector(weaponsArray);
+    misteryEnvelope[2] = randomSelector(roomsArray);
+   
     return misteryEnvelope;
-  }
+    }
   
-  
-function revealMistery(arr){
-  //<FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!!
-  console.log(arr[0].first_name+" "+arr[0].last_name+" killed Mr.Boddy using the "+arr[1]+" in the "+arr[2]+"!!!!");
-}
+    function revealMistery(arr){
+      var revealMistery = arr[0].first_name+" "+arr[0].last_name+" killed Mr.Boddy using the "+arr[1].name+" in the "+arr[2].name+"!!!!";
+      //<FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!!
+      console.log(revealMistery);
+      return revealMistery;
+    }
 
-revealMistery(pickMistery(charactersArray,weaponsArray,roomsArray));
+pickMistery(); 
+revealMistery(misteryEnvelope);
