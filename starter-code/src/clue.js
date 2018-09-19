@@ -202,17 +202,15 @@ var roomsArray = [
   { name: 'Patio'}
 ];
 
-function randomSelector(room) {
-  return room[Math.floor(Math.random(room.length)*room.length)]
+function randomSelector(array) {
+  return array[Math.floor(Math.random(array.length)*array.length)]
 }
 
+function pickMistery(){
+  var character, weapon, room;
+  character = randomSelector(charactersArray);
+  weapon = randomSelector(weaponsArray);
+  room = randomSelector(roomsArray);
 
-/*var randomSelector = function (roomsArray) {
-  var room = Object.values(roomsArray)
-  return roomsArray
-};
-
-for (var i = 0; i< roomsArray.length; ){
-  Math.floor(Math.random**roomsArray.length)
+  console.log(character + " " + weapon + " " + room)
 }
-console.log(Math.random(roomsArray));*/
