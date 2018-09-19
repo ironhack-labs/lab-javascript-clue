@@ -129,7 +129,6 @@ function randomSelector(item){
 }
 
 function pickMistery(){
-    
     var randomRoom = randomSelector(roomsArray);
     var randomPerson = randomSelector(charactersArray);
     var randomWeapon = randomSelector(weaponsArray);
@@ -139,7 +138,6 @@ function pickMistery(){
 }
 
 function revealMistery(item){
-    
     var name = item[0]['first_name'];
     var lastName = item[0]['last_name'];
     var weapon = item[1].name;
