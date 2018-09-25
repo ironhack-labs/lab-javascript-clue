@@ -112,11 +112,14 @@ Our mystery should be stored on a misteryEnvelope variable.
 */
 
 function pickMistery(charactersArray, weaponsArray, roomsArray) {
-    var misteryEnvelope = [];
+    var misteryEnvelope = new Array(3);
     var character = randomSelector(charactersArray);
     misteryEnvelope[0] = [character.first_name, character.last_name];
-    misteryEnvelope[1] = randomSelector(weaponsArray);
-    misteryEnvelope[2] = randomSelector(roomsArray);
+    var weapon = randomSelector(weaponsArray);
+    misteryEnvelope[1] = weapon.name;
+    var room = randomSelector(roomsArray);
+    misteryEnvelope[2] = room.name;
+
     return misteryEnvelope;
   };
 
