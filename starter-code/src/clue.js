@@ -87,8 +87,8 @@ name: Patio
 
 
 // Characters Collection
-var charactersArray = {
-  mrGreen: {
+var charactersArray = [
+  mrGreen= {
   first_name:   "Jacob",
   last_name:    "Green",
   color:        "green",
@@ -98,7 +98,7 @@ var charactersArray = {
   occupation:   "Entrepreneur"
   } 
   ,
-  drOrchid: {
+  drOrchid= {
   first_name:    "Doctor",
   last_name:    "Orchid",
   color:        "white",
@@ -108,7 +108,7 @@ var charactersArray = {
   ocupation:    "Scientist"
   }
   ,
-  profPlum: {
+  profPlum= {
   first_name:   "Victor",
   last_name:    "Plum",
   color:        "purple",
@@ -118,7 +118,7 @@ var charactersArray = {
   occupation:   "Designer"
   }
   ,
-  missScarlet: {
+  missScarlet= {
   first_name:   "Kasandra",
   last_name:    "Scarlet",
   color:        "red",
@@ -128,7 +128,7 @@ var charactersArray = {
   occupation:   "Actor"
   }
   ,
-  mrsPeacock: {
+  mrsPeacock= {
   first_name:   "Eleanor",
   last_name:    "Peacock",
   color:        "blue",
@@ -138,7 +138,7 @@ var charactersArray = {
   occupation:   "Socialité"
   }
   ,
-  mrMustard:  {
+  mrMustard=  {
   first_name:   "Jack",
   last_name:    "Mustard",
   color:        "yellow",
@@ -147,7 +147,7 @@ var charactersArray = {
   image:        "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
   occupation:   "Retired Football player",
   }
-};
+];
 
 // Rooms' Collection
 var roomsArray = [
@@ -183,14 +183,18 @@ var weaponsArray = [
 ];
 
 function randomSelector(sourceArray) {
-  keysArr = Object.keys(sourceArray);
-  numbers = keysArr.lentgh;
-  pick = Math.floor(Math.random() * numbers);
+
+
+
+  var keysArr = Object.keys(sourceArray);
+  var numbers = keysArr.length;
+  var pick = Math.floor(Math.random() * numbers);
 
   var randomKey = keysArr[pick];
-  
+
   return sourceArray[randomKey];
 }
+
 
 function pickMistery(charactersArray, roomsArray, weaponsArray) {
   var randomChar = randomSelector(charactersArray);
@@ -201,12 +205,13 @@ function pickMistery(charactersArray, roomsArray, weaponsArray) {
 
   return misteryEnvelope ;
 }
+
  
 function revealMistery(misteryEnvelope) {
-   var result =  misteryEnvelope[1].first_name + " " 
-   + misteryEnvelope[1].last_name + " killed Mr.Boddy using the " 
+   var result =  misteryEnvelope[0].first_name + " " 
+   + misteryEnvelope[0].last_name + " killed Mr.Boddy using the " 
    + misteryEnvelope[2].name + " in the " 
-   + misteryEnvelope[3].name + " !!!!";
+   + misteryEnvelope[1].name + " !!!!";
 
    return result;
 }
@@ -214,7 +219,6 @@ function revealMistery(misteryEnvelope) {
 
 console.log(revealMistery(pickMistery(charactersArray, roomsArray, weaponsArray)));
 
-// ca me renvoi des undefined code de danyell ci-dessous
 
 
 
