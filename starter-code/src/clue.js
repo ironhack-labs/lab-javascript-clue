@@ -108,7 +108,6 @@ var weaponsArray = [
     {name: "pistol",weight: 20},
 ];
 
-var cardTypes= [charactersArray, roomsArray, weaponsArray];
 
 function randomSelector(arr){
     let card;
@@ -116,13 +115,13 @@ function randomSelector(arr){
     return arr[card];
 }
 
-function pickMistery(arr){
-    let misteryEnvelope = [];
-    if (arr.length > 0){
-        for (let i=0; i < arr.length; i++){
-            misteryEnvelope.push(randomSelector(arr[i]));
-        }
-    }
+function pickMistery(){
+    let weapon = randomSelector(weaponsArray);
+    let suspect = randomSelector(charactersArray);
+    let room = randomSelector(roomsArray);
+
+    let misteryEnvelope = [suspect,weapon,room];
+    
     return misteryEnvelope;
 }
 
