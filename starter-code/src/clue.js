@@ -106,7 +106,7 @@ weaponsArray.push(rope,knife,candlestick,dumbbell,poison,axe,bat,trophy,pistol);
 function randomSelector (array){
   if (array.length === 0) return undefined;
 
-  var i = Math.floor(Math.random() * array.length);
+  var i = Math.floor(Math.random() * (array.length+1));
   return array[i];
 }
 
