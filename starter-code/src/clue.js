@@ -173,7 +173,7 @@ var room11 = rooms.room11;
 var room12 = rooms.room12;
 var room13 = rooms.room13;
 var room14 = rooms.room14;
-var room15 = rooms.room215;
+var room15 = rooms.room15;
 
 var roomsArray = [];
 roomsArray.push(room1, room2, room3, room4, room5, room6, room7, room8, room9, room10, room11, room12, room13, room14, room15);
@@ -213,11 +213,11 @@ function pickMistery () {
 
 
 function revealMistery (misteryEnvelope) {
-	var misteryEnvelope = pickMistery();
+	var misteryEnvelope = misteryEnvelope;
 	var murdererName = misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name;
 	var murderWeapon = misteryEnvelope[1].name;
 	var murderRoom = misteryEnvelope[2];
 
-	var description = murdererName + " killed Mr Boddy using the " + murderWeapon + " in the " + murderRoom + "!";
+	var description = murdererName + " killed Mr.Boddy using the " + murderWeapon + " in the " + murderRoom.name + "!!!!";
 	return description;
 };
