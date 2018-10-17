@@ -43,27 +43,27 @@ describe('Pick a random mistery - pickMistery', function () {
   });
 
   it('Return an array', function () {
-    expect(typeof pickMistery()).toEqual('object');
+    expect(typeof pickMistery([])).toEqual('object');
   });
 
   it('Return a non empty array', function () {
-    expect(pickMistery().length).toBeGreaterThan(0);
+    expect(pickMistery([]).length).toBeGreaterThan(0);
   });
 
   it('Return an array with 3 elements', function () {
-    expect(pickMistery().length).toEqual(3);
+    expect(pickMistery([]).length).toEqual(3);
   });
 
   it('Return a killer on the first index of the array', function () {
-    expect(charactersArray.indexOf(pickMistery()[0])).toBeGreaterThan(-1);
+    expect(charactersArray.indexOf(pickMistery([])[0])).toBeGreaterThan(-1);
   });
 
   it('Return a weapon on the second index of the array', function () {
-    expect(weaponsArray.indexOf(pickMistery()[1])).toBeGreaterThan(-1);
+    expect(weaponsArray.indexOf(pickMistery([])[1])).toBeGreaterThan(-1);
   });
 
   it('Return a room in the third index of the array', function () {
-    expect(roomsArray.indexOf(pickMistery()[2])).toBeGreaterThan(-1);
+    expect(roomsArray.indexOf(pickMistery([])[2])).toBeGreaterThan(-1);
   });
 });
 
