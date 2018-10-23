@@ -19,7 +19,7 @@ class Room {
     }
 }
 
-class Weapon {
+class Weapon{
     constructor(name){
         this._name = name;
     }
