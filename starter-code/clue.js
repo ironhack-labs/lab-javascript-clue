@@ -99,13 +99,19 @@ var mrGreen ={
   
       let guess = [person, room, weapon];
       let compare = [this.baddie.weapon, this.baddie.who, this.baddie.room];
-         
+      let times;  
       if(person == this.baddie.who && room == this.baddie.room && this.baddie.weapon == weapon){
           console.log("Ye got the bastard!");
       }
       else if(person != this.baddie.who || room != this.baddie.room || this.baddie.weapon != weapon){
-          
+        //times is not working but I'll fix it later
+        times++;
+         if(times > 5){
+          console.log("You lose! The assasin was "+compare[0]+"who killed you in the"+compare[1]+"with a "+compare[2]+". You really are bad at guessing");
+        };
+        
           function check(arg){
+            
             if(arg == compare[0]){
               console.log("You got the weapon, now where and who did it...");
             }
@@ -115,6 +121,8 @@ var mrGreen ={
             else if(arg == compare[2]){
               console.log("You got the locations, but with what and who did it...");
             }
+            
+            
           }
           guess.forEach(check);
       }
