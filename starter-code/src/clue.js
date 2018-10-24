@@ -1,3 +1,18 @@
+
+
+
+
+
+
+// OPEN VIA index.HTML
+
+
+
+
+
+
+
+
 // Characters
 /*
 mrGreen{
@@ -104,7 +119,7 @@ const mrGreen = {
     description:  "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
     age:          26,
     image:       " http://www.radiotimes.com/uploads/images/Original/111967.jpg",
-    ocupation:   "Scientist",
+    occupation:   "Scientist"
     }
     
     const profPlum = {
@@ -215,4 +230,79 @@ var misteryEnvelope;
   //reveal mistery
   function revealMistery(env){
 return( env[0].first_name + " " + env[0].last_name + " killed Mr.Boddy using the " + env[1].name + " in the "+env[2]+"!!!!" )
+// console.log( env[0].first_name)
   }
+
+function execute(){
+    reset()
+    setup()
+}
+
+
+  function setup(){
+    pickMistery()
+    revealMistery(misteryEnvelope)
+
+    var name = document.createElement("li");
+        name.textContent = misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name
+        document.querySelector(".innerContainer").appendChild(name)
+
+
+
+        var message1 = document.createElement("li")
+        message1.textContent = "murdered mr. Boddy with the"
+        document.querySelector(".innerContainer").appendChild(message1)
+
+    var weapon = document.createElement("li")
+    weapon.textContent = misteryEnvelope[1].name
+    document.querySelector(".innerContainer").appendChild(weapon)
+
+    var message2 = document.createElement("li")
+        message2.textContent = "in the"
+        document.querySelector(".innerContainer").appendChild(message2)
+
+        var room = document.createElement("li")
+        room.textContent = misteryEnvelope[2]
+        document.querySelector(".innerContainer").appendChild(room)
+
+        document.querySelector("#p7").src = misteryEnvelope[0].image;
+    }
+
+    function reset(){
+        let revealCardText = document.querySelector(".innerContainer")
+    for(i=0; i<=4; i++){
+        revealCardText.removeChild(revealCardText.childNodes[0])
+  }
+    }
+  
+
+  //visible profiles first try
+  function createCharProfiles(){
+      for(let i = 1; i<charactersArray.length+1; i++){
+        document.querySelector("#p"+i).src = charactersArray[i-1].image;
+        document.querySelector(".d" +i).style.background = charactersArray[i-1].color;
+
+        var name = document.createElement("li");
+        name.textContent = charactersArray[i-1].first_name + " " + charactersArray[i-1].last_name
+
+        var age = document.createElement("li");
+        age.textContent = charactersArray[i-1].age
+        
+        var occupation = document.createElement("li");
+        occupation.textContent = charactersArray[i-1].occupation
+
+        var description = document.createElement("li");
+        description.textContent = "- " + charactersArray[i-1].description
+
+
+        document.querySelector(".c" +i).appendChild(name)
+        document.querySelector(".c" +i).appendChild(age)
+        document.querySelector(".c" +i).appendChild(occupation)
+        document.querySelector(".c" +i).appendChild(description)
+
+      }
+
+}
+
+  createCharProfiles()
+  setup()

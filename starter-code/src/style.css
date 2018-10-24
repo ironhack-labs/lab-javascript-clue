@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(83, 79, 107);
+    overflow:hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+#cards{
+    margin-top: 50px;
+    
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.c7 li{
+    margin: 7px 0;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+.innerContainer{
+    list-style-type: none;
+}
+
+.innerContainer li:nth-of-type(2),.innerContainer li:nth-of-type(4) {
+    font-size: 1em;
+    font-weight: 300;
+}
+.c7 p{
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+
+.btnExecute{
+    position: absolute;
+    left: 92%;
+    top: 87%;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: white;
+    border: none;
+    margin-right: 60px;
+    color: #211f2d;
+    -webkit-box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    -moz-box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    box-sizing: border-box;
+}
+
+.btnExecute :hover{
+    background: red;
+}
+
+.charactercard, .c7{
+    background-color: #c4bfc9;
+    padding: 7px;
+    border-radius: 2%;
+    font-size: 0.8em;
+    height: 300px;
+    color: black;
+    width: 200px;
+    /* border: 1.5px solid black; */
+    text-align: center;
+    -webkit-box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    -moz-box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    list-style-type: none;
+}
+
+.charactercard img, #p7{
+    width: 50%;
+    border-radius: 100%;
+    /* border: 1px solid black; */
+    -webkit-box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    -moz-box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+}
+
+.charactercard li{
+    margin: 3px 0;
+}
+
+.dot{
+    background-color: green;
+    -webkit-box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    -moz-box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+}
+
+.solution{
+    margin: 20px auto;
+    background-color: #5b7a5d;
+    border-radius: 2%;
+    height: 300px;
+    color: black;
+    width: 200px;
+    -webkit-box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    -moz-box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.big{
+    font-size: 8em;
+    color: white;
+}
+
+
+/* flip */
+.flip-container, .front, .back {
+    width: 200px;
+    height: 300px;
+    margin: 20px auto;
+}
+
+.c7{
+    margin: 20px auto;
+    background-color: #5b7a5d;
+    border-radius: 2%;
+    height: 300px;
+    color: black;
+    width: 200px;
+    -webkit-box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    -moz-box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.b{
+    margin: 20px auto;
+    background-color: #5b7a5d;
+    border-radius: 2%;
+    height: 300px;
+    color: black;
+    width: 200px;
+    -webkit-box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    -moz-box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.42);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 200px;
+	height: 300px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.c7{
+    list-style-type: none;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
