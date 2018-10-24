@@ -127,3 +127,5 @@ function revealMistery (array, callFunction1, callFunction2) {
   return solution[0][0].first_name+" "+solution[0][0].last_name+" killed Mr.Boddy using "+solution[0][1].name+" in the "+solution[0][2].name
 }
 
+console.log(revealMistery(fullArray, randomSelector, pickMistery))
+
