@@ -141,13 +141,13 @@ var mrsPeacock = {
 }
 
 var mrMustard = {
-first_name:   'Jack',
-last_name:    'Mustard',
-color:        'yellow',
-description: ' He is a former football player who tries to get by on his former glory',
-age:          62,
-image:        'https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg',
-occupation:   'Retired Football player'
+    first_name:   'Jack',
+    last_name:    'Mustard',
+    color:        'yellow',
+    description: ' He is a former football player who tries to get by on his former glory',
+    age:          62,
+    image:        'https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg',
+    occupation:   'Retired Football player'
 }
 
 
@@ -182,27 +182,28 @@ var roomsArray = [
 // Weapons Collection
 var weaponsArray = [
 
-{name: 'rope'    ,    weight: 10},
-{name: 'knife'    ,    weight: 8},
-{name: 'candlestick'    ,    weight: 2},
-{name: 'dumbbell'    ,    weight: 30},
-{name: 'poison'    ,    weight: 2},
-{name: 'axe'    ,    weight: 15},
-{name: 'bat'    ,    weight: 13},
-{name: 'trophy'    ,    weight: 25},
-{name: 'pistol'    ,    weight: 20}
+    {name: 'rope'    ,    weight: 10},
+    {name: 'knife'    ,    weight: 8},
+    {name: 'candlestick'    ,    weight: 2},
+    {name: 'dumbbell'    ,    weight: 30},
+    {name: 'poison'    ,    weight: 2},
+    {name: 'axe'    ,    weight: 15},
+    {name: 'bat'    ,    weight: 13},
+    {name: 'trophy'    ,    weight: 25},
+    {name: 'pistol'    ,    weight: 20}
 
 ];
 
 
 function randomSelector(arry) {
-    
+
    return arry[Math.floor(Math.random() * ((arry.length) - 0) + 0)];
 }
 
 function pickMistery() {
 
     var misteryEnvelope = [];
+    
     misteryEnvelope.push(randomSelector(charactersArray))
     misteryEnvelope.push(randomSelector(weaponsArray))
     misteryEnvelope.push(randomSelector(roomsArray))
