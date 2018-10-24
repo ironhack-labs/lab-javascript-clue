@@ -144,35 +144,16 @@ function pickMistery(characterStack, weaponStack, roomStack){
   misteryEnvelope.push(randomSelector(characterStack));
   misteryEnvelope.push(randomSelector(weaponStack));
   misteryEnvelope.push(randomSelector(roomStack));
+
+  console.log(typeof misteryEnvelope);
   return misteryEnvelope;
 }
+
 
 //[Revealing the mistery] function outside an object.
 function revealMistery(someArray){
   return someArray[0].first_name + " " + someArray[0].last_name + " killed Mr.Boddy using the " + someArray[1].name + " " + "in the " + someArray[2].name + " !!!!"
 }
-
-/*
-Function calls from function outside of an object 
-*/
-
-
-//function call > output = random number of characters array.
-  console.log(randomSelector(charactersArray));
-
-//function call > output = random number of characters array.
-  console.log(randomSelector(weaponsArray));
-  
-//function call > output = random number of characters array.
-  console.log(randomSelector(roomsArray));
-
-//function call > output = mysteryEnvelope containing array with the 3 picked cards, a character, a weapon and a room.
-console.log(pickMistery(charactersArray, weaponsArray, roomsArray));
-
-
-//function call > output = the revealed mistery.
-console.log(revealMistery(pickMistery(charactersArray, weaponsArray, roomsArray)));
-
 
 /*
 All created functions stored in a object called >> cards
@@ -202,7 +183,6 @@ var cards = {
 /*
 Function calls done from the created object called >> cards
 */
-
-console.log(cards.randomSelector(cards.roomsArray));
-console.log(cards.pickMistery(cards.weaponsArray, cards.weaponsArray, cards.roomsArray));
+//console.log(cards.randomSelector(cards.roomsArray));
+//console.log(cards.pickMistery(cards.weaponsArray, cards.weaponsArray, cards.roomsArray));
 console.log(cards.revealMistery());
