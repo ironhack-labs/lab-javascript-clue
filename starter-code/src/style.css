@@ -59,9 +59,12 @@ a{
     box-sizing: border-box;
 }
 
-.btnExecute :hover{
-    background: red;
+.btnExecute:hover{
+    height: 53px;
+    width: 53px;
 }
+
+button:focus {outline:0;}
 
 .charactercard, .c7{
     background-color: #c4bfc9;
