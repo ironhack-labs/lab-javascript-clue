@@ -129,13 +129,13 @@ function revealMistery (array, callFunction1, callFunction2) {
 }
 
 let solution = revealMistery(fullArray, randomSelector, pickMistery)
-console.log(solution[0][0].first_name+" "+solution[0][0].last_name+" killed Mr.Boddy using "+solution[0][1].name+" in the "+solution[0][2].name)
+//console.log(solution[0][0].first_name+" "+solution[0][0].last_name+" killed Mr.Boddy using "+solution[0][1].name+" in the "+solution[0][2].name)
 
 let answerFullName = solution[0][0].first_name.toLowerCase()+" "+solution[0][0].last_name.toLowerCase()
 let answerWeapon = solution[0][1].name.toLowerCase()
 let answerRoom = solution[0][2].name.toLowerCase()
 let answer = [answerFullName, answerWeapon, answerRoom]
-console.log(answer)
+//console.log(answer)
 
 
 let guessName = prompt ("Who do you think is the killer?")
