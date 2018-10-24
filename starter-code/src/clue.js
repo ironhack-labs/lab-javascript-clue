@@ -129,3 +129,45 @@ function revealMistery(array) {
 
   return string;
 }
+
+var mistery = revealMistery(misteryEnvelope);
+
+function guess(secret, array) {
+  var answer;
+  switch(secret) {
+    case "name":
+      answer = misteryEnvelope[0].first_name;
+      break;
+    case "weapon":
+      answer = misteryEnvelope[1].name;
+      break;
+    case "place":
+      answer = misteryEnvelope[2];
+      break;
+  }
+  var guessName1 = window.prompt("Try to guess the " + secret + " - you have three attempts");
+  if (guessName1.toLowerCase()===answer.toLowerCase()) {
+    alert("You got it!");
+    return 1;
+  } else {
+    var guessName2 = window.prompt("Nope. Try again");
+    if (guessName2.toLowerCase()===answer.toLowerCase()) {
+      alert("You got it!");
+      return 1;
+    } else {
+      var guessName3 = window.prompt("Nope. Last try");
+      if (guessName3.toLowerCase()===answer.toLowerCase()) {
+        alert("You got it!");
+        return 1;
+      } else {
+        alert("Sorry, you lose, the correct answer is: " + answer);
+      }
+    }
+  }
+}
+
+guess("name", misteryEnvelope);
+guess("weapon", misteryEnvelope);
+guess("place", misteryEnvelope);
+alert(mistery);
+
