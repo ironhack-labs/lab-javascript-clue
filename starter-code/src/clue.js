@@ -124,8 +124,80 @@ return misteryEnvelope
 function revealMistery (array, callFunction1, callFunction2) {
   var solution = []
   solution.push(callFunction2(array,callFunction1))
-  return solution[0][0].first_name+" "+solution[0][0].last_name+" killed Mr.Boddy using "+solution[0][1].name+" in the "+solution[0][2].name
+  return solution
+  //return solution[0][0].first_name+" "+solution[0][0].last_name+" killed Mr.Boddy using "+solution[0][1].name+" in the "+solution[0][2].name
 }
 
-console.log(revealMistery(fullArray, randomSelector, pickMistery))
+let solution = revealMistery(fullArray, randomSelector, pickMistery)
+console.log(solution[0][0].first_name+" "+solution[0][0].last_name+" killed Mr.Boddy using "+solution[0][1].name+" in the "+solution[0][2].name)
 
+let answerFullName = solution[0][0].first_name.toLowerCase()+" "+solution[0][0].last_name.toLowerCase()
+let answerWeapon = solution[0][1].name.toLowerCase()
+let answerRoom = solution[0][2].name.toLowerCase()
+let answer = [answerFullName, answerWeapon, answerRoom]
+console.log(answer)
+
+
+let guessName = prompt ("Who do you think is the killer?")
+let win = false
+for (let i = 0; i<2; i++) {
+  if (answerFullName.includes(guessName.toLowerCase()) && guessName.length>1) {
+    alert("You got the killer: "+answerFullName) 
+    win = true
+    break;
+  } else {
+    guessName = prompt ("Try again")
+    if (answerFullName.includes(guessName.toLowerCase()) && guessName.length>1) {
+      alert("You got the killer: "+answerFullName) 
+      win = true
+      break;
+  }
+} 
+}
+if (!win) {
+  alert("You lose! " + answerFullName.toUpperCase()+" killed Mr.Boddy using "+answerWeapon+" in the "+answerRoom)
+} 
+else {
+  let winWeapon = false
+  let guessWeapon = prompt ("What weapon was used?")
+  for (let i=0; i<2; i++) {
+  if (guessWeapon.toLowerCase()==answerWeapon) {
+    alert ("You found out the weapon: "+answerWeapon) 
+    winWeapon = true
+    break;
+  } else {
+    guessWeapon = prompt ("Try again")
+    if (guessWeapon.toLowerCase()==answerWeapon) {
+      alert("You found out the weapon: "+answerWeapon) 
+      winWeapon = true
+      break;
+  }
+  }
+}
+
+if (!winWeapon) {
+  alert("You lose! " + answerFullName.toUpperCase()+" killed Mr.Boddy using "+answerWeapon+" in the "+answerRoom)
+} else {
+  let winRoom = false
+  console.log(winRoom)
+  let guessRoom = prompt ("In which room did the crime happen?")
+  for (let i=0; i<2; i++) {
+    if (guessRoom.toLowerCase()==answerRoom) {
+      alert ("You're a champ!!! "+answerFullName.toUpperCase()+" killes Mr. Boddy using "+answerWeapon+" in the "+answerRoom)
+      winRoom = true
+      break;
+    } else {
+      guessRoom = prompt ("Try again")
+      if (guessRoom.toLowerCase()==answerRoom) {
+        alert ("You're a champ!!! "+answerFullName.toUpperCase()+" killes Mr. Boddy using "+answerWeapon+" in the "+answerRoom)
+      winRoom = true
+      break;
+      } 
+    }
+  }
+
+  if (!winRoom) {
+    alert("You lose! " + answerFullName.toUpperCase()+" killed Mr.Boddy using "+answerWeapon+" in the "+answerRoom)
+  }
+}
+}
