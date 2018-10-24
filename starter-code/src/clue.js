@@ -180,13 +180,6 @@ function randomSelector(array){
 }
 
 function pickMistery(){
-  //var misteryEnvelope = [];
-  // misteryEnvelope.push(randomSelector(charactersArray));
-  // misteryEnvelope.push(randomSelector(weaponsArray));
-  // misteryEnvelope.push(randomSelector(roomsArray));
-  // var mistery = [randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray)];
-  //return misteryEnvelope;
-  //var m= new object;
   return [randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray)];
 }
 var misteryEnvelope=pickMistery();
