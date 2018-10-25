@@ -73,7 +73,8 @@ name: "bat"},
 name: "trophy"},         
 {weight: 20,
 name: "pistol"}         
-];
+]
+
 let roomsArray = [
 {name: "Dinning Room"},
 {name: "Conservatory"},
@@ -90,26 +91,23 @@ let roomsArray = [
 {name: "Theater"},
 {name: "Guest House"},
 {name: "Patio"}
-];
+]
 
 function randomSelector (arr){
-  if (arr.length === 0){
-      return;
-  }
-  var dice = Math.floor(Math.random()*arr.length)
+ 
+  let dice = Math.floor(Math.random() * arr.length);
   return arr[dice];
-}
+};
 
-function pickMistery () {
- var misteryEnvelope = [];
- misteryEnvelope.push(randomSelector(charactersArray));
- misteryEnvelope.push(randomSelector(weaponsArray));
- misteryEnvelope.push(randomSelector(roomsArray));
- return misteryEnvelope;
-}
+function pickMistery() {
+ const mysteryEnvelope = [];
+ mysteryEnvelope.push(randomSelector(charactersArray));
+ mysteryEnvelope.push(randomSelector(weaponsArray));
+ mysteryEnvelope.push(randomSelector(roomsArray));
+ return mysteryEnvelope;
+};
 
-function revealMistery() {
-  for(let i = 0; i < misteryEnvelope.length; i++){
-    
-  }
-}
+function revealMistery(mysteryEnvelope){
+  return `${mysteryEnvelope[0].first_name} ${mysteryEnvelope[0].last_name} killed Mr.Boddy using the ${mysteryEnvelope[1].name} in the ${mysteryEnvelope[2].name}!!!!`;
+};
+console.log(revealMistery());
