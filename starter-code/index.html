@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Welcome to Cluedo!</title>
+
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="css/custom.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Permanent+Marker" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<!-- Page Content -->
+<div class="container-fluid h-100">
+  <div class="row h-100 justify-content-center align-items-centerh-100 justify-content-center align-items-center">
+    <div class="col-lg-12 text-center mt-4"> <img src="img/header_logo.png" width="150px" alt=""/>
+      <h1 class="mt-5 playgame" onclick="revealMistery(pickMistery());"><a href="#" class="effect-shine">Who murdered Dr. Black?</a></h1>
+      <div id="answer">
+        <p id="mimage"><img style="display:none;" id="mugshot" src="" /></p>
+        <p class="lead" id="mname"></p>
+        <p class="lead" id="weapon"></p>
+        <p class="lead" id="room"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="src/clue.js"></script> 
+<!-- Bootstrap core JavaScript --> 
+<script src="vendor/jquery/jquery.min.js"></script> 
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
