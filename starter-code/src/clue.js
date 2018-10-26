@@ -235,7 +235,7 @@ return( env[0].first_name + " " + env[0].last_name + " killed Mr.Boddy using the
 
 function execute(){
     reset()
-    setup()
+    setTimeout(setup, 1000)
 }
 
 
@@ -269,6 +269,7 @@ function execute(){
     }
 
     function reset(){
+        document.querySelector(".flip-container").classList.remove("flip")
         let revealCardText = document.querySelector(".innerContainer")
     for(i=0; i<=4; i++){
         revealCardText.removeChild(revealCardText.childNodes[0])
@@ -304,6 +305,24 @@ function execute(){
 
 }
 
+function revealCardToggle(){
+    document.querySelector(".flip-container").classList.add("flip");
+// console.log(this.querySelector("li").textContent == misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name)
+    if(this.querySelector("li").textContent == misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name){
+        alert("You Won")
+    }
+}
+
+
+
+function revealListener(){
+    for(let i = 1; i<=6; i++){
+        document.querySelector(".c"+i).addEventListener("click", revealCardToggle);
+    }
+}
+
+// revealCardToggle()
+    revealListener()
   createCharProfiles()
   setup()
 
@@ -311,30 +330,30 @@ function execute(){
 
 
 
-  // Get the modal
-var modal = document.getElementById('myModal');
+//   // Get the modal
+// var modal = document.getElementById('myModal');
 
-// Get the button that opens the modal
-// var btn = document.getElementById("myBtn");
+// // Get the button that opens the modal
+// // var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal 
-function popup() {
-    modal.style.display = "block";
-}
+// // When the user clicks on the button, open the modal 
+// function popup() {
+//     modal.style.display = "block";
+// }
 
-popup()
+// popup()
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() {
+//     modal.style.display = "none";
+// }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }

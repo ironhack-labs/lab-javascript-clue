@@ -43,6 +43,7 @@ a{
 
 
 .btnExecute{
+    cursor: pointer;
     position: absolute;
     left: 92%;
     top: 87%;
@@ -162,14 +163,21 @@ button:focus {outline:0;}
     align-items: center;
 }
 
+/* .flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+	transform: rotateY(180deg);
+} */
+
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000px;
 }
 	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
+	/* .flip-container:hover .flipper, .flip-container.hover .flipper {
 		transform: rotateY(180deg);
-	}
+    } */
+     .flip-container.hover .flipper, .flip-container.flip .flipper {
+        transform: rotateY(180deg);
+    }
 
 .flip-container, .front, .back {
 	width: 200px;
