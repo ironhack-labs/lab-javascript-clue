@@ -124,7 +124,7 @@ var room = array[2].name;
 	img.style.display = "block";
 	document.getElementById("mname").innerHTML = `The murderer is ${fname} ${lname}.`;
 	document.getElementById("weapon").innerHTML = `The weapon of choice was a ${weapon}.`;
-	document.getElementById("room").innerHTML = `The murder took place in ${room}.`;
+	document.getElementById("room").innerHTML = `The murder took place in the ${room}.`;
 	
 }
 
