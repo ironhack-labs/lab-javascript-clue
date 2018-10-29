@@ -122,3 +122,10 @@ function pickMistery () {
   var misteryEnvelope = [randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray)];
   return misteryEnvelope;
 }
+
+function revealMistery (arr) {
+  var character = arr[0];
+  var weapon = arr[1];
+  var room = arr[2];
+  return (character.first_name + " " + character.last_name + " killed Mr.Boddy using the " + weapon.name + " in the " + room.name + "!!!!");
+}
