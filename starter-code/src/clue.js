@@ -122,28 +122,19 @@ var roomsArray = [dinningRoom, conservatory, kitchen, study, library, billiardRo
 var weaponsArray = [rope,knife,candlestick,dumbbell,poison,axe,bat,trophy,pistol];
 
 
-randomSelector = function(array) {
-    chosenCharacter = array[Math.floor(Math.random()*array.length)];
-    return chosenCharacter;
-    }
+function randomSelector(theArray){
+    return  theArray[Math.floor((Math.random()*theArray.length))];
+   }
 
-    pickMistery = function() {
-        let finalChoice = [];
-        let finalCharacter = randomSelector(charactersArray);
-        if (finalCharacter) {
-            finalChoice.push(finalCharacter);
-        }
-        let finalWeapon = randomSelector(weaponsArray);
-        if (finalWeapon){
-          finalChoice.push(finalWeapon)
-        }
-        let finalRoom = randomSelector(roomsArray)
-        if (finalRoom){
-          finalChoice.push(finalRoom)
-        }
-        return finalChoice;
-    }   
+   function pickMistery(){
+    let char =  randomSelector(charactersArray);
+    let weapon =   randomSelector(weaponsArray);
+    let room = randomSelector(roomsArray);
+    let misteryEnvelope = [char,weapon,room];
+    return misteryEnvelope;
+  } 
 
-    revealMistery = function (array){
-        return `${array[0].first_name} ${array[0].last_name} killed Mr.Boddy using the ${array[1].name} in the ${array[2].name}!!!!`
-    }
+  function revealMistery(array){
+    return `${array[0].first_name} ${array[0].last_name} killed Mr.Boddy using the ${array[1].name} in the ${array[2].name}!!!!`
+  
+  }
