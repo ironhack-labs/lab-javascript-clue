@@ -109,3 +109,16 @@ roomsArray.push('Observatory');
 roomsArray.push('Theater');
 roomsArray.push('Guest House');
 roomsArray.push('Patio');
+
+function randomNum (min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function randomSelector (arr) {
+  return arr[randomNum(0, arr.length)];
+}
+
+function pickMistery () {
+  var misteryEnvelope = [randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray)];
+  return misteryEnvelope;
+}
