@@ -259,11 +259,11 @@ function randomSelector(array) {
 var misteryEnvelope = [];
 
 function pickMistery() {
-  var character = randomSelector(charactersArray);
-  var room = randomSelector(roomsArray);
-  var weapon = randomSelector(weaponsArray);
+  var misteryEnvelope = [];
 
-  misteryEnvelope.push(character, weapon, room);
+  misteryEnvelope.push(randomSelector(charactersArray));
+  misteryEnvelope.push(randomSelector(roomsArray));
+  misteryEnvelope.push(randomSelector(weaponsArray));
 
   return misteryEnvelope;
 }
