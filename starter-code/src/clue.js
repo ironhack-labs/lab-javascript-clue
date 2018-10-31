@@ -84,8 +84,57 @@ name: Guest House
 name: Patio
 */
 
+var character = [];
+
+character.push(Object.values(charactersArray))
+
+console.log(character)
+
+function randomSelector( array ){
+  for(let i = 0; i < array.length; i++){
+    if(array.length === 0){
+      return 
+    } else if( array.length === 1){
+      console.log(array[i]);
+      return array[i];
+    } else if( array.length ){
+      console.log(array[i])
+      return array[i]
+    } else if( array.length){
+      return array - Math.random();
+    }
+    
+  }
+}
+
+
 // Characters Collection
-var charactersArray = [];
+var charactersArray = {
+  mrGreen : [
+    { 
+    first_name:   "Jacob",
+    last_name:    "Green",
+    color:        "green",
+    description:  "He has a lot of connections",
+    age:          45,
+    image:        "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+    occupation:   "Entrepreneur"
+    }
+  ], 
+
+  drOrchid:
+  [
+    {
+      first_name:   "Doctor",
+      last_name:    "Orchid",
+      color:        "white",
+      description:  "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
+      age:          26,
+      image:        "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
+      ocupation:   "Scientist"
+    }
+  ]
+};
 
 // Rooms' Collection
 var roomsArray = [];
