@@ -87,8 +87,77 @@ name: Patio
 // Characters Collection
 var charactersArray = [];
 
+var mrGreen = {
+first_name:   "Jacob",
+last_name:    "Green",
+color:        "green",
+description:  "He has a lot of connections",
+age:          45,
+image:        "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+occupation:   "Entrepreneur",
+}
+
+var drOrchid = {
+first_name:   "Doctor",
+last_name:    "Orchid",
+color:        "white",
+description:  "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
+age:          26,
+image:        "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
+ocupation:    "Scientist"
+}
+
+charactersArray.push(mrGreen, drOrchid);
+
+
 // Rooms' Collection
 var roomsArray = [];
 
+var dinningRoom = {
+    name: "Dinning Room"
+}
+var conservatory = {
+    name: "Conservatory"
+}
+
+roomsArray.push(dinningRoom, conservatory);
+
 // Weapons Collection
 var weaponsArray = [];
+
+var rope = {
+    name: "rope",
+    weight: 10,
+}
+
+var knife = {
+    name: "knife",
+    weight: 8,
+}
+
+weaponsArray.push(rope, knife);
+
+
+function randomSelector(array) {
+
+    return array[Math.floor(Math.random() * array.length)]
+};
+
+function pickMistery () {
+    var assasin = randomSelector(charactersArray);
+    var HomicidalWeapon = randomSelector(weaponsArray);
+    var PlaceOfCrime = randomSelector(roomsArray);
+
+    return [assasin, HomicidalWeapon, PlaceOfCrime];
+}
+
+var misteryEnvelope = pickMistery();
+
+function revealMistery (mysteryEnvelope) { //no entiendo porqué dentro de esta función aparece mystery y tampoco de donde saca la información
+    var character = mysteryEnvelope[0];
+    var weapon = mysteryEnvelope[1];
+    var room = mysteryEnvelope[2];
+    
+    //return [misteryEnvelope[0][0] + misteryEnvelope[0][1] + "killed Mr.Boddy using the " + misteryEnvelope[1][0] + " in the " + misteryEnvelope[2][0]"!!!!"]
+    return character.first_name + ' ' + character.last_name + ' killed Mr.Boddy using the ' + weapon.name + ' in the ' + room.name + '!!!!';
+}
