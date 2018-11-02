@@ -150,8 +150,16 @@ charactersArray.push(mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMus
 
 // Rooms' Collection
 var roomsArray = [];
-roomsArray.push(dinningRoom, conservatory,kitchen, study, library, billiardRoom, lounge, ballroom, hall, spa, livingRoom, theater, guestHouse, patio);
+roomsArray.push(dinningRoom, conservatory,kitchen, study, library, billiardRoom, lounge, ballroom, hall, spa, livingRoom,observatory, theater, guestHouse, patio);
 
 // Weapons Collection
 var weaponsArray = [];
 weaponsArray.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
+
+function randomSelector (array){
+  var arrElements = array.length - 1;
+  var randomNum = Math.floor(Math.random() * arrElements);
+  var randomElement = array[randomNum];
+  return randomElement;
+}
+
