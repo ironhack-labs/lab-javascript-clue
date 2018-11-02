@@ -160,6 +160,23 @@ function randomSelector (array){
   var arrElements = array.length - 1;
   var randomNum = Math.floor(Math.random() * arrElements);
   var randomElement = array[randomNum];
+  //var randomElement = array.splice(randomNum, 1);
   return randomElement;
 }
 
+var misteryEnvelope = [];
+
+function pickMistery (){
+  var murderer = randomSelector (charactersArray);
+  var murderWeapon = randomSelector (weaponsArray);
+  var crimeScene = randomSelector (roomsArray);
+
+  misteryEnvelope.push (murderer, murderWeapon, crimeScene);
+
+  return misteryEnvelope;
+}
+
+function revealMistery (misteryEnvelope){
+
+  return console.log (misteryEnvelope[0].first_name, misteryEnvelope[0].last_name, 'killed Mr.Boddy using the', misteryEnvelope[1],'in the', misteryEnvelope[2], '!!!!');
+}
