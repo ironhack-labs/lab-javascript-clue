@@ -1,5 +1,5 @@
 //Characters
-let charactersArray = [
+let characters = [
     { 
         first_name: "Jacob",
         last_name: "Green",
@@ -57,7 +57,7 @@ let charactersArray = [
 ];
 
 // Weapons
-let weaponsArray = [
+let weapons = [
     { name: "rope", weight: 10 },
     { name: "knife", weight: 8 },
     { name: "candlestick", weight: 2 },
@@ -70,7 +70,7 @@ let weaponsArray = [
 ];
 
 // Rooms
-let roomsArray = [
+let rooms = [
     { name: "Dining Room" },
     { name: "Conservatory" },
     { name: "Kitchen" },
@@ -88,20 +88,32 @@ let roomsArray = [
     { name: " Patio" }
 ];
 
-function randomSelector(arrayName, element) {
-    if(element.length < 0) {
+function randomSelector(arrayName) {
+    if(arrayName.length == 0) {
         return undefined;
     }
 
-    let elemArray = [];
-    let arrayName = arrayName;
-    let randomElement = element;
-
-    for(i = 0; i < element.length; i++) {
-        elemArray.push(element);
-    }
-
-    return elemArray;
+    return Math.floor(Math.random() * arrayName.length);
 }
 
-randomSelector();
+//randomSelector(weaponsArray);
+
+let misteryEnvelope = [];
+
+function pickMistery() {
+  let randomSuspect = characters[randomSelector(characters)];
+  let randomWeapon = weapons[randomSelector(weapons)];
+  let randomRoom = rooms[randomSelector(rooms)];
+
+  misteryEnvelope.push(randomSuspect, randomWeapon, randomRoom);
+
+  return misteryEnvelope; 
+}
+
+pickMistery();
+
+function revealMistery(mystery) {
+    return `${mystery[0].first_name} ${mystery[0].last_name} killed Mr. Boddy using the ${mystery[1].name} in the ${mystery[2].name}!!!`
+  }
+  
+revealMistery(misteryEnvelope);
