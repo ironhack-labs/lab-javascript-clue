@@ -1,94 +1,141 @@
-// Characters
-/*
-mrGreen
-first_name:   Jacob
-last_name:    Green
-color:        green
-description:  He has a lot of connections
-age:          45
-image:        https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg
-occupation:   Entrepreneur
+var suspects = [];
 
-drOrchid
-first_name:   Doctor
-last_name:    Orchid
-color:        white
-description:  PhD in plant toxicology. Adopted daughter of Mr. Boddy
-age:          26
-image:        http://www.radiotimes.com/uploads/images/Original/111967.jpg
-ocupation:   Scientist
+var mrGreen = {
+firstName: "Jacob",
+lastName: "Green",
+occupation: "",
+color: "green",
+description: "He has a lot of connections and is always willing to help people out -- for a price."
+};
 
-profPlum
-first_name:   Victor
-last_name:    Plum
-color:        purple
-description:  Billionare video game designer
-age:          22
-image:        https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg
-occupation:   Designer
+var drOrchid = {
+firstName: "Sonia",
+lastName: "Orchid",
+occupation: "doctor",
+color: "white",
+description: "She is the adopted daugther of Mr. Boddy, a biologist with a PhD in plant toxicology. She was privately educated in Switzerland until her expulsion after an incident involving daffodils resulted in a near-fatal poisoning."
+};
 
-missScarlet
-first_name:   Kasandra
-last_name:    Scarlet
-color:        red
-description:  She is an A-list movie star with a dark past
-age:          31
-image:        https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg
-occupation:   Actor
+var victorPlum = {
+firstName: "Victor",
+lastName: "Plum",
+occupation: "video game designer",
+color: "purple",
+description: "He is a billionaire video game designer who is embracing his new popularity."
+};
+var kasandraScarlet = {
+firstName: "Kasandra",
+lastName: "Scarlet",
+occupation: "A-list movie star",
+color: "red",
+description: ""
+};
+var eleonorePeacock = {
+firstName: "Eleonore",
+lastName: "Peackok",
+occupation: "unemployed",
+color: "blue",
+description: "She is from a wealthy family and uses her status and money to earn popularity."
+};
+var jackMustard = {
+firstName: "Jack",
+lastName: "Mustard",
+occupation: "football player",
+color: "yellow",
+description: "He is a former football player who tries to get by on his former glory."
+};
 
-mrsPeacock
-first_name:   Eleanor
-last_name:    Peacock
-color:        blue
-description:  She is from a wealthy family and uses her status and money to earn popularity
-age:          36
-image:        https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg
-occupation:   Socialité
 
-mrMustard
-first_name:   Jack
-last_name:    Mustard
-color:        yellow
-description:  He is a former football player who tries to get by on his former glory
-age:          62
-image:        https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg
-occupation:   Retired Football player
+suspects.push(mrGreen, drOrchid, victorPlum, kasandraScarlet, eleonorePeacock,jackMustard);
 
-// Weapons
 
-name: rope        ---   weight: 10
-name: knife       ---   weight: 8
-name: candlestick ---   weight: 2
-name: dumbbell    ---   weight: 30
-name: poison      ---   weight: 2
-name: axe         ---   weight: 15
-name: bat         ---   weight: 13
-name: trophy      ---   weight: 25
-name: pistol      ---   weight: 20
+var weapons = [];
 
-// Rooms
-name: Dinning Room
-name: Conservatory
-name: Kitchen
-name: Study
-name: Library
-name: Billiard Room
-name: Lounge
-name: Ballroom
-name: Hall
-name: Spa
-name: Living Room
-name: Observatory
-name: Theater
-name: Guest House
-name: Patio
-*/
+var rope = {
+name: "rope",
+weight: "3 pounds",
+color: "black",
+painlevel: "hurts"
+};
+var knife ={
+name: "knife",
+weight: "0.2 pound",
+color: "dark brown",
+painlevel: "hurts bad"
+};
+var candlestick = {
+name: "candlestick",
+weight: "4 pounds",
+color: "gold",
+painlevel: "so-so"
+};
+var dumbbell ={
+name: "dumbbell",
+weight: "50 pounds",
+color: "black",
+painlevel: "hurts super bad"
+};
+var poison = {
+name:"poison",
+weight: "0.001 pound",
+color: "blue",
+painlevel: "no pain"
+};
+var axe = {
+name: "axe",
+weight: "20 pounds",
+color: "grey",
+painlevel: "really hurts"
+};
+var bat = {
+name: "bat",
+weight: "10 pounds",
+color: "black",
+painlevel: "so-so"
+};
+var trophy = {
+name: "trophy",
+weight: "15 pounds",
+color: "silver",
+painlevel: "so-so"
+};
+var pistol = {
+name: "pistol",
+weight: "1 pound",
+color: "black",
+painlevel: "hurts"
+};
 
-// Characters Collection
-var charactersArray = [];
+weapons.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
 
-// Rooms' Collection
-var roomsArray = [];
+var rooms = [
+  "dining room", "conservatory", "kitchen", "study","library",
+  "billiard room", "lounge", "ballroom","hall", "spa", "living room",
+  "observatory", "theater", "guest house", "patio"
+];
 
-// Weapons Collection
-var weaponsArray = [];
+function randomSelector (someArray){
+  return Math.floor(Math.random() * someArray.length);
+}
+
+// randomSelector(weapons);
+
+var misteryEnvelope = [];
+function pickMistery(){
+  // var randomSuspect = suspects[randomSelector(suspects)];
+  // var randomWeapon = weapons[randomSelector(weapons)];
+  // var randomRoom = rooms[randomSelector(rooms)];
+
+  // misteryEnvelope.push(randomSuspect, randomWeapon, randomRoom );
+  misteryEnvelope.push(suspects[randomSelector(suspects)],weapons[randomSelector(weapons)], rooms[randomSelector(rooms)] )
+  return misteryEnvelope;
+}
+
+pickMistery();
+
+// <FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the  <PLACE>!!!!
+
+function revealMistery(someMistery){
+  return `${someMistery[0].firstName} ${someMistery[0].lastName} killed Mr.Body using the ${someMistery[1].name} in the ${someMistery[2]}`
+}
+revealMistery(misteryEnvelope)
