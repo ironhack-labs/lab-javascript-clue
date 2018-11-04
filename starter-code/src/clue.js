@@ -1,6 +1,6 @@
-var charactersArray = [];
+const charactersArray = [];
  
-var mrGreen = {
+const mrGreen = {
     first_name:   "Jacob",
     last_name:    "Green",
     color:        "green",
@@ -10,7 +10,7 @@ var mrGreen = {
     occupation:   "Entrepreneur",
 };
  
-var drOrchid = {
+const drOrchid = {
     first_name:   "Doctor",
     last_name:    "Orchid",
     color:        "white",
@@ -20,7 +20,7 @@ var drOrchid = {
     ocupation:   "Scientist",
 };
  
-var profPlum = {
+const profPlum = {
     first_name:   "Victor",
     last_name:    "Plum",
     color:        "purple",
@@ -30,7 +30,7 @@ var profPlum = {
     occupation:   "Designer",
 };
  
-var missScarlet = {
+const missScarlet = {
     first_name:   "Kasandra",
     last_name:    "Scarlet",
     color:        "red",
@@ -40,7 +40,7 @@ var missScarlet = {
     occupation:   "Actor",
 };
  
-var mrsPeacock = {
+const mrsPeacock = {
     first_name:   "Eleanor",
     last_name:    "Peacock",
     color:        "blue",
@@ -50,7 +50,7 @@ var mrsPeacock = {
     occupation:   "Socialité",
 };
  
-var mrMustard = {
+const mrMustard = {
     first_name:   "Jack",
     last_name:    "Mustard",
     color:        "yellow",
@@ -63,7 +63,7 @@ var mrMustard = {
 charactersArray.push(mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard);
 
 // Weapons Collection
-var weaponsArray = [];
+const weaponsArray = [];
  
 const rope = {name: "rope", weight: 10};
 const knife ={name: "knife",   weight: 8};
@@ -80,7 +80,7 @@ weaponsArray.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, 
  
 // Rooms' Collection
 
-var roomsArray = [
+const roomsArray = [
   "Dinning Room",
   "Conservatory",
   "Kitchen",
@@ -103,7 +103,7 @@ function randomSelector (someArray){
   return Math.floor(Math.random() * someArray.length);
  }
 
- var misteryEnvelope = [];
+ const misteryEnvelope = [];
  function pickMistery(){
    const randomSuspect = charactersArray[randomSelector(charactersArray)];
    const randomWeapon = weaponsArray[randomSelector(weaponsArray)];
