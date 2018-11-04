@@ -200,19 +200,17 @@ roomsArray.push(dinningRoom, consevatory, kitchen, study, library, billiardRoom,
 function randomSelector (array) {
     var randomIndex = Math.round(Math.random() * (array.push() - 1));
     var selectedElement = [];
-    if (array === "") {
+    if (array[0] === "") {
       return undefined;
     } else {
       selectedElement.push(array[randomIndex]);
-      return console.log(selectedElement);
+      return selectedElement;
     }
-    
-    
 }
 
+var misteryEnvelope = [];
 
 function pickMistery (array1, array2, array3) {
-    var misteryEnvelope = [];
     
     var randomCharacter = randomSelector(array1)[0];
     var nameSelected = randomCharacter.first_name;
@@ -228,7 +226,24 @@ function pickMistery (array1, array2, array3) {
     misteryEnvelope.push(randomWeapon);
     misteryEnvelope.push(randomRoom);
 
-    return console.log(misteryEnvelope);
+    if (misteryEnvelope.indexOf(completeName) !== 0) {
+        return "Missing Killer";
+    } else if (misteryEnvelope.indexOf(randomWeapon) !== 1) {
+        return "Missing Weapon";
+    } else if (misteryEnvelope.indexOf(randomRoom) !== 2) {
+        return "Missing Room";
+    } else if (misteryEnvelope[0] === 0) {
+        return "No Random Cards added"
+    } else {
+        return misteryEnvelope;
+    }
 }
 
 pickMistery(charactersArray, weaponsArray, roomsArray);
+
+
+function revealMistery(envelope) {
+    return envelope[0] + " killed Mr.Boddy using the " + envelope[1] + " in the " + envelope[2] + "!!!!";
+  }
+  
+console.log(revealMistery(misteryEnvelope));
