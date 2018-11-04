@@ -205,9 +205,34 @@ weaponsArray.push(
 //   ---ITERATION 2---
 
 function randomSelector(cardArray) {
+  
   var selected = cardArray[Math.floor(Math.random() * cardArray.length)];
 
   return selected;
 }
 
+function pickMistery() {
+
+  var misteryEnvelope = [];
+
+  var theKiller = randomSelector(charactersArray);
+  var theWeapon = randomSelector(weaponsArray);
+  var theRoom = randomSelector(roomsArray);
+
+
+  return [theKiller, theWeapon, theRoom];
+}
+
+var misteryEnvelope = pickMistery();
+
 //   ---ITERATION 3---
+
+function revealMistery(array) {
+
+  var name = array[0];
+  var weapon = array[1];
+  var room = array[2];
+  
+  return name.first_name + ' ' + name.last_name + ' killed Mr.Boddy using the ' + weapon.name + ' in the ' + room.name +'!!!!';
+} 
+
