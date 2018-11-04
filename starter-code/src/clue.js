@@ -106,6 +106,7 @@ function randomSelector(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+// We need to create a pickMistery method that will call randomSelector for each card stack, and return an array with the 3 picked cards, a character, a weapon and a room. Our mystery should be stored on a misteryEnvelope variable.
 function pickMistery(){
 
   let misteryEnvelope = [];
@@ -119,6 +120,7 @@ function pickMistery(){
   
 }
 
+// Create a revealMistery method, that will receive our misteryEnvelope array as an argument and return the revealed mystery like this:
 function revealMistery(arg){
 return `${arg[0].first_name} ${arg[0].last_name} killed Mr.Boddy using the ${arg[1].name} in the ${arg[2].name}!!!!`;
 
