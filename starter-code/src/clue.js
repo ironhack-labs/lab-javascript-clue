@@ -62,15 +62,15 @@ occupation: "Retired Football player",
 
 // Weapons
 
-let rope = {name: "rope",         weight: 10}
-let knife = {name: "knife",         weight: 8}
-let candlestick ={name: "candlestick",  weight: 2}
-let dumbbell = {name: "dumbbell",      weight: 30}
-let poison = {name: "poison",       weight: 2}
-let axe = {name: "axe",          weight: 15}
-let bat = {name: "bat",           weight: 13}
-let trophy = {name: "trophy",        weight: 25}
-let pistol = {name: "pistol",        weight: 20}
+let rope = {name: "rope", weight: 10}
+let knife = {name: "knife", weight: 8}
+let candlestick ={name: "candlestick", weight: 2}
+let dumbbell = {name: "dumbbell", weight: 30}
+let poison = {name: "poison", weight: 2}
+let axe = {name: "axe", weight: 15}
+let bat = {name: "bat", weight: 13}
+let trophy = {name: "trophy", weight: 25}
+let pistol = {name: "pistol", weight: 20}
 
 // Rooms
 let conservatory = {name: "Conservatory"};
@@ -90,14 +90,15 @@ let guestHouse = {name: "Guest House"};
 let patio = {name: "Patio"};
 
 // Characters Collection
-var charactersArray = [mrGreen, mrMustard, mrsPeacock, missScarlet, drOrchid, profPlum];
+let charactersArray = [mrGreen, mrMustard, mrsPeacock, missScarlet, drOrchid, profPlum];
 
 // Rooms' Collection
-var roomsArray = [conservatory, kitchen, study, library, diningRoom, billiardRoom, lounge, ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio];
+let roomsArray = [conservatory, kitchen, study, library, diningRoom, billiardRoom, lounge, ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio];
 
 // Weapons Collection
-var weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
+let weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
 
+// Create a method randomSelector to randomly select one element from a card stack. The method should receive an array as an argument, and return randomly one of the elements of the array.
 function randomSelector(arr) {
   if (arr.length === 0){
     return undefined
