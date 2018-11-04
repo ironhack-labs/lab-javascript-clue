@@ -114,7 +114,7 @@ var pistol = {
 
 // Rooms
 
-var rooms = {
+var dinningRoom = {
     name: "Dinning Room"
 }
 
@@ -176,7 +176,6 @@ var patio = {
 
 
 
-
 // Characters Collection
 var charactersArray = [];
 
@@ -185,3 +184,51 @@ var roomsArray = [];
 
 // Weapons Collection
 var weaponsArray = [];
+
+
+// --> Including data structrures inside their arrays
+
+charactersArray.push(mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard);
+
+weaponsArray.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
+
+roomsArray.push(dinningRoom, consevatory, kitchen, study, library, billiardRoom, lounge, ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio);
+
+
+// Creating a method to select randomly a character, room, weapon from their arrays
+
+function randomSelector (array) {
+    var randomIndex = Math.round(Math.random() * (array.push() - 1));
+    var selectedElement = [];
+    if (array === "") {
+      return undefined;
+    } else {
+      selectedElement.push(array[randomIndex]);
+      return console.log(selectedElement);
+    }
+    
+    
+}
+
+
+function pickMistery (array1, array2, array3) {
+    var misteryEnvelope = [];
+    
+    var randomCharacter = randomSelector(array1)[0];
+    var nameSelected = randomCharacter.first_name;
+    var lastNameSelected = randomCharacter.last_name
+
+    var completeName = nameSelected + " " + lastNameSelected; // full name randomly selected from deck
+
+    var randomWeapon = randomSelector(array2)[0].name;
+
+    var randomRoom = randomSelector(array3)[0].name;
+
+    misteryEnvelope.push(completeName);
+    misteryEnvelope.push(randomWeapon);
+    misteryEnvelope.push(randomRoom);
+
+    return console.log(misteryEnvelope);
+}
+
+pickMistery(charactersArray, weaponsArray, roomsArray);
