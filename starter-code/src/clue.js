@@ -108,6 +108,7 @@ weaponsArray.push((dinningRoom),(conservatory),(kitchen),(study),(library),(bill
 
 function randomSelector (array){
 return array[Math.floor(Math.random()*array.length)];
+
 }
 
 function pickMistery (character,weapon,room){
@@ -116,8 +117,11 @@ function pickMistery (character,weapon,room){
     return misteryEnvelope;
     }
     
+
    function pickMistery (charactersArray,roomsArray,weaponsArray)
 
     function revealMistery (misteryEnvelope){
-  console.log (misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name +" killed Mr.Boddy using the "+misteryEnvelope[1].name + " in the "+ misteryEnvelope[2].name);
+  console.log (misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name +" killed Mr.Boddy using the "+ misteryEnvelope[1].name + " in the "+ misteryEnvelope[2].name);
    }
+
+   revealMistery (misteryEnvelope)
