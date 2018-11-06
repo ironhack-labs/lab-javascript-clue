@@ -62,12 +62,6 @@ var mrMustard = {
 
 charactersArray.push(mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard)
 
-var randomSelector;
-
-charactersArray.randomSelector = function () {
-  return [Math.floor(Math.random() * this.length)]
-}
-
 
 
 
@@ -94,6 +88,8 @@ var roomsArray = [];
  var guestHouse = {name: 'Guest House'};
  var patio = {name: 'Patio'};
 
+ roomsArray.push(diningroom, conservatory, kitchen, study, library, billiard, lounge, ballroom, hall, spa, livingRoom, Observatory, theater, guestHouse, patio)
+
 // Weapons Collection
 var weaponsArray = [];
  var rope = {name: 'rope', weight: 10}
@@ -105,3 +101,18 @@ var weaponsArray = [];
  var bat = {name: 'bat' ,weight: 13};
  var trophy = {name: 'trophy', weight: 25};
  var pistol = {name: 'pistol', weight: 20};
+
+ weaponsArray.push(rope, knife, candlestick, dumbell, poison, axe, bat, trophy, pistol)
+
+ //Game
+
+ function randomSelector(array){
+  var max = array.length;
+  return array[Math.floor(Math.random() * Math.floor(max))];
+}
+
+var misteryEnvelope = [];
+ 
+function pickMistery() {
+  return misteryEnvelope
+}
