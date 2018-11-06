@@ -107,12 +107,17 @@ var weaponsArray = [];
  //Game
 
  function randomSelector(array){
-  var max = array.length;
-  return array[Math.floor(Math.random() * Math.floor(max))];
+  return array[Math.floor(Math.random() * array.length)];
 }
 
-var misteryEnvelope = [];
+
  
 function pickMistery() {
-  return misteryEnvelope
+
+  var killer = randomSelector(charactersArray);
+  var weapon = randomSelector(weaponsArray)
+  var room = randomSelector(roomsArray)
+
+  return [killer, weapon, room];
 }
+var misteryEnvelope = pickMistery();
