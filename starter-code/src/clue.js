@@ -121,3 +121,9 @@ function pickMistery() {
   return [killer, weapon, room];
 }
 var misteryEnvelope = pickMistery();
+
+function revealMistery(misteryEnvelope) {
+
+  return 
+
+}
