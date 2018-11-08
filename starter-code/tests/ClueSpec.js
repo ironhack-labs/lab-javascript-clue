@@ -72,11 +72,11 @@ describe('Reveal the mistery - revealMistery', function () {
     expect(typeof revealMistery).toBe('function');
   });
 
-  it('Return an array', function () {
+  it('Return an string', function () {
     expect(typeof revealMistery([{ first_name: 'aa', last_name: 'abc' }, { name: 'abd' }, { name: 'abb' }])).toEqual('string');
   });
 
   it('Return <FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!!', function () {
-    expect(revealMistery([{ first_name: 'Victor', last_name: 'Plum' }, { name: 'poison' }, { name: 'Billiard Room' }])).toEqual('Victor Plum killed Mr.Boddy using the poison in the Billiard Room!!!!');
+    expect(revealMistery([{ first_name: 'Victor', last_name: 'Plum' }, { name: 'poison' }, { name: 'Billiard Room' }])).toEqual('<Victor Plum killed Mr.Boddy using the poison in the Billiard Room!!!!');
   });
 });
