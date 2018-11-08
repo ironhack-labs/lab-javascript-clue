@@ -1,95 +1,139 @@
-// Characters
-/*
-mrGreen
-first_name:   Jacob
-last_name:    Green
-color:        green
-description:  He has a lot of connections
-age:          45
-image:        https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg
-occupation:   Entrepreneur
 
-drOrchid
-first_name:   Doctor
-last_name:    Orchid
-color:        white
-description:  PhD in plant toxicology. Adopted daughter of Mr. Boddy
-age:          26
-image:        http://www.radiotimes.com/uploads/images/Original/111967.jpg
-ocupation:   Scientist
+// challenge 1 (SUM OF ARRAYS) in order to get the sum of array 
+// we start by creating a function sumofNumbers and we use a foeloop to loop through the lenght of the arrys 
+// ad addtion of the array is asigned to var x and return x gets the final value
 
-profPlum
-first_name:   Victor
-last_name:    Plum
-color:        purple
-description:  Billionare video game designer
-age:          22
-image:        https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg
-occupation:   Designer
+function sumofArray(array) {
+    var x = 0;
+    
+    for (var i=0; i < array.length; i++) {
+     x = x + array[i];
+     
+    }
+     return(x);
+  }
+  
+  sumofArray([6, 12, 1, 18, 13, 16, 2, 1, 8, 10])
 
-missScarlet
-first_name:   Kasandra
-last_name:    Scarlet
-color:        red
-description:  She is an A-list movie star with a dark past
-age:          31
-image:        https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg
-occupation:   Actor
+  // Challange 2 To find the Average we just do the same as above and return the value x/array.length
 
-mrsPeacock
-first_name:   Eleanor
-last_name:    Peacock
-color:        blue
-description:  She is from a wealthy family and uses her status and money to earn popularity
-age:          36
-image:        https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg
-occupation:   Socialité
+  function sumofArray(array) {
+    var x = 0 
+    
+    for (let i = 0; i < array.length; i++) {
+      x = x + array[i]
+  
+  
+      
+    }
+  return(x/array.length)
+    
+  }
+  sumofArray([2, 6, 9, 10, 7, 4, 1, 9]);  // 6
 
-mrMustard
-first_name:   Jack
-last_name:    Mustard
-color:        yellow
-description:  He is a former football player who tries to get by on his former glory
-age:          62
-image:        https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg
-occupation:   Retired Football player
+  // question why does it get a value of 0.25 if the return is placed after the x +array[i]?
 
-// Weapons
+// Chllange 3 
 
-name: rope        ---   weight: 10
-name: knife       ---   weight: 8
-name: candlestick ---   weight: 2
-name: dumbbell    ---   weight: 30
-name: poison      ---   weight: 2
-name: axe         ---   weight: 15
-name: bat         ---   weight: 13
-name: trophy      ---   weight: 25
-name: pistol      ---   weight: 20
+var arr = [
+    'mystery',
+    'brother',
+    'aviator',
+    'crocodile',
+    'pearl',
+    'orchard',
+    'crackpot'
+  ];
+  
+  var lgth = 0;
+  var longest = "";
+  
+  for(var i=0; i < arr.length; i++){
+      if(arr[i].length > longest.length){
+        longest = arr[i];
+          
+      }      
+  } 
+   
+  console.log(longest);
 
-// Rooms
-name: Dinning Room
-name: Conservatory
-name: Kitchen
-name: Study
-name: Library
-name: Billiard Room
-name: Lounge
-name: Ballroom
-name: Hall
-name: Spa
-name: Living Room
-name: Observatory
-name: Theater
-name: Guest House
-name: Patio
-*/
+  // Challange 4
 
-// Characters Collection
-var charactersArray = [];
+  var w = [
+    'crab',
+    'poison',
+    'contagious',
+    'simple',
+    'bring',
+    'sharp',
+    'playground',
+    'poison',
+    'communion',
+    'simple',
+    'bring'
+  ];
+    
+  let b =[] 
+  for ( let i = 0; i < w.length; i++ ) {
+    if (b.indexOf(w[i])=== -1) {
+      b.push(w[i]);
+    }
+  }
+  
+  console.log(b)
 
-// Rooms' Collection
-var roomsArray = [];
+  // Challange 5
 
+  var words = [
+    'machine',
+    'subset',
+    'trouble',
+    'starting',
+    'matter',
+    'eating',
+    'truth',
+    'disobedience'
+  ];
+  
+  function doesWordExist(checkWord, array){
+     var check
+     for (i = 0; i < words.length; i++){
+         if (array[i] == checkWord) {
+           return true;
+         } else {
+           checke = false;
+         }
+     }
+     return check;
+  }
+  
+  console.log("eating")
+
+  // challange 6
+
+  var words = [
+    'machine',
+    'matter',
+    'subset',
+    'trouble',
+    'starting',
+    'matter',
+    'eating',
+    'matter',
+    'truth',
+    'disobedience',
+    'matter'
+  ];
+  
+  function numRepet(words ,array) {
+    var numOccurance = 0
+  
+    for (let i = 0; i< arr.length; i++) {
+      if (array[i] === words){numOccurance += 1;}
+    }
+    return numOccurance
+  }
+  
 // Weapons Collection
 var weaponsArray = [];
 
@@ -273,5 +317,4 @@ console.log(randomSelector)
 
 // lastly can we go over the pick mystery and reveal Mystery method 
 // i think this will be important for picking cards for the memory game.
-
 
