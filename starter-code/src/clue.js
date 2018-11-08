@@ -150,11 +150,44 @@ function pickMistery(){
   return [killer, weapon, room];
 };
 
-function revealMistery() {
- return " killed Mr.Boddy using the in the !!!!";
+var misteryEnvelope = pickMistery ();
 
-}
+function revealMistery (revealArray) {
+  return revealArray[0].first_name + " " +revealArray[0].last_name + " killed Mr.Boddy using the " + revealArray[1].name + " in the " + revealArray[2].name + "!!!!";
+};
+
+revealMistery(misteryEnvelope);
+
+
+
+
 
 
 
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
