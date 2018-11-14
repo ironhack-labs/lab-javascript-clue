@@ -165,7 +165,7 @@ randomSelector = (cardStack) => {
     return card;
 }
 
-pickMistery = (charactersArray, weaponsArray, roomsArray) => {
+pickMistery = () => {
     const misteryEnvelope = [];
     if(charactersArray.length != 0 || weaponsArray.length !=0 || roomsArray.length !=0){
     const characterCard = randomSelector(charactersArray);
@@ -183,7 +183,7 @@ revealMistery = (envelope) => {
     const room = envelope[2].name;
     return `${firstName} ${lastName} killed Mr.Boddy using the ${weapon} in the ${room}!!!!`
 }
-const misteryEnvelope = pickMistery(charactersArray, weaponsArray, roomsArray);
+const misteryEnvelope = pickMistery();
 
 console.log(revealMistery(misteryEnvelope));
 
