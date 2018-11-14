@@ -85,10 +85,75 @@ name: Patio
 */
 
 // Characters Collection
-var charactersArray = [];
+var charactersArray = [
+    {first_name: 'Jacob', last_name:'Green', color: 'green', description: 'He has a lot of connections',
+age: 45, image: 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
+ occupation:'Scientit'}
+];
+addCharactersArray = (fn, ln, color, description, age, image, occupation) => {
+    const character =  {first_name: fn, last_name:ln, color: color, description: description,
+    age: age, image: image,
+     occupation:occupation}
+     charactersArray.push(character);
+}
+//add drOrchid
+addCharactersArray('Doctor','Orchid','white','PhD in plant toxicology. Adopted daughter of Mr. Boddy',
+26,'http://www.radiotimes.com/uploads/images/Original/111967.jpg','Scientist');
+
+//add profPlum
+addCharactersArray('Victor', 'Plum', 'purple', 'Billionare video game designer', 22,
+'https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg', 'Designer');
+
+//add missScarlet
+addCharactersArray('Kassandra', 'Scarlet', 'red', 'She is an A-list movie star with a dark past',
+31, 'https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg', 'Actor');
+
+//add mrsPeacock
+addCharactersArray('Eleanor', 'Peacock', 'blue', 'She is from a wealthy family and uses her status and money to earn popularity',
+36, 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg','Socialité');
+
+//add mrMustard
+addCharactersArray('Jack', 'Mustard', 'yellow', 'He is a former football player who tries to get by on his former glory',
+62, 'https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg','Retired Football player')
+
 
 // Rooms' Collection
 var roomsArray = [];
+addRooms = (name) => {
+    const room = {name:name};
+    roomsArray.push(room);
+}
+addRooms('Dinning Room');
+addRooms('Conservatory');
+addRooms('Kitchen');
+addRooms('Study');
+addRooms('Library');
+addRooms('Billiard Room');
+addRooms('Lounge');
+addRooms('Ballroom');
+addRooms('Hall');
+addRooms('Spa');
+addRooms('Living Room');
+addRooms('Observatory');
+addRooms('Theater');
+addRooms('Guest House');
+addRooms('Patio');
 
 // Weapons Collection
 var weaponsArray = [];
+addWeapons = (name, weight) =>{
+const weapon = {name:name, weight:weight}
+weaponsArray.push(weapon);
+}
+
+addWeapons('rope', 10);
+addWeapons('knife',8);
+addWeapons('candlestick', 2);
+addWeapons('dumbbell', 30);
+addWeapons('poison', 2);
+addWeapons('axe', 15);
+addWeapons('bat', 13);
+addWeapons('thophy', 25);
+addWeapons('pistol', 20);
+console.log(weaponsArray);
+
