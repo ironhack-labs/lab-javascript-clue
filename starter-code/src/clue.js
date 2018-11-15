@@ -181,11 +181,18 @@ var weaponsArray = [
 console.log(charactersArray.length-1);
 var objectChosen;
 const randomSelector = (array) =>{
-    objectChosen = Math.floor(Math.random() * (array.length-1 - 0 + 1)) + 0;
+    objectChosen = Math.floor(Math.random() * (array.length)) + 0;
     return array[objectChosen];
 };
 
+var mysteryEnvelope = [];
+const pickMistery = () =>{
+    mysteryEnvelope.push(randomSelector(weaponsArray),randomSelector(roomsArray),randomSelector(charactersArray));
 
+    return mysteryEnvelope;
+}
+
+console.log(pickMistery.values());
 
 
 console.log(randomSelector(weaponsArray));
