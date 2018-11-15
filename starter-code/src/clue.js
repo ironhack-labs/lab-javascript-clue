@@ -181,14 +181,14 @@ var weaponsArray = [
 console.log(charactersArray.length-1);
 var objectChosen;
 const randomSelector = (array) =>{
-    objectChosen = Math.floor(Math.random() * ((array.length-1) - 1)) + 1 ;    
-    
+    objectChosen = Math.floor(Math.random() * (array.length-1 - 0 + 1)) + 0;
     return array[objectChosen];
 };
 
 
 
-console.log(randomSelector(charactersArray));
+
+console.log(randomSelector(weaponsArray));
 
 
 //randomSelector({charactersArray,roomsArray,weaponsArray});
