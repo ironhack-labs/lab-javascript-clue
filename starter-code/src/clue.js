@@ -185,19 +185,15 @@ const randomSelector = (array) => {
     return array[objectChosen];
 };
 
-var mysteryEnvelope = [];
-const pickMistery = (arrayW, arrayR, arrayC) => {
-    mysteryEnvelope.push(randomSelector(arrayW), randomSelector(arrayR), randomSelector(arrayC));
-
+const pickMistery = () => {
+    var mysteryEnvelope = [];
+    var character = randomSelector(charactersArray);
+    var weapon = randomSelector(weaponsArray);
+    var room = randomSelector(roomsArray);
+    mysteryEnvelope.push(character, weapon, room);
     return mysteryEnvelope;
 }
 
-console.log('MYSTERY ENVELOPE')
-console.log(pickMistery(weaponsArray, roomsArray, charactersArray));
-
-
-// console.log(randomSelector(weaponsArray));
-
-
-//randomSelector({charactersArray,roomsArray,weaponsArray});
-
+const revealMistery = (envelope) => {
+    return `${envelope[0].first_name} ${envelope[0].last_name} killed Mr.Boddy using the ${envelope[1].name} in the ${envelope[2].name}!!!!`
+}
