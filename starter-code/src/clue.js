@@ -176,3 +176,42 @@ var roomsArray = [dinningRoom, conservatory, kitchen, study, library, billiardRo
 var weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bar, trophy, pistol];
 
 // Push every document into their corresponding array
+
+var suspects = {
+  name: "suspects",
+  cards: charactersArray
+}
+
+var rooms = {
+  name: "rooms",
+  cards: roomsArray
+}
+
+var weapons = {
+  name: "weapons",
+  cards: weaponsArray
+}
+
+
+function randomSelector (cards) {
+  if (cards === undefined){
+    return undefined
+  }
+  var card = cards[Math.floor(Math.random() * cards.length)]
+  return card
+}
+
+
+function pickMistery () {
+  var misteryEnvelope = [];
+  var mistery = misteryEnvelope;
+  mistery.push(randomSelector(suspects.cards))
+  mistery.push(randomSelector(weapons.cards))
+  mistery.push(randomSelector(rooms.cards))
+  ;
+  return misteryEnvelope;
+}
+
+function revealMistery (mistery) {
+  return mistery[0].first_name + " " + mistery[0].last_name + " killed Mr.Boddy using the " + mistery[1].name + " in the " + mistery[2].name + "!!!!"
+}
