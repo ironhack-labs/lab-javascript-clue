@@ -66,38 +66,6 @@ let mrMustard ={
 }
 
 
-// Weapons
-/*
-name: rope        ---   weight: 10
-name: knife       ---   weight: 8
-name: candlestick ---   weight: 2
-name: dumbbell    ---   weight: 30
-name: poison      ---   weight: 2
-name: axe         ---   weight: 15
-name: bat         ---   weight: 13
-name: trophy      ---   weight: 25
-name: pistol      ---   weight: 20
-*/
-
-// Rooms
-/*
-name: Dinning Room
-name: Conservatory
-name: Kitchen
-name: Study
-name: Library
-name: Billiard Room
-name: Lounge
-name: Ballroom
-name: Hall
-name: Spa
-name: Living Room
-name: Observatory
-name: Theater
-name: Guest House
-name: Patio
-*/
-
 // Characters Collection
 var charactersArray = [mrGreen,drOrchid, profPlum, missScarlet,mrsPeacock,mrMustard];
 
@@ -160,7 +128,6 @@ pistol={
 }
 ];
 
-let cardStack=[charactersArray,roomsArray,weaponsArray]
 
 
 function randomSelector(arr){
@@ -174,14 +141,17 @@ function randomSelector(arr){
 }
 
 function pickMistery(){
+    let misteryEnvelope=new Array();
+    misteryEnvelope.push(randomSelector(charactersArray))
 
-    mistery.character=randomSelector(charactersArray)
-    mistery.weapon=randomSelector(weaponsArray)
-    mistery.room=randomSelector(roomsArray)
+        misteryEnvelope.push(randomSelector(weaponsArray))
+        misteryEnvelope.push(randomSelector(roomsArray))
+        
+    return misteryEnvelope;
 
-    let mistery={
-        character:undefined,
-        weapon:undefined,
-        room:undefined,
-    };
+    }
+
+function revealMistery(){
+    let mistery=pickMistery();
+    return `${mistery[0].first_name} ${mistery[0].last_name} killed Mr.Boddy using the ${mistery[1].name} in the ${mistery[2]}!!!!`
 }
