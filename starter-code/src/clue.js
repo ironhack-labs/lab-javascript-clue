@@ -64,22 +64,22 @@ let charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrM
 
 // Rooms' Collection
 var roomsArray = [
-        {name: 'Dinning Room'},
-        {name: 'Conservatory'},
-        {name: 'Kitchen'},
-        {name: 'Study'},
-        {name: 'Library'},
-        {name: 'Billiard Room'},
-        {name: 'Lounge'},
-        {name: 'Ballroom'},
-        {name: 'Hall'},
-        {name: 'Spa'},
-        {name: 'Living Room'},
-        {name: 'Observatory'},
-        {name: 'Theater'},
-        {name: 'Guest House'},
-        {name: 'Patio'}
-    ];
+    { name: 'Dinning Room' },
+    { name: 'Conservatory' },
+    { name: 'Kitchen' },
+    { name: 'Study' },
+    { name: 'Library' },
+    { name: 'Billiard Room' },
+    { name: 'Lounge' },
+    { name: 'Ballroom' },
+    { name: 'Hall' },
+    { name: 'Spa' },
+    { name: 'Living Room' },
+    { name: 'Observatory' },
+    { name: 'Theater' },
+    { name: 'Guest House' },
+    { name: 'Patio' }
+];
 
 
 // Weapons Collection
@@ -102,9 +102,8 @@ function randomSelector(anArray) {
     } else if(anArray.length === 1){
         return anArray[0];
     }else{
-        return anArray[numRandom = Math.floor(Math.random() * (anArray.length - 1) + 1)];
+        return anArray[numRandom = Math.floor(Math.random() * (anArray.length))];
     }
-    
 }
 
 function pickMistery(/** charactersArray, roomsArray, weaponsArray */) {
@@ -115,13 +114,11 @@ function pickMistery(/** charactersArray, roomsArray, weaponsArray */) {
     return arrayCards;
 }
 
-function revealMistery(misteryEnvelope){
-    return misteryEnvelope[0].first_name + " " + 
-        misteryEnvelope[0].last_name + " killed Mr.Boddy using the " + 
+function revealMistery(misteryEnvelope) {
+    return misteryEnvelope[0].first_name + " " +
+        misteryEnvelope[0].last_name + " killed Mr.Boddy using the " +
         misteryEnvelope[1].name + " in the " +
         misteryEnvelope[2].name + "!!!!";
 }
 
 console.log(revealMistery(pickMistery(charactersArray, roomsArray, weaponsArray)));
-
-
