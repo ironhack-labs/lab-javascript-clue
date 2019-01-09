@@ -85,10 +85,80 @@ name: Patio
 */
 
 // Characters Collection
-var charactersArray = [];
+
+
+var mrGreen = {
+  first_name:   "Jacob",
+  last_name:    "Green",
+  color:        "green",
+  description:  "He has a lot of connections",
+  age:          45,
+  image:       "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+  occupation:   "Entrepreneur"
+}
+
+var drOrchid = {
+  first_name:   "Doctor",
+  last_name:    "Orchid",
+  color:        "white",
+  description:  "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
+  age:          26,
+  image:        "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
+  ocupation:   "Scientist"
+}
+
+var charactersArray = [mrGreen, drOrchid];
 
 // Rooms' Collection
-var roomsArray = [];
+
+
 
 // Weapons Collection
-var weaponsArray = [];
+
+var rope = {
+  name: "rope",
+  weight: 10
+}
+
+var knife = {
+  name: "knife",
+  weight: 8
+}
+
+
+var weaponsArray = [rope,knife];
+
+
+var roomsArray = [
+  {name: "theater"},
+  {name:"Guest House"},
+  {name:"Patio"}
+]
+ 
+
+
+function randomSelector(element){
+var numRandomElement = Math.floor(Math.random() * element.length); 
+return element[numRandomElement];
+}
+
+
+function pickMistery(){
+
+    var misteryEnvelope=[randomSelector(charactersArray),randomSelector(weaponsArray),randomSelector(roomsArray)]    
+    return misteryEnvelope;
+
+  }
+
+
+function revealMistery(mistery){
+
+  var room = mistery[2].name;
+  var character = mistery[0];
+  var weapon = mistery[1].name;
+
+return character.first_name + " " + character.last_name + 
+ " killed Mr.Boddy using the " + weapon + " in the " + room + "!!!!"; 
+
+}
+
