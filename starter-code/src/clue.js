@@ -1,4 +1,4 @@
-console.log("hol");
+
 
 // Characters
 /*
@@ -255,16 +255,6 @@ var patio = {
 var result = "";
 var aleatory = 0;
 
-function randomSelector(array) {
-  if (array.length === 0) {
-    return undefined;
-  }
-  aleatory = Math.floor(Math.random() * array.length);
-
-  result = array[aleatory];
-
-  return result;
-}
 
 var misteryEnvelope = "";
 var aleatory2 = 0;
@@ -308,22 +298,42 @@ var weaponsArray = [
   pistol
 ];
 
+var misteryEnvelope = []
+
+
+function randomSelector(array) {
+  if (array.length === 0) {
+    return undefined;
+  }
+  aleatory = Math.floor(Math.random() * array.length);
+
+  result = array[aleatory];
+
+  return result;
+}
 
 
 function pickMistery() {
   function getArrayRandomElement(array){
     return array[Math.floor(Math.random() * array.length)]
   }
-  
+
   return [
     getArrayRandomElement(charactersArray),
     getArrayRandomElement(weaponsArray),
-    getArrayRandomElement(roomsArray)
+    getArrayRandomElement(roomsArray),
+    
   ];
 }
 
+function revealMistery(mipe){
+  
+    return mipe[0].first_name + mipe[0].last_name + " killed Mr.Boddy using the " + mipe[1].name + " in the " + mipe[2].name + "!!!!"
+    /*return mipe[0].first_name + " " + mipe[0].last_name + " killed Mr.Boddy using the" + mipe[1].weaponsArray + " in the " + mipe[2].roomsArray + " !!!!"*/
+  }
+
 //get a random character
 
-console.log(pickMistery());
+
 
 //get a random weapon
