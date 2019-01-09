@@ -194,7 +194,6 @@ var reveal = pickMistery()
 function revealMistery(reveal){
   //<FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!!
   return reveal[0].first_name + " " + reveal[0].last_name + " killed Mr. Boddy using the " + reveal[1].name + " in the " + reveal[2] + "!!!!" 
-  
 }
 
 console.log(revealMistery(reveal))
