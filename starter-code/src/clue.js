@@ -181,9 +181,6 @@ function randomSelector(array){
     return array[a]
   }
 }
-
-
-
 function pickMistery(){
   
   var suspect = randomSelector(charactersArray)
@@ -192,12 +189,12 @@ function pickMistery(){
   var misteryEvelope = [suspect, weapon, room]
   return misteryEvelope
 }
+var reveal = pickMistery()
 
-function revealMistery(misteryEnvelope){
-  console.log(misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name + " killed Mr. Boddy using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2] + "!!!!" 
-  )
+function revealMistery(reveal){
   //<FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!!
-  return misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name + " killed Mr. Boddy using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2] + "!!!!" 
+  return reveal[0].first_name + " " + reveal[0].last_name + " killed Mr. Boddy using the " + reveal[1].name + " in the " + reveal[2] + "!!!!" 
   
 }
-revealMistery(misteryEnvelope)
+
+console.log(revealMistery(reveal))
