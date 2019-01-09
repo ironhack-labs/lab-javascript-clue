@@ -1,4 +1,4 @@
-console.log("hol")
+console.log("hol");
 
 // Characters
 /*
@@ -87,196 +87,243 @@ name: Patio
 */
 
 // Characters Collection
- var mrGreen = {
-  first_name:   "Jacob",
-last_name:    "Green",
-color:        "green",
-description:  "He has a lot of connections",
-age:          45,
-image:        "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
-occupation:   "Entrepreneur",
-}
+var mrGreen = {
+  first_name: "Jacob",
+  last_name: "Green",
+  color: "green",
+  description: "He has a lot of connections",
+  age: 45,
+  image:
+    "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+  occupation: "Entrepreneur"
+};
 
 var drOrchid = {
-  first_name:   "Doctor",
-last_name:    "Orchid",
-color:        "whit",
-description:  "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
-age:          26,
-image:        "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
-ocupation:   "Scientist",
-}
+  first_name: "Doctor",
+  last_name: "Orchid",
+  color: "whit",
+  description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
+  age: 26,
+  image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
+  ocupation: "Scientist"
+};
 
 var profPlum = {
-  first_name:   "Victor",
-last_name:    "Plum",
-color:        "purple",
-description:  "Billionare video game designer",
-age:          22,
-image:        "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
-occupation:   "Designer",
-}
+  first_name: "Victor",
+  last_name: "Plum",
+  color: "purple",
+  description: "Billionare video game designer",
+  age: 22,
+  image: "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
+  occupation: "Designer"
+};
 
 var missScarlet = {
-  first_name:   "Kasandra",
-  last_name:    "Scarlet",
-  color:        "red",
-  description:  "She is an A-list movie star with a dark past",
-  age:          31,
-  image:        "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
-  occupation:   "Actor",
-}
- var mrsPeacock = {
-  first_name:   "Kasandra",
-last_name:    "Scarlet",
-color:        "red",
-description:  "She is an A-list movie star with a dark past",
-age:          31,
-image:        "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
-occupation:   "Actor",
-}
- var mrMustard = {
-  first_name:   "Jack",
-last_name:    "Mustard",
-color:        "yellow",
-description:  "He is a former football player who tries to get by on his former glory",
-age:          62,
-image:        "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
-occupation:   "Retired Football player",
-}
+  first_name: "Kasandra",
+  last_name: "Scarlet",
+  color: "red",
+  description: "She is an A-list movie star with a dark past",
+  age: 31,
+  image: "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
+  occupation: "Actor"
+};
+var mrsPeacock = {
+  first_name: "Kasandra",
+  last_name: "Scarlet",
+  color: "red",
+  description: "She is an A-list movie star with a dark past",
+  age: 31,
+  image: "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
+  occupation: "Actor"
+};
+var mrMustard = {
+  first_name: "Jack",
+  last_name: "Mustard",
+  color: "yellow",
+  description:
+    "He is a former football player who tries to get by on his former glory",
+  age: 62,
+  image: "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
+  occupation: "Retired Football player"
+};
 
 var rope = {
   name: "rope",
-  weight: 10,
-}
+  weight: 10
+};
 
 var knife = {
   name: "knife",
-  weight: 8,
-}
+  weight: 8
+};
 
 var candlestick = {
   name: "candlestick",
-  weight: 2,
-}
+  weight: 2
+};
 
 var dumbbell = {
   name: "dumbbell",
-  weight: 30,
-}
+  weight: 30
+};
 
 var poison = {
   name: "poison",
-  weight: 2,
-}
+  weight: 2
+};
 
 var axe = {
   name: "axe",
-  weight: 15,
-}
+  weight: 15
+};
 
 var bat = {
   name: "bat",
-  weight: 13,
-}
+  weight: 13
+};
 
 var trophy = {
   name: "trophy",
-  weight: 25,
-}
+  weight: 25
+};
 
 var pistol = {
   name: "pistol",
-  weight: 20,
-}
+  weight: 20
+};
 
 var dinningRoom = {
-  name: "Dinning Room",
-}
+  name: "Dinning Room"
+};
 
 var conservatory = {
-  name: "Conservatory",
-}
+  name: "Conservatory"
+};
 
 var kitchen = {
-  name: "Kitchen",
-}
+  name: "Kitchen"
+};
 
 var study = {
-  name: "Study",
-}
+  name: "Study"
+};
 
 var library = {
-  name: "Library",
-}
+  name: "Library"
+};
 
 var billiardRoom = {
-  name: "Billiard Room",
-}
+  name: "Billiard Room"
+};
 
 var lounge = {
-  name: "Lounge",
-}
+  name: "Lounge"
+};
 
 var ballroom = {
-  name: "Ballroom",
-}
+  name: "Ballroom"
+};
 
 var hall = {
-  name: "Hall",
-}
+  name: "Hall"
+};
 
 var spa = {
-  name: "Spa",
-}
+  name: "Spa"
+};
 
 var livingRoom = {
-  name: "Living Room",
-}
+  name: "Living Room"
+};
 
 var observatory = {
-  name: "Observatory",
-}
+  name: "Observatory"
+};
 
 var theater = {
-  name: "Theater",
-}
+  name: "Theater"
+};
 
 var guestHouse = {
-  name: "Guest House",
-}
+  name: "Guest House"
+};
 
 var patio = {
-  name: "Patio",
-}
+  name: "Patio"
+};
 
-
-
-
-var result="";
+var result = "";
 var aleatory = 0;
 
-function randomSelector(array){
+function randomSelector(array) {
+  if (array.length === 0) {
+    return undefined;
+  }
+  aleatory = Math.floor(Math.random() * array.length);
 
-if (array.length === 0){
+  result = array[aleatory];
+
+  return result;
+}
+
+var misteryEnvelope = "";
+var aleatory2 = 0;
+
+var charactersArray = [
+  mrGreen,
+  drOrchid,
+  profPlum,
+  missScarlet,
+  mrsPeacock,
+  mrMustard
+];
+
+var roomsArray = [
+  dinningRoom,
+  conservatory,
+  kitchen,
+  study,
+  library,
+  billiardRoom,
+  lounge,
+  ballroom,
+  hall,
+  spa,
+  livingRoom,
+  observatory,
+  theater,
+  guestHouse,
+  patio
+];
+
+var weaponsArray = [
+  rope,
+  knife,
+  candlestick,
+  dumbbell,
+  poison,
+  axe,
+  bat,
+  trophy,
+  pistol
+];
+
+
+
+function pickMistery() {
+  function getArrayRandomElement(array){
+    return array[Math.floor(Math.random() * array.length)]
+  }
   
-  return undefined
-}
-aleatory = array.Math.random()*array.length;
-
-result = array[aleatory];
-
-  return result
+  return [
+    getArrayRandomElement(charactersArray),
+    getArrayRandomElement(weaponsArray),
+    getArrayRandomElement(roomsArray)
+  ];
 }
 
+//get a random character
 
-var charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
+console.log(pickMistery());
 
-var roomsArray = [dinningRoom, conservatory, kitchen,study, library, billiardRoom, lounge, ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio]
-
-var weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
-
-
-console.log(charactersArray)
-randomSelector(charactersArray)
-
+//get a random weapon
