@@ -119,7 +119,7 @@ function revealMistery(arr) {
     arr[1].name +
     " in the " +
     arr[2].name +
-    "!!!"
+    "!!!!"
   );
 }
 
