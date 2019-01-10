@@ -87,16 +87,48 @@ room15 = {name: 'Patio'};
 // Characters Collection
 var charactersArray = [];
 charactersArray.push(mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard);
-console.log(charactersArray);
+// console.log(charactersArray);
 
 // Rooms' Collection
 var roomsArray = [];
 roomsArray.push(room1, room2, room3, room4, room5, room6, room7, room8, room9, room10, room11, room12, room13, room14, room15);
-console.log(roomsArray);
+// console.log(roomsArray);
 
 // Weapons Collection
 var weaponsArray = [];
 weaponsArray.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
-console.log(weaponsArray);
+// console.log(weaponsArray);
 
+function randomSelector(array) {
+    if (array.length === 1) {
+        return array[0];
+    } 
+    else if (array === []) {
+        return undefined;
+    }
+    else
+    {let randomIndex = Math.floor(Math.random() * (array.length));
+    return array[randomIndex];}
+}
 
+//console.log(randomSelector(weaponsArray));
+
+function pickMistery() {
+    let character = randomSelector(charactersArray);
+    let weapon = randomSelector(weaponsArray);
+    let room = randomSelector(roomsArray);
+    let misteryEnvelope = [];
+    misteryEnvelope.push(character);
+    misteryEnvelope.push(weapon);
+    misteryEnvelope.push(room);
+    //console.log(character, weapon, room);
+    return misteryEnvelope;
+}
+
+console.log(pickMistery());
+
+function revealMistery(misteryEnvelope) {
+    return misteryEnvelope[0].first_name + ' ' + misteryEnvelope[0].last_name + ' killed Mr.Boddy using the ' + misteryEnvelope[1].name + ' in the ' + misteryEnvelope[2].name + '!!!!'
+}
+
+console.log(revealMistery(misteryEnvelope));
