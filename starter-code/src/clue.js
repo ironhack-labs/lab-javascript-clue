@@ -328,7 +328,7 @@ function pickMistery() {
 
 function revealMistery(mipe){
   
-    return mipe[0].first_name + mipe[0].last_name + " killed Mr.Boddy using the " + mipe[1].name + " in the " + mipe[2].name + "!!!!"
+    return mipe[0].first_name +  " " + mipe[0].last_name + " killed Mr.Boddy using the " + mipe[1].name + " in the " + mipe[2].name + "!!!!"
     /*return mipe[0].first_name + " " + mipe[0].last_name + " killed Mr.Boddy using the" + mipe[1].weaponsArray + " in the " + mipe[2].roomsArray + " !!!!"*/
   }
 
