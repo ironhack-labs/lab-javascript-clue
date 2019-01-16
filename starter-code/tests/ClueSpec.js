@@ -43,7 +43,7 @@ describe('Pick a random mistery - pickMistery', function () {
   });
 
   it('Return an array', function () {
-    expect(typeof pickMistery()).toEqual('object');
+    expect(typeof pickMistery()).toEqual('arr');
   });
 
   it('Return a non empty array', function () {
