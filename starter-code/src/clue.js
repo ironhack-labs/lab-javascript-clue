@@ -190,9 +190,8 @@ function randomSelector(array) {
 
 randomSelector(weaponsArray);
 
-let misteryEnvelope = [];
-
 function pickMistery() {
+  let misteryEnvelope = [];
   misteryEnvelope.push(randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray));
   return misteryEnvelope;
 }
