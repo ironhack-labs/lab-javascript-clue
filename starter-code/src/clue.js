@@ -142,30 +142,27 @@ var Theater = new Room('Theater');
 var GuestHouse = new Room('Guest House');
 var Patio = new Room('Patio');
 
-// Characters Collection
-var charactersArray = [];
-charactersArray.push(mrGreen, drOrchid, profPlum, missScarlett, mrsPeacock, mrMustard);
+// CREATE ARRAYS OF OBJECTS
+let charactersArray = [mrGreen, drOrchid, profPlum, missScarlett, mrsPeacock, mrMustard];
+let roomsArray = [DinningRoom, Conservatory, Kitchen, Study, Library, BilliardRoom, Lounge, Ballroom, Hall, Spa, LivingRoom, Observatory, Theater, GuestHouse, Patio];
+let weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
 
-// Rooms' Collection
-var roomsArray = [];
-roomsArray.push(DinningRoom, Conservatory, Kitchen, Study, Library, BilliardRoom, Lounge, Ballroom, Hall, Spa, LivingRoom, Observatory, Theater, GuestHouse, Patio);
+// SELECT RANDOM 
+function randomSelector(array){
+    var randomNum = Math.floor(Math.random() * array.length);
+    var randomElement = array[randomNum];
+    return randomElement;
+}
 
-// Weapons Collection
-var weaponsArray = [];
-weaponsArray.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
+var misteryEnvelope = [];
+function pickMistery(){
+    let randomCharacter = randomSelector(charactersArray);
+    let randomRoom = randomSelector(roomsArray);
+    let randomWeapon = randomSelector(weaponsArray);
+    misteryEnvelope = [randomCharacter, randomWeapon, randomRoom];
+    return misteryEnvelope; 
+}
 
-// SELECT RANDOM CHARACTER 
-var randomNum1 = Math.floor(Math.random() * 6);
-var randomCharacter = charactersArray[randomNum1];
-
-// SELECT RANDOM ROOM 
-var randomNum2 = Math.floor(Math.random() * 15);
-var randomRoom = roomsArray[randomNum2];
-
-// SELECT RANDOM WEAPON 
-var randomNum3 = Math.floor(Math.random() * 9);
-var randomWeapon = weaponsArray[randomNum3];
-
-var misteryEnvelope = [randomCharacter, randomRoom, randomWeapon];
-
-console.log(randomCharacter.fname + " " + randomCharacter.lname + " killed Mr. Boddy using the " + randomWeapon.name + " in the " + randomRoom.name + "!!!!!");
+function revealMistery(misteryEnvelope){
+    return misteryEnvelope[0].fname + " killed Mr.Boddy using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2].name;
+}
