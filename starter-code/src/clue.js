@@ -84,8 +84,63 @@ name: Guest House
 name: Patio
 */
 
+var mrGreen = {
+  first_name: "Jacob",
+  last_name: "Green",
+  color: "green", 
+  description: "He has a lot of connections",
+  age: "45",
+  image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+  occupation: "Entrepreneur"
+
+}
+
+var drOrchid = {
+  first_name: "Orchid",
+  last_name: "white",
+  color: "white", 
+  description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
+  age: "26",
+  image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
+  occupation: "Scientist"
+
+}
+
+var Jacob = {
+  first_name: "Jacob",
+  last_name: "Green",
+  color: "green", 
+  description: "He has a lot of connections",
+  age: "45",
+  image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+  occupation: "Entrepreneur"
+
+}
+
+var Jacob = {
+  first_name: "Jacob",
+  last_name: "Green",
+  color: "green", 
+  description: "He has a lot of connections",
+  age: "45",
+  image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+  occupation: "Entrepreneur"
+
+}
+
+var Jacob = {
+  first_name: "Jacob",
+  last_name: "Green",
+  color: "green", 
+  description: "He has a lot of connections",
+  age: "45",
+  image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+  occupation: "Entrepreneur"
+
+}
+
 // Characters Collection
-var charactersArray = [];
+var charactersArray = [mrGreen, drOrchid,];
 
 // Rooms' Collection
 var roomsArray = [];
