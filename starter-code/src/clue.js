@@ -87,6 +87,18 @@ name: Patio
 // Characters Collection
 var charactersArray = [];
 
+var mrGreen = {
+  first_name: 'Jacob',
+  last_name: 'Green',
+  color: 'green',
+  description: 'He has a lot of connections',
+  age: '45',
+  image: 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
+  occupation: 'Entrepreneur'
+}
+
+
+
 // Rooms' Collection
 var roomsArray = [];
 
