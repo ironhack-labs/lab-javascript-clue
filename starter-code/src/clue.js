@@ -109,8 +109,17 @@ function randomSelector (clue){
   } else {
     return itemClue;
   }
-  
+}
+//Pick mistery cards. Cogemos una carta de cada tipo al azar con randomSelector
+function pickMistery () {
+  var misteryEnvelope = [
+    randomSelector(charactersArray), //carta de personas
+    randomSelector(weaponsArray), //carta de armas
+    randomSelector(roomsArray), //carta de habitaciones
+  ];
+    return misteryEnvelope;
+}
+pickMistery ();
 
-  //return clue;
-  //return clue[Math.floor(Math.random() * clue.length)];
+function revealMistery (misteryEnvelope) {
 }
