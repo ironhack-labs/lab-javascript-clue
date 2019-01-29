@@ -1,0 +1,75 @@
+.card {
+    position: absolute;
+    border: 2px solid black;
+    height: 500px;
+    width: 390px;
+}
+
+.card h1, .card h2 {
+    text-align: center;
+}
+
+.card h1 {
+    background-color: orange; 
+    height: 50px;
+    line-height: 50px;
+}
+
+.non-char-name {
+    position: relative;
+    top: 130px;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+#character {
+    left: 10px;
+    top: 10px;
+}
+
+#weapon {
+    left: 410px;
+    top: 10px;
+}
+
+#room {
+    left: 810px;
+    top: 10px;
+}
+
+#play-button {
+    position: absolute;
+    top: 550px;
+    left: 50px;
+    height: 100px;
+    width: 300px;
+    font-size: 20px;
+}
+
+#reveal-text {
+    position: absolute;
+    top: 530px;
+    left: 450px;
+    width: 600px;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+#character-pic {
+    position: absolute;
+    top: 135px;
+    left: 65px;
+    width: 250px;
+    height: 300px;
+    display: none;
+}
+
+#character-desc {
+    position: absolute;
+    top: 425px;
+    left: 30px;
+    font-size: 18px;
+    text-align: center;
+    width: 300px;
+    font-weight: 300;
+}

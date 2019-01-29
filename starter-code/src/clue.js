@@ -230,3 +230,29 @@ var revealMistery = function(mysteryEnvelope) {
     return `${characterCard.first_name} ${characterCard.last_name} killed Mr.Boddy ` 
         + `using the ${weaponCard.name} in the ${roomCard.name}!!!!`;
 }
+
+var playGame = function() {
+    let mysteryEnvelope = pickMistery();
+    let character = mysteryEnvelope[0];
+    let weapon = mysteryEnvelope[1];
+    let room = mysteryEnvelope[2];
+
+    let characterName = document.getElementById("character-name");
+    let weaponName = document.getElementById("weapon-name");
+    let roomName = document.getElementById("room-name");
+    
+    characterName.textContent = `${character.first_name} ${character.last_name}`;
+    weaponName.textContent = weapon.name;
+    roomName.textContent = room.name;
+    
+    let revealText = document.getElementById("reveal-text");
+    revealText.textContent = revealMistery(mysteryEnvelope);
+
+    characterName.parentElement.style.backgroundColor = character.color;
+
+    let characterPic = document.getElementById("character-pic");
+    characterPic.src = character.image
+    characterPic.style.display = "unset";
+    document.getElementById("character-desc").textContent = character.description;
+}
+

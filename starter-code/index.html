@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clue Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <script src="src/clue.js"></script>
+</head>
+<body>
+    <section class="card" id="character">
+        <h1>CHARACTER CARD</h1>
+        <h2 id="character-name" class="name"></h2>
+        <img id="character-pic" src="#" alt="character">
+        <p id="character-desc"></p>
+    </section>
+    <section class="card" id="weapon">
+        <h1>WEAPON CARD</h1>
+        <h2 id="weapon-name" class="non-char-name"></h2>
+    </section>
+    <section class="card" id="room">
+        <h1>ROOM CARD</h1>
+        <h2 id="room-name" class="non-char-name"></h2>
+    </section>
+    <button id="play-button" onclick="playGame();">PLAY GAME</button>
+    <p id="reveal-text"></p>
+</body>
+</html>
