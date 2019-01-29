@@ -60,16 +60,50 @@ image:        "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg"
 occupation:   "Retired Football player",
 }
 // Weapons
+var rope = {
+name: "rope",
+weight: 10,
+}
 
-name: rope        ---   weight: 10
-name: knife       ---   weight: 8
-name: candlestick ---   weight: 2
-name: dumbbell    ---   weight: 30
-name: poison      ---   weight: 2
-name: axe         ---   weight: 15
-name: bat         ---   weight: 13
-name: trophy      ---   weight: 25
-name: pistol      ---   weight: 20
+var knife ={
+  name: "knife",
+  weight: 8,
+}
+
+var candlestick = {
+  name: "candlestick",
+  weight: 2,
+}
+
+var dumbbell = {
+  name: "dumbbell",
+  weight: 30,
+}
+
+var poison = {
+  name: "poison",
+  weight: 2,
+}
+
+var axe = {
+  name: "axe",
+  weight: 15,
+}
+
+var bat = {
+  name: "bat",
+  weight: 13,
+}
+
+var trophy = {
+  name: "trophy",
+  weight: 25,
+}
+
+var pistol = {
+  name: "pistol",
+  weight: 20,
+}
 
 // Rooms
 name: Dinning Room
