@@ -150,8 +150,29 @@ var mrMustard = {
 charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 
 // Rooms' Collection
-var roomsArray = ['Dinning Room', 'Conservatory', 'Kitchen', 'Study', 'Library', 'Billiard Room', 'Lounge'
-                  , 'Ballroom', 'Hall', 'Spa', 'Living Room', 'Observatory', 'Theater', 'Guest House', 'Patio'];
+
+//var roomsArray = ['Dinning Room', 'Conservatory', 'Kitchen', 'Study', 'Library', 'Billiard Room', 'Lounge'
+//                  , 'Ballroom', 'Hall', 'Spa', 'Living Room', 'Observatory', 'Theater', 'Guest House', 'Patio'];
+
+var roomsArray = [];
+
+var dinning = { name: 'Dinning Room'}
+var conservatory = { name: 'Conservatory'}
+var kitchen = { name: 'Kitchen'}
+var study = { name: 'Study'}
+var library = { name: 'Library'}
+var billiard = { name: 'Billiard Room'}
+var lounge = { name: 'Lounge'}
+var ballroom = { name: 'Ballroom'}
+var hall = { name: 'Hall'}
+var spa = { name: 'Spa'}
+var living = { name: 'Living Room'}
+var observatory = { name: 'Observatory'}
+var theater = { name: 'Theater'}
+var guest = { name: 'Guest House'}
+var patio = { name: 'Patio'}
+
+roomsArray = [dinning, conservatory, kitchen, study, library, billiard, lounge, ballroom, hall, spa, living, observatory, theater, guest, patio];
 
 // Weapons Collection
 var weaponsArray = [];
@@ -174,14 +195,25 @@ function randomSelector (gameArray) {
 }
 
 function pickMistery () {
-  var misteryEnvelope = [randomSelector(charactersArray), randomSelector(roomsArray), randomSelector(weaponsArray)];
+  // var misteryEnvelope = [randomSelector(charactersArray), randomSelector(roomsArray), randomSelector(weaponsArray)];
+  var misteryEnvelope, character, room, weapon;
+  
+  character = randomSelector(charactersArray);
+  room = randomSelector(roomsArray);
+  weapon = randomSelector(weaponsArray);
+  misteryEnvelope = [character, weapon, room];
+
   return misteryEnvelope;
 }
 
 function revealMistery (misteryEnvelope) {
-  console.log( misteryEnvelope[0].first_name + ' ' + misteryEnvelope[0].last_name + ' killed Mr.Boddy using the ' 
-              + misteryEnvelope[2].name + ' in the ' + misteryEnvelope[1] + '!!!!' );
+  var mistery;
+  
+  mistery = misteryEnvelope[0].first_name + ' ' + misteryEnvelope[0].last_name + ' killed Mr.Boddy using the ' 
+               + misteryEnvelope[1].name + ' in the ' + misteryEnvelope[2].name + '!!!!';
+
+  return mistery;
 }
 
 var mistery = pickMistery();
-revealMistery(mistery);
+console.log(revealMistery(mistery));
