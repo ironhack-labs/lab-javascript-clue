@@ -3,6 +3,7 @@
     border: 2px solid black;
     height: 500px;
     width: 390px;
+    background-color: beige;
 }
 
 .card h1, .card h2 {
