@@ -60,8 +60,9 @@ var charactersArray = [
     occupation:   "Retired Football player",
   },
 ];
-// Rooms' Collection
-var roomsArray = [
+
+// Weapons Collection
+var weaponsArray = [
   rope = {
     name: "rope",
     weight: 10,
@@ -99,8 +100,8 @@ var roomsArray = [
     weight: 20,
   },
 ];
-// Weapons Collection
-var weaponsArray = [
+// Rooms' Collection
+var roomsArray = [
   dinningRoom = {
     name: "Dinning Room",
   },
@@ -147,6 +148,24 @@ var weaponsArray = [
     name: "Patio",
 },
 ];
+
+// This function will select one item randomly form a deck of cards
+
+function randomSelector(myArray){
+  if (myArray === []){return myArray[0];}
+  var cardselected = Math.floor(Math.random() * myArray.length)
+  return myArray[cardselected];
+}
+
+
+function pickMistery(){
+  var misteryEnvelope = [];
+  misteryEnvelope.push(randomSelector(charactersArray));
+  misteryEnvelope.push(randomSelector(weaponsArray));
+  misteryEnvelope.push(randomSelector(roomsArray));
+  return misteryEnvelope;
+};
+
 
 
 
