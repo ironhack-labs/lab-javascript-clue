@@ -157,16 +157,20 @@ function randomSelector(myArray){
   return myArray[cardselected];
 }
 
+var misteryEnvelope;
 
 function pickMistery(){
-  var misteryEnvelope = [];
+  misteryEnvelope = [];
   misteryEnvelope.push(randomSelector(charactersArray));
   misteryEnvelope.push(randomSelector(weaponsArray));
   misteryEnvelope.push(randomSelector(roomsArray));
   return misteryEnvelope;
 };
 
+function revealMistery(array){
 
+  return array[0].first_name + " " + array[0].last_name + " killed Mr.Boddy using the " + array[1].name + " in the " + array[2].name + "!!!!";
+};
 
 
 
