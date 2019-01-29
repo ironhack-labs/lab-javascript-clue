@@ -193,7 +193,6 @@ roomsArray.push(theater);
 roomsArray.push(guestHouse);
 roomsArray.push(patio);
 
-
 // Weapons Collection
 var weaponsArray = [];
 weaponsArray.push(rope);
@@ -205,3 +204,29 @@ weaponsArray.push(axe);
 weaponsArray.push(bat);
 weaponsArray.push(trophy);
 weaponsArray.push(pistol);
+
+
+var randomSelector = function(cardStack) {
+    let cardIndex = getRandomInt(cardStack.length);
+    return cardStack[cardIndex];
+}
+  
+var getRandomInt = function(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
+
+var pickMistery = function() {
+    let mysteryEnvelope = [];
+    mysteryEnvelope.push(randomSelector(charactersArray));
+    mysteryEnvelope.push(randomSelector(weaponsArray));
+    mysteryEnvelope.push(randomSelector(roomsArray));
+    return mysteryEnvelope;
+}
+
+var revealMistery = function(mysteryEnvelope) {
+    let characterCard = mysteryEnvelope[0];
+    let weaponCard = mysteryEnvelope[1];
+    let roomCard = mysteryEnvelope[2];
+    return `${characterCard.first_name} ${characterCard.last_name} killed Mr.Boddy ` 
+        + `using the ${weaponCard.name} in the ${roomCard.name}!!!!`;
+}
