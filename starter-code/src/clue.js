@@ -153,22 +153,61 @@ var mrsPeacock = {
 var charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrMustard, mrsPeacock];
 
 // Rooms' Collection
-var roomsArray = [];
+var roomsArray = [
+  {name: "Dining Room"},
+  {name: "Conservatory"}, 
+  {name: "Kitchen"}, 
+  {name: "Study"}, 
+  {name: "Library"},
+  {name: "Billiard Room"},
+  {name: "Lounge"},
+  {name: "Ballroom"},
+  {name: "Hall"},
+  {name: "Spa"},
+  {name: "Living Room"},
+  {name: "Observatory"},
+  {name: "Theater"},
+  {name: "Guest House"},
+  {name: "Patio"},
+];
 
 // Weapons Collection
-var weaponsArray = [{name: "rope", weight: "10"},
-                    {name: "rope", weight: "10"},
-                    {name: "rope", weight: "10"},
-                    {name: "rope", weight: "10"},
-                    {name: "rope", weight: "10"},
-                    {name: "rope", weight: "10"},
-                    {name: "rope", weight: "10"},];
- 
-name: knife       ---   weight: 8
-name: candlestick ---   weight: 2
-name: dumbbell    ---   weight: 30
-name: poison      ---   weight: 2
-name: axe         ---   weight: 15
-name: bat         ---   weight: 13
-name: trophy      ---   weight: 25
-name: pistol      ---   weight: 20
+var weaponsArray = [
+  {name: "rope", weight: "10"},
+  {name: "knife", weight: "8"},
+  {name: "candlestick", weight: "2"},
+  {name: "dumbbell", weight: "30"},
+  {name: "poison", weight: "2"},
+  {name: "axe", weight: "15"},
+  {name: "bat", weight: "13"},
+  {name: "trophy", weight: "25"},
+  {name: "pistol", weight: "20"},];
+
+var cardsClue = [charactersArray, weaponsArray, roomsArray];
+
+function numeroAleatorio(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function randomSelector(typeCard) {
+  return typeCard[numeroAleatorio(0, typeCard.length)];
+};
+
+function pickMistery() {
+  misteryEnvelope = cardsClue.map(randomSelector);
+  return misteryEnvelope;
+}
+
+function revealMistery(reveal){
+  var killer = []
+  killer.push(reveal[0].first_name);
+  killer.push(" ");
+  killer.push(reveal[0].last_name);
+  killer.push(" killed Mr.Boddy using the ");
+  killer.push(reveal[1].name);
+  killer.push(" in the ");
+  killer.push(reveal[2].name);
+  killer.push("!!!!");
+  
+  return killer.join('');
+}
