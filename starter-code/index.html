@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Cluedo game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="overview">
+
+      <!-- character IMG -->
+      <div class="block">
+        <img id="character" alt="Murderer">
+      </div>
+
+      <!-- character details -->
+      <div class="block">
+        <h2>Murderer details</h2>
+        <ul>
+          <li id="character-firstname"></li>
+          <li id="character-lastname"></li>
+          <li id="character-age"></li>
+          <li id="character-profession"></li>
+          <li id="character-description"></li>
+        </ul>
+      </div>
+
+      <!-- weapon -->
+      <div class="block">
+        <h2>Weapon details</h2>
+        <ul>
+          <li id="weapon-name"></li>
+          <li id="weapon-weight"></li>
+        </ul>
+      </div>
+
+      <!-- room -->
+      <div class="block">
+        <h2>Room details</h2>
+        <ul>
+          <li id="room-name"></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="center-container">
+      <div class="message"> 
+        <span>Refresh page for a new investigation!</span> 
+      </div>
+    </div>
+  </div>
+   
+  <!-- Script needs to be loaded after the img -->
+  <script src="src/clue.js"></script>
+</body>
+
+</html>

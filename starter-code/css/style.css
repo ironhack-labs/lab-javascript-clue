@@ -1,0 +1,47 @@
+body {
+  margin: 0px;   
+  background-color: turquoise;
+  background-position: cover;
+  width: 100%; 
+  padding-top: 50px; 
+}
+
+.overview {
+  background-color: turquoise;
+  width: 900px;
+  height: 400px;
+  margin: 0px auto 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.block {
+  flex-direction: row;
+  width: 210px;
+  background-color: white;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 20px;
+  }
+
+.block h2 {
+  text-align: center;
+}
+
+.block img {
+  width: 100%; 
+}
+
+.center-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.message {
+  padding: 20px;
+  background-color: white; 
+  border-radius: 20px; 
+  display: inline-block;
+  margin: 0px auto 10px;
+}
+ 
