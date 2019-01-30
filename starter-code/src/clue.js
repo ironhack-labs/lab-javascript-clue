@@ -63,31 +63,31 @@ var mrMustard = {
   // Weapons
 
   var rope ={
-    name: rope, weight: 10
+    name: "rope", weight: 10
   };
   var knife = {
-    name: knife, weight: 8
+    name: "knife", weight: 8
   };
   var candlestick = {
-    name: candlestick, weight: 2
+    name: "candlestick", weight: 2
   };
   var dumbbell ={
-    name: dumbbell, weight: 30
+    name: "dumbbell", weight: 30
   };
   var poison = {
-    name: poison, weight: 2
+    name: "poison", weight: 2
   };
   var axe = {
-    name: axe, weight: 15
+    name: "axe", weight: 15
   };
   var bat = {
-    name: bat, weight: 13
+    name: "bat", weight: 13
   };
   var trophy = {
-    name: trophy, weight: 25
+    name: "trophy", weight: 25
   };
   var pistol = {
-    name: pistol, weight: 20
+    name: "pistol", weight: 20
   };
   
   
@@ -123,6 +123,29 @@ var mrMustard = {
   var weaponsArray = [];
   weaponsArray.push(rope, knife, candlestick,dumbbell, poison, axe, bat, trophy, pistol);
 
-  function randomSelector (charactersArray){
-    return charactersArray[Math.floor(Math.random()*charactersArray.length)];
+var card = [];
+
+card.push(roomsArray, weaponsArray, roomsArray);
+
+function randomSelector (card){ 
+  var cardUnit = card[Math.floor(Math.random()*card.length)]
+  if (card = "") {
+    return undefined;
+  }else {
+    return cardUnit;
   }
+};
+
+function pickMistery (){
+  var misteryEnvelope = [
+    randomSelector(charactersArray),
+    randomSelector(weaponsArray),
+    randomSelector(roomsArray)
+  ];  
+  console.log(misteryEnvelope)
+  return misteryEnvelope
+};
+
+function revealMistery(misteryEnvelope){ console.log(misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name + " killed Mr.Boddy using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2].name + "!!!!")
+  return misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name + " killed Mr.Boddy using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2].name + "!!!!"
+}
