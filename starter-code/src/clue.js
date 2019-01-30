@@ -146,6 +146,6 @@ function pickMistery (){
   return misteryEnvelope
 };
 
-function revealMistery(misteryEnvelope){ console.log(misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name + " killed Mr.Boddy using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2].name + "!!!!")
+function revealMistery(misteryEnvelope){
   return misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name + " killed Mr.Boddy using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2].name + "!!!!"
 }
