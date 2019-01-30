@@ -102,3 +102,15 @@ roomsArray.push(dinningroom, conservatory, kitchen, study, library, billiardroom
 var weaponsArray = [];
 weaponsArray.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
 
+// Cards Stack
+var cardsStack = []
+cardsStack.push(charactersArray, weaponsArray, roomsArray);
+
+// Mistery Envelope
+var misteryEnvelope = [];
+
+const randomSelector = array => array[~~(Math.random() * array.length)];
+const pickMistery = stack => stack.forEach(element => misteryEnvelope.push(randomSelector(element)));
+
+const revealMistery = envelope => `${envelope[0].first_name} ${envelope[0].last_name} killed Mr.Boddy using the ${envelope[1].name} in the ${envelope[2].name} !!!!`
+
