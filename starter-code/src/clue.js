@@ -92,31 +92,33 @@
        "Patio"
      ]
 
-
+//
 // 1. randomSelector chooses one element from a stack
+//
 function randomSelector(input){
   var randomNum = Math.floor(Math.random()* input.length);
   return input[randomNum];
 }
 
-//2. 
-var clue = [charactersArray, weaponsArray, roomsArray];
-function pickMistery(charactersArray, weaponsArray, roomsArray){
-    var misteryEnvelope = [];
+//
+//2. Creating the mistery 
+// 
+var misteryEnvelope = [];
+function pickMistery(){
     misteryEnvelope.push(randomSelector(charactersArray).first_name);
     misteryEnvelope.push(randomSelector(weaponsArray).name);
     misteryEnvelope.push(randomSelector(roomsArray));
-
   return misteryEnvelope;
 }
+pickMistery();
 
-//console.log(pickMistery(charactersArray, weaponsArray, roomsArray));
 
-
-// 3.
-function revealMistery(){
- console.log((randomSelector(charactersArray).first_name)  + " killed Mr.Boddy using the " + (randomSelector(weaponsArray).name) + " in the " + (randomSelector(roomsArray)) +"!!");
+//
+// 3. Reveal the mistery
+//
+function revealMistery(misteryEnvelope){
+ console.log(misteryEnvelope[0]  + " killed Mr.Boddy using the " + misteryEnvelope[1] + " in the " + misteryEnvelope[2] +"!!");
 } ;
+revealMistery(misteryEnvelope);
 
-revealMistery();
 
