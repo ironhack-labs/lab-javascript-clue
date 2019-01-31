@@ -96,32 +96,36 @@ let observatory = new Room("Observatory");
 let theater = new Room("Theater");
 let guest = new Room("Guest");
 let patio = new Room("Patio");
+let toilet = new Room("Toilet");
 
 // Characters Collection
 var charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 // Rooms' Collection
 var roomsArray = [dinning, conservatory, kitchen, study, library, billiard, lounge, ballroom, hall, spa, living, observatory, theater, guest, patio];
 // Weapons Collection
-var weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
+var weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol, toilet];
 
-
-function randomSelector(arr) {
-    let cardSelect = Math.floor(Math.random() * arr.length)
-    return arr[cardSelect];
+function Game(charA, roomA, wepA) {
+    this.charA = charA;
+    this.roomA = roomA;
+    this.wepA = wepA;
+    this.mystery = [];
+    this.randomSelector = function(arr) {
+        let cardSelect = Math.floor(Math.random() * arr.length)
+        return arr[cardSelect];
+    }
+    this.pickMistery = function() {
+      this.mystery.push(this.randomSelector(this.charA))
+      this.mystery.push(this.randomSelector(this.roomA))
+      this.mystery.push(this.randomSelector(this.wepA))
+    }
+    this.revealMistery = function() {
+      return this.mystery[0].first_name + " " + this.mystery[0].last_name + " killed Mr.Boddy using the " + this.mystery[1].name + " in the " + this.mystery[2].name + "!!!!";      
+  }
+  this.init = function () {
+  console.log(this.revealMistery(this.pickMistery()))
+}
 }
 
-// console.log(randomSelector(weaponsArray))
-function pickMistery() {
-    let weaponCard = randomSelector(weaponsArray);
-    let roomCard = randomSelector(roomsArray);
-    let charCard = randomSelector(charactersArray);
-    let misteryEnvelope = [charCard, weaponCard, roomCard];
-    return misteryEnvelope;
-}
-aRandomMistery = pickMistery()
-
-function revealMistery(anyMistery) {
-    return anyMistery[0].first_name + " " + anyMistery[0].last_name + " killed Mr.Boddy using the " + anyMistery[1].name + " in the " + anyMistery[2].name + "!!!!";
-}
-
-console.log(revealMistery(aRandomMistery))
+let game = new Game(charactersArray, roomsArray, weaponsArray);
+game.init();
