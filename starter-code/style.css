@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url("https://images5.alphacoders.com/577/577489.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgba(107, 107, 107, 0.5);
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 80px;
+}
+
+h1 {
+    color: rgb(255, 43, 43);
+}
+
+img {
+    height: 400px;
+    display: block;
+    margin: 0 auto 30px auto;
+}
+
+button {
+    width: 200px;
+    padding: 30px 0;
+    margin: 50px;
+}
