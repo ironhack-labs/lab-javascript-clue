@@ -92,31 +92,31 @@ var missScarlet= {first_name:"Kasandra",last_name:"Scarlet", color:"red",descrip
 var mrsPeacock= {first_name:"Eleanor",last_name:"Peacock", color:"blue",description:"She is from a wealthy family and uses her status and money to earn popularity",age:"36",image:"https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",occupation:"Socialité"};
 var mrMustard= {first_name:"Jack",last_name:"Mustard", color:"yellow",description:"He is a former football player who tries to get by on his former glory",age:"62",image:"https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",occupation:"Retired Football player"};
 
-var rope={name:"rope",weight:10}
-var knife={name:"knife",weight:8}
-var candlestick={name:"candlestick",weight:2}
-var dumbbell={name:"dumbbell",weight:30}
-var poison={name:"poison",weight:2}
-var axe={name:"axe",weight:15}
-var bat={name:"bat",weight:13}
-var trophy={name:"trophy",weight:25}
-var pistol={name:"pistol",weight:20}
+var rope={name:"rope",weight:10};
+var knife={name:"knife",weight:8};
+var candlestick={name:"candlestick",weight:2};
+var dumbbell={name:"dumbbell",weight:30};
+var poison={name:"poison",weight:2};
+var axe={name:"axe",weight:15};
+var bat={name:"bat",weight:13};
+var trophy={name:"trophy",weight:25};
+var pistol={name:"pistol",weight:20};
 
-var dinning Room={name:"Dinning Room"}
-var conservatory={name:"Conservatory"}
-var kitchen={name:"Kitchen"}
-var study={name:"Study"}
-var library={name:"Library"}
-var billiardRoom={name:"Billiard Room"}
-var lounge={name:"Lounge"}
-var ballroom={name:"Ballroom"}
-var hall={name:"Hall"}
-var spa={name:"Spa"}
-var livingRoom={name:"Living Room"}
-var Observatory={name:"Observatory"}
-var theater={name:"Theater"}
-var guestHouse={name:"Guest House"}
-var patio={name:"Patio"}
+var dinningRoom={name:"Dinning Room"};
+var conservatory={name:"Conservatory"};
+var kitchen={name:"Kitchen"};
+var study={name:"Study"};
+var library={name:"Library"};
+var billiardRoom={name:"Billiard Room"};
+var lounge={name:"Lounge"};
+var ballroom={name:"Ballroom"};
+var hall={name:"Hall"};
+var spa={name:"Spa"};
+var livingRoom={name:"Living Room"};
+var Observatory={name:"Observatory"};
+var theater={name:"Theater"};
+var guestHouse={name:"Guest House"};
+var patio={name:"Patio"};
 
 
 
@@ -164,7 +164,9 @@ var weaponsArray = [
 
 
 
-function randomSelector(){
-    var randomCharacter = charactersArray[Math.floor(Math.random() * charactersArray.length)];
-    return randomCharacter
+
+function randomSelector(arr=[]){
+    var randomElement = arr[Math.floor(Math.random()*arr.length)];
+    return randomElement
 }
+
