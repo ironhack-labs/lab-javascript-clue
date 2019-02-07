@@ -176,5 +176,5 @@ function pickMistery(){
     var roomsSuspect= randomSelector(roomsArray)
     var weaponSuspect = randomSelector(weaponsArray)
 
-    return misteryEnvelope=[charactersSuspect, roomsSuspect,weaponSuspect ]
+    return misteryEnvelope=[charactersSuspect,weaponSuspect, roomsSuspect ]
 }
