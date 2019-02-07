@@ -178,3 +178,13 @@ function pickMistery(){
 
     return misteryEnvelope=[charactersSuspect,weaponSuspect, roomsSuspect ]
 }
+
+function revealMistery(misteryEnvelope){
+
+    var character = misteryEnvelope[0];
+    var weapon = misteryEnvelope[1];
+    var room = misteryEnvelope[2];
+    var mistery = character.first_name  + ' ' + character.last_name + ' killed Mr.Boddy using the ' + weapon.name + ' in the ' + room.name  + '!!!!';
+        return mistery;
+
+}
