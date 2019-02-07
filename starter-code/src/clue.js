@@ -170,3 +170,11 @@ function randomSelector(arr=[]){
     return randomElement
 }
 
+function pickMistery(){
+    misteryEnvelope=[]
+    var charactersSuspect= randomSelector(charactersArray)
+    var roomsSuspect= randomSelector(roomsArray)
+    var weaponSuspect = randomSelector(weaponsArray)
+
+    return misteryEnvelope=[charactersSuspect, roomsSuspect,weaponSuspect ]
+}
