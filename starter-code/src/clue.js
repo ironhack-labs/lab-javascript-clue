@@ -59,7 +59,7 @@ var mrMustard = {
   occupation:   "Retired Football player"
 }
 var charactersArray = [];
-charactersArray.push(MrGreen);
+charactersArray.push(mrGreen);
 charactersArray.push(drOrchid);
 charactersArray.push(profPlum);
 charactersArray.push(missScarlet);
@@ -103,16 +103,22 @@ var roomsArray = [{
 /** var cardWeapon = weaponsArray[Math.floor(weaponsArray.length * Math.random())];
 var cardRooms = roomsArray[Math.floor(roomsArray.length * Math.random())];
 */
-var misteryEnveloper = [];
+var misteryEnvelope = [];
 
 function randomSelector(arr){
   if(arr.length ===0){
     return undefined;
   }
-  return arr[Math.floor((arr.length) * Math.random())];
+  return arr[Math.floor( Math.random()*arr.length)];
 }
 function pickMistery(){
-  var newArray = new Array();
-  
-  return newArray([randomSelector(charactersArray),randomSelector(weaponsArray),randomSelector(roomsArray)]);
+  var newArray = [];
+  return newArray = [randomSelector(charactersArray),randomSelector(weaponsArray),randomSelector(roomsArray)];
+}
+
+var misteryEnvelope = pickMistery();
+
+function revealMistery(newArr){ 
+  var solucion = newArr[0].first_name +" " + newArr[0].last_name + " killed Mr.Boddy using the " + newArr[1].name + " in the " + newArr[2].name + "!!!!";
+  return solucion;
 }
