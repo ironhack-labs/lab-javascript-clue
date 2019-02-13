@@ -158,17 +158,23 @@ function randomSelector(array) {
 
 function pickMistery() {
 
-    var w1 = randomSelector(weaponsArray)
-    var r2 = randomSelector(roomsArray)
-    var c3 = randomSelector(charactersArray)
+    arrayMistery =[];
 
+   arrayMistery.push(charactersArray[0],weaponsArray[0],roomsArray[0])
+
+    console.log(arrayMistery)
+
+     if(arrayMistery.length>1){
+
+        return arrayMistery
+
+     }
+     
    
-
-    var arrayMistery = [{ first_name: c3.first_name ,  last_name: c3.last_name }, { name: w1.name }, { name: r2.name }]
-
-
-     return arrayMistery
+     
 }
+
+
 
 
 function revealMistery(arr) {
