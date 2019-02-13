@@ -203,7 +203,7 @@ var misteryEnvelope = {
     }
 
 
-    unction misteryReveal (arr) {
+    function misteryReveal (arr) {
         return arr.character.first_name + " " + arr.character.last_name + " killed Mr.Boddy using the " + arr.weapon.name + " in the " + arr.room;
     }
     
