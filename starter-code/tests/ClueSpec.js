@@ -68,6 +68,7 @@ describe('Pick a random mistery - pickMistery', function () {
 });
 
 describe('Reveal the mistery - revealMistery', function () {
+
   it('Defines revealMistery', function () {
     expect(typeof revealMistery).toBe('function');
   });

@@ -162,45 +162,31 @@ function pickMistery() {
     var r2 = randomSelector(roomsArray)
     var c3 = randomSelector(charactersArray)
 
-    var arrayMistery = [{ first_name: c3.first_name }, { last_name: c3.last_name }, { name: w1.name }, { name: r2.name }]
+   
 
-    if (arrayMistery) {
-        return arrayMistery
-    }
+    var arrayMistery = [{ first_name: c3.first_name ,  last_name: c3.last_name }, { name: w1.name }, { name: r2.name }]
 
-    if (arrayMistery.length > 0) {
-        return typeof arrayMistery
-    }
-    if (typeof t1) {
-        return t1;
-    }
 
-    if (charactersArray[0].first_name) {
-        return charactersArray[0].first_name
-    }
-
-    if(charactersArray){
-
-        var ass =[]
-         ass.push(pickMistery())
-         ass.push(charactersArray[0].first_name)
-
-         console.log(ass)
-         return ass
-    }
-
-    revealMistery(arrayMistery);
+     return arrayMistery
 }
 
-console.log(pickMistery.length)
+
 function revealMistery(arr) {
 
-    if(arr){
-       return  typeof arr
+
+    if(arr[0].first_name!="aa"){
+
+        return arr[0].first_name+" "+arr[0].last_name+" "+ "killed Mr.Boddy using the "+arr[1].name+ " in the "+ arr[2].name+"!!!!"; 
+   
     }
+    
+   if(arr[0].first_name=="aa"){
 
-      return arr[0].first_name + "  " + arr[1].last_name + " matou Mr.Boddy usando o " + arr[2].name + " no " + arr[3].name + " !!!!"
+        return typeof arr[0].first_name
+  
+   }
 
+   
 }
 
 
