@@ -84,6 +84,7 @@ name: Guest House
 name: Patio
 */
 
+
 // Characters Collection
 var charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard] ;
 
@@ -259,10 +260,23 @@ var dinningRoom = {
     name: "Patio",
    }
 
-
+// Iteration 2
 
 function randomSelector(arrayToProcess){
     if (arrayToProcess.length > 0){
         return arrayToProcess[ Math.floor(Math.random() * arrayToProcess.length) ];
     }
 }
+
+function pickMistery(){
+    var returnArray = [];
+    returnArray.push(randomSelector(charactersArray));
+    returnArray.push(randomSelector(roomsArray));
+    returnArray.push(randomSelector(weaponsArray));
+    return returnArray;
+}
+
+
+var mysteryEnvelope = pickMistery();
+
+//Iteration 3
