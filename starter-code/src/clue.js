@@ -93,3 +93,10 @@ if (array.length === 0) return undefined
     }
 }
 
+function pickMistery() {
+    return [randomSelector(charactersArray), randomSelector(weaponsArray),randomSelector(roomsArray)];
+}
+
+function revealMistery(misteryEnvelope) {
+    return `${misteryEnvelope[0].first_name} ${misteryEnvelope[0].last_name} killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${misteryEnvelope[2].name}!!!!`
+}
