@@ -270,9 +270,9 @@ function randomSelector(arrayToProcess){
 
 function pickMistery(){
     var returnArray = [];
-    returnArray.push(randomSelector(charactersArray));
-    returnArray.push(randomSelector(roomsArray));
+    returnArray.push(randomSelector(charactersArray));    
     returnArray.push(randomSelector(weaponsArray));
+    returnArray.push(randomSelector(roomsArray));
     return returnArray;
 }
 
@@ -280,3 +280,12 @@ function pickMistery(){
 var mysteryEnvelope = pickMistery();
 
 //Iteration 3
+
+function revealMistery(documentsArray){
+    var misteryResolved = "";
+    var guiltyPerson = documentsArray[0]["first_name"] + " " + documentsArray[0]["last_name"];
+    var weaponUsed = documentsArray[1]["name"];
+    var placeOfCrime = documentsArray[2]["name"];
+    misteryResolved = `${guiltyPerson} killed Mr.Boddy using the ${weaponUsed} in the ${placeOfCrime}!!!!`;
+    return misteryResolved;
+}
