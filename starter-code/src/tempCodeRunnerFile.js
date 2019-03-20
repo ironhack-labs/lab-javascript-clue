@@ -1,0 +1,1 @@
+console.log(pickMistery(charactersArray, weaponsArray, roomsArray))
