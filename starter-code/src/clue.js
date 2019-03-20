@@ -125,10 +125,21 @@ function pickMistery (){
 
 // Iteration 3 - Revealing the mistery
 
-function revealMistery (misteryEnvelope) {
-    var personaje = misteryEnvelope[0];
-    var arma = misteryEnvelope[1];
-    var habitacion = misteryEnvelope[2];
+// function revealMistery (misteryEnvelope) {
+//     var personaje = misteryEnvelope[0];
+//     var arma = misteryEnvelope[1];
+//     var habitacion = misteryEnvelope[2];
 
-    return(personaje.first_name+" " + personaje.last_name+" "+ "killed Mr.Boddy using the"+" " +arma.name+" " +"in" +" "+"the"+" " +habitacion.name+"!!!!")
-}
+//     return(personaje.first_name+" " + personaje.last_name+" "+ "killed Mr.Boddy using the"+" " +arma.name+" " +"in" +" "+"the"+" " +habitacion.name+"!!!!")
+// }
+
+function pickMistery(){
+    var arr = [];
+    return arr = [randomSelector(charactersArray),randomSelector(weaponsArray),randomSelector(roomsArray)];
+  }
+  var misteryEnvelope = pickMistery();
+  function revealMistery(arry){ 
+    var output = arr[0].first_name +" " + newArr[0].last_name + " killed Mr.Boddy using the " + arr[1].name + " in the " + arr[2].name + "!!!!";
+    return output;
+  }
+  
