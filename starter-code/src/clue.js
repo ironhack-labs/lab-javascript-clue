@@ -96,5 +96,9 @@ function randomSelector (array){
 }
 
 function pickMistery(){
-
+  return mystery = [randomSelector(charactersArray),randomSelector(weaponsArray),randomSelector(roomsArray)]
+}
+var misteryEnvelope = pickMistery()
+function revealMistery(array){
+  return `${array[0].first_name} ${array[0].last_name} killed Mr.Boddy using the ${array[1].name} in the ${array[2].name}!!!!`
 }
