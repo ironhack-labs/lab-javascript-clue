@@ -1,6 +1,6 @@
 // Characters
-let characters = {
-    mrGreen: {
+let characters = [
+     {
     first_name:   "Jacob",
     last_name:    "Green",
     color:        "green",
@@ -9,7 +9,7 @@ let characters = {
     image:        "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg" ,
     occupation:   "Entrepreneur" ,
 },
-    drOrchid : {
+     {
     first_name:   "Doctor" ,
     last_name:    "Orchid",
     color:        "white",
@@ -18,7 +18,7 @@ let characters = {
     image:        "http://www.radiotimes.com/uploads/images/Original/111967.jpg" ,
     ocupation:   "Scientist" ,
 },
-    profPlum: {
+     {
     first_name:   "Victor" ,
     last_name:    "Plum" ,
     color:        "purple" ,
@@ -27,7 +27,7 @@ let characters = {
     image:        "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg" ,
     occupation:   "Designer" ,
 },
-    missScarlet: {
+     {
     first_name:   "Kasandra",
     last_name:    "Scarlet",
     color:        "red",
@@ -36,7 +36,7 @@ let characters = {
     image:        "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
     occupation:   "Actor",
 },
-    mrsPeacock: {
+     {
     first_name:   "Eleanor",
     last_name:    "Peacock",
     color:        "blue",
@@ -45,7 +45,7 @@ let characters = {
     image:        "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
     occupation:   "Socialité",
 },
-    mrMustard: {
+    {
     first_name:   "Jack",
     last_name:    "Mustard",
     color:        "yellow",
@@ -54,7 +54,7 @@ let characters = {
     image:        "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
     occupation:   "Retired Football player",
 },
-}
+]
 var weapons = [
 
     {name: "rope",weight: 10},
@@ -103,9 +103,32 @@ var cards = [
 ]
 
 // Creating misterty
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
-function randomSelector(){
-    return getRandomInt(0, cards.length)
-};
+
+function randomSelector(cards){
+    if(cards.length ===0){
+      return undefined;
+    }
+    return cards[Math.floor( Math.random()*cards.length)];
+}
+
+// Creating pickMistery
+
+function pickMistery (){
+    var misteryEnvelope = [
+    randomSelector(charactersArray),
+    randomSelector(weaponsArray) ,
+    randomSelector(roomsArray) ,
+    ]
+    return (misteryEnvelope);
+
+}
+
+// Iteration 3 - Revealing the mistery
+
+function revealMistery (misteryEnvelope) {
+    var personaje = misteryEnvelope[0];
+    var arma = misteryEnvelope[1];
+    var habitacion = misteryEnvelope[2];
+
+    return(personaje.first_name+" " + personaje.last_name+" "+ "killed Mr.Boddy using the"+" " +arma.name+" " +"in" +" "+"the"+" " +habitacion.name+"!!!!")
+}
