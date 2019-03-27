@@ -1,3 +1,4 @@
+// Developed by Felipe / Ricardo
 // Characters
 /*
 mrGreen
@@ -185,7 +186,6 @@ function randomSelector(arr){
   }
   else { 
     randomizer(arr)
-    //console.log(randomizer(arr))
     return randomizer(arr)
   }
 
@@ -205,21 +205,20 @@ function pickMistery(){
 }
 
 pickMistery(charactersArray)
-// console.log("Mistery Killer is"+pickMistery(charactersArray))
-// Reveal Mistery
-function revealMistery(arr){
-  
-  //fun()
-  return arr`${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${firstName}!!!!`
+
+function revealMistery(array){
+  const firstName = array[0].first_name
+  const lastName = array[0].last_name
+  const weapon = array[1].name
+  const place = array[2].name
+  a = place
+  console.log(array)
+  console.log(`${firstName} ${lastName} killed Mr.Boddy using the  ${weapon} in the ${place}!!!!`)
+  return `${firstName} ${lastName} killed Mr.Boddy using the ${weapon} in the ${place}!!!!`
+ 
 }
 revealMistery(misteryReveal)
 
 function letsPlay(){
 
 }
-
-// [
-//   [killer],
-//   [weapon],
-//   [room],
-// ]
