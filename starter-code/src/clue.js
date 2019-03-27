@@ -87,21 +87,21 @@ name: Patio
 const charactersArray = []
 const weaponsArray = []
 const roomsArray = [
-'Dinning Room',
-'Conservatory',
-'Kitchen',
-'Study',
-'Library',
-'Billiard Room',
-'Lounge',
-'Ballroom',
-'Hall',
-'Spa',
-'Living Room',
-'Observatory',
-'Theater',
-'Guest House',
-'Patio'
+{name: 'Dinning Room'},
+{name:'Conservatory'},
+{name:'Kitchen'},
+{name:'Study'},
+{name:'Library'},
+{name:'Billiard Room'},
+{name:'Lounge'},
+{name:'Ballroom'},
+{name:'Hall'},
+{name:'Spa'},
+{name:'Living Room'},
+{name:'Observatory'},
+{name:'Theater'},
+{name:'Guest House'},
+{name:'Patio'}
 ]
 
 const mrGreen = {
@@ -227,6 +227,7 @@ weaponsArray.push(axe)
 weaponsArray.push(bat)
 weaponsArray.push(trophy)
 weaponsArray.push(pistol)
+
 //console.log(weaponsArray)
 
 //console.log(roomsArray)
@@ -246,19 +247,17 @@ const randomSelector = (array) => {
   return array[random]
 }
 
-const pickMistery = (arr1, arr2, arr3) => {
+const pickMistery = () => {
   let misteryEnvelope = []
 
-  let randomCharacter = randomSelector(arr1)
-  misteryEnvelope.push(randomCharacter.first_name)
-
-  let randomWeapon = randomSelector(arr2)
-  misteryEnvelope.push(randomWeapon.name)
-
-  let randomRoom = randomSelector(arr3)
-  misteryEnvelope.push(randomRoom)
+  misteryEnvelope.push(randomSelector(charactersArray))
+  misteryEnvelope.push(randomSelector(weaponsArray))
+  misteryEnvelope.push(randomSelector(roomsArray))
 
   return misteryEnvelope
 }
 
-//
+const revealMistery = (arr) => {
+  return (`${arr[0].first_name} ${arr[0].last_name} killed Mr.Boddy using the ${arr[1].name} in the ${arr[2].name}!!!!`)
+}
+
