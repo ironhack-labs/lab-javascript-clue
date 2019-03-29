@@ -185,7 +185,7 @@ function randomSelector(arr){
  //   for(i = 0; i < lista; i++){
      //   envelope.push(lista[i][Math.floor(Math.random() * lista[i].length)]);
 
-   let envelope = arr[(Math.floor(Math.random() * arr.length))];
+   let envelope = arr[(Math.floor(Math.random() * arr.length - 1))];
   //  }
   return envelope;
 }
