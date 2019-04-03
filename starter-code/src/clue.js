@@ -155,10 +155,10 @@ function pickMistery() {
 
 pickMistery(getCharacter, getWeapon, getRoom);
 
-function revealMistery() {
-  //var answer = `${pickMistery()[0].first_name} ${pickMistery()[0].last_name} killed Mr.Boddy using the ${pickMistery()[1].name} in the ${pickMistery()[2].name}!!!!`;
-  //return answer;
-  return "Victor Plum killed Mr.Boddy using the poison in the Billiard Room!!!!"
-}
+function revealMistery(data) {
+  var answer = `${data[0].first_name} ${
+    data[0].last_name
+  } killed Mr.Boddy using the ${data[1].name} in the ${data[2].name}!!!!`;
 
-// jasmin is not working!!! but my var answer is good.
+  return answer;
+}
