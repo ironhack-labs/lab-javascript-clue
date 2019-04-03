@@ -1,12 +1,4 @@
-let person = {
-  first_name: "first_name",
-  last_name: "last_name",
-  color: "color",
-  description: "description",
-  age: 0,
-  image: "image",
-  occupation: "occupation"
-};
+
 let people = {
   mrGreen: {
     first_name: "Jacob",
