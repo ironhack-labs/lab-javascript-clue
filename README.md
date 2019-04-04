@@ -86,6 +86,8 @@ Create a method `randomSelector` to randomly select one element from a card stac
 
 We need to create a `pickMistery` method that will call `randomSelector` for each card stack, and return an array with the 3 picked cards, a character, a weapon and a room. Our mystery should be stored on a `misteryEnvelope` variable.
 
+`pickMistery`doesn't expect any argument, so you will have to use the variables from the global scope.
+
 ## Iteration 3 - <small>Revealing the mistery</small>
 
 Finally, we need to reveal the mystery. Create a `revealMistery` method, that will receive our `misteryEnvelope` array as an argument and return the revealed mystery like this: 
