@@ -15,7 +15,7 @@ function Character(name, lastName, color, description, age, image, occupation) {
     this.occupation = occupation;
 }
 
-let victim = new Character(
+let mrGreen = new Character(
     "Jacob", 
     "Green", 
     "green", 
@@ -154,12 +154,19 @@ let pickChar = Math.floor(Math.random()*characters.length);
 let pickWeapon = Math.floor(Math.random()*weapons.length);
 let pickRoom = Math.floor(Math.random()*rooms.length);
 let pickExpress = Math.floor(Math.random()*expressions.length);
+let randomVictim = Math.floor(Math.random()*characters.length);
+
+if (pickChar === randomVictim) {
+    randomVictim = Math.floor(Math.random()*characters.length);
+}
+
 
 let killer = characters[pickChar];
 let weapon = weapons[pickWeapon];
 let room = rooms[pickRoom];
 let exp = expressions[pickExpress];
+let victim = characters[randomVictim];
 
-console.log(`${exp} ${killer.name} ends the life of the victim with this ${weapon.name} in the ${room.name}`);
+console.log(`${exp} ${killer.name} ends the life of the ${victim.name} with this ${weapon.name} in the ${room.name}`);
 
 
