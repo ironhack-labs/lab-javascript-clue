@@ -167,6 +167,4 @@ let room = rooms[pickRoom];
 let exp = expressions[pickExpress];
 let victim = characters[randomVictim];
 
-console.log(`${exp} ${killer.name} ends the life of the ${victim.name} with this ${weapon.name} in the ${room.name}`);
-
-
+console.log(`${exp} ${killer.name} ends the life of ${victim.name} with this ${weapon.name} in the ${room.name}`);
