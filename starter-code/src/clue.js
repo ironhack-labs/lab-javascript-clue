@@ -93,7 +93,7 @@ const pistol = {
 }
 
 // Weapons Collection
-const weapons = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol]
+const weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol]
 
 // Characters Collection
 const charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
@@ -116,3 +116,30 @@ const roomsArray = [
   'Guest House',
   'Patio'
 ];
+
+/* Random Selector
+Create a method randomSelector to randomly select one element from a card stack. The method should receive an array as an argument, and return randomly one of the elements of the array. */
+
+function randomSelector(cardDeck) {
+
+  let randomNumber = Math.random()
+  randomNumber = randomNumber * cardDeck.length
+  randomNumber = Math.floor(randomNumber)
+
+  return cardDeck[randomNumber];
+}
+
+
+/* Create the mystery
+We need to create a pickMistery method that will call randomSelector for each card stack, and return an array with the 3 picked cards, a character, a weapon and a room. Our mystery should be stored on a misteryEnvelope variable.
+ */
+
+function pickMistery() {
+  let misteryEnvelope = [];
+  misteryEnvelope.push(randomSelector(charactersArray))
+  misteryEnvelope.push(randomSelector(weaponsArray))
+  misteryEnvelope.push(randomSelector(roomsArray))
+
+  console.log(misteryEnvelope)
+  return misteryEnvelope
+}
