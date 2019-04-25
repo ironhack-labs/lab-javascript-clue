@@ -65,30 +65,39 @@ const mrMustard = {
 
 // Weapons
 const rope = {
+  name: 'rope',
   weight: 10
 }
 const knife = {
+  name: 'knife',
   weight: 8
 }
 const candlestick = {
+  name: 'candlestick',
   weight: 2
 }
 const dumbbell = {
+  name: 'dumbbell',
   weight: 30
 }
 const poison = {
+  name: 'poison',
   weight: 2
 }
 const axe = {
+  name: 'axe',
   weight: 15
 }
 const bat = {
+  name: 'bat',
   weight: 13
 }
 const trophy = {
+  name: 'trophy',
   weight: 25
 }
 const pistol = {
+  name: 'pistol',
   weight: 20
 }
 
@@ -100,21 +109,52 @@ const charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, m
 
 // Rooms' Collection
 const roomsArray = [
-  'Dinning Room',
-  'Conservatory',
-  'Kitchen',
-  'Study',
-  'Library',
-  'Billiard Room',
-  'Lounge',
-  'Ballroom',
-  'Hall',
-  'Spa',
-  'Living Room',
-  'Observatory',
-  'Theater',
-  'Guest House',
-  'Patio'
+
+  {
+    name: 'Dinning Room'
+  },
+  {
+    name: 'Conservatory'
+  },
+  {
+    name: 'Kitchen'
+  },
+  {
+    name: 'Study'
+  },
+  {
+    name: 'Library'
+  },
+  {
+    name: 'Billiard Room'
+  },
+  {
+    name: 'Lounge'
+  },
+  {
+    name: 'Ballroom'
+  },
+  {
+    name: 'Hall'
+  },
+  {
+    name: 'Spa'
+  },
+  {
+    name: 'Living Room'
+  },
+  {
+    name: 'Observatory'
+  },
+  {
+    name: 'Theater'
+  },
+  {
+    name: 'Guest House'
+  },
+  {
+    name: 'Patio'
+  }
 ];
 
 /* Random Selector
@@ -140,6 +180,24 @@ function pickMistery() {
   misteryEnvelope.push(randomSelector(weaponsArray))
   misteryEnvelope.push(randomSelector(roomsArray))
 
-  console.log(misteryEnvelope)
   return misteryEnvelope
 }
+
+
+/* Iteration 3 - Revealing the mistery
+Finally, we need to reveal the mystery. Create a revealMistery method, that will receive our misteryEnvelope array as an argument and return the revealed mystery like this:
+
+ * /
+
+function revealMistery(misteryEnvelope) {
+
+  /*   const killer = misteryEnvelope[0].first_name  misteryEnvelope[0].last_name */
+
+function revealMistery(misteryEnvelope) {
+  /* pickMistery() */
+  console.log(`${misteryEnvelope[0].first_name} ${misteryEnvelope[0].last_name} killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${misteryEnvelope[2]}!!!!`)
+  return `${misteryEnvelope[0].first_name} ${misteryEnvelope[0].last_name} killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${misteryEnvelope[2].name}!!!!`
+}
+
+
+/* revealMistery(pickMistery()) */
