@@ -238,11 +238,11 @@ var weaponsArray = [];
 weaponsArray.push(DinningRoom, Conservatory, Kitchen, Study, Library, BilliardRoom, Lounge, Ballroom, Hall, Spa, LivingRoom, Observatory, Theater, GuestHouse, Patio)
 
 function randomSelector(cardStack){
-  return cardStack[Math.floor(Math.random() * charactersArray.length + 1)]
+  return cardStack[Math.floor(Math.random() * cardStack.length)]
 }
 function pickMistery(){
   let misteryEnvelope =[];
-  misteryEnvelope.push(randomSelector(charactersArray), randomSelector(roomsArray), randomSelector(weaponsArray))
+  misteryEnvelope.push(randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray))
   return misteryEnvelope
 }
 function revealMistery(pickMistery){
