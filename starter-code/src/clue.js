@@ -279,3 +279,22 @@ function randomSelector(mazo) {
     return (mazo[Math.floor(Math.random()*mazo.length)])
  }
 }
+
+let misteryEnvelope = []
+function pickMistery() {
+  misteryEnvelope = []
+  misteryEnvelope.push(randomSelector(charactersArray))
+  misteryEnvelope.push(randomSelector(weaponsArray))
+  misteryEnvelope.push(randomSelector(roomsArray))
+  //console.log(misteryEnvelope)
+  return misteryEnvelope
+}
+
+
+function revealMistery(mistery) {
+  misteryRevealed = ""
+  console.log(`${mistery[0].first_name} ${mistery[0].last_name} killed Mr.Boddy using the ${mistery[1].name} in the ${mistery[2].name}!!!!}`)
+
+  return `${mistery[0].first_name} ${mistery[0].last_name} killed Mr.Boddy using the ${mistery[1].name} in the ${mistery[2].name}!!!!`
+
+}
