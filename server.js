@@ -3,8 +3,8 @@ const st = require("st");
 
 
 const serverConfig = {
-    path: __dirname + '/public',
-    index: 'index.html',
+    path: __dirname + '/starter-code',
+    index: 'SpecRunner.html',
     cache: false
 };
 
