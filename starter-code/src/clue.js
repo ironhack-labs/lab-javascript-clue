@@ -94,3 +94,25 @@ var roomsArray = [];
 var weaponsArray = [];
 
 /* ****************************************** */
+
+function randomSelector(listaItems) {
+    let numItems = listaItems.length;
+
+    if (numItems === 0) {
+        return;
+    }else if(numItems===1){
+        return listaItems[0];
+    }
+
+    let indexRandom =   parseInt(Math.random() * numItems);
+
+    return listaItems[indexRandom];
+
+}
+
+
+function pickMistery(){
+    /* regresa un array */
+
+}
+
