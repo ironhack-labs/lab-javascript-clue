@@ -1,4 +1,7 @@
-var Characters = [
+
+
+
+var characters = [
 
   {
     first_name:   "Jacob",
@@ -94,14 +97,36 @@ let roomsArray = [{name: "Dinning Room"},
 {name: "Theater"},
 {name: "Guest House"},
 {name: "Patio"}]
-=======
 
 
-// Characters Collection
-var charactersArray = [];
+function randomSelector () {
+  if (checkValidArray(characters) === true)
+  {
+    let characterDice = Math.floor(Math.random * characters.length);
+    let weaponsDice = Math.floor(Math.random * weaponsArray.length);
+    let roomsDice = Math.floor(Math.random * weaponsArray);
 
-// Rooms' Collection
-var roomsArray = [];
+    let gameArray = [
+      characters[charDice],
+      weaponsArray[weaponsDice],
+      roomsArray[roomsDice] ]; 
+    } else{
+      return undefined;
+    }
 
-// Weapons Collection
-var weaponsArray = [];
+  }
+
+//Check valid arrays 
+function checkValidArray (array) {
+    if (array === undefined) {
+      // console.log("El arreglo es incorrecto");
+      return false;
+    } else if (array.length === 0) {
+      // console.log("El arreglo está vacío");
+      return false;
+    } else {
+      // console.log("El arreglo es correcto");
+      return true;
+    }
+  }
+
