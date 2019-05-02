@@ -99,34 +99,55 @@ let roomsArray = [{name: "Dinning Room"},
 {name: "Patio"}]
 
 
-function randomSelector () {
-  if (checkValidArray(characters) === true)
-  {
-    let characterDice = Math.floor(Math.random * characters.length);
-    let weaponsDice = Math.floor(Math.random * weaponsArray.length);
-    let roomsDice = Math.floor(Math.random * weaponsArray);
+function randomSelector(tarjeta) {
+  return tarjeta[Math.floor(Math.random() * tarjeta.length)];
 
-    let gameArray = [
-      characters[charDice],
-      weaponsArray[weaponsDice],
-      roomsArray[roomsDice] ]; 
-    } else{
-      return undefined;
-    }
+}
 
-  }
+function pickMistery() {
+  var misteryEnvelope = []
+    misteryEnvelope.push(randomSelector(characters)),
+    misteryEnvelope.push(randomSelector(weaponsArray)),
+    misteryEnvelope.push(randomSelector(roomsArray));
+
+  return misteryEnvelope;
+}
+
+function revealMistery() {
+  return (pickMistery()[0].first_name + " " + pickMistery()[0].last_name + " killed Mr.Boddy using the " + pickMistery()[1].name + " in the " + pickMistery()[2].name)
+
+}
+revealMistery()
+
+
+//function randomSelector () {
+  //if (checkValidArray(characters) === true)
+  //{
+   // let characterDice = Math.floor(Math.random * characters.length);
+    //let weaponsDice = Math.floor(Math.random * weaponsArray.length);
+//    let roomsDice = Math.floor(Math.random * weaponsArray.l);
+//
+  //  let gameArray = [
+    //  characters[charDice],
+      //weaponsArray[weaponsDice],
+ //     roomsArray[roomsDice] ]; 
+//    } else{
+  //    return undefined;
+ //   }
+
+ // }
 
 //Check valid arrays 
-function checkValidArray (array) {
-    if (array === undefined) {
-      // console.log("El arreglo es incorrecto");
-      return false;
-    } else if (array.length === 0) {
-      // console.log("El arreglo está vacío");
-      return false;
-    } else {
-      // console.log("El arreglo es correcto");
-      return true;
-    }
-  }
+//function checkValidArray (array) {
+//    if (array === undefined) {
+//      // console.log("El arreglo es incorrecto");
+//      return false;
+//    } else if (array.length === 0) {
+//      // console.log("El arreglo está vacío");
+//      return false;
+//    } else {
+//      // console.log("El arreglo es correcto");
+//      return true;
+ //   }
+//  }
 
