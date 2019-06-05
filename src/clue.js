@@ -62,7 +62,7 @@ var mrMustard = {
 // Weapons
 var rope = {
   name: "rope",
-  weight: 10
+  weight: "10"
 };
 var knife = {
   name: "knife",
@@ -96,7 +96,6 @@ var pistol = {
   name: "pistol",
   weight: 20
 };
-
 // Rooms
 
 var Dinning = {
@@ -187,26 +186,42 @@ var weaponsArray = [
   pistol
 ];
 
-function PickRandom(arrayElements) {
-  var itemElement =
-    arrayElements[Math.floor(Math.random() * arrayElements.length)];
-  return itemElement;
+function randomSelector(cardStack) {
+  return cardStack[Math.floor(Math.random() * cardStack.length)];
 }
 
-var character1 = PickRandom(charactersArray);
-var room1 = PickRandom(roomsArray);
-var weapon1 = PickRandom(weaponsArray);
-
-function SolveMistery(persona, hab, arma) {
-  console.log(
-    persona.first_name +
-      " " +
-      persona.last_name +
-      " ha matado a Mr. Boddy usando " +
-      arma.name +
-      " en " +
-      hab.name
-  );
+function pickMistery() {
+  var mistery = [""];
+  mistery[0] = randomSelector(charactersArray);
+  mistery[2] = randomSelector(roomsArray);
+  mistery[1] = randomSelector(weaponsArray);
+  return mistery;
 }
 
-SolveMistery(character1, room1, weapon1);
+misteryEnvelope = pickMistery();
+
+function revealMistery(misteryEnvelope) {
+  /*console.log(
+    `${misteryEnvelope[0].first_name} ${
+      misteryEnvelope[0].last_name
+    } killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${
+      misteryEnvelope[2].name
+    }`
+  );*/
+  var solvedMistery = "";
+  solvedMistery +=
+    misteryEnvelope[0].first_name +
+    " " +
+    misteryEnvelope[0].last_name +
+    " killed Mr.Boddy using the " +
+    misteryEnvelope[1].name +
+    " in the " +
+    misteryEnvelope[2].name +
+    "!!!!";
+
+  //" misteryEnvelope[0].first_name misteryEnvelope[0].last_name killed Mr.Body using the ${misteryEnvelope[2].name} in the misteryEnvelope[1].name ";
+
+  return solvedMistery;
+}
+solvedMistery = revealMistery(misteryEnvelope);
+console.log(solvedMistery);
