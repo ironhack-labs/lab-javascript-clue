@@ -99,16 +99,23 @@ const roomsArray=[
 
 
 let randomSelector=(arr)=> { 
-    let randomName = Math.floor(Math.random() * arr.length -1)
-    return arr[randomName]
-    
+    if(arr.length===1){
+      return arr[0]
+    }else {
+      let randomName = Math.floor(Math.random() * arr.length -1)
+      //console.log(arr[randomName])
+      return arr[randomName]
+  
+    } 
+   
+  
 }
 
 
 const pickMistery =()=>{
   let misteryEnvelope = []
   misteryEnvelope.push(randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray))
-  console.log(misteryEnvelope)
+  //console.log(misteryEnvelope)
   return misteryEnvelope
 
 }
