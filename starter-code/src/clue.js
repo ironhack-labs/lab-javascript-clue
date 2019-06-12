@@ -116,15 +116,8 @@ function randomSelector(array){
 
  function pickMistery(){
 
-    const misteryEnvelope = [];
-    let characterSelected =  randomSelector(charactersArray);
-    let itemSelected =  randomSelector(weaponsArray);
-    let roomSelected = randomSelector(roomsArray);
-        
-    misteryEnvelope.push(characterSelected);
-    misteryEnvelope.push(itemSelected);
-    misteryEnvelope.push(roomSelected);
-
+    
+    const misteryEnvelope = [randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray)];
 return misteryEnvelope;
  }
 
