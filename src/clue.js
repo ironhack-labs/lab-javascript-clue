@@ -201,23 +201,28 @@ function pickMistery() {
 misteryEnvelope = pickMistery();
 
 function revealMistery(misteryEnvelope) {
-  /*console.log(
-    `${misteryEnvelope[0].first_name} ${
-      misteryEnvelope[0].last_name
-    } killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${
-      misteryEnvelope[2].name
-    }`
-  );*/
+  // console.log(
+  //   `${misteryEnvelope[0].first_name} ${
+  //     misteryEnvelope[0].last_name
+  //   } killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${
+  //     misteryEnvelope[2].name
+  //   }`
+  // );
+
   var solvedMistery = "";
-  solvedMistery +=
-    misteryEnvelope[0].first_name +
-    " " +
-    misteryEnvelope[0].last_name +
-    " killed Mr.Boddy using the " +
-    misteryEnvelope[1].name +
-    " in the " +
-    misteryEnvelope[2].name +
-    "!!!!";
+  solvedMistery += `${misteryEnvelope[0].first_name} ${
+    misteryEnvelope[0].last_name
+  } killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${
+    misteryEnvelope[2].name
+  }!!!!`;
+  //   misteryEnvelope[0].first_name +
+  //   " " +
+  //   misteryEnvelope[0].last_name +
+  //   " killed Mr.Boddy using the " +
+  //   misteryEnvelope[1].name +
+  //   " in the " +
+  //   misteryEnvelope[2].name +
+  //   "!!!!";
 
   //" misteryEnvelope[0].first_name misteryEnvelope[0].last_name killed Mr.Body using the ${misteryEnvelope[2].name} in the misteryEnvelope[1].name ";
 
