@@ -5,6 +5,7 @@ describe('Find a random element of the array - randomSelector', function () {
   it('Defines randomSelector', function () {
     expect(typeof randomSelector).toBe('function');
   });
+  
 
   it('Return undefined if the array is empty', function () {
     expect(randomSelector([])).toBe(undefined);
