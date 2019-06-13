@@ -1,4 +1,4 @@
-const ListCharacters = [
+const charactersArray = [
 
 {
 first_name:   "Jacob",
@@ -24,7 +24,7 @@ color:        "purple",
 description:  "Billionare video game designer",
 age:          22,
 image:        "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
-occupation:   "Designer"
+ocupation:   "Designer"
 },
 {
     first_name:   "Kasandra",
@@ -42,7 +42,7 @@ color:        "blue",
 description:  "She is from a wealthy family and uses her status and money to earn popularity",
 age:          36,
 image:        "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
-occupation:   "Socialité"
+ocupation:   "Socialité"
 },
 {
 first_name:   "Jack",
@@ -51,13 +51,13 @@ color:        "yellow",
 description:  "He is a former football player who tries to get by on his former glory",
 age:          62,
 image:        "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
-occupation:   "Retired Football player"
+ocupation:   "Retired Football player"
 }]
 
 
 
 // Weapons
-const ListWeapons = [
+const weaponsArray = [
 { name: "rope", weight: 10 },
 { name: "knife", weight: 8 },
 { name: "candlestick", weight: 2 },
@@ -71,7 +71,7 @@ const ListWeapons = [
 
 // Rooms
 
-const ListRooms = [
+const roomsArray = [
         {name: "Dinning Room"},
         {name: "Conservatory"},
         {name: "Kitchen"},
@@ -88,35 +88,14 @@ const ListRooms = [
         {name: "Guest House"},
         {name: "Patio"}
     ]
-// Characters Collection
-var charactersArray = [];
-charactersArray.push(ListCharacters);
-
-// Rooms' Collection
-var roomsArray = [];
-roomsArray.push(ListRooms);
-
-// Weapons Collection
-var weaponsArray = [];
-weaponsArray.push(ListWeapons);
 
 function randomSelector(array){
-    if(array.length === 0){
-        return undefined;
-    }else if(array.length === 1){
-        return array[0];
- }
-
-    let characterSelector = array[Math.floor(Math.random() * array.length)];
-     return characterSelector;
+    let characterSelector = Math.floor(Math.random() * array.length);
+     return array[characterSelector];
  }
  
-
- 
-
  function pickMistery(){
 
-    
     const misteryEnvelope = [randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray)];
 return misteryEnvelope;
  }
