@@ -179,12 +179,8 @@ function pickMistery(){
 }
 
 //REVEAL MISTERY
-function revealMistery(){
-  let misteryOptions = pickMistery();
-  console.log(misteryOptions);
-  let mistery = `${misteryOptions[0].first_name} ${misteryOptions[0].last_name} killed Mr.Boddy using the ${misteryOptions[1].name} in the ${misteryOptions[2].name}!!!!'`
-  console.log(mistery);
-  return mistery;
+function revealMistery(pickMistery){
+  return `${pickMistery[0].first_name} ${pickMistery[0].last_name} killed Mr.Boddy using the ${pickMistery[1].name} in the ${pickMistery[2].name}!!!!`;
 }
 
 revealMistery();
