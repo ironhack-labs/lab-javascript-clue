@@ -17,48 +17,48 @@ class Weapon {
   }
 }
 
-let mrGreen = new Character('Jacob', 'Green', 'green', 'He has a lot of connections', 45, 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg', 'Entrepreneur');
-let drOrchid = new Character('Doctor', 'Orchid', 'white', 'PhD in plant toxicology. Adopted daughter of Mr. Boddy', 26, 'http://www.radiotimes.com/uploads/images/Original/111967.jpg', 'Scientist');
-let profPlum = new Character('Victor', 'Plum', 'purple', 'Billionare video game designer', 22, 'https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg', 'Designer');
-let missScarlet = new Character('Kasandra', 'Scarlet', 'red', 'She is an A-list movie star with a dark past', 31, 'https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg', 'Actor');
-let mrsPeacock = new Character('Eleanor', 'Peacock', 'blue', 'She is from a wealthy family and uses her status and money to earn popularity', 36, 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg', 'Socialité');
-let mrMustard = new Character('Jack', 'Mustard', 'yellow', 'He is a former football player who tries to get by on his former glory', 62, 'https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg', 'Retired Football player');
+const mrGreen = new Character('Jacob', 'Green', 'green', 'He has a lot of connections', 45, 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg', 'Entrepreneur');
+const drOrchid = new Character('Doctor', 'Orchid', 'white', 'PhD in plant toxicology. Adopted daughter of Mr. Boddy', 26, 'http://www.radiotimes.com/uploads/images/Original/111967.jpg', 'Scientist');
+const profPlum = new Character('Victor', 'Plum', 'purple', 'Billionare video game designer', 22, 'https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg', 'Designer');
+const missScarlet = new Character('Kasandra', 'Scarlet', 'red', 'She is an A-list movie star with a dark past', 31, 'https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg', 'Actor');
+const mrsPeacock = new Character('Eleanor', 'Peacock', 'blue', 'She is from a wealthy family and uses her status and money to earn popularity', 36, 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg', 'Socialité');
+const mrMustard = new Character('Jack', 'Mustard', 'yellow', 'He is a former football player who tries to get by on his former glory', 62, 'https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg', 'Retired Football player');
 
-let w1 = new Weapon ('rope', 10);
-let w2 = new Weapon ('knife', 8);
-let w3 = new Weapon ('candlestick', 2);
-let w4 = new Weapon ('dumbbell', 30);
-let w5 = new Weapon ('poison', 2);
-let w6 = new Weapon ('axe', 15);
-let w7 = new Weapon ('bat', 13);
-let w8 = new Weapon ('trophy', 25);
-let w9 = new Weapon ('pistol', 20);
+const w1 = new Weapon ('rope', 10);
+const w2 = new Weapon ('knife', 8);
+const w3 = new Weapon ('candlestick', 2);
+const w4 = new Weapon ('dumbbell', 30);
+const w5 = new Weapon ('poison', 2);
+const w6 = new Weapon ('axe', 15);
+const w7 = new Weapon ('bat', 13);
+const w8 = new Weapon ('trophy', 25);
+const w9 = new Weapon ('pistol', 20);
 
-let r1 = {name: 'Dinning Room',};
-let r2 = {name: 'Conservatory',};
-let r3 = {name: 'Kitchen',};
-let r4 = {name: 'Study',};
-let r5 = {name: 'Library',};
-let r6 = {name: 'Billiard Room',};
-let r7 = {name: 'Lounge',};
-let r8 = {name: 'Ballroom',};
-let r9 = {name: 'Hall',};
-let r10 = {name: 'Spa',};
-let r11= {name: 'Living Room',};
-let r12 = {name: 'Observatory',};
-let r13 = {name: 'Theater',};
-let r14 = {name: 'Guest House',};
-let r15 =  {name: 'Patio',};
+const r1 = {name: 'Dinning Room',};
+const r2 = {name: 'Conservatory',};
+const r3 = {name: 'Kitchen',};
+const r4 = {name: 'Study',};
+const r5 = {name: 'Library',};
+const r6 = {name: 'Billiard Room',};
+const r7 = {name: 'Lounge',};
+const r8 = {name: 'Ballroom',};
+const r9 = {name: 'Hall',};
+const r10 = {name: 'Spa',};
+const r11= {name: 'Living Room',};
+const r12 = {name: 'Observatory',};
+const r13 = {name: 'Theater',};
+const r14 = {name: 'Guest House',};
+const r15 =  {name: 'Patio',};
 
 
 // Characters Collection
-var charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
+const charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 
 // Rooms' Collection
-var roomsArray = [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15];
+const roomsArray = [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15];
 
 // Weapons Collection
-var weaponsArray = [w1, w2, w3, w4, w5, w6, w7, w8, w9];
+const weaponsArray = [w1, w2, w3, w4, w5, w6, w7, w8, w9];
 
 const randomSelector = cardStack => {
   if (cardStack.length === 0) {
@@ -79,4 +79,4 @@ const revealMistery = misteryEnvelope => {
 }
 
 let misteryEnvelope = pickMistery(charactersArray, weaponsArray, roomsArray);
-console.log(revealMistery(misteryEnvelope));
+revealMistery(misteryEnvelope);
