@@ -72,13 +72,13 @@ name: pistol      ---   weight: 20
 
   
 var mrGreen = {
-    'first_name': 'Jacob',
-    'last_name': 'Green',
-    'color': 'green',
-    'description': 'He has a lot of connections',
-    'age': 45,
-    'image': 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
-    'occupation': 'Entrepreneur'
+    first_name: 'Jacob',
+    last_name: 'Green',
+    color: 'green',
+    description: 'He has a lot of connections',
+    age: 45,
+    image: 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
+    occupation: 'Entrepreneur'
 }
 var drOrchid = {
     first_name : 'Doctor',
@@ -176,12 +176,13 @@ function pickMistery() {
     misteryEnvelope.push(randomSelector(charactersArray));
     misteryEnvelope.push(randomSelector(weaponsArray));
     misteryEnvelope.push(randomSelector(roomsArray));
+    console.log(misteryEnvelope);
+    
     return misteryEnvelope;
 }
 
 function revealMistery(){
     const revealed = pickMistery();
-    const text = `${revealed[0].first_name} ${revealed[0].last_name} killed Mr.Boddy using the ${revealed[1].name} in the ${revealed[2]}!!!!`;
-    return text;
+    return `${revealed[0].first_name} ${revealed[0].last_name} killed Mr.Boddy using the ${revealed[1].name} in the ${revealed[2]}!!!!`;
 }
 console.log(revealMistery());
