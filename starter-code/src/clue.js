@@ -197,7 +197,7 @@ const trophy = {
 }
 
 const pistol = {
-  name: pistol,
+  name: "pistol",
   weight: 20
 }
 
@@ -273,28 +273,25 @@ weaponsArray.push(dinningRoom, conservatory, kitchen, study, library, billiardRo
 //Random Selector
 function randomSelector(array){
   if(array.length > 0){
-    return Math.floor((Math.random()* array.length))
+    return array[Math.floor((Math.random() * array.length))]
+  }
+  else if(array.length === 1){
+    return array[0]
+  }
+  else {
+    return undefined
   }
 }
 
 // Create the mystery
-let misteryEnvelope = []
 function pickMistery(){
-
-  let misteryCharacter = charactersArray[randomSelector(charactersArray)]
-
-  let misteryWeapon = weaponsArray[randomSelector(weaponsArray)]
-
-  let misteryRoom = roomsArray[randomSelector(misteryRoom)]
-
-  misteryEnvelope.push(misteryCharacter, misteryWeapon, misteryRoom)
-
-  return misteryEnvelope
+  let misteryEnvelope = [randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray)]
+  return misteryEnvelope  
 }
 
 //Iteration 3 - Revealing the mistery
 function revealMistery(misteryEnvelope){
   pickMistery()
-  return `${misteryEnvelope[0].first_name} ${misteryEnvelope[0].last_name} killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${misteryEnvelope[2].name}`
+  return `${misteryEnvelope[0].first_name} ${misteryEnvelope[0].last_name} killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${misteryEnvelope[2].name}!!!!`
 }
 
