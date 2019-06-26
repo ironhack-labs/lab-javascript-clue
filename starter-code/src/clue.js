@@ -1,4 +1,3 @@
-// Characters
 const mrGreen = {
   first_name: "Jacob",
   last_name: "Green",
@@ -125,28 +124,35 @@ let guestHouse = { name: "Guest House" }
 let patio = { name: "Patio" }
 
 // Characters Collection
-var charactersArray = [mrGreen, DrOrchid, profPlum, mrsScarlet, mrsPeacock, mrMustard];
+var charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 
 // Rooms' Collection
-var roomsArray = [dinningRoom, conservator, kitchen, study, library,
+var roomsArray = [dinningRoom, conservatory, kitchen, study, library,
   billiardRoom, lounge, ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio]
 
 // Weapons Collection
 var weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
 
-function randomSelector(arr) {
-  return arr[Math.floor(Math.random(arr) * arr.length)]
+function randomSelector(array) {
+  return array[Math.floor(Math.random() * array.length)]
 }
 
-/*We need to create a pickMistery method that will call randomSelector for each
- card stack, and return an array with the 3 picked cards, a character, a weapon
-  and a room. Our mystery should be stored on a misteryEnvelope variable.*/
 
 let mysteryEnvelope = []
-
-function pickMystery(arr1, arr2, arr3) {
-  mysteryEnvelope.push(randomSelector(arr1), randomSelector(arr2), randomSelector(arr3))
+function pickMistery(arr1, arr2, arr3) {
+  let randomCharacter = randomSelector(arr1);
+  let randomRoom = randomSelector(arr2);
+  let randomWeapon = randomSelector(arr3);
+  mysteryEnvelope.push(randomCharacter, randomWeapon, randomRoom)
   return mysteryEnvelope
 }
 
-pickMystery(charactersArray, roomsArray, weaponsArray)
+pickMistery(charactersArray, roomsArray, weaponsArray)
+
+
+function revealMystery(mysteryEnvelope) {
+  return `${mysteryEnvelope[0][`first_name`]} ${mysteryEnvelope[0][`last_name`]} killed Mr. Brody using ${mysteryEnvelope[1][`name`]} in the ${mysteryEnvelope[2][`name`]}.`
+}
+
+revealMystery(mysteryEnvelope)
+
