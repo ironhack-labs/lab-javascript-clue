@@ -7,7 +7,7 @@ color:        green
 description:  He has a lot of connections
 age:          45
 image:        https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg
-occupation:   Entrepreneur
+occupation:   Entrepreneur 
 
 drOrchid
 first_name:   Doctor
