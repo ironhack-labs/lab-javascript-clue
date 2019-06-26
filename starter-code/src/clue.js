@@ -101,47 +101,67 @@ weaponsArray.push(
   pistol
 );
 
-var roomsArray = [
-  "Dinning Room",
-  "Conservatory",
-  "Kitchen",
-  "Study",
-  "Library",
-  "Billiard Room",
-  "Lounge",
-  "Ballroom",
-  "Hall",
-  "Spa",
-  "Living Room",
-  "Observatory",
-  "Theater",
-  "Guest House",
-  "Patio"
-];
-console.log(charactersArray);
-console.log(weaponsArray);
-console.log(roomsArray);
+const dining = { name: "Dinning Room" };
+const conserv = { name: "Conservatory" };
+const kitch = { name: "Kitchen" };
+const study = { name: "Study" };
+const lib = { name: "Library" };
+const bill = { name: "Billiard Room" };
+const lounge = { name: "Lounge" };
+const ballr = { name: "Ballroom" };
+const hall = { name: "Hall" };
+const spa = { name: "Spa" };
+const livin = { name: "Living Room" };
+const obs = { name: "Observatory" };
+const theater = { name: "Theater" };
+const guest = { name: "Guest House" };
+const patio = { name: "Patio" };
 
+let roomsArray = [];
+
+roomsArray.push(
+  dining,
+  conserv,
+  kitch,
+  study,
+  lib,
+  bill,
+  lounge,
+  ballr,
+  hall,
+  spa,
+  livin,
+  obs,
+  theater,
+  guest,
+  patio
+);
+console.log(roomsArray);
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-function randomSelector(array) {
-  if (array.length == 0) {
+function randomSelector(arr) {
+  if (arr.length === 0) {
     return undefined;
+  } else {
+    return arr[getRandomInt(arr.length)];
   }
-  console.log(array[getRandomInt(array.length)]);
-  return array[getRandomInt(array.length)];
 }
 
 function pickMistery() {
   let misteryEnvelope = [];
-  let murderer = randomSelector[charactersArray].id;
-  console.log(murderer);
-  misteryEnvelope.push(randomSelector[charactersArray].id);
-  misteryEnvelope.push(randomSelector[weaponsArray].name);
-  misteryEnvelope.push(randomSelector[roomsArray]);
-  console.log(misteryEnvelope);
+
+  misteryEnvelope.push(randomSelector(charactersArray));
+  misteryEnvelope.push(randomSelector(weaponsArray));
+  misteryEnvelope.push(randomSelector(roomsArray));
   return misteryEnvelope;
 }
-pickMistery();
+
+function revealMistery(arr) {
+  return `${arr[0].first_name} ${arr[0].last_name} killed Mr.Boddy using the ${
+    arr[1].name
+  } in the ${arr[2].name}!!!!`;
+}
+
+revealMistery(pickMistery());
