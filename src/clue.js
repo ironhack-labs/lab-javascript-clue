@@ -97,29 +97,55 @@ var trophy = {
 var pistol = {
   name: 'pistol',
   weight: 20
-
 }
 
-
-
 // Rooms
-/*
-Dinning Room
-Conservatory
-Kitchen
-Study
-Library
-Billiard Room
-Lounge
-Ballroom
-Hall
-Spa
-Living Room
-Observatory
-Theater
-Guest House
-Patio
-*/
+
+  var diningRoom = {
+    name: 'Dinning Room'
+  }
+  var conservatory = {
+    name: 'Conservatory'
+  }
+  var kitchen = {
+    name: 'Kitchen'
+  }
+  var study = {
+    name: 'Study'
+  }
+  var library = {
+    name: 'Library'
+  }
+  var billiardRoom = {
+    name: 'Billiard Room'
+  }
+  var lounge = {
+    name: 'Lounge'
+  }
+  var ballroom = {
+    name: 'Ballroom'
+  }
+  var hall = {
+    name: 'Hall'
+  }
+  var spa = {
+    name: 'Spa'
+  }
+  var livingRoom = {
+    name: 'Living Room'
+  }
+  var observatory = {
+    name: 'Observatory'
+  }
+  var theater = {
+    name: 'Theater'
+  }
+  var guestRoom = {
+    name: 'Guest House'
+  }
+  var patio = {
+    name: 'Patio'
+  }
 
 // Characters Collection
 var charactersArray = [];
@@ -170,8 +196,7 @@ function pickMistery () {
 var envelope = pickMistery();
 
 function revealMistery(envelope){
-  console.log(typeof envelope[2])
-  return `${envelope[0].first_name} ${envelope[0].last_name} killed Mr. Boddy using the ${envelope[1].name} in the ${envelope[2]}!!!!`;
+  return `${envelope[0].first_name} ${envelope[0].last_name} killed Mr.Boddy using the ${envelope[1].name} in the ${envelope[2].name}!!!!`;
 }
 
-console.log(revealMistery(envelope));
+revealMistery(envelope);
