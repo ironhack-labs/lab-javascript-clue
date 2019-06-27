@@ -2,6 +2,14 @@
 // 1. Create data structures for Characters, Weapons, Rooms
 // -----------------------------------------------------------------------------
 
+
+// Create some array placeholders (decks of cards)
+
+var charactersArray = [];
+var weaponsArray = [];
+var roomsArray = [];
+
+
 // Character constructor
 function Character(first_name,last_name,color,description,age,image,occupation) {
   this.first_name = first_name;
@@ -11,18 +19,41 @@ function Character(first_name,last_name,color,description,age,image,occupation) 
   this.age = age;
   this.image = image;
   this.occupation = occupation;
+
+  this.addToArr = function(char) {
+    charactersArray.push(char);
+  }
+  this.addToArr(this);
 };
 
 // Weapon constructor
 function Weapon(name, weight) {
   this.name = name;
   this.weight = weight;
+
+  this.addToArr = function(weapon) {
+    weaponsArray.push(weapon);
+  }
+  this.addToArr(this);
 };
 
 // Room constructor
 function Room(name) {
   this.name = name;
+
+  this.addToArr = function(room) {
+    roomsArray.push(room);
+  }
+  this.addToArr(this);
 };
+
+// MysteryEnvelope constructor
+function MysteryEnvelope(character, weapon, room) {
+  this.character = character;
+  this.weapon = weapon;
+  this.room = room;
+}
+
 
 // -----------------------------------------------------------------------------
 // 2. Create the instances
@@ -64,24 +95,9 @@ var theater = new Room('Theater');
 var guestHouse = new Room('Guest House');
 var patio = new Room('Patio');
 
-// -----------------------------------------------------------------------------
-// 3. Create the collections
-// -----------------------------------------------------------------------------
-
-// Characters Collection
-var charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
-
-// Weapons Collection
-var weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
-
-// Rooms' Collection
-var roomsArray =   [diningRoom, conervatory, kitchen, study, library, billiardRoom, lounge,
-                    ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio];
-
-
 
 // -----------------------------------------------------------------------------
-// 4. Create the game
+// 3. Create the game
 // -----------------------------------------------------------------------------
 
 // Constructor to create games of Clue
@@ -92,19 +108,17 @@ function Clue(charactersArray, weaponsArray, roomsArray) {
   };
 
   this.pickMystery = function() {
-    let mysteryEnvelope = [];
-    mysteryEnvelope.push( this.randomSelector(charactersArray) );
-    mysteryEnvelope.push( this.randomSelector(weaponsArray) );
-    mysteryEnvelope.push( this.randomSelector(roomsArray) );
-
+    var mysteryEnvelope = new MysteryEnvelope( this.randomSelector(charactersArray),
+                                              this.randomSelector(weaponsArray),
+                                              this.randomSelector(roomsArray)  )
     return mysteryEnvelope;
   }
 
   this.revealMystery = function(mysteryEnvelope) {
-    let first_name = mysteryEnvelope[0].first_name;
-    let last_name = mysteryEnvelope[0].last_name;
-    let weapon = mysteryEnvelope[1].name;
-    let room = mysteryEnvelope[2].name;
+    let first_name = mysteryEnvelope.character.first_name;
+    let last_name = mysteryEnvelope.character.last_name;
+    let weapon = mysteryEnvelope.weapon.name;
+    let room = mysteryEnvelope.room.name;
     console.log(`${first_name} ${last_name} killed Mr.Boddy using the ${weapon} in the ${room}!!!!`)
   }
 
@@ -116,7 +130,7 @@ function Clue(charactersArray, weaponsArray, roomsArray) {
 
 
 // -----------------------------------------------------------------------------
-// 5. Play the game
+// 4. Play the game
 // -----------------------------------------------------------------------------
 
 let firstGameOfClue = new Clue(charactersArray, weaponsArray, roomsArray);
