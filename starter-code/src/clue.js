@@ -10,7 +10,6 @@ var roomsArray = [];
 // Weapons Collection
 var weaponsArray = [];
 
-
 function Character(firstName,lastName,color,description,age,image,occupation) {
   this.firstName = firstName;
   this.lastName = lastName;
@@ -137,6 +136,8 @@ var guestHouse = new Room("Guest House");
 var patio = new Room("Patio");
 
 
+// FIRST METHOD WITH FUNCTIONS  
+
 // RANDOM SELECTOR
 
 function randomSelector(array){
@@ -158,4 +159,38 @@ function revealMistery(envelope) {
   console.log(
     `${envelope[0].firstName} ${envelope[0].lastName} killed Mr.Boddy using the ${envelope[1].name} in the ${envelope[2].name}!!!!`
     );
+}
+
+
+//SECOND METHOD WITH METHODS
+
+function Game(weapons,characters,rooms) {
+
+  this.weapons=weapons;
+  this.characters=characters;
+  this.rooms=rooms;
+  this.misteryEnvelope = [];
+
+  this.randomSelector = function(array){
+    return array[Math.floor(Math.random() * [array.length])];
+  };
+
+  this.pickMistery = function() {
+    this.misteryEnvelope = [this.randomSelector(charactersArray),this.randomSelector(weaponsArray),this.randomSelector(roomsArray)];
+  };
+
+  this.revealMistery = function() {
+    var envelope = this.misteryEnvelope;
+    console.log(
+      `${envelope[0].firstName} ${envelope[0].lastName} killed Mr.Boddy using the ${envelope[1].name} in the ${envelope[2].name}!!!!`
+    );
+  };
+
+  this.restart = function() {
+    this.pickMistery();
+  };
+
+  this.pickMistery();
+  this.revealMistery();
+
 }
