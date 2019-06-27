@@ -1,3 +1,155 @@
+// Characters Collection
+var charactersArray = [];
+
+// Rooms' Collection
+var roomsArray = [
+    "Dinning Room",
+    "Conservatory",
+    "Kitchen",
+    "Study",
+    "Library",
+    "Billiard Room",
+    "Lounge",
+    "Ballroom",
+    "Hall",
+    "Spa",
+    "Living Room",
+    "Observatory",
+    "Theater",
+    "Guest House",
+    "Patio"
+];
+// roomsArray.push(DinningRoom, Conservatory, Kitchen, Study, Library, BilliardRoom, Lounge, Ballroom, Hall, Spa, LivingRoom, Observatory, Theater, GuestHouse, Patio);
+
+// Weapons Collection
+var weaponsArray = [];
+// weaponsArray.push(rope, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
+
+function Character(first, last, color, description, age, image, occupation) {
+    this.first_name = first;
+    this.last_name = last;
+    this.color = color;
+    this.description = description;
+    this.age = age;
+    this.image = image;
+    this.occupation = occupation;
+    this.pushToTheList = function() {
+        charactersArray.push(this);
+    }
+    this.pushToTheList();
+}
+
+function Weapon(name, weight) {
+    this.name = name;
+    this.weight = weight;
+    this.pushToTheList = function() {
+        weaponsArray.push(this);
+    }
+    this.pushToTheList();
+}
+
+var mrGreen = new Character(
+    "Jacob",
+    "Green",
+    "green",
+    "He has a lot of connections",
+    45,
+    "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+    "Entrepreneur"
+);
+
+var drOrchid = new Character(
+    "Doctor",
+    "Orchid",
+    "white",
+    "PhD in plant toxicology.Adopted daughter of Mr.Boddy",
+    26,
+    "http: //www.radiotimes.com/uploads/images/Original/111967.jpg",
+    "Scientist"
+);
+
+var profPlum = new Character(
+    "Victor",
+    "Plum",
+    "purple",
+    "Billionare video game designer",
+    22,
+    "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
+    "Designer"
+);
+
+var missScarlet = new Character(
+    "Kasandra",
+    "Scarlet",
+    "red",
+    "She is an A-list movie star with a dark past",
+    31,
+    "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
+    "Actor"
+);
+
+var mrsPeacock = new Character(
+    "Eleanor",
+    "Peacock",
+    "blue",
+    "She is from a wealthy family and uses her status and money to earn popularity",
+    36,
+    "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
+    "Socialité"
+);
+
+var mrMustard = new Character(
+    "Jack",
+    "Mustard",
+    "yellow",
+    "He is a former football player who tries to get by on his former glory",
+    62,
+    "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
+    "Retired Football player"
+);
+
+var weapon1 = new Weapon("rope", 10);
+var weapon2 = new Weapon("candlestick", 2);
+var weapon3 = new Weapon("dumbbell", 30);
+var weapon4 = new Weapon("poison", 2);
+var weapon5 = new Weapon("axe", 15);
+var weapon6 = new Weapon("bat", 13);
+var weapon7 = new Weapon("trophy", 25);
+var weapon8 = new Weapon("pistol", 20);
+
+var misteryEnvelope = [];
+
+function randomSelector(array) {
+    var card;
+    if (array === charactersArray) {
+        card = `${array[Math.floor(Math.random() * array.length)]["first_name"]} ${array[Math.floor(Math.random() * array.length)]["last_name"]}`
+        misteryEnvelope.push(card)
+    } else if (array === weaponsArray) {
+        card = array[Math.floor(Math.random() * array.length)]["name"]
+        misteryEnvelope.push(card)
+    } else {
+        card = array[Math.floor(Math.random() * array.length)]
+        misteryEnvelope.push(card)
+    }
+}
+
+
+function pickMistery(func) {
+    func(charactersArray);
+    func(weaponsArray);
+    func(roomsArray);
+}
+
+
+function revealMistery() {
+    pickMistery(randomSelector);
+    return `${misteryEnvelope[0]} killed Mr.Boddy using the ${misteryEnvelope[1]} in the ${misteryEnvelope[2]}!!!!`;
+
+}
+
+
+
+
 // Characters
 /*
 mrGreen
@@ -83,12 +235,3 @@ name: Theater
 name: Guest House
 name: Patio
 */
-
-// Characters Collection
-var charactersArray = [];
-
-// Rooms' Collection
-var roomsArray = [];
-
-// Weapons Collection
-var weaponsArray = [];
