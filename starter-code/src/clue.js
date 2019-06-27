@@ -116,6 +116,35 @@ function randomSelector(array) {
     }
 }
 
-let weapon = randomSelector(weaponsArray)
-let room = randomSelector(roomsArray);
+let weapon = randomSelector(weaponsArray):
+    let room = randomSelector(roomsArray);
 let gameCharacter = randomSelector(charactersArray);
+
+//Create the mystery
+//we need to create a method 'misteryEnvelope' that contains all the other object (rooms, characters...) 
+//(Methods are functions stored as object properties.)
+/* We need to create a pickMistery method that will call randomSelector 
+for each card stack, and return an array with the 3 picked cards, a character, a weapon and a room. 
+Our mystery should be stored on a misteryEnvelope variable.*/
+
+//???? I dont understand how to access the single steps 
+//First misteryEnvelope variable that contains the 2 picked cards 
+var misteryEnvelope = {
+    weaponsArray,
+    roomsArray,
+    charactersArray
+    //then I nedd the pickMistery method that will call randomSelector  > method means .pickMistery
+}
+//?????????????????????????????????????????????????
+
+var misteryEnvelope = pickMistery(ranMath.(Math.random() * Math.floor(max));
+}randomSelector.pickMistery(misteryEnvelope)
+//and now I want a return of all 3 arrays (weapon, room, character) but with a random content
+//?????????????????????????????????????????????????
+//Iteration 3 - Revealing the mistery
+/* Finally, we need to reveal the mystery. Create a revealMistery method, 
+that will receive our misteryEnvelope array as an argument and return the revealed mystery 
+like this:
+<FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!!*/
+
+return mystery { `<FIRST NAME> <LAST NAME> killed Mr.Boddy using the <WEAPON> in the <PLACE>!!!!` }
