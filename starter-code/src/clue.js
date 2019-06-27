@@ -52,7 +52,10 @@ function MysteryEnvelope(character, weapon, room) {
   this.character = character;
   this.weapon = weapon;
   this.room = room;
+  this.solutionMessage = `${this.character.first_name} ${this.character.last_name} killed Mr.Boddy using the ${this.weapon.name} in the ${this.room.name}!!!!`
 }
+
+
 
 
 // -----------------------------------------------------------------------------
@@ -115,30 +118,34 @@ function Clue(charactersArray, weaponsArray, roomsArray) {
   }
 
   this.revealMystery = function(mysteryEnvelope) {
-    let first_name = mysteryEnvelope.character.first_name;
-    let last_name = mysteryEnvelope.character.last_name;
-    let weapon = mysteryEnvelope.weapon.name;
-    let room = mysteryEnvelope.room.name;
-    console.log(`${first_name} ${last_name} killed Mr.Boddy using the ${weapon} in the ${room}!!!!`)
+    return mysteryEnvelope.solutionMessage;
   }
 
   this.startGame = function() {
     let mysteryEnvelope = this.pickMystery();    
-    this.revealMystery(mysteryEnvelope);        
+
+    // Display solution in console
+    let solutionMessage = this.revealMystery(mysteryEnvelope);
+    console.log(solutionMessage);
+
+    return mysteryEnvelope;        
   }
 }
 
-
 // -----------------------------------------------------------------------------
-// 4. Play the game
+// 4. Set up the game
 // -----------------------------------------------------------------------------
 
 let firstGameOfClue = new Clue(charactersArray, weaponsArray, roomsArray);
-firstGameOfClue.startGame();
 
-let secondGameOfClue = new Clue(charactersArray, weaponsArray, roomsArray);
-secondGameOfClue.startGame();
+// -----------------------------------------------------------------------------
+// 5. Control the game from html
+// -----------------------------------------------------------------------------
 
-let thirdGameOfClue = new Clue(charactersArray, weaponsArray, roomsArray);
-thirdGameOfClue.startGame();
+document.getElementById("start-button").addEventListener("click", function() {
+  mysteryEnvelope = firstGameOfClue.startGame()
+  document.getElementById("solutionMessage").innerHTML = mysteryEnvelope.solutionMessage;
+  document.getElementById("characterImage").innerHTML = `<img src=${mysteryEnvelope.character.image} width=250px>`;
+  document.getElementById("characterDescription").innerHTML = mysteryEnvelope.character.description;  
+});
 
