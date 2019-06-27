@@ -1,32 +1,4 @@
-// Characters
 /*
-mrGreen
-first_name:   Jacob
-last_name:    Green
-color:        green
-description:  He has a lot of connections
-age:          45
-image:        https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg
-occupation:   Entrepreneur
-
-drOrchid
-first_name:   Doctor
-last_name:    Orchid
-color:        white
-description:  PhD in plant toxicology. Adopted daughter of Mr. Boddy
-age:          26
-image:        http://www.radiotimes.com/uploads/images/Original/111967.jpg
-ocupation:   Scientist
-
-profPlum
-first_name:   Victor
-last_name:    Plum
-color:        purple
-description:  Billionare video game designer
-age:          22
-image:        https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg
-occupation:   Designer
-
 missScarlet
 first_name:   Kasandra
 last_name:    Scarlet
@@ -55,7 +27,6 @@ image:        https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg
 occupation:   Retired Football player
 
 // Weapons
-
 name: rope        ---   weight: 10
 name: knife       ---   weight: 8
 name: candlestick ---   weight: 2
@@ -66,29 +37,85 @@ name: bat         ---   weight: 13
 name: trophy      ---   weight: 25
 name: pistol      ---   weight: 20
 
-// Rooms
-name: Dinning Room
-name: Conservatory
-name: Kitchen
-name: Study
-name: Library
-name: Billiard Room
-name: Lounge
-name: Ballroom
-name: Hall
-name: Spa
-name: Living Room
-name: Observatory
-name: Theater
-name: Guest House
-name: Patio
 */
+//Iteration 1 - Creating the cards
+//Game Characters
+// Characters
+var mrGreen = {
+    first_name: 'Jacob'
+last_name: 'Green'
+color: 'green'
+description: 'He has a lot of connections'
+age: 45
+image: 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg'
+occupation: 'Entrepreneur'
+};
 
-// Characters Collection
-var charactersArray = [];
+var drOrchid = {
+    first_name: 'Doctor'
+last_name: 'Orchid'
+color: 'white'
+description: 'PhD in plant toxicology. Adopted daughter of Mr. Boddy'
+age: 26
+image: 'http://www.radiotimes.com/uploads/images/Original/111967.jpg'
+ocupation: 'Scientist'
+}
 
-// Rooms' Collection
-var roomsArray = [];
+var profPlum = {
+    first_name: 'Victor'
+last_name: 'Plum'
+color: 'purple'
+description: 'Billionare video game designer'
+age: 22
+image: 'https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg'
+occupation: 'Designer'
+}
 
+//Characters Collection 
+var charactersArray = ["mrGreen", "drOrchid", "profPlum", "missScarlet", "mrsPeacock", "mrsPeacock", "mrMustard"];
+// Rooms Collection
+var roomsArray = [
+    { name: "Dinning Room" },
+    { name: "Conservatory" },
+    { name: "Kitchen" },
+    { name: "Study" },
+    { name: "Library" },
+    { name: "Billiard Room" },
+    { name: "Lounge" },
+    { name: "Ballroom" },
+    { name: "Hall" },
+    { name: "Spa" },
+    { name: "Living Room" },
+    { name: "Observatory" },
+    { name: "Theater" },
+    { name: "Guest House" },
+    { name: "Patio" }
+];
 // Weapons Collection
-var weaponsArray = [];
+var weaponsArray = [
+    { name: 'rope', weight: 10 }, //0
+    { name: 'knife', weight: 8 }, //1
+    { name: 'candlestick', weight: 2 }, //2
+    { name: 'dumbbell', weight: 30 },
+    { name: 'poison', weight: 2 },
+    { name: 'bat', weight: 13 },
+    { name: 'axe', weight: 15 },
+    { name: 'trophy', weight: 25 },
+    { name: 'pistol', weight: 20 }
+];
+
+//Iteration 2 - Creating the mistery
+//Random Selector
+function randomSelector(array) {
+    if (array.length === 0) {
+        return undefinded
+    }
+    else if (array.length > 0) {
+        let randomPosition = Math.floor(Math.random() * array.length)
+        return array[randomPosition]
+    }
+}
+
+let weapon = randomSelector(weaponsArray)
+let room = randomSelector(roomsArray);
+let gameCharacter = randomSelector(charactersArray);
