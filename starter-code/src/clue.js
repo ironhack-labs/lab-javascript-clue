@@ -152,5 +152,11 @@ var charactersArray = [
   
   console.log(mysteryEnvelope);
   
-  console.log(`${mysteryEnvelope[0].randomSelector.firstName} ${mysteryEnvelope[0].randomSelector.lastName} killed Mr.Boddy using the ${mysteryEnvelope[2].randomSelector3.weapon} in the ${mysteryEnvelope[1].randomSelector2.place}.`);
+  //console.log(`${mysteryEnvelope[0].randomSelector.firstName} ${mysteryEnvelope[0].randomSelector.lastName} killed Mr.Boddy using the ${mysteryEnvelope[2].randomSelector3.weapon} in the ${mysteryEnvelope[1].randomSelector2.place}.`);
   
+
+function revealMistery (misteryEnvelope) {
+  return `${mysteryEnvelope[0].randomSelector.firstName} ${mysteryEnvelope[0].randomSelector.lastName} killed Mr.Boddy using the ${mysteryEnvelope[2].randomSelector3.weapon} in the ${mysteryEnvelope[1].randomSelector2.place}.`
+}
+
+console.log(revealMistery(pickMystery))
