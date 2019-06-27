@@ -79,9 +79,7 @@ function pickMistery() {
   return [randomSelector(charactersArray), randomSelector(weaponsArray), randomSelector(roomsArray)];
 }
 
-let misteryEnvelope = []
-
-misteryEnvelope = pickMistery();
+let misteryEnvelope = pickMistery();
 
 function revealMistery(mistery) {
   return `${mistery[0].first_name} ${mistery[0].last_name} killed Mr.Boddy using the ${mistery[1].name} in the ${mistery[2].name}!!!!`
