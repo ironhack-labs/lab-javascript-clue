@@ -48,7 +48,7 @@ var trophy = new Weapon('trophy', 25);
 var pistol = new Weapon('pistol', 20);
 
 // Rooms
-var dinningRoom = new Room('Dinning Room');
+var diningRoom = new Room('Dining Room');
 var conervatory = new Room('Conservatory');
 var kitchen = new Room('Kitchen');
 var study = new Room('Study');
@@ -64,16 +64,67 @@ var theater = new Room('Theater');
 var guestHouse = new Room('Guest House');
 var patio = new Room('Patio');
 
-
 // -----------------------------------------------------------------------------
 // 3. Create the collections
 // -----------------------------------------------------------------------------
 
 // Characters Collection
-var charactersArray = [];
-
-// Rooms' Collection
-var roomsArray = [];
+var charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 
 // Weapons Collection
-var weaponsArray = [];
+var weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
+
+// Rooms' Collection
+var roomsArray =   [diningRoom, conervatory, kitchen, study, library, billiardRoom, lounge,
+                    ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio];
+
+
+
+// -----------------------------------------------------------------------------
+// 4. Create the game
+// -----------------------------------------------------------------------------
+
+// Constructor to create games of Clue
+function Clue(charactersArray, weaponsArray, roomsArray) {
+
+  this.randomSelector = function(arr) {
+    return arr[ Math.floor( Math.random() * arr.length ) ];
+  };
+
+  this.pickMystery = function() {
+    let mysteryEnvelope = [];
+    mysteryEnvelope.push( this.randomSelector(charactersArray) );
+    mysteryEnvelope.push( this.randomSelector(weaponsArray) );
+    mysteryEnvelope.push( this.randomSelector(roomsArray) );
+
+    return mysteryEnvelope;
+  }
+
+  this.revealMystery = function(mysteryEnvelope) {
+    let first_name = mysteryEnvelope[0].first_name;
+    let last_name = mysteryEnvelope[0].last_name;
+    let weapon = mysteryEnvelope[1].name;
+    let room = mysteryEnvelope[2].name;
+    console.log(`${first_name} ${last_name} killed Mr.Boddy using the ${weapon} in the ${room}!!!!`)
+  }
+
+  this.startGame = function() {
+    let mysteryEnvelope = this.pickMystery();    
+    this.revealMystery(mysteryEnvelope);        
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// 5. Play the game
+// -----------------------------------------------------------------------------
+
+let firstGameOfClue = new Clue(charactersArray, weaponsArray, roomsArray);
+firstGameOfClue.startGame();
+
+let secondGameOfClue = new Clue(charactersArray, weaponsArray, roomsArray);
+secondGameOfClue.startGame();
+
+let thirdGameOfClue = new Clue(charactersArray, weaponsArray, roomsArray);
+thirdGameOfClue.startGame();
+
