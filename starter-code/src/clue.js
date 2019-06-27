@@ -19,11 +19,9 @@ var roomsArray = [
     "Guest House",
     "Patio"
 ];
-// roomsArray.push(DinningRoom, Conservatory, Kitchen, Study, Library, BilliardRoom, Lounge, Ballroom, Hall, Spa, LivingRoom, Observatory, Theater, GuestHouse, Patio);
 
 // Weapons Collection
 var weaponsArray = [];
-// weaponsArray.push(rope, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
 
 function Character(first, last, color, description, age, image, occupation) {
     this.first_name = first;
@@ -119,34 +117,57 @@ var weapon8 = new Weapon("pistol", 20);
 
 var misteryEnvelope = [];
 
-function randomSelector(array) {
-    var card;
-    if (array === charactersArray) {
-        card = `${array[Math.floor(Math.random() * array.length)]["first_name"]} ${array[Math.floor(Math.random() * array.length)]["last_name"]}`
-        misteryEnvelope.push(card)
-    } else if (array === weaponsArray) {
-        card = array[Math.floor(Math.random() * array.length)]["name"]
-        misteryEnvelope.push(card)
-    } else {
-        card = array[Math.floor(Math.random() * array.length)]
-        misteryEnvelope.push(card)
+function Clue(name, lastName) {
+    this.name = name;
+    this.lastName = lastName;
+    this.randomSelector = function(array) {
+        var card = array[Math.floor(Math.random() * array.length)];
+        misteryEnvelope.push(card);
     }
+
+    this.randomSelector(charactersArray);
+    this.randomSelector(weaponsArray);
+    this.randomSelector(roomsArray);
+
+    this.revealMistery = function() {
+        if (this.name === misteryEnvelope[0]["first_name"] && this.lastName === misteryEnvelope[0]["last_name"]) {
+            console.log(`You are right! ${name} killed Mr.Boddy with the ${misteryEnvelope[1]["name"]} in the ${misteryEnvelope[2]} `)
+        } else {
+            console.log(`Sorry ${name} did not killed Mr.Boddy. ${misteryEnvelope[0]["first_name"]} ${misteryEnvelope[0]["last_name"]} killed Mr.Boddy with the ${misteryEnvelope[1]["name"]} in the ${misteryEnvelope[2]} `)
+        }
+    }
+    this.revealMistery();
+    misteryEnvelope = [];
 }
 
 
-function pickMistery(func) {
-    func(charactersArray);
-    func(weaponsArray);
-    func(roomsArray);
-}
+
+// function randomSelector(array) {
+//     var card;
+//     if (array === charactersArray) {
+//         card = `${array[Math.floor(Math.random() * array.length)]["first_name"]} ${array[Math.floor(Math.random() * array.length)]["last_name"]}`
+//         misteryEnvelope.push(card)
+//     } else if (array === weaponsArray) {
+//         card = array[Math.floor(Math.random() * array.length)]["name"]
+//         misteryEnvelope.push(card)
+//     } else {
+//         card = array[Math.floor(Math.random() * array.length)]
+//         misteryEnvelope.push(card)
+//     }
+// }
 
 
-function revealMistery() {
-    pickMistery(randomSelector);
-    return `${misteryEnvelope[0]} killed Mr.Boddy using the ${misteryEnvelope[1]} in the ${misteryEnvelope[2]}!!!!`;
+// function pickMistery(func) {
+//     func(charactersArray);
+//     func(weaponsArray);
+//     func(roomsArray);
+// }
 
-}
+// function revealMistery() {
+//     pickMistery(randomSelector);
+//     return `${misteryEnvelope[0]} killed Mr.Boddy using the ${misteryEnvelope[1]} in the ${misteryEnvelope[2]}!!!!`;
 
+// }
 
 
 
