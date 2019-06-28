@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css?family=Creepster&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Raleway;
+}
+
+body {
+  background-image: url("http://9thstreetpub.com/wp-content/uploads/2016/04/brick-texture-dark-blurred.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+
+}
+
+.card {
+  width: 400px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px;
+  background-image: linear-gradient(to bottom right,darkgrey , rgb(70, 63, 63));
+  border: 5px solid darkslategrey;
+}
+
+img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  border: 2px solid black;
+}
+
+h1 {
+  text-align: center;
+  font-family: Creepster;
+  font-weight: 100;
+  padding: 5px 0;
+  text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 30px;
+  background-color: maroon;
+  border: none;
+  color: lightgrey;
+  font-size: 1rem;
+}
