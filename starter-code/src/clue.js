@@ -145,7 +145,7 @@ let firstGameOfClue = new Clue(charactersArray, weaponsArray, roomsArray);
 document.getElementById("start-button").addEventListener("click", function() {
   mysteryEnvelope = firstGameOfClue.startGame()
   document.getElementById("solutionMessage").innerHTML = mysteryEnvelope.solutionMessage;
-  document.getElementById("characterImage").innerHTML = `<img src=${mysteryEnvelope.character.image} width=250px>`;
+  document.getElementById("characterImage").setAttribute("src", mysteryEnvelope.character.image);
   document.getElementById("characterDescription").innerHTML = mysteryEnvelope.character.description;  
 });
 
