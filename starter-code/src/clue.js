@@ -136,30 +136,30 @@ var guestHouse = new Room("Guest House");
 var patio = new Room("Patio");
 
 
-// FIRST METHOD WITH FUNCTIONS  
+// // FIRST METHOD WITH FUNCTIONS  
 
-// RANDOM SELECTOR
+// // RANDOM SELECTOR
 
-function randomSelector(array){
-  return array[Math.floor(Math.random() * array.length)];
-}
-
-
-// CREATE THE MYSTERY
-
-function pickMistery() {
-  var misteryEnvelope = [randomSelector(charactersArray),randomSelector(weaponsArray),randomSelector(roomsArray)];
-  return misteryEnvelope;
-}
+// function randomSelector(array){
+//   return array[Math.floor(Math.random() * array.length)];
+// }
 
 
-// REVEAL MYSTERY 
+// // CREATE THE MYSTERY
 
-function revealMistery(envelope) {
-  console.log(
-    `${envelope[0].firstName} ${envelope[0].lastName} killed Mr.Boddy using the ${envelope[1].name} in the ${envelope[2].name}!!!!`
-    );
-}
+// function pickMistery() {
+//   var misteryEnvelope = [randomSelector(charactersArray),randomSelector(weaponsArray),randomSelector(roomsArray)];
+//   return misteryEnvelope;
+// }
+
+
+// // REVEAL MYSTERY 
+
+// function revealMistery(envelope) {
+//   console.log(
+//     `${envelope[0].firstName} ${envelope[0].lastName} killed Mr.Boddy using the ${envelope[1].name} in the ${envelope[2].name}!!!!`
+//     );
+// }
 
 
 //SECOND METHOD WITH METHODS
