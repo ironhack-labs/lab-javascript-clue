@@ -1,5 +1,3 @@
-
-function game() {
   
     // Character Data
     
@@ -27,6 +25,7 @@ function game() {
       "mrMustard"
       ];
     
+
     // Rooms' Collection
     
     var roomsArray = [
@@ -47,6 +46,7 @@ function game() {
       "Patio"
     ];
     
+
     // Weapons Collection
     
     var weaponsArray = [
@@ -61,18 +61,6 @@ function game() {
       ["pistol", 20]
     ];
     
-    // name: rope        ---   weight: 10
-    // name: knife       ---   weight: 8
-    // name: candlestick ---   weight: 2
-    // name: dumbbell    ---   weight: 30
-    // name: poison      ---   weight: 2
-    // name: axe         ---   weight: 15
-    // name: bat         ---   weight: 13
-    // name: trophy      ---   weight: 25
-    // name: pistol      ---   weight: 20
-    
-    //  Object constructor Character
-    
     function Character(first, last, color, descr, age, img, job) {
         
         this.firstName = first;
@@ -83,8 +71,6 @@ function game() {
         this.image = img;
         this.occupation = job;
     }
-    
-    var mrGreen = new Character(...mrGreenData)
     
     // Object constructor Room
     
@@ -98,7 +84,11 @@ function game() {
         this.name = name;
         this.weight = weight;
     }
-    
+
+
+function game() {
+
+
     // Set Randomizer
     
     function setRandomizer(char, room, weapon) {
@@ -133,23 +123,10 @@ function game() {
     
     var envelope = setRandomizer(charactersArray, roomsArray, weaponsArray);
     
-    /*
-    function revealMystery(mystery) {
-    
-      alert(`${mystery[0].firstName} ${mystery[0].lastName} killed Mr.Boddy using the ${mystery[2].name} in the ${mystery[1]}!!!!`);
-    }
-    
-    revealMystery(envelope);
-    */
-    
-    // console.log(envelope);
-    
     function printCard(mystery) {
     
       document.getElementById("murdererImg").setAttribute("src", `${mystery[0].image}`);
-    
       document.getElementById("murdererName").innerHTML = mystery[0].firstName + " - " + mystery[0].lastName;
-    
       document.getElementById("weapon").innerHTML = "With a " + mystery[2].name;
       document.getElementById("room").innerHTML = "In the " + mystery[1];
     };
@@ -157,8 +134,6 @@ function game() {
     printCard(envelope);
       
     }
-    
-    game();
     
     window.onload = function(){
       game();
