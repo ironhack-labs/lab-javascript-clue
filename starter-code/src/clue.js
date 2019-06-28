@@ -179,13 +179,18 @@ function Game(weapons,characters,rooms) {
     this.misteryEnvelope = [this.randomSelector(this.characters),this.randomSelector(this.weapons),this.randomSelector(this.rooms)];
   };
 
-  // change charactersArray into this.charaters; same for the others
+  // next objective: change misteryEnvelope from array to object
 
   this.revealMistery = function() {
     var envelope = this.misteryEnvelope;
-    console.log(
-      `${envelope[0].firstName} ${envelope[0].lastName} killed Mr.Boddy using the ${envelope[1].name} in the ${envelope[2].name}!!!!`
-    );
+    var finalMessage = `${envelope[0].firstName} ${envelope[0].lastName} killed Mr.Boddy using the ${envelope[1].name} in the ${envelope[2].name}!!!!`
+    console.log(finalMessage);
+    var imgMurderer = document.getElementById("img-murderer");
+    imgMurderer.setAttribute("src",envelope[0].image);
+    imgMurderer.style.width="20%";
+    document.getElementById("first-name-murderer").innerHTML=`${envelope[0].firstName}`;
+    document.getElementById("last-name-murderer").innerHTML=`${envelope[0].lastName}`;
+    document.getElementById("message-murderer").innerHTML=finalMessage;
   };
 
   this.restart = function() {
