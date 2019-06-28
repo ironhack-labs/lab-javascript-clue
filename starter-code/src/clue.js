@@ -184,7 +184,7 @@ function Game(weapons,characters,rooms) {
   this.revealMistery = function() {
     var envelope = this.misteryEnvelope;
     var finalMessage = `${envelope[0].firstName} ${envelope[0].lastName} killed Mr.Boddy using the ${envelope[1].name} in the ${envelope[2].name}!!!!`
-    console.log(finalMessage);
+
     var imgMurderer = document.getElementById("img-murderer");
     imgMurderer.setAttribute("src",envelope[0].image);
     imgMurderer.style.width="20%";
@@ -201,3 +201,17 @@ function Game(weapons,characters,rooms) {
   this.revealMistery();
 
 }
+
+// DOM MANIPULATION
+
+var button = document.getElementById("play");
+var counter = document.getElementById("counter");
+
+button.onclick = function() {
+  new Game(weaponsArray,charactersArray,roomsArray);
+  button.innerHTML="Wanna play again?";
+  var timesPlaying = parseInt(counter.innerHTML)+1;
+  counter.innerHTML=`${timesPlaying}`;
+}
+
+// var game = new Game(weaponsArray,charactersArray,roomsArray);
