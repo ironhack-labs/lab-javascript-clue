@@ -141,7 +141,7 @@ var patio = new Room("Patio");
 // RANDOM SELECTOR
 
 function randomSelector(array){
-  return array[Math.floor(Math.random() * [array.length])];
+  return array[Math.floor(Math.random() * array.length)];
 }
 
 
@@ -172,12 +172,14 @@ function Game(weapons,characters,rooms) {
   this.misteryEnvelope = [];
 
   this.randomSelector = function(array){
-    return array[Math.floor(Math.random() * [array.length])];
+    return array[Math.floor(Math.random() * array.length)];
   };
 
   this.pickMistery = function() {
     this.misteryEnvelope = [this.randomSelector(charactersArray),this.randomSelector(weaponsArray),this.randomSelector(roomsArray)];
   };
+
+  // change charactersArray into this.charaters; same for the others
 
   this.revealMistery = function() {
     var envelope = this.misteryEnvelope;
