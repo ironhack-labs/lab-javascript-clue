@@ -176,7 +176,7 @@ function Game(weapons,characters,rooms) {
   };
 
   this.pickMistery = function() {
-    this.misteryEnvelope = [this.randomSelector(charactersArray),this.randomSelector(weaponsArray),this.randomSelector(roomsArray)];
+    this.misteryEnvelope = [this.randomSelector(this.characters),this.randomSelector(this.weapons),this.randomSelector(this.rooms)];
   };
 
   // change charactersArray into this.charaters; same for the others
