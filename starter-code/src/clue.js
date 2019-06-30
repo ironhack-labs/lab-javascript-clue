@@ -204,7 +204,7 @@ const trophy = {
 };
 
 const pistol = {
-  name: pistol,
+  name: "pistol",
   weight: 20
 };
 
@@ -270,6 +270,16 @@ const patio = {
   name: "Patio"
 };
 
+// Characters Collection
+
+var charactersArray = [];
+
+// Rooms' Collection
+var roomsArray = [];
+
+// Weapons Collection
+var weaponsArray = [];
+
 //Push to Array
 
 charactersArray.push(
@@ -311,28 +321,38 @@ weaponsArray.push(
   pistol
 );
 
-// Characters Collection
-
-var charactersArray = [];
-
-// Rooms' Collection
-var roomsArray = [];
-
-// Weapons Collection
-var weaponsArray = [];
-
 // randomSelector
 
 function randomSelector(array) {
-  return Math.floor(Math.random() * array.length);
+  if (array == undefined || array.length == 0) {
+    return undefined;
+  } else if (array.length == 1) {
+    return array[0];
+  } else if (array.length >= 2) {
+    let randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+  }
 }
 
-//function randomSelector(charactersArray) {
-//   return charactersArray[Math.floor(Math.random() * charactersArray.length)]
-//}
-
-let misteryEnvelope = [];
-
 function pickMistery() {
-  charactersArray.randomSelector(charactersArray);
+  let misteryEnvelope = [];
+  misteryEnvelope.push(randomSelector(charactersArray));
+  misteryEnvelope.push(randomSelector(weaponsArray));
+  misteryEnvelope.push(randomSelector(roomsArray));
+  return misteryEnvelope;
+}
+
+function revealMistery(misteryEnvelope) {
+  console.log(
+    `${misteryEnvelope[0].first_name} ${
+      misteryEnvelope[0].last_name
+    } killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${
+      misteryEnvelope[2].name
+    }!!!!`
+  );
+  return `${misteryEnvelope[0].first_name} ${
+    misteryEnvelope[0].last_name
+  } killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${
+    misteryEnvelope[2].name
+  }!!!!`;
 }
