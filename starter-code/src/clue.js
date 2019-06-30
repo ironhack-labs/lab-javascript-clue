@@ -1,3 +1,4 @@
+
 // Characters Collection
 var charactersArray = [];
 
@@ -78,3 +79,22 @@ var misteryEnvelope = pickMistery();
 function revealMistery(misteryEnvelope) {
     return `${misteryEnvelope[0].first_name} ${misteryEnvelope[0].last_name} killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${misteryEnvelope[2].name}!!!!`
 }
+
+function revealMisteryWeb(theEnvelope){
+    document.getElementById("murderer").setAttribute("src", theEnvelope[0].image)
+    document.getElementById("name-murderer").innerHTML = theEnvelope[0].first_name
+    document.getElementById("weapon").innerHTML = theEnvelope[1].name
+    document.getElementById("room").innerHTML = theEnvelope[2].name
+
+    document.getElementById("sentence").innerHTML = `${misteryEnvelope[0].first_name} ${misteryEnvelope[0].last_name} killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${misteryEnvelope[2].name}!!!!`
+}
+
+window.onload = function() {
+    let showOnDoc = revealMisteryWeb(misteryEnvelope);
+    document.getElementById("play").addEventListener("click", function(revealMistery) {
+        misteryEnvelope = pickMistery();
+        revealMisteryWeb(misteryEnvelope);
+    } )
+}
+
+
