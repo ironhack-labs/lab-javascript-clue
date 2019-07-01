@@ -70,8 +70,8 @@ var dumbbell =  {name: "dumbbell", weight: 30}
 var poison = {name: "poison", weight: 2}
 var axe = { name: "axe", weight: 15}
 var bat = { name: "bat", weight: 13}
-var trophy = { name: trophy, weight: 25}
-var pistol=  { name: pistol, weight: 20}
+var trophy = { name: "trophy", weight: 25}
+var pistol=  { name: "pistol", weight: 20}
 
 // // Rooms
 
@@ -84,7 +84,7 @@ var billiard = { name: "Billiard Room" }
 var lounge = { name: "Lounge"}
 var ballroom = { name: "Ballroom"}
 var hall = {name: "Hall"}
-var spa = {name: "Spa"}
+var spa = {name: "Spa room"}
 var livingRoom = {name: "Living Room"}
 var observatory = {name: "Observatory"}
 var theater = {name: "Theater"}
@@ -103,26 +103,39 @@ livingRoom, observatory, theater, guestHouse, patio];
 // // Weapons Collection
 var weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
 
-function randomSelector(arr) {
-    let randomElementIndex = Math.floor(Math.random())* arr.length
-    debugger
-    return arr[randomElementIndex]
-}
+    function randomSelector(someArray) {
+    return someArray[Math.floor(Math.random() * someArray.length)]
+    }
 
-function pickMistery() {
-    var mistery = []
-    mistery.push(randomSelector(charactersArray));
-    mistery.push(randomSelector(weaponsArray));
-    mistery.push(randomSelector(roomsArray));
-    debugger
-    return mistery;
-}
+    var mysteryEnvelope = {
+        murderer: {},
+        room: {},
+        weapon: {}
+    }
 
-var misteryEnvelope = pickMistery()
+    mysteryEnvelope.murderer = randomSelector(charactersArray);
+    mysteryEnvelope.room = randomSelector(roomsArray);
+    mysteryEnvelope.weapon = randomSelector(weaponsArray);
+
+    console.log(mysteryEnvelope);
+
+    function revealMystery(anEnvelope) {
+    console.log(`${anEnvelope.murderer.first_name} ${anEnvelope.murderer.last_name} 
+    murdered Mr.Body with a ${anEnvelope.weapon.name} in the ${anEnvelope.room.name}`)
+
+    document.getElementById("murderer").setAttribute("src", mysteryEnvelope.murderer.image);
+    document.getElementById("character").innerHTML = (`${mysteryEnvelope.murderer["first_name"]} ${mysteryEnvelope.murderer["last_name"]}`);
+    document.getElementById("weapon").innerHTML = (`${mysteryEnvelope.weapon["name"]}`);
+    document.getElementById("room").innerHTML = (`${mysteryEnvelope.room["name"]}`);
+    
+   }
+
+   revealMystery(mysteryEnvelope);
+
+   window.onload = function () {
+   
+   }
 
 
-function revealMistery(misteryEnvelope) {
-    return `${misteryEnvelope[0]["first_name"]} ${misteryEnvelope[0]["last_name"]} 
-    killed Mr Boddy using the ${misteryEnvelope[1]["name"]} in the 
-    ${misteryEnvelope[2]["name"]}`;
-}
+   
+
