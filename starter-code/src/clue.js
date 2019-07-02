@@ -117,9 +117,15 @@ var weapon8 = new Weapon("pistol", 20);
 
 var misteryEnvelope = [];
 
-function Clue(name, lastName) {
+// 
+// this.clue = function() {
+//     var clue1 = misteryEnvelope[0]["occupation"];
+//     document.getElementById("clue").innerHTML = clue1;
+// }
+
+
+function Guess(name) {
     this.name = name;
-    this.lastName = lastName;
     this.randomSelector = function(array) {
         var card = array[Math.floor(Math.random() * array.length)];
         misteryEnvelope.push(card);
@@ -129,19 +135,43 @@ function Clue(name, lastName) {
     this.randomSelector(weaponsArray);
     this.randomSelector(roomsArray);
 
+    this.score = function() {
+        let previousCount = document.getElementById("score").innerHTML;
+        document.getElementById("score").innerHTML = parseInt(previousCount) + 1;
+    }
+
     this.revealMistery = function() {
-        if (this.name === misteryEnvelope[0]["first_name"] && this.lastName === misteryEnvelope[0]["last_name"]) {
-            console.log(`You are right! ${name} killed Mr.Boddy with the ${misteryEnvelope[1]["name"]} in the ${misteryEnvelope[2]} `)
-        } else {
-            console.log(`Sorry ${name} did not killed Mr.Boddy. ${misteryEnvelope[0]["first_name"]} ${misteryEnvelope[0]["last_name"]} killed Mr.Boddy with the ${misteryEnvelope[1]["name"]} in the ${misteryEnvelope[2]} `)
+        if (this.name === misteryEnvelope[0]["first_name"]) {
+            document.getElementById("murderer").setAttribute("src", misteryEnvelope[0]["image"]);
+            document.getElementById("weapon").innerHTML = "Weapon: " + misteryEnvelope[1]["name"];
+            document.getElementById("room").innerHTML = "Room: " + misteryEnvelope[2];
+            document.getElementById("result").innerHTML = `You are right! ${name} killed Mr.Boddy with the ${misteryEnvelope[1]["name"]} in the ${misteryEnvelope[2]} `;
+            this.score();
+        } else if (this.name != misteryEnvelope[0]["first_name"]) {
+            document.getElementById("result").innerHTML = `Sorry ${name} did not killed Mr.Boddy. ${misteryEnvelope[0]["first_name"]} ${misteryEnvelope[0]["last_name"]} killed Mr.Boddy with the ${misteryEnvelope[1]["name"]} in the ${misteryEnvelope[2]} `
+            document.getElementById("murderer").setAttribute("src", misteryEnvelope[0]["image"]);
+            document.getElementById("weapon").innerHTML = "Weapon: " + misteryEnvelope[1]["name"];
+            document.getElementById("room").innerHTML = "Room: " + misteryEnvelope[2];
         }
+        misteryEnvelope = [];
     }
     this.revealMistery();
-    misteryEnvelope = [];
+
+}
+
+function userGuess() {
+    var inputElement = document.getElementById("userInput").value;
+    Guess(inputElement);
+}
+
+window.onload = function() {
+    var submitbtn = document.getElementById("submt");
+    submitbtn.addEventListener("click", userGuess);
 }
 
 
 
+// without methods
 // function randomSelector(array) {
 //     var card;
 //     if (array === charactersArray) {
