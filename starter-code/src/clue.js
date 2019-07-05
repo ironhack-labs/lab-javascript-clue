@@ -92,3 +92,4 @@ var roomsArray = [];
 
 // Weapons Collection
 var weaponsArray = [];
+//empty exercise
