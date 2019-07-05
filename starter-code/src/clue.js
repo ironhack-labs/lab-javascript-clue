@@ -172,10 +172,12 @@ function revealMistery(array) {
     array[0].first_name +
     " " +
     array[0].last_name +
-    "killed Mr. Boddy using the " +
+    " killed Mr.Boddy using the " +
     array[1].name +
     " in the " +
     array[2].name +
     "!!!!!"
   );
 }
+
+revealMistery(misteryEnvelope);
