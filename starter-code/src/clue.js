@@ -62,7 +62,6 @@ const mrMustard = {
   occupation: "Retired Football player"
 }
 
-
 // Weapons
 
 let rope = {
@@ -186,20 +185,29 @@ roomsArray.push(diningRoom, conservatory, kitchen, study, library, billiardRoom,
 var weaponsArray = [];
 weaponsArray.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
 
-
-// Random selector 
-
+// Random selector - selects a random element from an array - returns a single element in an array.
 function randomSelector(arr) {
   return arr[Math.floor(Math.random(arr) * arr.length)];
-
 }
 
-let misteryEnvelope = [];
+// picks a mistery 
 
-function pickMistery(arr1, arr2, arr3) {
-  misteryEnvelope.push(randomSelector(arr1), randomSelector(arr2), randomSelector(arr3))
-  return misteryEnvelope;
+function pickMistery(a, b, c) {
+  let mistery = []
+  let character = randomSelector(charactersArray)
+  mistery.push(character)
+  let weapon = randomSelector(weaponsArray)
+  mistery.push(weapon)
+  let room = randomSelector(roomsArray)
+  mistery.push(room)
+
+  return mistery;
 }
 
-pickMistery(charactersArray, roomsArray, weaponsArray);
+//mistery enveloped
 
+let misteryEnvelope = pickMistery(charactersArray, weaponsArray, roomsArray)
+
+function revealMistery(misteryEnvelope) {
+  return `${misteryEnvelope[0].first_name} ${misteryEnvelope[0].last_name} killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${misteryEnvelope[2].name}!!!!`
+}
