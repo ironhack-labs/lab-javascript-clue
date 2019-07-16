@@ -162,7 +162,6 @@ function randomSelector(array){
 
 function pickMistery(){
   misteryEnvelope =[randomSelector(charactersArray), randomSelector(weaponsArray),randomSelector(roomsArray)];
-  return misteryEnvelope; 
 }
 
 pickMistery();
