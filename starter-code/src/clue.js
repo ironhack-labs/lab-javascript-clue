@@ -142,7 +142,7 @@ function randomSelector(arr) {
   return arr[randomNumber]; // return the array element pointed by the randomNumber index
 }
 
-function pickMistery(charactersArray, weaponsArray, roomsArray) {
+function pickMistery() {
   let character = randomSelector(charactersArray);
   let weapon = randomSelector(weaponsArray);
   let room = randomSelector(roomsArray);
@@ -153,13 +153,9 @@ function pickMistery(charactersArray, weaponsArray, roomsArray) {
 misteryEnvelope = pickMistery(charactersArray, weaponsArray, roomsArray);
 
 function revealMistery(misteryEnvelope) {
-  console.log(
-    `${misteryEnvelope[0].first_name} ${
-      misteryEnvelope[0].last_name
-    } killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${
-      misteryEnvelope[2].name
-    }`
-  );
+  return `${misteryEnvelope[0].first_name} ${
+    misteryEnvelope[0].last_name
+  } killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${
+    misteryEnvelope[2].name
+  }!!!!`;
 }
-
-console.log(revealMistery(misteryEnvelope));
