@@ -5,7 +5,7 @@ const mrGreen = {
     color:        'green',
     description:  'He has a lot of connections',
     age:          45,
-    image:        https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg,
+    image:        'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
     occupation:   'Entrepreneur'
 }
 
@@ -16,7 +16,7 @@ const drOrchid = {
     color:        'white',
     description:  'PhD in plant toxicology. Adopted daughter of Mr. Boddy',
     age:          26,
-    image:        http://www.radiotimes.com/uploads/images/Original/111967.jpg,
+    image:        'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
     ocupation:   'Scientist'
     
 }
@@ -26,7 +26,7 @@ const profPlum = {
     color:        'purple',
     description:  'Billionare video game designer',
     age:          22,
-    image:        https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg,
+    image:        'https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg',
     occupation:   'Designer'
 }
 
@@ -37,7 +37,7 @@ const missScarlet = {
     color:        'red',
     description:  'She is an A-list movie star with a dark past',
     age:          31,
-    image:        https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg,
+    image:        'https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg',
     occupation:   'Actor'
 }
 
@@ -48,7 +48,7 @@ const mrsPeacock = {
     color:        'blue',
     description:  'She is from a wealthy family and uses her status and money to earn popularity',
     age:          36,
-    image:        https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg,
+    image:        'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
     occupation:   'Socialité'    
 }
 
@@ -58,13 +58,13 @@ const mrMustard = {
     color:        'yellow',
     description:  'He is a former football player who tries to get by on his former glory',
     age:          62,
-    image:        https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg,
+    image:        'https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg',
     occupation:   'Retired Football player'
     
 }
 
 // Weapons
-const rope ={
+const rope = {
     name: 'rope',
     weight: 10
 }
@@ -75,7 +75,7 @@ const knife = {
 }
 
 const candlestick = {
-    name: 'candlestick';
+    name: 'candlestick',
     weight: 2
 }
 
@@ -105,7 +105,7 @@ const trophy = {
 }
 
 const pistol = {
-    name: 'pistol'
+    name: 'pistol',
     weight: 20
 }
 
@@ -156,9 +156,9 @@ const livingRoom = {
     name: 'Living Room'
 }
 
-const observatory = [
+const observatory = {
     name: 'Observatory'
-]
+}
 
 const theater = {
     name: 'Theater'
@@ -178,10 +178,64 @@ const patio = {
 
 var charactersArray = [];
 charactersArray.push(mrGreen);
+charactersArray.push(drOrchid);
+charactersArray.push(profPlum);
+charactersArray.push(missScarlet);
+charactersArray.push(mrMustard)
+
+//console.log(charactersArray)
 
 
 // Rooms' Collection
-var roomsArray = [];
+var weaponsArray = [];
+weaponsArray.push(rope);
+weaponsArray.push(knife);
+weaponsArray.push(candlestick);
+weaponsArray.push(dumbell);
+weaponsArray.push(poison);
+weaponsArray.push(axe);
+weaponsArray.push(bat);
+weaponsArray.push(trophy);
+weaponsArray.push(pistol);
+
 
 // Weapons Collection
-var weaponsArray = [];
+var roomsArray = [];
+roomsArray.push(dinningRoom);
+roomsArray.push(conservatory);
+roomsArray.push(kitchen);
+roomsArray.push(study);
+roomsArray.push(library);
+roomsArray.push(billiardRoom);
+roomsArray.push(lounge);
+roomsArray.push(ballroom);
+roomsArray.push(hall);
+roomsArray.push(spa);
+roomsArray.push(livingRoom);
+roomsArray.push(observatory);
+roomsArray.push(theater);
+roomsArray.push(guestHouse);
+roomsArray.push(patio);
+
+function randomSelector(arr) {
+  let rand = Math.floor(Math.random()*arr.length)
+  let selection = arr[rand]
+  return selection
+}
+
+function pickMystery() {
+    let var1 = randomSelector(charactersArray)
+    let var2 = randomSelector(weaponsArray)
+    let var3 = randomSelector(roomsArray)
+    return [var1, var2, var3]
+  }
+  
+let mysteryEnvelope = pickMystery()
+
+  
+  
+function revealMistery(arr) {
+        return arr[0].first_name + ' ' + arr[0].last_name + ' killed Mr.Boddy using the ' + arr[1].name + ' in the ' + arr[2].name +'!!!!'
+      }    
+  
+revealMistery(mysteryEnvelope)
