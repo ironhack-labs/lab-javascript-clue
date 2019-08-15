@@ -179,28 +179,10 @@ const randomSelector = (array) => {
     }; return mystery
   };  
 
-  const revealMystery = (mysteryEnvelope) => {
-    [randomCharacter, randomWeapon, randomRoom];
-    for (let mysteryEnvelope of revealMystery) {
-      `${randomCharacter},"killed Mr. Boddy using the", ${randomWeapon}, "in the", ${randomRoom}`
-    } for (let)
-  } return mysteryEnvelope
+  const revealMystery = () => {
+    const mysteryEnvelope = pickMystery()
 
-
-
-
-  // `${randomCharacter.first_name.last_name},"killed Mr. Boddy using the", ${randomWeapon.name.weight}, "in the", ${randomRoom.name}`
-  
- /*  Finally, we need to reveal the mystery. Create a revealMystery function, that will receive our mysteryEnvelope object as an argument and return the revealed mystery like this:
-
-  <FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!!!!
- */
+  return mysteryEnvelope.suspect.first_name + mysteryEnvelope.suspect.last_name + " killed Mr. Boddy using the" + mysteryEnvelope.weapon.name+ "in the" + mysteryEnvelope.room.name+"!!!!"
  
-
-/* users = [user1, user2];
-for (let users of library) {
-  console.log(`${users.name} books:`) 
-    for (let book of users.books) {
-      console.log(`-${book.title}, ${ book.author}`);
-    } console.log(`\n`)
-  }  */
+} 
+  
