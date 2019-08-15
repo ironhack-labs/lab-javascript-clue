@@ -175,6 +175,7 @@ const pickMystery = () => {
   }
 
 
-  //const revealMystery = (mysteryEnvelope) => {
-      // return
-  //}
+const revealMystery = () => {
+      const mysteryEnvelope = pickMystery()
+      return  `${mysteryEnvelope.suspect.first_name} ${mysteryEnvelope.suspect.last_name} killed Mr. Boddy using the ${mysteryEnvelope.weapon.name} in the ${mysteryEnvelope.room.name}!!!!`
+}   
