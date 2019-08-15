@@ -146,5 +146,7 @@ const pickMystery= () => {
   return mysteryEnvelope;
 }
 
-//missing the last point
-const revealMystery=(mysteryEnvelope)=>  {}
+//missing the last point- ALREADY DONE!
+const revealMystery=(pickMystery)=>{
+  return pickMystery.suspect.first_name+" "+pickMystery.suspect.last_name+" killed Mr. Boddy using the "+pickMystery.weapon.name+" in the "+pickMystery.room.name+"!!!!";
+}
