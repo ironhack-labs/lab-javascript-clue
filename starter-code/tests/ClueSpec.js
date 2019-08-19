@@ -47,11 +47,11 @@ describe('Pick a random mistery - pickMistery', function () {
   });
 
   it('Return a non empty array', function () {
-    expect(pickMistery().length).toBeGreaterThan(0);
+    expect(pickMistery.length).toBeGreaterThan(0);
   });
 
   it('Return an array with 3 elements', function () {
-    expect(pickMistery().length).toEqual(3);
+    expect(pickMistery.length).toEqual(3);
   });
 
   it('Return a killer on the first index of the array', function () {
