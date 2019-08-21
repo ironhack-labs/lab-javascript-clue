@@ -107,3 +107,8 @@ describe("Reveal the mystery - revealMystery", function() {
     );
   });
 });
+
+function selector(){
+  var randomSelector = charactersArray[Math.floor(Math.random()*charactersArray.length)];
+  return console.log(randomSelector);
+  }
