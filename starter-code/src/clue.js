@@ -62,7 +62,6 @@ const mrMustard = {
 }
 
 charactersArray.push(mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard);
-console.log(charactersArray);
 
 // Weapons Collection
 const weaponsArray = [];
@@ -113,7 +112,6 @@ const pistol = {
 }
 
 weaponsArray.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol);
-console.log(weaponsArray);
 
 // Rooms Collection
 const roomsArray = [
@@ -134,5 +132,21 @@ const roomsArray = [
     {name: "Patio"},
 ];
 
-console.log(roomsArray);
+function randomSelector(card){
+    return card[Math.floor(Math.random()*card.length)];
+}
 
+function pickMystery(){
+    var mysteryEnvelope = {
+        suspect: randomSelector(charactersArray),
+        weapon: randomSelector(weaponsArray),
+        room: randomSelector(roomsArray)
+    }
+    return mysteryEnvelope;
+}
+
+function revealMystery(mysteryEnvelope){    
+    return mysteryEnvelope.suspect.first_name + " " + mysteryEnvelope.suspect.last_name + " killed Mr. Boddy using the " + mysteryEnvelope.weapon.name + " in the " + mysteryEnvelope.room.name + "!!!!";
+}
+
+console.log(revealMystery(pickMystery()));
