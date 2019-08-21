@@ -277,9 +277,7 @@ The method should receive an array as an argument, and return randomly one of th
 */
 
 function randomSelector(array) {
-  let random = Math.floor(Math.random() * array.length)
-  console.log(array)
-  return array[random]
+  return array[Math.floor(Math.random() * array.length)]
 }
 
 console.log(randomSelector(charactersArray))
@@ -290,45 +288,18 @@ We need to create a pickMystery function that will call randomSelector for each 
 and return an object with the 3 picked cards, a suspect, a weapon and a room. Our mystery should be stored on a mysteryEnvelope variable.
 */
 
-function pickMystery(character, weapon, room) {
-  
-  
-  
-  /* 
-  HACKY SOLUTIONS FOR JASMINE TEST
-  
-  let mysteryEnvelope = { 
-    //suspect: drOrchid, 
-    suspect: {
-      first_name: 'Doctor',
-      last_name: 'Orchid',
-      color: 'white',
-      description: 'PhD in plant toxicology. Adopted daughter of Mr. Boddy',
-      age: 26,
-      image: 'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
-      occupation: 'Scientist'
-    },
-    weapon : dumbbell,
-    room : billiardRoom
-  }
-  if(!character || !weapon || !room){
-    return mysteryEnvelope
-  }
-
-  */ 
-
-  mysteryEnvelope.suspect = randomSelector(character)
-  mysteryEnvelope.weapon = randomSelector(weapon)
-  mysteryEnvelope.room = randomSelector(room)
-  console.log('mysteery',mysteryEnvelope)
-  return mysteryEnvelope
+function pickMystery() {
+  let mysteryEnvelope = {}
+  mysteryEnvelope.suspect = randomSelector(charactersArray)
+  mysteryEnvelope.weapon = randomSelector(weaponsArray)
+  mysteryEnvelope.room = randomSelector(roomsArray)
+  return mysteryEnvelope;
 }
 
-let mysteryEnvelope = pickMystery(charactersArray, weaponsArray, roomsArray);
+pickMystery();
 //console.log(pickMystery(charactersArray, weaponsArray, roomsArray))
 
 console.log(mysteryEnvelope)
-
 
 /*
 Finally, we need to reveal the mystery. 
