@@ -86,8 +86,8 @@ name: Patio
 
 const mrGreen = 
 {   
-firstName: 'Jacob',
-lastName: 'Green',
+first_name: 'Jacob',
+last_name: 'Green',
 color: 'green',
 description:  'He has a lot of connections',
 age: 45,
@@ -96,8 +96,8 @@ occupation: 'Entrepreneur'
 };
 
 const drOrchid =
-{   firstName: 'Doctor',
-lastName: 'Orchid',
+{   first_name: 'Doctor',
+last_name: 'Orchid',
 color: 'white',
 description: 'PhD in plant toxicology. Adopted daughter of Mr. Boddy',
 age: 26,
@@ -107,8 +107,8 @@ occupation: 'Scientist'
 
 const profPlum =
 {
-firstName:   'Victor',
-lastName:    'Plum',
+first_name:   'Victor',
+last_name:    'Plum',
 color:        'purple',
 description:  'Billionaire video game designer',
 age:          22,
@@ -117,8 +117,8 @@ occupation:   'Designer'
 };
 
 const missScarlet =
-{   firstName:   'Kasandra',
-lastName:    'Scarlet',
+{   first_name:   'Kasandra',
+last_name:    'Scarlet',
 color:        'red',
 description:  'She is an A-list movie star with a dark past',
 age:          31,
@@ -127,8 +127,8 @@ occupation:   'Actor'
 };
 
 const mrsPeacock =
-{   firstName:   'Eleanor',
-lastName:    'Peacock',
+{   first_name:   'Eleanor',
+last_name:    'Peacock',
 color:        'blue',
 description:  'She is from a wealthy family and uses her status and money to earn popularity',
 age:          36,
@@ -137,8 +137,8 @@ occupation:   'Socialité',
 };
 
 const mrMustard = 
-{   firstName:   'Jack',
-lastName:    'Mustard',
+{   first_name:   'Jack',
+last_name:    'Mustard',
 color:        'yellow',
 description:  'He is a former football player who tries to get by on his former glory',
 age:          62,
@@ -249,7 +249,7 @@ function pickMystery () {
 }
 
 function revealMystery (x) {
-    return `${x.suspect.firstName} ${x.suspect.lastName} killed Mr. Boddy using the ${x.weapon.name} in the ${x.room.name}!!!!`;
+    return `${x.suspect.first_name} ${x.suspect.last_name} killed Mr. Boddy using the ${x.weapon.name} in the ${x.room.name}!!!!`;
  }
 
 // revealMystery(pickMystery());
