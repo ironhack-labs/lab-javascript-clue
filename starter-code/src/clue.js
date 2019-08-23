@@ -112,3 +112,7 @@ function pickMystery() {
   };
   return mistery;
 }
+
+function revealMystery(mysteryEnvelope) {
+  return `${mysteryEnvelope.suspect.first_name} ${mysteryEnvelope.suspect.last_name} killed Mr. Boddy using the ${mysteryEnvelope.weapon.name} in the ${mysteryEnvelope.room.name}!!!!`
+}
