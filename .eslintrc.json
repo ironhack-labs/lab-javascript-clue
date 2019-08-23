@@ -13,6 +13,6 @@
         "vars-on-top": "off",
         "no-multi-spaces": "off",
         "key-spacing": "off",
-        "max-len": "off"
+        "max-len": "off",
     }
 }
