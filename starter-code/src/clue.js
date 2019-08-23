@@ -128,7 +128,7 @@ roomsArray.push(patio)
 
 // Functions
 
-const randomSelector = someArray => someArray[Math.round(Math.random() * (someArray.length - 1))]
+const randomSelector = someArray => someArray[Math.floor(Math.random() * (someArray.length))]
 
 // Pick a mistery
 const pickMystery = () => {
