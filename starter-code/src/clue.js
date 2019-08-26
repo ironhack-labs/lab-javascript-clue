@@ -185,6 +185,6 @@ function revealMystery(){
     console.log(mysteryEnvelope.suspect.last_name)
     console.log(mysteryEnvelope.weapon.name)
     console.log(mysteryEnvelope.room.name)
-    return(`${mysteryEnvelope.suspect.first_name) ${mysteryEnvelope.suspect.last_name} killed Mr.Boddy using the ${mysteryEnvelope.weapon.name} in the ${mysteryEnvelope.room.name}.`)
+    return(`${mysteryEnvelope.suspect.first_name}${mysteryEnvelope.suspect.last_name} killed Mr.Boddy using the ${mysteryEnvelope.weapon.name} in the ${mysteryEnvelope.room.name}.`);
 }
    
