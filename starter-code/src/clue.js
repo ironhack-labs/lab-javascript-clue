@@ -253,6 +253,7 @@ function pickMystery (deckStack) {
  	return misteryEnvelope;
 };
 
+
 // 	for (var stack of deckStack) {
 // 		var store = (randomSelector(stack));
 // 		if (Object.keys(store).length > 2) {
@@ -267,9 +268,7 @@ function pickMystery (deckStack) {
 // }
 
 
-
 function revealMystery(misteryEnvelope) {
 	var string = `${[misteryEnvelope.suspect.first_name]} ${[misteryEnvelope.suspect.last_name]} killed Mr. Boddy using the ${[misteryEnvelope.weapon.name]} in the ${[misteryEnvelope.room.name]}!!!!`;
-	console.log(string);
 	return string;
 };
