@@ -1,6 +1,7 @@
 /* eslint no-undef: "off" */
 /* eslint jasmine/no-spec-dupes: "off" */
 
+
 describe("Find a random element of the array - randomSelector", function() {
   it("Defines randomSelector", function() {
     expect(typeof randomSelector).toBe("function");
@@ -107,3 +108,4 @@ describe("Reveal the mystery - revealMystery", function() {
     );
   });
 });
+
