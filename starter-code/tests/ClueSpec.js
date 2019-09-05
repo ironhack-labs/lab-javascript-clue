@@ -19,7 +19,7 @@ describe("Find a random element of the array - randomSelector", function() {
   });
 
   it("Should return an element of the array", function() {
-    var array = ["ab", "zz", "zx", "zy"];
+     var array = ["ab", "zz", "zx", "zy"];
 
     expect(array.indexOf(randomSelector(array))).toBeGreaterThan(-1);
   });
