@@ -85,10 +85,32 @@ name: Patio
 */
 
 // Characters Collection
-const charactersArray = [];
+const charactersArray = ['amanda','bruna','cassiana','diana'];
+const CharactersSobrenome = ["brasilia","ferraz","dubois"];
 
 // Rooms Collection
-const roomsArray = [];
+const roomsArray = ['quarto','banheiro','cozinha','sala'];
 
 // Weapons Collection
-const weaponsArray = [];
+const weaponsArray = ['vassoura','mão','glock','canivete'];
+
+const randomSelector = (list) => {
+    return list[Math.floor(Math.random()*list.length)]
+};
+
+const pickMystery = () => {
+    let send = {
+    suspect: randomSelector(charactersArray),
+    weapon: randomSelector(weaponsArray),
+    room: randomSelector(roomsArray)
+  } 
+  return send
+}
+
+var misteryEnvelope = {
+    suspect: { first_name: "Victor", last_name: "Plum" },
+    weapon: { name: "poison" },
+    room: { name: "Billiard Room" }
+  }
+
+const revealMystery = (envelope) => `${envelope.suspect.first_name} ${envelope.suspect.last_name} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!!!!`   
