@@ -135,13 +135,16 @@ const patio = {
 }
 
 // Characters Collection
-const charactersArray = [mrGreen, drOrchid, profPlum, mrMustard, mrsPeacock, missScarlet];
+const charactersArray = [];
+charactersArray.push(mrGreen, drOrchid, profPlum, mrMustard, mrsPeacock, missScarlet);
 
 // Rooms Collection
-const roomsArray = [dining, consevatory, kitchen, study, library, billard, lounge, ballroom, hall, spa, living, observatory, theater, guest, patio]
+const roomsArray = [];
+roomsArray.push(dining, consevatory, kitchen, study, library, billard, lounge, ballroom, hall, spa, living, observatory, theater, guest, patio)
 
 // Weapons Collection
-const weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
+const weaponsArray = [];
+weaponsArray.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol)
 
 const randomSelector = arr =>  arr[Math.floor(Math.random() * arr.length)]
 
