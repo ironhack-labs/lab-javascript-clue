@@ -143,12 +143,12 @@ function randomSelector(array) {
 function pickMystery() {
     let mysteryEnvelope = [];
 
-    mysteryEnvelope.push(randomSelector(charactersArray));
-    mysteryEnvelope.push(randomSelector(weaponsArray));
-    mysteryEnvelope.push(randomSelector(roomsArray));
-    return  mysteryEnvelope;
+    mysteryEnvelope.push(randomSelector(charactersArray))
+    mysteryEnvelope.push(randomSelector(weaponsArray))
+    mysteryEnvelope.push(randomSelector(roomsArray))
+    return Object.assign({}, mysteryEnvelope);
 }
-console.log(pickMystery());
+//console.log(pickMystery())
 
 
 function revealMystery() {
