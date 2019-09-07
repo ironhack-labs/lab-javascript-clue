@@ -105,13 +105,18 @@ const patio = {name: 'Patio'};
 
 // Characters Collection
 const charactersArray = [
-  (mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard)
+  mrGreen,
+  drOrchid,
+  profPlum,
+  missScarlet,
+  mrsPeacock,
+  mrMustard
 ];
 
 // Rooms Collection
 
 const roomsArray = [
-  (diningRoom,
+  diningRoom,
   conservatory,
   kitchen,
   study,
@@ -125,12 +130,20 @@ const roomsArray = [
   observatory,
   theater,
   guestHouse,
-  patio)
+  patio
 ];
 
 // Weapons Collection
 const weaponsArray = [
-  (rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol)
+  rope,
+  knife,
+  candlestick,
+  dumbbell,
+  poison,
+  axe,
+  bat,
+  trophy,
+  pistol
 ];
 
 // Create a function randomSelector to randomly select one element from a card stack.
@@ -147,13 +160,14 @@ function randomSelector(array) {
 //  and return an object with the 3 picked cards, a suspect, a weapon and a room. Our mystery should
 //  be stored on a mysteryEnvelope variable.
 
-function pickMystery() {
-  let mysteryEnvelope = [
-    randomSelector(charactersArray),
-    randomSelector(weaponsArray),
-    randomSelector(roomsArray)
-  ];
+let mysteryEnvelope = {};
 
+function pickMystery() {
+  mysteryEnvelope = {
+    suspect: randomSelector(charactersArray),
+    weapon: randomSelector(weaponsArray),
+    room: randomSelector(roomsArray)
+  };
   return mysteryEnvelope;
 }
 
@@ -162,5 +176,6 @@ function pickMystery() {
 //  <FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!!!!
 
 function revealMystery(mysteryEnvelope) {
-  return ` $<FIRST NAME> $<LAST NAME> killed Mr. Boddy using the $<WEAPON> in the $<ROOM>!!!!`;
+  const result = `${mysteryEnvelope.suspect.first_name} ${mysteryEnvelope.suspect.last_name} killed Mr. Boddy using the ${mysteryEnvelope.weapon.name} in the ${mysteryEnvelope.room.name}!!!!`;
+  return result;
 }
