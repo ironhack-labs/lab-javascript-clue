@@ -111,17 +111,6 @@ function randomSelector (arr){
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
-// let mysteryEnvelop = "";
-// function pickMystery (){
-//     let character = randomSelector(charactersArray);
-//     let room = randomSelector(roomsArray);
-//     let weapon = randomSelector(weaponsArray);
-//     return mysteryEnvelop =  {character: , room, weapon};
-
-// pickMystery(character, room, weapon);
-
-
-
 function pickMystery(){
     return {
         suspect: randomSelector(charactersArray),
@@ -130,11 +119,10 @@ function pickMystery(){
     }
 };
 
-function revealMystery(pickMystery) {
-    return `${pickMystery.suspect.first_name} ${pickMystery.suspect.last_name} killed Mr. Boddy using the ${pickMystery.weapon.name} in the ${pickMystery.room.name}!!!`;
+const misteryEnvelope = pickMystery();
+
+function revealMystery(misteryEnvelope) {
+    return `${misteryEnvelope.suspect.first_name} ${misteryEnvelope.suspect.last_name} killed Mr. Boddy using the ${misteryEnvelope.weapon.name} in the ${misteryEnvelope.room.name}!!!!`;
  };
 
-// function revealMystery = (mysteryEnvelope) => {
-//     return `${mysteryEvelope.suspect.first_name} ${mysteryEvelope.suspect.last_name} killed Mr. Boddy using the ${mysteryEvelope.weapon.name} in the ${mysteryEvelope.room.name}!!!`
-// };
 
