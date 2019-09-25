@@ -2,7 +2,7 @@
 
 /*
 
-let mrGreen = [
+mrGreen = [
 first_name:   Jacob,
 last_name:    Green,
 color:        green,
@@ -12,7 +12,7 @@ image:        https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.j
 occupation:   Entrepreneur
 ]
 
-let drOrchid = [
+drOrchid = [
 first_name:   Doctor,
 last_name:    Orchid,
 color:        white,
@@ -22,7 +22,7 @@ image:        http://www.radiotimes.com/uploads/images/Original/111967.jpg,
 occupation:    Scientist
 ]
 
-let profPlum = [
+profPlum = [
 first_name:   Victor,
 last_name:    Plum,
 color:        purple,
