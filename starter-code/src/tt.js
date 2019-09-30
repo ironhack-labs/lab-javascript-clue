@@ -1,5 +1,3 @@
-// Characters
-/*
 mrGreen
 first_name:   Jacob
 last_name:    Green
@@ -82,11 +80,11 @@ name: Observatory
 name: Theater
 name: Guest House
 name: Patio
-*/
+
 
 // Characters Collection
 const charactersArray = [
-    {firstName: "Jacob", lastName: "Green", color: "green", description: "he has a lot of connections", age: 45, image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg", occupation: "entrepreneur"},
+    {firstName: "Jacob", lastName: "Green", color: "green", description:"he has a lot of connections", age: 45, image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg", occupation: "entrepreneur"},
     {firstName: "Doctor", lastName: "Orchid", color: "white", description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy", age: 26, image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg", occupation: "Scientist"},
     {firstName: "Victor", lastName: "Plum", color: "purple", description: "Billionaire video game designer", age: 22, image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg", occupation: "Designer"},
     {firstName: "Kasandra", lastName: "Scarlet", color: "red", description: "She is a list-A movie star with a dark past", age: 31, image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg", occupation: "Actor"},
