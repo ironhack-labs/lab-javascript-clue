@@ -37,7 +37,7 @@ const missScarlet = {
     description:  "She is an A-list movie star with a dark past",
     age:          31,
     image:        "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
-    occupation:   Actor
+    occupation:   "Actor"
 }
 
 const mrsPeacock = {
@@ -47,7 +47,7 @@ const mrsPeacock = {
     description:  "She is from a wealthy family and uses her status and money to earn popularity",
     age:          36,
     image:        "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
-    occupation:   Socialité
+    occupation:   "Socialité"
 }
 
 const mrMustard = {
@@ -100,24 +100,21 @@ const pistol = {
 }
 
 // Rooms
-const rooms = {
-    name: "Dining Room",
-    name: "Conservatory",
-    name: "Kitchen",
-    name: "Study",
-    name: "Library",
-    name: "Billiard Room",
-    name: "Lounge",
-    name: "Ballroom",
-    name: "Hall",
-    name: "Spa",
-    name: "Living Room",
-    name: "Observatory",
-    name: "Theater",
-    name: "Guest House",
-    name: "Patio"
-}
-
+const DinningRoom = { name: "DinningRoom" };
+const Conservatory = { name: "Conservatory" };
+const Kitchen = { name: "Kitchen" };
+const Study = { name: "Study" };
+const Library = { name: "Library" };
+const BilliardRoom = { name: "BilliardRoom" };
+const Lounge = { name: "Lounge" };
+const Ballroom = { name: "Ballroom" };
+const Hall = { name: "Hall" };
+const Spa = { name: "Spa" };
+const LivingRoom = { name: "LivingRoom" };
+const Observatory = { name: "Observatory" };
+const Theater = { name: "Theater" };
+const GuestHouse = { name: "GuestHouse" };
+const Patio = { name: "Patio" };
 
 // Characters Collection
 const charactersArray = [
@@ -127,10 +124,26 @@ const charactersArray = [
     missScarlet,
     mrsPeacock,
     mrMustard
-]
+];
 
 // Rooms Collection
-const roomsArray = [rooms];
+const roomsArray = [
+    DinningRoom,
+    Conservatory,
+    Kitchen,
+    Study,
+    Library,
+    BilliardRoom,
+    Lounge,
+    Ballroom,
+    Hall,
+    Spa,
+    LivingRoom,
+    Observatory,
+    Theater,
+    GuestHouse,
+    Patio,
+];
 
 // Weapons Collection
 const weaponsArray = [
@@ -148,11 +161,28 @@ const weaponsArray = [
 // Random Selector
 // Create a function randomSelector to randomly select one element from a card stack. The method should receive an array as an argument, and return randomly one of the elements of the array.
 function randomSelector(array){
-    return random = array[Math.floor(Math.random() * array.length)]
+    let randomIndex = Math.floor(Math.random()*array.length)
+    return array[randomIndex]
 }
 
 // Create the mystery
 // We need to create a pickMystery function that will call randomSelector for each card stack, and return an object with the 3 picked cards, a suspect, a weapon and a room. Our mystery should be stored on a mysteryEnvelope variable.
-function pickMystery(){
+
+function pickMystery(characters, weapons, rooms) {
+    let mysteryEnvelope = [];
+    mysteryEnvelope.push(randomSelector(characters));
+    mysteryEnvelope.push(randomSelector(weapons));
+    mysteryEnvelope.push(randomSelector(rooms));
+    return mysteryEnvelope;
 }
 
+// Finally, we need to reveal the mystery. Create a revealMystery function, that will receive our mysteryEnvelope object as an argument and return the revealed mystery like this:
+// <FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!!!!
+
+function revealMystery(mysteryEnvelope){
+    let firstName = mysteryEnvelope[0].first_name
+    let lastName = mysteryEnvelope[0].last_name
+    let weapon = mysteryEnvelope[1].name
+    let room = mysteryEnvelope[2].name
+    return `${firstName} + " " + ${lastName} + " " + "killed Mr. Boddy using the" + " " +${weapon} + " " + "in the" + " " + ${room} + " " + "!!!!"`
+}
