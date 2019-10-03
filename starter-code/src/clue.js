@@ -140,27 +140,33 @@ let randomIndex2 = Math.floor(rand2 * charactersArray.length);
 let randomCharacters = charactersArray[randomIndex2];
 //console.log(randomCharacters.firstName);
 
-let randomSelector = function() {
-    return array[Math.floor(Math.random() * array.length)];
-}
+//------------------
+
+let randomSelector = (array) => {
+        return array[Math.floor(Math.random() * (array.length))];
+};
+
+//let randomSelector = (array) => {
+//    return array[Math.floor(Math.random() * (array.length))];}
+
 let array = [randomCharacters, randomWeapons, randomRooms];
-
-randomSelector();
-//console.log(randomSelector(array))
+//console.log(randomSelector(array));
 
 
-function pickMystery (randomSelector) {
-    return [randomCharacters, randomWeapons, randomRooms];
+let pickMystery = () => {
+    let mysteryEnvelope = {
+        suspect: randomCharacters,
+        weapon: randomWeapons,
+        room: randomRooms
+    };
+    return mysteryEnvelope;
 }
+
 pickMystery();
 //console.log(pickMystery());
 
-let mysteryEnvelope = pickMystery();
-console.log(mysteryEnvelope);
-
-let revealMystery = function(mysteryEnvelope) {
+let revealMystery = () => {
     return (`${randomCharacters.firstName} ${randomCharacters.lastName} killed Mr. Boddy using the ${randomWeapons.name} in the ${randomRooms.name}!!!!`);
-}
-
+};
 revealMystery();
 console.log(revealMystery());
