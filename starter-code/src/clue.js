@@ -75,7 +75,7 @@ const charactersArray = [
 ];
 
 // Rooms Collection
-const roomsArray = [
+let roomsArray = [
   'Dining Room',
   'Conservatory',
   'Kitchen',
@@ -92,6 +92,13 @@ const roomsArray = [
   'Guest House',
   'Patio',
 ];
+
+// turn it into an array of objects ({ name: room }) to make jasmine happy.
+roomsArray = roomsArray.reduce(function(rooms, room) {
+  let location = { name: room };
+  rooms.push(location);
+  return rooms;
+}, []);
 
 const weaponsArray = [
   { name: 'rope', weight: 10 },
@@ -125,7 +132,7 @@ function pickMystery() {
 let mysteryEnvelope = pickMystery();
 
 function revealMystery(mysteryEnvelope) {
-  return `${mysteryEnvelope.suspect.first_name} ${mysteryEnvelope.suspect.last_name} killed Mr. Boddy using the ${mysteryEnvelope.weapon.name} in the ${mysteryEnvelope.room}!!!!`;
+  return `${mysteryEnvelope.suspect.first_name} ${mysteryEnvelope.suspect.last_name} killed Mr. Boddy using the ${mysteryEnvelope.weapon.name} in the ${mysteryEnvelope.room.name}!!!!`;
 }
 
 console.log(revealMystery(mysteryEnvelope));
