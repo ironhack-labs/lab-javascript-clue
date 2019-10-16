@@ -169,6 +169,7 @@ const weaponsArray = [{
         weight: 15
     },
     {
+
         name: "bat",
         weight: 13
     },
