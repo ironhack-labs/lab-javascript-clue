@@ -213,10 +213,14 @@ function randomSelector(array) {
 //did not work
         
 function pickMystery() {
-    let mysteryEnvelope = {};
-    mysteryEnvelope.suspect = randomSelector(charactersArray)
-    mysteryEnvelope.room = randomSelector(roomsArray)
-    mysteryEnvelope.weapon = randomSelector(weaponsArray)
+    let mysteryEnvelope = {
+        suspect : randomSelector(charactersArray),
+        room : randomSelector(roomsArray),
+        weapon : randomSelector(weaponsArray)
+    };
+    // mysteryEnvelope.suspect = randomSelector(charactersArray)
+    // mysteryEnvelope.room = randomSelector(roomsArray)
+    // mysteryEnvelope.weapon = randomSelector(weaponsArray)
     return mysteryEnvelope
 }
 
@@ -224,5 +228,10 @@ function pickMystery() {
 // <FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!!!!
 
 function revealMystery(mysteryEnvelope) {
-    return (mysteryEnvelope.suspect.first_name + ' ' + mysteryEnvelope.suspect.last_name + ' killed Mr. Boddy using the ' + mysteryEnvelope.weapon.name + ' in the ' + mysteryEnvelope.room.name+'!!!!')
+    let firstName = mysteryEnvelope.suspect.first_name
+    let lastName = mysteryEnvelope.suspect.last_name
+    let weapon = mysteryEnvelope.weapon.name
+    let room = mysteryEnvelope.room.name
+    
+    return firstName+' '+lastName+' killed Mr. Boddy using the '+weapon+' in the '+room+'!!!!'
 }
