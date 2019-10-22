@@ -104,8 +104,18 @@ const weaponsArray = [
 ];
 
 function randomSelector(array) {
-  return array[Math.floor(Math.random()*array.length)]
+  return array[Math.floor(Math.random()*array.length)];
 }
-console.log(randomSelector(roomsArray))
-console.log(randomSelector(charactersArray))
-console.log(randomSelector(weaponsArray))
+console.log(randomSelector(roomsArray));
+console.log(randomSelector(charactersArray));
+console.log(randomSelector(weaponsArray));
+
+// picks 3 random cards to create the mystery
+function pickMystery() {
+  var mysteryEnvelope = {
+    room: randomSelector(roomsArray),
+    suspect: randomSelector(charactersArray),
+    weapon: randomSelector(weaponsArray)
+  }
+  return mysteryEnvelope;
+}
