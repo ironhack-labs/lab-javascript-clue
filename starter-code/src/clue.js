@@ -1,17 +1,4 @@
-// Characters Collection
-const charactersArray = [
-  mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard
-];
 
-// Rooms Collection
-const roomsArray = [
-  diningRoom, conservatory, kitchen, study, library, billiard, lounge, ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio
-];
-
-// Weapons Collection
-const weaponsArray = [
-  rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol
-];
 
 // Characters
 var mrGreen = {
@@ -99,3 +86,26 @@ var observatory  = { name: 'Observatory' };
 var theater      = { name: 'Theater' };
 var guestHouse  =  { name: 'Guest House' };
 var patio        = { name: 'Patio' };
+
+
+// Characters Collection
+const charactersArray = [
+  mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard
+];
+
+// Rooms Collection
+const roomsArray = [
+  diningRoom, conservatory, kitchen, study, library, billiardRoom, lounge, ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio
+];
+
+// Weapons Collection
+const weaponsArray = [
+  rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol
+];
+
+function randomSelector(array) {
+  return array[Math.floor(Math.random()*array.length)]
+}
+console.log(randomSelector(roomsArray))
+console.log(randomSelector(charactersArray))
+console.log(randomSelector(weaponsArray))
