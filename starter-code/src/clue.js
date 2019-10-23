@@ -130,7 +130,7 @@ const billiardRoom = {
 	name: 'Billiard Room'
 };
 
-const Lounge = {
+const lounge = {
 	name: 'Lounge'
 };
 
@@ -168,9 +168,41 @@ const theater = {
 
 // Characters Collection
 const charactersArray = [];
+charactersArray.push(mrGreen);
+charactersArray.push(drOrchid);
+charactersArray.push(profPlum);
+charactersArray.push(missScarlet);
+charactersArray.push(mrsPeacock);
+charactersArray.push(mrMustard);
 
 // Rooms Collection
 const roomsArray = [];
+roomsArray.push(diningRoom);
+roomsArray.push(observatory);
+roomsArray.push(kitchen);
+roomsArray.push(study);
+roomsArray.push(library);
+roomsArray.push(billiardRoom);
+roomsArray.push(lounge);
+roomsArray.push(ballroom);
+roomsArray.push(hall);
+roomsArray.push(spa);
+roomsArray.push(livingRoom);
+roomsArray.push(observatory);
+roomsArray.push(guestHouse);
+roomsArray.push(patio);
+roomsArray.push(theater);
 
 // Weapons Collection
 const weaponsArray = [];
+weaponsArray.push(rope);
+weaponsArray.push(knife);
+weaponsArray.push(candlestick);
+weaponsArray.push(dumbbell);
+weaponsArray.push(poison);
+weaponsArray.push(axe);
+weaponsArray.push(bat);
+weaponsArray.push(trophy);
+weaponsArray.push(pistol);
+
+console.log(charactersArray);
