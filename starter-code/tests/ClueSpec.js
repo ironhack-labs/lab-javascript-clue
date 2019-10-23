@@ -96,15 +96,14 @@ describe("Reveal the mystery - revealMystery", function() {
   });
 
   it("Return <FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!!!!", function() {
-    let {suspect,weapon,room} = pickMystery()
     expect(
       revealMystery({
-        suspect: { first_name: suspect.first_name, last_name: suspect.last_name },
-        weapon: { name: weapon.name },
-        room: { name: room.name }
+        suspect: { first_name: "Victor", last_name: "Plum" },
+        weapon: { name: "poison" },
+        room: { name: "Billiard Room" }
       })
     ).toEqual(
-      `${suspect.first_name} ${suspect.last_name} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!!!!`
+      "Victor Plum killed Mr. Boddy using the poison in the Billiard Room!!!!"
     );
   });
 });
