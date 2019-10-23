@@ -60,6 +60,7 @@ describe("Pick a random mystery - pickMystery", function() {
 
   it("Return a suspect in the suspect property of the object", function() {
     let suspect = JSON.stringify(pickMystery().suspect);
+    console.log(suspect, charactersArray)
     expect(
       charactersArray.findIndex(el => JSON.stringify(el) === suspect)
     ).toBeGreaterThan(-1);
