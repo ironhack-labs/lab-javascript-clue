@@ -85,10 +85,31 @@ name: Patio
 */
 
 // Characters Collection
-const charactersArray = [];
+const charactersArray = [mrGreen,drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard,];
 
 // Rooms Collection
-const roomsArray = [];
+const roomsArray = [diningRoom, conservatory, kitchen, study, library, billiardRoom, lounge, ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio];
 
 // Weapons Collection
-const weaponsArray = [];
+const weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
+
+
+function randomSelector(arr){
+    let getRandom = arr[Math.floor(Math.random() * arr.length)];
+    console.log(getRandom)
+    }
+    
+    function pickMystery(){
+      randomSelector(charactersArray)
+      randomSelector(weaponsArray)
+      randomSelector(roomsArray)
+    }
+    
+    let mysteryEnvelope = []
+    function createEnvelope(){
+      return mysteryEnvelope.push(pickMystery())
+    }
+    
+    createEnvelope()
+    
+
