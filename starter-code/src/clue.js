@@ -1,6 +1,6 @@
 // Characters
 const mrGreen = {
-	name: 'Jacob',
+	first_name: 'Jacob',
 	last_name: 'Green',
 	color: 'green',
 	description: 'He has a lot of connections',
@@ -10,7 +10,7 @@ const mrGreen = {
 };
 
 const drOrchid = {
-	name: 'Jacob',
+	first_name: 'Jacob',
 	last_name: 'Orchid',
 	color: 'white',
 	description: 'PhD in plant toxicology. Adopted daughter of Mr. Boddy',
@@ -20,7 +20,7 @@ const drOrchid = {
 };
 
 const profPlum = {
-	name: 'Victor',
+	first_name: 'Victor',
 	last_name: 'Plum',
 	color: 'purple',
 	description: 'Billionaire video game designer',
@@ -30,7 +30,7 @@ const profPlum = {
 };
 
 const missScarlet = {
-	name: 'Kasandra',
+	first_name: 'Kasandra',
 	last_name: 'Scarlet',
 	color: 'red',
 	description: 'She is an A-list movie star with a dark past',
@@ -40,7 +40,7 @@ const missScarlet = {
 };
 
 const mrsPeacock = {
-	name: 'Eleanor',
+	first_name: 'Eleanor',
 	last_name: 'Peacock',
 	color: 'blue',
 	description: 'She is from a wealthy family and uses her status and money to earn popularity',
@@ -50,7 +50,7 @@ const mrsPeacock = {
 };
 
 const mrMustard = {
-	name: 'Jack',
+	first_name: 'Jack',
 	last_name: 'Mustard',
 	color: 'yellow',
 	description: 'He is a former football player who tries to get by on his former glory',
@@ -205,4 +205,25 @@ weaponsArray.push(bat);
 weaponsArray.push(trophy);
 weaponsArray.push(pistol);
 
-console.log(charactersArray);
+//Return random card from array
+const randomSelector = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+const pickMystery = () => {
+	let mystery = {
+		suspect: randomSelector(charactersArray),
+		weapon: randomSelector(weaponsArray),
+		room: randomSelector(roomsArray)
+	};
+	return mystery;
+};
+
+const mysteryEnvelop = pickMystery(charactersArray, weaponsArray, roomsArray);
+
+const revealMystery = (mystery) => {
+	return `${mystery['suspect'].first_name} ${mystery['suspect'].last_name} killed Mr. Boddy using the ${mystery[
+		'weapon'
+	].name} in the ${mystery['room'].name}!!!!`;
+};
+
+console.log(typeof mysteryEnvelop);
+console.log(revealMystery(mysteryEnvelop));
