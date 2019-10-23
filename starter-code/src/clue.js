@@ -186,22 +186,13 @@ function randomSelector(arr) {
     }
   }
   function pickMystery() {
-      //console.log(suspArr, weapArr, roomArr)
     let mysteryEnvelope = {suspect:{},weapon:{},room:{}};
-    //if(suspArr.length > 0 && weapArr.length > 0 && roomArr.length > 0) {
         mysteryEnvelope['suspect'] = randomSelector(charactersArray);
         mysteryEnvelope['weapon'] = randomSelector(weaponsArray);
         mysteryEnvelope['room'] = randomSelector(roomsArray);
-    console.log(mysteryEnvelope)
-     //   }
   return mysteryEnvelope;
   }
-
-  function revealMystery() {
-      let mystery = pickMystery();
-      console.log('mystery ' + mystery.suspect.first_name)
-      if(mystery.suspect.first_name === "Victor") {
-        return `${mystery.suspect.first_name} ${mystery.suspect.last_name} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!!!`;
-      } 
+  function revealMystery(mystery) {
+        return `${mystery.suspect.first_name} ${mystery.suspect.last_name} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!!!!`;
   }
 
