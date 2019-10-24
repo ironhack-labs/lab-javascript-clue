@@ -144,3 +144,29 @@ const charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, m
 const roomsArray = [diningRoom, conservatory, kitchen, study, library, billiard, lounge, ballroom, hall, spa, living, observatory, theater, guest, patio];
 // Weapons Collection
 const weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
+
+
+
+function randomSelector(arr1) {
+    if (arr1.length === 0) {
+        return undefined;
+    }
+
+    if (arr1.length === 1) {
+        return arr1[0];
+    }
+
+    let randomArr = arr1[Math.floor(Math.random()*arr1.length)];
+  
+
+    return randomArr;
+};
+
+function pickMystery () {
+    let mysteryEnvelope = {
+        suspect: randomSelector(charactersArray),
+        weapon: randomSelector(weaponsArray),
+        room: randomSelector(roomsArray)
+    };
+    return mysteryEnvelope;
+}
