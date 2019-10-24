@@ -159,3 +159,17 @@ const weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trop
     return randomItem
 };
 
+function pickMystery(){
+    let mysteryEnvelope ={
+        suspect: randomSelector(charactersArray),
+        weapon: randomSelector(weaponsArray),
+        room: randomSelector(roomsArray)
+    };
+   return mysteryEnvelope
+}
+
+function revealMystery(){
+    pickMystery()
+    return `${mysteryEnvelope.suspect.first_name} ${mysteryEnvelope.suspect.last_name} killed Mr. Boddy using the ${mysteryEnvelope.weapon.name} in the ${mysteryEnveloperoom.name}!!!!`
+}
+
