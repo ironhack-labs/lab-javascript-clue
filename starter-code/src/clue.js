@@ -106,25 +106,6 @@ const pistol = {
     weight: 20
 }
 
-// Rooms
-/*
-name: Dining Room
-name: Conservatory
-name: Kitchen
-name: Study
-name: Library
-name: Billiard Room
-name: Lounge
-name: Ballroom
-name: Hall
-name: Spa
-name: Living Room
-name: Observatory
-name: Theater
-name: Guest House
-name: Patio
-*/
-
 // Characters Collection
 const charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 
@@ -134,9 +115,7 @@ const roomsArray = ["Dining", "Room", "Conservatory", "Kitchen", "Study", "Libra
 // Weapons Collection
 const weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
 
-
-function randomSelector(arrayRandom){
-
+const randomSelector = function (arrayRandom){
     if (arrayRandom.length <= 0) {
         return undefined;
     }
@@ -146,22 +125,15 @@ function randomSelector(arrayRandom){
     return arrayRandom[indiceCartaRandom];
 }
 
+const pickMystery = function(){
+	let misterio = {
+		suspect: randomSelector(charactersArray),
+		weapon: randomSelector(weaponsArray),
+		room: randomSelector(roomsArray)
+	};
+	return misterio;
+};
 
-function pickMystery (arrayMazos){
-
-    if (arrayMazos.length === 0) {
-        return null;
-    }
-
-    return arrayMazos;
-}
-
-
-function revealMystery (mysteryEnvelope){
-
-    if (revealMystery.length === 0) {
-        return null;
-    }
-
-    return "<FIRST NAME> <APELLIDO> mató al Sr. Boddy usando el <WEAPON> en el <ROOM> !!!!";
-}
+const revealMystery = function(misterio) {
+	return `${misterio['suspect'].first_name} ${misterio['suspect'].last_name} killed Mr. Boddy using the ${misterio['weapon'].name} in the ${misterio['room'].name}!!!!`;
+};
