@@ -165,11 +165,15 @@ function pickMystery(){
         weapon: randomSelector(weaponsArray),
         room: randomSelector(roomsArray)
     };
-   return mysteryEnvelope
+    return mysteryEnvelope
 }
 
+let mysteryEnvelope = pickMystery();
+
 function revealMystery(){
-    pickMystery()
-    return `${mysteryEnvelope.suspect.first_name} ${mysteryEnvelope.suspect.last_name} killed Mr. Boddy using the ${mysteryEnvelope.weapon.name} in the ${mysteryEnveloperoom.name}!!!!`
+   return(`${mysteryEnvelope.suspect.first_name} ${mysteryEnvelope.suspect.last_name} killed Mr. Boddy using the ${mysteryEnvelope.weapon.name} in the ${mysteryEnvelope.room.name}!!!!`)
 }
+
+revealMystery()
+
 
