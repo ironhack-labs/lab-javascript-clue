@@ -213,26 +213,20 @@ let randomSelector = function (array){
     return object;
 };
 
-let pickMystery = function (randomSelector){
-    let mysteryEnvelope={
-        suspect: "",
-        weapon: "",
-        room: ""
+let pickMystery = function (){
+
+    let mysteryEnvelope = {
+        suspect:randomSelector(charactersArray),
+        weapon: randomSelector(weaponsArray),
+        room: randomSelector(roomsArray)
     };
-
     
-
-    mysteryEnvelope.suspect =randomSelector(charactersArray);
-    mysteryEnvelope.weapon = randomSelector(weaponsArray);
-    mysteryEnvelope.room =randomSelector(roomsArray);
-
-    console.log(typeof(mysteryEnvelope));
     return mysteryEnvelope;
 };
 
-let revealMystery = function(misteryObject){
-
-    return console.log(`${misteryObject.suspect. first_name} ${misteryObject.suspect.last_name} killed Mr.Boddy ussing the ${misteryObject.weapon.name} in the ${misteryObject.room.name}`);
+let revealMystery =  function(misteryObject){
+    let str = `${misteryObject.suspect.first_name} ${misteryObject.suspect.last_name} killed Mr. Boddy using the ${misteryObject.weapon.name} in the ${misteryObject.room.name}!!!!`
+    return str;
 };
 
-pickMystery(randomSelector);
+pickMystery();
