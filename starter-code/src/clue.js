@@ -151,17 +151,13 @@ function randomSelector(myItem) {
     return myItem[randomItem];
 }
 
-function pickMystery(randomSelector) {
-    var mysteryEnvelope = {
-    suspect: "",
-    room: "",
-    weapons: ""
-}
-
-}
-
 function pickMystery() {
-
+    let mysteryEnvelope = {
+    suspect: randomSelector(charactersArray),
+    room: randomSelector(roomsArray),
+    weapon: randomSelector(weaponsArray)
+};
+return mysteryEnvelope;
 }
 
 
