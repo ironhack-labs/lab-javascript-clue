@@ -169,4 +169,13 @@ function pickMystery () {
         room: randomSelector(roomsArray)
     };
     return mysteryEnvelope;
-}
+};
+
+let mystery = pickMystery();
+
+function revealMystery (mystery) {
+    
+    return `${mystery.suspect.first_name} ${mystery.suspect.last_name} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!!!!`;
+};
+
+revealMystery();
