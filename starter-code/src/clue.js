@@ -8,8 +8,7 @@ let mrGreen = {
     age:          45,
     image:        "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
     occupation:   "Entrepreneur"
-}
-
+};
 let  drOrchid = {
     first_name:   "Doctor",
     last_name:    "Orchid",
@@ -19,8 +18,7 @@ let  drOrchid = {
     image:        "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
     occupation:   "Scientist"
 
-}
-
+};
 let profPlum = {
     first_name:   "Victor",
     last_name:    "Plum",
@@ -29,7 +27,7 @@ let profPlum = {
     age:          22,
     image:        "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
     occupation:   "Designer"
-}
+};
 
 let missScarlet = {
     first_name:   "Kasandra",
@@ -40,7 +38,7 @@ let missScarlet = {
     image:        "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
     occupation:   "Actor"
 
-}
+};
 
 let mrsPeacock= {
     first_name:   "Eleanor",
@@ -61,80 +59,168 @@ let mrMustard ={
     age:          62,
     image:        "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg",
     occupation:   "Retired Football player"
-}
+};
 
 let rope = {
-    name: rope,
+    name: "rope",
     weight: 10
 
-}
+};
 
 // Weapons
 
 let knife = {
-    name: knife,
+    name: "knife",
     weight: 8
-}
+};
 
 let candlestick = {
-    name: candlestick,
+    name: "candlestick",
     weight: 2
-}
+};
 
 let dumbbel=  {
-    name: dumbbell,
+    name: "dumbbell",
     eight: 30
-}
+};
 
-let weapon : {
-    name: poison     ,
+let poison= {
+    name: "poison",
     weight: 2
-}
+};
 
-let weapon : {n
-    ame: axe         ,
+let axe= {
+    name: "axe",
     eight: 15
-}
+};
 
-let weapon : {n
-    ame: bat         ,
+let bat = {
+    name: "bat",
     eight: 13
-}
+};
 
-let weapon : {n
-    ame: trophy      ,
+let trophy = {
+    name: "trophy",
     eight: 25
-}
+};
 
-let weapon : {n
-    ame: pistol      ,
+let pistol = {
+    name: "pistol",
     eight: 20
-}
-
+};
 
 // Rooms
-name: Dining Room
-name: Conservatory
-name: Kitchen
-name: Study
-name: Library
-name: Billiard Room
-name: Lounge
-name: Ballroom
-name: Hall
-name: Spa
-name: Living Room
-name: Observatory
-name: Theater
-name: Guest House
-name: Patio
+
+let dinningRoom = {
+    name: "Dining Room"
+};
+let conservatory = {
+    name: "Conservatory"
+};
+let kitchen = {
+    name: "Kitchen"
+};
+let study = {
+    name: "Study"
+};
+let library = {
+    name: "Library"
+};
+let billiardRoom = {
+    name: "Billiard Room"
+};
+let lounge = {
+    name: "Lounge"
+};
+let ballroom = {
+    name: "Ballroom"
+};
+let hall = {
+    name: "Hall"
+};
+let spa = {
+    name: "Spa"
+};
+let livingRoom = {
+    name: "Living Room"
+};
+let observatory = {
+    name: "Observatory"
+};
+let theater = {
+    name: "Theater"
+};
+let guestHouse = {
+    name: "Guest House"
+};
+let patio = {
+    name: "Patio"
+};
+
 
 
 // Characters Collection
 const charactersArray = [];
 
+charactersArray.push(mrGreen);
+charactersArray.push(drOrchid);
+charactersArray.push(profPlum);
+charactersArray.push(missScarlet);
+charactersArray.push(mrsPeacock);
+charactersArray.push(mrMustard);
 // Rooms Collection
 const roomsArray = [];
 
+roomsArray.push(rope);
+roomsArray.push(knife);
+roomsArray.push(candlestick);
+roomsArray.push(dumbbel);
+roomsArray.push(poison);
+roomsArray.push(axe);
+roomsArray.push(bat);
+roomsArray.push(trophy);
+roomsArray.push(pistol);
+
 // Weapons Collection
 const weaponsArray = [];
+
+weaponsArray.push(dinningRoom);
+weaponsArray.push(conservatory);
+weaponsArray.push(kitchen);
+weaponsArray.push(study);
+weaponsArray.push(library);
+weaponsArray.push(billiardRoom);
+weaponsArray.push(lounge);
+weaponsArray.push(hall);
+weaponsArray.push(spa);
+weaponsArray.push(livingRoom);
+weaponsArray.push(observatory);
+weaponsArray.push(theater);
+weaponsArray.push(guestHouse);
+weaponsArray.push(patio);
+
+let randomSelector = function (array){
+    let random =  Math.floor((Math.random() * array.length));
+    console.log(random);
+    array.forEach(function (element, index){
+        if(index===random){
+            return element;
+        }
+    });
+}
+
+let pickMystery = function (randomSelector){
+    let letmysteryEnvelope={};
+    let suspect = randomSelector(charactersArray);
+    let romm = randomSelector(rommsArray);
+    let weapon = randomSelector(weaponsArray);
+    mysteryEnvelope.suspect =suspect;
+    mysteryEnvelope.room =room;
+    mysteryEnvelope.weapon = weapon;
+    return mysteryEnvelope;
+}
+
+let revealMystery = function(misteryObject){
+
+    return console.log(`${misteryObject.suspect. first_name} ${misteryObject.suspect.last_name} killed Mr.Boddy ussing the ${misteryObject.weapon.name} in the ${misteryObject.room.name}`);
+}
