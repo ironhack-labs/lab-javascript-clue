@@ -121,7 +121,6 @@ const roomsArray = [
 
 ];
 
-
 function randomSelector(cardStack) {
     if (cardStack.length === 0) {
         return undefined;
@@ -129,28 +128,15 @@ function randomSelector(cardStack) {
     return cardStack[Math.floor(cardStack.length * Math.random())];
 }
 
-
-function pickMystery(suspectDeck, weaponDeck, roomDeck) {
-    let mysteryObj = {
-        suspect: randomSelector(suspectDeck),
-        weapon: randomSelector(weaponDeck),
-        room: randomSelector(roomDeck)
+function pickMystery() {
+    return {
+        suspect: randomSelector(charactersArray),
+        weapon: randomSelector(weaponsArray),
+        room: randomSelector(roomsArray)
     };
-    return mysteryObj;
 }
 
-
-// function pickMystery (suspectDeck, weaponDeck, roomDeck){
-//     let mysteryObj = [ 
-//         randomSelector(suspectDeck), 
-//         randomSelector(weaponDeck), 
-//         randomSelector(roomDeck)
-//     ];
-//     return mysteryObj;
-// }
-
-
-let mysteryEnvelope = pickMystery(charactersArray, weaponsArray, roomsArray);
+let mysteryEnvelope = pickMystery();
 
 function revealMystery(mysteryEnvelope) {
     return (`${mysteryEnvelope.suspect.first_name} ${mysteryEnvelope.suspect.last_name} killed Mr. Boddy using the ${mysteryEnvelope.weapon.name} in the ${mysteryEnvelope.room.name}!!!!`)
