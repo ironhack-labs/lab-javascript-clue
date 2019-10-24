@@ -200,6 +200,9 @@ weaponsArray.push(guestHouse);
 weaponsArray.push(patio);
 
 let randomSelector = function (array){
+    if(array.length == 0){
+        return undefined;
+      }
     let random =  Math.floor((Math.random() * array.length));
     let object= "";
     array.forEach(function (element, index){
@@ -213,17 +216,17 @@ let randomSelector = function (array){
 let pickMystery = function (randomSelector){
     let mysteryEnvelope={
         suspect: "",
-        room: "",
-        weapon: ""
+        weapon: "",
+        room: ""
     };
-    let suspect = randomSelector(charactersArray);
 
-    let room = randomSelector(roomsArray);
-    let weapon = randomSelector(weaponsArray);
-    mysteryEnvelope.suspect =suspect;
-    mysteryEnvelope.room =room;
-    mysteryEnvelope.weapon = weapon;
-    console.log(mysteryEnvelope);
+    
+
+    mysteryEnvelope.suspect =randomSelector(charactersArray);
+    mysteryEnvelope.weapon = randomSelector(weaponsArray);
+    mysteryEnvelope.room =randomSelector(roomsArray);
+
+    console.log(typeof(mysteryEnvelope));
     return mysteryEnvelope;
 };
 
