@@ -1,6 +1,4 @@
 // Characters
-
-
 const mrGreen = {
     first_name:   "Jacob",
     last_name:    "Green",
@@ -63,18 +61,53 @@ occupation:   "Retired Football player"
 };
 
 // Weapons
-/*
-name: rope        ---   weight: 10
-name: knife       ---   weight: 8
-name: candlestick ---   weight: 2
-name: dumbbell    ---   weight: 30
-name: poison      ---   weight: 2
-name: axe         ---   weight: 15
-name: bat         ---   weight: 13
-name: trophy      ---   weight: 25
-name: pistol      ---   weight: 20
+const rope = {
+    name: "rope",        
+    weight: 10
+}
+
+const knife = {
+    name: "knife",       
+    weight: 8
+}
+
+const candlestick = {
+    name: "candlestick",
+    weight: 2
+}
+
+const dumbbell = {
+    name: "dumbbell",
+    weight: 30
+}
+
+const poison = {
+    name: "poison",      
+    weight: 2
+}
+
+const axe = {
+    name: "axe",
+    weight: 15
+}
+
+const bat = {
+    name: "bat",       
+    weight: 13
+}
+
+const trophy = {
+    name: "trophy",     
+    weight: 25
+}
+
+const pistol = {
+    name: "pistol",
+    weight: 20
+}
 
 // Rooms
+/*
 name: Dining Room
 name: Conservatory
 name: Kitchen
@@ -96,7 +129,39 @@ name: Patio
 const charactersArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 
 // Rooms Collection
-const roomsArray = [];
+const roomsArray = ["Dining", "Room", "Conservatory", "Kitchen", "Study", "Library", "Billiard Room", "Lounge", "Ballroom", "Hall", "Spa", "Living Room", "Observatory", "Theater", "Guest House", "Patio"];
 
 // Weapons Collection
-const weaponsArray = [];
+const weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
+
+
+function randomSelector(arrayRandom){
+
+    if (arrayRandom.length <= 0) {
+        return undefined;
+    }
+
+    let indiceCartaRandom = Math.floor(Math.random() * arrayRandom.length);
+
+    return arrayRandom[indiceCartaRandom];
+}
+
+
+function pickMystery (arrayMazos){
+
+    if (arrayMazos.length === 0) {
+        return null;
+    }
+
+    return arrayMazos;
+}
+
+
+function revealMystery (mysteryEnvelope){
+
+    if (revealMystery.length === 0) {
+        return null;
+    }
+
+    return "<FIRST NAME> <APELLIDO> mató al Sr. Boddy usando el <WEAPON> en el <ROOM> !!!!";
+}
