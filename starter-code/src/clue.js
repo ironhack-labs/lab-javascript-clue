@@ -62,52 +62,96 @@ const charactersArray = [
 ];
 
 // Rooms Collection
-const roomsArray = [
+const weaponsArray = [
     rope = {
-        weight: 10
+        name: "rope",
+        weight: "10"
     },
     knife = {
-        weight: 8
+        name: "knife",
+        weight: "8"
     },
     candlestick = {
-        weight: 2
+        name: "candlestick",
+        weight: "2"
     },
     dumbbell = {
-        weight: 30
+        name: "dumbbell",
+        weight: "30"
     },
     poison = {
-        weight: 2
+        name: "poison",
+        weight: "2"
     },
     axe = {
-        weight: 15
+        name: "axe",
+        weight: "15"
     },
     bat = {
-        weight: 13
+        name: "bat",
+        weight: "13"
     },
     trophy = {
-        weight: 25
+        name: "trophy",
+        weight: "25"
     },
     pistol = {
-        weight: 20
+        name: "pistol",
+        weight: "20"
     }
 ];
 
 // Weapons Collection
-const weaponsArray = [
-    diningRoom = {},
-    conservatory = {},
-    kitchen = {},
-    study = {},
-    library = {},
-    billiardRoom = {},
-    lounge = {},
-    ballroom = {},
-    hall = {},
-    spa = {},
-    livingRoom = {},
-    observatory = {},
-    theater = {},
-    guestHouse = {},
-    patio = {},
+const roomsArray = [
+    diningRoom = { name: "diningRoom" },
+    conservatory = { name: "conservatory" },
+    kitchen = { name: "kitchen" },
+    study = { name: "study" },
+    library = { name: "library" },
+    billiardRoom = { name: "billiardRoom" },
+    lounge = { name: "lounge" },
+    ballroom = { name: "ballroom" },
+    hall = { name: "hall" },
+    spa = { name: "spa" },
+    livingRoom = { name: "livingRoom" },
+    observatory = { name: "observatory" },
+    theater = { name: "theater" },
+    guestHouse = { name: "guestHouse" },
+    patio = { name: "patio" },
 
 ];
+
+
+function randomSelector(cardStack) {
+    if (cardStack.length === 0) {
+        return undefined;
+    }
+    return cardStack[Math.floor(cardStack.length * Math.random())];
+}
+
+
+function pickMystery(suspectDeck, weaponDeck, roomDeck) {
+    let mysteryObj = {
+        suspect: randomSelector(suspectDeck),
+        weapon: randomSelector(weaponDeck),
+        room: randomSelector(roomDeck)
+    };
+    return mysteryObj;
+}
+
+
+// function pickMystery (suspectDeck, weaponDeck, roomDeck){
+//     let mysteryObj = [ 
+//         randomSelector(suspectDeck), 
+//         randomSelector(weaponDeck), 
+//         randomSelector(roomDeck)
+//     ];
+//     return mysteryObj;
+// }
+
+
+let mysteryEnvelope = pickMystery(charactersArray, weaponsArray, roomsArray);
+
+function revealMystery(mysteryEnvelope) {
+    return (`${mysteryEnvelope.suspect.first_name} ${mysteryEnvelope.suspect.last_name} killed Mr. Boddy using the ${mysteryEnvelope.weapon.name} in the ${mysteryEnvelope.room.name}!!!!`)
+}
