@@ -130,7 +130,7 @@ function selectRandom(array) {
     let length = array.length
     let randomSelection;
     if(length === 0) {
-      return undefiend
+      return undefined
     }
     if(length === 1) {
       return array[0]
@@ -143,9 +143,18 @@ function selectRandom(array) {
     }
 }
 
-// function pickMystery() {
-//     let randomMystery = { suspect: "", weapon: "", room: "" }
+function pickMystery() {
+    let randomMystery = { suspect: "", weapon: "", room: "" }
+    let suspect = selectRandom(suspectsArray)
+    let weapon = selectRandom(weaponsArray)
+    let room = selectRandom(roomsArray)
 
-// }
+    randomMystery.suspect = suspect;
+    randomMystery.weapon = weapon;
+    randomMystery.room = room;
+
+    return randomMystery  
+
+}
 
 // ITERATION 3
