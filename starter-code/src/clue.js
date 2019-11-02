@@ -102,4 +102,17 @@ function selectRandom( arr ) {
     return arr[ramNum];
 }
 
+// Create the mystery
+function pickMystery() {
+    let suspect = selectRandom(suspectsArray);
+    let room = selectRandom(roomsArray);
+    let weapon = selectRandom(weaponsArray);
+
+    return {
+        suspect,
+        room,
+        weapon
+    }
+}
+
 // ITERATION 3
