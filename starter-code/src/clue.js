@@ -17,7 +17,8 @@ const suspectsArray = [
         occupation: "Scientist", 
         age: 26,
         description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
-        image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg color: white"
+        image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg", 
+        color: "white"
     },
     {
         firstName: "Victor",
@@ -33,7 +34,7 @@ const suspectsArray = [
         lastName: "Scarlet",
         occupation: "Actor",
         age: 31,
-        description: "She is an A-list movie star with a dark past"
+        description: "She is an A-list movie star with a dark past",
         image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
         color: "red"
     },
@@ -55,7 +56,7 @@ const suspectsArray = [
         image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg", 
         color: "yellow"
     }
-]
+];
 // Rooms Collection
 const roomsArray = [
     {
@@ -129,16 +130,25 @@ const weaponsArray = [
 // properties: suspect, weapon and room, each holding as a value a card of that specific type. 
 //You can get a random card of each type by calling selectRandom on each card stack
 
+
 function selectRandom(randomArr){
-    let randomElem = Math.floor(Math.random * randomArr.length -1)
-    let randomCard = randomArr[randomElem.i];
-    return randomCard;
-}
+    return randomArr[Math.floor(Math.random() * randomArr.length)];
+};
 
 function pickMystery(){
-    let suspect
-    let room
-    let weapon
+    return {suspect: selectRandom(suspectsArray), weapon: selectRandom(weaponsArray), 
+        room: selectRandom(roomsArray)}
 }
 
+
 // ITERATION 3
+
+// At last, we're ready to unveil the mystery.
+// Declare a function named revealMystery that receives an envelope object (such as the one 
+// returned by pickMystery) as the single argument, and returns a reveal message in the following 
+// format: <FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!
+
+
+function revealMystery(envelope){
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
+}
