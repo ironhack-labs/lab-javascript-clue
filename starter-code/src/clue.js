@@ -149,7 +149,7 @@ selectRandom = arr => {
     } else if (arr.length == 1) {
       return  arr[0];
     } else if (arr.length > 1) {
-      let choice = arr[Math.floor(Math.random() * Math.floor(arr.length))];
+      let choice = arr[Math.floor(Math.random() * arr.length)];
       return choice;;
     };
   };
