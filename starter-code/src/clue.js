@@ -84,7 +84,7 @@ const suspectsArray = [
     {name: "axe", weight: 15},
     {name: "bat", weight: 13},
     {name: "trophy", weight: 25},
-    {name: "pistol", weight: 20}
+    {name: "pistol", weight: 20},
  ];
  // ITERATION 2
  function selectRandom(array){
@@ -93,4 +93,16 @@ const suspectsArray = [
  };
 
  selectRandom(weaponsArray);
+
+ function pickMistery() {
+    let mistery = {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray),
+    };
+
+    return mistery;
+ };
+
+ pickMistery();
  // ITERATION 3
