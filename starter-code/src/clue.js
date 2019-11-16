@@ -91,5 +91,30 @@ const weaponsArray = [
 ];
 
 // ITERATION 2
+function selectRandom(arr) {
+	let index = Math.floor(Math.random() * arr.length);
+	return arr[index];
+}
+
+function pickMystery() {
+	var object = {
+		suspect: selectRandom(suspectsArray),
+		weapon: selectRandom(weaponsArray),
+		room: selectRandom(roomsArray)
+	};
+	return object;
+}
 
 // ITERATION 3
+function revealMystery(object) {
+	let str =
+		object.suspect.firstName +
+		' ' +
+		object.suspect.lastName +
+		' killed Mr. Boddy using the ' +
+		object.weapon.name +
+		' in the ' +
+		object.room.name +
+		'!';
+	return str;
+}
