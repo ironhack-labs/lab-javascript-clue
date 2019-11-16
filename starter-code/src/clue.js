@@ -8,9 +8,8 @@ const suspectsArray = [
     ocupation: "Entrepeneur",
     age: 45,
     description: "He has a lot of connections",
-    image: url(
+    image:
       "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg"
-    )
   },
   {
     firstName: "Doctor",
@@ -18,7 +17,7 @@ const suspectsArray = [
     ocupation: "Scientist",
     age: 26,
     description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
-    image: url("http://www.radiotimes.com/uploads/images/Original/111967.jpg")
+    image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg"
   },
   {
     firstName: "Victor",
@@ -26,9 +25,8 @@ const suspectsArray = [
     ocupation: "Designer",
     age: 22,
     description: "Billionaire video game designer",
-    image: url(
+    image:
       "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg"
-    )
   },
   {
     firstName: "Kasandra",
@@ -36,7 +34,7 @@ const suspectsArray = [
     ocupation: "Actor",
     age: 31,
     description: "She is an A-list movie star with a dark past",
-    image: url("https://www.radiotimes.com/uploads/images/Original/111967.jpg")
+    image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg"
   },
   {
     firstName: "Eleanor",
@@ -45,7 +43,7 @@ const suspectsArray = [
     age: 36,
     description:
       "She is from a wealthy family and uses her status and money to earn popularity",
-    image: url("https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg")
+    image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg"
   },
   {
     firstName: "Jack",
@@ -54,9 +52,8 @@ const suspectsArray = [
     age: 62,
     description:
       "He is a former football player who tries to get by on his former glory",
-    image: url(
+    image:
       "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg"
-    )
   }
 ];
 
@@ -94,9 +91,30 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom(e) {
-  var rand = e[Math.floor(Math.random() * e.length)];
-  return rand;
+function selectRandom(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
+function pickMystery() {
+  var suspect = selectRandom(suspectsArray);
+  var room = selectRandom(roomsArray);
+  var weapon = selectRandom(weaponsArray);
+  var mystery = { suspect: suspect, room: room, weapon: weapon };
+  console.log(mystery);
+  return mystery;
 }
 
 // ITERATION 3
+
+function revealMystery(envelope) {
+  return (
+    envelope.suspect.firstName +
+    " " +
+    envelope.suspect.lastName +
+    " killed Mr. Boddy using the " +
+    envelope.weapon.name +
+    " in the " +
+    envelope.room.name +
+    "!"
+  );
+}
