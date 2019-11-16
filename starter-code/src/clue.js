@@ -101,7 +101,6 @@ const roomsArray = [
 ];
 
 // ITERATION 2
-
 function selectRandom(cards) {
   return cards[Math.floor(Math.random() * cards.length)];
 }
@@ -116,14 +115,5 @@ function pickMystery() {
 
 // ITERATION 3
 function revealMystery(guilty) {
-  console.log(
-    guilty.suspect.firstName,
-    guilty.suspect.lastName,
-    "killed Mr. Boddy using the weapon",
-    guilty.weapon.name,
-    "in the ",
-    guilty.room.name
-  );
+  return `${guilty.suspect.firstName} ${guilty.suspect.lastName} killed Mr. Boddy using the ${guilty.weapon.name} in the ${guilty.room.name}!`;
 }
-
-revealMystery(pickMystery());
