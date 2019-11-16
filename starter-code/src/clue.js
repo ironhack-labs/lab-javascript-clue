@@ -102,8 +102,19 @@ function pickMystery() {
 		weapon: selectRandom(weaponsArray),
 		room: selectRandom(roomsArray)
 	};
-
 	return object;
 }
 
 // ITERATION 3
+function revealMystery(object) {
+	let str =
+		object.suspect.firstName +
+		' ' +
+		object.suspect.lastName +
+		' killed Mr. Boddy using the ' +
+		object.weapon.name +
+		' in the ' +
+		object.room.name +
+		'!';
+	return str;
+}
