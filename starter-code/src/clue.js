@@ -87,7 +87,10 @@ const suspectsArray = [
     {name: "pistol", weight: 20}
  ];
  // ITERATION 2
- function selectRandom(){
-    Math.floor(Math.random()* weaponsArray.length)
+ function selectRandom(array){
+     let randomArray = Math.floor(Math.random()* array.length)
+     return array[randomArray]
  };
+
+ selectRandom(weaponsArray);
  // ITERATION 3
