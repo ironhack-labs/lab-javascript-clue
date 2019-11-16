@@ -1,5 +1,3 @@
-import { url } from "inspector";
-
 // ITERATION 1
 
 // Suspects Collection
@@ -95,5 +93,10 @@ const weaponsArray = [
 ];
 
 // ITERATION 2
+
+function selectRandom(e) {
+  var rand = e[Math.floor(Math.random() * e.length)];
+  return rand;
+}
 
 // ITERATION 3
