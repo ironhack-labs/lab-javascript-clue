@@ -48,7 +48,7 @@ const weaponsArray = [
 
 function selectRandom(array){
 
-    return array[Math.floor(Math.random() * (array.length - 0)) + 0];
+    return array[Math.floor(Math.random() * (array.length))];
 
 }
 
