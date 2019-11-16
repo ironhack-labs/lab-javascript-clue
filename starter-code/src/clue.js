@@ -4,7 +4,7 @@ function selectRandom(array){
   if(array.length == 1){
     return array[0];
   } else {
-    return array[Math.random() * (array.length-1)];
+    return array[Math.floor(Math.random() * (array.length))];
   }
 }
 
