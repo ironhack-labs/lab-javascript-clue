@@ -117,3 +117,8 @@ const suspectsArray = [
     //pickMystery()
 
 // ITERATION 3
+function revealMystery(envelope){
+    let message = envelope.suspect.firstName + " " + envelope.suspect.lastName + " killed Mr. Body using the " + envelope.weapon.name + " in the " + envelope.room.name;
+  return message;
+  }
+  //revealMystery(pickMystery())
