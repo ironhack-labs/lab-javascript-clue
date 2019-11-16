@@ -100,4 +100,12 @@ const weaponsArray = [
 
 // ITERATION 2
 
+function pickMystery(){
+  return {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray)
+  }
+}
+
 // ITERATION 3
