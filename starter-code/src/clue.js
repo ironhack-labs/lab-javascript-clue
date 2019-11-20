@@ -114,29 +114,31 @@ const weaponsArray = [{
     }
 ];
 
-// ITERATION 2
+
 function selectRandom(array) {
     var randomElement = Math.floor(Math.random() * (array.length));
     console.log(array[randomElement]);
     return array[randomElement]
 }
-let suspect = selectRandom(suspectsArray);
-let rooms = selectRandom(roomsArray);
-let weapons = selectRandom(weaponsArray);
 
-let object = [];
 
-function pickMystery() {
-    object.push(suspect);
-    object.push(rooms);
-    object.push(weapons);
+let newArray = [];
+const pickMystery = () => {
+    const randomCharacter = selectRandom(suspectsArray)
+    const randomWeapon = selectRandom(roomsArray)
+    const randomRoom = selectRandom(weaponsArray)
+    let mystery = {
+        weapon: randomWeapon,
+        room: randomRoom,
+        suspect: randomCharacter
+    }
+    return mystery
 }
-pickMystery()
 
-console.log(suspect)
-console.log(object)
-    // ITERATION 3
-function revealMystery(object) {
-    console.log(`${object[0].firstName} ${object[0].lastName} killed Mr. Boddy using the ${object[2].name} in the ${object[1].name}!`)
+
+// ITERATION 3
+function revealMystery(newArray) {
+    let finalMystery = pickMystery();
+    console.log(`${finalMystery.suspect.firstName} ${finalMystery.suspect.lastName} killed Mr. Boddy using the ${finalMystery.weapon.name} in the ${finalMystery.room.name}!`)
 }
-revealMystery(object)
+revealMystery(newArray)
