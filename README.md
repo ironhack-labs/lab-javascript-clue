@@ -1,5 +1,3 @@
-![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
-
 
 # LAB | JS Clue - Mixing objects and arrays
 
@@ -8,35 +6,6 @@ Do you remember the classic detective board game Clue? It was a very popular gam
 The plot starts with the death of Mr. Boddy, the very wealthy owner of Tudor Manor. He was killed under highly suspicious circumstances, and it's the players mission to uncover which __suspect__ murdered him, what __weapon__ was used, and in which __room__ of the mansion the crime took place.
 
 When playing Clue, these three details are represented by a __suspect__ card, a __weapon__ card and a __room__ card that are kept hidden in an envelope for the duration of the game. By progressively revealing the remaining cards, the players can infer which are the three cards that are hidden. When a player is confident that they know the solution to the mystery, they will try to reveal it. If a player guesses correctly, they win the game.
-
-<p align="center"><img width="400" src="https://i.imgur.com/AZWieq9.jpg=300"/></p>
-
-## Requirements
-
-- Fork this repo
-- Clone this repo
-
-## Submission
-
-- Upon completion, run the following commands:
-
-  ```
-  git add .
-  git commit -m "done"
-  git push origin master
-  ```
-
-- Create Pull Request so your TAs can check up your work.
-
-## Deliverables
-
-Write all of your code in the `src/clue.js` file.
-
-Upon completion, commit your changes, push them to your remote fork, and create a pull request so that the TAs can review your submission.
-
-### Remember our tests!
-
-We will be working with automated tests again! Please, open the `SpecRunner.html` in your browser and use it to debug your solution of the Lab.
 
 ## Iteration 1: Create the cards
 
