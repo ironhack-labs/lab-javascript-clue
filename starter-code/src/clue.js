@@ -158,16 +158,36 @@ const selectRandom = (array) => {
 // console.log(selectRandom(weaponsArray));
 
 const pickMystery = () => {
-  let killer = selectRandom(suspectsArray);
-  let weapon = selectRandom(weaponsArray);
-  let room = selectRandom(roomsArray);
+  let theKiller = selectRandom(suspectsArray);
+  let theWeapon = selectRandom(weaponsArray);
+  let theRoom = selectRandom(roomsArray);
 
-  console.log(killer);
-  console.log(weapon);
-  console.log(room);
+  // console.log(killer);
+  // console.log(weapon);
+  // console.log(room);
+
+  let murderConfidentialFile = {
+    suspect: theKiller,
+    weapon: theWeapon,
+    room: theRoom,
+  };
+
+  return murderConfidentialFile;
 
   // return obj {suspectsArray, weaponsArray, roomsArray};
 }
 
-pickMystery();
+// console.log(pickMystery());
+
 // ITERATION 3
+
+const revealMystery = (envelope) => {
+  let message = "";
+
+  message = `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+
+  return message;
+}
+
+// revealMystery(pickMystery());
+console.log(revealMystery(pickMystery()));
