@@ -9,7 +9,7 @@ The plot starts with the death of Mr. Boddy, the very wealthy owner of Tudor Man
 
 When playing Clue, these three details are represented by a __suspect__ card, a __weapon__ card and a __room__ card that are kept hidden in an envelope for the duration of the game. By progressively revealing the remaining cards, the players can infer which are the three cards that are hidden. When a player is confident that they know the solution to the mystery, they will try to reveal it. If a player guesses correctly, they win the game.
 
-<p align="center"><img width="400" src="https://i.imgur.com/AZWieq9.jpg=300"/></p>
+<p align ="center"><img width="400" src="https://i.imgur.com/AZWieq9.jpg=300"/></p>
 
 ## Requirements
 
