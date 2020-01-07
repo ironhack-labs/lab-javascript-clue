@@ -131,6 +131,8 @@ const pickMystery = () => (
     }
 );
 
-console.log (pickMystery());
-
 // ITERATION 3
+
+const revealMystery = (obj) => (
+    `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`
+);
