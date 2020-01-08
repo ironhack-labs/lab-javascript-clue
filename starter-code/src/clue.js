@@ -20,7 +20,9 @@ const suspectsArray = [
 
 // Rooms Collection
 const roomsArray = [
-  'room1',
+  { name: 'Dining Room' },
+  { name: 'Conservatory' },
+
   'room2',
   'room3',
   'room4',
@@ -41,7 +43,9 @@ const roomsArray = [
 // Weapons Collection
 const weaponsArray = [
   {
-    rope: 10,
+    rope: {
+      weight: 1,
+    },
   },
   {
     knife: 10,
@@ -61,11 +65,12 @@ const weaponsArray = [
   {
     name7: 'weight7',
   },
+
   {
-    name8: 'weight8',
+    name: 'weight8',
   },
   {
-    name9: 'weight9',
+    name: 'weight9',
   },
 ];
 const cardTypes = [suspectsArray, roomsArray, weaponsArray];
@@ -86,16 +91,16 @@ function pickMystery() {
   let weapon = selectRandom(weaponsArray);
 
   let mystery = {
-    suspect,
-    weapon,
-    room,
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray),
   };
 
   return mystery;
 }
 
 function revealMystery(mystery) {
-  console.log(`${mystery.suspect} killed Mr.Boddy using the ${mystery.weapon} in the ${mystery.room}`);
+  return `${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`;
 
   //  return __\<FIRST NAME\> \<LAST NAME\> killed Mr. Boddy using the \<WEAPON\> in the \<ROOM\>!__
 }
