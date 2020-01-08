@@ -160,12 +160,16 @@ function selectRandom(array) {
 
 function pickMystery(){
   let object = {
-    supect: selectRandom(suspectsArray),
+    suspect: selectRandom(suspectsArray),
     weapon : selectRandom(weaponsArray),
     room : selectRandom(roomsArray)
-  }
+  };
   return object;
 }
 
 
 // ITERATION 3
+
+function revealMystery (envelope){
+  return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+}
