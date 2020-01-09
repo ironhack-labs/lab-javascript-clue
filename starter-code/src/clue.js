@@ -133,10 +133,12 @@ function pickMystery() {
   return  {suspect: selectRandom(suspectsArray), weapon: selectRandom(weaponsArray), room: selectRandom(roomsArray)};
 }
 
+let result = pickMystery();
+
 // ITERATION 3
 
 function revealMystery(obj) {
   return `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`;
 }
 
-revealMystery(pickMystery);
+revealMystery(result);
