@@ -97,19 +97,17 @@ function selectRandom (array){
 
 function pickMystery() {
     let threeProperties = {
-        suspect: selectRandom(suspectsArray),
-        weapon: selectRandom(weaponsArray),
-        room: selectRandom(roomsArray)
-    }
+            suspect: selectRandom(suspectsArray),
+            weapon: selectRandom(weaponsArray),
+            room: selectRandom(roomsArray)
+    };
     return threeProperties;
-};
-pickMystery();  
+} 
 
 // ITERATION 3
-threeProperties = pickMystery;
-function revealMistery(pickMystery){
-    return threeProperties.suspect.firstName + " " + threeProperties.suspect.lastName + " killed Mr.Boddy using the " + threeProperties.weapon.name + " in the " + threeProperties.room + "!!!!"; 
-  };
+let final = pickMystery();
+function revealMistery(obj) {
+    return `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr.Boddy using the  ${obj.weapon.name} in the ${obj.room.name} !!!!`; 
+  }
 
-revealMistery();
-  
+revealMistery(final);
