@@ -172,12 +172,9 @@ function pickMystery(){
 
 
 // ITERATION 3
-function revealMystery(){
-    let name  = pickMystery().suspect.firstName;
-    let secondname  = pickMystery().suspect.lastName; 
-    let weaponkill  = pickMystery().weapon.name; 
-    let placekill  = pickMystery().room.name; 
-    let str =  `${name} ${secondname} killed Mr. Boddy using the ${weaponkill} in the ${placekill}!`;
+function revealMystery(data){
+  
+    let str =  `${data.suspect.firstName} ${data.suspect.lastName} killed Mr. Boddy using the ${data.weapon.name} in the ${data.room.name}!`;
 
         return str;
     }
