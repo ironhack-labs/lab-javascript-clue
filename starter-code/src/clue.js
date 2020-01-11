@@ -9,9 +9,45 @@ function selectRandom(arr) {
 
 function pickMystery() {
   const obj = {
-    suspect: { firstName: "aa", lastName: "abc" },
-    weapon: { name: "abd" },
-    room: { name: "abb" }
+    suspect: [
+      {
+        firstName: "aa",
+        lastName: "abc",
+        ocupation: "student"
+      },
+      {
+        firstName: "ab",
+        lastName: "abc2",
+        ocupation: "doctor"
+      },
+      {
+        firstName: "ac",
+        lastName: "abc3",
+        ocupation: "web developer"
+      }
+    ],
+    weapon: [
+      {
+        name: "rock"
+      },
+      {
+        name: "bate"
+      },
+      {
+        name: "pistol"
+      }
+    ],
+    room: [
+      {
+        name: "bathroom"
+      },
+      {
+        name: "bedroom"
+      },
+      {
+        name: "living"
+      }
+    ]
   };
   return obj;
 }
