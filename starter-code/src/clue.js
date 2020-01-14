@@ -87,14 +87,11 @@ const suspectsArray = [
       {name: "pistol", weight: 20}
   ];
 
+
 // ITERATION 2
 
 function selectRandom(arr) {
-    if (arr == suspectsArray) {
-      return arr[Math.floor(Math.random() * arr.length)].firstName
-    } else {
-      return arr[Math.floor(Math.random() * arr.length)].name
-    }
+    return arr[Math.floor(Math.random() * arr.length)]
   }
   
   function pickMistery() {
@@ -102,13 +99,12 @@ function selectRandom(arr) {
     mistery.push(selectRandom(suspectsArray))
     mistery.push(selectRandom(roomsArray))
     mistery.push(selectRandom(weaponsArray))
-    console.log(mistery)
+    return mistery
   }
-  pickMistery()
-
-// ITERATION 3
-
-function revealMistery(obj) {
+  let mistery = pickMistery()
+  // ITERATION 3
+  
+  function revealMistery(obj) {
     console.log(`${obj[0].firstName} ${obj[0].lastName} killed Mr. Boddy using the ${obj[2].name} in the ${obj[1].name}`)
   }
   
