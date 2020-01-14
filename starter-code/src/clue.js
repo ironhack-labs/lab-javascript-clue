@@ -94,18 +94,18 @@ function selectRandom(arr) {
     return arr[Math.floor(Math.random() * arr.length)]
   }
   
-  function pickMistery() {
-    let mistery = []
-    mistery.push(selectRandom(suspectsArray))
-    mistery.push(selectRandom(roomsArray))
-    mistery.push(selectRandom(weaponsArray))
-    return mistery
+  function pickMystery() {
+    let mystery = []
+    mystery.push(selectRandom(suspectsArray))
+    mystery.push(selectRandom(roomsArray))
+    mystery.push(selectRandom(weaponsArray))
+    return mystery
   }
-  let mistery = pickMistery()
+  let mystery = pickMystery()
   // ITERATION 3
   
-  function revealMistery(obj) {
-    console.log(`${obj[0].firstName} ${obj[0].lastName} killed Mr. Boddy using the ${obj[2].name} in the ${obj[1].name}`)
+  function revealMystery(obj) {
+    return `${obj[0].firstName} ${obj[0].lastName} killed Mr. Boddy using the ${obj[2].name} in the ${obj[1].name}`
   }
   
-  revealMistery(mistery)
+  console.log(revealMystery(mystery))
