@@ -147,5 +147,19 @@ selectRandom(weaponsArray)
 selectRandom(roomsArray)
 selectRandom(suspectsArray)
 
+function pickMystery() {
+    let suspect = selectRandom(suspectsArray)
+    let weapon = selectRandom(weaponsArray)
+    let room = selectRandom(roomsArray)
+    let mistery = {
+        suspect,
+        weapon,
+        room
+    }
+    return mistery
+
+}
+
+
 // ITERATION 3
 
