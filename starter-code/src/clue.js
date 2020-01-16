@@ -100,25 +100,6 @@ const selectRandom = arrayName => {
 	return arrayName[Math.floor(Math.random() * arrayName.length)];
 };
 
-// const pickMystery = () => {
-// 	result = [];
-// 	result.push(
-// 		selectRandom(suspectsArray),
-// 		selectRandom(roomsArray),
-// 		selectRandom(weaponsArray)
-// 	);
-// 	return result;
-// };
-
-// const finalSuspect = pickMystery();
-
-// // ITERATION 3
-
-// const revealMystery = () =>
-// 	(`${finalSuspect[0].firstName} ${finalSuspect[0].lastName} killed Mr. Boddy using the ${finalSuspect[2].name} in the ${finalSuspect[1].name}!`);
-
-// console.log(revealMystery());
-
 const pickMystery = () => {
     return {
 			suspect: selectRandom(suspectsArray),
