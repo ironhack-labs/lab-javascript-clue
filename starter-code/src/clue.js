@@ -100,22 +100,35 @@ const selectRandom = arrayName => {
 	return arrayName[Math.floor(Math.random() * arrayName.length)];
 };
 
+// const pickMystery = () => {
+// 	result = [];
+// 	result.push(
+// 		selectRandom(suspectsArray),
+// 		selectRandom(roomsArray),
+// 		selectRandom(weaponsArray)
+// 	);
+// 	return result;
+// };
+
+// const finalSuspect = pickMystery();
+
+// // ITERATION 3
+
+// const revealMystery = () =>
+// 	(`${finalSuspect[0].firstName} ${finalSuspect[0].lastName} killed Mr. Boddy using the ${finalSuspect[2].name} in the ${finalSuspect[1].name}!`);
+
+// console.log(revealMystery());
+
 const pickMystery = () => {
-	result = [];
-	result.push(
-		selectRandom(suspectsArray),
-		selectRandom(roomsArray),
-		selectRandom(weaponsArray)
-	);
-	return result;
-};
+    return {
+			suspect: selectRandom(suspectsArray),
+			weapon: selectRandom(roomsArray),
+			room: selectRandom(roomsArray)
+		};
+}
 
 const finalSuspect = pickMystery();
 
-// ITERATION 3
-
-const revealMystery = () =>
-	(`${finalSuspect[0].firstName} ${finalSuspect[0].lastName} killed Mr. Boddy using the ${finalSuspect[2].name} in the ${finalSuspect[1].name}!`);
+const revealMystery = () => (`${finalSuspect.suspect.firstName} ${finalSuspect.suspect.lastName} killed Mr. Boddy using the ${finalSuspect.weapon.name} in the ${finalSuspect.room.name}!`);
 
 console.log(revealMystery());
-
