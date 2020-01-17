@@ -6,6 +6,17 @@ describe('Find a random element of the array - selectRandom', () => {
     expect(typeof selectRandom).toBe('function');
   });
 
+  function selectRandom(arr) {
+
+    let random = Math.floor(Math.random() * arr.length);
+    return arr[random];
+  }
+  console.log(selectRandom(suspectsArray));
+  console.log(selectRandom(roomsArray));
+  console.log(selectRandom(weaponsArray));
+
+
+
   it('should return undefined if the array is empty', () => {
     expect(selectRandom([])).toBe(undefined);
   });
@@ -38,6 +49,16 @@ describe('Pick a random mystery - pickMystery', () => {
     expect(typeof pickMystery).toBe('function');
   });
 
+  function pickMystery() {
+
+    let object = {};
+    object.suspect = selectRandom(suspectsArray);
+
+
+  }
+
+
+
   it('should return an object', () => {
     expect(Object.prototype.toString.call(pickMystery())).toEqual('[object Object]');
   });
@@ -67,12 +88,20 @@ describe('Reveal the mystery - revealMystery', () => {
     expect(typeof revealMystery).toBe('function');
   });
 
+
   it('should return a string', () => {
     expect(
       typeof revealMystery({
-        suspect: { firstName: 'aa', lastName: 'abc' },
-        weapon: { name: 'abd' },
-        room: { name: 'abb' }
+        suspect: {
+          firstName: 'aa',
+          lastName: 'abc'
+        },
+        weapon: {
+          name: 'abd'
+        },
+        room: {
+          name: 'abb'
+        }
       })
     ).toEqual('string');
   });
@@ -80,9 +109,16 @@ describe('Reveal the mystery - revealMystery', () => {
   it('should return "<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!"', () => {
     expect(
       revealMystery({
-        suspect: { firstName: 'Victor', lastName: 'Plum' },
-        weapon: { name: 'poison' },
-        room: { name: 'Billiard Room' }
+        suspect: {
+          firstName: 'Victor',
+          lastName: 'Plum'
+        },
+        weapon: {
+          name: 'poison'
+        },
+        room: {
+          name: 'Billiard Room'
+        }
       })
     ).toEqual('Victor Plum killed Mr. Boddy using the poison in the Billiard Room!');
   });
