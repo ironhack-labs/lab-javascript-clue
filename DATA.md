@@ -4,32 +4,32 @@ Use this data to model your game cards into objects.
 
 ### Suspects
 
-mrGreen <br>
-firstName: Jacob <br>
-lastName: Green<br>
-occupation: Entrepreneur<br>
-age: 45 <br>
-description: He has a lot of connections<br>
-image: https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg <br>
-color: green <br>
+mrGreen 
+firstName: Jacob 
+lastName: Green
+occupation: Entrepreneur
+age: 45 
+description: He has a lot of connections
+image: https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg 
+color: green 
 
-drOrchid<br>
-firstName: Doctor<br>
-lastName: Orchid<br>
-occupation: Scientist<br>
-age: 26<br>
+drOrchid
+firstName: Doctor
+lastName: Orchid
+occupation: Scientist
+age: 26<>
 description: PhD in plant toxicology. Adopted daughter of Mr. Boddy<br>
 image: http://www.radiotimes.com/uploads/images/Original/111967.jpg<br>
-color: white<br>
+color: white<>
 
-profPlum<br>
-firstName: Victor<br>
-lastName: Plum<br>
-occupation: Designer<br>
-age: 22<br>
-description: Billionaire video game designer<br>
-image: https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg <br>
-color: purple<br>
+profPlum<>
+firstName: Victor<>
+lastName: Plum<>
+occupation: Designer<>
+age: 22<>
+description: Billionaire video game designer<>
+image: https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg <>
+color: purple<>
 
 missScarlet<br>
 firstName: Kasandra<br>
