@@ -49,16 +49,6 @@ describe('Pick a random mystery - pickMystery', () => {
     expect(typeof pickMystery).toBe('function');
   });
 
-  function pickMystery() {
-
-    let object = {};
-    object.suspect = selectRandom(suspectsArray);
-
-
-  }
-
-
-
   it('should return an object', () => {
     expect(Object.prototype.toString.call(pickMystery())).toEqual('[object Object]');
   });
@@ -87,7 +77,6 @@ describe('Reveal the mystery - revealMystery', () => {
   it('should define revealMystery', () => {
     expect(typeof revealMystery).toBe('function');
   });
-
 
   it('should return a string', () => {
     expect(
