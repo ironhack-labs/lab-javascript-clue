@@ -61,49 +61,49 @@ const suspectsArray = [
 // Rooms Collection
 const roomsArray = [
     {
-    room: `Dining Room`
+    name: `Dining room`
     },
     {
-    room: `Conservatory`
+    name: `Conservatory`
     },
     {
-    room: `Kitchen`
+    name: `Kitchen`
     },
     {
-    room: `Study`
+    name: `Study`
     },
     {
-    room: `Library`
+    name: `Library`
     },
     {
-    room: `Billiard Room`
+    name: `Billiard room`
     },
     {
-    room: `Lounge`
+    name: `Lounge`
     },
     {
-    room: `Ballroom`
+    name: `Ballroom`
     },
     {
-    room: `Hall`
+    name: `Hall`
     },
     {
-    room: `Spa`
+    name: `Spa`
     },
     {
-    room: `Living Room`
+    name: `Living room`
     },
     {
-    room: `Observatory`
+    name: `Observatory`
     },
     {
-    room: `Theater`
+    name: `Theater`
     },
     {
-    room: `Guest House`
+    name: `Guest House`
     },
     {
-    room: `Patio`
+    name: `Patio`
     }];
 
 // Weapons Collection
@@ -179,12 +179,15 @@ pickMystery();
 
 // ITERATION 3
 
-function revealMystery() {
+
+let cardSaved = pickMystery();
+
+function revealMystery(cardSaved) {
     
     
-    res = `${card.suspect.firstName} ${card.suspect.lastName} killed Mr. Boddy using the ${card.weapon.name} in the ${card.room.room}!`
+    return `${cardSaved.suspect.firstName} ${cardSaved.suspect.lastName} killed Mr. Boddy using the ${cardSaved.weapon.name} in the ${cardSaved.room.name}!`
   
-  return res;
+
   }
   
   revealMystery();
