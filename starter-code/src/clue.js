@@ -1,6 +1,3 @@
-// ITERATION 1
-
-
 // Suspects Collection
 const suspectsArray = [
 
@@ -63,6 +60,54 @@ const suspectsArray = [
 
 // Rooms Collection
 const roomsArray = [{
+        name: 'Dining Room'
+    },
+    {
+        name: 'Conservatory'
+    },
+    {
+        name: 'Kitchen'
+    },
+    {
+        name: 'Study'
+    },
+    {
+        name: 'Library'
+    },
+    {
+        name: 'Billiard Room'
+    },
+    {
+        name: 'Lounge'
+    },
+    {
+        name: 'Ballroom'
+    },
+    {
+        name: 'Hall'
+    },
+    {
+        name: 'Spa'
+    },
+    {
+        name: 'Living Room'
+    },
+    {
+        name: 'Observatory'
+    },
+    {
+        name: 'Theater'
+    },
+    {
+        name: 'Guest House'
+    },
+    {
+        name: 'Patio'
+    }
+];
+
+// Weapons Collection
+const weaponsArray = [{
         name: 'rope',
         weight: 10
     },
@@ -100,24 +145,7 @@ const roomsArray = [{
     },
 ];
 
-// Weapons Collection
-const weaponsArray = [
-    'Dining Room',
-    'Conservatory',
-    'Kitchen',
-    'Study',
-    'Library',
-    'Billiard Room',
-    'Lounge',
-    'Ballroom',
-    'Hall',
-    'Spa',
-    'Living Room',
-    'Observatory',
-    'Theater',
-    'Guest House',
-    'Patio'
-];
+// ITERATION 1
 
 let randomNumber = 0;
 
@@ -127,6 +155,33 @@ function selectRandom(actualCard) {
 
 }
 
+
 // ITERATION 2
 
+let card = {
+    suspect: '',
+    weapon: '',
+    room: '',
+}
+
+function pickMystery() {
+    card.suspect = selectRandom(suspectsArray);
+    card.weapon = selectRandom(weaponsArray);
+    card.room = selectRandom(roomsArray)
+    return (card)
+}
+
 // ITERATION 3
+pickMystery()
+let elm1 = card.suspect.firstName
+let elm2 = card.suspect.lastName
+let elm3 = card.weapon.name
+let elm4 = card.room.name
+
+function revealMystery() {
+
+    let mystery = '';
+    mystery = '\"' + elm1 + ' ' + elm2 + ' killed Mr. Boddy using the ' + elm3 + ' in the ' + elm4 + '!\"';
+    return (mystery);
+}
+console.log(revealMystery())
