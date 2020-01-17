@@ -172,6 +172,7 @@ function pickMystery() {
 }
 
 // ITERATION 3
+//OPTION 1
 pickMystery()
 let elm1 = card.suspect.firstName
 let elm2 = card.suspect.lastName
@@ -182,6 +183,16 @@ function revealMystery() {
 
     let mystery = '';
     mystery = '\"' + elm1 + ' ' + elm2 + ' killed Mr. Boddy using the ' + elm3 + ' in the ' + elm4 + '!\"';
-    return (mystery);
+    return mystery
 }
 console.log(revealMystery())
+
+//OPTION 2
+/*
+pickMystery()
+
+function revealMystery() {
+    let mystery = ''
+    mystery = '${card.suspect.firstName} ${card.suspect.lastName} killed Mr.Boddy using the ${card.weapon.name} in the ${card.room.name} !'
+return mystery
+}*/
