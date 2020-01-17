@@ -110,10 +110,11 @@ function pickMystery() {
     return selectedCardsObject;
 }
 //ITERATION 3
+let obj = pickMystery();
 
-function revealMystery() {
-    let obj = pickMystery()
-    let phrase = `"${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!"`;
+function revealMystery(obj) {
+
+    let phrase = `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`;
 
     return phrase;
 }
