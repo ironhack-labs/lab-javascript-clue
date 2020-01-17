@@ -158,9 +158,9 @@ console.log(selectRandom(weaponsArray));
 // selectRandom(suspectsArray.firstName);
 
 
-/*
-  function pickMystery() {
 
+function pickMystery() {}
+/*
       let mystery = Math.random() * selectRandom;
       return mystery
   }
@@ -169,9 +169,8 @@ console.log(selectRandom(weaponsArray));
  */
 // ITERATION 3
 
-/*function revealMystery(object) {
+function revealMystery(object) {
 
-    let object = mystery;
-    
-        return (`${object.suspect.firstName}  ${object.suspect.lastname}  killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}`);
-}*/
+    let mystery = {};
+    return (`${object.suspect.firstName}  ${object.suspect.lastname}  killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}`);
+}
