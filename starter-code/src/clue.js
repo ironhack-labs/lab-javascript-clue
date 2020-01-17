@@ -100,19 +100,18 @@ function selectRandom(value) {
 }
 
 function pickMystery() {
-    let misteryRandom
-    return misteryRandom = {
-        suspect: [selectRandom(suspectsArray)],
-        weapon: [selectRandom(weaponsArray )],
-        room: [selectRandom(roomsArray)]
+    let misteryRandom = {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray ),
+        room: selectRandom(roomsArray)
     }
+    return misteryRandom
 }
 
 // // ITERATION 3
 
 function revealMystery (){
-    let misteryRandom = pickMystery()
-    return `${misteryRandom.suspect[0].firstName} ${misteryRandom.suspect[0].lastName} killed Mr. Boddy using the ${misteryRandom.weapon[0].name} in the ${misteryRandom.room[0].name}!`
+    return `${pickMystery().suspect[0].firstName} ${pickMystery().suspect[0].lastName} killed Mr. Boddy using the ${pickMystery().weapon[0].name} in the ${pickMystery().room[0].name}!`
 }
 
 
