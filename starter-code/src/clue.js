@@ -1,7 +1,7 @@
 // ITERATION 1
 
 // Suspects Collection
-const suspectsArray = [ mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
+
 
 let mrGreen = {
     firstName: `Jacob`,
@@ -62,7 +62,7 @@ let mrMustard = {
     image: `https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg`,
     color: `yellow`
     };
-    
+const suspectsArray = [ mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 // Weapons Collection
 const weaponsArray = [
     {name:`rope`, weight: 10},
@@ -97,6 +97,7 @@ const roomsArray = [
 
 function selectRandom(cardsObject) {
     let randomCard= cardsObject[Math.floor(Math.random() * (cardsObject.length))];
+    
     return randomCard;
 }
 
@@ -108,5 +109,13 @@ function pickMystery() {
 
     return selectedCardsObject;
 }
+//ITERATION 3
 
-// ITERATION 3
+function revealMystery() {
+    let obj = pickMystery()
+    let phrase = `"${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!"`;
+
+    return phrase;
+}
+
+
