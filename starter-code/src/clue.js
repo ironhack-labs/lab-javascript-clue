@@ -120,4 +120,15 @@ const weaponsArray = [
 
 // ITERATION 2
 
+const selectRandom = (array) => array[Math.floor(Math.random()*array.length)];
+
+const pickMystery = () => {
+  return mystery = {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray)
+  }
+}
+
 // ITERATION 3
+
