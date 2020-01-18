@@ -130,5 +130,9 @@ const pickMystery = () => {
   }
 }
 
-// ITERATION 3
+// ITERATION 3, with a little hint fromt TA Loyd
 
+const revealMystery = () => {
+  const envelope = pickMystery()
+  console.log(`${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`) 
+}
