@@ -38,7 +38,7 @@ const suspectsArray = [{
         color: "red",
     },
     {
-        firstName: "Elanore"
+        firstName: "Elanore",
         lastName: "Peacock",
         occupation: "Socialité",
         age: 36,
@@ -120,6 +120,18 @@ function selectRandom(Array){
     return Array[Math.floor(Math.random()* Array.length)];
 }
 
-function pickMystery
+function pickMystery(){
+    return mysteryobject = {
+        suspect: selectRandom(suspectsArray),
+        room: selectRandom(roomsArray),
+        weapon: selectRandom(weaponsArray),
+    };
+}
 
 // ITERATION 3
+
+function revealMystery(envelop){
+    return `${envelop.suspect.firstName} ${envelop.suspect.lastName} killed mr. Brody using the ${envelop.weapon.name} in the ${envelop.room.name}`
+}
+
+console.log(revealMystery(pickMystery()))
