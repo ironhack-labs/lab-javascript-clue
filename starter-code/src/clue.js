@@ -125,22 +125,17 @@ function selectRandom(cards) {
   return cards[cardInd];
 }
 
-function pickMistery() {
-  var cards = [
-    selectRandom(suspectsArray),
-    selectRandom(weaponsArray),
-    selectRandom(roomsArray)
-  ];
+function pickMystery() {
+  var cards = {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray)
+  }
   return cards;
-}
-pickMistery();
-
-var misteryEnvelope = pickMistery();
-
-function revealMistery(misteryEnvelope) {
-  return misteryEnvelope[0].firstName +
-    " " + misteryEnvelope[0].lastName + " killed Mr. Boddy using the " +
-    misteryEnvelope[1].name + " in the " + misteryEnvelope[2].name + "!";
 };
 
-revealMistery(misteryEnvelope);
+var mysteryEnvelope = pickMystery();
+
+function revealMystery(misteryEnvelope) {
+  return `${misteryEnvelope.suspect.firstName} ${misteryEnvelope.suspect.lastName} killed Mr. Boddy using the ${misteryEnvelope.weapon.name} in the ${misteryEnvelope.room.name}!`;
+};
