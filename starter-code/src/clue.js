@@ -95,8 +95,8 @@ let suspectsArray = [
     
     function selectRandom(mySuspectsArray){
         let result = Math.floor(Math.random() * mySuspectsArray.length)
-        return result
-        console.log(result)
+        //console.log(mySuspectsArray[result])
+        return mySuspectsArray[result]
     }
     console.log(selectRandom(suspectsArray))
 
