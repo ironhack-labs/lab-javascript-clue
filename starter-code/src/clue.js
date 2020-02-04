@@ -37,7 +37,7 @@ color: "purple"
 ];
 
 
-### Weapons
+// Weapons
 let weaponsArray = [
     {name:"rope",weight:10},
     {name:"knife", weight :8},
@@ -73,12 +73,13 @@ const roomsArray = [
 
 // ITERATION 2
 
-function selectRandom (mySuspect) {
-    let result = Math.floor(Math.random() * mySuspect.length)
-    return result
-    console.log (result)
+function selectRandom (mySuspects) {
+    let result = Math.floor(Math.random() * mySuspects.length)
+    console.log(mySuspects[result])
+    return mySuspects [result]
+
 }
 
-console.log (selectRandom (suspectsArray))
+selectRandom (suspectsArray)
 
 // ITERATION 3
