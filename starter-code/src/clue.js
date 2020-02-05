@@ -59,7 +59,7 @@ const suspectsArray = [
 ]
 
 // Rooms Collection
-const roomsArray = [
+const weaponsArray = [
     {
     name: "rope",
     weight: 10
@@ -99,7 +99,7 @@ const roomsArray = [
 ];
 
 // Weapons Collection
-const weaponsArray = [
+const roomsArray = [
     {
     name: "Dining Room",
     },
@@ -167,3 +167,9 @@ function pickMistery()
 
 
 // ITERATION 3
+function revealMistery(envelope)
+{
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr.Boddy using the ${envelope.weapon.name} in the ${envelope.rooms.name}!`
+}
+
+/* console.log(revealMistery(pickMistery())) is an example of how we should call the function to print a random card*/
