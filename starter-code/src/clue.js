@@ -79,18 +79,25 @@ function selectRandom(someArray) {
 
 selectRandom(weaponsArray)
 
+let mystery = {}
 
 function pickMystery() {
-    let mystery = {}
+    
     mystery.weapon = selectRandom(weaponsArray)
     mystery.room = selectRandom(roomsArray)
     mystery.suspect = selectRandom(suspectsArray)
     console.log(mystery)
+    return mystery
 } 
 
 pickMystery()
 
 // ITERATION 3
-function revealMystery(obj) {
-  console.log(``)
-}
+
+function revealMystery(envelopeObj) {
+    console.log(`${envelopeObj.suspect.firstName} ${envelopeObj.suspect.lastName} killed Mr. Boddy using the ${envelopeObj.weapon.name} in the ${envelopeObj.room.name}`)
+  }
+  
+  revealMystery(mystery)
+  
+  
