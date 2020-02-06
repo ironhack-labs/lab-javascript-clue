@@ -191,7 +191,8 @@ function pickMystery() {
     //console.log(selectRandom(roomsArray))
     let weapon = selectRandom(weaponsArray)
     //console.log(selectRandom(weaponsArray))
-    return ('The suspect is ${suspect} who murdered in room ${room} with a ${weapon}.')
+    let mystery = [suspect, room, weapon]
+    return mystery
 }
 
 pickMystery()
