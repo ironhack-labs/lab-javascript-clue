@@ -158,32 +158,42 @@ const weaponsArray = [{
 ];
 
 // ITERATION 2
-/* 
-At the beginning of the game, players shuffle each of the card 
-stacks to create a combination of suspect, weapon and room. This will 
-be the mystery to solve.
 
-Random selector
-Declare a function named selectRandom to randomly select one element 
-from a card stack. The function should expect an array as an argument, 
-and should return a random element from the array.
+function selectRandom(fromCardStack) {
+    let ourRandomCard = Math.floor(Math.random() * fromCardStack.length);
+    // console.log("ourRandomCard",ourRandomCard)
+    // console.log("mir",fromCardStack[ourRandomCard])
+    if (fromCardStack == suspectsArray) {
+        return fromCardStack[ourRandomCard].firstName
+    } else if (fromCardStack == roomsArray) {
+        return fromCardStack[ourRandomCard].name
+    } else {
+        return fromCardStack[ourRandomCard].name
 
-Create the mystery
-Declare a function named pickMystery that takes no arguments and 
-returns an object with three properties, suspect, weapon and room, 
-each holding as a value a card of that specific type. You can get a 
-random card of each type by calling selectRandom on each card stack.
-*/
+    }
 
-function selectRandom(theSuspect) {
-    let ourSuspect = Math.floor(Math.random() * theSuspect.length);
-    // console.log("ourSuspect",ourSuspect)
-    // console.log("mir",theSuspect[ourSuspect])
-    return theSuspect[ourSuspect].firstName
+    //return fromCardStack[ourRandomCard]
 }
 
+/*
 selectRandom(suspectsArray)
 console.log(selectRandom(suspectsArray))
+selectRandom(roomsArray) 
+console.log(selectRandom(roomsArray))
+selectRandom(weaponsArray)
+console.log(selectRandom(weaponsArray))
+*/
 
+function pickMystery() {
+    let suspect = selectRandom(suspectsArray)
+    //console.log(selectRandom(suspectsArray))
+    let room = selectRandom(roomsArray)
+    //console.log(selectRandom(roomsArray))
+    let weapon = selectRandom(weaponsArray)
+    //console.log(selectRandom(weaponsArray))
+    return ('The suspect is ${suspect} who murdered in room ${room} with a ${weapon}.')
+}
+
+pickMystery()
 
 // ITERATION 3
