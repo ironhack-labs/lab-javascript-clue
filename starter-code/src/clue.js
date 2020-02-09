@@ -89,14 +89,29 @@ const weaponsArray = [
 ];
 
 
+
 // ITERATION 2
-randomNumber = 0; 
-function selectRandom(type) {
-    randomNumber = Math.floor(Math.random() * type.length)
-return type[randomNumber]
+
+function selectRandom() {
+    randomNumber = Math.floor(Math.random()*suspectsArray.length)
+    return randomNumber
 }
-selectRandom(suspectsArray)
-console.log()
+
+function pickMystery () {
+  selectRandom()
+ randomPerson = suspectsArray[randomNumber].firstName
+ selectRandom()
+ randomWeapon = weaponsArray[randomNumber].name
+  selectRandom()
+ randomRoom = roomsArray[randomNumber].name
+}
 
 
 // ITERATION 3
+
+function revealMystery () {
+pickMystery()
+console.log(`${randomPerson} killed Mr. Body with a ${randomWeapon} in the ${randomRoom}`)
+}
+
+revealMystery()
