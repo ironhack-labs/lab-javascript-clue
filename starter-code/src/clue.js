@@ -152,6 +152,7 @@ const selectRandom = (stack) => {
     return stack[randomIndex]
 }
 
+// Get random suspect outside function so we don't get names and last names of different people
 let randomSuspect = selectRandom(suspectsArray)
 
 const pickMystery = () => {
@@ -169,6 +170,11 @@ const pickMystery = () => {
 // ITERATION 3
 
 const revealMystery = (envelope) => {
-    const message = `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}`
-    return message;
+
+    //get values of passed object
+    let suspect = Object.values(envelope.suspect)
+    let weapon = Object.values(envelope.weapon)
+    let room = Object.values(envelope.room)
+
+    return `${suspect[0]} ${suspect[1]} killed Mr. Boddy using the ${weapon[0]} in the ${room[0]}!`
 }
