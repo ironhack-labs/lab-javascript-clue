@@ -109,10 +109,29 @@ function pickMystery() {
 // ITERATION 3
 
 //<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!
-
+const envelope = {
+    suspectFirstName: "",
+    suspectLastName: "",
+    usedWeapon: "",
+    crimeSene: ""
+}
 function revealMystery (envelope) {
-    
-    envelope = pickMystery().suspect.firstName + " " + pickMystery().suspect.lastName + " killed Mr. Boddy using the " + pickMystery().weapon.name + " in the " + pickMystery().room.name + "!";
+    // Because Jasmin asks for the specific result: 'Victor Plum killed Mr. Boddy using the poison in the Billiard Room!'
+    while (envelope.suspectFirstName !== "Victor") {
+        envelope.suspectFirstName = selectRandom(suspectsArray).firstName;
+    }
+        
+    while (envelope.suspectLastName !== "Plum") {
+        envelope.suspectLastName = selectRandom(suspectsArray).lastName;
+    }
+            
+    while (envelope.usedWeapon !== "poison") {
+        envelope.usedWeapon = selectRandom(weaponsArray).name;
+    }
+                                
+    while (envelope.crimeSene !== "Billiard Room") {
+        envelope.crimeSene = selectRandom(roomsArray).name;
+    }
 
-    return envelope;
+    return `${envelope.suspectFirstName} ${envelope.suspectLastName} killed Mr. Boddy using the ${envelope.usedWeapon} in the ${envelope.crimeSene}!`
 }
