@@ -179,13 +179,15 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {
-  // the first part, commented out, follows the readme on github. The second part does not follow the excercise guidelines, yet pleases Jasmine.
+function revealMystery(envelope) {
+  // the first part, commented out, follows the readme on github. The second part does not follow the excercise guidelines, yet pleases Jasmine. EDIT: added a third and last version, which apparently goes well both for Jasmine and for the exercise guidelines!
 
   //   const suspect = selectRandom(suspectsArray);
   //   return `${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the ${
   //     selectRandom(weaponsArray).name
   //   } in the ${selectRandom(roomsArray).name}!`;
 
-  return `${suspectsArray[2].firstName} ${suspectsArray[2].lastName} killed Mr. Boddy using the ${weaponsArray[4].name} in the ${roomsArray[5].name}!`;
+//   return `${suspectsArray[2].firstName} ${suspectsArray[2].lastName} killed Mr. Boddy using the ${weaponsArray[4].name} in the ${roomsArray[5].name}!`;
+
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
 }
