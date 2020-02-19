@@ -147,8 +147,7 @@ const suspectsArray = [
  // ITERATION 2 
 
   function pickMystery(){
-      let envelope;
-    envelope = {
+      let envelope = {
       suspect: selectRandom(suspectsArray),
       weapon: selectRandom(weaponsArray),
       room: selectRandom(roomsArray)
