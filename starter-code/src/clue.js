@@ -115,7 +115,7 @@ function pickMystery(){
     randomMystery.room = selectRandom(roomsArray);
     randomMystery.weapon = selectRandom(weaponsArray);
 
-    //console.log(randomMistery);
+    //console.log(randomMystery);
     return randomMystery;
     
 };
@@ -123,8 +123,14 @@ function pickMystery(){
 // ITERATION 3
 
 
-function revealMystery(envelope){
-    return `${pickMystery().suspect.firstName} ${pickMystery().suspect.lastName} killed Mr. Boddy using the ${pickMystery().weapon.name} in the ${pickMystery().room.name}.`;
-} 
+/* function revealMystery(envelope){
+    //envelope = pickMystery();
+    return `${pickMystery().suspect.firstName} ${pickMystery().suspect.lastName} killed Mr. Boddy using the ${pickMystery().weapon.name} in the ${pickMystery().room.name}!`;
+};  */
 
-revealMistery(revealMystery);
+
+function revealMystery(envelope){
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+}; 
+
+//console.log(revealMystery(pickMystery));
