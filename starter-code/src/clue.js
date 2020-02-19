@@ -109,12 +109,11 @@ function selectRandom(arr){
 }
 
 function pickMystery(){
-    let a = {
-        suspect: selectRandom(suspectsArray),
-        weapon: selectRandom(weaponsArray),
-        room: selectRandom(roomsArray)
-    };
-    return a;
+    let envelope = {}
+        envelope.suspect = selectRandom(suspectsArray);
+        envelope.weapon = selectRandom(weaponsArray);
+        envelope.room = selectRandom(roomsArray);
+    return envelope;
 }
 // ITERATION 3
 
