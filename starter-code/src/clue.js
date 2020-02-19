@@ -130,6 +130,7 @@ function revealMystery (envelope){
     return (`${suspectName} killed Mr. Boddy using the ${usedWeapon} in the ${murderRoom}!`);
 }
 
+
 // var x = ["c", "a", "b"]
 // math.random() * someArray.length //random number
 // Math.floor(Math.random() * someArray.length) //random number rounded down
