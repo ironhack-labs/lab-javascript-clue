@@ -24,7 +24,7 @@ const suspectsArray = [
         firstName: "Victor",
         lastName: "Plum",
         occupation: "Designer",
-        age: 22<,
+        age: 22,
         description: "Billionaire video game designer",
         image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
         color: "purple"
@@ -146,6 +146,32 @@ const weaponsArray = [
 
 // ITERATION 2
 
+function selectRandom(array){
+    if (array.length === 0){
+        return undefined;
+    } else if (array.length === 1){
+        randomElement = array[Math.floor(Math.random())];
+        return randomElement;
+    } else {
+        randomElement = array[Math.floor(Math.random() * array.length)];
+        return randomElement;
+     }
+} 
+
+function pickMystery(){
+    return mystery = {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray)
+    }
+}
+
 // ITERATION 3
+
+function revealMystery(mystery){
+    let mysteryReveal = `${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`;
+    return mysteryReveal;
+}
+
 
 
