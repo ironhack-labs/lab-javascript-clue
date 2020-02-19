@@ -1,5 +1,3 @@
-// ITERATION 1
-// Suspects Collection
 const suspectsArray = [
   {
     firstName: 'Jacob',
@@ -113,14 +111,26 @@ pickMystery();
 // ITERATION 3
 
 function revealMystery(envelope) {
-  let firstName = envelope.suspect.firstName;
-  let lastName = envelope.suspect.lastName;
-  let weapon = envelope.weapon.name;
-  let location = envelope.random.name;
-  console.log(
-    `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the  ${location}`
+  let suspect1 = envelope.suspect.firstName;
+  let suspect2 = envelope.suspect.lastName;
+  let weapons = envelope.weapon.name;
+  let locations = envelope.room.name;
+
+  return (
+    suspect1 +
+    ' ' +
+    suspect2 +
+    '  killed Mr. Boddy using the ' +
+    weapons +
+    ' and found in ' +
+    locations +
+    '!'
   );
+
+  // preferred solution but Jasmine was not happy.
+  //return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} and found in ${location}!`;
+
+  // return reveal;
 }
 
-daadaasdsfa;
-revealMystery();
+revealMystery(pickMystery());

@@ -23,13 +23,19 @@ describe('Find a random element of the array - selectRandom', () => {
     const spy = spyOn(Math, 'random');
 
     spy.and.returnValue(0.5);
-    expect(selectRandom(['a', 'ab', 'abb', 'aab', 'aaa', 'sda', 'kas'])).toEqual('aab');
+    expect(
+      selectRandom(['a', 'ab', 'abb', 'aab', 'aaa', 'sda', 'kas'])
+    ).toEqual('aab');
 
     spy.and.returnValue(0.1);
-    expect(selectRandom(['a', 'ab', 'abb', 'aab', 'aaa', 'sda', 'kas'])).toEqual('a');
+    expect(
+      selectRandom(['a', 'ab', 'abb', 'aab', 'aaa', 'sda', 'kas'])
+    ).toEqual('a');
 
     spy.and.returnValue(0.9);
-    expect(selectRandom(['a', 'ab', 'abb', 'aab', 'aaa', 'sda', 'kas'])).toEqual('kas');
+    expect(
+      selectRandom(['a', 'ab', 'abb', 'aab', 'aaa', 'sda', 'kas'])
+    ).toEqual('kas');
   });
 });
 
@@ -39,7 +45,9 @@ describe('Pick a random mystery - pickMystery', () => {
   });
 
   it('should return an object', () => {
-    expect(Object.prototype.toString.call(pickMystery())).toEqual('[object Object]');
+    expect(Object.prototype.toString.call(pickMystery())).toEqual(
+      '[object Object]'
+    );
   });
 
   it('should return an object with 3 properties', () => {
@@ -48,17 +56,23 @@ describe('Pick a random mystery - pickMystery', () => {
 
   it('should return a suspect in the suspect property of the object', () => {
     let suspect = JSON.stringify(pickMystery().suspect);
-    expect(suspectsArray.findIndex(el => JSON.stringify(el) === suspect)).toBeGreaterThan(-1);
+    expect(
+      suspectsArray.findIndex(el => JSON.stringify(el) === suspect)
+    ).toBeGreaterThan(-1);
   });
 
   it('should return a weapon in the weapon property of the object', () => {
     let weapon = JSON.stringify(pickMystery().weapon);
-    expect(weaponsArray.findIndex(el => JSON.stringify(el) === weapon)).toBeGreaterThan(-1);
+    expect(
+      weaponsArray.findIndex(el => JSON.stringify(el) === weapon)
+    ).toBeGreaterThan(-1);
   });
 
   it('should return a room in the room property of the object', () => {
     let room = JSON.stringify(pickMystery().room);
-    expect(roomsArray.findIndex(el => JSON.stringify(el) === room)).toBeGreaterThan(-1);
+    expect(
+      roomsArray.findIndex(el => JSON.stringify(el) === room)
+    ).toBeGreaterThan(-1);
   });
 });
 
@@ -72,7 +86,7 @@ describe('Reveal the mystery - revealMystery', () => {
       typeof revealMystery({
         suspect: { firstName: 'aa', lastName: 'abc' },
         weapon: { name: 'abd' },
-        room: { name: 'abb' }
+        room: { name: 'abb' },
       })
     ).toEqual('string');
   });
@@ -82,8 +96,10 @@ describe('Reveal the mystery - revealMystery', () => {
       revealMystery({
         suspect: { firstName: 'Victor', lastName: 'Plum' },
         weapon: { name: 'poison' },
-        room: { name: 'Billiard Room' }
+        room: { name: 'Billiard Room' },
       })
-    ).toEqual('Victor Plum killed Mr. Boddy using the poison in the Billiard Room!');
+    ).toEqual(
+      'Victor Plum killed Mr. Boddy using the poison in the Billiard Room!'
+    );
   });
 });
