@@ -80,10 +80,48 @@ const weaponsArray =    [   {name: 'rope', weight: 10},
                             {name: 'axe', weight: 15},
                             {name: 'bat' ,weight: 13},
                             {name: 'trophy', weight: 25},
-                            {name: 'pistol', weight: 20}
+                            {name: 'pistol', weight: 20} 
                         ];
 
 
 // ITERATION 2
 
+//selectRandom
+            
+function selectRandom (myArray){   //Create a random index within correct range
+    if(myArray.length===0){
+        return undefined;    
+    }
+    else{
+        var randomIndex = Math.floor(Math.random()*myArray.length);
+        return myArray[randomIndex];                                                                     
+    }   
+}
+
+function pickMystery (){
+     //create object to hold values   
+     let cardsSelection = {suspect:'',
+                           weapon:'',
+                           room:''
+     };
+     //update object
+     cardsSelection.suspect=selectRandom(suspectsArray);
+     cardsSelection.weapon=selectRandom(weaponsArray);
+     cardsSelection.room=selectRandom(roomsArray);  
+     
+     return cardsSelection;
+
+}
+
 // ITERATION 3
+
+ function revealMystery (envelope){
+    //retrieve the values
+    var firstname = envelope.suspect.firstName;
+    var lastname = envelope.suspect.lastName;
+    var weapon = envelope.weapon.name;
+    var room = envelope.room.name;
+
+    return (firstname + " " + lastname + " killed Mr. Boddy using the "  + weapon +  " in the " + room+ "!");
+
+ }
