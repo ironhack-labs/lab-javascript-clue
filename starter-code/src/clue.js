@@ -107,7 +107,7 @@ function selectRandom(arrSetCards)
         pick = arrSetCards[numberRandom];
     }
     else{
-      /*arrSetCards[numberRandom] =*/
+      
      pick = undefined; 
     }
     
@@ -125,13 +125,6 @@ function pickMystery()
 }
 
 // ITERATION 3
-/*function revealMystery(object)
-
-{   console.log(object.suspect.firstname);
-
-    return `${object.suspect.firstname} ${object.suspect.lastname} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}`;
-    // return `${object.suspect.firstname} ${object.suspect.secondname} killed Mr.Boddy using the ${object.weapon.name} in the ${object.room.name}!`;
-}*/
 
 function revealMystery(object)
 {  
