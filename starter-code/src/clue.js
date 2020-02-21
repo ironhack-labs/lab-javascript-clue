@@ -116,15 +116,15 @@ function pickMystery() {
     
     return selectedMystery
 };
-    pickMystery();
-    
 
+let object = pickMystery();
+    
 
 
 // ITERATION 3
 
 function revealMystery(){
-   let reveal = `${selectedSuspect.firstName} ${selectedSuspect.lastName} killed Mr. Boddy using the ${selectedWeapon} in the ${selectedRoom}!`;
+   let reveal = `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`;
    return reveal;
 }
 
