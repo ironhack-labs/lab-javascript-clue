@@ -115,11 +115,26 @@ const roomsArray = [
     {name: "Patio"}];
 
 // ITERATION 2
-function selectRandom(arrRandom) {
-    return arrRandom[Math.floor(Math.random() * arrRandom.length)]; 
-}
+// ES5
+// function selectRandom(arrRandom) {
+//     return arrRandom[Math.floor(Math.random() * arrRandom.length)]; 
+// }
 
-function pickMystery() {
+// ES6
+const selectRandom = arrRandom => arrRandom[Math.floor(Math.random() * arrRandom.length)];
+
+// ES5
+// function pickMystery() {
+//     let mystery = {
+//         suspect: selectRandom(suspectsArray),
+//         weapon: selectRandom(weaponsArray),
+//         room: selectRandom(roomsArray)
+//     };
+//     return mystery;
+// }
+
+// ES6
+const pickMystery = () => {
     let mystery = {
         suspect: selectRandom(suspectsArray),
         weapon: selectRandom(weaponsArray),
@@ -129,6 +144,10 @@ function pickMystery() {
 }
 
 // ITERATION 3
-function revealMystery(object) {
-    return `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`
-}
+// ES5
+// function revealMystery(object) {
+//     return `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`
+// }
+
+// ES6
+const revealMystery = object => `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`;
