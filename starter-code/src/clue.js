@@ -117,12 +117,20 @@ function selectRandom(dataToPass){
 let randomItem = dataToPass[Math.floor(Math.random()*dataToPass.length)]
 console.log(randomItem)
 return randomItem
+
 }
-selectRandom(roomsArray)
+selectRandom(suspectsArray)
+
 
 // ITERATION 2
 function pickMystry(){
-    
+  let mystry=[];
+  mystry.suspect=selectRandom(suspectsArray);
+  mystry.weapon=selectRandom(weaponsArray);
+  mystry.room=selectRandom(roomsArray);
+  return mystry
 }
+pickMystry()
+
 // ITERATION 3
 
