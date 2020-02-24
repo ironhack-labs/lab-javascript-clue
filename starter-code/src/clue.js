@@ -113,24 +113,10 @@ pickMystery();
 function revealMystery(envelope) {
   let suspect1 = envelope.suspect.firstName;
   let suspect2 = envelope.suspect.lastName;
-  let weapons = envelope.weapon.name;
-  let locations = envelope.room.name;
+  let weapon = envelope.weapon.name;
+  let location = envelope.room.name;
 
-  return (
-    suspect1 +
-    ' ' +
-    suspect2 +
-    '  killed Mr. Boddy using the ' +
-    weapons +
-    ' and found in ' +
-    locations +
-    '!'
-  );
-
-  // preferred solution but Jasmine was not happy.
-  //return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} and found in ${location}!`;
-
-  // return reveal;
+  return `${suspect1} ${suspect2} killed Mr. Boddy using the ${weapon} in the ${location}!`;
 }
 
 revealMystery(pickMystery());
