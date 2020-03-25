@@ -177,13 +177,6 @@ function pickMystery() {
 
 // ITERATION 3
 
-const cardCombo = pickMystery();
-
-function revealMystery() {
+function revealMystery(cardCombo) {
   return `${cardCombo.suspect.firstName} ${cardCombo.suspect.lastName} killed Mr. Boddy using the ${cardCombo.weapon.name} in the ${cardCombo.room.name}!`;
 }
-
-revealMystery();
-
-console.log(revealMystery());
-console.log(pickMystery());
