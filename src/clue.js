@@ -108,11 +108,20 @@ function selectRandom(array) {
 
 }
 
-console.log(selectRandom(suspectsArray));
-console.log(selectRandom(suspectsArray));
-console.log(selectRandom(suspectsArray));
-console.log(selectRandom(suspectsArray));
-console.log(selectRandom(suspectsArray));
-console.log(selectRandom(suspectsArray));
+//returns an object with properties "suspect", "weapon" and "room", each storing a corresponding object as value
+function pickMystery(){
+
+  const mystery = {
+    suspect: selectRandom(suspectsArray),
+    room:selectRandom(roomsArray),
+    weapon:selectRandom(weaponsArray)
+  };
+
+  return mystery;
+
+}
+
+const mysteryEnvelope = pickMystery();
+console.log(mysteryEnvelope);
 
 // ITERATION 3
