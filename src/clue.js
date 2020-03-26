@@ -96,31 +96,29 @@ const weaponsArray = [
 ];
 // ITERATION 2
 
-
 //selects a random element from an array
 function selectRandom(array) {
-
   const randomIndex = Math.round(Math.random() * array.length);
   console.log(randomIndex);
 
   return array[randomIndex];
-
 }
 
 //returns an object with properties "suspect", "weapon" and "room", each storing a corresponding object as value
-function pickMystery(){
-
+function pickMystery() {
   const mystery = {
     suspect: selectRandom(suspectsArray),
-    room:selectRandom(roomsArray),
-    weapon:selectRandom(weaponsArray)
+    room: selectRandom(roomsArray),
+    weapon: selectRandom(weaponsArray)
   };
 
   return mystery;
-
 }
 
 const mysteryEnvelope = pickMystery();
-console.log(mysteryEnvelope);
 
 // ITERATION 3
+
+function revealMystery(envelope) {
+  return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+}
