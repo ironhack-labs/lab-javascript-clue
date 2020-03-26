@@ -62,88 +62,88 @@ const suspectsArray = [{
 // Rooms Collection
 
 const weaponsArray = [{
-        name: "rope",
+        name: 'rope',
         weight: 10
     },
     {
-        name: "knife",
+        name: 'knife',
         weight: 8
     },
     {
-        name: "candlestick",
+        name: 'candlestick',
         weight: 2
     },
     {
-        name: "dumbbell",
+        name: 'dumbbell',
         weight: 30
     },
     {
-        name: "poison",
+        name: 'poison',
         weight: 2
     },
     {
-        name: "axe",
+        name: 'axe',
         weight: 15
     },
     {
-        name: "bat",
+        name: 'bat',
         weight: 13
     },
     {
-        name: "trophy",
+        name: 'trophy',
         weight: 25
     },
     {
-        name: "pistol",
+        name: 'pistol',
         weight: 20
     }
 ];
 
 // Weapons Collection
 const roomsArray = [{
-        name: "Dining Room"
+        name: 'Dining Room'
     },
     {
-        name: "Conservatory"
+        name: 'Conservatory'
     },
     {
-        name: "Kitchen"
+        name: 'Kitchen'
     },
     {
-        name: "Study"
+        name: 'Study'
     },
     {
-        name: "Library"
+        name: 'Library'
     },
     {
-        name: "Billiard Room"
+        name: 'Billiard Room'
     },
     {
-        name: "Lounge"
+        name: 'Lounge'
     },
     {
-        name: "Ballroom"
+        name: 'Ballroom'
     },
     {
-        name: "Hall"
+        name: 'Hall'
     },
     {
-        name: "Spa"
+        name: 'Spa'
     },
     {
-        name: "Living Room"
+        name: 'Living Room'
     },
     {
-        name: "Observatory"
+        name: 'Observatory'
     },
     {
-        name: "Theater"
+        name: 'Theater'
     },
     {
-        name: "Guest House"
+        name: 'Guest House'
     },
     {
-        name: "Patio"
+        name: 'Patio'
     }
 ];
 
@@ -168,5 +168,5 @@ function pickMystery() {
 let envelope = pickMystery()
 
 function revealMystery(envelope) {
-    return "envelope[0].firstName + ' ' + envelope[0].lastName + ' killed Mr.Boddy using the ' + envelope[1] + ' in the ' + envelope[2] + '!'"
+    return "envelope.suspect.firstName + ' ' + envelope.suspect.lastName + ' killed Mr.Boddy using the ' + envelope.weapon.name + ' in the ' + envelope.room.name + '!'"
 }
