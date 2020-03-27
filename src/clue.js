@@ -98,7 +98,7 @@ const weaponsArray = [
 
 //selects a random element from an array
 function selectRandom(array) {
-  const randomIndex = Math.round(Math.random() * array.length);
+  const randomIndex = Math.floor(Math.random() * array.length);
   console.log(randomIndex);
 
   return array[randomIndex];
