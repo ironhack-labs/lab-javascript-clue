@@ -89,16 +89,34 @@ const suspectsArray = [
     // Weapons Collection
     const weaponsArray = [
        
-    {rope: 10},
-    {knife: 8},
-    {candlestick: 2},
-    {dumbbell: 30},
-    {poison: 2},
-    {axe: 15},
-    {bat: 13},
-    {trophy: 25},
-    {pistol: 20},    
-    ];
+        {   tool: 'rope',
+        weight: 10
+        },
+        {   tool: 'knife',
+        weight: 8
+        },
+        {   tool: 'candlestick',
+        weight: 2
+        },
+        {   tool: 'dumbbell',
+        weight: 30
+        },
+        {   tool: 'poison',
+        weight: 2
+        },
+        {   tool: 'axe',
+        weight: 15
+        },
+        {   tool: 'bat',
+        weight: 13
+        },
+        {   tool: 'trophy',
+        weight: 25
+        },
+        {   tool: 'pistol',
+        weight: 20
+        },    
+        ];
     
 
 // ITERATION 2
@@ -125,22 +143,19 @@ function pickMystery () {
     
 }
 
-pickMystery();
+
 
 // ITERATION 3
 //step 1 create function
 //step 2 function receives envelope (that contains suspct, weapon, room) object as argument
 //step 3 return message that reveals contents of envelope
-/*
+
+
+let envelope = pickMystery();
+
 function revealMystery(obj) {
-    const envelope = {
-        suspect: selectRandom (suspectsArray),
-        room: selectRandom (roomsArray),
-        weapon: selectRandom (weaponsArray)
-      }; 
-
-      return envelope;
-
-    console.log(<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!)
+   
+   return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.tool} in the ${envelope.room}!`
 }
-*/
+
+revealMystery(envelope);
