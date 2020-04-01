@@ -170,15 +170,14 @@ const pickMystery = () => {
     return mystery
 }
 
-let rMystery= pickMystery()
+let rMystery = pickMystery()
 
 
 // ITERATION 3
 
-const revealMystery = (object) => {
-    return`${rMystery.suspect.firstName} ${rMystery.suspect.lastName} killed Mr. Boddy using the ${rMystery.weapon.name} in the ${rMystery.room.name}!` 
-    return rMystery.suspect.firstName, rMystery.suespect.lastName, rMystery.weapon, rMystery.room
-
+const revealMystery = (rMystery) => {
+    return `${rMystery.suspect.firstName} ${rMystery.suspect.lastName} killed Mr. Boddy using the ${rMystery.weapon.name} in the ${rMystery.room.name}!` 
+    console.log(`${rMystery.suspect.firstName} ${rMystery.suspect.lastName} killed Mr. Boddy using the ${rMystery.weapon.name} in the ${rMystery.room.name}!`)
 }
 
 revealMystery(rMystery);
