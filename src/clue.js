@@ -140,11 +140,11 @@ const weaponsArray = [{
         weight: 13,
     },
     {
-        name: trophy,
+        name: "trophy",
         weight: 25,
     },
     {
-        name: pistol,
+        name: "pistol",
         weight: 20,
     }
 ];
@@ -164,22 +164,17 @@ function pickMystery() {
         room: selectRandom(roomsArray),
         weapon: selectRandom(weaponsArray)
     };
-}
+};
 
 
 // ITERATION 3 
 //<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!
 
-function revealMystery (){
-return ´
-
+function revealMystery (envelope){
+return `${envelope.suspect.firstName}  ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name}  in the ${envelope.room.name}`;
     
-}
+};
 
-
-
-
-//revealMystery (pickMystery());
-
+revealMystery (pickMystery());
 
 
