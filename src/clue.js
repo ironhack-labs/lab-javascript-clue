@@ -154,19 +154,15 @@ function selectRandom(arrayCards){
      return undefined;
  }
  
- let randomCard = Math.floor(Math.random()*arrayCards.length);
- 
- return arrayCards[randomCard];
+ return arrayCards[Math.floor(Math.random()*arrayCards.length)];
 };
 
-let mysteryObject = { };
 function pickMystery (){
-    
-    mysteryObject.suspect = selectRandom(suspectsArray);
-    mysteryObject.room = selectRandom(roomsArray);
-    mysteryObject.weapon = selectRandom(weaponsArray);
-
-    return mysteryObject;
+    return {
+        suspect: selectRandom(suspectsArray),
+        room: selectRandom(roomsArray),
+        weapon: selectRandom(weaponsArray)
+    };
 };
 
 // ITERATION 3: Reveal the mystery
@@ -174,3 +170,6 @@ function pickMystery (){
 function revealMystery(envelope){
     return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
 }
+
+// Calling the function
+revealMystery (pickMystery());
