@@ -123,7 +123,7 @@ function selectRandom(arr) {
         return undefined;
     }
 
-    return randomElement = arr[Math.floor(Math.random()*arr.length)];
+    return arr[Math.floor(Math.random()*arr.length)];
 }
 
 function pickMystery() {  
@@ -137,3 +137,6 @@ function pickMystery() {
 function revealMystery(envelope) {
     return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
 }
+
+// Reveal the mystery!
+console.log(revealMystery(pickMystery()));
