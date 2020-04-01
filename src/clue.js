@@ -3,7 +3,7 @@
 // Suspects Collection
 const suspectsArray = [
     {
-        firstName: "Jacob ",
+        firstName: "Jacob",
         lastName: "Green",
         occupation: "Entrepreneur",
         age: "45 ",
