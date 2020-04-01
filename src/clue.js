@@ -58,7 +58,7 @@ const suspectsArray = [
     }
     ];
     // Rooms Collection
-    const roomsArray = [
+    const weaponsArray = [
     {
     name: "rope",
     weight: 10
@@ -97,7 +97,7 @@ const suspectsArray = [
     }
     ];
     // Weapons Collection
-    const weaponsArray = [
+    const roomsArray = [
     {
     name: "Dining Room"
     },
