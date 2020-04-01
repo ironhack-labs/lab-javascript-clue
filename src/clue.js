@@ -3,7 +3,6 @@
 // Suspects Collection
 const suspectsArray = [
     {
-        alias: "mrGreen",
         firstName: "Jacob",
         lastName: "Green",
         occupation: "Entrepreneur",
@@ -13,7 +12,6 @@ const suspectsArray = [
         color: "green"
     },
     {
-        alias: "drOrchid",
         firstName: "Doctor",
         lastName: "Orchid",
         occupation: "Scientist",
@@ -23,7 +21,6 @@ const suspectsArray = [
         color: "white"
     },
     {
-        alias: "profPlum",
         firstName: "Victor",
         lastName: "Plum",
         occupation: "Designer",
@@ -33,7 +30,6 @@ const suspectsArray = [
         color: "purple"
     },
     {
-        alias: "missScarlet",
         firstName: "Kasandra",
         lastName: "Scarlet",
         occupation: "Actor",
@@ -43,7 +39,6 @@ const suspectsArray = [
         color: "red"
     },
     {
-        alias: "mrsPeacock",
         firstName: "Eleanor",
         lastName: "Peacock",
         occupation: "Socialité",
@@ -53,7 +48,6 @@ const suspectsArray = [
         color: "blue"
     },
     {
-        alias: "mrMustard",
         firstName: "Jack",
         lastName: "Mustard",
         occupation: "Retired Football player",
