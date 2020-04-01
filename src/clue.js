@@ -149,8 +149,37 @@ const weaponsArray = [{
     }
 ];
 
-// ITERATION 2
+// ITERATION 2 - select 3 random cards
 
-function selectRandom
+function selectRandom(arrayCard) {
+    if (arrayCard === "") {
+        return '';
+    }
+    return arrayCard[Math.floor(Math.random() * arrayCard.length)];
+};
 
-// ITERATION 3
+function pickMystery() {
+    return {
+        suspect: selectRandom(suspectsArray),
+        room: selectRandom(roomsArray),
+        weapon: selectRandom(weaponsArray)
+    };
+}
+
+
+// ITERATION 3 
+//<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!
+
+function revealMystery (){
+return ´
+
+    
+}
+
+
+
+
+//revealMystery (pickMystery());
+
+
+
