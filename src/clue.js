@@ -2,9 +2,9 @@
 // ITERATION 1
 
 // Suspects Collection
-
-const suspectsArray = [{
-        nickName: "mrGreen",
+const suspectsArray = [
+     {
+        nickName:"mrGreen",
         firstName: "Jacob",
         lastName: "Green",
         occupation: "Entrepreneur",
@@ -13,8 +13,8 @@ const suspectsArray = [{
         image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
         color: "green"
     },
-    {
-        nickName: "drOrchid",
+      {
+        nickName:"drOrchid",
         firstName: "Doctor",
         lastName: "Orchid",
         occupation: "Scientist",
@@ -23,8 +23,8 @@ const suspectsArray = [{
         image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
         color: "white"
     },
-    {
-        nickName: "profPlum",
+     {
+        nickName:"profPlum",
         firstName: "Victor",
         lastName: "Plum",
         occupation: "Designer",
@@ -33,8 +33,8 @@ const suspectsArray = [{
         image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
         color: "purple"
     },
-    {
-        nickName: "missScarlet",
+     {
+        nickName:"missScarlet",
         firstName: "Kasandra",
         lastName: "Scarlet",
         occupation: "Actor",
@@ -43,8 +43,8 @@ const suspectsArray = [{
         image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
         color: "red"
     },
-    {
-        nickName: "mrsPeacock",
+     {
+        nickName:"mrsPeacock",
         firstName: "Eleanor",
         lastName: "Peacock",
         occupation: "Socialité",
@@ -53,8 +53,8 @@ const suspectsArray = [{
         image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
         color: "blue"
     },
-    {
-        nickName: "mrMustard",
+     {
+        nickName:"mrMustard",
         firstName: "Jack",
         lastName: "Mustard",
         occupation: "Retired Football player",
@@ -67,39 +67,70 @@ const suspectsArray = [{
 ];
 
 // Rooms Collection
-
 const roomsArray = [
-    "Dinning Room",
-    "Conservatory",
-    "Kitchen",
-    "Study",
-    "Library",
-    "Billiard Room",
-    "Lounge",
-    "Ballroom",
-    "Hall",
-    "Spa",
-    "Living Room",
-    "Observatory",
-    "Theater",
-    "Guest House",
-    "Patio",
-  ];
 
+    {
+        name: "Dining Room"
+    },{
+        name: "Conservatory"
+    },{
+        name: "Kitchen"
+    },{
+        name: "Study"
+    }, {
+        name: "Library"
+    }, {
+        name: "Billiard Room"
+    }, {
+        name: "Lounge"
+    }, {
+        name: "Ballroom"
+    }, {
+        name: "Hall"
+    },{
+        name: "Spa"
+    },{
+        name: "Living Room"
+    },{
+        name: "Theater"
+    },{
+        name: "Guest House"
+    },{
+        name: "Patio"
+    }
+];
 
 // Weapons Collection
+const weaponsArray = [{
+    name: rope,
+    weight: 10
+}, {
+    name: knife,
+    weight: 8
 
-const weaponsArray = [
-    {name: "rope", weight: 10},
-    {name: "knife", weight: 8},
-    {name: "candlestick", weight: 2},
-    {name: "dumbbell", weight: 30},
-    {name: "poison", weight: 2},
-    {name: "axe", weight: 15},
-    {name: "bat", weight: 13},
-    {name: "trophy", weight: 25},
-    {name: "pistol", weight: 20}
-    ];
+}, {
+    name: candlestick,
+    weight: 2
+}, {
+    name: dumbbell,
+    weight: 30
+}, {
+
+    name: poison,
+    weight: 2
+}, {
+    name: axe,
+    weight: 15
+}, {
+    name: bat,
+    eight: 13,
+}, {
+    name: trophy,
+    weight: 25,
+}, {
+    name: pistol,
+    weight: 20,
+}];
 
 // ITERATION 2
 
