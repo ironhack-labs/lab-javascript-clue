@@ -140,4 +140,11 @@ const roomsArray = [
 
 // ITERATION 2
 
+function selectRandom (array) {
+
+    const random = Math.floor(Math.random() * (array.length))
+    return array[random]
+
+}
+
 // ITERATION 3
