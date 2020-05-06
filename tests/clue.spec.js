@@ -80,9 +80,9 @@ describe('Reveal the mystery - revealMystery', () => {
   it('should return "<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!"', () => {
     expect(
       revealMystery({
-        suspect: { firstName: 'Victor', lastName: 'Plum' },
-        weapon: { name: 'poison' },
-        room: { name: 'Billiard Room' }
+        suspect: {firstName: 'Victor', lastName: 'Plum'},
+        weapon: {name: 'poison'},
+        room: {name: 'Billiard Room'}
       })
     ).toEqual('Victor Plum killed Mr. Boddy using the poison in the Billiard Room!');
   });
