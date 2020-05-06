@@ -108,7 +108,7 @@ function pickMystery(){
     return mystery;
 }
 
-console.log(pickMystery());
+let envelope = pickMystery();
 
 // ITERATION 3
 
@@ -121,4 +121,4 @@ function revealMystery(envelope){
     return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${room}!`;
 }
 
-console.log(revealMystery(pickMystery()));
+console.log(revealMystery(envelope));
