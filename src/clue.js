@@ -76,7 +76,6 @@ const roomsArray = [
     {name: 'Patio'},
 ]
 //console.log(roomsArray[5])
-
 // Weapons Collection
 const weaponsArray = [
     {name: 'rope', weight: 10},
@@ -90,7 +89,6 @@ const weaponsArray = [
     {name: 'pistol', weight: 20},
 ]
 //console.log(weaponsArray[7].weight)
-
 // ITERATION 2
 function selectRandom(array) {
     if (array.length === 0) {
@@ -101,8 +99,7 @@ function selectRandom(array) {
         return array[Math.floor(Math.random()*array.length)]
     } 
  }
- //console.log(selectRandom([roomsArray]));
-
+ console.log(selectRandom([roomsArray]));
  function pickMystery() {
      var misterious = {
          suspect: selectRandom(suspectsArray),
@@ -113,9 +110,12 @@ function selectRandom(array) {
  }
 console.log(pickMystery())
 // ITERATION 3
-
 function revealMystery(envelope) {
-    return `${envelope.suspect.firstName} ${suspectsArray.lastName} killed Mr. Boddy using the ${weaponsArray} in the ${roomsArray}`;
-
+   envelope = {
+        suspect: {firstName: 'Victor', lastName: 'Plum' },
+        weapon:  {name: 'poison'},
+        room: {name: 'Billiard Room'}
+    }
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}`;
 }
-console.log(revealMystery(envelope))
+console.log(revealMystery());
