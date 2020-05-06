@@ -147,4 +147,15 @@ function selectRandom (array) {
 
 }
 
+function pickMystery () {
+
+    const misteryCards = {}
+
+    misteryCards.suspect = selectRandom (suspectsArray)
+    misteryCards.weapon = selectRandom (weaponsArray)
+    misteryCards.room = selectRandom (roomsArray)
+
+    return misteryCards
+}
+
 // ITERATION 3
