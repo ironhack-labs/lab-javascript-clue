@@ -116,24 +116,42 @@ const roomsArray = [{
 // Weapons Collection
 const weaponsArray = [
 
-{name: rope, 
-weight: 10}, 
-{name: knife,
- weight: 8},
-{name: candlestick,
- weight: 2},
-{name: dumbbell}, 
-weight: 30,
-name: poison,
- weight: 2,
-name: axe, 
-weight: 15,
-name: bat, 
-weight: 13,
-name: trophy, 
-weight: 25,
-name: pistol ,
-weight: 20,
+    {
+        name: 'rope',
+        weight: 10
+    },
+    {
+        name: 'knife',
+        weight: 8
+    },
+    {
+        name: 'candlestick',
+        weight: 2
+    },
+    {
+        name: 'dumbbell',
+        weight: 30
+    },
+    {
+        name: 'poison',
+        weight: 2
+    },
+    {
+        name: 'axe',
+        weight: 15
+    },
+    {
+        name: 'bat',
+        weight: 13
+    },
+    {
+        name: 'trophy',
+        weight: 25
+    },
+    {
+        name: 'pistol',
+        weight: 20
+    },
 ];
 
 // ITERATION 2
@@ -149,18 +167,18 @@ function selectRandom(array) {
 }
 
 function pickMystery() {
-    const randomSuspect = selectRandom(suspectsArray);
+    const suspect = selectRandom(suspectsArray);
 
-    const randomRoom = selectRandom(roomsArray);
+    const room = selectRandom(roomsArray);
 
-    const randomWeapon = selectRandom(weaponsArray);
+    const weapon = selectRandom(weaponsArray);
 
     const randomMystery = {
-        randomSuspect,
+        suspect,
 
-        randomRoom,
+        room,
 
-        randomWeapon
+        weapon
     }
     return randomMystery
 }
@@ -170,7 +188,7 @@ function pickMystery() {
 // ITERATION 3
 
 function revealMystery() {
-    const mystery = randomMystery();
+    const mystery = pickMystery();
 
-    return (` ${mystery.randomSuspect.firstName} ${mystery.randomSuspect.lastName} killed Mr. Boddy using the ${mystery.randomWeapon} in the ${mystery.randomRoom} `)
+    return (`${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`)
 }
