@@ -20,7 +20,7 @@ occupation: Scientist<br>
 age: 26<br>
 description: PhD in plant toxicology. Adopted daughter of Mr. Boddy<br>
 image: http://www.radiotimes.com/uploads/images/Original/111967.jpg<br>
-color: white<br>
+color: white<br> 
 
 profPlum<br>
 firstName: Victor<br>
@@ -29,7 +29,7 @@ occupation: Designer<br>
 age: 22<br>
 description: Billionaire video game designer<br>
 image: https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg <br>
-color: purple<br>
+color: purple<br> 
 
 missScarlet<br>
 firstName: Kasandra<br>
