@@ -185,6 +185,12 @@ function pickMystery() {
 
 function revealMystery() {
 
-    return ('Victor Plum killed Mr. Boddy using the poison in the Billiard Room!')
+    const mystery = {
+        firstName: 'Victor',
+        lastName: 'Plum',
+        weapon: 'poison',
+        room: 'Billiard Room'
+    }
 
+    return (`${mystery.firstName} ${mystery.lastName} killed Mr. Boddy using the ${mystery.weapon} in the ${mystery.room}!`);
 }
