@@ -156,19 +156,32 @@ function selectRandom(cards) {
     }
     return cards[Math.floor(Math.random() * (cards.length - 0))];
 }
+selectRandom(suspectsArray);
 
 function pickMystery() {
-    let obj = {
-        suspect:  selectRandom(suspectsArray.firstName),
-        weapon: selectRandom(weaponsArray.name),
-        room: selectRandom(roomsArray.room),
-        };
-      
-    return obj;
+    return {
+        suspect:  
+        selectRandom(suspectsArray),
+        weapon: 
+        selectRandom(weaponsArray),
+        room: 
+        selectRandom(roomsArray),
+    };
       
 }
 
-// ITERATION 3
+console.log(pickMystery());
+
+function revealMystery()
+{
+    let object = pickMystery();
+    return `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`;
+} 
+ 
+
+console.log(revealMystery());
+
+
 
 
 
