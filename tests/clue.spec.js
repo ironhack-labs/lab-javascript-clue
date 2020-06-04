@@ -1,4 +1,4 @@
-/* eslint no-undef: "off" */
+´/* eslint no-undef: "off" */
 /* eslint jasmine/no-spec-dupes: "off" */
 
 describe('Find a random element of the array - selectRandom', () => {
