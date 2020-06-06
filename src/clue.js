@@ -72,7 +72,7 @@ const roomsArray = [
     'Spa',
     'Living Room',
     'Observatory',
-    'Theate'r,
+    'Theater',
     'Guest House',
     'Patio'
 ];
@@ -118,5 +118,16 @@ const weaponsArray = [
 ];
 
 // ITERATION 2
+let inGameSuspectsarray = [...suspectsArray];
+let inGameRoomsArray = [...roomsArray];
+let inGameWeaponsArray = [...weaponsArray];
+
+function selectRandom(cardDeck){
+    let randomNum = Math.random * cardDeck.length;
+    randomNum = Math.floor(randomNum);
+    return randomNum;
+}
+
+console.log(selectRandom(inGameRoomsArray))
 
 // ITERATION 3
