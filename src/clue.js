@@ -60,7 +60,21 @@ const suspectsArray = [
 
 // Rooms Collection
 const roomsArray = [
-    
+    'Dining Room',
+    'Conservatory',
+    'Kitchen',
+    'Study',
+    'Library',
+    'Billiard Room',
+    'Lounge',
+    'Ballroom',
+    'Hall',
+    'Spa',
+    'Living Room',
+    'Observatory',
+    'Theate'r,
+    'Guest House',
+    'Patio'
 ];
 
 // Weapons Collection
