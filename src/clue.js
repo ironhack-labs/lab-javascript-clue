@@ -118,23 +118,17 @@ const weaponsArray = [
 ];
 
 // ITERATION 2
-let inGameSuspectsarray = [...suspectsArray];
-let inGameRoomsArray = [...roomsArray];
-let inGameWeaponsArray = [...weaponsArray];
-
-console.log(inGameRoomsArray);
+const inGameSuspectsarray = [...suspectsArray];
+const inGameRoomsArray = [...roomsArray];
+const inGameWeaponsArray = [...weaponsArray];
 
 
-// function selectRandom(cardDeck){
-//     let randomNum = Math.random * cardDeck.length;
+function selectRandom(cardDeck){
+    let randomIndex = Math.floor(Math.random() * cardDeck.length);
 
-//     console.log(randomNum);
+    return cardDeck[randomIndex];
+}
 
-//     randomNum = Math.floor(randomNum);
-//     return cardDeck[randomNum];
-//     console.log(randomNum);
-// }
-
-//selectRandom(inGameRoomsArray);
+console.log(selectRandom(inGameRoomsArray));
 
 // ITERATION 3
