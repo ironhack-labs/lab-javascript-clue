@@ -122,12 +122,19 @@ let inGameSuspectsarray = [...suspectsArray];
 let inGameRoomsArray = [...roomsArray];
 let inGameWeaponsArray = [...weaponsArray];
 
-function selectRandom(cardDeck){
-    let randomNum = Math.random * cardDeck.length;
-    randomNum = Math.floor(randomNum);
-    return randomNum;
-}
+console.log(inGameRoomsArray);
 
-console.log(selectRandom(inGameRoomsArray))
+
+// function selectRandom(cardDeck){
+//     let randomNum = Math.random * cardDeck.length;
+
+//     console.log(randomNum);
+
+//     randomNum = Math.floor(randomNum);
+//     return cardDeck[randomNum];
+//     console.log(randomNum);
+// }
+
+//selectRandom(inGameRoomsArray);
 
 // ITERATION 3
