@@ -1,21 +1,3 @@
-
-
-
-
-// ITERATION 1
-
-// Suspects Collection
-
-
-
-
-// ITERATION 1
-
-// Suspects Collection
-
-
-
-
 // ITERATION 1
 
 // Suspects Collection
@@ -106,7 +88,6 @@ const weaponsArray =
 ];
 
 // ITERATION 2
-
 function selectRandom(array){
   return array[Math.floor(Math.random() * array.length)];
 }
