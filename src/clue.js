@@ -125,4 +125,8 @@ function pickMystery(){
    console.log(randDraw);
 
 // ITERATION 3
-
+function revealMystery(envelope){
+    envelope = randDraw; 
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
+  }
+  revealMystery(randDraw);
