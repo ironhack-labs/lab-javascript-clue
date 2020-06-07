@@ -129,8 +129,23 @@ function selectRandom(cardDeck){
     return cardDeck[randomIndex];
 }
 
-console.log(selectRandom(roomsArray));
-console.log(selectRandom(weaponsArray));
-console.log(selectRandom(weaponsArray));
+function pickMystery(){
+    let gameMystery = {};
+
+    gameMystery.suspect = selectRandom(inGameSuspectsarray);
+    gameMystery.weapon = selectRandom(inGameWeaponsArray);
+    gameMystery.room = selectRandom(inGameRoomsArray);
+
+    return gameMystery;
+}
+
+const mystery = pickMystery();
 
 // ITERATION 3
+
+function revealMystery(mystery){
+    let mysteryStr = `${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room}!`;
+    return mysteryStr;
+}
+
+console.log(revealMystery(mystery));
