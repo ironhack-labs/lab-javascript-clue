@@ -111,7 +111,18 @@ function selectRandom(array){
   return array[Math.floor(Math.random() * array.length)];
 }
 
-selectRandom(suspectsArray);
+let randSus = selectRandom(suspectsArray);
+
+function pickMystery(){
+    return {
+      suspect: (selectRandom(suspectsArray)), 
+      weapon : (selectRandom(weaponsArray)), 
+      room : (selectRandom(roomsArray))
+    } 
+   }
+   
+   let randDraw = pickMystery();
+   console.log(randDraw);
 
 // ITERATION 3
 
