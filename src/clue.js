@@ -129,6 +129,8 @@ function selectRandom(cardDeck){
     return cardDeck[randomIndex];
 }
 
-console.log(selectRandom(inGameRoomsArray));
+console.log(selectRandom(roomsArray));
+console.log(selectRandom(weaponsArray));
+console.log(selectRandom(weaponsArray));
 
 // ITERATION 3
