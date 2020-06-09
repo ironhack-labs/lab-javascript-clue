@@ -1,5 +1,4 @@
 // ITERATION 1
-
 // Suspects Collection
 const suspectsArray = [
 mrGreen = {
@@ -64,7 +63,6 @@ color: 'yellow'
 ];
 
 
-
 // Weapons Collection
 //create weapons array
 const weaponsArray = [
@@ -103,7 +101,7 @@ const roomsArray = [
 
 
 // ITERATION 2
-//create function selectRandom that returns random array element.
+//create function `selectRandom` that returns random array element.
 const selectRandom = (arr) => {    
     let ranIdx = Math.floor(Math.random() * arr.length)
     let randomElement = arr[ranIdx]
@@ -111,7 +109,7 @@ const selectRandom = (arr) => {
 };
 
 //create a mystery
-//create function pickMystery that returns object with 3 properties( _suspect_, _weapon_ and _room_).
+//create function `pickMystery` that returns object with 3 properties( _suspect_, _weapon_ and _room_).
 const pickMystery = () => {
     let mystery = {
       suspect: selectRandom(suspectsArray),
@@ -120,8 +118,15 @@ const pickMystery = () => {
     };
         return mystery
     };
-    
-    pickMystery()
 
 
 // ITERATION 3
+//create function `revealMystery` that receives an _envelope_ `object` (such as the one returned by `pickMystery`) as the single argument, and returns a reveal message.
+let envelope = pickMystery()
+const revealMystery = (envelope) => {
+    return console.log(`${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`)
+  };
+  
+  revealMystery(pickMystery())
+
+  // console.log(envelope)
