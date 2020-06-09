@@ -103,5 +103,25 @@ const roomsArray = [
 
 
 // ITERATION 2
+//create function selectRandom that returns random array element.
+const selectRandom = (arr) => {    
+    let ranIdx = Math.floor(Math.random() * arr.length)
+    let randomElement = arr[ranIdx]
+    return randomElement
+};
+
+//create a mystery
+//create function pickMystery that returns object with 3 properties( _suspect_, _weapon_ and _room_).
+const pickMystery = () => {
+    let mystery = {
+      suspect: selectRandom(suspectsArray),
+      weapon: selectRandom(weaponsArray),
+      room: selectRandom(roomsArray)
+    };
+        return mystery
+    };
+    
+    pickMystery()
+
 
 // ITERATION 3
