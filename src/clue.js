@@ -124,9 +124,10 @@ const pickMystery = () => {
 //create function `revealMystery` that receives an _envelope_ `object` (such as the one returned by `pickMystery`) as the single argument, and returns a reveal message.
 let envelope = pickMystery()
 const revealMystery = (envelope) => {
-    return console.log(`${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`)
+    let message = `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
+    return message
   };
   
-  revealMystery(pickMystery())
-
-  // console.log(envelope)
+  console.log(revealMystery(pickMystery()))
+  
+//   console.log(envelope)
