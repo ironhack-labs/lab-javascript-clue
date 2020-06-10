@@ -165,5 +165,5 @@ function pickMystery() {
 
 
 function revealMystery(obj) {
-    return obj.suspect.first_name.toUpperCase() + ' ' + obj.suspect.last_name.toUpperCase() + " killed Mr. Boddy using the " + obj.weapon.name.toUpperCase() + " in the " + obj.room.name.toUpperCase() + '!';
+    return obj.suspect.firstName + ' ' + obj.suspect.lastName + " killed Mr. Boddy using the " + obj.weapon.name + " in the " + obj.room.name + '!';
 }
