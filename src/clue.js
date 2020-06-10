@@ -148,10 +148,7 @@ const pickMystery = () =>{
 
 const revealMystery = mystery =>{
 
-let fullName = {'firstName': mystery.suspect.firstName, 'lastName': mystery.suspect.lastName};
-let weapon = {'name': mystery.weapon.name};
-let room = {'name': mystery.room.name};
-let result = `${fullName.firstName} ${fullName.lastName} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`;
+let result = `${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`;
     return  JSON.parse(JSON.stringify(result))}
 
 revealMystery(pickMystery())
