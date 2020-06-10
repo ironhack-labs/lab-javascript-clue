@@ -120,7 +120,6 @@ function pickMystery () {
 
 // ITERATION 3
 function revealMystery (envelope) {
-  console.log(envelope)
   let firstName = envelope.suspect.firstName
   let lastName = envelope.suspect.lastName
   let weapon = envelope.weapon.name
