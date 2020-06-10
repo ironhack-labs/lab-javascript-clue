@@ -99,5 +99,32 @@ spa,livingRoom,observatory,theater,guestHouse,patio];
 const weaponsArray = [rope,knife,candlestick,dumbbell,poison,axe,bat,trophy,pistol];
 
 // ITERATION 2
+function selectRandom (arr) {
+  let item = arr[Math.floor(Math.random() * arr.length)];
+  return item;
+}
+
+function pickMystery () {
+  let sus = selectRandom(suspectsArray)
+  let rm = selectRandom(roomsArray)
+  let wpn = selectRandom(weaponsArray)
+
+  let mystery = {
+    suspect: sus,
+    weapon: wpn,
+    room: rm
+  }
+
+  return mystery
+}
 
 // ITERATION 3
+function revealMystery (envelope) {
+  console.log(envelope)
+  let firstName = envelope.suspect.firstName
+  let lastName = envelope.suspect.lastName
+  let weapon = envelope.weapon.name
+  let room = envelope.room.name
+  let str = `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${room}!`
+  return str
+}
