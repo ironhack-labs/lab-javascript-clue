@@ -96,32 +96,41 @@ const roomsArray = [
 // ITERATION 2
 
 //Random selector
-function selectRandomSuspectsArray (arr) { 
-    const murderer = Math.random() * (max - min) + min;
+function selectRandomSuspectsArray (array) { 
+    let murderer = array[Math.floor(Math.random() * array.length)];
     return murderer;
-
 }
-
-function selectRandomWeaponsArray (arr) { 
-    let weapon = Math.random() * (max - min) + min;
+function selectRandomWeaponsArray (array) { 
+let weapon = arr[Math.round(Math.random()*(array.length))];
     return weapon;
-
 }
-
-function selectRandomRoomsArray (arr) { 
-    let room =  Math.random() * (max - min) + min;
+function selectRandomRoomsArray (array) { 
+    let room =array[Math.floor(Math.random() * array.length)];
     return room;
 }
 
 //Create the mystery
 
 function pickMystery () {
+    let envelope = [];
+    envelope.push ({selectRandom(0)});
+    envelope.push ({(selectRandom(1)});
+    envelope.push ({rselectRandom(2)});
 
-   
-
+return envelope ;
 }
-
 
 
 // ITERATION 3
 
+function revealMystery (){ 
+    let envelope = pickMistery();
+    console.log(mysteryArray[1].first_name +" "+ mysteryArray[1].last_name + " killed Mr.Boddy using the "+ mysteryArray[2].name+ " in the " +  mysteryArray[0]+ " !!!!");
+
+   }
+
+
+
+
+
+    
