@@ -92,7 +92,7 @@ const pistol      = { name: 'pistol',       weight: 20 };
 const suspectsArray = [mrGreen,drOrchid,profPlum,missScarlet,mrsPeacock,mrMustard];
 
 // Rooms Collection
-const roomsArray = [diningRoom.conservatory,kitchen,study,library,billiardRoom,lounge,ballroom,hall,
+const roomsArray = [diningRoom,conservatory,kitchen,study,library,billiardRoom,lounge,ballroom,hall,
 spa,livingRoom,observatory,theater,guestHouse,patio];
 
 // Weapons Collection
