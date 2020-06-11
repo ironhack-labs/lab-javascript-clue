@@ -60,36 +60,81 @@ const suspectsArray = [
 
 // Rooms Collection
 const roomsArray = [ 
-        {name: 'Dining Room',}
-        {name: 'Conservatory',}
-        {name: 'Kitchen',}
-        {name: 'Study',}
-        {name: 'Library',}
-        {name: 'Billiard Room',}
-        {name: 'Lounge',}
-        {name: 'Ballroom',}
-        {name: 'Hall',}
-        {name: 'Spa',}
-        {name: 'Living Room',}
-        {name: 'Observatory',}
-        {name: 'Theater',}
-        {name: 'Guest House',}
-        {name: 'Patio',}
+        {name: 'Dining Room'},
+        {name: 'Conservatory'},
+        {name: 'Kitchen'},
+        {name: 'Study'},
+        {name: 'Library'},
+        {name: 'Billiard Room'},
+        {name: 'Lounge'},
+        {name: 'Ballroom'},
+        {name: 'Hall'},
+        {name: 'Spa'},
+        {name: 'Living Room'},
+        {name: 'Observatory'},
+        {name: 'Theater'},
+        {name: 'Guest House'},
+        {name: 'Patio'}
 ];
 
 // Weapons Collection
 const weaponsArray = [
-        {name: 'rope', weight: 10<br>
-        {name: 'knife', weight: 8<br>
-        {name: 'candlestick', weight: 2<br>
-        {name: 'dumbbell', weight: 30<br>
-        {name: 'poison', weight: 2<br>
-        {name: 'axe', weight: 15<br>
-        {name: 'bat', weight: 13<br>
-        {name: 'trophy', weight: 25<br>
-        {name: 'pistol', weight: 20<br>
+        {
+            name: 'rope', 
+            weight: 10
+        },
+        {
+            name: 'knife', 
+            weight: 8
+        },
+        {
+            name: 'candlestick', 
+            weight: 2
+        },
+        {
+            name: 'dumbbell', 
+            weight: 30
+        },
+        {
+            name: 'poison', 
+            weight: 2
+        },
+        {
+            name: 'axe', 
+            weight: 15
+        },
+        {
+            name: 'bat', 
+            weight: 13
+        },
+        {
+            name: 'trophy', 
+            weight: 25
+        },
+        {
+            name: 'pistol', 
+            weight: 20
+        }
 ];
 
 // ITERATION 2
+
+//Random selector
+
+function selectRandom (cardsArray) {
+    return cardsArray[Math.floor(Math.random() * cardsArray.length)]
+   }
+
+//Create the mystery
+
+function pickMystery () {
+    let objectMystery = {
+      weapon: weaponsArray[Math.floor(Math.random() * weaponsArray.length)],
+      room: roomsArray[Math.floor(Math.random() * roomsArray.length)],
+      suspect: suspectsArray[Math.floor(Math.random() * suspectsArray.length)]
+  
+    }                       
+  return objectMystery
+  }
 
 // ITERATION 3
