@@ -137,18 +137,14 @@ const selectRandom = arr => {
 selectRandom(roomsArray)
 
 const pickMystery = () =>{
-    let suspect = selectRandom(suspectsArray);
-    let weapon = selectRandom(weaponsArray);
-    let room = selectRandom(roomsArray);
-        return { 'suspect': suspect, 'weapon': weapon, 'room': room}
+        return { 'suspect': selectRandom(suspectsArray), 'weapon': selectRandom(weaponsArray), 'room': selectRandom(roomsArray)}
 }
 
 // ITERATION 3
 
 
 const revealMystery = mystery =>{
-
-let result = `${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`;
-    return  JSON.parse(JSON.stringify(result))}
+ let {suspect, weapon,room} = mystery;
+return `${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`;}
 
 revealMystery(pickMystery())
