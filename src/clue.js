@@ -1,62 +1,63 @@
 // ITERATION 1
 
 // Suspects Collection
-const suspectsArray = [
-    {
+
+   var mrZueb = {
         firstName: 'Jacob',
-        lastName: 'Green',
+        lastName: 'Zueb',
         occupation: 'Music producer',
         age:34,
         description:'Charismatic',
-        color:black
+        color:'black',
         
-      },
-      {
+      };
+     var mrRoldano= {
         firstName: 'Luguian',
         lastName: 'Roldano',
         occupation: 'Swimmer',
         age:33,
         description:'Strong mentality',
-        color:yellow
+        color:'yellow',
         
-      },
-      {
+      };
+      var mrGreen ={
         firstName: 'Olivier',
         lastName: 'Green',
         occupation: 'Designer',
         age:34,
         description:'Love for Detail',
-        color:purple
+        color:'purple',
         
-      },
-      {
+      };
+      var mrBross = {
         firstName: 'Julian',
         lastName: 'Bross',
         occupation: 'Actor',
         age:19,
         description:'Coolest man alive',
-        color:orange
+        color:'orange',
         
-      },
-      {
+      };
+      var mrsOreal = {
         firstName: 'Jasmine',
         lastName: 'Oreal',
         occupation: 'Dancer',
         age:34,
         description:'Like a divine',
-        color:brown
+        color:'brown',
         
-      },
-      {
+      };
+      var mrOcean = {
         firstName: 'Suliman',
         lastName: 'Ocean',
         occupation: 'Diamond searcher',
         age:34,
         description:'Tenacious',
-        color:red
+        color:'red',
         
-      },
-];
+      }
+
+var  charactersArray= [mrZueb, mrRoldano, mrGreen, mrBross, mrsOreal, mrOcean]
 
 // Rooms Collection
 const roomsArray = [
@@ -91,18 +92,23 @@ var ashtray = { name: "ashtray", weight: 7};
 const weaponsArray = [scissors,bat,revolver,rifle,torpedo,sword,poison, cricket, ];
 
 // ITERATION 2
-function selectRandom(){
+function selectRandom(array){
 
-let random= suspectsArray[Math.floor(Math.random() * suspectsArray.length)]
-
+return array[Math.floor(Math.random() * suspectsArray.length)]
 
 }
-
-// ITERATION 3
 function pickMystery(){
-    suspectsArray[Math.floor(Math.random() * suspectsArray.length)]
-    weaponsArray[Math.floor(Math.random() * weaponsArray.length)]
-    roomsArray[Math.floor(Math.random() * roomsArray.length)]
+    var  misteryEnvelope = [
+    selectRandom(charactersArray),
+    selectRandom(weaponsArray),
+    selectRandom(roomsArray)
+    ]
+    return misteryEnvelope;
+}
+// ITERATION 3
+function revealMystery(array){
+   
+return misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name + " killed Mr.Boddy using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2] + "!!!!";
 
 
 }
