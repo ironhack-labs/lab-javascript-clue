@@ -2,7 +2,8 @@
 
 // Suspects Collection
 
-   var mrZueb = {
+   const suspectsArray = [
+       {
         firstName: 'Jacob',
         lastName: 'Zueb',
         occupation: 'Music producer',
@@ -10,8 +11,8 @@
         description:'Charismatic',
         color:'black',
         
-      };
-     var mrRoldano= {
+      },
+    {
         firstName: 'Luguian',
         lastName: 'Roldano',
         occupation: 'Swimmer',
@@ -19,8 +20,8 @@
         description:'Strong mentality',
         color:'yellow',
         
-      };
-      var mrGreen ={
+      },
+      {
         firstName: 'Olivier',
         lastName: 'Green',
         occupation: 'Designer',
@@ -28,8 +29,8 @@
         description:'Love for Detail',
         color:'purple',
         
-      };
-      var mrBross = {
+      },
+      {
         firstName: 'Julian',
         lastName: 'Bross',
         occupation: 'Actor',
@@ -37,8 +38,8 @@
         description:'Coolest man alive',
         color:'orange',
         
-      };
-      var mrsOreal = {
+      },
+     {
         firstName: 'Jasmine',
         lastName: 'Oreal',
         occupation: 'Dancer',
@@ -46,8 +47,8 @@
         description:'Like a divine',
         color:'brown',
         
-      };
-      var mrOcean = {
+      },
+      {
         firstName: 'Suliman',
         lastName: 'Ocean',
         occupation: 'Diamond searcher',
@@ -55,60 +56,63 @@
         description:'Tenacious',
         color:'red',
         
-      }
+      }]
 
-var  charactersArray= [mrZueb, mrRoldano, mrGreen, mrBross, mrsOreal, mrOcean]
 
 // Rooms Collection
 const roomsArray = [
-    'Kitchen',
-    'Bathroom',
-    "Library",
-    "Dinning Room",
-    "Bedroom",
-    "Study Area",
-    "Smoking Area",
-    "Hall",
-    "Guest House",
-    "Spa",
-    "Game room",
-    "Theater",
-    "Guest House",
-    "Family room"
+    {name:'Kitchen'},
+    {name:'Bathroom'},
+    {name:"Library"},
+    {name:"Dinning Room"},
+    {name:"Bedroom"},
+    {name:"Study Area"},
+    {name:"Smoking Area"},
+    {name:"Hall"},
+    {name:"Guest House"},
+    {name:"Spa"},
+    {name:"Game room"},
+    {name:"Theater"},
+    {name:"Guest House"},
+    {name:"Family room"}
 ];
 
 // Weapons Collection
-
-var scissors = { name: "scissors", weight: 1 };
-var bat = { name: "bat", weight: 3 };
-var revolver = { name: "revolver", weight: 2 };
-var rifle = { name: "rifle", weight: 3 };
-var torpedo = { name: "torpedo", weight: 12 };
-var sword = { name: "sword", weight: 9 };
-var poison = { name: "poison", weight: 1 };
-var cricket = { name: "cricket bat", weight: 25 };
-var ashtray = { name: "ashtray", weight: 7};
-
-const weaponsArray = [scissors,bat,revolver,rifle,torpedo,sword,poison, cricket, ];
+weaponsArray =[
+    { name: "scissors", weight: 1 },
+    { name: "bat", weight: 3 },
+    { name: "revolver", weight: 2},
+    { name: "rifle", weight: 3 },
+    { name: "torpedo", weight: 12 },
+    { name: "sword", weight: 9},
+    { name: "poison", weight: 1},
+    { name: "cricket bat", weight: 25},
+    { name: "ashtray", weight: 7}
+]
 
 // ITERATION 2
 function selectRandom(array){
 
-return array[Math.floor(Math.random() * suspectsArray.length)]
-
+let randomIndex =  Math.floor(Math.random() * array.length)
+let selectedIndex= array[randomIndex];
+return selectedIndex;
 }
+
 function pickMystery(){
-    var  misteryEnvelope = [
-    selectRandom(charactersArray),
-    selectRandom(weaponsArray),
-    selectRandom(roomsArray)
-    ]
-    return misteryEnvelope;
+    
+    let randomSuspect= selectRandom(suspectsArray);
+    let randomWeapon = selectRandom(weaponsArray);
+    let randomRoom = selectRandom(roomsArray)
+    let mystery = {
+        suspect:randomSuspect,
+        weapon:randomWeapon,
+        room:randomRoom
+    };
+    return mystery;
 }
-// ITERATION 3
-function revealMystery(array){
+ //ITERATION 3
+function revealMystery(envelope){
    
-return misteryEnvelope[0].first_name + " " + misteryEnvelope[0].last_name + " killed Mr.Boddy using the " + misteryEnvelope[1].name + " in the " + misteryEnvelope[2] + "!!!!";
-
+return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr.Boddy using the ${envelope.weapon.name}in the ${ envelope.room.name}!`;
 
 }
