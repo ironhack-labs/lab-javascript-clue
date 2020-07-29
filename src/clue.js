@@ -1,5 +1,6 @@
 // ITERATION 1
 // Suspects Collection
+
 const suspectsArray = [
   {
     firstName: "Jacob",
@@ -7,8 +8,8 @@ const suspectsArray = [
     occupation: "Entrepreneur",
     age: 45,
     description: "He has a lot of connections",
-    image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg" ,
-    color: "green"
+    image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+    color: "green",
   },
   {
     firstName: "Doctor",
@@ -17,7 +18,7 @@ const suspectsArray = [
     age: 26,
     description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
     image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
-    color: "white"
+    color: "white",
   },
   {
     firstName: "Victor",
@@ -26,7 +27,7 @@ const suspectsArray = [
     age: 22,
     description: "Billionaire video game designer",
     image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
-    color: "purple"
+    color: "purple",
   },
   {
     firstName: "Kasandra",
@@ -35,7 +36,7 @@ const suspectsArray = [
     age: 31,
     description: "She is an A-list movie star with a dark past",
     image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
-    color: "red"
+    color: "red",
   },
   {
     firstName: "Eleanor",
@@ -44,7 +45,7 @@ const suspectsArray = [
     age: 36,
     description: "She is from a wealthy family and uses her status and money to earn popularity",
     image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
-    color: "blue"
+    color: "blue",
   },
   {
     firstName: "Jack",
@@ -53,10 +54,12 @@ const suspectsArray = [
     age: 62,
     description: "He is a former football player who tries to get by on his former glory",
     image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg",
-    color: "yellow"
+    color: "yellow",
   }
 ];
+
 // Rooms Collection
+
 const roomsArray = [
   { name: "Dining Room" },
   { name: "Conservatory" },
@@ -72,9 +75,11 @@ const roomsArray = [
   { name: "Observatory" },
   { name: "Theater" },
   { name: "Guest House" },
-  { name: "Patio" }
+  { name: "Patio" },
 ];
+
 // Weapons Collection
+
 const weaponsArray = [
   { name: "rope", weight: 10 },
   { name: "knife", weight: 8 },
@@ -84,23 +89,34 @@ const weaponsArray = [
   { name: "axe", weight: 15 },
   { name: "bat", weight: 13 },
   { name: "trophy", weight: 25 },
-  { name: "pistol", weight: 20 }
+  { name: "pistol", weight: 20 },
 ];
+
 // ITERATION 2
+
 function selectRandom(array) {
+  // if (array.length === 0) {
+  //   return undefined;
+  // } else {
+  //   return array[Math.floor(Math.random()*array.length)];
+  // }
   randomElement = array[Math.floor(Math.random() * array.length)];
+  console.log(randomElement);
   return randomElement;
 }
-function pickMystery(suspect, room, weapon) {
-  const murderer = selectRandom(suspect);
-  const murderRoom = selectRandom(room);
-  const murderWeapon = selectRandom(weapon);
-  return mystery = {murderer: murderer, murderRoom: murderRoom, murderWeapon: murderWeapon};
-};
-// ITERATION 3
-function revealMystery(mystery) {
-  const solution = `${mystery.murderer.firstName} ${mystery.murderer.lastName} killed Mr. Boddy using the ${mystery.murderWeapon.name} in the ${mystery.murderRoom.name}!`;
-  return solution;
+
+function pickMystery() {
+  return {
+    suspect: selectRandom(suspectsArray), 
+    weapon: selectRandom(weaponsArray),
+    room:  selectRandom(roomsArray)
+  }
 };
 
-console.log(revealMystery(pickMystery(suspectsArray, roomsArray, weaponsArray)));
+// ITERATION 3
+
+function revealMystery(mystery) {
+  return `hello, ${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}`
+}
+  
+console.log(revealMystery(pickMystery()));
