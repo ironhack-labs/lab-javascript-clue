@@ -101,7 +101,6 @@ function selectRandom(array) {
   //   return array[Math.floor(Math.random()*array.length)];
   // }
   randomElement = array[Math.floor(Math.random() * array.length)];
-  console.log(randomElement);
   return randomElement;
 }
 
