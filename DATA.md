@@ -4,7 +4,9 @@ Use this data to model your game cards into objects.
 
 ### Suspects
 
-mrGreen <br>
+const suspects = [
+
+{mrGreen <br>
 firstName: Jacob <br>
 lastName: Green<br>
 occupation: Entrepreneur<br>
@@ -12,7 +14,7 @@ age: 45 <br>
 description: He has a lot of connections<br>
 image: https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg <br>
 color: green <br>
-
+}
 drOrchid<br>
 firstName: Doctor<br>
 lastName: Orchid<br>
@@ -57,6 +59,7 @@ age: 62<br>
 description: He is a former football player who tries to get by on his former glory<br>
 image: https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg<br>
 color: yellow<br>
+]
 
 ### Weapons
 
