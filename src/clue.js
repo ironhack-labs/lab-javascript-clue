@@ -162,7 +162,7 @@ function pickMystery() {
     let weapon = selectRandom(weaponsArray)
     let mysteryObject
 
-    return {suspect: suspect, room: room, weapon: weapon} 
+    return {suspect, room, weapon} 
 }
 
 // ITERATION 3
