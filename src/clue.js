@@ -166,9 +166,8 @@ function selectRandom(array) {
     if (array.length === 0) {
         return undefined
     }
-    let randomElement;
     let randomIndex = Math.floor(Math.random() * array.length);
-    randomElement = array[randomIndex];
+    let randomElement = array[randomIndex];
     return randomElement;
 }
 
