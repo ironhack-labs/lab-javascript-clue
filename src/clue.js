@@ -58,33 +58,35 @@ const suspectsArray = [
 ];
 
 // Rooms Collection
-const  weaponsArray = ["rope" ,
-    "knife",
-    "candlestick",
-    "dumbbell" ,
-    "poison",
-    "axe" ,
-    "bat" ,
-    "trophy" ,
-    "pistol" 
+const  weaponsArray = [
+    {name: "rope" },
+    {name: "knife"},
+    {name: "candlestick"},
+    {name: "dumbbell" },
+    {name: "poison"},
+    {name: "axe" },
+    {name: "bat" },
+    {name: "trophy" },
+    {name: "pistol"} 
 ];
 
 // Weapons Collection
-const roomsArray= ["Dining Room",
-    "Conservatory",
-    "Kitchen",
-    "Study",
-    "Library",
-    "Billiard Room",
-    "Lounge",
-    "Ballroom",
-    "Hall",
-    "Spa",
-    "Living Room",
-    "Observatory",
-    "Theater",
-    "Guest House",
-    "Patio"]
+const roomsArray= [
+    {name: "Dining Room"},
+    {name: "Conservatory"},
+    {name: "Kitchen"},
+    {name: "Study"},
+    {name: "Library"},
+    {name: "Billiard Room"},
+    {name: "Lounge"},
+    {name: "Ballroom"},
+    {name: "Hall"},
+    {name: "Spa"},
+    {name: "Living Room"},
+    {name: "Observatory"},
+    {name: "Theater"},
+    {name: "Guest House"},
+    {name: "Patio"}]
 
 // ITERATION 2
 function selectRandom(arrayOfElements){
@@ -93,11 +95,18 @@ function selectRandom(arrayOfElements){
 
 
 function pickMystery() {
-    const pickedMystery = {};
-    pickedMystery["suspect"] = selectRandom(suspectsArray);
-    pickedMystery["weapon"] = selectRandom(weaponsArray);
-    pickedMystery["room"] = selectRandom(roomsArray);
-    return pickedMystery;
+    // const pickedMystery = {};
+    // pickedMystery["suspect"] = selectRandom(suspectsArray);
+    // pickedMystery["weapon"] = selectRandom(weaponsArray);
+    // pickedMystery["room"] = selectRandom(roomsArray);
+    // return pickedMystery;
+
+return {
+    suspect = selectRandom(suspectsArray),
+    weapon = selectRandom(weaponsArray),
+    room = selectRandom(roomsArray),
+    }
+
 }
 
 const pickedMystery = pickMystery();
