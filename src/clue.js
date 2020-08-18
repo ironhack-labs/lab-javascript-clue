@@ -8,8 +8,8 @@ const suspectsArray = [
         occupation: 'Entrepreneur',
         age: 45,
         description: 'He has a lot of connections',
-        imgUrl: 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg'
-        color: green
+        // imgUrl: 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg'
+        color: 'green'
     },
     {
         firstName: 'Doctor',
@@ -17,8 +17,8 @@ const suspectsArray = [
         occupation: 'Scientist',
         age: 26,
         description: 'PhD in plant toxicology. Adopted daughter of Mr. Boddy',
-        imaUrl: 'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
-        color: white
+        // imaUrl: 'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
+        color: 'white'
     },
     {
         firstName: 'Victor',
@@ -26,7 +26,7 @@ const suspectsArray = [
         occupation: 'Designer',
         age: 22,
         description: 'Billionaire video game designer',
-        imgUrl: 'https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg',
+        // imgUrl: 'https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg',
         color: 'purple'
     },
     {
@@ -144,11 +144,38 @@ const weaponsArray = [
         weight: 25
     },
     {
-        name: 'pistol',
+        name: pistol',
         weight: 20
     }
 ];
 
 // ITERATION 2
 
+// function selectRandom from (array)
+// return random element of array 
+// pull out of all 3 arrays 
+
+function selectRandom(array) {
+    if(array.length === 0) {
+        return undefined;
+    }
+    return array[Math.floor(Math.random() * array.length)];
+};
+
+
 // ITERATION 3
+
+function pickMystery() 
+function pickMystery() {
+    return {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray)
+    }
+};
+let envelope = pickMystery();
+// console.log(envelope);
+function revealMystery(envelopObject) {
+  return `${envelopObject.suspect.firstName} ${envelopObject.suspect.lastName} killed Mr. Boddy using the ${envelopObject.weapon.name} in the ${envelopObject.room.name}!`;
+};
+revealMystery(envelope);
