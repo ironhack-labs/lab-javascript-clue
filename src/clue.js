@@ -136,7 +136,7 @@ let envelope = pickMystery()
 
 function revealMistery(reveal){
 
-    console.log("<"+ reveal.suspect.firstName + "> " + "<" + reveal.suspect.lastName +"> " + "killed Mr. Boddy using the " + "<" + reveal.weapon.name + "> " + "in the <" + reveal.room.name + ">!")
+    console.log(reveal.suspect.firstName + " " + reveal.suspect.lastName + " killed Mr. Boddy using the " +  reveal.weapon.name + " in the " + reveal.room.name + "!")
 
 }
 revealMistery (envelope)
