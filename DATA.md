@@ -23,13 +23,13 @@ image: http://www.radiotimes.com/uploads/images/Original/111967.jpg<br>
 color: white<br>
 
 profPlum<br>
-firstName: Victor<br>
-lastName: Plum<br>
-occupation: Designer<br>
-age: 22<br>
-description: Billionaire video game designer<br>
-image: https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg <br>
-color: purple<br>
+firstName: Victor
+lastName: Plum
+occupation: Designer
+age: 22
+description: Billionaire video game designer
+image: https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg 
+color: purple
 
 missScarlet<br>
 firstName: Kasandra<br>
