@@ -1,7 +1,6 @@
 // ITERATION 1
 
 // Suspects Collection
-const suspectsArray = [];
 const suspectsArray = [
   {
     firstName: "Jacob",
@@ -65,7 +64,6 @@ const suspectsArray = [
 ];
 
 // Rooms Collection
-const roomsArray = [];
 const roomsArray = [
   {
     name: "rope",
@@ -106,7 +104,6 @@ const roomsArray = [
 ];
 
 // Weapons Collection
-const weaponsArray = [];
 const weaponsArray = [
   { name: "Dining Room" },
   { name: "Conservatory" },
