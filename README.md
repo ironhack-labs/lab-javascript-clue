@@ -97,4 +97,4 @@ Declare a function named `revealMystery` that receives an _envelope_ `object` (s
 - [20 Mind-blowing facts about Cluedo](http://whatculture.com/offbeat/20-mind-blowing-facts-you-didnt-know-about-cluedo)
 - [Cluedo - Wikipedia](https://en.wikipedia.org/wiki/Cluedo)
 
-**Happy coding!** 💙
+**Happy coding!** 💙.  
