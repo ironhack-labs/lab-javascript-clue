@@ -158,10 +158,10 @@ const weaponsArray = [
 
 
 let selectRandom = someArray =>{ 
-    return someArray[Math.floor(Math.random() * someArray.length)]
+    return someArray[Math.floor(Math.random() * someArray.length)];
 };
 
-console.log(selectRandom(weaponsArray));
+//console.log(selectRandom(weaponsArray));
 
 let pickMystery = () => {
     let suspect = selectRandom(suspectsArray);
@@ -170,7 +170,7 @@ let pickMystery = () => {
     let mystery = {suspect, room, weapon};
     return mystery;
 };
-console.log(pickMystery());
+//console.log(pickMystery());
 // ITERATION 3
 
 let revealMystery = object =>{
@@ -178,4 +178,4 @@ let revealMystery = object =>{
     return revealMessage;
 };
 
-console.log(revealMystery(pickMystery()));
+//console.log(revealMystery(pickMystery()));
