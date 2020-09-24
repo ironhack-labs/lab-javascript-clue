@@ -62,9 +62,8 @@ const suspectsArray = [
         image:`https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg` ,
         color:`yellow`,
     }
-      
-      console.log(suspectsArray);
 ];
+//console.log(suspectsArray); //hasta aquí bien 
 
 // Weapons Collection
 const weaponsArray = [
@@ -78,6 +77,7 @@ const weaponsArray = [
     {name:`trophy`,  weight:25},
     {name:`pistol`, weight:20}
 ];
+//console.log(weaponsArray); //hasta aquí bien 
 
 // Rooms Collection
 const roomsArray = [
@@ -91,28 +91,31 @@ const roomsArray = [
     {name:`Ballroom`},
     {name:`Hall`},
     {name:`Spa`},
-    {name:`Living Room}`,
+    {name:`Living Room`},
     {name:`Observatory`},
     {name:`Theater`},
     {name:`Guest House`},
     {name:`Patio`}
 ];
+//console.log(roomsArray); //hasta aquí bien 
 
 // ITERATION 2 
 //2.1 Find a Random element of the array
 function selectRandom(array){
     return array[Math.floor(Math.random()* array.length)];
-}
+}//hasta aquí bien ==> undefined
+
 //2.1 Pick a Random mystery
 function pickMistery (){
     let envelope ={
-        suspect: selectRamdom(suspectsArray),
-        room:selecRamdom(roomsArray),
+        suspect: selectRandom(suspectsArray),
+        room:selectRandom(roomsArray),
         weapon: selectRandom(weaponsArray)
     }
-    return envelope;
+        return envelope;
+//Aquí ya no jala 
 
 // ITERATION 3 - Reveal the Mystery 
 function revealMystery (envelope){
-    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
-}
+  return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+}// y pus aquí tampoco
