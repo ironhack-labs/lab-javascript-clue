@@ -1,20 +1,19 @@
 // ITERATION 1
-
 // Suspects Collection
 const suspectsArray = [
-    // mrGreen 
+    // mrGreen
     {
-        firstName:`Jacob`, 
+        firstName:`Jacob`,
         lastName:`Green`,
         occupation:`Entrepreneur`,
-        age:45, 
+        age:45,
         description:`He has a lot of connections`,
         image:`https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg`,
         color:`green`,
     },
     //drOrchid
     {
-        firstName:`Doctor`, 
+        firstName:`Doctor`,
         lastName:`Orchid`,
         occupation:`Scientist`,
         age:26,
@@ -63,8 +62,7 @@ const suspectsArray = [
         color:`yellow`,
     }
 ];
-//console.log(suspectsArray); //hasta aquí bien 
-
+//console.log(suspectsArray); //hasta aquí bien
 // Weapons Collection
 const weaponsArray = [
     {name:`rope`, weight:10},
@@ -77,8 +75,7 @@ const weaponsArray = [
     {name:`trophy`,  weight:25},
     {name:`pistol`, weight:20}
 ];
-//console.log(weaponsArray); //hasta aquí bien 
-
+//console.log(weaponsArray); //hasta aquí bien
 // Rooms Collection
 const roomsArray = [
     {name:`Dining Room`},
@@ -97,25 +94,25 @@ const roomsArray = [
     {name:`Guest House`},
     {name:`Patio`}
 ];
-//console.log(roomsArray); //hasta aquí bien 
-
-// ITERATION 2 
+// //console.log(roomsArray); //hasta aquí bien
+//
+// // ITERATION 2
 //2.1 Find a Random element of the array
 function selectRandom(array){
     return array[Math.floor(Math.random()* array.length)];
 }//hasta aquí bien ==> undefined
-
-//2.1 Pick a Random mystery
-function pickMistery (){
+//
+// //2.1 Pick a Random mystery
+function pickMystery(){
     let envelope ={
         suspect: selectRandom(suspectsArray),
         room:selectRandom(roomsArray),
         weapon: selectRandom(weaponsArray)
     }
         return envelope;
-//Aquí ya no jala 
-
-// ITERATION 3 - Reveal the Mystery 
+}
+//
+// ITERATION 3 - Reveal the Mystery
 function revealMystery (envelope){
   return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
-}// y pus aquí tampoco
+}
