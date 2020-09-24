@@ -68,51 +68,51 @@ const suspectsArray = [
 
 // Weapons Collection
 const weaponsArray = [
-    {name: `rope`, weight: 10},
-    {name: `knife`,  weight: 8},
-    {name: `candlestick`,  weight: 2},
-    {name: `dumbbell`,  weight: 30},
-    {name: `poison`,  weight: 2},
-    {name: `axe`,  weight: 15},
-    {name: `bat`,  weight: 13},
-    {name: `trophy`,  weight: 25},
-    {name: `pistol`, weight: 20}
+    {name:`rope`, weight:10},
+    {name:`knife`,  weight:8},
+    {name:`candlestick`,  weight:2},
+    {name:`dumbbell`,  weight:30},
+    {name:`poison`,  weight:2},
+    {name:`axe`,  weight:15},
+    {name:`bat`,  weight:13},
+    {name:`trophy`,  weight:25},
+    {name:`pistol`, weight:20}
 ];
 
 // Rooms Collection
 const roomsArray = [
-    {name: `Dining Room`},
-    {name: `Conservatory`},
-    {name: `Kitchen`},
-    {name: `Study`},
-    {name: `Library`},
-    {name: `Billiard Room`},
-    {name: `Lounge`},
-    {name: `Ballroom`},
-    {name: `Hall`},
-    {name: `Spa`},
-    {name: `Living Room}`,
-    {name: `Observatory`},
-    {name: `Theater`},
-    {name: `Guest House`},
-    {name: `Patio`}
+    {name:`Dining Room`},
+    {name:`Conservatory`},
+    {name:`Kitchen`},
+    {name:`Study`},
+    {name:`Library`},
+    {name:`Billiard Room`},
+    {name:`Lounge`},
+    {name:`Ballroom`},
+    {name:`Hall`},
+    {name:`Spa`},
+    {name:`Living Room}`,
+    {name:`Observatory`},
+    {name:`Theater`},
+    {name:`Guest House`},
+    {name:`Patio`}
 ];
 
-// ITERATION 2
-//Esto hace que elija un valor al azar dentro de cualquier objeto
+// ITERATION 2 
+//2.1 Find a Random element of the array
 function selectRandom(array){
     return array[Math.floor(Math.random()* array.length)];
 }
-//Esto elije al azar las 3 cartas que van en el sobre
+//2.1 Pick a Random mystery
 function pickMistery (){
     let envelope ={
         suspect: selectRamdom(suspectsArray),
         room:selecRamdom(roomsArray),
         weapon: selectRandom(weaponsArray)
     }
-    //return envelope;
-    selectRandom();
+    return envelope;
 
-// ITERATION 3
-
+// ITERATION 3 - Reveal the Mystery 
+function revealMystery (envelope){
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
 }
