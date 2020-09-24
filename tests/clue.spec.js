@@ -14,9 +14,9 @@ describe('Find a random element of the array - selectRandom', () => {
     expect(selectRandom(['ab'])).toBe('ab');
   });
 
-  it('should return an element of the array', () => {
+  it('should return an element of the array',  () => {
     const array = ['ab', 'zz', 'zx', 'zy'];
-    expect(array.indexOf(selectRandom(array))).toBeGreaterThan(-1);
+    expect(array.indexOf(selectRandom(array))).toBeGreaterThan(-1); 
   });
 
   it('should return a random element of the array', () => {
