@@ -98,8 +98,19 @@ const roomsArray = [
 ];
 
 // ITERATION 2
-function selectRandon(){
-    
+//Esto hace que elija un valor al azar dentro de cualquier objeto
+function selectRandom(array){
+    return array[Math.floor(Math.random()* array.length)];
 }
+//Esto elije al azar las 3 cartas que van en el sobre
+function pickMistery (){
+    let envelope ={
+        suspect: selectRamdom(suspectsArray),
+        room:selecRamdom(roomsArray),
+        weapon: selectRandom(weaponsArray)
+    }
+    return envelope;
 
 // ITERATION 3
+
+}
