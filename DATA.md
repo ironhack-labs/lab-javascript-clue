@@ -60,15 +60,15 @@ color: yellow<br>
 
 ### Weapons
 
-name: rope --- weight: 10<br>
-name: knife --- weight: 8<br>
-name: candlestick --- weight: 2<br>
-name: dumbbell --- weight: 30<br>
-name: poison --- weight: 2<br>
-name: axe --- weight: 15<br>
-name: bat --- weight: 13<br>
-name: trophy --- weight: 25<br>
-name: pistol --- weight: 20<br>
+name: rope --- weight: 10
+name: knife --- weight: 8
+name: candlestick --- weight: 2
+name: dumbbell --- weight: 30
+name: poison --- weight: 2
+name: axe --- weight: 15
+name: bat --- weight: 13
+name: trophy --- weight: 25
+name: pistol --- weight: 20
 
 ### Rooms
 
