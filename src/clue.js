@@ -111,6 +111,10 @@ function revealMystery(){
 
 
 // ITERATION 3
-function revealMystery(){
-    
+console.log(mystery);
+let firstName = mystery.suspect.firstName;
+let lastName = mystery.suspect.lastName;
+let weapon = mystery.weapon.name;
+let room = mystery.room.name;
+return `${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`;
 }
