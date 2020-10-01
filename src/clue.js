@@ -88,8 +88,7 @@ function selectRandom(randomArray) {
 // ITERATION 2
 
 function pickMystery () {
-    let objThreeProp = {
-                        };
+    let objThreeProp = {};
     
     objThreeProp.suspect = selectRandom(suspectsArray);
     objThreeProp.weapon = selectRandom(weaponsArray);
@@ -101,6 +100,6 @@ function pickMystery () {
 // ITERATION 3
 
 function revealMystery (anObject) {
-    return anObject.suspect.firsrtName + " " + anObject.suspect.lastName + " killed Mr. Boddy using the " + anObject.weapon.name + " in the " + anObject.room.name + "!";
+    return anObject.suspect.firstName + " " + anObject.suspect.lastName + " killed Mr. Boddy using the " + anObject.weapon.name + " in the " + anObject.room.name + "!";
 
 }
