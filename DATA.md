@@ -61,29 +61,91 @@ color: yellow<br>
 ### Weapons
 
 name: rope --- weight: 10<br>
-name: knife --- weight: 8<br>
-name: candlestick --- weight: 2<br>
-name: dumbbell --- weight: 30<br>
-name: poison --- weight: 2<br>
-name: axe --- weight: 15<br>
-name: bat --- weight: 13<br>
-name: trophy --- weight: 25<br>
-name: pistol --- weight: 20<br>
+
+name: 'knife',
+weight: 8
+
+
+name: 'candlestick',
+weight: 2
+
+name: 'dumbbell',
+weight: 30
+
+name: 'poison',
+weight: 2
+
+name: 'axe',
+weight: 15
+
+name: 'bat',
+weight: 13
+
+name: 'trophy',
+weight: 25
+
+name: 'pistol',
+weight: 20
+
 
 ### Rooms
+{
+  name: Dining Room
+},
+{
+  name: Conservatory
+},
+{
+  name: Kitchen
+},
+{
+  name: Study
+},
+{
+  name: Library
+},
+{
+  name: Billiard Room
+},
+{
+  name: Lounge
+},
+{
+  name: Ballroom
+},
+{
+  name: Hall
+},
+{
+  name: Spa
+},
+{
+  name: Living Room
+},
+{
+  name: Observatory
+},
+{
+  name: Theater
+},
+{
+  name: Guest House
+},
+{
+  name: Patio
+}
 
-name: Dining Room<br>
-name: Conservatory<br>
-name: Kitchen<br>
-name: Study<br>
-name: Library<br>
-name: Billiard Room<br>
-name: Lounge<br>
-name: Ballroom<br>
-name: Hall<br>
-name: Spa<br>
-name: Living Room<br>
-name: Observatory<br>
-name: Theater<br>
-name: Guest House<br>
-name: Patio<br>
+name: 
+name: 
+name: 
+name: 
+name: 
+name: 
+name: 
+name: 
+name: 
+name: 
+name: 
+name: 
+name: 
+name: 
