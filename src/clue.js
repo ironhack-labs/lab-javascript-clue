@@ -123,13 +123,27 @@ const roomsArray = [
 // ITERATION 2
 
 function selectRandom(arr) {
+  let randomNumber = Math.floor(Math.random() * (arr.length - 0) + 0);
   let arrEmpty = arr.length === 0;
   let arrOne = arr.length === 1;
   if (arrEmpty) return undefined;
   else if (arrOne) return arr[0];
-  else return arr[3];
+  else return arr[randomNumber];
 }
 
-let arr = [1];
+function pickMystery() {
+  let randomSuspect = selectRandom(suspectsArray);
+  let randomWeapon = selectRandom(weaponsArray);
+  let randomRoom = selectRandom(roomsArray);
+  return {
+    suspect: randomSuspect,
+    weapon: randomWeapon,
+    room: randomRoom,
+  };
+}
 
 // ITERATION 3
+
+function revealMystery(obj) {
+  return `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`;
+}
