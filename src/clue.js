@@ -8,7 +8,7 @@ const suspectsArray = [{
                         age: 45, 
                         description: "He has a lot of connections",
                         image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg", 
-                        color: green },
+                        color: "green" },
                         {
                         firstName: "Doctor",
                         lastName: "Orchid",
@@ -85,4 +85,20 @@ const weaponsArray = [{name: "rope" ,weight: 10},
 
 // ITERATION 2
 
+function selectRandom(array) { 
+    let numRandom = Math.floor(Math.random()*array.length);
+    return array[numRandom];
+ }
+
+ function pickMystery() { 
+     let mystery={};
+     mystery.suspect = selectRandom(suspectsArray);
+     mystery.weapon = selectRandom(weaponsArray);
+     mystery.room = selectRandom(roomsArray);
+     return mystery;
+  }
+
+
 // ITERATION 3
+
+
