@@ -164,20 +164,18 @@ function selectRandom(deck) {
   if (deck.length===0){
     return result = undefined;
   } else {
-
-
-
       result = deck[Math.floor(Math.random() * deck.length)];
-
       return result
    }
-
-
-
-
 }
-console.log(selectRandom(suspectsArray));
+// console.log(selectRandom(suspectsArray));
 
 
 
 // ITERATION 3
+
+function pickMystery() {
+   let result = new Object;
+
+  return result
+}
