@@ -3,16 +3,16 @@
 // Suspects Collection
 const suspectsArray = [
 
-    mrGreen: 
+    
     {firstName: 'Jacob', 
     lastName: 'Green',
-    occupation: 'Entrepreneur'
-    age: 45
-    description: 'He has a lot of connections'
+    occupation: 'Entrepreneur',
+    age: 45,
+    description: 'He has a lot of connections',
     image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
     color: 'green'},
 
-    drOrchid: 
+    
     {firstName: 'Doctor',
     lastName: 'Orchid',
     occupation: 'Scientist',
@@ -21,7 +21,7 @@ const suspectsArray = [
     image: 'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
     color: 'white' },
 
-    profPlum: 
+    
     {firstName: 'Victor',
     lastName: 'Plum',
     occupation: 'Designer',
@@ -30,7 +30,7 @@ const suspectsArray = [
     image: 'https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg',
     color: 'purple'},
 
-    missScarlet: 
+    
     {firstName: 'Kasandra',
     lastName: 'Scarlet',
     occupation: 'Actor',
@@ -39,7 +39,7 @@ const suspectsArray = [
     image: 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
     color: 'red'},
 
-    mrsPeacock:
+    
     {firstName: 'Eleanor',
     lastName: 'Peacock',
     occupation: 'Socialité',
@@ -48,7 +48,7 @@ const suspectsArray = [
     image: 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
     color: 'blue'},
 
-    mrMustard:
+   
     {firstName: 'Jack',
     lastName: 'Mustard',
     occupation: 'Retired Football player',
@@ -60,7 +60,7 @@ const suspectsArray = [
 
 // Rooms Collection
 const roomsArray = [
-    {name: 'Dining Room'},
+{name: 'Dining Room'},
 {name: 'Conservatory'},
 {name: 'Kitchen'},
 {name: 'Study'},
@@ -71,7 +71,7 @@ const roomsArray = [
 {name: 'Hall'},
 {name: 'Spa'},
 {name: 'Living Room'},
-[name: 'Observatory'],
+{name: 'Observatory'},
 {name: 'Theater'},
 {name: 'Guest House'},
 {name: 'Patio'}
@@ -109,5 +109,24 @@ const weaponsArray = [
 ];
 
 // ITERATION 2
+
+function selectRandom(array) {
+    if (!array.length){
+        return
+    }
+    let index = Math.floor(Math.random() * array.length)
+   
+    return array[index]
+}
+
+function pickMystery(){
+
+    return {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray)
+    }
+
+}
 
 // ITERATION 3
