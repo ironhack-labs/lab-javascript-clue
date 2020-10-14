@@ -160,21 +160,22 @@ const weaponsArray = [{
 // ITERATION 2
 
 function selectRandom(deck) {
-
+  result = 0;
   if (deck.length===0){
     return result = undefined;
   } else{
 
-    let result = Math.random();
-  }
+     result = deck[0];
+     return result
+
+   }
 
 
 
-  return result
 
 }
+console.log(selectRandom(suspectsArray));
 
- // selectRandom(suspectsArray);
 
 
 // ITERATION 3
