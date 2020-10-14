@@ -163,11 +163,13 @@ function selectRandom(deck) {
   result = 0;
   if (deck.length===0){
     return result = undefined;
-  } else{
+  } else {
 
-     result = deck[0];
-     return result
 
+
+      result = deck[Math.floor(Math.random() * deck.length)];
+
+      return result
    }
 
 
