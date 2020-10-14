@@ -176,6 +176,11 @@ function selectRandom(deck) {
 
 function pickMystery() {
    let result = new Object;
-
+    result[0] = 1;
+    result[1] = 2;
+    result[2] = 3;
+  console.log(result);
   return result
 }
+
+pickMystery()
