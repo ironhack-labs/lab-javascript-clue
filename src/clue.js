@@ -166,8 +166,12 @@ function selectRandom() {
 let suspect = suspectsArray[Math.floor(math.random()*suspectsArray.length)]
 let weapons = weaponsArray[Math.floor(math.random()*weaponsArray.length)]
 let room = roomsArray[Math.floor(math.random()*roomsArray.length)]
-return (suspect,weapons,room)
+return (suspect, weapons, room)
 }
-
+function pickMystery()
+return (selectRandom())
 
 // ITERATION 3
+function revealMystery(
+    return '<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!'
+)
