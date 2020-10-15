@@ -162,12 +162,12 @@ let rope = {
   const weaponsArray = [rope,knife, candlestick, dumbell, poison, axe,bat, trophy, pistol];
   const roomsArray = [diningRoom, conservatory, kitchen,study,library,billiardRoom,lounge, ballroom, hall,spa, livingRoom,observatory, theater, guestHouse,patio];
 // ITERATION 2
-let randomSuspect = suspectsArray[Math.floor(math.random()*suspectsArray.length)]
-let randomWeapons = weaponsArray[Math.floor(math.random()*weaponsArray.length)]
-let randomRoom = roomsArray[Math.floor(math.random()*roomsArray.length)]
-function selectRandom()
-{
-    return (randomSuspect,randomWeapons,randomRoom);
+function selectRandom() {
+let suspect = suspectsArray[Math.floor(math.random()*suspectsArray.length)]
+let weapons = weaponsArray[Math.floor(math.random()*weaponsArray.length)]
+let room = roomsArray[Math.floor(math.random()*roomsArray.length)]
+return (suspect,weapons,room)
 }
-selectRandom(); 
+
+
 // ITERATION 3
