@@ -13,7 +13,7 @@ const suspectsArray = [
     },
     {
        firstName: `Doctor`,
-       lastName: `Orchid`
+       lastName: `Orchid`,
        occupation: `Scientist`,
        age: 26,
        description: `PhD in plant toxicology. Adopted daughter of Mr. Boddy`,
@@ -83,5 +83,19 @@ const weaponsArray = [
 ];
 
 // ITERATION 2
+function selectRandom(arr){
+    return arr[Math.floor(math.random() * arr.length)];
+}
 
+function newMystery() {
+    newObj = {};
+    randomSuspect = selectRandom(suspectsArray);
+    newObj.suspect = randomSuspect;
+    randomRoom = selectRandom(roomsArray);
+    newObj.room = randomRoom;
+    randomWeapon = selectRandom(weaponsArray);
+    newObj.weapon = randomWeapon;
+    return newObj;
+    
+}
 // ITERATION 3
