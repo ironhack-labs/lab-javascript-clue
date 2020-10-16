@@ -1,10 +1,10 @@
-// ITERATION 1
+// // ITERATION 1
 
-// Suspects Collection
+// // Suspects Collection
 const suspectsArray = [
-    {
-      firstName: `Jacob`,
-      lastName: `Green`,
+{
+      firstName: `Jacob`, 
+      lastName: `Green`, 
       occupation: `Entrepreneur`,
       age: 45,
       description: `He has a lot of connetions`,
@@ -60,70 +60,74 @@ const suspectsArray = [
       description: `He is a former football player who tries to get by on his former glory`,
       image: `https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg`,
       color: `yellow`
-  }];
-  
-  console.log(suspectsArray);
+  }]; 
 
 // Rooms Collection
 const roomsArray = [
-    `Dining Room`,
-    `Conservatory`,
-    `Kitchen`,
-    `Study`,
-    `Library`,
-    `Billiard Room`,
-    `Lounge`,
-    `Ballroom`,
-    `Hall`,
-    `Spa`,
-    `Living Room`,
-    `Observatory`,
-    `Theater`,
-    `Guest House`,
-    `Patio`
+    {name: `Dining Room`},
+    {name: `Conservatory`},
+    {name: `Kitchen`},
+    {name: `Study`},
+    {name: `Library`},
+    {name: `Billiard Room`},
+    {name: `Lounge`},
+    {name: `Ballroom`},
+    {name: `Hall`},
+    {name: `Spa`},
+    {name: `Living Room`},
+    {name: `Observatory`},
+    {name: `Theater`},
+    {name: `Guest House`},
+    {name: `Patio`}
 ];
 
 // Weapons Collection
 const weaponsArray = [
 {
+        name: `rope`, weight: 10
+},
 {
-        name: `rope`,
-        weight: 10
-}
+        name: `knife`, weight: 8
+},
 {
-        name: `knife`,
-        weight: 8
-}
+       name: `candlestick`, weight: 2
+},
 {
-       name: `candlestick`,
-       weight: 2
-}
+        name: `dumbbell`, weight: 30
+},
 {
-        name: `dumbbell`,
-        weight: 30
-}
+        name: `poison`, weight: 2
+},
 {
-        name: `poison`,
-        weight: 2
-}
+        name: `axe`, weight: 15
+},
 {
-        name: `axe`,
-        weight: 15
-}
+        name: `bat`, weight: 13
+},
 {
-        name: `bat`,
-        weight: 13
-}
+        name: `trophy`, weight: 25
+},
 {
-        name: `trophy`,
-        weight: 25
-}
-{
-        name: `pistol`,
-        weight: 20
+        name: `pistol`, weight: 20
 }
 ];
 
 // ITERATION 2
+function selectRandom(array){
+return (array[Math.floor(Math.random()*array.length)]);
+}
 
+function pickMystery()
+{
+        let suspect = selectRandom(suspectsArray);
+        let weapon = selectRandom(weaponsArray);
+        let room = selectRandom(roomsArray);
+
+        let mystery = {
+                suspect: `${suspect}`,
+                weapon: `${weapon}`,
+                room: `${room}`
+        }
+    return mystery;
+}
 // ITERATION 3
