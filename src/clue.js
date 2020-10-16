@@ -1,10 +1,10 @@
 // ITERATION 1
 
 // Suspects Collection
-var charactersArray = [
+var suspectsArray = [
   {   
-      first_name: "Jacob",
-      last_name: "Green",
+      firstName: "Jacob",
+      lastName: "Green",
       color: "green",
       description: "He has a lot of connections",
       age: 45,
@@ -14,8 +14,8 @@ var charactersArray = [
   },
     
   {
-      first_name: "Doctor",
-      last_name: "Orchid",
+      firstName: "Doctor",
+      lastName: "Orchid",
       color: "white",
       description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
       age: 26,
@@ -24,8 +24,8 @@ var charactersArray = [
   },
     
   {
-      first_name: "Victor",
-      last_name: "Plum",
+      firstName: "Victor",
+      lastName: "Plum",
       color: "purple",
       description: "Billionaire video game designer",
       age: 22,
@@ -34,8 +34,8 @@ var charactersArray = [
   },
     
   {
-      first_name: "Kasandra",
-      last_name: "Scarlet",
+      firstName: "Kasandra",
+      lastName: "Scarlet",
       color: "red",
       description: "She is an A-list movie star with a dark past",
       age: 31,
@@ -44,8 +44,8 @@ var charactersArray = [
   },
     
   {
-      first_name: "Eleanor",
-      last_name: "Peacock",
+      firstName: "Eleanor",
+      lastName: "Peacock",
       color: "blue",
       description:
         "She is from a wealthy family and uses her status and money to earn popularity",
@@ -55,8 +55,8 @@ var charactersArray = [
   },
     
   {
-      first_name: "Jack",
-      last_name: "Mustard",
+      firstName: "Jack",
+      lastName: "Mustard",
       color: "yellow",
       description:
         "He is a former football player who tries to get by on his former glory",
@@ -68,21 +68,21 @@ var charactersArray = [
   
   // Rooms Collection
   var roomsArray = [
-    "Dining Room",
-    "Conservatory",
-    "Kitchen",
-    "Study",
-    "Library",
-    "Billiard Room",
-    "Lounge",
-    "Ballroom",
-    "Hall",
-    "Spa",
-    "Living Room",
-    "Observatory",
-    "Theater",
-    "Guest House",
-    "Patio"
+    {name: "Dining Room"},
+    {name: "Conservatory"},
+    {name: "Kitchen"},
+    {name: "Study"},
+    {name: "Library"},
+    {name: "Billiard Room"},
+    {name: "Lounge"},
+    {name: "Ballroom"},
+    {name: "Hall"},
+    {name: "Spa"},
+    {name: "Living Room"},
+    {name: "Observatory"},
+    {name: "Theater"},
+    {name: "Guest House"},
+    {name: "Patio"}
   ];
   
   var weaponsArray = [
@@ -126,34 +126,27 @@ var charactersArray = [
   
   
   // ITERATION 2
-  let suspectsArray = charactersArray;
   function selectRandom(array) {
       let index = Math.floor(Math.random() * array.length);
-      return array[index];
+
+        return array[index];
     }
   
+  
     function pickMystery() {
-    let suspect = selectRandom(charactersArray);
+    let suspect = selectRandom(suspectsArray);
     let room = selectRandom(roomsArray);
     let weapon = selectRandom(weaponsArray);
     
     return {suspect, room, weapon}
     }
-    // console.log(pickMystery())
-  
-    // pickMystery()
-  
-  // ITERATION 3
-  let mysteryEnvelope = pickMystery();
-  let getFirstName = mysteryEnvelope.suspect.first_name;
-  let getLastName = mysteryEnvelope.suspect.last_name;
-  let getWeapon = mysteryEnvelope.weapon.name;
-  let getRoom = mysteryEnvelope.room;
-  
-  // console.log(getFirstName)
-  
-  function revealMystery() {
-      return `${getFirstName} ${getLastName} killed Mr. Boddy using the ${getWeapon} in the ${getRoom}!`
+    
+    
+    
+    // ITERATION 3
+    function revealMystery(mysteryEnvelope) {
+      console.log(mysteryEnvelope)
+      return `${mysteryEnvelope.suspect.firstName} ${mysteryEnvelope.suspect.lastName} killed Mr. Boddy using the ${mysteryEnvelope.weapon.name} in the ${mysteryEnvelope.room.name}!`
       }
   
-  revealMystery()
+  
