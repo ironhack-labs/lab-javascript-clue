@@ -85,6 +85,8 @@ var suspectsArray = [
     {name: "Patio"}
   ];
   
+  
+  // Weapons Collection
   var weaponsArray = [
   
   { name: 'rope', 
@@ -124,7 +126,6 @@ var suspectsArray = [
   ];
   
   
-  
   // ITERATION 2
   function selectRandom(array) {
       let index = Math.floor(Math.random() * array.length);
@@ -145,7 +146,6 @@ var suspectsArray = [
     
     // ITERATION 3
     function revealMystery(mysteryEnvelope) {
-      console.log(mysteryEnvelope)
       return `${mysteryEnvelope.suspect.firstName} ${mysteryEnvelope.suspect.lastName} killed Mr. Boddy using the ${mysteryEnvelope.weapon.name} in the ${mysteryEnvelope.room.name}!`
       }
   
