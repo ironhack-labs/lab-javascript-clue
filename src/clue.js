@@ -112,7 +112,6 @@ const mrGreen = {
         name: "Patio",
       };
 // Weapons Collection
-const weaponsArray = [rope,knife, candlestick, dumbell, poison, axe,bat, trophy, pistol];
 let rope = {
     name: 'rope',
     weight: 10,
