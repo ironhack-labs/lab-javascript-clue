@@ -2,7 +2,7 @@
 
 // Suspects Collection
 
-let mrGreen = {
+const mrGreen = {
     name: "Jacob Green",
     occupation: "Entrepreneur",
     age: 45,
@@ -12,7 +12,7 @@ let mrGreen = {
     color: "green ",
   };
   
-  let drOrchid = {
+  const drOrchid = {
     name: "Doctor Orchid",
     occupation: "Scientist",
     age: 26,
@@ -21,7 +21,7 @@ let mrGreen = {
     color: "white",
   };
   
-  let profPlum = {
+  const profPlum = {
     name: "Victor Plum",
     occupation: "Designer",
     age: 22,
@@ -32,7 +32,7 @@ let mrGreen = {
   };
   
   
-  let missScarlet = {
+  const missScarlet = {
     name: "Kasandra Scarlet",
     occupation: "Actor",
     age: 31,
@@ -41,7 +41,7 @@ let mrGreen = {
     color: "red",
   };
   
-  let mrsPeacock = {
+  const mrsPeacock = {
     name: "Eleanor Peacock",
     occupation: "Socialité",
     age: 36,
@@ -51,7 +51,7 @@ let mrGreen = {
     color: "blue",
   };
   
-  let mrMustard = {
+  const mrMustard = {
     name: "Jack Mustard",
     occupation: "Retired Football player",
     age: 62,
@@ -162,16 +162,14 @@ let rope = {
   const weaponsArray = [rope,knife, candlestick, dumbell, poison, axe,bat, trophy, pistol];
   const roomsArray = [diningRoom, conservatory, kitchen,study,library,billiardRoom,lounge, ballroom, hall,spa, livingRoom,observatory, theater, guestHouse,patio];
 // ITERATION 2
-function selectRandom() {
-let suspect = suspectsArray[Math.floor(math.random()*suspectsArray.length)]
-let weapons = weaponsArray[Math.floor(math.random()*weaponsArray.length)]
-let room = roomsArray[Math.floor(math.random()*roomsArray.length)]
-return (suspect, weapons, room)
-}
-function pickMystery()
-return (selectRandom())
+function selectRandom(arr) {return arr[Math.floor(Math.random() * arr.length)];}
 
+function pickMystery(){
+  const suspect= selectRandom(suspectsArray);
+  const weapon= selectRandom(weaponsArray);
+  const room =selectRandom(roomsArray);
+  return {suspect,weapon,room};
+}
 // ITERATION 3
-function revealMystery(
-    return '<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!'
-)
+function revealMystery()
+    return ' ${suspects.firstname} ${suspects.lastname} killed Mr. Boddy using the ${weapon.name} in the ${room}!'
