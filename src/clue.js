@@ -91,7 +91,7 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectedRoom(arr) {
+const selectRandom = (arr) => {
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
@@ -100,20 +100,22 @@ function selectedRoom(arr) {
 //console.log(selectedRoom(weaponsArray));
 
 
-function pickMystery() {
-    let envelope = {}
-    envelope.suspect = selectRandom(suspectsArray)
-    envelope.room = selectRandom(roomsArray)
-    envelope.weapon = selectRandom(weaponsArray)
+const pickMystery= ()=>{
+    let randomSelected={};
+randomSelected.suspect=selectRandom(suspectsArray);
+randomSelected.room=selectRandom(roomsArray);
+randomSelected.weapon=selectRandom(weaponsArray);
 
-    return envelope;
+return randomSelected;
 }
+
+//console.log(pickMystery(suspectsArray,roomsArray,weaponsArray));
 
 
 // ITERATION 3
 
-function revealMystery(x) {
-    return `${x.suspect.firstName} ${x.suspect.lastName} killed Mr. Boddy using the ${x.weapon.name} in the ${x.room.name}!`
-}
 
-console.log(revealMystery(pickMystery()))
+const revealMystery =(arr) =>{
+    return `${arr.suspect.firstName} ${arr.suspect.lastName} killed Mr. Boddy using the ${arr.weapon.name} in the ${arr.room.name}!`
+}
+//console.log(revealMystery(pickMystery(suspectsArray,roomsArray,weaponsArray)));
