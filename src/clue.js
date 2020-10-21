@@ -1,18 +1,5 @@
 // ITERATION 1
 
-### Weapons
-
-name: rope --- weight: 10<br>
-name: knife --- weight: 8<br>
-name: candlestick --- weight: 2<br>
-name: dumbbell --- weight: 30<br>
-name: poison --- weight: 2<br>
-name: axe --- weight: 15<br>
-name: bat --- weight: 13<br>
-name: trophy --- weight: 25<br>
-name: pistol --- weight: 20<br>
-
-
 // Suspects Collection
 const suspectsArray = [
     mrGreen = {
@@ -20,7 +7,7 @@ const suspectsArray = [
         lastName: "Green",
         occupation: "Entrepreneur",
         age: 45 ,
-        description: "He has a lot of connections,
+        description: "He has a lot of connections",
         image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
         color: "green"
         },
@@ -105,10 +92,15 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function randomSelector(someArray) {
-    var index = Math.floor(Math.random() * someArray.length);
-    console.log(someArray[index]);
+function selectRandom(someArray) {
+    let index = Math.floor(Math.random() * someArray.length);
+    return someArray[index];
     }
 
+function pickMystery() {
+    let yourGame = {suspect: selectRandom(suspectsArray),room: selectRandom(roomsArray), weapon: selectRandom(weaponsArray)} 
+      
+    return yourGame
+    }
 
 // ITERATION 3
