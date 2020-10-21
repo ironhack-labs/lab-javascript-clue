@@ -12,23 +12,6 @@ name: bat --- weight: 13<br>
 name: trophy --- weight: 25<br>
 name: pistol --- weight: 20<br>
 
-### Rooms
-
-name: Dining Room<br>
-name: Conservatory<br>
-name: Kitchen<br>
-name: Study<br>
-name: Library<br>
-name: Billiard Room<br>
-name: Lounge<br>
-name: Ballroom<br>
-name: Hall<br>
-name: Spa<br>
-name: Living Room<br>
-name: Observatory<br>
-name: Theater<br>
-name: Guest House<br>
-name: Patio<br>
 
 // Suspects Collection
 const suspectsArray = [
@@ -108,7 +91,16 @@ const roomsArray = [
 ];
 
 // Weapons Collection
-const weaponsArray = [];
+const weaponsArray = [{name: "rope",weight: 10 },
+    {name: "knife", weight: 8 },
+    {name: "candlestick", weight: 2},
+    {name: "dumbbell", weight: 30},
+    {name: "poison", weight: 2},
+    {name: "axe", weight: 15},
+    {name: "bat", weight: 13},
+    {name: "trophy", weight: 25},
+    name: "pistol", weight: 20}
+];
 
 // ITERATION 2
 
