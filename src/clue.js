@@ -93,15 +93,16 @@ const weaponsArray = [
 
 // Declare a function named selectRandom to randomly select one element from a card stack. The function should expect an array as an argument, and should return a random element from the array.
 
-// Create the mystery
-
-// Declare a function named pickMystery that takes no arguments and returns an object with three properties: suspect, weapon and room, each holding as a value a card of that specific type. You can get a random card of each type by calling selectRandom on each card stack.
 function selectRandom(array) {
   if (array.length === 0) return;
 
   let random = array[Math.floor(Math.random() * array.length)];
   return random;
 }
+
+// Create the mystery
+
+// Declare a function named pickMystery that takes no arguments and returns an object with three properties: suspect, weapon and room, each holding as a value a card of that specific type. You can get a random card of each type by calling selectRandom on each card stack.
 
 function pickMystery() {
   let randomSuspect = selectRandom(suspectsArray);
@@ -119,3 +120,18 @@ function pickMystery() {
 }
 
 // ITERATION 3
+
+//At last, we are ready to reveal the mystery.
+
+// Declare a function named revealMystery that receives an envelope object (such as the one returned by pickMystery) as the single argument, and returns a reveal message in the following format:
+// <FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!
+
+function revealMystery(envelopeObj) {
+  console.log("this is envelopeObj", envelopeObj);
+  let message = `${envelopeObj.suspect.firstName} ${envelopeObj.suspect.lastName} killed Mr. Boddy using the ${envelopeObj.weapon.name} in the ${envelopeObj.room.name}!`;
+  console.log("message", message);
+  return message;
+}
+
+let mystery = pickMystery();
+revealMystery(mystery);
