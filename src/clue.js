@@ -118,8 +118,8 @@ function revealMystery(object){
     const room = object.room.name;
 
     const revealMessage = `${suspect_name} ${suspect_surname} killed Mr. boddy using the ${weapon} in the ${room}!`;
-    console.log(revealMessage)
-    
+    console.log(revealMessage) // print message
+
     return revealMessage;
 }
 
