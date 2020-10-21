@@ -133,25 +133,28 @@ function selectRandom(array) {
 // ITERATION 2
 
 function pickMystery() {
-    const mystery = {
+    const mysteryCard = {
         suspect: selectRandom(suspectsArray),
         weapon: selectRandom(weaponsArray),
         room: selectRandom(roomsArray),
     }
-    return mystery
+    return mysteryCard
 }
 
 // ITERATION 3
-function revealMystery(envelope) {
-    const murderer = pickMystery()
+const mystery = pickMystery();
+console.log(mystery);
+function revealMystery(mysteryCard) {
+    
     // {
     //     firstName: '',
     //     lastName: '',
     //     weapon: '',
     //     room: '',
     // }
-    return `${murderer.suspect.firstName} ${murderer.suspect.lastName} killed Mr. Boddy using the ${murderer.weapon.name} in the ${murderer.room}!`;
+    return `${mysteryCard.suspect.firstName} ${mysteryCard.suspect.lastName} killed Mr. Boddy using the ${mysteryCard.weapon.name} in the ${mysteryCard.room.name}!`;
 
 }
 
-console.log( "murderer.suspect.firstName} ${murderer.suspect.lastName} killed Mr. Boddy using the ${murderer.weapon.name} in the ${murderer.room}!");
+
+//console.log( "murderer.suspect.firstName} ${murderer.suspect.lastName} killed Mr. Boddy using the ${murderer.weapon.name} in the ${murderer.room}!");
