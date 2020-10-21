@@ -138,7 +138,7 @@ function pickMystery() {
 }
 
 // ITERATION 3
-const mystery = pickMystery();
+
 function revealMystery (mysteryCard) {
     return (`${mysteryCard.suspect.firstName} ${mysteryCard.suspect.lastName} killed Mr. Boddy using the ${mysteryCard.weapon.name} in the ${mysteryCard.room.name}!`)
 };
