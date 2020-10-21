@@ -91,7 +91,8 @@ const roomsArray = [
 ];
 
 // Weapons Collection
-const weaponsArray = [{name: "rope",weight: 10 },
+const weaponsArray = [
+    {name: "rope", weight: 10 },
     {name: "knife", weight: 8 },
     {name: "candlestick", weight: 2},
     {name: "dumbbell", weight: 30},
@@ -99,9 +100,15 @@ const weaponsArray = [{name: "rope",weight: 10 },
     {name: "axe", weight: 15},
     {name: "bat", weight: 13},
     {name: "trophy", weight: 25},
-    name: "pistol", weight: 20}
+    {name: "pistol", weight: 20}
 ];
 
 // ITERATION 2
+
+function randomSelector(someArray) {
+    var index = Math.floor(Math.random() * someArray.length);
+    console.log(someArray[index]);
+    }
+
 
 // ITERATION 3
