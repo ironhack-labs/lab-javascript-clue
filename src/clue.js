@@ -144,16 +144,17 @@ return array[(Math.floor(Math.random()*array.length))]
 }
 
 
-function pickMystery(){
-  let mysteryArray = []
-  mysteryArray[0] = selectRandom(suspectsArray)
-  mysteryArray[1] = selectRandom(weaponsArray)
-  mysteryArray[2] = selectRandom(roomsArray)
-  return mysteryArray
+function pickMystery() {
+  let mysteryArray = {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray)
+    };
+  return mysteryArray;
 }
 
 function revealMystery(envolope){
-  console.log(`${envolope[0].firstName} ${envolope[0].lastName} killed Mr.Boddy using the ${envolope[1].wname} in the ${envolope[2].rname}!`)
+  console.log(`${envolope.suspect.firstName} ${envolope.suspect.lastName} killed Mr.Boddy using the ${envolope.weapon.wname} in the ${envolope.room.rname}!`)
 }
 
 revealMystery(pickMystery())
