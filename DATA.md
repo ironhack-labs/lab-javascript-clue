@@ -64,16 +64,15 @@ name: rope --- weight: 10<br>
 name: knife --- weight: 8<br>
 name: candlestick --- weight: 2<br>
 name: dumbbell --- weight: 30<br>
-name: poison --- weight: 2<br>
+name: poison --- weight: 2<b-r>
 name: axe --- weight: 15<br>
 name: bat --- weight: 13<br>
 name: trophy --- weight: 25<br>
-name: pistol --- weight: 20<br>
-
+name: pistol --- weight: 20
 ### Rooms
 
-name: Dining Room<br>
-name: Conservatory<br>
+name: Dining Room<
+name: Conservatory
 name: Kitchen<br>
 name: Study<br>
 name: Library<br>
