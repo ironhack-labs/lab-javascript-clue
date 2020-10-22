@@ -125,7 +125,7 @@ function selectRandom(arr) {
 }
 
 function pickMystery() {
-  let mystery = {
+  const mystery = {
     suspect: selectRandom(suspectsArray),
     weapon: selectRandom(weaponsArray),
     room: selectRandom(roomsArray)
@@ -137,7 +137,7 @@ function pickMystery() {
 // ITERATION 3
 
 function revealMystery(mystery) {
-  return `${mystery.suspect.firstname} ${mystery.suspect.lastname} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`
+  return `${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`
 }
 
 // "<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!"
