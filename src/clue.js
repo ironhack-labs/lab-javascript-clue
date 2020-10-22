@@ -9,7 +9,7 @@ const suspectsArray = [
         occupation: 'Entrepreneur',
         age: 45,
         description: 'He has a lot of connections',
-        image: 'https: //pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg ',
+        image: 'https: //pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
         color: 'green',
     },
 
@@ -19,7 +19,7 @@ const suspectsArray = [
         occupation: 'Scientist',
         age: 26,
         description: 'PhD in plant toxicology.Adopted daughter of Mr.Boddy',
-        image: ' http: //www.radiotimes.com/uploads/images/Original/111967.jpg',
+        image: 'http: //www.radiotimes.com/uploads/images/Original/111967.jpg',
         color: 'white',
     },
 
@@ -187,7 +187,7 @@ const weaponsArray = [{
 
 function selectRandom(arr) {
 
-   
+
     if (arr === 0) {
 
         return undefined
@@ -197,11 +197,11 @@ function selectRandom(arr) {
         return arr[0]
 
     } else if (arr.length > 0) {
-        
+
         let randomArrElm = arr[Math.floor(Math.random() * arr.length)]
 
         return randomArrElm
-        
+
     }
 }
 
@@ -212,13 +212,33 @@ function selectRandom(arr) {
 
 function pickMystery() {
 
-    return
+
+    let container = {
+
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray)
+
+    }
+
+    return container
+
 }
 
 
 
 
-function revealMystery() {
+function revealMystery(container) {
 
-    return `${suspectsArray.firstName} + ' ' + ${suspectsArray.lastName} killed Mr.Nobody using ${weaponsArray.name} `
+
+    let name = container.suspect.firstName
+    let surname = container.suspect.lastName
+    let weapon = container.weapon.name
+    let room = container.room.name
+
+
+    let resultString = `${name} ${surname} killed Mr. Boddy using the ${weapon} in the ${room}!`
+
+    return resultString
+
 }
