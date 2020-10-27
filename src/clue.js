@@ -1,5 +1,8 @@
 // ITERATION 1
 
+
+a = 0;
+
 // Suspects Collection
 const suspectsArray = [];
 
