@@ -102,14 +102,12 @@ function selectRandom(array) {
 
 
 // Create the mystery
-let randomObject;
 function pickMystery () {
-    randomObject = {
+    return {
         suspect: selectRandom(suspectsArray),
         room: selectRandom(roomsArray),
         weapon: selectRandom(weaponsArray)
     };
-    return randomObject;
 };
 
 // ITERATION 3
