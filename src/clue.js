@@ -108,22 +108,22 @@ const roomsArray = [
 ]
 
 // Weapons Collection
-const weaponsArray =
-    [
-        { name: 'rope', weight: 10 },
-        { name: 'knife', weight: 8 },
-        { name: 'candlestick', weight: 2 },
-        { name: 'dumbbell', weight: 30 },
-        { name: 'poison', weight: 2 },
-        { name: 'axe', weight: 15 },
-        { name: 'bat', weight: 13 },
-        { name: 'trophy', weight: 25 },
-        { name: 'pistol', weight: 20 },
-    ]
+const weaponsArray = [
+    { name: 'rope', weight: 10 },
+    { name: 'knife', weight: 8 },
+    { name: 'candlestick', weight: 2 },
+    { name: 'dumbbell', weight: 30 },
+    { name: 'poison', weight: 2 },
+    { name: 'axe', weight: 15 },
+    { name: 'bat', weight: 13 },
+    { name: 'trophy', weight: 25 },
+    { name: 'pistol', weight: 20 },
+]
 
 function getRandomInt(min, max) {
     return Math.random() * (max - min) + min;
 }
+
 
 // ITERATION 2
 function selectRandom(insertArray) {
@@ -134,33 +134,22 @@ function selectRandom(insertArray) {
         return insertArray[Math.floor(random)]
     }
     value = Math.random() * Array.length;
+
     return Array[Math.floor(value)]
 }
 
-
-function pickMystery(array2) {
-
-
-
-
-
-
-
-}
-
-function revealMystery() { }
-
-
-
-
-
-
 // ITERATION 3
-function selectRandom(pickMystery) {
-    for (let i = 0; i < suspectsArray.firstName.length; i++) {
-        randomNumber
-    } for (let j = 0; j < weaponsArray.length; j++) { randomNumber }
-    for (let l = 0; l < roomsArray.length; l++) { randomNumber }
-    return pickMystery[Math.rabdom(suspectsArray[0].weaponsArray[j].roomsArray[l])]
-
+function pickMystery(array) {
+    console.log('name')
+    if (array == null) return { "name": "bob", "number": 1, "pet": "dog" }
+    for (let index = 0; index < array.length; index++) {
+        name = { 'nome' : array[index].firstName } 
+        
+        return name
+    }
+    // for (let i = 0; i < suspectsArray.firstName.length; i++) {
+    //     randomNumber
+    // } for (let j = 0; j < weaponsArray.length; j++) { randomNumber }
+    // for (let l = 0; l < roomsArray.length; l++) { randomNumber }
+    // return pickMystery[Math.rabdom(suspectsArray[0].weaponsArray[j].roomsArray[l])]
 } 
