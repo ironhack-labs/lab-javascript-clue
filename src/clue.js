@@ -1,4 +1,5 @@
 // Suspects Collection
+
 const suspectsArray = [
 {
 firstName: "Jacob",
@@ -19,16 +20,16 @@ image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
 color: "white"
 },
 {
-firstName: "Victor"
+firstName: "Victor",
 lastName: "Plum",
 occupation: "Designer",
 age: 22,
 description: "Billionaire video game designer",
-image: htt"ps://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg <br",
+image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
 color: "purple"
 },
 {
-firstName: "Kasandra"
+firstName: "Kasandra",
 lastName: "Scarlet",
 occupation: "Actor",
 age: 31,
@@ -37,16 +38,16 @@ image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
 color: "red"
 },
 {
-firstName: "Eleanor"
+firstName: "Eleanor",
 lastName: "Peacock",
 occupation: "Socialité",
 age: 36,
 description: "She is from a wealthy family and uses her status money to earn popularity",
-image: "ttps://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg"
+image: "ttps://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
 color: "blue"
 },
 {
-firstName: "Jack"
+firstName: "Jack",
 lastName: "Mustard",
 occupation: "Retired Football player",
 age: 62,
@@ -67,8 +68,8 @@ const roomsArray = [
 { name: "Billiard Room" },
 { name: "Lounge" },
 { name: "Ballroom" },
-{ name: "Hall" }
-{ name: "Spa" }
+{ name: "Hall" },
+{ name: "Spa" },
 { name: "Living Room" },
 { name: "Observatory" },
 { name: "Theater" },
@@ -93,13 +94,23 @@ const weaponsArray = [
 // ITERATION 1
 
 function selectRandom(arr) {   
-    if (!arr.length) {     
-    return undefined;   }   
-    let random = Math.floor(Math.random() * arr.length);   
-    return arr[random]; }
+if (!arr.length) {     
+     return undefined; }   
+      let random = Math.floor(Math.random()*arr.length);   
+      return arr[random];
+}
 
+// ITERATION 2 
+const mysteryObject = {
+    suspect: " ",
+    weapon: " ",
+    room: " "
+}
 
-// ITERATION 2
+function pickMystery() {
+selectRandom()
+    return mysteryObject;
+}
 
 
 
