@@ -3,7 +3,7 @@
 // Suspects Collection
 const suspectsArray = [
   {
-    firstName: 'Jacob ',
+    firstName: 'Jacob',
     lastName: 'Green',
     occupation: 'Entrepreneur',
     age: 45,
@@ -12,7 +12,6 @@ const suspectsArray = [
       'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg ',
     color: 'green'
   },
-
   {
     firstName: 'Doctor',
     lastName: 'Orchid',
@@ -22,7 +21,6 @@ const suspectsArray = [
     image: 'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
     color: 'white'
   },
-
   {
     firstName: 'Victor',
     lastName: 'Plum',
@@ -33,7 +31,6 @@ const suspectsArray = [
       'https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg ',
     color: 'purple'
   },
-
   {
     firstName: 'Kasandra',
     lastName: 'Scarlet',
@@ -43,7 +40,6 @@ const suspectsArray = [
     image: 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
     color: 'red'
   },
-
   {
     firstName: 'Eleanor',
     lastName: 'Peacock',
@@ -54,7 +50,6 @@ const suspectsArray = [
     image: 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
     color: 'blue'
   },
-
   {
     firstName: 'Jack',
     lastName: 'Mustard',
@@ -89,15 +84,15 @@ const roomsArray = [
 
 // Weapons Collection
 const weaponsArray = [
-  { rope: 10 },
-  { knife: 8 },
-  { candlestick: 2 },
-  { dumbbell: 30 },
-  { poison: 2 },
-  { axe: 15 },
-  { bat: 13 },
-  { trophy: 25 },
-  { pistol: 20 }
+  { name: 'rope', weight: 10 },
+  { name: 'knife', weight: 8 },
+  { name: 'candlestick', weight: 2 },
+  { name: 'dumbbell', weight: 30 },
+  { name: 'poison', weight: 2 },
+  { name: 'axe', weight: 15 },
+  { name: 'bat', weight: 13 },
+  { name: 'trophy', weight: 25 },
+  { name: 'pistol', weight: 20 }
 ];
 
 // ITERATION 2
@@ -109,7 +104,7 @@ function selectRandom(inputArray) {
 
 function pickMystery() {
   const mystery = {};
-  mystery.suspects = selectRandom(suspectsArray);
+  mystery.suspect = selectRandom(suspectsArray);
   mystery.weapon = selectRandom(weaponsArray);
   mystery.room = selectRandom(roomsArray);
   return mystery;
@@ -117,10 +112,13 @@ function pickMystery() {
 
 // ITERATION 3
 
-
-function revealMystery (envelope) {
-  envelope = pickMystery()
-  return envelope.suspects.firstName + " " + envelope.suspects.lastName + " killed Mr. Boddy using the " + Object.keys(envelope.weapon) +" in the " + Object.values(envelope.room)
+function revealMystery(envelope) {
+  envelope = pickMystery();
+  return `${envelope.suspect.firstName} ${
+    envelope.suspect.lastName
+  } killed Mr. Boddy using the ${envelope.weapon.name} in the ${Object.values(
+    envelope.room
+  )}!`;
 }
 
-revealMystery()
+revealMystery();
