@@ -184,16 +184,23 @@ function selectRandom (cardStack) {
 }
 
 function pickMystery () {
-    const mystery = {
+    
+    return {
         suspect: selectRandom (suspectsArray),
         room: selectRandom (roomsArray),
         weapon: selectRandom (weaponsArray)
-    }
-    return mystery
+    } 
 }
 
 // ITERATION 3
 
-function revealMystery (mystery) {
+/*function revealMystery (mystery) {
     return console.log(`${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`);
-}
+}*/
+
+function revealMystery () {
+    let result = pickMystery();
+    
+    return `${result.suspect.firstName} ${result.suspect.lastName} killed Mr. Boddy using the ${result.weapon.name} in the ${result.room.name}!`          
+  }
+ 
