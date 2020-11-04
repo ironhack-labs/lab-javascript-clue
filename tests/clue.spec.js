@@ -43,7 +43,7 @@ describe('Pick a random mystery - pickMystery', () => {
   });
 
   it('should return an object with 3 properties', () => {
-    expect(Object.keys(pickMystery()).length).toEqual(3);
+    expect(Object.keys(pickMystery(teste)).length).toEqual(3);
   });
 
   it('should return a suspect in the suspect property of the object', () => {

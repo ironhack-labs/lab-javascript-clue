@@ -134,33 +134,49 @@ function selectRandom(insertArray) {
         return insertArray[Math.floor(random)]
     }
     value = Math.random() * Array.length;
-    return Array[Math.floor(value)]
+    return array[Math.floor(value)]
 }
 
-
-function pickMystery(array2) {
-
-
-
-
-
-
+for (var i = 0; i < a.length; i++) {
+    suspectsArray[a[i]] = roomsArray[i];
+}
+arr = [];
+for (var key in b) {
+    arr.push(key);
 
 }
-
-function revealMystery() { }
-
-
-
-
 
 
 // ITERATION 3
-function selectRandom(pickMystery) {
-    for (let i = 0; i < suspectsArray.firstName.length; i++) {
-        randomNumber
-    } for (let j = 0; j < weaponsArray.length; j++) { randomNumber }
-    for (let l = 0; l < roomsArray.length; l++) { randomNumber }
-    return pickMystery[Math.rabdom(suspectsArray[0].weaponsArray[j].roomsArray[l])]
+let teste = [suspectsArray, weaponsArray, roomsArray]
+function pickMystery(teste) {
+    resultArray = {}
+    if (teste == undefined) {
+        return resultArray
+    } else {
+        searchNameRandom = Math.floor(Math.random() * (suspectsArray.length - 1))
+        searchWeaponRandom = Math.floor(Math.random() * (weaponsArray.length - 1))
+        searchRoomRandom = Math.floor(Math.random() * (roomsArray.length - 1))
+        name = teste[0][searchNameRandom].firstName
+        weapon = teste[1][searchWeaponRandom].name
+        room = teste[2][searchRoomRandom].name
+        resultArray = { name, weapon, room }
+        console.log(resultArray)
+        return resultArray
+    }
+}
 
-} 
+
+// INTERATION 4
+
+function revealMystery(resultArray) {
+    if(revealMystery == undefined){
+        return resultArray
+    }else{
+       alert($(name) + 'killed Mr. Boddy using the' + $(weapon) + 'in the' + $(room)+'!')
+    }
+
+}
+
+
+
