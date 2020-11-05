@@ -138,18 +138,9 @@ function selectRandom(insertArray) {
     return array[Math.floor(value)]
 }
 
-for (var i = 0; i < a.length; i++) {
-    suspectsArray[a[i]] = roomsArray[i];
-}
-arr = [];
-for (var key in b) {
-    arr.push(key);
-
-}
-
-
 // ITERATION 3
 let teste = [suspectsArray, weaponsArray, roomsArray]
+console.log(teste)
 function pickMystery(teste) {
     resultArray = {}
     if (teste == undefined) {
@@ -158,26 +149,34 @@ function pickMystery(teste) {
         searchNameRandom = Math.floor(Math.random() * (suspectsArray.length - 1))
         searchWeaponRandom = Math.floor(Math.random() * (weaponsArray.length - 1))
         searchRoomRandom = Math.floor(Math.random() * (roomsArray.length - 1))
-        name = teste[0][searchNameRandom].firstName
+        firstName = teste[0][searchNameRandom].firstName
+        lastName = teste[0][searchNameRandom].lastName
+        occupation = teste[0][searchNameRandom].occupation
+        age = teste[0][searchNameRandom].age
+        description = teste[0][searchNameRandom].description
+        image = teste[0][searchNameRandom].image
+        color = teste[0][searchNameRandom].color
         weapon = teste[1][searchWeaponRandom].name
+        weight = teste[1][searchWeaponRandom].weight
         room = teste[2][searchRoomRandom].name
-        resultArray = { name, weapon, room }
-        console.log(resultArray)
+        resultArray = { suspect: {firstName, lastName, occupation, age, description, image, color}, weapon: { name: weapon, weight: weight}, room: {name: room} }
         return resultArray
     }
 }
 
 
 // INTERATION 4
-
-function revealMystery(resultArray) {
-    if(revealMystery == undefined){
-        return resultArray
-    }else{
-       alert($(name) + 'killed Mr. Boddy using the' + $(weapon) + 'in the' + $(room)+'!')
+function revealMystery(pickMystery) {
+    if (revealMystery == undefined) {
+        return pickMystery
+    } else {
+        let msg = `${pickMystery.suspect.firstName} ${pickMystery.suspect.lastName} killed Mr. Boddy using the ${pickMystery.weapon.name} in the ${pickMystery.room.name}!`
+       return msg
     }
 
 }
+
+
 
 
 
