@@ -140,7 +140,6 @@ function selectRandom(insertArray) {
 
 // ITERATION 3
 let teste = [suspectsArray, weaponsArray, roomsArray]
-console.log(teste)
 function pickMystery(teste) {
     resultArray = {}
     if (teste == undefined) {
