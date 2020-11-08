@@ -92,7 +92,7 @@ const weaponsArray = [
 
 // ITERATION 2
 
-const selectRandom = (arr) => {
+const selectRandom = arr => {
     return arr[Math.floor(arr.length * Math.random())]
 }
 
@@ -103,7 +103,7 @@ const pickMystery = () => {
 
 // ITERATION 3
 
-const revealMystery = (envelope) => {
+const revealMystery = envelope => {
     return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
 }
    
