@@ -73,6 +73,10 @@ const weaponsArray = [{name: 'rope', weight: 10},
 
 // ITERATION 2
 
+function selectRandom(array) {
+    Mat
+}
+
 // ITERATION 3
 
 console.log(suspectsArray)
