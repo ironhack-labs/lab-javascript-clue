@@ -1,5 +1,6 @@
 // ITERATION 1
 
+// Suspects Collection
 const suspectsArray = [{
     firstName: 'Jacob',
     lastName: 'Green',
@@ -55,19 +56,14 @@ const suspectsArray = [{
     color: 'yellow',
 }]
 
-const weaponsArray = []
-const roomsArray = []
-
-
-
-// Suspects Collection
-const suspectsArray1 = [];
-
 // Rooms Collection
-const roomsArray1 = [];
+const roomsArray = [{name: 'Dining Room'},{name: 'Conservatory'},{name: 'Kitchen'},
+{name: 'Study'},{name: 'Library'},{name: 'Billiard Room'},{name: 'Lounge'},
+{name: 'Ballroom'},{name: 'Hall'},{name: 'Spa'},{name: 'Living Room'},{name: 'Observatory'},
+{name: 'Theater'},{name: 'Guest House'},{name: 'Patio'}];
+
 
 // Weapons Collection
-const weaponsArray1 = [];
 const weaponsArray = [{name: 'rope', weight: 10},
     {name: 'knife', weight: 8},{name: 'candlestick', weight: 2},
     {name: 'dumbbell', weight: 30},{name: 'poison', weight: 2},
@@ -79,4 +75,8 @@ const weaponsArray = [{name: 'rope', weight: 10},
 
 // ITERATION 3
 
+console.log(suspectsArray)
+console.log(roomsArray)
 console.log(weaponsArray)
+
+
