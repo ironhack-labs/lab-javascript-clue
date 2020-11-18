@@ -60,34 +60,34 @@ const suspectsArray = [{
 
 // Rooms Collection
 const roomsArray = [
-    'diningRoom',
-    'conservatory',
-    'kitchen',
-    'study',
-    'library',
-    'billiardRoom',
-    'lounge',
-    'ballroom',
-    'hall',
-    'spa',
-    'livinRoom',
-    'observatory',
-    'theater',
-    'guestHouse',
-    'patio'
+    {name: 'Dining Room'},
+    {name: 'Conservatory'},
+    {name: 'Kitchen'},
+    {name: 'Study'},
+    {name: 'Library'},
+    {name: 'Billiard Room'},
+    {name: 'Lounge'},
+    {name: 'Ballroom'},
+    {name: 'Hall'},
+    {name: 'Spa'},
+    {name: 'Living Room'},
+    {name: 'Observatory'},
+    {name: 'Theater'},
+    {name: 'Guest House'},
+    {name: 'Patio'}
 ];
 
 // Weapons Collection
 const weaponsArray = [
-    {rope: 'rope', weight: 10},
-    {knife: 'knife', weight: 8},
-    {candlestick: 'candlestick', weight: 2},
-    {dumbbell: 'dumbbell', weight: 30},
-    {poison: 'poison', weight: 2},
-    {axe: 'axe', weight: 15},
-    {bat: 'bat', weight: 13},
-    {trophy: 'trophy', weight: 25},
-    {pistol: 'pistol', weight: 20}
+    {name: 'rope', weight: 10},
+    {name: 'knife', weight: 8},
+    {name: 'candlestick', weight: 2},
+    {name: 'dumbbell', weight: 30},
+    {name: 'poison', weight: 2},
+    {name: 'axe', weight: 15},
+    {name: 'bat', weight: 13},
+    {name: 'trophy', weight: 25},
+    {name: 'pistol', weight: 20}
 ];
 
 // ITERATION 2
@@ -98,4 +98,21 @@ function selectRandom (arr) {
 
 selectRandom(suspectsArray);
 
+function pickMystery () {
+
+    let mystery = {}
+    mystery.suspect = selectRandom (suspectsArray);
+    mystery.weapon = selectRandom (weaponsArray);
+    mystery.room = selectRandom (roomsArray);
+
+    return mystery;
+}
+
+// pickMystery();
+
 // ITERATION 3
+function revealMystery (object) {
+    return `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`;
+}
+
+revealMystery (pickMystery());
