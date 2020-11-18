@@ -73,10 +73,30 @@ const weaponsArray = [{name: 'rope', weight: 10},
 
 // ITERATION 2
 
+let selectRandom=(array)=>{
+    
+    return array[Math.floor(Math.random()*array.length-1)]
+    
+}
+
+let pickMystery = ()=>{
+    const mysteryContainer = {suspect: selectRandom(suspectsArray),room: selectRandom(roomsArray), weapon: selectRandom(weaponsArray) }
+    return mysteryContainer
+}
+
+
 // ITERATION 3
 
-console.log(suspectsArray)
-console.log(roomsArray)
-console.log(weaponsArray)
+const solution = pickMystery()
+
+console.log(solution)
+
+let revealMystery =(objectSolution)=>{
+    console.log(`${objectSolution.suspect.firstName} ${objectSolution.suspect.lastName} killed Mr Boddy using the ${objectSolution.weapon.name} in the ${objectSolution.room.name}`)
+}
+
+
+revealMystery(solution)
+
 
 
