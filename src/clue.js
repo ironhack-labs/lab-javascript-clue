@@ -2,7 +2,7 @@
 
 // Suspects Collection
 const suspectsArray = [{
-  mrGreen: {
+  
     firstName: 'Jacob',
     lastName: 'Green',
     occupation: 'Entrepreneur',
@@ -11,9 +11,9 @@ const suspectsArray = [{
     image: 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
     color: 'green'
   }
-},
+,
 {
-  drOrchid: {
+  
     firstName: 'Doctor',
     lastName: 'Orchid',
     occupation: 'Scientist',
@@ -22,9 +22,9 @@ const suspectsArray = [{
     image: 'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
     color: 'white'
   }
-},
+,
 {
-  profPlum: {
+ 
     firstName: 'Victor',
     lastName: 'Plum',
     occupation: 'Designer',
@@ -33,9 +33,9 @@ const suspectsArray = [{
     image: 'https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg',
     color: 'purple'
   }
-},
+,
 {
-  missScarlet: {
+ 
     firstName: 'Kasandra',
     lastName: 'Scarlet',
     occupation: 'Actor',
@@ -44,9 +44,9 @@ const suspectsArray = [{
     image: 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
     color: 'red'
   }
-},
+,
 {
-  mrsPeacock: {
+ 
     firstName: 'Eleanor',
     lastName: 'Peacock',
     occupation: 'Socialité',
@@ -55,20 +55,11 @@ const suspectsArray = [{
     image: 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
     color: 'blue'
   }
-},
+,
+
+,
 {
-  mrsPeacock: {
-    firstName: 'Eleanor',
-    lastName: 'Peacock',
-    occupation: 'Socialité',
-    age: 36,
-    description: 'She is from a wealthy family and uses her status and money to earn popularity',
-    image: 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
-    color: 'blue'
-  }
-},
-{
-  mrMustard: {
+
     firstName: 'Jack',
     lastName: 'Mustard',
     occupation: 'Retired Football player',
@@ -77,7 +68,7 @@ const suspectsArray = [{
     image: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg',
     color: 'yellow'
   }
-}
+
 ]
 
 
@@ -141,9 +132,20 @@ const weaponsArray = [
   { name: 'Patio' }
 ];
 
-console.log(weaponsArray[0])
+
 // ITERATION 2
 
+function selectRandom(arr){
+  if(arr.length=== 0){
+    return undefined;
+  }else{
+  let index =  Math.floor(Math.random()*arr.length) 
+  return arr[index]
+  }
+  
+
+}
+console.log(selectRandom(roomsArray))
 
 
 // ITERATION 3
