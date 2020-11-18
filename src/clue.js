@@ -87,13 +87,8 @@ let pickMystery = ()=>{
 
 // ITERATION 3
 
-const solution = pickMystery()
-
 let revealMystery =(objectSolution)=>{
     return `${objectSolution.suspect.firstName} ${objectSolution.suspect.lastName} killed Mr. Boddy using the ${objectSolution.weapon.name} in the ${objectSolution.room.name}!`
 }
 
-console.log(revealMystery(solution))
-
-
-
+console.log(revealMystery(pickMystery()))
