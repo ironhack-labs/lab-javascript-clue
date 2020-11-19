@@ -149,8 +149,7 @@ const envelope = pickMystery();
 // ITERATION 3
 
 function revealMystery(obj){
-  return `"${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!"`
-  // "<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!"
+  return `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`
 }
 
 console.log(revealMystery(envelope))
