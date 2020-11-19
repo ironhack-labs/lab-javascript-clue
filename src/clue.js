@@ -1,7 +1,8 @@
 // ITERATION 1
 
 // Suspects Collection
-const suspectsArray = [{
+const suspectsArray = [
+{
     firstName: " Jacob",
     lastName: "Green",
     occupation: "Entrepreneur",
@@ -57,30 +58,21 @@ const suspectsArray = [{
     color: "yellow"
 }];
 
+// Weapons Collection
+    const weaponsArray = [
+    {name: "rope", weight: "10"},
+    {name: "knife", weight: "8"},
+    {name: "candlestick", weight: "2"},
+    {name: "dumbbell", weight: "30"},
+    {name: "poison", weight: "2"},
+    {name: "axe", weight: "15"},
+    {name: "bat", weight: "13"},
+    {name: "trophy", weight: "25"},
+    {name: "pistol", weight: "20"},
+    ];
+
 // Rooms Collection
 const roomsArray = [
-{name: "rope",
-weight: "10"},
-{name: "knife",
-weight: "8"},
-{name: "candlestick",
-weight: "2"},
-{name: "dumbbell",
-weight: "30"},
-{name: "poison",
-weight: "2"},
-{name: "axe",
-weight: "15"},
-{name: "bat",
-weight: "13"},
-{name: "trophy",
-weight: "25"},
-{name: "pistol",
-weight: "20"},
-];
-
-// Weapons Collection
-const weaponsArray = [
 {name: "Dining Room"},
 {name: "Conservatory"},
 {name: "Kitchen"},
@@ -98,6 +90,30 @@ const weaponsArray = [
 {name: "Patio"}
 ];
 
+
 // ITERATION 2
 
+function selectRandom(arr){
+    let card = arr[Math.floor(Math.random() * arr.length)]
+    return card
+}
+
+let cards = {}
+function pickMystery(){
+    cards.suspect = selectRandom (suspectsArray)
+    cards.weapon = selectRandom (weaponsArray)
+    cards.room = selectRandom (roomsArray)
+    return cards
+}
+
 // ITERATION 3
+
+function revealMystery(cards){
+  
+    return `${cards.suspect.firstName} ${cards.suspect.lastName} killed Mr. Boddy using the ${cards.weapon.name} in the ${cards.room.name}!`
+
+}
+
+//TEST
+pickMystery()
+console.log(revealMystery(cards))
