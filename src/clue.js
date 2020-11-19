@@ -52,7 +52,7 @@ const suspectsArray = [
         lastName: 'Mustard',
         occupation: ' Retired Football player',
         age: 62,
-        description: 'He is a former football player who tries to get by on his former glory'
+        description: 'He is a former football player who tries to get by on his former glory',
         image: ' https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg',
         color: 'yellow'
     }
@@ -77,10 +77,10 @@ const roomsArray = [
     },
     {
         name: 'Billiard'
-    }
+    },
     {
         name: 'Lounge'
-    }
+    },
     {
         name: 'Ballroom'
     },
@@ -104,10 +104,10 @@ const roomsArray = [
     },
     {
         name: 'Patio'
-    }
-];
 
-// Weapons Collection
+    }];
+
+// Weapons
 const weaponsArray = [
     {
         name: 'rope',
@@ -115,7 +115,7 @@ const weaponsArray = [
     },
     {
         name: 'knife',
-        weight: 8 
+        weight: 8
     },
     {
         name: 'candlestick',
@@ -147,6 +147,24 @@ const weaponsArray = [
     }
 ];
 
-// ITERATION 2
+// ITERATION 2 
+
+function selectRandom(array) {
+    let numRandom = Math.floor(Math.random() * (array.length - 0)) + 0;
+    return array[numRandom]
+}
+
+function pickMystery() {
+    let card = {};
+    let suspectObjet = selectRandom(suspectsArray);
+    card.suspect = suspectObjet;
+    let roomsObjet = selectRandom(roomsArray);
+    card.room = roomsObjet;
+    let weaponsObjet = selectRandom(weaponsArray);
+    card.weapon = weaponsObjet;
+    return card;
+}
+
 
 // ITERATION 3
+
