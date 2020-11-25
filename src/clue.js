@@ -149,4 +149,27 @@ const weaponsArray = [
 
 // ITERATION 2
 
+function selectRandom(array) {
+    let numRandom = Math.floor(Math.random() * (array.length - 0)) + 0;
+    return array[numRandom]
+}
+
+function pickMystery() {
+    let card = {};
+    let suspectObject = selectRandom(suspectsArray);
+    card.suspect = suspectObject;
+    let roomsObject = selectRandom(roomsArray);
+    card.room = roomsObject;
+    let weaponsObject = selectRandom(weaponsArray);
+    card.weapon = weaponsObject;
+    return card;
+}
+
+
+
 // ITERATION 3
+
+function revealMystery(card){
+    return (`${card.suspect.firstName} ${card.suspect.lastName} killed Mr. Body using the ${card.weapon.name} in the ${card.room.name}`)
+}
+
