@@ -129,7 +129,6 @@ function selectRandom(arr) {
     let random = arr[Math.floor(Math.random() * arr.length)]
     return random
 }
-
 console.log(selectRandom(roomsArray))
 
 // ITERATION 3
@@ -141,14 +140,11 @@ function pickMystery() {
     }
     return card
 }
-
 console.log(pickMystery())
 
-function revealMystery() {
-    let card = pickMystery();
-    let message = `${card.suspect.firstName} ${card.suspect.lastName} killed Mr.Boddy using the ${card.weapon.name} in the ${card.room.name}!`;
-    console.log(message)// function is working as instructed but the to deal with the error we had to assign the same message as set in the tests
-    message = 'Victor Plum killed Mr. Boddy using the poison in the Billiard Room!'
+function revealMystery(envelope) {
+    let message = `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+    console.log(message) // function is working as instructed but the to deal with the error we had to assign the same message as set in the tests
+    //message = 'Victor Plum killed Mr. Boddy using the poison in the Billiard Room!'
     return message;
 }
-revealMystery()
