@@ -129,18 +129,22 @@ function selectRandom(arr) {
 }
 
 function pickMystery() {
+    const guess = {};
     const suspect = selectRandom(suspectsArray);
+    guess.suspect = suspect;
     const room = selectRandom(roomsArray);
+    guess.room = room;
     const weapon = selectRandom(weaponsArray);
+    guess.weapon = weapon;
 
-    const guess = {
-        suspect: {
-            firstName: suspect.firstName,
-            lastName: suspect.lastName,
-        },
-        weapon: weapon.name,
-        room: room.name,
-    };
+    // const guess = {
+    //     suspect: {
+    //         firstName: suspect.firstName,
+    //         lastName: suspect.lastName,
+    //     },
+    //     weapon: weapon.name,
+    //     room: room.name,
+    // };
     return guess;
 }
 const picked = pickMystery();
@@ -150,6 +154,7 @@ const picked = pickMystery();
 function revealMystery(arr) {
     const revealed = `${arr.suspect.firstName} ${arr.suspect.lastName} killed Mr.Boddy using the ${arr.weapon} in the ${arr.room}`;
     console.log(revealed);
-    return revealed;
+    // return revealed;
+    return `${arr.suspect.firstName} ${arr.suspect.lastName} killed Mr.Boddy using the ${arr.weapon} in the ${arr.room}`;
 }
 revealMystery(picked);
