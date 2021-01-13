@@ -1,5 +1,7 @@
 // ITERATION 1
-var suspectsArray = [
+
+// Suspects Collection
+const suspectsArray = {
     mrGreen = {
         firstName: "Jacob",
         lastName: "Green",
@@ -9,7 +11,7 @@ var suspectsArray = [
         image: "http://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
         color: "Green"
     },
-    drOrchid = {
+    drOrchid: {
         firstName: "Doctor",
         lastName: "Orchid",
         occupation: "Scientist",
@@ -18,7 +20,7 @@ var suspectsArray = [
         image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
         color: "white"
     },
-    profPlum = {
+    profPlum: {
         firstName: "Victor",
         lastName: "Plum",
         occupation: "Designer",
@@ -27,7 +29,7 @@ var suspectsArray = [
         image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
         color: "purple"
     },
-    missScarlet = {
+    missScarlet: {
         firstName: "Kasandra",
         lastName: "Scarlet",
         occupation: "Actor",
@@ -36,7 +38,7 @@ var suspectsArray = [
         image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
         color: "red"
     },
-    mrsPeacock = {
+    mrsPeacock: {
         firstName: "Eleanor",
         lastName: "Peacock",
         occupation: "Socialité",
@@ -45,7 +47,7 @@ var suspectsArray = [
         image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
         color: "blue"
     },
-    mrMustard = {
+    mrMustard: {
         firstName: "Jack",
         lastName: "Mustard",
         occupation: "Retired Football player",
@@ -54,18 +56,49 @@ var suspectsArray = [
         image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg",
         color: "yellow"
     }
-  ]
+}
 
 var weaponsArray = []
 var roomsArray = []
-// Suspects Collection
-const suspectsArray = [];
-
-// Rooms Collection
-const roomsArray = [];
 
 // Weapons Collection
-const weaponsArray = [];
+const weaponsArray = [
+    rope = {weight: 10},
+    knife = {weight: 8},
+    candlestick = {weight: 2},
+    dumbbell = {weight: 30},
+    poison = {weight: 2},
+    axe = {weight: 15},
+    bat = {weight: 13},
+    trophy = {weight: 25},
+    pistol = {weight: 20}
+]
+
+// Rooms Collection
+const roomsArray = [
+    "Dining Room",
+    "Conservatory",
+    "Kitchen",
+    "Study",
+    "Library",
+    "Billiard Room",
+    "Lounge",
+    "Ballroom",
+    "Hall",
+    "Spa",
+    "Living Room",
+    "Observatory",
+    "Theater",
+    "Guest House",
+    "Patio"
+]
+
+
+
+
+
+
+
 
 // ITERATION 2
 
