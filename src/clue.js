@@ -141,8 +141,6 @@ function pickMystery() {
         weapon: weapon.name,
         room: room.name,
     };
-
-    console.log('guess', guess);
     return guess;
 }
 const picked = pickMystery();
@@ -150,7 +148,7 @@ const picked = pickMystery();
 // ITERATION 3
 
 function revealMystery(arr) {
-    const revealed = `${arr.suspect.firstName} ${arr.suspect.lastName} killed Mr.Boddy using the ${arr.weapon.name} in the ${arr.room.name}`;
+    const revealed = `${arr.suspect.firstName} ${arr.suspect.lastName} killed Mr.Boddy using the ${arr.weapon} in the ${arr.room}`;
     console.log(revealed);
     return revealed;
 }
