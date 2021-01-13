@@ -93,13 +93,10 @@ const roomsArray = [
     "Patio"
 ]
 
-
-
-
-
-
-
-
 // ITERATION 2
+function selectRandom(arra) {
+    var randomCard = arra[Math.floor(arra.length * Math.random())]
+        return randomCard
+    }
 
 // ITERATION 3
