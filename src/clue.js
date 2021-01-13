@@ -129,9 +129,9 @@ function selectRandom(arr) {
 }
 
 function pickMystery() {
-    let suspect = selectRandom(suspectsArray);
-    let room = selectRandom(roomsArray);
-    let weapon = selectRandom(weaponsArray);
+    const suspect = selectRandom(suspectsArray);
+    const room = selectRandom(roomsArray);
+    const weapon = selectRandom(weaponsArray);
 
     const guess = {
         suspect: {
