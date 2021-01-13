@@ -128,37 +128,32 @@ const weaponsArray = [
 ];
 
 // ITERATION 2
-//
+//Random selector
 
 function selectRandom(cards){
-//define a variable what array actually to select
-//const random = Math.floor(Math.random() * cards.length);
 return cards[Math.floor(Math.random()*cards.length)];
-//console.log(random, cards[random]);
-}
-// Find a random element of the array - selectRandom should return the element of a single value array
-function pickMistery () {
-
-let murder = {},
-murder = { rooms : '${selectRandom(roomsArray})}, {murder: }
-
-let murder = [{supect: selectRandom(suspectsArray)},
-{weapon:''},
-{room:''}];
-
-console.log((weaponsArray)); 
-console.log(selectRandom(roomsArray));
-console.log(selectRandom(suspectsArray));
-
-
 }
 
-function name(a,b,c)
+selectRandom(weaponsArray); 
 
 
+function pickMystery(){
+    let mystery= {};
+    mystery.weapon = selectRandom(weaponsArray);
+    mystery.suspects = selectRandom(suspectsArray);
+    mystery.room = selectRandom(roomsArray);
 
-
-
+    return mystery; 
+}
 
 
 // ITERATION 3
+
+function revealMystery(envelope) {
+    console.log(envelope);
+    return (`${envelope.suspects.firstName} ${envelope.suspects.lastName} killed Mr. Body using the ${envelope.weapon.name} in the ${envelope.room.name}! `);
+}
+
+let mystery = pickMystery();
+
+revealMystery(mystery);
