@@ -150,7 +150,7 @@ const suspectsArray = [{
     // part 3
     
     const revealMystery = envelope => {
-     const envelopeContent= `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}.`
+     const envelopeContent= `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
     
      return envelopeContent;
     }
