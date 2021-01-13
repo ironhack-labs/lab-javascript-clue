@@ -164,6 +164,7 @@ function selectRandom(arr) {
     return card
 };
 
+// Picking the cards 
 function pickMystery() {
 
     return {
@@ -177,18 +178,11 @@ pickMystery()
 
 // ITERATION 3
 let suspect = selectRandom(suspectsArray)
-let room =  selectRandom(roomsArray)
+let room = selectRandom(roomsArray)
 let weapon = selectRandom(weaponsArray)
 
 function revealMystery(guess) {
     return `${guess.suspect.firstName} ${guess.suspect.lastName} killed Mr. Boddy using the ${guess.weapon.name} in the ${guess.room.name}!`
 }
 
-//revealMystery(pickMystery)
-
-const guess = {
-    suspect: { firstName: 'Victor', lastName: 'Plum' },
-    weapon: { name: 'poison' },
-    room: { name: 'Billiard Room' }
-  }
-
+revealMystery(pickMystery)
