@@ -62,7 +62,7 @@ const suspectsArray = [
     },
 ];
 
-// Rooms Collection
+// Weapon Collection
 const weaponsArray = [
     {
         name: 'rope',
@@ -102,7 +102,7 @@ const weaponsArray = [
     },
 ];
 
-// Weapons Collection
+// Rooms Collection
 const roomsArray = [
     { name: 'Dining Room' },
     { name: 'Conservatory' },
@@ -129,14 +129,18 @@ function selectRandom(arr) {
 }
 
 function pickMystery() {
-    const guess = {};
     let suspect = selectRandom(suspectsArray);
-    console.log('suspect', suspect);
-    guess.suspect = suspect;
     let room = selectRandom(roomsArray);
-    guess.room = room;
     let weapon = selectRandom(weaponsArray);
-    guess.weapon = weapon;
+
+    const guess = {
+        suspect: {
+            firstName: suspect.firstName,
+            lastName: suspect.lastName,
+        },
+        weapon: weapon.name,
+        room: room.name,
+    };
 
     console.log('guess', guess);
     return guess;
@@ -146,9 +150,8 @@ const picked = pickMystery();
 // ITERATION 3
 
 function revealMystery(arr) {
-    console.log(
-        `${arr.suspect.firstName} ${arr.suspect.lastName} killed Mr.Boddy using the ${arr.weapon.name} in the ${arr.room.name}`
-    );
-    return `${arr.suspect.firstName} ${arr.suspect.lastName} killed Mr.Boddy using the ${arr.weapon.name} in the ${arr.room.name}`;
+    const revealed = `${arr.suspect.firstName} ${arr.suspect.lastName} killed Mr.Boddy using the ${arr.weapon.name} in the ${arr.room.name}`;
+    console.log(revealed);
+    return revealed;
 }
 revealMystery(picked);
