@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "jasmine"
+		},
+		{
+			"path": "src"
+		},
+		{
+			"path": "tests"
+		}
+	]
+}
