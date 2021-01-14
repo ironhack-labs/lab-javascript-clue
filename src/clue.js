@@ -167,11 +167,16 @@ return newCard
 
 console.log(pickMystery())
 
-const revealMystery = () =>{
-const obj = pickMystery();
-const envelope = `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`;
-return envelope
-}
+
+const revealMystery = (obj) =>{
+    return `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`;
+  };
+
+//const revealMystery = () =>{
+//const obj = pickMystery();
+//const envelope = `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`;
+//return envelope
+//}
 
 revealMystery()
 
