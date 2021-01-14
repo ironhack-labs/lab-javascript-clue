@@ -85,5 +85,5 @@ describe('Reveal the mystery - revealMystery', () => {
         room: { name: 'Billiard Room' }
       })
     ).toEqual('Victor Plum killed Mr. Boddy using the poison in the Billiard Room!');
-  });
+  }); 
 });
