@@ -5,148 +5,154 @@
 // Suspects Collection
 const suspectsArray = [
     {
-        firstName: 'Jacob',
+        // mrGreen
+        firstName: 'Jacob' ,
         lastName: 'Green',
-        occupation: 'Entrepeneur',
-        age: '25',
-        description: 'tall guy',
-        image: 'cat',
-        color: 'blue' 
+        occupation: 'Entrepreneur',
+        age: 45 ,
+        description: 'He has a lot of connections',
+        image: 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
+        color: 'green'
+    },
+    { 
+        // drOrchid,
+        firstName: 'Doctor',
+        lastName: 'Orchid',
+        occupation: 'Scientist',
+        age: 26,
+        description: 'PhD in plant toxicology. Adopted daughter of Mr. Boddy',
+        image: 'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
+        color: 'white',
     },
     {
-        firstName: 'Maria',
-        lastName: 'da Silva',
-        occupation: 'Astronaut',
-        age: '34',
-        description: 'clever',
-        image: 'dog',
-        color: 'red' 
+        // profPlum,
+        firstName: 'Victor',
+        lastName: 'Plum',
+        occupation: 'Designer',
+        age: 22,
+        description: 'Billionaire video game designer',
+        image: 'https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg' ,
+        color: 'purple'
+    },
+    {  
+        // missScarlet,
+        firstName: 'Kasandra',
+        lastName: 'Scarlet',
+        occupation: 'Actor',
+        age: 31,
+        description: 'She is an A-list movie star with a dark past',
+        image: 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
+        color: 'red'
     },
     {
-        firstName: 'Jose',
-        lastName: 'Santos',
-        occupation: 'Pumbler',
-        age: '17',
-        description: 'short guy',
-        image: 'elephant',
-        color: 'pink' 
+        // mrsPeacock,
+        firstName: 'Eleanor',
+        lastName: 'Peacock',
+        occupation: 'Socialité',
+        age: 36,
+        description: 'She is from a wealthy family and uses her status and money to earn popularity',
+        image: 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
+        color: 'blue'
     },
     {
-        firstName: 'Delirio',
-        lastName: 'Black',
-        occupation: 'Hunter',
-        age: '14',
-        description: 'crazy dude',
-        image: 'dragon',
-        color: 'black' 
-    },
-    {
-        firstName: 'Relampago',
-        lastName: 'Marquinhos',
-        occupation: 'Uber driver',
-        age: '40',
-        description: 'lazy',
-        image: 'car',
-        color: 'red' 
-    },
-    {
-        firstName: 'Chiquinho',
-        lastName: 'Boa Praça',
-        occupation: 'Drug dealer',
-        age: '38',
-        description: 'calm and gentle',
-        image: 'seal',
-        color: 'verde' 
+        // mrMustard,
+        firstName: 'Jack',
+        lastName: 'Mustard',
+        occupation: 'Retired Football player',
+        age: 62,
+        description: 'He is a former football player who tries to get by on his former glory',
+        image: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg',
+        color: 'yellow'
     }
-        
-];
+
+]
 
 // Rooms Collection
 const roomsArray = [
     {
-        name: 'sala-de-estar',
+        name: 'Dining Room'
     },
     {
-        name: 'quarto',
+        name: 'Conservatory'   
     },
     {
-        name: 'cozinha',
+        name: 'Kitchen'
     },
     {
-        name: 'suite14',
+        name: 'Study'
     },
     {
-        name: 'banheiro',
+        name: 'Library'
     },
     {
-        name: 'lavabo',
+        name: 'Billiard Room'
     },
     {
-        name: 'edicula',
+        name: 'Lounge'
     },
     {
-        name: 'jardim',
+        name: 'Ballroom'
     },
     {
-        name: 'sacada',
+        name: 'Hall'
     },
     {
-        name: 'escritorio',
+        name: 'Spa'
     },
     {
-        name: 'sala-de-jantar',
+        name: 'Living Room'
     },
     {
-        name: 'academia',
+        name: 'Observatory'
     },
     {
-        name: 'salao-de-festas',
+        name: 'Theater'
     },
     {
-        name: 'salao-de-jogos',
+        name: 'Guest House'
     },
     {
-        name: 'sauna',
+        name: 'Patio'
     },
 ];
 
 // Weapons Collection
 const weaponsArray = [
     {
-        name: 'AK-47',
-        weight: '47kg'
+        name: 'rope', 
+        weight: 10
     },
     {
-        name: 'faca',
-        weight: '100kg'
+        name: 'candlestick', 
+        weight: 2
     },
     {
-        name: 'machado',
-        weight: '3g'
+        name: 'dumbbell',
+        weight: 30
     },
     {
-        name: 'punhal',
-        weight: '10kg'
+        name: 'poison',
+        weight: 2
     },
     {
-        name: 'espada',
-        weight: '150kg'
+        name: 'axe',
+        weight: 15
     },
     {
-        name: 'glock',
-        weight: '200kg'
+        name: 'bat', 
+        weight: 13
     },
     {
-        name: 'desert-eagle',
-        weight: '1kg'
+        name: 'trophy',
+        weight: 25
     },
     {
-        name: 'assault-rifle',
-        weight: '2kg'
-    },
+        name: 'pistol', 
+        weight: 20
+    }, 
     {
-        name: 'soco-ingles',
-        weight: '1000kg'
+        name: 'knife', 
+        weight: 8
     }
 ];
 
@@ -154,38 +160,28 @@ const weaponsArray = [
 // ITERATION 2
 
 
-function selectRandom(firstArray, secondArray, thirdArray){
-    let firstRandomNumber = 0;
-    let secondRandomNumber = 0;
-    let thirdRandomNumber = 0;
-    let list = '';
-
-    // for(let i = 0; i<firstArray.length; i++){
-        firstRandomNumber = Math.random() * firstArray.length;
-        firstRandomNumber = Math.round(firstRandomNumber);
-        list += `${firstRandomNumber} `;
-    // }
-    // for(let i = 0; i<secondArray.length; i++){
-        secondRandomNumber = Math.random() * secondArray.length;
-        secondRandomNumber = Math.round(secondRandomNumber);
-        list += `${secondRandomNumber} `;
-    // }
-    // for(let i = 0; i<thirdArray.length; i++){
-        thirdRandomNumber = Math.random() * thirdArray.length;
-        thirdRandomNumber = Math.round(thirdRandomNumber);
-        list += `${thirdRandomNumber} `;
-    // }
-
-
-    return list;
+function selectRandom(array){
+    let randomNumber = Math.round(Math.random() * array.length);    
+    return array[randomNumber];
 }
 
 
 function pickMystery(){
-    const objeto
-    return objeto
+    return{
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray)
+    }
 }
 
-console.log(`The selected numbers for your game are ${selectRandom(suspectsArray, roomsArray, weaponsArray)}`);
+
+
+function revealMystery(envelope){
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
+}
+
+// console.log(selectRandom(suspectsArray));
+console.log(pickMystery())
+console.log(revealMystery(pickMystery()))
 // ITERATION 3
 
