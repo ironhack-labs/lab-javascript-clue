@@ -129,19 +129,21 @@ const weaponsArray = [
 function selectRandom(arr) {
     if (arr.length === 0) {
         return undefined;
-    } else if (arr.length === 1) {
-        return arr[0];
-    } else {
+    }
         let randomElement = Math.floor(Math.random() * arr.length);
         return arr[randomElement];
-    }
+    
 }
 
 function pickMystery() {
-    const suspect = selectRandom(suspectsArray);
-    const weapon = selectRandom(weaponsArray);
-    const room = selectRandom(roomsArray);
-    const envelope = {suspect, weapon, room};
+    const envelope = 
+    {
+     suspect :selectRandom(suspectsArray),
+     weapon : selectRandom(weaponsArray),
+     room : selectRandom(roomsArray)
+    }
+
+    
     return envelope;
 }
 
