@@ -54,11 +54,11 @@ To complete this iteration, you should have an array that looks something like t
 ```javascript
 const suspectsArray = [
   {
-    firstName: 'Jacob',
-    lastName: 'Green',
-    occupation: 'Entrepreneur'
+    firstName: "Jacob",
+    lastName: "Green",
+    occupation: "Entrepreneur",
     // ...
-  }
+  },
   // ...
 ];
 ```
