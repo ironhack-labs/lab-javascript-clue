@@ -100,16 +100,17 @@ const selectRandom = (array) => {
     return (randomObject);
 };
 
-const pickMystery = [];
+const pickMystery = () => {
+    let mystery=[];
 
-pickMystery.push(selectRandom(suspectsArray), selectRandom(weaponsArray), selectRandom(roomsArray));
+mystery.push(selectRandom(suspectsArray), selectRandom(weaponsArray), selectRandom(roomsArray));
 
-console.log(pickMystery);
-
-
+return(mystery);
+};
+console.log(pickMystery());
 // ITERATION 3
 
 let revealMystery = (object) => {
     console.log(`${object[0].firstName} ${object[0].lastName} killed Mr. Boddy using the ${object[1].name} in the ${object[2].name}`)
 }
-revealMystery(pickMystery);
+revealMystery(pickMystery());
