@@ -81,7 +81,7 @@ const weaponsArray = [
     {name: 'Dining Room'},
     {name: 'Conservatory'},
     {name: 'Kitchen'},
-    {name: 'Study',
+    {name: 'Study'},
     {name: 'Library'},
     {name: 'Billiard Room'},
     {name: 'Lounge'},
@@ -112,3 +112,11 @@ function pickMystery() {
 pickMystery()
 
 // ITERATION 3
+
+/* function revealMystery({suspect, weapon, room}) {
+    return `${suspect.firstName} ${suspect.lastName}  killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`
+} */
+
+function revealMystery({suspect, weapon, room}){
+    return `${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`
+}
