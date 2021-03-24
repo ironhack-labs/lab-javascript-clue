@@ -3,13 +3,13 @@
 const suspectsArray = [
     {
         alias: "mrGreen",
-        firstName: Jacob,
-        lastName: Green,
-        occupation: Entrepreneur,
+        firstName: "Jacob",
+        lastName: "Green",
+        occupation: "Entrepreneur",
         age: 45,
         description: "He has a lot of connections",
         image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
-        color: green
+        color: "green"
     },
     {
         alias: "drOrchid",
@@ -63,8 +63,8 @@ const suspectsArray = [
     }
 ];
 
-// Rooms Collection
-const roomsArray = [
+// Weapons Collection
+const weaponsArray = [
     {
         name: "rope",
         weight: 10
@@ -103,8 +103,8 @@ const roomsArray = [
     }
 ];
 
-// Weapons Collection
-const weaponsArray = [
+// Rooms Collection
+const roomsArray = [
     {
         name: "Dining Room"
     },
@@ -161,11 +161,16 @@ function selectRandom(arrayToSelect) {
 
 function pickMystery() {
     mystery = {
-        suspect: selectRandom(suspectsArray),
-        weapon: selectRandom(weaponsArray),
-        room: selectRandom(roomsArray)
-    }
+        suspect: selectRandom(suspectsArray), 
+        weapon: selectRandom(weaponsArray), 
+        room: selectRandom(roomsArray)}
+
     return mystery
 }
 
 // ITERATION 3
+function revealMystery(envelope) {
+    /* return "<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!" */
+
+    return (`${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`)
+    }
