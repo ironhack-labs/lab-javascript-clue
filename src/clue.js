@@ -95,3 +95,24 @@ const weaponsArray = [
   { name: "pistol", weigth: 20 },
 ];
 
+// ITERATION 2
+let selectRandom = (arr) => {
+    if (arr.length > 1) {
+    let randNum = Math.floor(Math.random() * arr.length);
+    return arr[randNum];  
+    } else  if (arr.length === 1) {
+      return arr[0];
+    } else {
+      return undefined;
+    };    
+};
+
+let pickMystery = () => {
+    let mystery = {}
+    mystery.weapon = selectRandom(weaponsArray);
+    mystery.suspect = selectRandom(suspectsArray);
+    mystery.room = selectRandom(roomsArray);
+
+    return mystery;
+}
+
