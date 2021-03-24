@@ -93,3 +93,20 @@ const weaponsArray = [
     {name: 'trophy', weight: 25},
     {name: 'pistol', weight: 20},
 ];
+
+// ITERATION 2
+
+function selectRandom(arr) {
+    let random = Math.floor(Math.random() * arr.length);
+    return arr[random];
+}
+
+function pickMystery() {
+    let suspect = selectRandom(suspectsArray);
+    let room = selectRandom(roomsArray);
+    let weapon = selectRandom(weaponsArray);
+    let mystery = [suspect, room, weapon];
+    return mystery;
+}
+
+console.log(pickMystery());
