@@ -115,4 +115,9 @@ let pickMystery = () => {
 
     return mystery;
 }
-
+// ITERATION 3
+revealMystery = (mystery) => {
+    return `${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`
+  }
+  
+  let mysteryPicked = pickMystery().toString();
