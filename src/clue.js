@@ -1,7 +1,8 @@
 // ITERATION 1
 // Suspects Collection
 let mrGreen = {
-    name: "Jacob Green",
+    firstName: "Jacob",
+    lastName: "Green",
     occupation: "Entrepreneur",
     age: 45,
     description: "He has a lot of connections",
@@ -9,7 +10,8 @@ let mrGreen = {
     color: "green ",
 };
 let drOrchid = {
-    name: "Doctor Orchid",
+    firstName: "Doctor",
+    lastName: "Orchid",
     occupation: "Scientist",
     age: 26,
     description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
@@ -17,7 +19,8 @@ let drOrchid = {
     color: "white",
 };
 let profPlum = {
-    name: "Victor Plum",
+    firstName: "Victor",
+    lastName: "Plum",
     occupation: "Designer",
     age: 22,
     description: "Billionaire video game designer",
@@ -25,7 +28,8 @@ let profPlum = {
     color: "purple",
 };
 let missScarlet = {
-    name: "Kasandra Scarlet",
+    firstName: "Kasandra",
+    lastName: "Scarlet",
     occupation: "Actor",
     age: 31,
     description: "She is an A-list movie star with a dark past",
@@ -33,7 +37,8 @@ let missScarlet = {
     color: "red",
 };
 let mrsPeacock = {
-    name: "Eleanor Peacock",
+    firstName: "Eleanor",
+    lastName: "Peacock",
     occupation: "Socialité",
     age: 36,
     description: "She is from a wealthy family and uses her status and money to earn popularity",
@@ -41,7 +46,8 @@ let mrsPeacock = {
     color: "blue",
 };
 let mrMustard = {
-    name: "Jack Mustard",
+    firstName: "Jack",
+    lastName: "Mustard",
     occupation: "Retired Football player",
     age: 62,
     description: "He is a former football player who tries to get by on his former glory",
@@ -119,7 +125,9 @@ const roomsArray = [
     guestHouse,
     patio,
 ];
+
 // Weapons Collection
+
 const rope = {
     name: "rope",
     weigth: 10,
@@ -167,20 +175,34 @@ const weaponsArray = [
     trophy,
     pistol,
 ];
+
 //ITERATION 2
+
 function selectRandom(arr) {
-    let random = arr[Math.floor(Math.random(arr))];
+    let random = arr[Math.floor(Math.random() * arr.length)];
     return random;
 }
-let mysteryCard = {};
 
 function pickMystery() {
+    let mysteryCard = {};
+
     let suspect = selectRandom(suspectsArray);
     let room = selectRandom(roomsArray);
     let weapon = selectRandom(weaponsArray);
-    mysteryCard.push(suspect, room, weapon);
+
+    mysteryCard.suspect = suspect;
+    mysteryCard.room = room;
+    mysteryCard.weapon = weapon;
+
     return mysteryCard;
 }
-pickMystery(mysteryCard);
+
+pickMystery();
 
 // ITERATION 3
+
+function revealMystery(envelope) {
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
+}
+
+revealMystery(mysteryCard);
