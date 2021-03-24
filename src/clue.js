@@ -1,5 +1,4 @@
 // ITERATION 1
-
 // Suspects Collection
 const suspectsArray = [
 	{
@@ -12,14 +11,12 @@ const suspectsArray = [
 		color: "green",
 	},
 ];
-
 // Rooms Collection
 const roomsArray = [
 	{
 		name: "Dinning Room",
 	},
 ];
-
 // Weapons Collection
 const weaponsArray = [
 	{
@@ -30,28 +27,20 @@ const weaponsArray = [
 
 // ITERATION 2
 let selectRandom = (array) => {
-	let randomOutput = {};
-	return randomOutput;
+	let index = Math.floor(Math.random() * Math.floor(array.length));
+	return array[index];
 };
 
-//done
 let pickMystery = () => {
-	let suspectSelected = selectRandom(suspectsArray);
-	let roomSelected = selectRandom(roomsArray);
-	let weaponSelected = selectRandom(weaponsArray);
-
 	return {
-		suspect: suspectSelected,
-		room: roomSelected,
-		weapon: weaponSelected,
+		suspect: selectRandom(suspectsArray),
+		room: selectRandom(roomsArray),
+		weapon: selectRandom(weaponsArray),
 	};
 };
 
-// ITERATION 3 - done
+// ITERATION 3
 let revealMystery = (murder) => {
-	let output = `${murder.suspect.firstName} ${murder.suspect.lastName} killed Mr. Boddy using the
-    ${murder.weapon.name} in the ${murder.room.name}!`;
-	return output;
+	return `${murder.suspect.firstName} ${murder.suspect.lastName} killed Mr. Boddy using the
+    ${murder.weapon.name} in the ${murder.room.name}!`;;
 };
-
-//revealMystery(pickMystery());
