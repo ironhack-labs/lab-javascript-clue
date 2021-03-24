@@ -103,10 +103,12 @@ function selectRandom(arr) {
 }
 
 function pickMystery() {
-    let suspectPerson = selectRandom(suspectsArray)
-    let weaponUsed = selectRandom(weaponsArray)
-    let roomCrime = selectRandom(roomsArray)
+    let suspect = selectRandom(suspectsArray)
+    let weapon = selectRandom(weaponsArray)
+    let room = selectRandom(roomsArray)
+    
     return {suspect, weapon, room}
 }
+pickMystery()
 
 // ITERATION 3
