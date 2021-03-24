@@ -50,7 +50,7 @@ const suspectsArray = [
     description: 'He is a former football player who tries to get by on his former glory',
     image: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg',
     color: 'yellow'
-  };
+  }];
 
 // Rooms Collection
 const roomsArray = [
@@ -85,30 +85,14 @@ const weaponsArray = [
 ];
 
 // ITERATION 2
-function selectRandom(suspectsArray)
-{
-  
-return suspectsArray[Math.floor(Math.random()*suspectsArray.length)];
-     
-}
-//console.log(selectRandom(suspectsArray));
-//////
 
-function selectRandom(roomsArray)
-{
+//selectRandom
+function selectRandom(incomingArray) {
+
+  return incomingArray[Math.floor(Math.random() * incomingArray.length)]
   
-return roomsArray[Math.floor(Math.random()*roomsArray.length)];
-     
-}
-//console.log(selectRandom(roomsArray));
-/////////
-function selectRandom(weaponsArray)
-{
-  
-return weaponsArray[Math.floor(Math.random()*weaponsArray.length)];
-     
-}
-//console.log(selectRandom(weaponsArray));
+ }
+
 
 
 
@@ -116,18 +100,17 @@ return weaponsArray[Math.floor(Math.random()*weaponsArray.length)];
 //Create the mystery
 function pickMystery() {
   
-  let room = roomsArray[Math.floor(Math.random()* roomsArray.length)]
+  let room = selectRandom(roomsArray);
   
-  let weapon = weaponsArray[Math.floor(Math.random() * weaponsArray.length)]
+  let weapon = selectRandom(weaponsArray);
   
-  let suspect = suspectsArray[Math.floor(Math.random() * suspectsArray.length)]
+  let suspect = selectRandom(suspectsArray)
   
   return {
   suspect, weapon, room
   } 
 }
 
-//console.log(pickMystery());
 
 
 // ITERATION 3
