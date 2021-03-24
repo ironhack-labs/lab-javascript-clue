@@ -1,5 +1,4 @@
 // ITERATION 1
-
 // Suspects Collection
 const suspectsArray = [
     {
@@ -30,7 +29,6 @@ const suspectsArray = [
         color: 'purple',
     },
     {
-
         firstName: 'Kasandra',
         lastName: 'Scarlet',
         occupation: 'Actor',
@@ -40,7 +38,6 @@ const suspectsArray = [
         color: 'red',
     },
     {
-
         firstName: 'Eleanor',
         lastName: 'Peacock',
         occupation: 'Socialité',
@@ -50,7 +47,6 @@ const suspectsArray = [
         color: 'blue',
     },
     {
-
         firstName: 'Jack',
         lastName: 'Mustard',
         occupation: 'Retired Football player',
@@ -59,9 +55,7 @@ const suspectsArray = [
         image: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg',
         color: 'yellow',
     },
-
 ];
-
 // Rooms Collection
 const roomsArray = [
     {name: 'Dining Room'},
@@ -80,7 +74,6 @@ const roomsArray = [
     {name: 'Guest House'},
     {name: 'Patio'},
 ];
-
 // Weapons Collection
 const weaponsArray = [
     {name: 'rope', weight: 10},
@@ -93,20 +86,20 @@ const weaponsArray = [
     {name: 'trophy', weight: 25},
     {name: 'pistol', weight: 20},
 ];
-
 // ITERATION 2
-
-function selectRandom(arr) {
-    let random = Math.floor(Math.random() * arr.length);
+function selectRandom (arr){
+    let random = Math.floor(Math.random()*arr.length);
     return arr[random];
 }
-
-function pickMystery() {
-    let suspect = selectRandom(suspectsArray);
-    let room = selectRandom(roomsArray);
-    let weapon = selectRandom(weaponsArray);
-    let mystery = [suspect, room, weapon];
+function pickMystery (){
+    let mystery = {};
+    mystery.suspect = selectRandom(suspectsArray);
+    mystery.room = selectRandom(roomsArray);
+    mystery.weapon = selectRandom(weaponsArray);
     return mystery;
 }
-
-console.log(pickMystery());
+// ITERATION 3
+function revealMystery (envelope) {
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
+}
+console.log(revealMystery(pickMystery()));
