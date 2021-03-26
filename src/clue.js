@@ -1,7 +1,7 @@
 // ITERATION 1
 
 // Suspects Collection
-const suspectsArray = [];
+const suspectsArray = [ ];
 
 // Rooms Collection
 const roomsArray = [];
