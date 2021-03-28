@@ -19,7 +19,7 @@ const profPlum = new Suspect ('Victor', 'Plum','Designer', 22, 'Billionaire vide
 const missScarlet = new Suspect ('Kasandra', 'Scarlet','Actor', 31, 'She is an A-list movie star with a dark past', 'https://www.radiotimes.com/uploads/images/Original/111967.jpg', 'red');
 const mrsPeacock = new Suspect ('Eleanor', 'Peacock','Socialité', 36, 'She is from a wealthy family and uses her status and money to earn popularity', 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg', 'blue');
 const mrMustard = new Suspect ('Jack', 'Mustard','Retired Football player', 62, 'He is a former football player who tries to get by on his former glory', 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg', 'yellow');
-//const mrGreen = new Suspect ('', '','', '', '', '', '');
+
 
 const suspectsArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 
@@ -95,11 +95,16 @@ const pickMystery = () =>{
   
 // ITERATION 3
 
-const revealMystery = envelope =>{
+function revealMystery(obj){
+    let suspectPerson = pickMystery(obj.suspect);
+    return (`${suspectPerson.suspect.firstName} ${suspectPerson.suspect.lastName} killed Mr. Boddy using the  ${suspectPerson.suspect.weapon} in the ${suspectPerson.suspect.room}!`)
+  } 
+
+/* const revealMystery = envelope =>{
     const envelope = pickMystery()
     return envelope
 
-}
+} */
 /* const revealMystery = envelope =>{
     const envelope = pickMystery()
     return `${envelope.subject.firstName} ${envelope.subject.lasstName} killed Mr. Boddy using the ${envelope.weapon} ${envelope.room.name}!` 
