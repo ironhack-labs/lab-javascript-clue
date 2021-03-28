@@ -59,7 +59,6 @@ image: https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/
 color: yellow<br>
 
 ### Weapons
-
 name: rope --- weight: 10<br>
 name: knife --- weight: 8<br>
 name: candlestick --- weight: 2<br>
@@ -69,6 +68,7 @@ name: axe --- weight: 15<br>
 name: bat --- weight: 13<br>
 name: trophy --- weight: 25<br>
 name: pistol --- weight: 20<br>
+
 
 ### Rooms
 
