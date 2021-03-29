@@ -44,7 +44,7 @@ const trophy = new Room ('trophy',25)
 const pistol = new Room ('pistol',20)
 
 
-const roomsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
+const weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
 
 // Weapons Collection
 class Weapon{
@@ -69,7 +69,7 @@ const theater = new Weapon ('Theater');
 const guestHouse = new Weapon ('Guest House');
 const patio = new Weapon ('Patio');
 
-const weaponsArray = [diningroom, conservatory, kitchen, study, library, billiardRoom, lounge, ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio];
+const roomsArray = [diningroom, conservatory, kitchen, study, library, billiardRoom, lounge, ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio];
 
 // ITERATION 2
 
@@ -86,30 +86,22 @@ const pickMystery = () =>{
         this.room = room;
       }
     }
+    //const mystery = new Mystery(selectRandom(suspectsArray)...etc)
     let suspect = selectRandom(suspectsArray);
     let weapon = selectRandom(weaponsArray);
     let room = selectRandom(roomsArray);
     const myMystery = new Mystery (suspect,weapon,room);
     return myMystery
-}
+} 
   
+
 // ITERATION 3
 
 function revealMystery(obj){
-    let suspectPerson = pickMystery(obj.suspect);
-    return (`${suspectPerson.suspect.firstName} ${suspectPerson.suspect.lastName} killed Mr. Boddy using the  ${suspectPerson.suspect.weapon} in the ${suspectPerson.suspect.room}!`)
+    let suspect = obj.suspect;
+    let weapon = obj.weapon;
+    let room = obj.room;
+    
+    return (`${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`)
   } 
 
-/* const revealMystery = envelope =>{
-    const envelope = pickMystery()
-    return envelope
-
-} */
-/* const revealMystery = envelope =>{
-    const envelope = pickMystery()
-    return `${envelope.subject.firstName} ${envelope.subject.lasstName} killed Mr. Boddy using the ${envelope.weapon} ${envelope.room.name}!` 
-}
- */
-/* Declare a function named revealMystery that receives an envelope object (such as the one returned by pickMystery) as the single argument, and returns a reveal message in the following format:
-
-<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>! */
