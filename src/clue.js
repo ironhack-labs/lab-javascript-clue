@@ -142,15 +142,27 @@ const weapons =
 ];
 
 // ITERATION 2
+function findLongestWord(words) {
+    let longestWord = ''
+    if (!words.length) {
+      return null
+    }
+    for (let i=0; i < words.length; i++) {
+      if (words[i].length > longestWord.length) {
+        longestWord = words[i]
+      }
+    }
+    return longestWord
+ }
 
  function selectRandom([suspects, rooms, weapons]) {
    let mystery = []
        if (!mystery.length) {
       return undefined
     }
-    for (let i=0; i < words.length; i++) {
+  
       if (mystery.length === 1) {
-        
+      return 
       }
     }
     return mystery
