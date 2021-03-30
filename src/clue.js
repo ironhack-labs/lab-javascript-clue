@@ -1,7 +1,7 @@
 // ITERATION 1
 
 // Suspects Collection
-const suspectsArray = 
+const suspects = 
 [
   {
   suspect: 'mrGreen',
@@ -73,7 +73,7 @@ const suspectsArray =
 
 
 // Rooms Collection
-const roomsArray = 
+const rooms = 
   [
   'Dining Room',
   'Conservatory',
@@ -93,7 +93,7 @@ const roomsArray =
   ];
 
 // Weapons Collection
-const weaponsArray = 
+const weapons = 
 [
   {
    name: 'rope',
@@ -143,4 +143,17 @@ const weaponsArray =
 
 // ITERATION 2
 
+ function selectRandom([suspects, rooms, weapons]) {
+   let mystery = []
+       if (!mystery.length) {
+      return undefined
+    }
+    for (let i=0; i < words.length; i++) {
+      if (mystery.length === 1) {
+        
+      }
+    }
+    return mystery
+
+ }
 // ITERATION 3
