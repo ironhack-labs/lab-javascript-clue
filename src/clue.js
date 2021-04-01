@@ -123,3 +123,4 @@ function selectRandom (array) {
         `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}`
       )
     }
+    //
