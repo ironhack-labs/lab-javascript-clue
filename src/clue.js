@@ -70,8 +70,8 @@ const weaponsArray [
     {name: `pistol`, weight: 20},
 ]
 
-const rooms = []
-const rooms [
+const roomsArray = []
+const roomsArray [
     {name: `Dining Room`},
     {name: `Conservatory`},
     {name: `Kitchen`},
@@ -109,8 +109,17 @@ function selectRandom (array) {
 
   //#### Create the mystery
 
-  function pickMystery(){
-    return({suspect:selectRandom(suspectsArray),
-     weapon:selectRandom(weaponsArray),
-     room:selectRandom(roomsArray),})
-}
+  function pickMystery() {
+     return ({
+        suspect: selectRandom (suspectsArray),
+        weapon: selectRandom (weaponsArray),
+        room: selectRandom (roomsArray),
+     })
+  }
+    //Iteration 3
+
+    function revealMystery(object) {
+      return (
+        `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}`
+      )
+    }
