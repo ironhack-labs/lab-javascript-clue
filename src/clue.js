@@ -157,4 +157,8 @@ function pickMystery(){
 
 // ITERATION 3
 
-
+function revealMystery(object){  
+    object = pickMystery()    
+    console.log(`${object.suspects} killed Mr Boddy using the ${object.weapon} in the ${object.room}` )
+    }
+    
