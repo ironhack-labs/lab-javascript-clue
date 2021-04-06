@@ -179,15 +179,18 @@ function pickMystery (){
     }
     return mystery
 }
+pickMystery()
 
 // ITERATION 3
 
-function revealMystery(envelope){
-    let envelope = {
+let envelope = {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray)
+}
 
-    }
-    return ´${mystery.suspect[].firstName} ${mystery.suspect} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room}!´
+function revealMystery(envelope){
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
 } 
 
-/// declarar objeto "envelope" con estructura como mystery y que return la frase anterior.
-// ¿cómo acceder a una string random desde un objeto?
+revealMystery()
