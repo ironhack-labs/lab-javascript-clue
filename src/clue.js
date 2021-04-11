@@ -126,22 +126,19 @@ selectRandom = (pickRandom) => {
 pickMystery = () => {
   let foundOutMystery = {};
 
-  let toGetFullName = selectRandom(suspectsArray);
-  //random first and last names asigned to variable foundMystery
-  foundOutMystery.suspect = `${toGetFullName.firstName} ${toGetFullName.lastName}`
+  foundOutMystery.suspect = selectRandom(suspectsArray);
   // random weapon asigned to variable foundMystery
-  foundOutMystery.weapon = `${selectRandom(weaponsArray).name}`
+  foundOutMystery.weapon = selectRandom(weaponsArray);
   //random room asigned to variable foundMystery
-  foundOutMystery.room = `${selectRandom(roomsArray).name}`
+  foundOutMystery.room = selectRandom(roomsArray);
 
   return foundOutMystery;
 }
 
 // ITERATION 3
 revealMystery = (envelope) => {
-  return `${envelope.suspect} killed Mr. Boddy using the ${envelope.weapon} in the ${envelope.room}`;
+  return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
 }
-
 
 console.log(revealMystery(pickMystery()));
 // **\<FIRST NAME\> \<LAST NAME\> killed Mr. Boddy using the \<WEAPON\> in the \<ROOM\>!**
