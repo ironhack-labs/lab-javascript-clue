@@ -2,17 +2,49 @@
 
 // Suspects Collection
 const suspectsArray = [
+
     {
+        firstName: 'Jacob',
+        lastName: 'Green',
+        occupation: 'Entrepreneur',
+        age: 45,
+        description: "He has a lot of connections",
+        image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+        color: "green"
+
+    },
+    {
+        firstName: 'Doctor',
+        lastName: 'Orchid',
+        occupation: 'Scientist',
+        age: 26,
+        description: "PhD in plant toxicology.Adopted daughter of Mr.Boddy",
+        image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
+        color: "white"
+
+    },
+    {
+        firstName: 'Victor ',
+        lastName: 'Plum',
+        occupation: 'Designer',
+        age: 22,
+        description: "Billionaire video game designer",
+        image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
+        color: "purple"
+
+    },
+    {
+
         firstname: "Kasandra",
         lastName: "Scarlet",
         occupation: "Actor",
         age: 31,
         description: "She is an A-list movie star with a dark past",
-        image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg" ,
+        image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
         color: "red"
     },
     {
-        firstName:"Eleanor",
+        firstName: "Eleanor",
         lastName: "Peacock",
         occupation: "Socialité",
         age: 36,
@@ -32,44 +64,93 @@ const suspectsArray = [
 ];
 
 // Rooms Collection
-const roomsArray = [];
+const roomsArray = [
+
+    {
+        name: "Dining Room",
+    },
+    {
+        name: "Conservatory",
+    },
+    {
+        name: "Kitchen",
+    },
+    {
+        name: "Study",
+    },
+    {
+        name: "Library",
+    },
+    {
+        name: "Billiard Room",
+    },
+    {
+        name: "Lounge",
+    },
+    {
+        name: "Ballroom",
+    },
+    {
+        name: "Hall",
+    },
+    {
+        name: "Spa",
+    },
+    {
+        name: "Living Room",
+    },
+    {
+        name: "Observatory",
+    },
+    {
+        name: "Theater",
+    },
+    {
+        name: "Guest House",
+    },
+    {
+        name: "Patio",
+    }
+
+
+];
 
 // Weapons Collection
 const weaponsArray = [
     {
-       name: Response,
-       weight: 10
+        name: "Response",
+        weight: 10
     },
     {
-        name: knife,
+        name: "knife",
         weight: 8
     },
     {
-        name: candlestick,
-        weight: 2  
-    },
-    {
-        name: dumbbell,
-        weight: 30
-    },
-    {
-        name: poison,
+        name: "candlestick",
         weight: 2
     },
     {
-        name: axe,
+        name: "dumbbell",
+        weight: 30
+    },
+    {
+        name: "poison",
+        weight: 2
+    },
+    {
+        name: "axe",
         weight: 15
     },
     {
-        name: bat,
+        name: "bat",
         weight: 13
     },
     {
-        name: trophy,
-        weight: 25  
+        name: "trophy",
+        weight: 25
     },
     {
-        name: pistol,
+        name: "pistol",
         weight: 20
     }
 
@@ -78,12 +159,23 @@ const weaponsArray = [
 
 // ITERATION 2
 /*var randomItem = myArray[Math.floor(Math.random()*myArray.length)].semillas;*/
-function selectRandom(array){
-    console.log(array[Math.floor(Math.random()*array.length)])
+function selectRandom(array) {
+    return array[Math.floor(Math.random() * array.length)];
 }
-selectRandom(suspectsArray);
-selecRandom(weaponArray);
-selectRandom(roomsArray)
 
 
+function pickMystery() {
+    const random = {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray)
+    }
+    return random;
+}
+let mensaje = pickMystery();
 // ITERATION 3
+function revealMystery(object) {
+    let message = `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`;
+    return message;
+}
+revealMystery(mensaje);
