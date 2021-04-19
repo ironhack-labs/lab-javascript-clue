@@ -100,4 +100,9 @@ const weaponsArray = [
 
 // ITERATION 2
 
+function selectRandom ()
+
+function pickMystery ();
+ return 
+
 // ITERATION 3
