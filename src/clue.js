@@ -158,4 +158,3 @@ function revealMystery()
   return `${people.firstName}, ${people.lastName} killed Mr. Boddy using the ${weapon.name} in the ${space.name}!`
 };
 
-console.log(revealMystery())
