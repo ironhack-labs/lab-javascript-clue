@@ -1,7 +1,6 @@
 // ITERATION 1
 
 // Suspects Collection
-// Suspects Collection
 const suspectsArray = [
     {
 nickName: "mrGreen",
@@ -100,9 +99,21 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom ()
+// Random selector
 
-function pickMystery ();
- return 
+function selectRandom(array) {
+    let element = array[Math.floor(Math.random() * array.length)];
+    return element;
+  }
+
+// Create the mystery
+
+function pickMystery(){
+    let object = {
+        suspect: selectRandom(suspectsArray),
+        weapon : selectRandom(weaponsArray),
+        room : selectRandom(roomsArray)
+     };
+
 
 // ITERATION 3
