@@ -1,8 +1,7 @@
+// LAB 03 - JavaScrip Clue --- 25.05.2021/26.05.2021 ---- Pedro e Renan
 // ITERATION 1
 
 // Suspects Collection
-
-
 const suspectsArray = [
 
     mrGreen = {
@@ -66,8 +65,6 @@ const suspectsArray = [
     }
 ];
 
-
-
 // Rooms Collection
 const roomsArray = [
 
@@ -118,7 +115,6 @@ const roomsArray = [
     },
 ];
 
-
 // Weapons Collection
 const weaponsArray = [
 
@@ -168,17 +164,41 @@ const weaponsArray = [
     }
 ];
 
+
 // ITERATION 2
-
-function selectRandom (array) {
-
-    // return random element from the array parameter
+function selectRandom(array) {
+    if (array.length === 0) {
+        return null;
+    }
+    let randomElement = array[(Math.floor(Math.random() * array.length))];
+    return randomElement;
 }
-//--Math.random()
-//--Math.floor()
-//--Math.floor(Math.random() * 10);     // returns a random integer from 0 to 9
+//TESTING HERE//console.log(selectRandom(weaponsArray))
+
+function pickMystery() {
+    subjectMystery = {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray),
+    }
+    if (subjectMystery.suspect === null) {
+        subjectMystery.suspect = `Oops, we need a subject!`
+    } else if (subjectMystery.weapon === null) {
+        subjectMystery.weapon = `Oops, we need a weapon!`
+    } else if (subjectMystery.room === null) {
+        subjectMystery.weapon = `Oops, we need some rooms!`
+    }
+    return subjectMystery
+}
+//TESTING HERE//
+//console.log(pickMystery())
+//console.log(pickMystery().suspect.firstName)
 
 // ITERATION 3
 
-
-console.log(roomsArray)
+function revealMystery (anyObject) {
+   let message = `${anyObject().suspect.firstName} ${anyObject().suspect.lastName} killed Mr.Boddy using the ${anyObject().weapon.name} in the ${anyObject().room.name}! OMG ! RUN FOR YOUR LIFE!` 
+   return message
+}
+//TESTING HERE//
+console.log(revealMystery(pickMystery))    
