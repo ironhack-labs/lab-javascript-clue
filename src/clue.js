@@ -134,10 +134,11 @@ function pickMystery() {
     suspect: selectRandom(suspectsArray),
     weapon: selectRandom(weaponsArray),
     room: selectRandom(roomsArray),
-  };
+  }; 
   return result;
 }
 const myMystery = pickMystery();
+
 
 // ITERATION 3
 
@@ -146,5 +147,6 @@ function revealMystery(revel) {
 
   return message;
 }
+
 
 console.log(revealMystery(myMystery));
