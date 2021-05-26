@@ -5,13 +5,13 @@ Use this data to model your game cards into objects.
 ### Suspects
 
 mrGreen <br>
-firstName: Jacob <br>
-lastName: Green<br>
-occupation: Entrepreneur<br>
-age: 45 <br>
+firstName: Jacob, <br>
+lastName: Green,<br>
+occupation: Entrepreneur,<br>
+age: 45 ,<br>
 description: He has a lot of connections<br>
 image: https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg <br>
-color: green <br>
+color: green ,<br>
 
 drOrchid<br>
 firstName: Doctor<br>
@@ -80,7 +80,7 @@ name: Library<br>
 name: Billiard Room<br>
 name: Lounge<br>
 name: Ballroom<br>
-name: Hall<br>
+name: C<br>
 name: Spa<br>
 name: Living Room<br>
 name: Observatory<br>
