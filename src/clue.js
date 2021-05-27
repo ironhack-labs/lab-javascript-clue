@@ -1,4 +1,4 @@
-// ITERATION 1
+ // ITERATION 1
 // Suspects Collection
 const suspectsArray = [
     {
@@ -91,41 +91,36 @@ const suspectsArray = [
         {name: "bat",weight: 13},
         {name: "trophy",weight: 25},
         {name: "pistol",weight: 20}];
+
     // ITERATION 2
-    function selectRandom (arrayQualquer){
-        if (arrayQualquer === 0) {
+
+    function selectRandom (array){
+        if (array.length === 0) {
             return undefined
         }
-        else if (arrayQualquer.length === 1){
-            return arrayQualquer[0];
+        else if (array.length === 1){
+            return array[0];
         }
-        else { let aleatorio = Math.floor(Math.random()*arrayQualquer.length);
-            return arrayQualquer[aleatorio];
-        }
-    };
-    // ITERATION 3
-    function selectRandom (nomearma){
-        if (arrayQualquer === 0) {
-            return undefined
-        }
-        else if (arrayQualquer.length === 1){
-            return arrayQualquer[0];
-        }
-        else { let aleatorio = Math.floor(Math.random()*arrayQualquer.length);
-            return arrayQualquer[aleatorio];
+        else { let random = Math.floor(Math.random()*array.length);
+            return array[random];
         }
     };
-    function selectRandom (arrayQualquer){
-        if (arrayQualquer === 0) {
-            return undefined
+
+    function pickMystery(){
+        let randomReturn={
+            suspect: selectRandom(suspectsArray),
+            weapon: selectRandom(weaponsArray),
+            room: selectRandom(roomsArray)
         }
-        else if (arrayQualquer.length === 1){
-            return arrayQualquer[0];
-        }
-        else { let aleatorio = Math.floor(Math.random()*arrayQualquer.length);
-            return arrayQualquer[aleatorio];
-        }
-    };
-    function pickMystery() {
+        return randomReturn;
     }
-    console.log(suspectsArray[1].firstName);
+
+    console.log(pickMystery());
+
+    // ITERATION 3
+
+    function revealMystery(envelope) {
+        let mystery =`${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
+        return mystery
+    }
+    
