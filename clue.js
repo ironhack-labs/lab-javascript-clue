@@ -30,7 +30,7 @@ color: `purple`,
     lastName: `Scarlet`,
     occupation: `GamepadHapticActuator`,
     age: 31,
-    description: `She is an A-list movie star with a dark past,`
+    description: `She is an A-list movie star with a dark past`,
     image: `https://www.radiotimes.com/uploads/images/Original/111967.jpg`,
     color: `red`,
 }, {
@@ -42,7 +42,7 @@ color: `purple`,
     image: `https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg`,
     color: `blue`,
 }, {
-firstName:`Jack`
+firstName:`Jack`,
 lastName: `Mustard`,
 occupation: `Retired Football player`,
 age: 62,
@@ -115,5 +115,30 @@ const weaponsArray = [{
 }];
 
 // ITERATION 2
+function selectRandom (array) {
+{ if (array.length === 0)
+    return undefined;
+} if (array.length === 1) {
+    return array[0];
+} 
+
+let randomElement = Math.floor(Math.random()*array.length)
+    return array[randomElement]       
+
+function pickMistery(){
+    let objectReturn = {
+        suspect:selectRandom(suspectsArray),
+        weapon:selectRandom(weaponsArray),
+        room:selectRandom(roomsArray)
+    }
+    return objectReturn;
+}
 
 // ITERATION 3
+
+function revealMistery(object){
+    let mistery = `${object.suspect.firstName} ${object.suspect.lastName} Killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`
+    return mistery;
+}
+}
+
