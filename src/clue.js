@@ -163,14 +163,26 @@ const patio = {
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(cardStack) {
+  let randomPickedCard = cardStack[Math.floor(Math.random()*cardStack.length)];
+  return randomPickedCard;
+}
 
-function pickMystery() {}
-
+function pickMystery() {
+  let pickedMystery = {
+    suspect : selectRandom(suspectsArray),
+    weapon : selectRandom(weaponsArray),
+    room : selectRandom(roomsArray)
+  }
+  return pickedMystery;
+}
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(pickedMystery) {
+  let revealMessage = `${pickedMystery.suspect.firstName} ${pickedMystery.suspect.lastName} killed Mr. Boddy using the ${pickedMystery.weapon.name} in the ${pickedMystery.room.name}!`
+  return revealMessage;
+}
 
 
 
