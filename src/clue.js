@@ -4,6 +4,7 @@
 
 const suspectsArray = [
 {
+  name: "mrGreen",
   firstName: "Jacob",
   lastName: "Green",
   occupation: "Entrepreneur",
@@ -14,6 +15,7 @@ const suspectsArray = [
 },
 
 {  
+  name: "drOrchid",
   firstName: "Doctor",
   lastName: "Orchid",
   occupation: "Scientist",
@@ -24,6 +26,7 @@ const suspectsArray = [
 },
 
 {
+  name: "profPlum",
   firstName: "Victor",
   lastName: "Plum",
   occupation: "Designer",
@@ -34,16 +37,18 @@ const suspectsArray = [
 },
 
 {
-firstName: "Kasandra",
-lastName: "Scarlet",
-occupation: "Actor",
-age: 31,
-description: "She is an A-list movie star with a dark past",
-image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
-color: "red"
+  name: "missScarlet",
+  firstName: "Kasandra",
+  lastName: "Scarlet",
+  occupation: "Actor",
+  age: 31,
+  description: "She is an A-list movie star with a dark past",
+  image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
+  color: "red"
 },
 
 {
+  name: "mrsPeacock",
   firstName: "Eleanor",
   lastName: "Peacock",
   occupation: "Socialité",
@@ -54,6 +59,7 @@ color: "red"
 },
 
 {
+  name: "mrMustard",
   firstName: "Jack",
   lastName: "Mustard",
   occupation: "Retired Football player",
@@ -111,7 +117,18 @@ function selectRandom(arr) {
 }
 
 
-function pickMystery() {}
+function pickMystery() {
+  let newSuspect = selectRandom(suspectsArray);
+  let newWeapon = selectRandom(weaponsArray);
+  let newRoom = selectRandom(roomsArray);
+  let mysteryCard = {
+    suspect: newSuspect,
+    weapon: newWeapon,
+    room: newRoom
+  }
+  
+  return mysteryCard;
+}
 
 
 // ITERATION 3
