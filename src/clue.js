@@ -118,13 +118,10 @@ function selectRandom(arr) {
 
 
 function pickMystery() {
-  let newSuspect = selectRandom(suspectsArray);
-  let newWeapon = selectRandom(weaponsArray);
-  let newRoom = selectRandom(roomsArray);
   let mysteryCard = {
-    suspect: newSuspect,
-    weapon: newWeapon,
-    room: newRoom
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray)
   }
   
   return mysteryCard;
@@ -133,7 +130,9 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(envelope) {
+
+}
 
 
 
