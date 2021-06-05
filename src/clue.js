@@ -155,28 +155,25 @@ const weaponsArray = [rope = {
 // ITERATION 2
 
 function selectRandom(array) {
-  // if (!array) {
-  //   return undefined
-  // } // For some reason, this wasn't needed to return undefined if array is empty.
   return array[Math.floor(Math.random() * array.length)];
 }
 
 function pickMystery() {
-let mysteryObject = {suspect:selectRandom(suspectsArray),
-weapon:selectRandom(weaponsArray),
-room:selectRandom(roomsArray),
-};
+  const mysteryObject = {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray),
+  };
 
-return mysteryObject 
+  return mysteryObject
 }
 
 
 // ITERATION 3
 
 function revealMystery(envelope) {
-  envelope = pickMystery();
+  //envelope = pickMystery(); //uncomment to get random objects. comment to get successful Lab Solution test.
 
-  //return envelope //test line
   return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
 }
 
