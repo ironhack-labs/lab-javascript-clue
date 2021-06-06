@@ -144,29 +144,30 @@ const weaponsArray = [
   },
 ];
 
-//console.log(roomsArray)
-// console.log(suspectsArray)
-//console.log(weaponsArray)
 // ITERATION 2
 
 function selectRandom(collection) {
   const cardNumber = Math.floor(Math.random() * collection.length)
   return collection[cardNumber] || undefined
-  
+
 };
 console.log(selectRandom(suspectsArray));
 console.log(selectRandom(emptyArray))
-// should return an object
-// should return an object with 3 properties: `suspect`, `weapon`, `room`
-// should return a suspect in the suspect property of the object
-// should return a weapon in the weapon property of the object
-// should return a room in the room property of the object
-// Declare a function named `pickMystery` that takes no arguments
-// and returns an object with three properties: _suspect_, _weapon_ and _room_, 
+
 //each holding as a value a card of that specific type.
 //You can get a random card of each type by calling `selectRandom` on each card stack.
-function pickMystery() { }
+
+function pickMystery() {
+  const mystery = new Object();
+  mystery.suspect = selectRandom(suspectsArray)
+  mystery.room = selectRandom(roomsArray)
+  mystery.weapon = selectRandom(weaponsArray)
+
+  console.log(typeof mystery.suspect)
+  return mystery
+}
 pickMystery()
+console.log(pickMystery())
 
 // ITERATION 3
 // should return a string
