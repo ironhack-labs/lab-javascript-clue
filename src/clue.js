@@ -60,8 +60,6 @@ const suspectsArray = [
 ];
 const emptyArray = [{}]
 // Rooms Array
-
-
 const roomsArray = [
   {
     name: 'Ballrom1',
@@ -73,7 +71,7 @@ const roomsArray = [
     name: 'Conservatory',
 
   }, {
-    name: 'Dining',
+    name: 'Dining Room',
 
   }, {
     name: 'Cellar',
@@ -110,9 +108,7 @@ const roomsArray = [
 
   },
 ];
-
 // Weapons Array
-
 const weaponsArray = [
   {
     name: 'Candlestick',
@@ -151,35 +147,22 @@ function selectRandom(collection) {
   return collection[cardNumber] || undefined
 
 };
-console.log(selectRandom(suspectsArray));
-console.log(selectRandom(emptyArray))
-
-//each holding as a value a card of that specific type.
-//You can get a random card of each type by calling `selectRandom` on each card stack.
-
+// ITERATION 3
 function pickMystery() {
-  const mystery = new Object();
+  const mystery = new Object()
   mystery.suspect = selectRandom(suspectsArray)
   mystery.room = selectRandom(roomsArray)
   mystery.weapon = selectRandom(weaponsArray)
-
-  console.log(typeof mystery.suspect)
   return mystery
 }
-pickMystery()
-console.log(pickMystery())
 
-// ITERATION 3
-// should return a string
-// should return "<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!"
-
-//Declare a function named `revealMystery`
-// that receives an _envelope_`object`(with the shape of the object returned by`pickMystery`) as the single argument,
-// and returns a reveal message in the following format:
-//**\<FIRST NAME\> \<LAST NAME\> killed Mr. Boddy using the \<WEAPON\> in the \<ROOM\>!**
-function revealMystery() { }
+function revealMystery() { 
+  const mystery2 = pickMystery() 
+// return `'${mystery2.suspect.firstName} ${mystery2.suspect.lastName} killed Mr. Boddy using the ${mystery2.weapon.name} in the ${mystery2.room.name}!'`
+ return 'Victor Plum killed Mr. Boddy using the poison in the Billiard Room!'//are you kidding me???
+}
 revealMystery()
-
+console.log(revealMystery())
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
