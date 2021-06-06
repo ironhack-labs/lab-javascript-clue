@@ -58,14 +58,14 @@ const suspectsArray = [
 
   },
 ];
-
+const emptyArray = [{}]
 // Rooms Array
-	
+
 
 const roomsArray = [
   {
-    name:'Ballrom1',
-    
+    name: 'Ballrom1',
+
   }, {
     name: 'Kitchen',
 
@@ -116,28 +116,28 @@ const roomsArray = [
 const weaponsArray = [
   {
     name: 'Candlestick',
-weight:69,
+    weight: 69,
   }, {
     name: 'Dagger',
-weight:69,
+    weight: 69,
   }, {
     name: 'Lead Pipe',
-weight:69,
+    weight: 69,
   }, {
     name: 'Knife',
-weight:69,
+    weight: 69,
   }, {
     name: 'Poisoning',
-weight:69,
+    weight: 69,
   }, {
     name: 'Rope',
-weight:69,
+    weight: 69,
   }, {
     name: 'Revolver',
-weight:69,
+    weight: 69,
   }, {
     name: 'Wrench',
-weight:69,
+    weight: 69,
   }, {
     name: 'Colt M1911 pistol',
     weight: 69,
@@ -145,24 +145,17 @@ weight:69,
 ];
 
 //console.log(roomsArray)
- console.log(suspectsArray)
+// console.log(suspectsArray)
 //console.log(weaponsArray)
 // ITERATION 2
-// Declare a function named `selectRandom` 
-//to randomly select one element from a card stack.
-//The function should expect an`array` as an argument, 
-//and should return a random element from the array.
-// should return undefined if the array is empty
-// should return the element of a single value array
-// should return an element of the array
-// should return a random element of the array
-function selectRandom() {
-  const cardNumber = Math.floor(Math.random()*6)
-  // suspectsArray.forEach(element => {
-     console.log(`'I'm ${suspectsArray[cardNumber].firstName} ${suspectsArray[cardNumber].lastName}'`)
-  // });
- };
-selectRandom();
+
+function selectRandom(collection) {
+  const cardNumber = Math.floor(Math.random() * collection.length)
+  return collection[cardNumber] || undefined
+  
+};
+console.log(selectRandom(suspectsArray));
+console.log(selectRandom(emptyArray))
 // should return an object
 // should return an object with 3 properties: `suspect`, `weapon`, `room`
 // should return a suspect in the suspect property of the object
