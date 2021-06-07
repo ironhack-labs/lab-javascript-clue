@@ -109,9 +109,9 @@ const weaponsArray = [
 // ITERATION 2
 
 function selectRandom(suspectsArray, roomsArray, weaponsArray) {
-  math.floor(math.ramdon()) * suspectsArray.length
-  math.floor(math.ramdon()) * roomsArray.length
-  math.floor(math.ramdon()) * weaponsArray.length
+  math.floor(math.ramdon() * suspectsArray.length ) 
+  math.floor(math.ramdon() * roomsArray.length )
+  math.floor(math.ramdon() * weaponsArray.length )
  } 
 
 
