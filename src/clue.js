@@ -100,6 +100,7 @@ function pickMystery() {
 
 
 // ITERATION 3
+//fuction mystery to comment and push it
 
 function revealMystery(detectedMystery) {
   return (`${detectedMystery.suspect.firstName} ${detectedMystery.suspect.lastName} killed Mr. Boddy using the ${detectedMystery.weapon.name} in the ${detectedMystery.room.name}!`)
