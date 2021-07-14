@@ -99,23 +99,18 @@ const weaponsArray = [
 
 selectRandom(['a', 'ab', 'abb', 'aab', 'aaa', 'sda', 'kas']);
 
+// Random number between 0 and array.length elements gives us a random element
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function selectRandom(array) {
   if (typeof array === undefined) {
-    console.log('undefined edge case');
     return undefined;
   }
-  // Random number between 0 and array.length elements gives us a random element
-
-  // TEST FAILED 👀 FILIPE LOOK HEREEEE 🙏🏼
-  // I'm not able to get the three tests correctly on the "should return a random element of the array"
-  // Test array -> ['a', 'ab', 'abb', 'aab', 'aaa', 'sda', 'kas']
-  // Expected -> a
-  // In order to avoid the decimals values I'm using Math.round()
-  // In this case, the mockReturnValue is 0.1, which means that randomNum would be 0.1 * 6 = 0,6, rounded it's 1, not 0 (0 is the index of a)
-  // If I use Math.floor, the 0,9 test fails
-  let randomNum = Math.round(Math.random() * (array.length - 1));
-  return array[randomNum];
-  // TEST FAILED 👀 FILIPE LOOK HEREEEE 🙏🏼
+  return array[getRandomInt(0, array.length - 1)];
 }
 
 function pickMystery() {
