@@ -226,21 +226,23 @@ const weaponsArray = [
 function selectRandom(arr) {
 
     if (!arr.length) {
-        return;
-
+        return undefined;
     } else {
         let randomElement = arr[Math.floor(Math.random() * arr.length)];
-        return randomElement;
+        return arr[randomElement];
     }
 }
 
 function pickMystery() {
+    let suspectT = selectRandom(suspectsArray);
+    let roomT = selectRandom(roomsArray);
+    let weaponT = selectRandom(weaponsArray);
 
-    let suspect = selectRandom(suspectsArray);
-    let room = selectRandom(roomsArray);
-    let weapon = selectRandom(weaponsArray);
-
-    return (suspect, room, weapon)
+    return {
+        suspect,
+        room,
+        weapon,
+    };
 }
 
 // let suspect = suspectsArray[Math.floor(Math.random() * suspectsArray.length)];
@@ -248,10 +250,15 @@ function pickMystery() {
 // let weapon = weaponsArray[Math.floor(Math.random() * weaponsArray.length)];
 
 // ITERATION 3
+function revealMystery(envelope) {
+    `${envelope.suspect.firstName}`
+    `${envelope.suspect.lastName}`
+    killed Mr.Boddy using the `${envelope.weapon.name}` in the `${envelope.room.name}`
+};
+return revealMystery;
 
-function revealMystery() {}
 
-
+//<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
