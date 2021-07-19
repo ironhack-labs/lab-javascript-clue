@@ -159,7 +159,6 @@ const weaponsArray = [
 
 
 // ITERATION 2
-const arrayClue = [['carlos'], roomsArray, weaponsArray]
 
 function selectRandom(arrayRandom) {
   
