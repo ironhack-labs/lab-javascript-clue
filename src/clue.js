@@ -103,22 +103,17 @@
 
       if (!arr.length) {
           return undefined;
-      } else {
-          let randomElement = arr[Math.floor(Math.random() * arr.length)];
-          return arr[randomElement];
+      }
+      for (const el of arr) {
+          return arr[Math.floor(Math.random() * arr.length)];
       }
   }
 
   function pickMystery() {
-
-      let suspectT = selectRandom(suspectsArray);
-      let roomT = selectRandom(roomsArray);
-      let weaponT = selectRandom(weaponsArray);
-
       return {
-          suspect,
-          room,
-          weapon,
+          suspect: selectRandom(suspectsArray),
+          room: selectRandom(roomsArray),
+          weapon: selectRandom(weaponsArray)
       };
   }
 
@@ -128,14 +123,8 @@
 
   // ITERATION 3
   function revealMystery(envelope) {
-
-      `${envelope.suspect.firstName}`
-      `${envelope.suspect.lastName}`
-      killed Mr.Boddy using the `${envelope.weapon.name}` in the `${envelope.room.name}`
-  };
-
-  return revealMystery;
-
+      return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr.Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+  }
 
   //<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!
 
