@@ -220,7 +220,7 @@ function pickMystery() {
 function revealMystery() {
   let mystery = pickMystery();
 
-  return `"${mystery.suspect} killed Mr. Boddy using the ${mystery.weapon} in the ${mystery.room}!"`;
+  return `"${mystery.suspect} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room}!"`;
 }
 
 // The following is required to make unit tests work.
