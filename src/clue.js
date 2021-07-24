@@ -108,13 +108,10 @@ console.log(weaponsArray[1])
 
 // ITERATION 2
 
-// continuar daqui, nao to conseguindo pegar o valor aleatório entre 0 e [tamanho do array] !!!!!!
+// continuar daqui
 
 function selectRandom(array) {
   arraySize = array.length;
-  //randomCard = Math.round(arraySize*Math.random());
-
-
   randomCardIndex = Math.floor(Math.random() * arraySize);
   return array[randomCardIndex];
 }
@@ -138,8 +135,6 @@ revealMystery(card)
 
 
 //<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!
-
-
 
 
 // The following is required to make unit tests work.
