@@ -115,11 +115,16 @@ function pickMystery() {
     weapon: weaponRandom
   }
 }
+console.log(pickMystery())
 
 
 // ITERATION 3
 
-function revealMystery() { }
+function revealMystery(envolope) {
+
+
+}
+
 
 
 
