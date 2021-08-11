@@ -9,9 +9,8 @@ const suspectsArray = [
     occupation: 'Entrepreneur',
     age: 45,
     description: 'He has a lot of connections',
-    image: (
-      <img src="https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg"></img>
-    ),
+    image:
+      'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
     color: 'green'
   },
   {
@@ -20,9 +19,7 @@ const suspectsArray = [
     occupation: 'Scientist',
     age: 26,
     description: 'PhD in plant toxicology. Adopted daughter of Mr. Boddy',
-    image: (
-      <img src="http://www.radiotimes.com/uploads/images/Original/111967.jpg"></img>
-    ),
+    image: 'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
     color: 'white'
   },
   {
@@ -31,10 +28,18 @@ const suspectsArray = [
     occupation: 'Designer',
     age: 22,
     description: 'Billionaire video game designer',
-    image: (
-      <img src="https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg"></img>
-    ),
+    image:
+      'https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg',
     color: 'purple'
+  },
+  {
+    firstName: 'Kasandra',
+    lastName: 'Scarlet',
+    occupation: 'Actor',
+    age: 31,
+    description: 'She is an A-list movie star with a dark past',
+    image: 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
+    color: 'red'
   },
   {
     firstName: 'Eleanor',
@@ -43,9 +48,7 @@ const suspectsArray = [
     age: 36,
     description:
       'She is from a wealthy family and uses her status and money to earn popularity',
-    image: (
-      <img src="https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg"></img>
-    ),
+    image: 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
     color: 'blue'
   },
   {
@@ -55,9 +58,8 @@ const suspectsArray = [
     age: 62,
     description:
       'He is a former football player who tries to get by on his former glory',
-    image: (
-      <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg"></img>
-    ),
+    image:
+      'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg',
     color: 'yellow'
   }
 ];
@@ -166,18 +168,24 @@ function pickMystery() {
   const randomRoom = selectRandom(roomsArray);
   const randomWeapon = selectRandom(weaponsArray);
 
-  const envelope = {};
+  let envelope = {};
 
-  envelope.suspect = randomSuspect.firstName + ' ' + randomSuspect.lastName;
-  envelope.room = randomRoom.name;
-  envelope.weapon = randomWeapon.name;
+  envelope.suspect = randomSuspect;
+  envelope.room = randomRoom;
+  envelope.weapon = randomWeapon;
+
+  return envelope;
 }
 
 // ITERATION 3
 
 function revealMystery(object) {
-  return `${envelope.suspect} killed Mr. Boddy using the ${envelope.weapon} in the ${envelope.room}`;
+  return `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`;
 }
+
+// let envelope = pickMystery();
+
+// console.log(revealMystery(envelope));
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
