@@ -162,11 +162,13 @@ function selectRandom(randomize) {
 	return toReturnRandomize;
 }
 
-selectRandom(suspectsArray);
-selectRandom(roomsArray);
-selectRandom(weaponsArray);
+function pickMystery() {
+	let suspect = selectRandom(suspectsArray);
+	let room = selectRandom(roomsArray);
+	let weapon = selectRandom(weaponsArray);
 
-function pickMystery() {}
+	return { suspect, weapon, room };
+}
 
 // ITERATION 3
 
