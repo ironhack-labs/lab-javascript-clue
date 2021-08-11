@@ -1,6 +1,5 @@
 // ITERATION 1
-
-// Suspects Array
+// Suspects
 let mrGreen = {
 	firstName: 'Jacob',
 	lastName: 'Green',
@@ -61,9 +60,10 @@ let mrMustard = {
 	color: 'yellow'
 };
 
+// Suspects object
 const suspectsArray = [ mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard ];
 
-// Rooms Array
+// Rooms
 let diningRoom = { name: 'Dinning Room' };
 let conservatory = { name: 'Conservatory' };
 let kitchen = { name: 'Kitchen' };
@@ -80,6 +80,7 @@ let theater = { name: 'Theater' };
 let guestHouse = { name: 'Guest House' };
 let patio = { name: 'Patio' };
 
+// Rooms object
 const roomsArray = [
 	diningRoom,
 	conservatory,
@@ -98,7 +99,7 @@ const roomsArray = [
 	patio
 ];
 
-// Weapons Collection
+// Weapons
 let rope = {
 	name: 'rope',
 	weight: 10
@@ -127,19 +128,23 @@ let axe = {
 	name: 'axe',
 	weight: 15
 };
+
 let bat = {
 	name: 'bat',
 	weight: 13
 };
+
 let trophy = {
 	name: 'trophy',
 	weight: 25
 };
+
 let pistol = {
 	name: 'pistol',
 	weight: 20
 };
 
+// Weapons object collection
 const weaponsArray = [ pistol, trophy, bat, axe, poison, dumbbell, candlestick, knife, rope ];
 
 // ITERATION 2
