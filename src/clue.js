@@ -122,7 +122,6 @@ console.log(pickMystery())
 
 function revealMystery(envolope) {
 
-
 }
 
 
