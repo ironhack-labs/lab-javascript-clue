@@ -110,24 +110,18 @@ function selectRandom(object) {
 //Iteration 2: Create the mystery - Create the mystery
 function pickMystery() {
 
-const suspect = selectRandom(suspectsArray)
-const weapon = selectRandom(weaponsArray)
-const room = selectRandom(roomsArray)
-
-return [Object.keys(suspect), Object.keys(weapon), Object.keys(room)];
+return {suspect: selectRandom(suspectsArray), weapon:selectRandom(weaponsArray), room:selectRandom(roomsArray) }
 
 }
 
 
 // ITERATION 3
 
-function revealMystery() {
+function revealMystery(mystery) {
 
-
-  return `<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!`
-
-  // ${randomSuspect.firstName} ${randomSuspect.lastName} killed Mr. Boddy using the ${randomWeapons} in the ${randomRooms}!
+  return `${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`
 }
+
 
 
 
