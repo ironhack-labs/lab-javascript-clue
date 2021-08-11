@@ -67,9 +67,49 @@ const suspectsArray = [ mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mr
 
 const roomsArray = [];
 
-// Weapons Array
+// Weapons Collection
+let rope = {
+	name: 'rope',
+	weight: 10
+};
 
-const weaponsArray = [];
+let knife = {
+	name: 'knife',
+	weight: 8
+};
+
+let candlestick = {
+	name: 'candlestick',
+	weight: 2
+};
+
+let dumbbell = {
+	name: 'dumbbell',
+	weight: 30
+};
+
+let poison = {
+	name: 'poison',
+	weight: 2
+};
+let axe = {
+	name: 'axe',
+	weight: 15
+};
+let bat = {
+	name: 'bat',
+	weight: 13
+};
+let trophy = {
+	name: 'trophy',
+	weight: 25
+};
+let pistol = {
+	name: 'pistol',
+	weight: 20
+};
+
+const weaponsArray = [ pistol, trophy, bat, axe, poison, dumbbell, candlestick, knife, rope ];
 
 // ITERATION 2
 
