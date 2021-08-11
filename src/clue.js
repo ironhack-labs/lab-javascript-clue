@@ -101,11 +101,22 @@ const roomsArray = [
 
 // ITERATION 2
 
-function selectRandom(suspectsArray) {
-  return suspectsArray[Math.floor((Math.random()*suspectsArray.length))];
+//Iteration 2: Create the mystery - Random selector
+function selectRandom(object) {
+  return object[Math.floor(Math.random()*object.length)];
 }
 
-function pickMystery() {}
+
+//Iteration 2: Create the mystery - Create the mystery
+function pickMystery() {
+
+const suspect = selectRandom(suspectsArray)
+const weapon = selectRandom(weaponsArray)
+const room = selectRandom(roomsArray)
+
+return [Object.keys(suspect), Object.keys(weapon), Object.keys(room)];
+
+}
 
 
 // ITERATION 3
@@ -113,7 +124,9 @@ function pickMystery() {}
 function revealMystery() {
 
 
-  return `<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!`
+  return `<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!`
+
+  // ${randomSuspect.firstName} ${randomSuspect.lastName} killed Mr. Boddy using the ${randomWeapons} in the ${randomRooms}!
 }
 
 
