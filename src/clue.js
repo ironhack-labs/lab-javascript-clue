@@ -170,15 +170,14 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {
-  let randomPicks = pickMystery();
-  let mysterySolved = randomPicks.suspect.firstName 
+function revealMystery(obj) {
+  let mysterySolved = obj.suspect.firstName 
                       + ' '
-                      + randomPicks.suspect.lastName 
+                      + obj.suspect.lastName 
                       + ' killed Mr. Boddy using the ' 
-                      + randomPicks.weapon.name 
+                      + obj.weapon.name 
                       + ' in the ' 
-                      + randomPicks.room.name 
+                      + obj.room.name 
                       + '!'
   return mysterySolved;
 }
