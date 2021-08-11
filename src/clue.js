@@ -119,11 +119,9 @@ const weaponsArray = [
 
 // ITERATION 3
 
-function revealMystery() {
-  const envelope = pickMystery()
-  return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr.Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
+function revealMystery(someObj) {
+  return `${someObj.suspect.firstName} ${someObj.suspect.lastName} killed Mr. Boddy using the ${someObj.weapon.name} in the ${someObj.room.name}!`
 }
-
 
 
 // The following is required to make unit tests work.
