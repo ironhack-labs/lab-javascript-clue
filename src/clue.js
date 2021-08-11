@@ -101,14 +101,20 @@ const roomsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(suspectsArray) {
+  return suspectsArray[Math.floor((Math.random()*suspectsArray.length))];
+}
 
 function pickMystery() {}
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery() {
+
+
+  return `<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!`
+}
 
 
 
