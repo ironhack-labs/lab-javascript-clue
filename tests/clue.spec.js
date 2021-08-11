@@ -109,13 +109,13 @@ describe('Function "selectRandom" - Find a random element of the array', () => {
     expect(typeof selectRandom).toBe('function');
   });
 
-  it("should return undefined if the array is empty", () => {
+  it('should return undefined if the array is empty', () => {
     expect(selectRandom([])).toBe(undefined);
     expect(selectRandom(['a', 'ab', 'cd'])).toBeDefined();
   });
 
-  it("should return the element of a single value array", () => {
-    expect(selectRandom(["ab"])).toBe("ab");
+  it('should return the element of a single value array', () => {
+    expect(selectRandom(['ab'])).toBe('ab');
   });
 
   it('should return an element of the array', () => {
