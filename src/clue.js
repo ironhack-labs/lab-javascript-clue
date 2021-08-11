@@ -106,6 +106,7 @@ const roomsArray = [{
 {name: 'Patio'}];
 
 
+
 // ITERATION 2
 
 function selectRandom(inputarray) {
@@ -114,35 +115,52 @@ randomarray = inputarray[Math.floor(Math.random()*inputarray.length)]
 return randomarray
 } 
 
-console.log(selectRandom(roomsArray))
 
-console.clear()
+
+
+
+
 
 function pickMystery(){
-
+ 
+  let randomcard = {
+    rooms : selectRandom(roomsArray),
+    suspects : selectRandom(suspectsArray),
+    weapons : selectRandom(weaponsArray)
+  } 
+  return randomcard
+}
   
-  Randomcard = [
-    {Rooms: selectRandom(roomsArray)},
-    {Suspect: selectRandom(suspectsArray)},
-    {Weapons: selectRandom(weaponsArray)}]
-    return Randomcard}
-
-/*   suspectscard : [selectRandom(roomsArray)],
-  weaponscard  = [selectRandom(weaponsArray)],
-  roomscard    = [selectRandom(suspectsArray)]} */
 
 
-console.log(pickMystery())
+  console.log(pickMystery())
 
 // ITERATION 3
 
-function revealMystery() {}
 
 
 
+function revealMystery(mysterycard) {
+
+  let cardfirstname = mysterycard.suspects.firstName
+  let cardlastname = mysterycard.suspects.lastName
+  let cardweapon = mysterycard.weapons.name
+  let cardroom = mysterycard.rooms.name
+  let cardmessage = cardfirstname + ' ' + cardlastname + ' killed Mr. Boddy using the '+cardweapon + ' in the '+cardroom + ' !'
+  return cardmessage
+}
+
+console.log(pickMystery())
+let msytery1 = pickMystery()
+
+console.log(revealMystery(msytery1)) 
+
+
+
+/* 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
-if (typeof module !== 'undefined') {
+/* if (typeof module !== 'undefined') {
   module.exports = {
     suspectsArray,
     roomsArray,
@@ -151,4 +169,6 @@ if (typeof module !== 'undefined') {
     revealMystery,
     selectRandom
   };
-}
+} */
+
+ 
