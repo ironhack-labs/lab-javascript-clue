@@ -147,9 +147,24 @@ let pistol = {
 // Weapons object collection
 const weaponsArray = [ pistol, trophy, bat, axe, poison, dumbbell, candlestick, knife, rope ];
 
+// Imprimimos que todo se vea
+// console.log(suspectsArray);
+// console.log(roomsArray);
+// console.log(weaponsArray);
+
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(randomize) {
+	//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+	let toRandomize = randomize;
+	let toReturnRandomize = toRandomize[Math.floor(Math.random() * toRandomize.length)];
+
+	return toReturnRandomize;
+}
+
+selectRandom(suspectsArray);
+selectRandom(roomsArray);
+selectRandom(weaponsArray);
 
 function pickMystery() {}
 
