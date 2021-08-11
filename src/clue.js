@@ -64,8 +64,39 @@ let mrMustard = {
 const suspectsArray = [ mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard ];
 
 // Rooms Array
+let diningRoom = { name: 'Dinning Room' };
+let conservatory = { name: 'Conservatory' };
+let kitchen = { name: 'Kitchen' };
+let study = { name: 'Study' };
+let library = { name: 'Library' };
+let billiardRoom = { name: 'Billiard Room' };
+let lounge = { name: 'Lounge' };
+let ballroom = { name: 'Ballroom' };
+let hall = { name: 'Hall' };
+let spa = { name: 'Spa' };
+let livingRoom = { name: 'Living Room' };
+let observatory = { name: 'Observatory' };
+let theater = { name: 'Theater' };
+let guestHouse = { name: 'Guest House' };
+let patio = { name: 'Patio' };
 
-const roomsArray = [];
+const roomsArray = [
+	diningRoom,
+	conservatory,
+	kitchen,
+	study,
+	library,
+	billiardRoom,
+	lounge,
+	ballroom,
+	hall,
+	spa,
+	livingRoom,
+	observatory,
+	theater,
+	guestHouse,
+	patio
+];
 
 // Weapons Collection
 let rope = {
