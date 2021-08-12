@@ -7,7 +7,7 @@ const suspectsArray = [
     firstName: 'Jacob',
     lastName: 'Green',
     occupation: 'Entrepreneur',
-    age: '45',
+    age: 45,
     description: 'He has a lot of connections',
     image:  'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
     color: 'green'
@@ -128,39 +128,39 @@ const roomsArray = [
 const weaponsArray = [
   {
     name: 'rope',
-    weight: '10'
+    weight: 10
   },
   {
     name: 'knife',
-    weight: '8'
+    weight: 8
   },
   {
     name: 'candlestick',
-    weight: '2'
+    weight: 2
   },
   {
     name: 'dumbbell',
-    weight: '30'
+    weight: 30
   },
   {
     name: 'poison',
-    weight: '2'
+    weight: 2
   },
   {
     name: 'axe',
-    weight: '15'
+    weight: 15
   },
   {
     name: 'bat',
-    weight: '13'
+    weight: 13
   },
   {
     name: 'trophy',
-    weight: '25'
+    weight: 25
   },
   {
     name: 'pistol',
-    weight: '20'
+    weight: 20
   }
 ];
 
