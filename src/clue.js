@@ -4,13 +4,13 @@
 
 const suspectsArray = [
   {
- firstName: "Jacob",
- lastName: "Green",
- occupation: "Entrepreneur",
- age: 45,
- description: "He has a lot of connections",
- image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
- color: "green",
+    firstName: "Jacob",
+    lastName: "Green",
+    occupation: "Entrepreneur",
+    age: 45,
+    description: "He has a lot of connections",
+    image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+    color: "green",
   },
   {
     firstName: "Doctor",
@@ -153,14 +153,28 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(arr) {
+  if (arr.length > 0) {
+    return arr[Math.floor(Math.random() * arr.length)]
+  } else {
+    return undefined
+  }
+}
 
-function pickMystery() {}
+function pickMystery() {
+    return {
+      suspect: selectRandom(suspectsArray),
+      weapon: selectRandom(weaponsArray),
+      room: selectRandom(roomsArray)
+  }
+}
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(envelope) {
+  return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
+}
 
 
 
