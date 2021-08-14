@@ -100,24 +100,28 @@ const weaponsArray = [
 // ITERATION 2
 
 function selectRandom(name) {
-  let murderer = name[Math.round(Math.random()*(name.length-1))];
-  return murderer;
+  if (name.length < 0) 
+    return undefined;
+  let random = Math.floor(Math.random() * name.length);
+    return name[random];
 }
 
 
 function pickMystery() {
-  let misteryEnvelope =[];
-  misteryEnvelope.push(randomSelectorForRoom(suspectsArray));
-  misteryEnvelope.push(randomSelectorForName(roomsArray));
-  misteryEnvelope.push(randomSelectorForWeapon(weaponsArray));
+  let mystery ={
+    suspect: selectRandom (suspectsArray),
+    weapon: selectRandom (weaponsArray),
+    room: selectRandom (roomsArray),
+  };
 
-  return misteryEnvelope;
+  return mystery;
 }
 
 
 // ITERATION 3
 
-function revealMystery() {
+function revealMystery(reveal) {
+  return `${reveal.suspect.firstName} ${reveal.suspect.lastName} killed Mr. Boddy using the ${reveal.weapon.name} in the ${reveal.room.name}!`
 }
 
 // The following is required to make unit tests work.
