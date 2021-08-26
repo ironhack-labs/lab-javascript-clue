@@ -92,13 +92,15 @@ const weaponsArray = [{name: 'rope' ,weight: 10},
 // ITERATION 2
 
 function selectRandom(array) {
+  //si la longuitud de mi arreglo es igual a 0 regresa undefined
     if(array.length===0){
       return undefined;
     }
-    const numeroRandom= Math.floor(Math.random() * (array.length ));
-    return array[numeroRandom]
+    // math.floor nos redondea el numero hacia abajo, math.random no da un numero aleatorio(0-.99)
+    const numeroRandom= Math.floor(Math.random() * (array.length ));// variable para guardar el numero aleatorio(numero es menor a la longuitud del arreglo)
+    return array[numeroRandom] // regresa array en la posicion random
   }
-  console.log(selectRandom(weaponsArray))
+  //console.log(selectRandom(weaponsArray))
 
 function pickMystery() {
     return {
@@ -107,7 +109,7 @@ function pickMystery() {
     room:selectRandom(roomsArray)}
 }
 
-console.log(pickMystery())
+//console.log(pickMystery())
 // ITERATION 3
 
 function revealMystery(reveal) {
