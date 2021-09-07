@@ -1,11 +1,10 @@
 // ITERATION 1
 
 // Suspects Array
-
 const suspectsArray = [
   {
     firstName: "Jacob",
-    occupation: "Green",
+    lastName: "Green",
     occupation: "Entrepreneur",
     age: 45,
     description: "He has a lot of connections",
@@ -14,7 +13,7 @@ const suspectsArray = [
   },
   {
     firstName: "Doctor",
-    occupation: "Orchid",
+    lastName: "Orchid",
     occupation: "Scientist",
     age: 26,
     description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
@@ -23,7 +22,7 @@ const suspectsArray = [
   },
   {
     firstName: "Victor",
-    occupation: "Plum",
+    lastName: "Plum",
     occupation: "Designer",
     age: 22,
     description: "Billionaire video game designer",
@@ -59,8 +58,8 @@ const suspectsArray = [
   }
 ];
 
-// Rooms Array
 
+// Rooms Array
 const roomsArray = [
   {
     name: "Dining Room",
@@ -109,8 +108,8 @@ const roomsArray = [
   }
 ];
 
-// Weapons Array
 
+// Weapons Array
 const weaponsArray = [
   {
     name: "rope",
@@ -152,7 +151,6 @@ const weaponsArray = [
 
 
 // ITERATION 2
-
 function selectRandom(array) {
   let randomNumber = Math.floor(Math.random() * array.length);
   return array[randomNumber];
@@ -174,9 +172,10 @@ function pickMystery() {
 
 
 // ITERATION 3
+function revealMystery(object) {
 
-function revealMystery() {}
-
+  return `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`
+}
 
 
 // The following is required to make unit tests work.
