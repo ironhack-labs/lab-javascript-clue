@@ -124,7 +124,9 @@ const weaponsArray = [
 // ITERATION 2
 
 function selectRandom(cards) {
-  return cards[Math.floor(Math.random() * cards.length)];
+  // Marh.random() returns a random floating number between 0 and 1, but never 1: [0 - 1)
+  // Math.floor(<integer number>) returns the lowest integer
+  return cards[Math.floor(Math.random() * cards.length)]; 
 }
 
 function pickMystery() {
