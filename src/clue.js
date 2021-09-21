@@ -178,8 +178,6 @@ function pickMystery() {
   }
   return pickValues;
 }
-// Run pickMistery and assign the object to a variable
-const envelopeObject = pickMystery();
 
 // ITERATION 3
 // Declare a function named revealMystery that receives an envelope object 
@@ -188,6 +186,10 @@ function revealMystery(envelope) {
   const revealMessage = `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
   return revealMessage;
 }
+
+// Test the Cluedo game
+// Run pickMistery and assign the object to a variable
+const envelopeObject = pickMystery();
 // Reveal the mystery- passing as an argument the object returned by pickMystery
 revealMystery(envelopeObject);
 
