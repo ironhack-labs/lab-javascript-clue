@@ -175,7 +175,6 @@ function pickMystery() {
   return randomStack;
 }
 
-pickMystery();
 // ITERATION 3
 
 function revealMystery() {}
