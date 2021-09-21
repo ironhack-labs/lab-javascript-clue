@@ -155,31 +155,41 @@ const weaponsArray = [
 //Declare a function named selectRandom to randomly select one element from a card stack. 
 //The function should expect an array as an argument, and should return a random element from the array.
 function selectRandom(array) {
-  // array.length --> set the max number to do the random math
-  // Math.floor --> without decimals 
-  // floor(length_of_the_array * random_value_between_0_and_1)
+  // array.length --> to set the range to do the random math
+  // if the array.length is 10, it will calculate a random number from [0 to 10) 
+  // Math.random --> calculates random between [0 to 10) --> 0 included, 10 not included or excluded
+  // so the last index of the array is included --> array.length - 1
+  // Math.floor --> rounds the number
   let randomPosition = Math.floor(array.length * Math.random());
   let randomElement =  array[randomPosition]; // find the random position
   return randomElement;
 }
 
+// Create the mystery
+//Declare a function named pickMystery that takes no arguments and returns 
+// an object with three properties: suspect, weapon and room, 
+//each holding as a value a card of that specific type. 
+//You can get a random card of each type by calling selectRandom on each card stack.
 function pickMystery() {
-  const pickSuspect = {
+  const pickValues = {
     suspect: selectRandom(suspectsArray),
     weapon: selectRandom(weaponsArray),
     room: selectRandom(roomsArray),
   }
-  return pickSuspect
+  return pickValues;
 }
-
+// Run pickMistery and assign the object to a variable
+const envelopeObject = pickMystery();
 
 // ITERATION 3
-
-function revealMystery() {}
-
-
-
-
+// Declare a function named revealMystery that receives an envelope object 
+// (with the shape of the object returned by pickMystery) as the single argument
+function revealMystery(envelope) {
+  const revealMessage = `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+  return revealMessage;
+}
+// Reveal the mystery- passing as an argument the object returned by pickMystery
+revealMystery(envelopeObject);
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
