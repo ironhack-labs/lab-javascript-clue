@@ -208,7 +208,9 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(cardsHand) {
+  return `${suspectCard.suspectsArray.firstName} ${suspectsCard.suspectsArray.lastName} killed Mr. Boddy using the ${weaponsCard.weaponsArray.name} in the ${roomsCard.roomsArray.name}!`
+}
 
 
 
