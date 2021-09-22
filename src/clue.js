@@ -11,7 +11,7 @@ const mrGreen = {
               description: 'He has a lot of connections',
               image: 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
               color: 'green'
-},
+};
 
 const drOrchid ={
             firstName: 'Doctor',
@@ -21,7 +21,7 @@ const drOrchid ={
             description: 'PhD in plant toxicology. Adopted daughter of Mr. Boddy',
             image: 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
             color: 'white'
-},
+};
 
 const profPlum ={
             firstName: 'Victor',
@@ -31,7 +31,7 @@ const profPlum ={
             description: 'Billionaire video game designer',
             image: 'https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg',
             color: 'purple'
-},
+};
 
 const missScarlet = {
             firstName: 'Kasandra',
@@ -41,7 +41,7 @@ const missScarlet = {
             description: 'She is an A-list movie star with a dark past',
             image: 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
             color: 'red'
-},
+};
 
 const mrsPeacock = {
             firstName: 'Eleanor',
@@ -51,7 +51,7 @@ const mrsPeacock = {
             description: 'She is from a wealthy family and uses her status and money to earn popularity',
             image: 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
             color: 'blue',
-},
+};
 
 const mrMustard = {
             firstName: 'Jack',
@@ -61,7 +61,7 @@ const mrMustard = {
             description: 'He is a former football player who tries to get by on his former glory',
             image: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg',
             color: 'yellow',
-}
+};
 
 
 // Suspects Array
@@ -190,9 +190,20 @@ const weaponsArray = [pistol, trophy, bat, axe, poison, dumbell, candlestick, kn
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(arr) {
+  return Math.floor(Math.random() * arr);
+}
 
-function pickMystery() {}
+function pickMystery() {
+  const suspectCard = selectRandom(suspectsArray);
+  const weaponsCard = selectRandom(weaponsArray);
+  const roomCard = selectRandom(roomsArray);
+
+  const cardsHand = [suspectCard, weaponsCard, roomCard];
+
+  return cardsHand;
+}
+
 
 
 // ITERATION 3
