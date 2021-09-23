@@ -142,10 +142,16 @@ console.log(pickMystery())
 
 // ITERATION 3
 
+
 function revealMystery() {
-  return pickMystery()
+  let weaponName = pickMystery().randomWeapon.name; 
+  let killerName = pickMystery().randomPerson.firstName; 
+  let killerSurname = pickMystery().randomPerson.lastName; 
+  let roomName = pickMystery().randomRoom.name; 
+  return `Killlers name is ${killerName} and he used ${weaponName}`
 }
 
+console.log(revealMystery())
 
 
 // The following is required to make unit tests work.
