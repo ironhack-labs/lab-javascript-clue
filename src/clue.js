@@ -148,7 +148,7 @@ function revealMystery() {
   let killerName = pickMystery().randomPerson.firstName; 
   let killerSurname = pickMystery().randomPerson.lastName; 
   let roomName = pickMystery().randomRoom.name; 
-  return `Killlers name is ${killerName} and he used ${weaponName}`
+  return `${killerName} ${killerSurname} killed Mr. Boddy using the ${weaponName} in the ${roomName}!`
 }
 
 console.log(revealMystery())
