@@ -12,7 +12,7 @@ const suspectsArray = [
     image: 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
     color: 'green'
   },
-  
+
   {
     firstName: 'Doctor',
     lastName: 'Orchid',
@@ -22,7 +22,7 @@ const suspectsArray = [
     image: 'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
     color: 'white',
   },
-  
+
   {
     name: "Victor Plum",
     occupation: "Designer",
@@ -32,7 +32,7 @@ const suspectsArray = [
       "https://vignette.wikia.nocookie.net/cluedo/images/a/a4/2016C6.jpg/revision/latest?cb=20200927103539",
     color: "purple",
   },
-  
+
   {
     name: "Kasandra Scarlet",
     occupation: "Actor",
@@ -41,7 +41,7 @@ const suspectsArray = [
     image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
     color: "red",
   },
-  
+
   {
     name: "Eleanor Peacock",
     occupation: "Socialité",
@@ -51,7 +51,7 @@ const suspectsArray = [
     image: "https://vignette.wikia.nocookie.net/cluedo/images/b/b0/2016C5.jpg/revision/latest?cb=20200927103538",
     color: "blue",
   },
-  
+
   {
     name: "Jack Mustard",
     occupation: "Retired Football player",
@@ -180,14 +180,22 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(cardArray) {
+  let randomCard = Math.floor(Math.random() * cardArray.length);
+  console.log (cardArray[randomCard].name);
+}
 
-function pickMystery() {}
+function pickMystery() {
+  message= (`${selectRandom(suspectsArray)} killed Mr. Boby in the ${selectRandom(roomsArray)} with the ${selectRandom(weaponsArray)}`)
+  return message
+}
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery() {
+  return pickMystery()
+}
 
 
 
