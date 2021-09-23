@@ -155,6 +155,10 @@ const weaponsArray = [
 //Declare a function named selectRandom to randomly select one element from a card stack. 
 //The function should expect an array as an argument, and should return a random element from the array.
 function selectRandom(array) {
+  // if there is no value inside, or not length
+  // ![]length ---> if there is no value
+  if(!array.length) return undefined;
+
   // array.length --> to set the range to do the random math
   // if the array.length is 10, it will calculate a random number from [0 to 10) 
   // Math.random --> calculates random between [0 to 10) --> 0 included, 10 not included or excluded
