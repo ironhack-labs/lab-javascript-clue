@@ -122,7 +122,8 @@ function pickMystery() {
 // ITERATION 3
 let envelope = pickMystery(suspectsArray, roomsArray, weaponsArray);
 function revealMystery(envelope) {
-  return envelope[0].firstName + " " + envelope[0].lastName + " killed Mr.Boddy using the " + envelope[1].name + " in the " + envelope[2].name + "!";
+  let result= envelope[0].firstName + " " + envelope[0].lastName + " killed Mr.Boddy using the " + envelope[2].name + " in the " + envelope[1].name + "!" ;
+  return result;
 }
 
 
