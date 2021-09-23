@@ -163,8 +163,9 @@ function selectRandom(array) {
   // if the array.length is 10, it will calculate a random number from [0 to 10) 
   // Math.random --> calculates random between [0 to 10) --> 0 included, 10 not included or excluded
   // so the last index of the array is included --> array.length - 1
-  // Math.floor --> rounds the number
-  let randomPosition = Math.floor(array.length * Math.random());
+  // Math.floor --> rounds the number down
+  // Math.trunc() --> removes the decimals after the point--> 13.12 -->becomes 13
+  let randomPosition = Math.trunc(array.length * Math.random());
   let randomElement =  array[randomPosition]; // find the random position
   return randomElement;
 }
