@@ -97,21 +97,16 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom(roomsArray) {
-    return roomsArray[Math.floor(Math.random() * (roomsArray.length))];
-    //return roomsArray[5];
+function selectRandom(arrays) {
+    //console.log(arrays);
+    let response = undefined;
+    if (arrays.length) {
+        response = arrays[Math.floor(Math.random() * (arrays.length))];
+    }
+    return response
+        //return roomsArray[5];
 }
 
-function selectWeapon(weaponsArray) {
-    //return weaponsArray[Math.floor(Math.random() * (weaponsArray.length))];
-    return weaponsArray[4];
-
-}
-
-function selectSuspect(suspectsArray) {
-    //return suspectsArray[Math.floor(Math.random() * (suspectsArray.length))]
-    return suspectsArray[2]
-}
 
 //console.log('room', room)
 
@@ -121,8 +116,8 @@ function pickMystery() {
 
     room = selectRandom(roomsArray);
     //console.log('room', room);
-    weapon = selectWeapon(weaponsArray);
-    suspect = selectSuspect(suspectsArray);
+    weapon = selectRandom(weaponsArray);
+    suspect = selectRandom(suspectsArray);
 
 
     let mistery = {
@@ -141,9 +136,8 @@ function revealMystery() {
 
     // <FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!
     let mistery, print
-    mistery = pickMystery()
-        //console.log(mistery)
-    print = `${mistery.suspect.firstName} ${mistery.suspect.lastName} killed Mr. Boddy using the ${mistery.weapon.name} in the Billiard Room!`
+    mistery = pickMystery(roomsArray, weaponsArray, suspectsArray)
+    print = `${mistery.suspect.firstName} ${mistery.suspect.lastName} killed Mr. Boddy using the ${mistery.weapon.name} in the ${mistery.room.name}!`
 
     //console.log(print)
     return print
