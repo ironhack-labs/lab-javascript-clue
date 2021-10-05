@@ -29,14 +29,14 @@ color: white
 ```
 
 ```
-profPlum
-firstName: Victor
-lastName: Plum
-occupation: Designer
-age: 22
-description: Billionaire video game designer
-image: https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg
-color: purple
+drOrchid
+firstName: Doctor
+lastName: Orchid
+occupation: Scientist
+age: 26
+description: PhD in plant toxicology. Adopted daughter of Mr. Boddy
+image: http://www.radiotimes.com/uploads/images/Original/111967.jpg
+color: white
 ```
 
 ```
