@@ -156,7 +156,7 @@ const weaponsArray = [
   ];
 // ITERATION 2
 
-function selectRandom() {
+function selectRandom(arr) {
   let card = Math.floor(Math.random()* arr.length)
 
   return arr[card]
@@ -165,26 +165,22 @@ function selectRandom() {
 function pickMystery() {
   let mistery = {};
   let suspect = selectRandom(suspectsArray);
-console.log(suspect)
 
- let room = selectRandom(roomsArray);
-console.log(room)
+  let room = selectRandom(roomsArray);
 
   let weapon = selectRandom(weaponsArray);
-console.log(weapon)
 
 mistery = {suspect, room, weapon}
 
-console.log(mistery)
+return mistery
 }
 
 
 // ITERATION 3
 
 function revealMystery(pickmistery) {
-  let mensaje = `${pickmistery.suspect.firstName} ${pickmistery.suspect.lastName} killed Mr. Boddy using the ${pickmistery.weapon.name} in the ${pickmistery.room.name} !`
+  let mensaje = `${pickmistery.suspect.firstName} ${pickmistery.suspect.lastName} killed Mr. Boddy using the ${pickmistery.weapon.name} in the ${pickmistery.room.name}!`
 
-console.log(mensaje)
 
   return mensaje
 }
