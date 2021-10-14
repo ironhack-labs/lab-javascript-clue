@@ -3,7 +3,7 @@
 // Suspects Array
 
 const suspectsArray = [
-  mrGreen: [
+  let mrGreen = [
     {
       firstName: 'Jacob',
       lastName: 'Green',
@@ -15,7 +15,7 @@ const suspectsArray = [
     }
   ],
 
-  drOrchid: [
+  let drOrchid = [
     {
       firstName: 'Doctor',
       lastName: 'Orchid',
@@ -27,7 +27,7 @@ const suspectsArray = [
     }
   ],
 
-  profPlum: [
+  let profPlum = [
     {
       firstName: 'Victor',
       lastName: 'Plum',
@@ -39,7 +39,7 @@ const suspectsArray = [
     }
   ],
 
-  missScarlet: [
+  let missScarlet = [
     {
       firstName: 'Kasandra',
       lastName: 'Scarlet',
@@ -51,7 +51,7 @@ const suspectsArray = [
     }
   ],
 
-  mrsPeacock: [
+  let mrsPeacock = [
     {
       firstName: 'Eleanor',
       lastName: 'Peacock',
@@ -60,10 +60,10 @@ const suspectsArray = [
       description: 'She is from a wealthy family and uses her status and money to earn popularity',
       image: 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
       color: 'blue'
-    };
+    }
   ],
 
-  mrMustard: [
+  let mrMustard = [
     {
       firstName: 'Jack',
       lastName: 'Mustard',
@@ -72,7 +72,7 @@ const suspectsArray = [
       description: 'He is a former football player who tries to get by on his former glory',
       image: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg',
       color: 'yellow'
-    };
+    }
   ]
 
 ];
