@@ -59,7 +59,6 @@ color: 'yellow'
   }
 ];
 
-
 // Rooms Array
 
 const roomsArray = ['Dining Room','Conservatory','Kitchen','Study','Library','Billiard Room','Lounge','Ballroom','Hall','Spa','Living Room','Observatory','Theater','Guest House','Patio'];
@@ -77,39 +76,40 @@ var weaponsArray = [
   {name: "trophy", weight: 25},
   {name: "pistol", weight: 20}
   ];
+
 // ITERATION 2
 
-function selectRandomRoom(rooms) {
-  var room = rooms[Math.floor(Math.random() * rooms.length)];
+function selectRandomRoom(roomsArray) {
+  var room = roomsArray[Math.floor(Math.random() * roomsArray.length)];
   return room 
-  }
+  };
   
-  function selectRandomWeapon(weapons) {
-    var weapon = weapons[Math.floor(Math.random() * weapons.length)];
+  function selectRandomWeapon(weaponsArray) {
+    var weapon = weaponsArray[Math.floor(Math.random() * weaponsArray.length)];
   return weapon
-  }
+  };
   
-  function selectRandomName(name) {
-    var suspect = name[Math.floor(Math.random() * name.length)];
+  function selectRandomName(suspectsArray) {
+    var suspect = suspectsArray[Math.floor(Math.random() * suspectsArray.length)];
   return suspect
-  }
+  };
 
 function pickMistery(){
   var misteryEnvelope =[];
   misteryEnvelope.push(selectRandomRoom(roomsArray));
   misteryEnvelope.push(selectRandomName(suspectsArray));
   misteryEnvelope.push(selectRandomWeapon(weaponsArray));
-  //console.log(misteryEnvelope);
+  
   return misteryEnvelope;
-}
+};
 
 // ITERATION 3
 
 function revealMistery(){
   var mysteryArray = pickMistery();
-  //console.log(mysteryArray);
-  console.log(mysteryArray[1].firstName +" "+ mysteryArray[1].lastName + " killed Mr.Boddy using the "+ mysteryArray[2].name+ " in the " +  mysteryArray[0]+ "!");
-}
+  
+ return mysteryArray[1].firstName +" "+ mysteryArray[1].lastName + " killed Mr.Boddy using the "+ mysteryArray[2].name+ " in the " +  mysteryArray[0]+ "!";
+};
 
 revealMistery();
 
