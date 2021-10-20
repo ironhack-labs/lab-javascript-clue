@@ -4,64 +4,64 @@
 
 const suspectsArray = [
 
-    mrGreen {
-    firstName: Jacob,
-    lastName: Green,
-    occupation: Entrepreneur,
+  mrGreen = {
+    firstName: 'Jacob',
+    lastName: 'Green',
+    occupation: 'Entrepreneur',
     age: 45,
     description: 'He has a lot of connections',
-    image: https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg ,
-    color: green
+    image: (' https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg') ,
+    color: 'green' 
     },
 
-    drOrchid {
-    firstName: Doctor ,
-    lastName: Orchid ,
-    occupation: Scientist ,
+  drOrchid = {
+    firstName: 'Doctor' ,
+    lastName: 'Orchid' ,
+    occupation: 'Scientist' ,
     age: 26 ,
     description: 'PhD in plant toxicology. Adopted daughter of Mr. Boddy' ,
-    image: http://www.radiotimes.com/uploads/images/Original/111967.jpg ,
-    color: white
+    image: ('http://www.radiotimes.com/uploads/images/Original/111967.jpg') ,
+    color: 'white'
     },
 
-    profPlum {
-      firstName: Victor ,
-      lastName: Plum ,
-      occupation: Designer ,
-      age: 22 ,
-      description: 'Billionaire video game designer'
-      image: https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg ,
-      color: purple  
+  profPlum = {
+      firstName: 'Victor' ,
+      lastName: 'Plum' ,
+      occupation: 'Designer' ,
+      age: '22' ,
+      description: 'Billionaire video game designer' ,
+      image: ('https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg') ,
+      color: 'purple ' 
     },
 
-    missScarlet {
-      firstName: Kasandra ,
-      lastName: Scarlet ,
-      occupation: Actor ,
+  missScarlet = {
+      firstName: 'Kasandra' ,
+      lastName: 'Scarlet' ,
+      occupation: 'Actor' ,
       age: 31 ,
       description: 'She is an A-list movie star with a dark past' ,
-      image: https://www.radiotimes.com/uploads/images/Original/111967.jpg ,
-      color: red
+      image: ('https://www.radiotimes.com/uploads/images/Original/111967.jpg') ,
+      color: 'red'
     },
 
-    mrsPeacock {
-      firstName: Eleanor ,
-      lastName: Peacock ,
-      occupation: Socialité ,
+  mrsPeacock = {
+      firstName: 'Eleanor' ,
+      lastName: 'Peacock' ,
+      occupation: 'Socialité' ,
       age: 36 ,
       description: 'She is from a wealthy family and uses her status and money to earn popularity' ,
-      image: https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg ,
-      color: blue
+      image: ('https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg') ,
+      color: 'blue'
     },
 
-    mrMustard {
-      firstName: Jack ,
-      lastName: Mustard ,
-      occupation: Retired-Football-player ,
+  mrMustard = {
+      firstName: 'Jack' ,
+      lastName: 'Mustard' ,
+      occupation: 'Retired Football player' ,
       age: 62 ,
       description: 'He is a former football player who tries to get by on his former glory' ,
-      image: https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg ,
-      color: yellow
+      image: ('https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg') ,
+      color: 'yellow'
     }
 ];
 
@@ -69,63 +69,63 @@ const suspectsArray = [
 
 const roomsArray = [
 {
-  name: Dining-Room
+  name: 'Dining-Room'
 },
 
 {
-  name: Conservatory
+  name: 'Conservatory'
 },
 
 {
-  name: Kitchen
+  name: 'Kitchen'
 },
 
 {
-  name: Study
+  name: 'Study'
 },
 
 {
-  name: Library
+  name: 'Library'
 },
 
 {
-  name: Billiard-Room
+  name: 'Billiard-Room'
 },
 
 {
-  name: Lounge
+  name: 'Lounge'
 },
 
 {
-  name: Ballroom
+  name: 'Ballroom'
 },
 
 {
-  name: Hall
+  name: 'Hall'
 },
 
 {
-  name: Spa
+  name: 'Spa'
 },
 
 {
-  name: Living-Room
+  name: 'Living-Room'
 },
 
 {
-  name: Observatory
+  name: 'Observatory'
 },
 
 {
-  name: Theater
+  name: 'Theater'
 },
 
 {
-  name: Guest-House
+  name: 'Guest-House'
 },
 
 {
-  name: Patio
+  name: 'Patio'
 }
 
 ];
@@ -135,47 +135,47 @@ const roomsArray = [
 const weaponsArray = [
 
   {
-    name: rope ,
+    name: 'rope' ,
     weight: 10
   },
 
   {
-    name: knife ,
+    name: 'knife' ,
     weight: 8
   },
    
   {
-    name: candlestick ,
+    name: 'candlestick' ,
     weight: 2
   },
    
   {
-    name: dumbbell ,
+    name: 'dumbbell' ,
     weight: 30
   },
 
   {
-    name: poison ,
+    name: 'poison' ,
     weight: 2
   },
    
   {
-    name: axe ,
+    name: 'axe' ,
     weight: 15
   },
 
   {
-    name: bat ,
+    name: 'bat' ,
     weight: 13
   },
 
   {
-    name: trophy ,
+    name: 'trophy' ,
     weight: 25
   },
 
   {
-    name: pistol ,
+    name: 'pistol' ,
     weight: 20 
   }
      
@@ -184,15 +184,39 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+  function selectRandom (arr) {
+    Math.floor(Math.random()*arr.length); //the randomiser function
+    return theKiller //the outcome
+  };
+  
+  const chosenCards = [suspectsArray, weaponsArray, roomsArray]; //the cards to choose from
+  const theKiller =[]; //the empty array where random elements will be pushed
+  
+  for(i = 0; i < chosenCards.length; i++){ //the loop to iterate through the arrays
+    const randomPick = selectRandom (chosenCards[i]); //the variable used have the function go through available elements index
+    theKiller.push(chosenCards[i][randomPick]); //push the randomised results to the killer variable
+  } //this is returning a number 3 ??? I want random elements from the arrays to show.
 
-function pickMystery() {}
+function pickMystery() {
+  selectRandom(suspectsArray, weaponsArray, roomsArray);
+  return theAnswer;
+}
+  const theAnswer = {
 
+  }; 
+
+//I don't know if I need to push the function results each time to 'theAnswer' via a loop or the above is ok. 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(envelope) {
+  const firstName = theAnswer.suspectsArray.firstName;
+  const lastName = theAnswer.suspectsArray.lastName;
+  const weapon = theAnswer.weaponsArray.name;
+  const room = theAnswer.roomsArray.name;
+}
 
+return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${room}!`; 
 
 
 // The following is required to make unit tests work.
