@@ -100,30 +100,22 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-
 function selectRandom(cardStack) {
-  return arrayIsEmpty(cardStack) ? undefined : cardStack[getRandomInt(0, cardStack.length - 1)];
+  return cardStack[Math.floor(Math.random() * cardStack.length)];
 }
-
-function arrayIsEmpty(array){
-return array.length === 0 ? true : false;
-}
-
 
 function pickMystery() {
-  return {suspect: selectRandom(suspectsArray), weapon: selectRandom(weaponsArray), room: selectRandom(roomsArray)};
+  return {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray)
+  };
 }
 
 // ITERATIOn 3
 
 function revealMystery(mystery) {
-  return `${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`
-
+  return `${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`;
 }
 
 // The following is required to make unit tests work.
