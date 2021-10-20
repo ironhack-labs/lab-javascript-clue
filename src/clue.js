@@ -180,7 +180,16 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(misterySolved) {
+  let suspectFirstName = misterySolved.suspect.firstName;
+  let suspectLastName = misterySolved.suspect.lastName;
+  let weapon = misterySolved.weapon.name;
+  let room = misterySolved.room.name;
+  let misteryRevealed = `${suspectFirstName} ${suspectLastName} killed Mr. Boddy using the ${weapon} in the ${room}!`;
+
+  return misteryRevealed;
+}
+
 
 
 
