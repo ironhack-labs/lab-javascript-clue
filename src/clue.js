@@ -97,8 +97,8 @@ function selectRandomRoom(roomsArray) {
 function pickMistery(){
   var misteryEnvelope =[];
   misteryEnvelope.push(selectRandomRoom(roomsArray));
-  misteryEnvelope.push(selectRandomName(suspectsArray));
-  misteryEnvelope.push(selectRandomWeapon(weaponsArray));
+  misteryEnvelope.push(selectRandomName(weaponsArray));
+  misteryEnvelope.push(selectRandomWeapon(suspectsArray));
   
   return misteryEnvelope;
 };
@@ -108,7 +108,7 @@ function pickMistery(){
 function revealMistery(){
   var mysteryArray = pickMistery();
   
- return mysteryArray[1].firstName +" "+ mysteryArray[1].lastName + " killed Mr.Boddy using the "+ mysteryArray[2].name+ " in the " +  mysteryArray[0]+ "!";
+ return mysteryArray[2].firstName +" "+ mysteryArray[2].lastName + " killed Mr.Boddy using the "+ mysteryArray[1].name+ " in the " +  mysteryArray[0]+ "!";
 };
 
 revealMistery();
