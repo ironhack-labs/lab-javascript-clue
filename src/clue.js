@@ -113,6 +113,12 @@ function pickMystery() {
   let room = selectRandom(roomsArray);
 
   return { suspect, weapon, room };
+  // OR:
+  // return {
+  //   suspect: selectRandom(suspectsArray),
+  //   weapon: selectRandom(weaponsArray),
+  //   room: selectRandom(roomsArray)
+  // };
 }
 
 // ITERATION 3
