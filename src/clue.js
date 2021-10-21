@@ -62,49 +62,49 @@ const suspectsArray = [
 // Rooms Array
 
 const roomsArray = [
-  diningRoom = {
+  {
     name: 'Dining Room'
   },
-  conservatory = {
+  {
     name: 'Conservatory'
   },
-  kitchen = {
+  {
     name: 'Kitchen'
   },
-  study = {
+  {
     name: 'Study'
   },
-  library = {
+  {
     name: 'Library'
   },
-  billiardRoom = {
+ {
     name: 'Billiard Room'
   },
-  lounge = {
+  {
     name: 'Lounge'
   },
-  ballroom = {
+  {
     name: 'Ballroom'
   },
-  hall = {
+  {
     name: 'Hall'
   },
-  spa = {
+  {
     name: 'Spa'
   },
-  livingRoom = {
+  {
     name: 'Living Room'
   },
-  observatory = {
+  {
     name: 'Observatory'
   },
-  theater = {
+  {
     name: 'Theater'
   },
-  guestHouse = {
+  {
     name: 'Guest House'
   },
-  patio = {
+  {
     name: 'Patio'
   }
 ];
@@ -112,39 +112,39 @@ const roomsArray = [
 // Weapons Array
 
 const weaponsArray = [
-  rope = {
+  {
     name: 'rope',
     weight: 10
   },
-  knife = {
+  {
     name: 'knife',
     weight: 8
   },
-  candlestick = {
+  {
     name: 'candlestick',
     weight: 2
   },
-  dumbbell = {
+  {
     name: 'dumbbell',
     weight: 30
   },
-  poison = {
+  {
     name: 'poison',
     weight: 2
   },
-  axe = {
+  {
     name: 'axe',
     weight: 15
   },
-  bat = {
+  {
     name: 'bat',
     weight: 13
   },
-  trophy = {
+  {
     name: 'trophy',
     weight: 25
   },
-  pistol = {
+  {
     name: 'pistol',
     weight: 20
   }
@@ -157,7 +157,7 @@ function selectRandom(suspectsArray) {
   if (suspectsArray.length === 0) {
     return undefined;
   }
-  let suspect = (Math.floor(Math.random(suspectsArray) * suspectsArray.length));
+  let suspect = Math.floor(Math.random(suspectsArray) * suspectsArray.length);
   return suspectsArray[suspect]
 }
 
@@ -167,8 +167,6 @@ function pickMystery() {
   let weapon = weaponsArray[Math.floor(Math.random() * weaponsArray.length)];
   return {suspect, room, weapon};
 }
-
-
 
 // ITERATION 3
 
