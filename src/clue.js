@@ -118,13 +118,15 @@ function pickMystery() {
   mystery.weapon = selectRandom(weaponsArray)
   mystery.room = selectRandom(roomsArray)
   return mystery
-  
 }
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(envelope) {
+  let reveal = `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
+  return reveal
+}
 
 
 
