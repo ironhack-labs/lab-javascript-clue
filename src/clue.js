@@ -170,9 +170,14 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {}
+let data = pickMystery()
+function revealMystery() {
+  return `${data.suspect.firstName} ${data.suspect.lastName} killed Mr. Boddy using the ${data.weapon.name} in the ${data.room.name}!`
+}
 
-
+// function revealMystery() {
+//   return `${suspectsArray[2].firstName} ${suspectsArray[2].lastName} killed Mr. Boddy using the ${weaponsArray[4].name} in the ${roomsArray[5].name}!`
+// }
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
