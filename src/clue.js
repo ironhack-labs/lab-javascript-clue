@@ -6,96 +6,186 @@
 // }
 const suspectsArray = [
   {
-    firstName: 'A',
-    lastName: 'AA',
-    occupation: 'AOcu',
-    age: 1,
-    description: 'Adesc',
-    image: '',
-    color: ''
+    firstName: 'Jacob',
+    lastName: 'Green',
+    occupation: 'Entrepreneur',
+    age: 45,
+    description: 'He has a lot of connections',
+    image:
+      'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
+    color: 'green'
   },
+
   {
-    firstName: 'B',
-    lastName: 'BB',
-    occupation: 'BOcu',
-    age: 2,
-    description: 'Bdesc',
-    image: '',
-    color: ''
+    firstName: 'Doctor',
+    lastName: 'Orchid',
+    occupation: 'Scientist',
+    age: 26,
+    description: 'PhD in plant toxicology. Adopted daughter of Mr. Boddy',
+    image: 'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
+    color: 'white'
   },
+
   {
-    firstName: 'C',
-    lastName: 'CC',
-    occupation: 'COcu',
-    age: 3,
-    description: 'CDesc',
-    image: '',
-    color: ''
+    firstName: 'Victor',
+    lastName: 'Plum',
+    occupation: 'Designer',
+    age: 22,
+    description: 'Billionaire video game designer',
+    image:
+      'https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg',
+    color: 'purple'
   },
+
   {
-    firstName: 'D',
-    lastName: 'DD',
-    occupation: 'DOcu',
-    age: 4,
-    description: 'DDesc',
-    image: '',
-    color: ''
+    firstName: 'Kasandra',
+    lastName: 'Scarlet',
+    occupation: 'Actor',
+    age: 31,
+    description: 'She is an A-list movie star with a dark past',
+    image: 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
+    color: 'red'
   },
+
   {
-    firstName: 'E',
-    lastName: 'EE',
-    occupation: 'EOcu',
-    age: 5,
-    description: 'EDesc',
-    image: '',
-    color: ''
+    firstName: 'Eleanor',
+    lastName: 'Peacock',
+    occupation: 'Socialité',
+    age: 36,
+    description:
+      'She is from a wealthy family and uses her status and money to earn popularity',
+    image: 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
+    color: 'blue'
   },
+
   {
-    firstName: 'F',
-    lastName: 'FF',
-    occupation: 'FOcu',
-    age: 6,
-    description: 'Fdesc',
-    image: '',
-    color: ''
+    firstName: 'Jack',
+    lastName: 'Mustard',
+    occupation: 'Retired Football player',
+    age: 62,
+    description:
+      'He is a former football player who tries to get by on his former glory',
+    image:
+      'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg',
+    color: 'yellow'
   }
 ];
 
 // Rooms Array
 
 const roomsArray = [
-  { name: 'r1' },
-  { name: 'r2' },
-  { name: 'r3' },
-  { name: 'r4' },
-  { name: 'r5' },
-  { name: 'r6' },
-  { name: 'r7' },
-  { name: 'r8' },
-  { name: 'r9' },
-  { name: 'r10' },
-  { name: 'r11' },
-  { name: 'r12' },
-  { name: 'r13' },
-  { name: 'r14' },
-  { name: 'r15' }
+  {
+    name: 'Dining Room'
+  },
+
+  {
+    name: 'Conservatory'
+  },
+
+  {
+    name: 'Kitchen'
+  },
+
+  {
+    name: 'Study'
+  },
+
+  {
+    name: 'Library'
+  },
+
+  {
+    name: 'Billiard Room'
+  },
+
+  {
+    name: 'Lounge'
+  },
+
+  {
+    name: 'Ballroom'
+  },
+
+  {
+    name: 'Hall'
+  },
+
+  {
+    name: 'Spa'
+  },
+
+  {
+    name: 'Living Room'
+  },
+
+  {
+    name: 'Observatory'
+  },
+
+  {
+    name: 'Theater'
+  },
+
+  {
+    name: 'Guest House'
+  },
+
+  {
+    name: 'Patio'
+  }
 ];
 
 // Weapons Array
 
 const weaponsArray = [
-  { name: 'knife', weight: 1 },
-  { name: 'stick', weight: 3 },
-  { name: 'gun', weight: 2 },
-  { name: 'rope', weight: 1 },
-  { name: 'stone', weight: 4 },
-  { name: 'axe', weight: 5 },
-  { name: 'shotgun', weight: 3 },
-  { name: 'cable', weight: 1 },
-  { name: 'hand', weight: 3 }
+  {
+    name: 'rope',
+    weight: 10
+  },
+
+  {
+    name: 'knife',
+    weight: 8
+  },
+
+  {
+    name: 'candlestick',
+    weight: 2
+  },
+
+  {
+    name: 'dumbbell',
+    weight: 30
+  },
+
+  {
+    name: 'poison',
+    weight: 2
+  },
+
+  {
+    name: 'axe',
+    weight: 15
+  },
+
+  {
+    name: 'bat',
+    weight: 13
+  },
+
+  {
+    name: 'trophy',
+    weight: 25
+  },
+
+  {
+    name: 'pistol',
+    weight: 20
+  }
 ];
 
 // ITERATION 2
+
 let givemeRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 function selectRandom(arr) {
