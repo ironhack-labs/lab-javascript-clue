@@ -94,11 +94,6 @@ name: 'Dining Room'}
       
     ];
 
-
-
-
-
-
 // ITERACIÓN 2
 
 function  selectRandom(array){
@@ -106,10 +101,6 @@ function  selectRandom(array){
   return array[randoms]
  }
  
-
-
-
-
 function  pickMystery()  {
   let new_object={
     suspect: selectRandom(suspectsArray),
@@ -119,32 +110,29 @@ function  pickMystery()  {
   //console.log(new_object)
   return new_object
   }
-//console.log(pickMystery() )
+  //console.log(pickMystery() )
 
-// // ITERACIÓN 3
+// ITERACIÓN 3
 
 function revealMystery(object)  {
   //console.log(object.room.name)
-  
-  return `¡${object.suspect.firstName}${object.suspect.lastName} mató al Sr. Boddy usando el  ${object.weapon.name}en la ${object.room.name}!`
+  return `${object.suspect.firstName } ${object.suspect.lastName } killed Mr. Boddy using the ${object.weapon.name } in the ${object.room.name }!`
 }
-revealMystery(object = pickMystery())
-console.log(revealMystery(object))
-//console.log(object)
-//¡<PRIMER NOMBRE> <APELLIDO> mató al Sr. Boddy usando el <WEAPON> en la <HABITACIÓN>!
+console.log(revealMystery(object = pickMystery()))
+
+  
 
 
 
-
-// The following is required to make unit tests work.
-/* Environment setup. Do not modify the below code. */
-// if (typeof module !== 'undefined') {
-//   module.exports = {
-//     suspectsArray,
-//     roomsArray,
-//     weaponsArray,
-//     pickMystery,
-//     revealMystery,
-//     selectRandom
-//   };
-// }
+  // The following is required to make unit tests work.
+  /* Environment setup. Do not modify the below code. */
+if (typeof module !== 'undefined') {
+  module.exports = {
+    suspectsArray,
+    roomsArray,
+    weaponsArray,
+    pickMystery,
+    revealMystery,
+    selectRandom
+  };
+}
