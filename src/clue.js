@@ -101,17 +101,19 @@ function  selectRandom(array){
   let randoms=( Math.floor(Math.random() * (array.length - 0)+0))
   return array[randoms]
  }
-  selectRandom(array = weaponsArray)
+ 
 
 
 
 
-
-  
-
-
-
-function  pickMystery()  { }
+function  pickMystery()  {
+  let new_object={
+    sospechoso: selectRandom(suspectsArray),
+    arma: selectRandom(weaponsArray),
+    habitacion: selectRandom (roomsArray),
+  }
+  return pickMystery()
+  }
 
 
 // ITERACIÓN 3
