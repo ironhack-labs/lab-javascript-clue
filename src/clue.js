@@ -119,10 +119,13 @@ function pickMystery() {
 
 function revealMystery() {
 
+  const firstName = selectRandom(suspectsArray[0])
+  const lastName = selectRandom(suspectsArray[1])
+  const weapon = selectRandom(weaponsArray)
+  const place = selectRandom(roomsArray)
 
-  return '<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!'
-}
-
+  return ('${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${place}!')
+} //No me acaba de funcionar así...me da el último error. De hecho, creo que así me está dando tanto un nombre como un apellido aleatorios, no del mismo personaje. He intentado varias cosas, como unificar firstName y lastName con la variable name y llamando a --> name = selectRandom(suspectsArray[0, 1]) pero tampoco lo he conseguido. Habría sido bonito llegar a los 30passed/0failed jajjaja pero me he quedado en 29!
 
 
 // The following is required to make unit tests work.
