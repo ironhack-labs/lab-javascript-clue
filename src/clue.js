@@ -180,7 +180,7 @@ const weaponsArray = [
 },
 {
   name: 'poison',
-  weight: 1gi,
+  weight: 1,
 },
 
 ];
