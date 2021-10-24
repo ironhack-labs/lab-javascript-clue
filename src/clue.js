@@ -132,10 +132,10 @@ function selectRandom(arr) {
 
 function pickMystery() {
 
-  let randomSuspect = suspectsArray[Math.floor(Math.random() * suspectsArray.length)];
-  let randomRoom = roomsArray[Math.floor(Math.random() * roomsArray.length)];
-  let randomWeapon = weaponsArray[Math.floor(Math.random() * weaponsArray.length)];
-
+  let randomSuspect = selectRandom(suspectsArray);
+  let randomRoom = selectRandom(roomsArray)
+  let randomWeapon = selectRandom(weaponsArray)
+  
   let mistery = {
     suspect: randomSuspect,
     weapon: randomWeapon,
