@@ -128,38 +128,43 @@ function selectRandom(someArray) {
   return someArray[Math.floor(Math.random()*someArray.length)];
 }
 
-function pickMystery() {
-
+let mystery = {
+  suspect : "",
+  room : "",
+  weapon : "",
 }
 
+function pickMystery(someArray1, someArray2, someArray3) {
 
-// ITERATION 3
-
-function revealMystery(someArray1, someArray2, someArray3) {
   let suspect = selectRandom(someArray1);
-  console.log(suspect);
+  //console.log(suspect);
   
   let room = selectRandom(someArray2);
-  console.log(room);
+  //console.log(room);
 
   let weapon = selectRandom(someArray3);
-  console.log(weapon);
+  //console.log(weapon);
 
-  let mystery = {
-    suspect : "",
-    room : "",
-    weapon : "",
-  }
+  
 
-  mystery.suspect = suspect;
-  mystery.room = room;
-  mystery.weapon = weapon;
+  mystery.suspect = suspect.firstName += suspect.lastName;
+  mystery.room = room.name;
+  mystery.weapon = weapon.name;
 
   console.log(mystery);
   return mystery;
 }
 
-revealMystery(suspectsArray,roomsArray,weaponsArray);
+
+// ITERATION 3
+
+function revealMystery(someObject) {
+  console.log(`${someObject.suspect} killed Mr.Boddy using the ${someObject.weapon} in the ${someObject.room}!`)
+  return `${someObject.suspect} killed Mr.Boddy using the ${someObject.weapon} in the ${someObject.room}!`
+}
+
+pickMystery(suspectsArray,roomsArray,weaponsArray);
+revealMystery(mystery);
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
