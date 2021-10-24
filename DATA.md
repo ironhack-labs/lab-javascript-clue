@@ -87,7 +87,6 @@ name: bat --- weight: 13
 name: trophy --- weight: 25
 name: pistol --- weight: 20
 ```
-
 <br>
 
 ### Rooms
