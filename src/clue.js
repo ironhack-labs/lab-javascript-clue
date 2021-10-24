@@ -182,7 +182,7 @@ function revealMystery(mistery) {
   return `${mistery.suspect.firstName} ${mistery.suspect.lastName} killed Mr. Boddy using the ${mistery.weapon.name} in the ${mistery.room.name}!`
 }
 
-
+//------------------------------------------//
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
