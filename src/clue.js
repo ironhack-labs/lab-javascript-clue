@@ -64,7 +64,13 @@ function pickMystery () {
 
 //selectRandom ();
 // // ITERATION 3
-
+function revealMystery () {
+  let suspectis = suspect();
+  let roomis = room ();
+  let weaponis = weapon ();
+  let revelation = ${suspectis} killed Mr. Boddy using the ${weaponis} in the ${roomis}!
+    return revelation
+}
 // function revealMystery() {}
 
 
