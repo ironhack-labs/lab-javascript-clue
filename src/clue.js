@@ -1,4 +1,6 @@
-// ITERATION 1
+// ITERATION 1.
+// Let's create an array for every card type. These arrays should be named suspectsArray, weaponsArray, roomsArray. Each array will contain objects, where each object represents one card.
+
 
 // Suspects Array
 
@@ -39,20 +41,44 @@ const weaponsArray = [{name: "rope", weight: 10},
 {name: "trophy", weight: 25},
 {name: "pistol", weight: 20}];
 
-// ITERATION 2
-
-function selectRandom() {
-  for (var i = 0; i < suspectsArray; i++) {
-    console.log (`The suspect is` + (i+1) + suspectsArray[i])
-  }
+function suspect () {
+  let randomSuspect = suspectsArray[Math.floor(Math.random() * suspectsArray.length)];
+    return randomSuspect;
+} 
+function room () {
+  let randomRoom = roomsArray[Math.floor(Math.random() * roomsArray.length)];
+    return randomRoom;
+} 
+function weapon () {
+  let randomWeapon = weaponsArray[Math.floor(Math.random() * weaponsArray.length)];
+    return randomWeapon;
+}  
+function selectRandom () {
+console.log (suspect(), room(), weapon());
 }
+selectRandom ();
 
-console.log (selectRandom());
+// ITERATION 2
+// Declare a function named pickMystery that takes no arguments and returns an object with three properties: suspect, weapon and room, each holding as a value a card of that specific type. You can get a random card of each type by calling selectRandom on each card stack.
 
-// function pickMystery() {}
+function suspect () {
+  let randomSuspect = suspectsArray[Math.floor(Math.random() * suspectsArray.length)].firstName;
+    return randomSuspect;
+} 
+function room () {
+  let randomRoom = roomsArray[Math.floor(Math.random() * roomsArray.length)].name;
+    return randomRoom;
+} 
+function weapon () {
+  let randomWeapon = weaponsArray[Math.floor(Math.random() * weaponsArray.length)].name
+    return randomWeapon;
+}  
+function pickMystery () {
+console.log (suspect(), room(), weapon());
+}
+selectRandom ();
 
-
-// // ITERATION 3
+// ITERATION 3
 
 // function revealMystery() {}
 
