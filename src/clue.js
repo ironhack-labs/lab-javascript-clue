@@ -80,9 +80,15 @@ selectRandom ();
 
 // ITERATION 3
 
-// function revealMystery() {}
+function revealMystery () {
+  let suspectis = suspect();
+  let roomis = room ();
+  let weaponis = weapon ();
+  let revelation = `${suspectis} killed Mr. Boddy using the ${weaponis} in the ${roomis}!`
+    return revelation
+}
 
-
+console.log (revealMystery ());
 
 // // The following is required to make unit tests work.
 // /* Environment setup. Do not modify the below code. */
