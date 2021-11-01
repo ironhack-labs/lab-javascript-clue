@@ -24,8 +24,9 @@ const suspectsArray = [
   occupation: "Designer",
   age: 22,
   description: "Billionaire video game designer",
-  image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg"
-  color: "purple"},
+  image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
+  color: "purple"
+  },
   {
   firstName: "Kasandra",
   lastName: "Scarlet",
@@ -53,15 +54,15 @@ const suspectsArray = [
   ];
   
   const  weaponsArray = [
-    { name: "rope", wieght: 10 },
-    { name: "knife", weight: 8},
-    { name: "candlestick", wieght: 2 },
-    { name: "dumbbell", wieght: 30 },
-    { name: "poison", wieght: 2 },
-    { name: "axe", wieght: 15 },
-    { name: "bat", wieght: 13 },
-    { name: "trophy", wieght: 25 },
-    { name: "pistol", wieght: 20 },
+    { name: "rope", weight: 10, },
+    { name: "knife", weight: 8,},
+    { name: "candlestick", weight: 2, },
+    { name: "dumbbell", weight: 30, },
+    { name: "poison", weight: 2, },
+    { name: "axe", weight: 15, },
+    { name: "bat", weight: 13, },
+    { name: "trophy", weight: 25, },
+    { name: "pistol", weight: 20, },
   ];
   const roomsArray = [
     { name: "Dining Room"},
@@ -78,39 +79,36 @@ const suspectsArray = [
     { name: "Observartory"},
     { name: "Theater"},
     { name: "Guest House"},
-    { name: "Patio"},
+    { name: "Patio"}, 
   ];
-  /*const students = [
-    { name: "Bob", age: 17 },
-    { name: "Susy", age: 18 },
-    { name: "Ted", age: 18 },
-    { name: "Sarah", age: 20 },
-    { name: "Bill", age: 19 }
-  ];*/
-
-// Rooms Array
-
-const roomsArray = [];
-
-// Weapons Array
-
-const weaponsArray = [];
-
 
 // ITERATION 2
 
-function selectRandom() {}
-
-function pickMystery() {}
+function selectRandom(array) {
+  let random = Math.floor(Math.random() * array.length);
+  const cardRandom = array[random];
+  return cardRandom;
+}
+ 
+function pickMystery() {
+  return {
+  suspect: selectRandom(suspectsArray),
+  weapon: selectRandom(weaponsArray), 
+  rooom: selectRandom(roomsArray), 
+  };
+  
+}
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(ObjectRandom) {
+  return `${ObjectRandom.suspect.firstName} ${ObjectRandom.suspect.lastName} killed Mr. Boddy using the ${ObjectRandom.weapon.name} in the ${ObjectRandom.room.name}`
+}
 
 
 
-// The following is required to make unit tests work.
+// The following is required to make unit tests work. 
 /* Environment setup. Do not modify the below code. */
 if (typeof module !== 'undefined') {
   module.exports = {
