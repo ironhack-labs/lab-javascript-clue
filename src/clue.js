@@ -83,7 +83,19 @@ const roomsArray = [
 
 // Weapons Array
 
-const weaponsArray = [];
+const weaponsArray = [
+{ name: "rope", weigth: 10},
+{ name: "knife", weigth: 8},
+{ name: "candlestick", weigth: 2},
+{ name: "dumbbell", weigth: 30},
+{ name: "poison", weigth: 2},
+{ name: "axe", weigth: 15},
+{ name: "bat", weigth: 13},
+{ name: "trophy", weigth: 25},
+{ name: "pistol", weigth: 20}
+
+
+];
 
 
 // ITERATION 2
