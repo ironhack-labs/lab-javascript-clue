@@ -109,11 +109,9 @@ function selectRandom(someArr) {
     return someArr[0];
   }
 
-  let randomNum = Math.round(Math.random() * someArr.length);
+  let randomCard = someArr[Math.round(Math.random() * someArr.length)];
 
-  
-}
-  // return Math.round(Math.random() * someArr.length);
+  return randomCard;
 }
 
 function pickMystery() {}
