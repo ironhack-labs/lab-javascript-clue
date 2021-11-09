@@ -167,7 +167,7 @@ function pickMystery() {
 
 
 // ITERATION 3
-//<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!
+
 function revealMystery(myObj) {
   let message = myObj.suspect.firstName + " " + myObj.suspect.lastName + " " + "killed Mr. Boddy using the " + myObj.weapon.name + " in the " + myObj.room.name + "!";
   return message;
