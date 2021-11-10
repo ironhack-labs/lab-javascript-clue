@@ -125,10 +125,15 @@ function pickMystery() {
 // ITERATION 3
 
 function revealMystery(envelope) {
-  let firstName = envelope.suspect.firstName;
-  let lastName = envelope.suspect.lastName;
-  let weapon = envelope.weapon.name;
-  let room = envelope.room.name;
+  const { firstName, lastName } = envelope.suspect;
+  const { name: weapon } = envelope.weapon;
+  const { name: room } = envelope.room;
+
+  // let firstName = envelope.suspect.firstName;
+  // let lastName = envelope.suspect.lastName;
+  // let weapon = envelope.weapon.name;
+  // let room = envelope.room.name;
+
   // {
   //       suspect: { firstName: 'Victor', lastName: 'Plum' },
   //       weapon: { name: 'poison' },
