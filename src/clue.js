@@ -76,21 +76,21 @@ const suspectsArray = [
 // Rooms Array
 
 const roomsArray = [
-{ name: "dining Room",
-  name: "Conservatory",
-  name: "Kitchen",
-  name: "Study",
-  name: "Library",
-  name: "Billiard Room",
-  name: "Lounge",
-  name: "Ballroom",
-  name: "Hall",
-  name: "Spa",
-  name: "Living Room", 
-  name: "Observatory",
-  name: "Theater",
-  name: "Guest House",
-  name: "Patio"
+{ name: "dining Room"},
+{  name: "Conservatory"},
+{  name: "Kitchen"},
+{  name: "Study"},
+{  name: "Library"},
+{  name: "Billiard Room"},
+{  name: "Lounge"},
+{  name: "Ballroom"},
+{  name: "Hall"},
+{  name: "Spa"},
+{  name: "Living Room"}, 
+{  name: "Observatory"},
+{  name: "Theater"},
+{  name: "Guest House"},
+  {name: "Patio"
 }
 
 
@@ -100,15 +100,15 @@ const roomsArray = [
 // Weapons Array
 
 const weaponsArray = [
-{ name: "rope", weigth: 10},
-{ name: "knife", weigth: 8},
-{ name: "candlestick", weigth: 2},
-{ name: "dumbbell", weigth: 30},
-{ name: "poison", weigth: 2},
-{ name: "axe", weigth: 15},
-{ name: "bat", weigth: 13},
-{ name: "trophy", weigth: 25},
-{ name: "pistol", weigth: 20}
+{ name: "rope", weight: 10},
+{ name: "knife", weight: 8},
+{ name: "candlestick", weight: 2},
+{ name: "dumbbell", weight: 30},
+{ name: "poison", weight: 2},
+{ name: "axe", weight: 15},
+{ name: "bat", weight: 13},
+{ name: "trophy", weight: 25},
+{ name: "pistol", weight: 20}
 
 
 ];
@@ -116,15 +116,43 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(arr) {
+  const randomNum = Math.round(Math.random()*(arr.length-1))
+  return arr[randomNum]
+}
 
-function pickMystery() {}
+selectRandom(weaponsArray)
+
+
+selectRandom(roomsArray)
+
+
+selectRandom(suspectsArray)
+
+
+
+
+
+
+
+function pickMystery() {
+
+let misteryChoose = {
+  suspect: selectRandom(suspectsArray) , 
+  weapon: selectRandom(weaponsArray),
+  room: selectRandom(roomsArray)
+}
+return misteryChoose
+}
 
 
 // ITERATION 3
 
-function revealMystery() {}
-
+function revealMystery(envelope) {
+ 
+  return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
+  
+  }
 
 
 // The following is required to make unit tests work.
