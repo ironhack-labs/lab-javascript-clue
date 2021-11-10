@@ -4,6 +4,7 @@
 
 const suspectsArray = [];
 
+
 // Rooms Array
 
 const roomsArray = [];
