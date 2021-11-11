@@ -114,7 +114,7 @@ function pickMystery() {
     room: selectRandom(roomsArray)
 };
 
-  return theMystery;
+  return theMystery
 }
 
 
