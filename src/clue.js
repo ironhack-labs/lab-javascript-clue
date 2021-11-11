@@ -104,21 +104,32 @@ function selectRandom(someArr) {
   if (!someArr.length) {
     return;
   }
-
   if (someArr.length === 1) {
     return someArr[0];
+  } else {
+    return someArr[Math.round(Math.random() * someArr.length)];
   }
-
-  let randomCard = someArr[Math.round(Math.random() * someArr.length)];
-
-  return randomCard;
 }
 
-function pickMystery() {}
+function pickMystery() {
+  let sus = selectRandom(suspectsArray);
+  let weap = selectRandom(weaponsArray);
+  let roo = selectRandom(roomsArray);
+  let objRandom = {};
+  objRandom.suspect = sus;
+  objRandom.weapon = weap;
+  objRandom.room = roo;
+
+  return objRandom;
+}
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(secret) {
+  return `${secret.suspect.firstName} ${secret.suspect.lastName} killed Mr. Boddy using the ${secret.weapon.name} in the ${secret.room.name}!`;
+}
+
+// ('<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!');
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
