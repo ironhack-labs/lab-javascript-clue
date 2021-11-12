@@ -82,7 +82,7 @@ const roomsArray = [
 // Weapons Array
 
 const weaponsArray = [
- { name: 'rope', weight: 10},
+  {name: 'rope', weight: 10},
   {name: 'knife', weight: 8},
   {name: 'candlestick', weight: 2},
   {name: 'dumbbell', weight: 30},
@@ -97,7 +97,7 @@ const weaponsArray = [
 // ITERATION 2
 
 function selectRandom(arr) {
-    const randomArray = Math.round(Math.random() * (arr.length-1));
+    const randomArray = Math.floor(Math.random() * (arr.length));
     return arr[randomArray];
   }
 
