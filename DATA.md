@@ -9,7 +9,7 @@ Use this data to model your game cards into objects.
 ```
 mrGreen
 firstName: Jacob
-lastName: Green
+lastName": Green
 occupation: Entrepreneur
 age: 45
 description: He has a lot of connections
@@ -20,7 +20,7 @@ color: green
 ```
 drOrchid
 firstName: Doctor
-lastName: Orchid
+lastName": Orchid
 occupation: Scientist
 age: 26
 description: PhD in plant toxicology. Adopted daughter of Mr. Boddy
