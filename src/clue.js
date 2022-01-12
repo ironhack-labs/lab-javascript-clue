@@ -162,7 +162,7 @@ function selectRandom(inputArray) {
   } else if (inputArray.length == 1) {
     return inputArray[0]
   } else {
-    const randomInteger = Math.round(Math.random() * inputArray.length);
+    const randomInteger = Math.floor(Math.random() * inputArray.length);
     return inputArray[randomInteger]
   }
   
@@ -184,7 +184,7 @@ function pickMystery() {
 
 function revealMystery(envelope) {
 
-  const message = `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+  const message = `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name }!`;
 
   console.log(message)
 
