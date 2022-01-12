@@ -158,15 +158,33 @@ console.log(weaponsArray)
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(arr) {
+  let random = Math.floor(Math.random() * arr.length);
+  return arr[random];
+}
 
-function pickMystery() {}
+console.log(selectRandom(suspectsArray))
+console.log(selectRandom(roomsArray))
+console.log(selectRandom(weaponsArray))
+
+function pickMystery() {
+  let x = {}
+  x.suspect = selectRandom(suspectsArray);
+  x.weapon = selectRandom(weaponsArray);
+  x.room = selectRandom(roomsArray);
+  return x;
+}
+
+console.log(pickMystery())
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(obj) {
+  return `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`;
+}
 
+console.log(revealMystery(pickMystery()))
 
 
 // The following is required to make unit tests work.
