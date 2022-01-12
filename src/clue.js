@@ -154,14 +154,42 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(inputArray) {
 
-function pickMystery() {}
+  if (!inputArray || !Array.isArray(inputArray) || inputArray.length == 0) {
+    return undefined
+    // throw new Error("Please pass a non-empty array")
+  } else if (inputArray.length == 1) {
+    return inputArray[0]
+  } else {
+    const randomInteger = Math.round(Math.random() * inputArray.length);
+    return inputArray[randomInteger]
+  }
+  
+}
+
+function pickMystery() {
+  
+  const randomObject = {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray)
+  };
+
+  return randomObject
+}
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(envelope) {
+
+  const message = `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+
+  console.log(message)
+
+  return message;
+}
 
 
 
