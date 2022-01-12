@@ -120,12 +120,11 @@ pickMystery();
 
 // ITERATION 3
 
-let mystery = pickMystery();
 function revealMystery(object) {
   return `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`
 }
 
-revealMystery(mystery);
+revealMystery(pickMystery());
 
 
 
