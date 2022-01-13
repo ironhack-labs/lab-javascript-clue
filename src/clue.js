@@ -128,12 +128,12 @@ function selectRandom(selection) {
   return random;
 }
 
-
+let mystery
 function pickMystery() {
   let suspect = selectRandom(suspectsArray);
   let room = selectRandom(roomsArray);
   let weapon = selectRandom(weaponsArray);
-  let mystery = {suspect, weapon, room};
+   mystery = {suspect, weapon, room};
   return mystery;
   
 
