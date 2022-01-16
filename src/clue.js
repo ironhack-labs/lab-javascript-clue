@@ -4,8 +4,6 @@
 
 const suspectsArray = [
   {
-    // name: 'mrGreen',
-    // info: {
     firstName: 'Jacob',
     lastName: 'Green',
     occupation: 'Entrepreneur',
@@ -13,11 +11,8 @@ const suspectsArray = [
     description: 'He has a lot of connections',
     image: 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
     color: 'green'
-    // }
   },
   {
-    // name: 'drOrchid',
-    // info: {
     firstName: 'Doctor',
     lastName: 'Orchid',
     occupation: 'Scientist',
@@ -25,11 +20,8 @@ const suspectsArray = [
     description: 'PhD in plant toxicology.Adopted daughter of Mr.Boddy',
     image: 'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
     color: 'white'
-    // }
   },
   {
-    // name: 'profPlum',
-    // info: {
     firstName: 'Victor',
     lastName: 'Plum',
     occupation: 'Designer',
@@ -37,11 +29,8 @@ const suspectsArray = [
     description: 'Billionaire video game designer',
     image: 'https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg',
     color: 'purple'
-    // }
   },
   {
-    // name: 'missScarlet',
-    // info: {
     firstName: 'Kasandra',
     lastName: 'Scarlet',
     occupation: 'Actor',
@@ -49,11 +38,8 @@ const suspectsArray = [
     description: 'She is an A- list movie star with a dark past',
     image: 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
     color: 'red'
-    // }
   },
   {
-    // name: 'mrsPeacock',
-    // info: {
     firstName: 'Eleanor',
     lastName: 'Peacock',
     occupation: 'Socialité',
@@ -61,11 +47,8 @@ const suspectsArray = [
     description: 'She is from a wealthy family and uses her status and money to earn popularity',
     image: 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
     color: 'blue'
-    // }
   },
   {
-    // name: 'mrMustard',
-    // info: {
     firstName: 'Jack',
     lastName: 'Mustard',
     occupation: 'Retired Football player',
@@ -73,7 +56,6 @@ const suspectsArray = [
     description: 'He is a former football player who tries to get by on his former glory',
     image: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg',
     color: 'yellow'
-    // }
   }
 ];
 
