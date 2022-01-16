@@ -106,7 +106,8 @@ function selectRandom(array) {
 }
 
 function pickMystery() {
-  let mystery =
+  //return an object with 3 properties containing previous function
+  const mystery =
   {
     suspect: selectRandom(suspectsArray),
     weapon: selectRandom(weaponsArray),
@@ -114,13 +115,18 @@ function pickMystery() {
   }
   return mystery
 }
-console.log(pickMystery())
+
 
 // ITERATION 3
 
-function revealMystery() { }
+function revealMystery() {
+  let envelop = {}
+  envelop = pickMystery()
 
-
+  return `${envelop.suspect.firstName} ${envelop.suspect.lastName} killed Mr. Boddy using the ${envelop.weapon.name} in the ${envelop.room.name}!`
+  
+}
+console.log(revealMystery())
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
