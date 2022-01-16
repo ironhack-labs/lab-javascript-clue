@@ -78,15 +78,15 @@ const roomsArray = [
   { name: Kitchen },
   { name: Study },
   { name: Library },
-  { name: Billiard Room },
+  //{ name: Billiard Room },
   { name: Lounge },
   { name: Ballroom },
   { name: Hall },
   { name: Spa },
-  { name: Living Room },
+  //{ name: Living Room },
   { name: Observatory },
   { name: Theater },
-  { name: Guest House },
+  //{ name: Guest House },
   { name: Patio },
 
 ];
@@ -141,12 +141,21 @@ function selectRandom(cardStack) {
   return cardStack[Math.floor((Math.random() * cardStack.length))]
 }
 
-function pickMystery() { }
+function pickMystery() {
+  const mistery = {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray),
+  }
+  return mistery
+}
 
 
 // ITERATION 3
 
-function revealMystery() { }
+function revealMystery(mistery) {
+  return `${envelope.firstName}${envelope.lastName} killed Mr. Boddy using the ${envelope.weapon} in the ${envelope.room}!`
+}
 
 
 

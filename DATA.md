@@ -30,13 +30,13 @@ color: white
 
 ```
 profPlum
-firstName: Victor
-lastName: Plum
-occupation: Designer
-age: 22
-description: Billionaire video game designer
-image: https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg
-color: purple
+firstName: Doctor
+lastName: Orchid
+occupation: Scientist
+age: 26
+description: PhD in plant toxicology. Adopted daughter of Mr. Boddy
+image: http://www.radiotimes.com/uploads/images/Original/111967.jpg
+color: white
 ```
 
 ```
@@ -52,13 +52,13 @@ color: red
 
 ```
 mrsPeacock
-firstName: Eleanor
-lastName: Peacock
-occupation: Socialité
-age: 36
-description: She is from a wealthy family and uses her status and money to earn popularity
-image: https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg
-color: blue
+firstName: Kasandra
+lastName: Scarlet
+occupation: Actor
+age: 31
+description: She is an A-list movie star with a dark past
+image: https://www.radiotimes.com/uploads/images/Original/111967.jpg
+color: red
 ```
 
 ```
