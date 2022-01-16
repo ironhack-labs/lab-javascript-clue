@@ -62,21 +62,21 @@ const suspectsArray = [
 // Rooms Array
 
 const roomsArray = [
-  {name: 'Dining Room'},
-{name: 'Conservatory'},
-{name: 'Kitchen'},
-{name: 'Study'},
-{name: 'Library'},
-{name: 'Billiard Room'},
-{name: 'Lounge'},
-{name: 'Ballroom'},
-{name: 'Hall'},
-{name: 'Spa'},
-{name: 'Living Room'},
-{name: 'Observatory'},
-{name: 'Theater'},
-{name: 'Guest House'},
-{name: 'Patio'},
+  { name: 'Dining Room' },
+  { name: 'Conservatory' },
+  { name: 'Kitchen' },
+  { name: 'Study' },
+  { name: 'Library' },
+  { name: 'Billiard Room' },
+  { name: 'Lounge' },
+  { name: 'Ballroom' },
+  { name: 'Hall' },
+  { name: 'Spa' },
+  { name: 'Living Room' },
+  { name: 'Observatory' },
+  { name: 'Theater' },
+  { name: 'Guest House' },
+  { name: 'Patio' },
 ];
 
 // Weapons Array
@@ -96,10 +96,25 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() { }
+function selectRandom(array) {
+  // getting randome object
+  let randomCard = {}
+  randomCard = array[Math.floor(Math.random() * array.length)]
+  // should return a random element from the array
+  return randomCard
 
-function pickMystery() { }
+}
 
+function pickMystery() {
+  let mystery =
+  {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray),
+  }
+  return mystery
+}
+console.log(pickMystery())
 
 // ITERATION 3
 
