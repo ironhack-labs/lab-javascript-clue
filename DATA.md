@@ -93,7 +93,6 @@ name: pistol --- weight: 20
 ### Rooms
 
 ```
-name: Dining Room
 name: Conservatory
 name: Kitchen
 name: Study
