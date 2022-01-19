@@ -154,8 +154,15 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(envelope) {
 
+  const killerName = envelope.suspect.firstName;
+  const killerSurname = envelope.suspect.lastName;
+  const weaponUsed = envelope.weapon.name;
+  const roomHappened = envelope.room.name;
+
+  return `${killerName} ${killerSurname} killed Mr. Boddy using the ${weaponUsed} in the ${roomHappened}!`;
+}
 
 
 // The following is required to make unit tests work.
