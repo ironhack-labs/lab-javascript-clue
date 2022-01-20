@@ -153,9 +153,9 @@ function selectRandom(arr) {
 
 function pickMystery() {
   obj = {
-    suspect: `${selectRandom(suspectsArray)}`,
-    weapon: `${selectRandom(weaponsArray)}`,
-    room: `${selectRandom(roomsArray)}`
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray)
   };
   return obj
 };
@@ -164,7 +164,7 @@ function pickMystery() {
 // ITERATION 3
 
 function revealMystery() {
-  return `"${pickMystery(obj.suspect.firstName)} ${pickMystery(obj.suspect.lastName)} killed Mr. Boddy using the ${pickMystery(obj.weapon.name)} in the ${pickMystery(obj.room.name)}!"`
+  return `${pickMystery(obj.suspect.firstName)} ${pickMystery(obj.suspect.lastName)} killed Mr. Boddy using the ${pickMystery(obj.weapon.name)} in the ${pickMystery(obj.room.name)}!`
 };
 
 
