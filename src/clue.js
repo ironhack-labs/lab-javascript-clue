@@ -93,9 +93,12 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+// Queria brincar um pouco com arrow functions XD
+const selectRandom = stack => stack[Math.floor(Math.random() * stack.length)]
 
-function pickMystery() {}
+function pickMystery() {
+  return { suspect: selectRandom(suspectsArray), weapon: selectRandom(weaponsArray), room: selectRandom(roomsArray) }
+}
 
 
 // ITERATION 3
