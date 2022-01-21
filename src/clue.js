@@ -116,13 +116,13 @@ function selectRandom(arr) {
 
 function pickMystery() {
   let mystery = {}
-  let suspectChoose = selectRandom(suspectsArray);
-  let roomChoose = selectRandom(roomsArray);
-  let weaponChoose = selectRandom(weaponsArray);
+  let chosenSuspect = selectRandom(suspectsArray);
+  let chosenRoom = selectRandom(roomsArray);
+  let chosenWeapon = selectRandom(weaponsArray);
   
-  mystery.suspect = suspectChoose;
-  mystery.room = roomChoose;
-  mystery.weapon = weaponChoose;
+  mystery.suspect = chosenSuspect;
+  mystery.room = chosenRoom;
+  mystery.weapon = chosenWeapon;
 
   return mystery;
   
