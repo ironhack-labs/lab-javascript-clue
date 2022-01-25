@@ -8,18 +8,17 @@ Use this data to model your game cards into objects.
 
 ```
 mrGreen
-firstName: Jacob
-lastName: Green
-occupation: Entrepreneur
-age: 45
-description: He has a lot of connections
-image: https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg
-color: green
+{" firstName: Jacob
+{" stName: Green
+{" cupation: Entrepre{ e: 45
+"{" scription: He has a lot of connections
+{ age: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg
+{ lor: "green
 ```
 
 ```
 drOrchid
-firstName: Doctor
+{ firstName: Doctor
 lastName: Orchid
 occupation: Scientist
 age: 26
@@ -30,7 +29,7 @@ color: white
 
 ```
 profPlum
-firstName: Victor
+{ firstName: Victor
 lastName: Plum
 occupation: Designer
 age: 22
@@ -41,7 +40,7 @@ color: purple
 
 ```
 missScarlet
-firstName: Kasandra
+{ firstName: Kasandra
 lastName: Scarlet
 occupation: Actor
 age: 31
@@ -52,7 +51,7 @@ color: red
 
 ```
 mrsPeacock
-firstName: Eleanor
+{ firstName: Eleanor
 lastName: Peacock
 occupation: Socialité
 age: 36
@@ -63,7 +62,7 @@ color: blue
 
 ```
 mrMustard
-firstName: Jack
+{ firstName: Jack
 lastName: Mustard
 occupation: Retired Football player
 age: 62
