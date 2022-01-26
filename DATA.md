@@ -7,14 +7,7 @@ Use this data to model your game cards into objects.
 ### Suspects
 
 ```
-mrGreen
-firstName: Jacob
-lastName: Green
-occupation: Entrepreneur
-age: 45
-description: He has a lot of connections
-image: https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg
-color: green
+
 ```
 
 ```
@@ -77,15 +70,7 @@ color: yellow
 ### Weapons
 
 ```
-name: rope --- weight: 10
-name: knife --- weight: 8
-name: candlestick --- weight: 2
-name: dumbbell --- weight: 30
-name: poison --- weight: 2
-name: axe --- weight: 15
-name: bat --- weight: 13
-name: trophy --- weight: 25
-name: pistol --- weight: 20
+
 ```
 
 <br>
@@ -93,19 +78,5 @@ name: pistol --- weight: 20
 ### Rooms
 
 ```
-name: Dining Room
-name: Conservatory
-name: Kitchen
-name: Study
-name: Library
-name: Billiard Room
-name: Lounge
-name: Ballroom
-name: Hall
-name: Spa
-name: Living Room
-name: Observatory
-name: Theater
-name: Guest House
-name: Patio
+
 ```
