@@ -98,14 +98,24 @@ function selectRandom(array) {
 }
 
 function pickMystery() {
-  
-  return ;
+  return {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray)
+  };
 }
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(enveloppeObject) {
+  let enveloppeObject = {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray)
+  }
+  return '${firstName.toUpperCase}' ;
+}
 
 
 

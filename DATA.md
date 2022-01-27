@@ -52,12 +52,12 @@ color: 'red'}
 
 ```
 mrsPeacock
-{firstName: 'Victor',
 firstName: 'Eleanor',
 lastName: 'Peacock',
 occupation: 'Socialité',
 age: '36',
 description: 'She is from a wealthy family and uses her status and money to earn popularity',
+{firstName: 'Victor',
 image: 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
 color: 'blue'}
 ```
@@ -78,16 +78,16 @@ color: 'yellow',}
 
 ### Weapons
 
-```
-{name: rope , weight: 10}
-{name: knife , weight: 8}
-{name: candlestick , weight: 2}
-{name: dumbbell , weight: 30}
-{name: poison , weight: 2}
-{name: axe , weight: 15}
-{name: bat , weight: 13}
-{name: trophy , weight: 25}
-{name: pistol , weight: 20}
+`` `
+{ name : rope , weight: 10 }
+{ name : knife , weight: 8 }
+{ name : candlestick , weight: 2 }
+{ name : dumbbell , weight: 30 }
+{ name : poison , weight: 2 }
+{ name : axe , weight: 15 }
+{ name : bat , weight: 13 }
+{ name : trophy , weight: 25 }
+{ name : pistol , weight: 20 }
 ```
 
 <br>
