@@ -62,136 +62,135 @@ const suspectsArray = [
 // Rooms Array
 
 const roomsArray = [
-    {
-    name: 'Dining Room',
-    },
-    {
-    name: 'Conservatory',
-    },
-    {
-    name: 'Kitchen',
-    },
-    {
-    name: 'Study',
-    },
-    {
-    name: 'Library',
-    },
-    {
-    name: 'Billiard Room',
-    },
-    {
-    name: 'Lounge',
-    },
-    {
-    name: 'Ballroom',
-    },
-    {
-    name: 'Hall',
-    },
-    {
-    name: 'Spa',
-    },
-    {
-    name: 'Living Room',
-    },
-    {
-    ame: 'Observatory',
-    },
-    {
-    name: 'Theater',
-    },
-    {
-    name: 'Guest House',
-    },
-    {
-    name: 'Patio',
-    }
-
+  { 
+    name: 'Dining Room'
+  },
+  {
+    name: 'Conservatory'
+  },
+  { 
+    name: 'Kitchen'
+  },
+  {
+    name: 'Study'
+  },
+  { 
+    name: 'Library'
+  },
+  {
+    name: 'Billiard Room'
+  },
+  { 
+    name: 'Lounge'
+  },
+  {
+    name: 'Ballroom'
+  },
+  { 
+    name: 'Hall'
+  },
+  {
+    name: 'Spa'
+  },
+  { 
+    name: 'Living Room'
+  },
+  {
+    name: 'Observatory'
+  },
+  {
+    name: 'Theater'
+  },
+  { 
+    name: 'Guest House'
+  },
+  {
+    name: 'Patio'
+  }  
 ];
-   
 
 // Weapons Array
 
 const weaponsArray = [
-    {
+  {
     name: 'rope',
-    weight: 10,
-    },
-    {
+    weight: 10
+  },
+  {
     name: 'knife',
-    weight: 8,
-    },
-    {
+    weight: 8
+  },
+  {
     name: 'candlestick',
-    weight: '2',
-    },
-    {
-    name: 'dumbbell',
-    weight: 30,
-    },
-    {
+    weight: 2
+  },
+  {
+    name: 'dumbbell',  
+    weight: 30
+  },
+  {
     name: 'poison',
-    weight: 2,
-    },
-    {
+    weight: 2
+  },
+  {
     name: 'axe',
-    weight: 15,
-    },
-    {
+    weight: 15
+  },
+  {
     name: 'bat',
-    weight: 13,
-    },
-    {
+    weight: 13
+  },
+  {
     name: 'trophy',
-    weight: 25 ,
-    },
-    {
+    weight: 25
+  },
+  {
     name: 'pistol',
-    weight: 20 ,
-    },
-]
-
-
-
-
-
+    weight: 20
+  }
+];
 
 
 // ITERATION 2
+/*
+function selectRandomSuspect(suspectsArray){
+  suspectsArray = suspectsArray[Math.floor( Math.random() * suspectsArray.length)]
+  return suspectsArray
+},
+function selecRandomRoom(roomsArray){
+},
+function selectRandom(weaponsArray) {
+},*/
 
-function selectRandom(arr){
-let num=Math.floor(Math.random()* arr.length)
-return arr[num]
+
+
+function selectRandom(arr) {
+  if (suspectsArray.length == 0 || weaponsArray.length == 0 || roomsArray.length == 0) {
+    return undefined
+  } else {
+    let num = Math.floor(Math.random() * arr.length)
+    return arr[num]
+  }
 }
 
-console.log(selectRandom(suspectsArray))
-
-function pickMystery() {
-
-let object={}
-
-object.suspect=selectRandom(suspectsArray)
-object.weapon=selectRandom(weaponsArray)
-object.room =selectRandom(roomsArray)
-return object
-
+function pickMystery(suspect, weapon, room) {
+  let obj = {}
+  obj.suspect = selectRandom(suspectsArray)
+  obj.room = selectRandom(roomsArray)
+  obj.weapon = selectRandom(weaponsArray)
+  return obj
 }
-function pickMystery()
-
 
 // ITERATION 3
 
-function revealMystery() {
-return`${object.suspect.firstName} ${object.suspect.firstName} killed Mr Boddy using ${object.weapon}`
-
+function revealMystery(obj) {
+  return `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`
 }
-revealMystery(pickMystery())
+
 
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
-/*
 if (typeof module !== 'undefined') {
   module.exports = {
     suspectsArray,
@@ -202,4 +201,3 @@ if (typeof module !== 'undefined') {
     selectRandom
   };
 }
-*/
