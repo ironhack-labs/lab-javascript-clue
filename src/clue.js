@@ -1,7 +1,5 @@
 // ITERATION 1
-
 // Suspects Array
-
 const suspectsArray = [
   {
     firstName: "Jacob",
@@ -60,7 +58,6 @@ const suspectsArray = [
 ];
 
 // Rooms Array
-
 const roomsArray = [
   { name: "Dining Room" },
   { name: "Conservatory" },
@@ -80,7 +77,6 @@ const roomsArray = [
 ];
 
 // Weapons Array
-
 const weaponsArray = [
   { name: "rope", weight: 10 },
   { name: "knife", weight: 8 },
@@ -93,13 +89,19 @@ const weaponsArray = [
   { name: "pistol", weight: 20 }
 ];
 
-
 // ITERATION 2
+const getRandomNumber = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
-function selectRandom() {}
+const selectRandom = array => {
+  const randomIndex = getRandomNumber(0, array.length);
+  return array[randomIndex];
+};
 
 function pickMystery() {}
-
 
 // ITERATION 3
 
