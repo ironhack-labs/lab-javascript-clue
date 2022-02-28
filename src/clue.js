@@ -107,9 +107,7 @@ const pickMystery = () => {
 
 // ITERATION 3
 
-function revealMystery() {}
-
-
+const revealMystery = object => `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`;
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
