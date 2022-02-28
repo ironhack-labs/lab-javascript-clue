@@ -94,14 +94,16 @@ const getRandomNumber = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
-}
+};
 
 const selectRandom = array => {
   const randomIndex = getRandomNumber(0, array.length);
   return array[randomIndex];
 };
 
-function pickMystery() {}
+const pickMystery = () => {
+  return { suspect: selectRandom(suspectsArray), weapon: selectRandom(weaponsArray), room: selectRandom(roomsArray) };
+};
 
 // ITERATION 3
 
