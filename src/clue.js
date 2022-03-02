@@ -165,22 +165,8 @@ function selectRandom(array) {
   return arraySelec;
 }
 
-/* #### Create the mystery
 
-Declare a function named `pickMystery` that takes no arguments 
-and returns an object with three properties: _suspect_, _weapon_ and _room_, 
-suspect: suspectsArray (array of obj)
-weapon: weaponsArray    ""
-room: roomsArray        ""
-each holding as a value a card of that specific type. 
-You can get a random card of each type by calling `selectRandom` 
-on each card stack. */
 function pickMystery() {
-  /* let pickObj = {
-    suspect=selectRandom(suspectsArray),
-    weapon=selectRandom(weaponsArray),
-    room=selectRandom(roomsArray)
-  }; */
   const pickObj=new Object;
   pickObj.suspect=selectRandom(suspectsArray),
   pickObj.weapon=selectRandom(weaponsArray),
@@ -189,32 +175,14 @@ function pickMystery() {
 }
 
 
-
-
-
-
-
-
 // ITERATION 3
 
-function revealMystery() {}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function revealMystery(pickObj) {
+  pickMystery();
+  let revealMsg=" ";
+  revealMsg=`${pickObj.suspect.firstName} ${pickObj.suspect.lastName} killed Mr. Boddy using the ${pickObj.weapon.name} in the ${pickObj.room.name}!`;
+  return revealMsg;
+}
 
 
 // The following is required to make unit tests work.
