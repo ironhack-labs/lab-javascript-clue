@@ -109,3 +109,12 @@ name: Theater
 name: Guest House
 name: Patio
 ```
+
+function selectRandom(array) {
+  const random= [suspectsArray,weaponsArray,roomsArray];
+  const randomElement = random[Math.floor(Math.random()*random.length)]
+  
+  return randomElement; //The maximum is exclusive and the minimum is inclusive
+}
+let randomElement=selectRandom();
+console.log(randomElement)
