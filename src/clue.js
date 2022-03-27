@@ -130,13 +130,13 @@ const weaponsArray =
   ];
 
 // ITERATION 2
-
+//funcion que selccione de forma random el array que se argumente
 function selectRandom(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
 // console.log(selectRandom(roomsArray))
-
+// inicializar una variable para crear un array con los diferentes argumentos. que ponga en la keyvalue suspect/weapon/room un valor random de cada argumento
 function pickMystery() {
   let mystery =
   {
@@ -153,7 +153,7 @@ return mystery
 console.log(pickMystery())
 
 // ITERATION 3
-
+// funcion para que retorne los valores a los que se hace referencia a través de los keyvalues de la funcion anterior
 
 function revealMystery(mystery) { 
 
