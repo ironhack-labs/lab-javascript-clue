@@ -154,28 +154,30 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {
-  let weaponsRandom = weaponsArray[Math.floor(Math.random() * weaponsArray)];
-  let suspectsRandom = suspectsArray[Math.floor(Math.random() * suspectsArray)];
-  let roomsRandom = roomsArray[Math.floor(Math.random() * roomsArray)];
-  if (weaponsArray, suspectsArray, roomsArray < 0) {
-    return weaponsRandom, suspectsRandom, roomsRandom
-  } else {
+function selectRandom(array) {
+  let randomCard = []
+  if (array.length === 0) {
     return undefined
+  } else {
+    randomCard = array[Math.floor(Math.random() * array.length)]
   }
+  return randomCard
 }
 
 function pickMystery() {
-  selectRandom(weaponsArray)
-  selectRandom(suspectsArray)
-  selectRandom(roomsArray)
+  return {
+    weapon: selectRandom(weaponsArray),
+    suspect: selectRandom(suspectsArray),
+    room: selectRandom(roomsArray),
+  }
+  let envelope = pickMystery()
 }
 
 
 // ITERATION 3
 
-function revealMystery() {
-  return `${suspectsArray.firstName} ${suspectsArray.lastName} killed Mr. Boddy using the ${weaponsArray.name} in the ${roomsArray}!`
+function revealMystery(envelope) {
+  return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
 }
 
 
