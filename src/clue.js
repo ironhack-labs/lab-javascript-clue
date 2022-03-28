@@ -163,9 +163,9 @@ function pickMystery() {
 
 function revealMystery() {
 
-  let mysteryArray = pickMystery()
+  let mysteryEnvelope = pickMystery()
   
-  return (mysteryArray[1].firstName + " " + mysteryArray[1].lastName + "killed Mr.Boddy using the" + mysteryArray[2].name + "in the" + mysteryArray[3].name + "!!!!")
+  return (mysteryEnvelope[1].firstName + " " + mysteryEnvelope[1].lastName + "killed Mr.Boddy using the" + mysteryEnvelope[2].name + "in the" + mysteryEnvelope[3].name + "!!!!")
 }
 
 
