@@ -125,7 +125,7 @@ const weaponsArray = [
 // ITERATION 2
 
 function selectRandom(array) {
-  let randomIndex = Math.floor( Math.random() *array.length)
+  let randomIndex = Math.floor( Math.random() * array.length)
   return array[randomIndex]
 }
 
@@ -134,13 +134,11 @@ function pickMystery() {
   let weapon = selectRandom(weaponsArray)
   let room = selectRandom(roomsArray)
   let suspect = selectRandom(suspectsArray)
-  console.log(room)
   const envelope = {
     weapon: weapon,
     room: room,
     suspect: suspect,
   }
-  console.log(envelope)
   return envelope
 }
 
