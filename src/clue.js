@@ -13,13 +13,13 @@ const suspectsArray = [
     color: "green" ,
   },
   {
-    firstName: "Victor" ,
-    lastName: "Plum",
-    occupation: "Designer",
-    age: 22 ,
-    description: "Billionaire video game designer" ,
-    image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg" ,
-    color: "Purple" ,
+    firstName: "Doctor" ,
+    lastName: "Orchid",
+    occupation: "Scientist",
+    age: 45 ,
+    description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy" ,
+    image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg" ,
+    color: "White" ,
   },
   {
     firstName: "Kasandra" ,
@@ -40,15 +40,6 @@ const suspectsArray = [
     color: "Blue" ,
   },
   {
-    firstName: "Doctor" ,
-    lastName: "Orchid",
-    occupation: "Scientist",
-    age: 45 ,
-    description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy" ,
-    image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg" ,
-    color: "White" ,
-  },
-  {
     firstName: "Jack" ,
     lastName: "Mustard",
     occupation: "Retired football player",
@@ -56,6 +47,15 @@ const suspectsArray = [
     description: "He is a former football player who tries to get by on his former glory" ,
     image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg" ,
     color: "Yellow" ,
+  },
+  {
+    firstName: "Victor" ,
+    lastName: "Plum",
+    occupation: "Designer",
+    age: 22 ,
+    description: "Billionaire video game designer" ,
+    image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg" ,
+    color: "Purple" ,
   }
 ];
 
@@ -70,7 +70,7 @@ const roomsArray = [
 {name: "Kitchen", } , 
 {name: "Study", } ,
 {name: "Library", } ,
-{name: "Billiard", } ,
+{name: "Guest House", } ,
 {name: "Lounge", } ,
 {name: "Ballroom", },
 {name: "Hall", } ,
@@ -78,7 +78,7 @@ const roomsArray = [
 {name: "Living Room", } ,
 {name: "Observatory", } ,
 {name: "Theater", } ,
-{name: "Guest House", } ,
+{name: "Billiard Room", } ,
 {name: "Patio", } ,
 ];
 
@@ -89,24 +89,59 @@ const weaponsArray = [
   {name: "knife", weight: 8 } ,
   {name: "candlestick" , weight: 2} ,
   {name: "dumbbell" , weight: 30} ,
-  {name: "poison" , weight: 2} ,
+  {name: "pistol" , weight: 2} ,
   {name: "axe" , weight: 15} ,
   {name: "bat" , weight: 13} ,
   {name: "trophy" , weight: 25} ,
-  {name: "pistol" , weight: 20} ,
+  {name: "poison" , weight: 20} ,
 ];
 
 
 // ITERATION 2
 
-function selectRandom() {}
 
-function pickMystery() {}
+function selectRandom(arrayToShuffle) {
+  
+  let randomIndex = Math.floor(Math.random() * arrayToShuffle.length)
+
+  return arrayToShuffle[randomIndex];
+}
+
+function pickMystery(array) {
+  const suspect = selectRandom(suspectsArray);
+  const weapon = selectRandom(weaponsArray);
+  const room = selectRandom(roomsArray);
+
+  const mysteryObject = {
+    suspect ,
+    weapon ,
+    room ,
+  }
+
+  return mysteryObject;
+    
+}
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(array) {
+  const suspect = selectRandom(suspectsArray);
+  const weapon = selectRandom(weaponsArray);
+  const room = selectRandom(roomsArray);
+  
+  const envelope = {
+    suspect ,
+    weapon ,
+    room ,
+  }
+   
+  return  `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!` ;
+  
+}
+
+
+
 
 
 
