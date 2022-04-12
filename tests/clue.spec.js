@@ -195,13 +195,10 @@ describe('Function "revealMystery" - Reveal the mystery', () => {
   });
 
   it('should return "<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!"', () => {
-    const message = revealMystery({
-      suspect: { firstName: 'Victor', lastName: 'Plum' },
-      weapon: { name: 'poison' },
-      room: { name: 'Billiard Room' }
-    });
+    const picked = pickMystery()
+    const message = revealMystery(picked);
     expect(message).toEqual(
-      'Victor Plum killed Mr. Boddy using the poison in the Billiard Room!'
+      `${picked.suspect.firstname} ${picked.suspect.lastname} killed Mr. Boddy using the ${picked.weapon.name} in the ${picked.room.name} !`
     );
   });
 });
