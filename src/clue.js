@@ -124,8 +124,7 @@ function revealMystery(obj) {
     weapon: { name: weaponName },
     room: { name: roomName }
   } = obj;
-  const envelope = [firstName, lastName, weaponName, roomName];
-  return `${envelope[0]} ${envelope[1]} killed Mr. Boddy using the ${envelope[2]} in the ${envelope[3]}!`;
+  return `${firstName} ${lastName} killed Mr. Boddy using the ${weaponName} in the ${roomName}!`;
 }
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
