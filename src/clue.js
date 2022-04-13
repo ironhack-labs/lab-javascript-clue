@@ -107,16 +107,57 @@ const weaponsArray = [
 
 
 // ITERATION 2
+/* At the beginning of the game, players shuffle each of the card stacks to create a combination of suspect, weapon and room. 
+This will be the mystery to solve. */
 
-function selectRandom() {}
+/* Declare a function named selectRandom to randomly select one element from a card stack. 
+The function should expect an array as an argument, and should return a random element from the array. */
 
-function pickMystery() {}
+function selectRandom(array) {
+  let randomArray= [];
+  
+  randomArray.push(array[Math.floor( Math.random() * array.length)]);
+
+  return randomArray[0];
+}
+
+console.log(selectRandom (suspectsArray))
+
+
+/* Declare a function named pickMystery that takes no arguments and returns an object with three properties: 
+suspect, weapon and room, each holding as a value a card of that specific type. 
+You can get a random card of each type by calling selectRandom on each card stack. */
+
+
+function pickMystery() {
+  const suspicion= {};
+
+  suspicion.suspect = selectRandom(suspectsArray);
+  suspicion.weapon = selectRandom(weaponsArray);
+  suspicion.room = selectRandom(roomsArray);
+
+  return suspicion;
+}
+
+console.log(pickMystery())
+
+
 
 
 // ITERATION 3
+/* At last, we are ready to reveal the mystery.
 
-function revealMystery() {}
+Declare a function named revealMystery that receives an envelope object 
+(with the shape of the object returned by pickMystery) as the single argument,
+ and returns a reveal message in the following format:
 
+<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>! */
+
+function revealMystery(murder) {
+
+  return `${murder.suspect.firstName} ${murder.suspect.lastName} killed Mr. Boddy using the ${murder.weapon.name} in the ${murder.room.name}!`
+}
+console.log(revealMystery(pickMystery()))
 
 
 // The following is required to make unit tests work.
