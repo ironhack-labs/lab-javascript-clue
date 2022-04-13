@@ -116,7 +116,52 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(object) {
+
+  let theFirstName = '';
+  let theLastName = '';
+  let theWeapon = '';
+  let theRoom = '';
+
+  
+  for (a=0;a<suspectsArray.length;a++){
+    for (let i of suspectsArray){
+      for (let j in suspectsArray[a]){
+        if (suspectsArray[a].firstName === object.suspect.firstName)
+        theFirstName = suspectsArray[a].firstName;
+      }
+    }
+  }
+
+  for (a=0;a<suspectsArray.length;a++){
+    for (let i of suspectsArray){
+      for (let j in suspectsArray[a]){
+        if (suspectsArray[a].lastName === object.suspect.lastName)
+        theLastName = suspectsArray[a].lastName;
+      }
+    }
+  }
+
+  for (a=0;a<weaponsArray.length;a++){
+    for (let i of weaponsArray){
+      for (let j in weaponsArray[a]){
+        if (weaponsArray[a].name === object.weapon.name)
+        theWeapon = weaponsArray[a].name;
+      }
+    }
+  }
+
+  for (a=0;a<roomsArray.length;a++){
+    for (let i of roomsArray){
+      for (let j in roomsArray[a]){
+        if (roomsArray[a].name === object.room.name)
+         theRoom = roomsArray[a].name;
+      }
+    }
+  } 
+
+  return `${theFirstName} ${theLastName} kill Mr. Boddy using the ${theWeapon} in the ${theRoom}!`;
+}
 
 
 
