@@ -65,10 +65,9 @@ color: "blue"
     image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg",
     color:" yellow"
   }
-
-
-
 ];
+
+
 
 // Rooms Array
 
@@ -95,7 +94,6 @@ const roomsArray = [
 
 
 
-
 // Weapons Array
 
 const weaponsArray = [
@@ -113,19 +111,75 @@ const weaponsArray = [
 {name: "pistol",weight: 20}
 
 ];
-console.log(weaponsArray.length)
 
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(array) {
+  if (!array.length){
+    return array[0]
+  }
 
-function pickMystery() {}
+  else {
+    return array[Math.floor(Math.random() * (array.length))]
+  };
+
+}
+
+//it does return a randome element
+
+
+function pickMystery() {
+
+let arraySuspect = ['a', 'ab', 'abb', 'aab', 'aaa', 'sda'];
+let arrayWeapon = ['a', 'ab', 'abb', 'aab', 'aaa', 'sda','kas','eme','die'];
+let arrayRooms = ['a', 'ab', 'abb', 'aab', 'aaa',
+ 'sda','kas','eme','die','ab', 'zz', 'zx', 'zy','ab', 'zz'];
+
+let positionSuspects = selectRandom(arraySuspect);
+let positionWeapons = selectRandom(arrayWeapon);
+let positionRooms = selectRandom(arrayRooms);
+
+
+function selectRandom(array) {
+  if (!array.length){
+    return 0
+  }
+  else {
+    return Math.floor(Math.random() * (array.length))
+  };
+}
+
+  return {
+    suspect: suspectsArray[positionSuspects],
+  weapon: weaponsArray[positionWeapons],
+  room: roomsArray[positionRooms] }
+}
+
+//let m = pickMystery()
+//console.log(m)
+
+//--------------DONE------------------//
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(object) {
+
+  let firstName = object['suspect']['firstName'];
+  let lastName = object['suspect']['lastName']
+  let weapon = object['weapon']['name'];
+  let room = object['room']['name']
+
+  return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${room}!`
+     
+}
+
+
+  let x = revealMystery(pickMystery())
+  console.log(x)
+  
+
 
 
 

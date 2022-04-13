@@ -121,7 +121,7 @@ describe('Function "selectRandom" - Find a random element of the array', () => {
     const array = ['ab', 'zz', 'zx', 'zy'];
     expect(array.includes(selectRandom(array))).toBeTruthy();
   });
-
+//done
   it('should return a random element of the array', () => {
     const mathRandomSpy = jest.spyOn(global.Math, 'random');
 
