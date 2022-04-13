@@ -93,12 +93,10 @@ const weaponsArray = [
   {name: 'pistol', weight: 20}
 ];
 
-
 // ITERATION 2
 
 function selectRandom(arr) {
-  if (!arr.length) {return undefined }
-  else {return arr[Math.floor(Math.random() * arr.length)]}
+ return arr[Math.floor(Math.random() * arr.length)]
 }
 
 function pickMystery() {
@@ -112,10 +110,8 @@ function pickMystery() {
 
 function revealMystery(obj) {
   obj = pickMystery();
-
   return `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.lastName} in the ${obj.room.name}!` 
 }
-
 /*
 //Iteration 3 pero return con variables
 function revealMystery(obj) {
