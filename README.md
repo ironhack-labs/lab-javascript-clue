@@ -55,7 +55,7 @@ This LAB is equipped with unit tests to provide automated feedback on your lab p
 
 Clue has three different _card types_: **suspects**, **rooms**, and **weapons**.
 
-Let's create an `array` for every _card type_. These arrays should be named `suspectsArray`, `weaponsArray`, `roomsArray`.
+Let's create an `array` for every _card type_. These arrays should be named `suspectsArray`, `wesuspectsArrayaponsArray`, `roomsArray`.
 Each array will contain _objects_, where each _object_ represents one card.
 
 All of the information you need about **suspects**, **rooms**, and **weapons** can be found on the `DATA.md` file.
