@@ -122,13 +122,36 @@ function pickMystery() {
   return mysteryCard;
 }
 
+// Another method
+/* function pickMystery() {
+  let randomSuspect = selectRandom(suspectsArray);
+  let randomWeapon = selectRandom(weaponsArray);
+  let randomRoom = selectRandom(roomsArray);
+
+  const card = {
+    suspect: randomSuspect,
+    weapon: randomWeapon,
+    room: randomRoom
+  };
+
+  return card;
+}
+*/
 
 // ITERATION 3
+ function revealMystery(envelopeObject) {
 
-function revealMystery(envelope) {
-  let revealMsg = `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${room}!`;
+  let first = envelopeObject.suspect.firstName;
+  let last = envelopeObject.suspect.lastName;
+  let weap = envelopeObject.weapon.name;
+  let room = envelopeObject.room.name;
+
+  let revealMsg = `${first} ${last} killed Mr. Boddy using the ${weap} in the ${room}!`;
+
   return revealMsg;
 }
+
+//console.log(revealMystery(pickMystery()));
 
 
 // The following is required to make unit tests work.
@@ -143,3 +166,4 @@ if (typeof module !== 'undefined') {
     selectRandom
   };
 }
+
