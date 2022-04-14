@@ -134,7 +134,7 @@ function revealMystery(object) { //! PORQUE NO ME RETORNA EL STRING !!!
   let wapon1     = object.weapon.name 
   let room1      = object.room.name 
 
-  return `${first_name} ${last_name} killed Mr. Boddy using the ${wapon1} in the ${room1}`
+  return `${first_name} ${last_name} killed Mr. Boddy using the ${wapon1} in the ${room1}!`
 }
 
 revealMystery(pickMystery());
