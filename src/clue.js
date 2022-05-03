@@ -1,6 +1,6 @@
 // ITERATION 1
 
-// Suspects Array
+// Suspects Array.
 
 const suspectsArray = [];
 
