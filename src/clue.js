@@ -4,7 +4,7 @@
 
 const suspectsArray = [
   {
-    alias: 'mrGreen',
+    //alias: 'mrGreen',
     firstName: 'Jacob',
     lastName: 'Green',
     occupation: 'Entrepreneur',
@@ -14,7 +14,7 @@ const suspectsArray = [
     color: 'green'
   },
   {
-    alias: 'drOrchid',
+    //alias: 'drOrchid',
     firstName: 'Doctor',
     lastName: 'Orchid',
     occupation: 'Scientist',
@@ -24,9 +24,9 @@ const suspectsArray = [
     color: 'white'
   },
   {
-    alias: 'profPlum',
-    firstName: 'Plum',
-    lastName: 'Orchid',
+    //alias: 'profPlum',
+    firstName: 'Victor',
+    lastName: 'Plum',
     occupation: 'Designer',
     age: 22,
     description: 'Billionaire video game designer',
@@ -35,7 +35,7 @@ const suspectsArray = [
     
   },
   {
-    alias: 'missScarlet',
+    //alias: 'missScarlet',
     firstName: 'Kasandra',
     lastName: 'Scarlet',
     occupation: 'Actor',
@@ -46,7 +46,7 @@ const suspectsArray = [
 
   },
   {
-    alias: 'mrsPeacock',
+    //alias: 'mrsPeacock',
     firstName: 'Eleanor',
     lastName: 'Peacock',
     occupation: 'Socialité',
@@ -56,7 +56,7 @@ const suspectsArray = [
     color: 'blue'
   },
   {
-    alias: 'mrMustard',
+    //alias: 'mrMustard',
     firstName: 'Jack',
     lastName: 'Mustard',
     occupation: 'Retired Football player',
@@ -121,22 +121,6 @@ const roomsArray = [
 
 ];
 
-/* 
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/
-
 // Weapons Array
 
 const weaponsArray = [
@@ -180,18 +164,43 @@ const weaponsArray = [
 ];
 
 
+// ITERATION 2 =====.> utilizar metodo: Math.floor(Math.random() * objetoName.length
 
-// ITERATION 2
+function selectRandom(card) {
+  const randomElement = Math.floor(Math.random() * card.length ) 
+  if (card.length === 0){
+    return undefined 
+  } else{
+    return card[randomElement]
+  }      
+}
+//console.log(selectRandom([suspectsArray]))
+       
+//Math.floor(Math.random() * objetoName.length
 
-function selectRandom() {}
 
-function pickMystery() {}
+function pickMystery() {
+  return[{
+    suspect: selectRandom(suspectsArray),
+    room: selectRandom(roomsArray),
+    weapon: selectRandom(weaponsArray)
+  }]
+}
+console.log(pickMystery())
+ 
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(object) {
+  //console.log(pickMistery(suspect.firstName))
 
+}
+
+//console.log(`${pickMystery(suspect.firstName)} pickMystery(suspects.lastName) killed Mr. Boddy using the pickMystery(weapons.name) in the pickMystery(room.name)!`)
+
+
+//<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!
 
 
 // The following is required to make unit tests work.
