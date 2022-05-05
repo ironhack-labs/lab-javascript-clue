@@ -4,7 +4,7 @@
 
 const suspectsArray = [
   {
-    //mrGreen,
+  name: "mrGreen",
   firstName: "Jacob",
   lastName: "Green",
   occupation: "Entrepeneur",
@@ -14,7 +14,7 @@ const suspectsArray = [
   color: "green"
 },
 {
-  //drOrchid,
+  name: "drOrchid",
   firstName: "Doctor",
   lastName: "Orchid",
   occupation: "Scientist",
@@ -24,7 +24,7 @@ const suspectsArray = [
   color: "white"
 },
 {
-  //profPlum,
+  name: "profPlum",
   firstName: "Victor",
   lastName: "Plum",
   occupation: "Designer",
@@ -34,7 +34,7 @@ const suspectsArray = [
   color: "purple"
 },
 {
-  //missScarlet,
+  name: "missScarlet",
   firstName: "Kasandra",
   lastName: "Scarlet",
   occupation: "Actor",
@@ -44,7 +44,7 @@ const suspectsArray = [
   color: "red"
 },
 {
-  //mrsPeacock,
+  name: "mrsPeacock",
   firstName: "Eleanor",
   lastName: "Peacock",
   occupation: "Socialité",
@@ -54,7 +54,7 @@ const suspectsArray = [
   color: "blue"
 },
 {
-  //mrMustard,
+  name: "mrMustard",
   firstName: "Jack",
   lastName: "Mustard",
   occupation: "Retired Footbal player",
@@ -159,14 +159,24 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom(ramdomSelect) {
-  for (let i = 0; i < ramdomSelect.length; i++) {
-    
-  }
+function selectRandom(randomSelect) {
+  console.log(randomSelect[Math.floor(Math.random() * randomSelect.length)])
+  console.log(randomSelect[Math.floor(Math.random() * randomSelect.length)].name)
+  return randomSelect[Math.floor(Math.random() * randomSelect.length)]
 }
 
-function pickMystery() {}
+selectRandom(suspectsArray)
+selectRandom(weaponsArray)
+selectRandom(roomsArray)
+/*selectRandom(suspectsArray[randomSelect].firstName)
+selectRandom(weaponsArray[randomSelect].name)
+selectRandom(roomsArray[randomSelect].name)*/
 
+
+
+
+function pickMystery() {
+}
 
 // ITERATION 3
 
