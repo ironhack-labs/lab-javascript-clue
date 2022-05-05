@@ -64,8 +64,7 @@ const suspectsArray = [
     description: 'He is a former football player who tries to get by on his former glory',
     image: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg',
     color: 'yellow'
-  },
-  
+  },  
 ];
 
 // Rooms Array
@@ -92,7 +91,6 @@ const roomsArray = [
   {
     name: 'Lounge'
   },
-  
   {
     name: 'Ballroom'
   },
@@ -114,11 +112,9 @@ const roomsArray = [
   {
     name: 'Guest House'
   },
-
   {
     name: 'Patio'
   },
-
 ];
 
 // Weapons Array
@@ -159,10 +155,8 @@ const weaponsArray = [
   {
     name: 'pistol',
     weight: 20
-  },
-  
+  }, 
 ];
-
 
 // ITERATION 2 =====.> utilizar metodo: Math.floor(Math.random() * objetoName.length
 
@@ -176,7 +170,6 @@ function selectRandom(card) {
 }
 //console.log(selectRandom([]))
        
-
 //pickMistery tiene que devolver un objeto con 3 propiedades supect, room y weapon 
 function pickMystery() {
   const mystery = {
@@ -187,21 +180,19 @@ function pickMystery() {
     return mystery
 }
 
+// ITERATION 3 ====> //retornar string: <FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!
 
-// ITERATION 3
-
-function revealMystery() {
-  
-
-  //console.log(`I'm ${pickMistery(suspect.firstName)} years old!`)
-  //console.log(pickMistery(suspect.firstName))
-
+function revealMystery(obj) {
+  //return ` ${pickMystery().suspect.firstName} ${pickMystery().suspect.lastName}  killed Mr. Boddy using the ${pickMystery().weapon.name} in the ${pickMystery().room.name}!`
+  return `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`
+  console.log(`${obj.suspect.firstName} ${obj.suspect.lastName}  killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`
+)
+  //console.log(` ${pickMystery().suspect.firstName} ${pickMystery().suspect.lastName} killed Mr. Boddy using the ${pickMystery().weapon.name} in the ${pickMystery().room.name}!`)
 }
 
-//console.log(`${pickMystery(suspect.firstName)} pickMystery(suspects.lastName) killed Mr. Boddy using the pickMystery(weapons.name) in the pickMystery(room.name)!`)
 
 
-//<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!
+
 
 
 // The following is required to make unit tests work.
