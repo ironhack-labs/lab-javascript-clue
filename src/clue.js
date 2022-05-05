@@ -176,9 +176,8 @@ function selectRandom(card) {
 }
 //console.log(selectRandom([suspectsArray]))
        
-//Math.floor(Math.random() * objetoName.length
 
-
+//pickMistery tiene que devolver un objeto con 3 propiedades supect, room y weapon 
 function pickMystery() {
   return[{
     suspect: selectRandom(suspectsArray),
@@ -193,6 +192,7 @@ console.log(pickMystery())
 // ITERATION 3
 
 function revealMystery(object) {
+  console.log(`I'm ${pickMistery(suspect.firstName)} years old!`)
   //console.log(pickMistery(suspect.firstName))
 
 }
