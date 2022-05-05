@@ -174,25 +174,26 @@ function selectRandom(card) {
     return card[randomElement]
   }      
 }
-//console.log(selectRandom([suspectsArray]))
+//console.log(selectRandom([]))
        
 
 //pickMistery tiene que devolver un objeto con 3 propiedades supect, room y weapon 
 function pickMystery() {
-  return[{
+  const mystery = {
     suspect: selectRandom(suspectsArray),
     room: selectRandom(roomsArray),
     weapon: selectRandom(weaponsArray)
-  }]
+    }
+    return mystery
 }
-console.log(pickMystery())
- 
 
 
 // ITERATION 3
 
-function revealMystery(object) {
-  console.log(`I'm ${pickMistery(suspect.firstName)} years old!`)
+function revealMystery() {
+  
+
+  //console.log(`I'm ${pickMistery(suspect.firstName)} years old!`)
   //console.log(pickMistery(suspect.firstName))
 
 }
