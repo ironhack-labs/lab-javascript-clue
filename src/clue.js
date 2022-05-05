@@ -163,31 +163,19 @@ function selectRandom(randomSelect) {
   if (randomSelect.length === 0) {
     return undefined
   }
-  console.log(randomSelect[Math.floor(Math.random() * randomSelect.length)])
-  console.log(randomSelect[Math.floor(Math.random() * randomSelect.length)].firstName)
+  //console.log(randomSelect[Math.floor(Math.random() * randomSelect.length)])
+  //console.log(randomSelect[Math.floor(Math.random() * randomSelect.length)].firstName)
   return randomSelect[Math.floor(Math.random() * randomSelect.length)]
 }
 
-/*selectRandom(suspectsArray)
-selectRandom(weaponsArray)
-selectRandom(roomsArray)*/
-/*selectRandom(suspectsArray[randomSelect].firstName)
-selectRandom(weaponsArray[randomSelect].name)
-selectRandom(roomsArray[randomSelect].name)*/
-
-
-
 
 function pickMystery(mistery) {
-  const misteryObject = {
-    suspect : {
-      firstName: "",
-      lastName: ""
-      },
-    weapon: "",
-    room: ""
+  const misterySelection = {
+    suspect : selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray)
   }
-  return misteryObject
+  return misterySelection
 }
 pickMystery(suspectsArray)
 pickMystery(weaponsArray)
@@ -195,7 +183,9 @@ pickMystery(roomsArray)
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(revelate) {
+  return `${revelate.suspect.firstName} ${revelate.suspect.lastName} killed Mr. Boddy using the ${revelate.weapon.name} in the ${revelate.room.name}!`
+}
 
 
 
