@@ -160,15 +160,24 @@ function selectRandom(array) {
 /* Extended Method
 let randomIndex = Math.floor(Math.random() * array.length)
 let random = array[randomIndex]
-return random*/
+return random
+*/
 
-function pickMystery() {}
+function pickMystery() {
+  let suspect = (selectRandom(suspectsArray));
+  let weapon = (selectRandom(weaponsArray));
+  let room = (selectRandom(roomsArray));
+
+  return {suspect, weapon, room}
+}
 
 
 // ITERATION 3
 
-function revealMystery() {}
-
+function revealMystery(reveal) {
+  return `${reveal.suspect.firstName} ${reveal.suspect.lastName} killed Mr. Boddy using the ${reveal.weapon.name
+  } in the ${reveal.room.name}!`
+}
 
 
 // The following is required to make unit tests work.
