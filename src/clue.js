@@ -66,7 +66,23 @@ const suspectsArray = [
 
 // Rooms Array
 
-const roomsArray = [];
+const roomsArray = [
+  { name: 'Dining Room' },
+  { name: 'Conservatory' },
+  { name: 'Kitchen' },
+  { name: 'Study' },
+  { name: 'Library' },
+  { name: 'Billiard Room' },
+  { name: 'Lounge' },
+  { name: 'Ballroom' },
+  { name: 'Hall' },
+  { name: 'Spa' },
+  { name: 'Living Room' },
+  { name: 'Observatory' },
+  { name: 'Theater' },
+  { name: 'Guest House' },
+  { name: 'Patio' }
+];
 
 // Weapons Array
 
@@ -111,13 +127,29 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(array) {
+  const random = Math.floor(Math.random() * array.length);
+  return array[random];
+}
 
-function pickMystery() {}
+selectRandom(roomsArray);
+
+function pickMystery() {
+  let mystery = {};
+  mystery.suspect = selectRandom(suspectsArray);
+  mystery.weapon = selectRandom(weaponsArray);
+  mystery.room = selectRandom(roomsArray);
+
+  return mystery;
+}
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(object) {
+  return `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`;
+}
+
+console.log(revealMystery(pickMystery()));
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
