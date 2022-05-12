@@ -19,13 +19,13 @@ color: green
 
 ```
 drOrchid
-firstName: Doctor
+"firstName: Doctor
 lastName: Orchid
 occupation: Scientist
 age: 26
 description: PhD in plant toxicology. Adopted daughter of Mr. Boddy
 image: http://www.radiotimes.com/uploads/images/Original/111967.jpg
-color: white
+color: white"
 ```
 
 ```
