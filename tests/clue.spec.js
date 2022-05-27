@@ -7,7 +7,7 @@ const {
   selectRandom
 } = require('./../src/clue');
 
-describe('Array "suspectsArray', () => {
+describe.skip('Array "suspectsArray', () => {
   it('should be an array', () => {
     expect(suspectsArray instanceof Array).toBeTruthy();
   });
@@ -58,7 +58,7 @@ describe('Array "suspectsArray', () => {
   });
 });
 
-describe('Array "weaponsArray', () => {
+describe.skip('Array "weaponsArray', () => {
   it('should be an array', () => {
     expect(weaponsArray instanceof Array).toBeTruthy();
   });
@@ -84,7 +84,7 @@ describe('Array "weaponsArray', () => {
   });
 });
 
-describe('Array "roomsArray', () => {
+describe.skip('Array "roomsArray', () => {
   it('should be an array', () => {
     expect(roomsArray instanceof Array).toBeTruthy();
   });
@@ -104,17 +104,17 @@ describe('Array "roomsArray', () => {
   });
 });
 
-describe('Function "selectRandom" - Find a random element of the array', () => {
+describe.only('Function "selectRandom" - Find a random element of the array', () => {
   it('should be declared', () => {
     expect(typeof selectRandom).toBe('function');
   });
 
-  it("should return undefined if the array is empty", () => {
+  it('should return undefined if the array is empty', () => {
     expect(selectRandom([])).toBe(undefined);
   });
 
-  it("should return the element of a single value array", () => {
-    expect(selectRandom(["ab"])).toBe("ab");
+  it('should return the element of a single value array', () => {
+    expect(selectRandom(['ab'])).toBe('ab');
   });
 
   it('should return an element of the array', () => {
