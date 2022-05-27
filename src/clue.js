@@ -104,10 +104,10 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom(arr) {
-  if (arr.length > 0) {
-    let randomIndex = Math.floor(Math.random() * arr.length);
-    return arr[randomIndex];
+function selectRandom(array) {
+  if (array.length > 0) {
+    let randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
   }
 }
 
