@@ -112,39 +112,9 @@ const weaponsArray = [
 // ITERATION 2
 
 // //TODO: selectRandom function
-// function selectRandom(arrayOfSuspects, arrayOfRooms, arrayOfWeapons) {
-//   let suspects =
-//     arrayOfSuspects[Math.floor(Math.random() * arrayOfSuspects.length)]; // created a variable to store the result of the randomised suspect
-
-//   let rooms = arrayOfRooms[Math.floor(Math.random() * arrayOfRooms.length)]; // created a variable to store the result of the randomised room
-//   let weapons =
-//     arrayOfWeapons[Math.floor(Math.random() * arrayOfWeapons.length)]; // created a variable to store the result of the randomised weapon
-
-//   const result = {
-//     suspects,
-//     rooms,
-//     weapons
-//   }; // created a variable where I stored all the different variables that contains the randomised elements from the arrays above.
-
-//   console.log(
-//     result.suspects.firstName,
-//     result.suspects.lastName,
-//     result.rooms.name,
-//     result.weapons.name
-//   );
-//   return result; // return the combined elements from arrays as one variable
-// }
-
-// when the function runs, return the arrayOf Suspects, round it to the largest integer less or equal to the specified number with Math.floor().
-// randomise the elements with Math.random() everytime the pages refreshes
-// multiply the elements of the array with the total length of th array and show a random murderer.
-
-// selectRandom(suspectsArray, roomsArray, weaponsArray); // call the function and add the arrays to the function to be called/used inside of the function itself
-
-//TODO: pickMystery function
-const suspects = suspectsArray; // declare a variable that holds the array to be used inside of the functions
-const rooms = roomsArray;
-const weapons = weaponsArray;
+const suspects = suspectsArray; // declare a variable that holds the array of suspects to be used inside of the functions
+const rooms = roomsArray; // declare a variable that holds the array of rooms to be used inside of the functions
+const weapons = weaponsArray; // declare a variable that holds the array of weapons to be used inside of the functions
 
 function selectRandom(arrayOfSuspects, arrayOfRooms, arrayOfWeapons) {
   let theSuspects =
@@ -164,13 +134,14 @@ function selectRandom(arrayOfSuspects, arrayOfRooms, arrayOfWeapons) {
   return result;
 }
 
+//TODO: pickMystery function
+
 function pickMystery() {
   const getMystery = selectRandom(suspects, rooms, weapons); // defined a variable that stores the function selectRandom. The declared variables of the arrays are added as parameters to this function to be used inside of the selectRandom function.
 
   const giveMystery = {
     suspectFirstName: getMystery.theSuspects.firstName,
     suspectLastName: getMystery.theSuspects.lastName,
-    suspectImg: getMystery.theSuspects.image,
     murderRoom: getMystery.theRooms.name,
     murderWeapon: getMystery.theWeapons.name
   }; // made one object where all the data we need from the arrays to eventually be returned inside the pickMystery function.
@@ -182,7 +153,7 @@ function pickMystery() {
 //TODO: revealMystery function
 function revealMystery(suspect) {
   return console.log(
-    `${suspect.suspectFirstName} ${suspect.suspectLastName} ${suspect.suspectImg} killed Mr.Boddy using the ${suspect.murderWeapon} in the ${suspect.murderRoom}!`
+    `${suspect.suspectFirstName} ${suspect.suspectLastName} killed Mr.Boddy using the ${suspect.murderWeapon} in the ${suspect.murderRoom}!`
   ); // suspect is the parameter for accessing the giveMystery object of the pickMystery function.
 }
 
