@@ -124,6 +124,8 @@ function revealMystery(random) {
   return `${random.suspect.firstName} ${random.suspect.lastName} killed Mr. Boddy using the ${random.weapon.name} in the ${random.room.name}!`
 }
 
+console.log(revealMystery(pickMystery()))
+
 
 
 // The following is required to make unit tests work.
