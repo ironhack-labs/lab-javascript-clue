@@ -112,82 +112,113 @@ const roomsArray = [
   },
   {
     name: 'Patio'
-  },
-
+  }
 ];
 
 // Weapons Array
 
 const weaponsArray = [
   {
-    name: "rope",
+    name: 'rope',
     weight: 10
   },
   {
-    name: "knife",
+    name: 'knife',
     weight: 8
   },
   {
-    name: "candlestick",
+    name: 'candlestick',
     weight: 2
   },
   {
-    name: "dumbbell",
+    name: 'dumbbell',
     weight: 30
   },
   {
-    name: "poison",
+    name: 'poison',
     weight: 2
   },
   {
-    name: "axe",
+    name: 'axe',
     weight: 15
   },
   {
-    name: "bat",
+    name: 'bat',
     weight: 13
   },
   {
-    name: "trophy",
+    name: 'trophy',
     weight: 25
   },
   {
-    name: "pistol",
+    name: 'pistol',
     weight: 20
-  },
+  }
 ];
 
 // ITERATION 2
 
 function selectRandom(cards) {
-  
+
   let deck = cards.length;
 
   let someCard = Math.floor(Math.random() * deck);
   return cards[someCard];
-  
 }
-
 
 function pickMystery() {
   
-  let filledArr = new Array(3).fill(selectRandom(suspectsArray),0,1);
+
+  /*let filledArr = new Array(3).fill(selectRandom(suspectsArray), 0, 1);
   filledArr.fill(selectRandom(weaponsArray), 1, 2);
   filledArr.fill(selectRandom(roomsArray), 2, 3);
-  return filledArr;
+
+  const obj = Object.assign({}, filledArr);
+
+  console.log('this is' + Object.keys(obj));
+  return obj;*/
+
+  let obj = {};
+  obj.suspect = selectRandom(suspectsArray);
+  obj.weapon = selectRandom(weaponsArray);
+  obj.room = selectRandom(roomsArray);
+  return obj;
 
 }
 
-
+console.log(pickMystery());
 // ITERATION 3
 
 function revealMystery(envelope) {
-  return envelope[0].firstName + ' killed Mr. Boddy using the ' + envelope[1].name + ' in the ' + envelope[2].name + '!';
+  
+  if (typeof module !== 'undefined') {
+    module.exports = {
+      suspectsArray,
+      roomsArray,
+      weaponsArray,
+      pickMystery,
+      revealMystery,
+      selectRandom
+    };
+  }
+
+  suspect = envelope.suspect;
+  weapon = envelope.weapon;
+  room = envelope.room;
+
+  return (
+    suspect.firstName +
+    ' ' +
+    suspect.lastName +
+    ' killed Mr. Boddy using the ' +
+    weapon.name +
+    ' in the ' +
+    room.name +
+    '!'
+  );
 }
 
 console.log(revealMystery(pickMystery()));
-
-
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. 
