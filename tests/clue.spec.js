@@ -109,12 +109,12 @@ describe('Function "selectRandom" - Find a random element of the array', () => {
     expect(typeof selectRandom).toBe('function');
   });
 
-  it("should return undefined if the array is empty", () => {
+  it('should return undefined if the array is empty', () => {
     expect(selectRandom([])).toBe(undefined);
   });
 
-  it("should return the element of a single value array", () => {
-    expect(selectRandom(["ab"])).toBe("ab");
+  it('should return the element of a single value array', () => {
+    expect(selectRandom(['ab'])).toBe('ab');
   });
 
   it('should return an element of the array', () => {
@@ -180,7 +180,7 @@ describe('Function "pickMystery" - Pick a random mystery', () => {
   });
 });
 
-describe('Function "revealMystery" - Reveal the mystery', () => {
+describe.only('Function "revealMystery" - Reveal the mystery', () => {
   it('should define revealMystery', () => {
     expect(typeof revealMystery).toBe('function');
   });
