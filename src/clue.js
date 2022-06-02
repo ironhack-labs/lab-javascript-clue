@@ -101,16 +101,17 @@ function selectRandom(arr) {
   if (!arr.length) {
     return undefined;
   }
-  const randomNumber = Math.floor(Math.random() * arr.length);
-  return arr[randomNumber];
+  const randomArrIndex = Math.floor(Math.random() * arr.length);
+  return arr[randomArrIndex];
 }
 
 function pickMystery() {
-  const mysteryObject = {};
-  mysteryObject.suspect = selectRandom(suspectsArray);
-  mysteryObject.weapon = selectRandom(weaponsArray);
-  mysteryObject.room = selectRandom(roomsArray);
-  return mysteryObject;
+  const mystery = {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray)
+  };
+  return mystery;
 }
 // ITERATION 3
 
