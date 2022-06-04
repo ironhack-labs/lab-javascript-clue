@@ -121,19 +121,19 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery(object) {
+function revealMystery(mystery) {
 
-  let suspectFirstName = object.suspect.firstName
-  let suspectLastName = object.suspect.lastName
-  let weapon = object.weapon.name
-  let room = object.room.name
+  let suspectFirstName = mystery.suspect.firstName
+  let suspectLastName = mystery.suspect.lastName
+  let weapon = mystery.weapon.name
+  let room = mystery.room.name
 
   finalMystery = `${suspectFirstName} ${suspectLastName} killed Mr. Boddy using the ${weapon} in the ${room}!`
 
   return finalMystery
 }
 
-
+console.log(revealMystery(pickMystery()))
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
