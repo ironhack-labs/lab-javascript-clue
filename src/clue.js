@@ -212,9 +212,20 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {
-  let message = document.write(
-    pickMystery(suspectsArray[firstName]) +
+function revealMystery(envelope) {
+  console.log(envelope);
+
+  const message = `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+  // envelope.suspect.firstName +
+  // ' ' +
+  // envelope.suspect.lastName +
+  // ' killed Mr. Boddy using the ' +
+  // envelope.weapon.name +
+  // ' in the ' +
+  // envelope.room.name +
+  // '!';
+  /*let message = document.write(
+    pickMystery(suspectsArray.firstName) +
       ' ' +
       pickMystery(suspectsArray[lastName]) +
       ' killed Mr. Boddy using the ' +
@@ -223,6 +234,7 @@ function revealMystery() {
       pickMystery(roomsArray.name) +
       ' !'
   );
+  */
   return message;
 }
 

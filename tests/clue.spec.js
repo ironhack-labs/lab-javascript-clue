@@ -180,7 +180,7 @@ describe('Function "pickMystery" - Pick a random mystery', () => {
   });
 });
 
-describe.only('Function "revealMystery" - Reveal the mystery', () => {
+describe('Function "revealMystery" - Reveal the mystery', () => {
   it('should define revealMystery', () => {
     expect(typeof revealMystery).toBe('function');
   });
