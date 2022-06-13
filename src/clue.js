@@ -4,7 +4,7 @@
 
 const suspectsArray = [ {
   firstName: 'Jacob',
-  lastName: 'Green',
+  lastName: 'Greeeeen',
   occupation: 'Entrepreneur',
   age: 45,
   description: 'He has a lot of connections',
