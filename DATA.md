@@ -7,6 +7,9 @@ Use this data to model your game cards into objects.
 ### Suspects
 
 ```
+
+```
+
 mrGreen
 firstName: Jacob
 lastName: Green
@@ -15,9 +18,11 @@ age: 45
 description: He has a lot of connections
 image: https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg
 color: green
+
 ```
 
 ```
+
 drOrchid
 firstName: Doctor
 lastName: Orchid
@@ -26,7 +31,6 @@ age: 26
 description: PhD in plant toxicology. Adopted daughter of Mr. Boddy
 image: http://www.radiotimes.com/uploads/images/Original/111967.jpg
 color: white
-```
 
 ```
 profPlum
