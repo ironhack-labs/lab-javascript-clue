@@ -101,11 +101,9 @@ const weaponsArray = [
 // ITERATION 2
 
 function selectRandom(arr) {
-  let randomNum = Math.floor(Math.random() * arr.length - 1);
-  return arr[randomNum];
+  let random = Math.floor(Math.random() * arr.length);
+  return arr[random];
 }
-
-console.log(selectRandom(suspectsArray));
 
 function pickMystery() {
   return {
@@ -115,18 +113,11 @@ function pickMystery() {
   };
 }
 
-console.log(pickMystery());
 // ITERATION 3
 
 function revealMystery(envelope) {
-  let firstName = envelope.suspect.firstName;
-  let lastName = envelope.suspect.lastName;
-  let weapon = envelope.weapon.name;
-  let room = envelope.room.name;
-  return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${room}! `;
+  return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
 }
-
-// console.log(revealMystery());
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
