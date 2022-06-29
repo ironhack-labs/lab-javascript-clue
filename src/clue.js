@@ -149,9 +149,20 @@ const weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trop
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(arrToRandom) {
+  let randomIndex = Math.floor(Math.random() * arrToRandom.length);
+  let randomResult = arrToRandom[randomIndex];
+  return randomResult;
+}
 
-function pickMystery() {}
+function pickMystery() {
+  let mystery = {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray)
+  };
+  return mystery;
+}
 
 
 // ITERATION 3
