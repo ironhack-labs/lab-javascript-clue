@@ -58,12 +58,93 @@ let mrMustard = {
 const suspectsArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 
 // Rooms Array
+let diningRoom = {
+  name: 'Dining Room'
+};
+let conservatory = {
+  name: 'Conservatory'
+}
+let kitchen = {
+  name: 'Kitchen'
+};
+let study = {
+  name: 'Study'
+};
+let library = {
+  name: 'Library'
+};
+let billiardRoom = {
+  name: 'Billiard Room'
+};
+let lounge = {
+  name: 'Lounge'
+};
+let ballroom = {
+  name: 'Ballroom'
+};
+let hall = {
+  name: 'Hall'
+};
+let spa = {
+  name: 'Spa'
+};
+let livingRoom = {
+  name: 'Living Room'
+};
+let observatory = {
+  name: 'Observatory'
+};
+let theater = {
+  name: 'Theater'
+};
+let guestHouse = {
+  name: 'Guest House'
+};
+let patio = {
+  name: 'Patio'
+};
 
-const roomsArray = [];
+const roomsArray = [diningRoom, conservatory, kitchen, study, library, billiardRoom, lounge, ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio];
 
 // Weapons Array
+let rope = {
+  name: 'rope',
+  weight: 10
+};
+let knife = {
+  name: 'knife',
+  weight: 8
+};
+let candlestick = {
+  name: 'candlestick',
+  weight: 2 
+};
+let dumbbell = {
+  name: 'dumbbell',
+  weight: 30
+};
+let poison = {
+  name: 'poison',
+  weight: 2
+};
+let axe = {
+  name: 'axe',
+  weight: 15
+};
+let bat = {
+  name: 'bat',
+  weight: 13
+};
+let trophy = {
+  name: 'trophy',
+  weight: 25
+};
+let pistol = {
+  name: 'pistol',
+  weight: 20
+};
 
-const weaponsArray = [];
+const weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
 
 
 // ITERATION 2
