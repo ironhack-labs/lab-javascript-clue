@@ -60,8 +60,8 @@ const suspectsArray = [
       'He is a former football player who tries to get by on his former glory',
     image:
       'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg',
-    color: 'yellow',
-  },
+    color: 'yellow'
+  }
 ];
 
 console.log(suspectsArray);
@@ -69,92 +69,93 @@ console.log(suspectsArray);
 // Rooms Array
 
 const roomsArray = [
-{ name: 'Dining Room'},
-{ name: 'Conservatory'},
-{ name: 'Kitchen'},
-{ name: 'Study'},
-{ name: 'Library'},
-{ name: 'Billiard Room'},
-{ name: 'Lounge'},
-{ name: 'Ballroom'},
-{ name: 'Hall' },
-{ name: 'Spa' },
-{ name: 'Living Room' },
-{ name: 'Observatory' },
-{ name: 'Theater' },
-{ name: 'Guest House' },
-{ name: 'Patio'},
+  { name: 'Dining Room' },
+  { name: 'Conservatory' },
+  { name: 'Kitchen' },
+  { name: 'Study' },
+  { name: 'Library' },
+  { name: 'Billiard Room' },
+  { name: 'Lounge' },
+  { name: 'Ballroom' },
+  { name: 'Hall' },
+  { name: 'Spa' },
+  { name: 'Living Room' },
+  { name: 'Observatory' },
+  { name: 'Theater' },
+  { name: 'Guest House' },
+  { name: 'Patio' }
 ];
-console.log(roomsArray)
+console.log(roomsArray);
 // Weapons Array
 
 const weaponsArray = [
-{
-  name: 'rope',
-  weight: 10
-},
-{
-  name: 'knife',
-  weight: 8
-},
-{
-  name: 'candlestick',
-  weight: 2
-},
-{
-  name: 'dumbbell',
-  weight: 30
-},
-{
-  name: 'poison',
-  weight: 2
-},
-{
-  name: 'axe',
-  weight: 15
-},
-{
-  name: 'bat',
-  weight: 13
-},
-{
-  name: 'trophy',
-  weight: 25
-},
-{
-  name: 'pistol',
-  weight: 20
-},
+  {
+    name: 'rope',
+    weight: 10
+  },
+  {
+    name: 'knife',
+    weight: 8
+  },
+  {
+    name: 'candlestick',
+    weight: 2
+  },
+  {
+    name: 'dumbbell',
+    weight: 30
+  },
+  {
+    name: 'poison',
+    weight: 2
+  },
+  {
+    name: 'axe',
+    weight: 15
+  },
+  {
+    name: 'bat',
+    weight: 13
+  },
+  {
+    name: 'trophy',
+    weight: 25
+  },
+  {
+    name: 'pistol',
+    weight: 20
+  }
 ];
-console.log(weaponsArray)
+console.log(weaponsArray);
 
 // ITERATION 2
 
 function selectRandom(cardArr) {
   let randomNum = Math.floor(Math.random() * cardArr.length);
-  
+
   return cardArr[randomNum];
 }
 
-
-
 function pickMystery() {
-
   let chooseOne = {
     suspect: selectRandom(suspectsArray),
     weapon: weaponsArray[Math.floor(Math.random() * weaponsArray.length)],
-    room: roomsArray[Math.floor(Math.random() * roomsArray.length)],
+    room: roomsArray[Math.floor(Math.random() * roomsArray.length)]
   };
-  return chooseOne
+  return chooseOne;
 }
 
-console.log(pickMystery())
-
-
+console.log(pickMystery());
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(arr) {
+  result = `${arr.suspect.firstName} ${arr.suspect.lastName} killed Mr. Boddy using the ${arr.weapon.name} in the ${arr.room.name}!`;
+
+  return result;
+}
+
+console.log(revealMystery(pickMystery()));
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
