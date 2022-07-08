@@ -62,42 +62,43 @@
     color: 'yellow'
   };
 
+  const suspectsArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
+
 // Rooms Array
+ 
+  let diningRoom = {name: 'Dining Room'};
+  let conservatory = {name: 'Conservatory'};
+  let kitchen = {name: 'Kitchen'};
+  let study = {name: 'Study'};
+  let library = {name: 'Library'};
+  let billiardRoom = {name: 'Billiard Room'};
+  let lounge = {name: 'Lounge'};
+  let ballroom = {name: 'Ballroom'};
+  let hall = {name: 'Hall'};
+  let spa = {name: 'Spa'};
+  let livingRoom = {name: 'Living Room'};
+  let observatory = {name: 'Observatory'};
+  let theater = {name: 'Theater'};
+  let guestHouse = {name: 'Guest House'};
+  let patio = {name: 'Patio'};
 
-const roomsArray = [
-  {name: 'Dining Room'},
-  {name: 'Conservatory'},
-  {name: 'Kitchen'},
-  {name: 'Study'},
-  {name: 'Library'},
-  {name: 'Billiard Room'},
-  {name: 'Lounge'},
-  {name: 'Ballroom'},
-  {name: 'Hall'},
-  {name: 'Spa'},
-  {name: 'Living Room'},
-  {name: 'Observatory'},
-  {name: 'Theater'},
-  {name: 'Guest House'},
-  {name: 'Patio'},
-];
+  const roomsArray = [ diningRoom, conservatory, kitchen, study, library, billiardRoom, lounge, ballroom, hall, spa, livingRoom, observatory, theater, guestHouse, patio];
 
-const suspectsArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 
 // Weapons Array
 
-const weaponsArray = [
-  {name: 'rope', weight: 10},
-  {name: 'knife', weight: 8},
-  {name: 'candlestick', weight: 2},
-  {name: 'dumbbell', weight: 30},
-  {name: 'poison', weight: 2},
-  {name: 'axe', weight: 15},
-  {name: 'bat', weight: 13},
-  {name: 'trophy', weight: 25},
-  {name: 'pistol', weight: 20}
-];
 
+  let rope = {name: 'rope', weight: 10};
+  let knife = {name: 'knife', weight: 8};
+  let candlestick = {name: 'candlestick', weight: 2};
+  let dumbbell = {name: 'dumbbell', weight: 30};
+  let poison = {name: 'poison', weight: 2};
+  let axe = {name: 'axe', weight: 15};
+  let bat = {name: 'bat', weight: 13};
+  let trophy = {name: 'trophy', weight: 25};
+  let pistol =  {name: 'pistol', weight: 20};
+
+  const weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
 
 // ITERATION 2
 
@@ -118,33 +119,22 @@ function pickMystery() {
 return {suspect, weapon, room};
 };
 
-console.log(pickMystery());
+let mystery = pickMystery();
+
+console.log(mystery);
 
 
 // ITERATION 3
 
-  function revealMystery() {}
+  function revealMystery(object) {
 
- // return `${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`;
+    return `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`;
+  } 
+console.log(revealMystery(mystery));
 
- //console.log((revealMystery());
+ // It seems to be working but it doesn't pass the last test "should return "<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!""
 
- /* mensagem no terminal:
-  expect(received).toEqual(expected) // deep equality
 
-    Expected: "Victor Plum killed Mr. Boddy using the poison in the Billiard Room!"
-    Received: undefined
-
-      201 |       room: { name: 'Billiard Room' }
-      202 |     });
-    > 203 |     expect(message).toEqual(
-          |                     ^
-      204 |       'Victor Plum killed Mr. Boddy using the poison in the Billiard Room!'
-      205 |     );
-      206 |   });
-  */
-
- 
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
