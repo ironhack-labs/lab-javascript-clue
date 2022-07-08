@@ -105,7 +105,7 @@
 function selectRandom(arr) {
   let randomArr = arr[Math.floor(Math.random() * arr.length)];
  
-  return randomArr;
+  return arr[randomArr];
 }
 
 console.log(selectRandom(roomsArray));
@@ -123,6 +123,24 @@ let mystery = pickMystery();
 
 console.log(mystery);
 
+// another way to solve the above it would be:
+
+/*
+function pickMystery() {
+ let randomSuspect = selectRandom(suspectsArray);
+ let randomWeapon = selectRandom(weaponsArray);
+ let randomRoom = selectRandom(roomsArray):
+
+ let mystery = {
+  suspect: randonSuspect,
+  weapon: randomWeapon,
+  room: randomRoom
+  }
+
+return mystery
+};
+
+*/
 
 // ITERATION 3
 
@@ -131,8 +149,6 @@ console.log(mystery);
     return `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`;
   } 
 console.log(revealMystery(mystery));
-
- // It seems to be working but it doesn't pass the last test "should return "<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!""
 
 
 
