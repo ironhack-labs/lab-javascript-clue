@@ -80,7 +80,7 @@ function pickMystery() {
   const suspect = selectRandom(suspectsArray)
   const weapon= selectRandom(weaponsArray)
   const room = selectRandom(roomsArray)
-  const mistery = {suspect: {...suspect}, weapon: {...weapon}, room: {...room}}
+  const mistery = {suspect: suspect, weapon: weapon, room: room}
 
   return mistery
 }
