@@ -82,11 +82,6 @@ function pickMystery() {
   const room = selectRandom(roomsArray)
   const mistery = {suspect: {...suspect}, weapon: {...weapon}, room: {...room}}
 
-  //console.log(mistery)
-  //console.log(roomsArray.includes(mistery.room))
-  //console.log(roomsArray)
-  //console.log(mistery.room)
-
   return mistery
 }
 
