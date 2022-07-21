@@ -114,6 +114,10 @@ const weaponsArray = [
 // ITERATION 2
 
 function selectRandom(arr) {
+
+    if(!arr.length ){
+        return undefined;
+    }
   if(arr.length === 1){
     return arr[0];
   }
