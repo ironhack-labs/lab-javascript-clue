@@ -2,10 +2,8 @@
 
 // Suspects Array
 
-const suspectsArray = [
-    
-    {  
-        firstName: 'Jacob',
+const suspectsArray = [   
+    {   firstName: 'Jacob',
         lastName: 'Green',
         occupation: 'Entrepreneur',
         age: 45,
@@ -14,8 +12,7 @@ const suspectsArray = [
         color: 'green'
     },
 
-    {
-        firstName: 'Doctor',
+    {   firstName: 'Doctor',
         lastName: 'Orchid',
         occupation: 'Scientist',
         age: 26,
@@ -24,8 +21,7 @@ const suspectsArray = [
         color: 'white'
     },
 
-    {
-        firstName: 'Victor',
+    {   firstName: 'Victor',
         lastName: 'Plum',
         occupation: 'Designer',
         age: 22,
@@ -34,8 +30,7 @@ const suspectsArray = [
         color: 'purple'
     },
 
-    {
-        firstName: 'Kasandra',
+    {   firstName: 'Kasandra',
         lastName: 'Scarlet',
         occupation: 'Actor',
         age: 31,
@@ -44,8 +39,7 @@ const suspectsArray = [
         color: 'red'
     },
 
-    {
-        firstName: 'Eleanor',
+    {   firstName: 'Eleanor',
         lastName: 'Peacock',
         occupation: 'Socialité',
         age: 36,        
@@ -54,8 +48,7 @@ const suspectsArray = [
         color: 'blue'
     },
 
-    {
-        firstName: 'Jack',
+    {   firstName: 'Jack',
         lastName: 'Mustard',
         occupation: 'Retired Football player',
         age: 62,
@@ -138,24 +131,36 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom(suspectsArray, roomsArray, weaponsArray) {
+function selectRandom(array) {
+    if (array === '') {
+        return undefined
+    }
     selectRandom.array.forEach(element => {
-        return ['', '', '']
+        for (let i > 0; i < array.length; i ++)
+        return Math.random()
     });
 }
 
 function pickMystery() {
-    for (`${selectRandom[suspectsArray]}, ${selectRandom[roomsArray]}, ${selectRandom[weaponsArray]}`)
-    return {
-        suspect: '',
-        weapon: '',
-        room: ''
-    }
+    let myMystery = {suspect:'', weapon:'', room:''};
+
+    for (`${selectRandom[suspectsArray.lastName]}`)
+        console.log(myMystery.suspect);
+
+    for (`${selectRandom[weaponsArray.name]}`) 
+        console.log(myMystery.weapon);
+
+    for (`${selectRandom[roomsArray.name]}`)
+        console.log(myMystery.room);
+
+        return myMystery
 }
 
 // ITERATION 3
 
 function revealMystery(object) {
+    let finalMystery = {suspect: '', weapon: '', room: ''};
+    
     for (`${pickMystery}`) {
         console.log('pickMystery.suspect.firstName' + 'pickMystery.suspect.lastName' + 'killed Mr. Boddy using the' + 'pickMystery.weapon.name' + 'in the' + 'pickMystery.room.name'!)
     }
