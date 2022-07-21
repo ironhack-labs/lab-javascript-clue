@@ -142,5 +142,12 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(mistery) {
 
+   return `${mistery.suspect.firstName} ${mistery.suspect.lastName} killed Mr. Boddy using the ${mistery.weapon.name} in the ${mistery.room.name}`
+
+
+}
+
+let mistery = pickMystery()
+console.log(revealMystery(mistery))
