@@ -41,7 +41,8 @@ let missScarlet =
     lastName: 'Scarlet',
     occupation: 'Actor',
     age: 31,
-    description: 'She is an A-list movie star with a dark past',image: 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
+    description: 'She is an A-list movie star with a dark past',
+    image: 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
     color: 'red',
     }
 
@@ -67,30 +68,24 @@ let mrMustard =
     color: 'yellow',
     }
 
-    const suspectsArray = [mrGreen, dr0rchid, profPlum, missScarlet,mrsPeacock, mrMustard];
-
-// Rooms Array
-let room1 = 
-  {name: "Dining Room"}
-let room2 =
- 
+const suspectsArray = [mrGreen, dr0rchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 
 const roomsArray = [
-{name: "Dining Room"}
-{name: "Conservatory"}
-{name: "Kitchen"}
-{name: "Study"}
-{name: "Library"}
-{name: "Billiard Room"}
-{name: "Lounge"}
-{name: "Ballroom"}
-{name: "Hall"}
-{name: "Spa"}
-{name: "Living Room"}
-{name: "Observatory"}
-{name: "Theater"}
-{name: "Guest House"}
-{name: "Patio"}
+{name: "Dining Room"},
+{name: "Conservatory"},
+{name: "Kitchen"},
+{name: "Study"},
+{name: "Library"},
+{name: "Billiard Room"},
+{name: "Lounge"},
+{name: "Ballroom"},
+{name: "Hall"},
+{name: "Spa"},
+{name: "Living Room"},
+{name: "Observatory"},
+{name: "Theater"},
+{name: "Guest House"},
+{name: "Patio"},
 ]
 
 // Weapons Array
@@ -108,32 +103,29 @@ const weaponsArray = [
 ]
 
 
-// ITERATION 2
+// // ITERATION 2
 
-function selectRandom (suspectsArray) {
-
-      function selectRandom (array) {
-
-    const randomNumber = Math.floor(Math.random()*array.length);
-      return array[randomNumber];
-        
-
-function pickMystery() {
-const suspect = selectRandom(suspectsArray)
-const room = selectRandom(roomsArray)
-const weapon = selectRandom(weaponsArray)
-  
-return {suspect, room, weapon}
+function selectRandom (array) {
+ const randomNumber = Math.floor(Math.random()*array.length);
+ const item = array[randomNumber];
+ return item; 
 }
 
+function pickMystery() {
+  const suspect = selectRandom(suspectsArray);
+  const room = selectRandom(roomsArray);
+  const weapon = selectRandom(weaponsArray);
+ return {suspect, room, weapon}; 
+};
 
-// ITERATION 3
 
-function revealMystery(envelope){
-        let firstName = envelope.suspect.firstName;
-        let lastName = envelope.suspect.lastName;
-        let weapon = envelope.weapon.name;
-        let room = envelope.room.name;
+// // ITERATION 3
 
-        return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${room}!`
+function revealMystery(envelope) {
+let firstName = envelope.suspect.firstName;
+let lastName = envelope.suspect.lastName;
+let weapon = envelope.weapon.name;
+let room = envelope.room.name;
 
+return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${room}!`
+}
