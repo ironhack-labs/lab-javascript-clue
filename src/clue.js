@@ -148,6 +148,6 @@ function revealMystery(mistery) {
 
 
 }
-
+  
 let mistery = pickMystery()
 console.log(revealMystery(mistery))
