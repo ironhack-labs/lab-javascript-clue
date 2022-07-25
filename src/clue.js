@@ -62,7 +62,6 @@ let mrMustard = {
 const suspectsArray = [mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 
 
-
 const roomsArray = [
     {name: 'Dining Room'},
     {name: 'Conservatory'},
@@ -81,8 +80,6 @@ const roomsArray = [
     {name: 'Patio'}
 ];
 
-
-
 const weaponsArray = [
     {name: 'rope', weight: 10 },
     {name: 'knife', weight: 8},
@@ -94,6 +91,8 @@ const weaponsArray = [
     {name: 'trophy', weight: 25},
     {name: 'pistol', weight: 20}
 ];
+
+
 
 
 function selectRandom(arrayOfStuff) {
