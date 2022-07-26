@@ -19,46 +19,46 @@ color: green
 
 ```
 drOrchid
-firstName: Doctor
-lastName: Orchid
-occupation: Scientist
-age: 26
-description: PhD in plant toxicology. Adopted daughter of Mr. Boddy
-image: http://www.radiotimes.com/uploads/images/Original/111967.jpg
-color: white
+firstName: "Doctor",
+lastName: "Orchid",
+occupation: "Scientist",
+age: "26",
+description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
+image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
+color: "white",
 ```
 
 ```
 profPlum
-firstName: Victor
-lastName: Plum
-occupation: Designer
+firstName: "Victor"
+lastName: "Plum"
+occupation: "Designer"
 age: 22
-description: Billionaire video game designer
-image: https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg
-color: purple
+description: "Billionaire video game designer"
+image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg"
+color: "purple"
 ```
 
 ```
 missScarlet
-firstName: Kasandra
-lastName: Scarlet
-occupation: Actor
+firstName: "Kasandra"
+lastName: "Scarlet"
+occupation: "Actor"
 age: 31
-description: She is an A-list movie star with a dark past
-image: https://www.radiotimes.com/uploads/images/Original/111967.jpg
-color: red
+description: "She is an A-list movie star with a dark past"
+image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg"
+color: "red"
 ```
 
 ```
 mrsPeacock
-firstName: Eleanor
-lastName: Peacock
-occupation: Socialité
-age: 36
-description: She is from a wealthy family and uses her status and money to earn popularity
-image: https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg
-color: blue
+firstName: "Eleanor",
+lastName: "Peacock",
+occupation: "Socialité",
+age: 36,
+description: "She is from a wealthy family and uses her status and money to earn popularity",
+image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
+color: "blue"
 ```
 
 ```
@@ -77,15 +77,15 @@ color: yellow
 ### Weapons
 
 ```
-name: rope --- weight: 10
-name: knife --- weight: 8
-name: candlestick --- weight: 2
-name: dumbbell --- weight: 30
-name: poison --- weight: 2
-name: axe --- weight: 15
-name: bat --- weight: 13
-name: trophy --- weight: 25
-name: pistol --- weight: 20
+name: "rope", weight: 10
+name: "knife", weight: 8
+name: "candlestick", weight: 2
+name: "dumbbell", weight: 30
+name: "poison", weight: 2
+name: "axe", weight: 15
+name: "bat", weight: 13
+name: "trophy", weight: 25
+name: "pistol", weight: 20
 ```
 
 <br>
