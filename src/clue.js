@@ -102,21 +102,22 @@ const weaponsArray = [
 
 function selectRandom(array) {
   let random = Math.floor(Math.random() * array.length);
-  return array.random;
+  return array[random];
 }
 
 function pickMystery() {
-  let mystery = {};
-  randomArrayNumber = selectRandom(suspectsArray);
-  console.log(
-    `It was ${suspectsArray[randomArrayNumber].firstName} ${suspectsArray[randomArrayNumber].lastName}`
-  );
+  let mystery = { suspect: {}, weapon: {}, room: {} };
+  randomSuspect = selectRandom(suspectsArray);
+  mystery.suspect = randomSuspect;
+  randomWeapon = selectRandom(weaponsArray);
+  mystery.weapon = randomWeapon;
+  randomRoom = selectRandom(roomsArray);
+  mystery.room = randomRoom;
+  return mystery;
 }
-
-pickMystery();
-
-// Declare a function named `pickMystery` that takes no arguments and returns an object with three properties: _suspect_, _weapon_ and _room_, each holding as a value a card of that specific type. You can get a random card of each type by calling `selectRandom` on each card stack.
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(obj) {
+  return `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`;
+}
