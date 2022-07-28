@@ -204,5 +204,12 @@ function pickMystery() {
 
 function revealMystery() {
 
-    return `${pickMystery().suspect.firstName} ${pickMystery().suspect.lastName} killed Mr. Boddy using the ${pickMystery().weapon.name} in the ${pickMystery().room.name}!`;
+    const mystery = pickMistery();
+    const firstName = mystery.suspect.firstName;
+    const lastName = mystery.suspect.lastName;
+    const weapon = mystery.weapon.name;
+    const place = mystery.room.name;
+
+
+    return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${place}!`;
 }
