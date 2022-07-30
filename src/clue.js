@@ -13,6 +13,7 @@ const suspectsArray = [
     color: "green",
   },
 
+<<<<<<< HEAD
   {
     firstName: "Doctor",
     lastName: "Orchid",
@@ -66,11 +67,19 @@ const suspectsArray = [
       "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg",
     color: "yellow",
   },
+=======
+const suspectsArray = [
+  {
+    firstName: "John",
+    lastName: "Doe"
+  }
+>>>>>>> f4c6c68b2072b1ddbef2aeb15f0396f3347c5116
 ];
 
 // Rooms Array
 
 const roomsArray = [
+<<<<<<< HEAD
   { name: "Dining Room" },
   { name: "Conservatory" },
   { name: "Kitchen" },
@@ -86,11 +95,17 @@ const roomsArray = [
   { name: "Theater" },
   { name: "Guest House" },
   { name: "Patio" },
+=======
+  {
+    roomName: ["living room", "office", "kitchen"]
+  }
+>>>>>>> f4c6c68b2072b1ddbef2aeb15f0396f3347c5116
 ];
 
 // Weapons Array
 
 const weaponsArray = [
+<<<<<<< HEAD
   { name: "rope", weight: 10 },
   { name: "knife", weight: 8 },
   { name: "candlestick", weight: 2 },
@@ -101,6 +116,13 @@ const weaponsArray = [
   { name: "trophy", weight: 25 },
   { name: "pistol", weight: 20 },
 ];
+=======
+  {
+    weaponName: ["knife", "pistol"]
+  }
+];
+
+>>>>>>> f4c6c68b2072b1ddbef2aeb15f0396f3347c5116
 
 // ITERATION 2
 
@@ -125,5 +147,12 @@ function pickMystery() {
 // ITERATION 3
 
 function revealMystery() {
+<<<<<<< HEAD
   return `${suspectsArray[firstName]} ${suspectsArray[lastName]} killed Mr. Boddy using the ${weaponsArray[name]} in the ${roomsArray[name]}!`;
 }
+=======
+  return `${suspectsArray["firstName"] ${suspectsArray["firstName"] killed Mr. Boddy using the ${weaponsArray[roomName[]]`
+  <FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!
+}
+
+>>>>>>> f4c6c68b2072b1ddbef2aeb15f0396f3347c5116
