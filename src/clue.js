@@ -6,9 +6,8 @@ const suspectsArray = [
 
     {
 
-
-        lastName: "Green",
         firstName: "Jacob",
+        lastName: "Green",
         occupation: "Entrepreneur",
         age: 45,
         description: "He has a lot of connections",
@@ -164,6 +163,8 @@ function pickMystery() {
     return objectRandom
 }
 
+let resultado = pickMystery()
+console.log(resultado)
 
 // ITERATION 3
 
@@ -171,4 +172,5 @@ function revealMystery(mystery) {
     return `${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`
 }
 
-console.log(revealMystery(objectRandom))
+let result = revealMystery(resultado)
+console.log(result)
