@@ -23,7 +23,7 @@ const suspectsArray = [
         color: 'white'
 
     },
-    
+
     profPlum = {
         firstName: 'Victor',
         lastName: 'Plum',
@@ -55,25 +55,152 @@ const suspectsArray = [
         image: 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
         color: 'blue'
 
-    }
+    },
 
+    mrMustard = {
+        firstName: "Jack",
+        lastName: "Mustard",
+        occupation: "Retired Football player",
+        age: 62,
+        description: "He is a former football player who tries to get by on his former glory",
+        image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg",
+        color: "yellow"
+    }
 
 ];
 
 // Rooms Array
 
-const roomsArray = [];
+const roomsArray = [{
+        name: 'Dining Room'
+    },
+
+    {
+        name: 'Conversatory'
+    },
+
+    {
+        name: 'Kitchen'
+    },
+
+    {
+        name: 'Study'
+    },
+
+    {
+        name: 'Library'
+    },
+
+    {
+        name: 'Billiard Room'
+    },
+
+    {
+        name: 'Lounge'
+    },
+
+    {
+        name: 'Ballroom'
+    },
+
+    {
+        name: 'Hall'
+    },
+
+    {
+        name: 'Spa'
+    },
+
+    {
+        name: 'Living Room'
+    },
+
+    {
+        name: 'Observatory'
+    },
+
+    {
+        name: 'Theatre'
+    },
+
+    {
+        name: 'Guest House'
+    },
+
+    {
+        name: 'Patio'
+    },
+
+
+];
 
 // Weapons Array
 
-const weaponsArray = [];
+const weaponsArray = [
+
+    {
+        name: "rope",
+        weight: 10
+    },
+
+    {
+        name: "knife",
+        weight: 8
+    },
+    {
+        name: "candlestick",
+        weight: 2
+    },
+    {
+        name: "dumbbell",
+        weight: 30
+    },
+    {
+        name: "poison",
+        weight: 2
+    },
+    {
+        name: "axe",
+        weight: 15
+    },
+    {
+        name: "bat",
+        weight: 13
+    },
+    {
+        name: "trophy",
+        weight: 25
+    },
+    {
+        name: "pistol",
+        weight: 20
+    }
+
+];
 
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(arrElement) {
+    for (let el of arrElement) {
+        console.log(el)
+        let randomIndex = Math.floor(arrElement.length * Math.random())
+        console.log(randomIndex)
+        return arrElement[randomIndex]
+    }
 
-function pickMystery() {}
+}
+
+console.log(selectRandom(weaponsArray))
+
+function pickMystery() {
+    return {
+        suspect:'',
+        weapon:'',
+        room: ''
+    }
+
+}
 
 
 // ITERATION 3
