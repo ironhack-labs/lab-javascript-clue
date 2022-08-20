@@ -22,6 +22,15 @@ const suspectsArray = [
     color: 'white'
 },
 {
+    firstName: 'Victor',
+    lastName: 'Plum',
+    occupation: 'Designer',
+    age: 22,
+    description: 'Billionaire video game designer',
+    image: src="https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
+    color: 'purple'
+},
+{
     firstName: 'Kasandra',
     lastName: 'Scarlet',
     occupation: 'Actor',
@@ -103,42 +112,15 @@ const roomsArray = [
 // Weapons Array
 
 const weaponsArray = [
-{
-    name: 'rope',
-    weight: 10
-},
-{
-    name: 'knife',
-    weight: 8
-},
-{
-    name: 'candlestick',
-    weight: 2
-},
-{
-    name: 'dumbbell',
-    weight: 30
-},
-{
-    name: 'posion',
-    weight: 2
-},
-{
-    name: 'axe',
-    weigth: 15
-},
-{
-    name: 'bat',
-    weight: 13
-},
-{
-    name: 'trophy',
-    weight: 25
-},
-{
-    name: 'pistol',
-    weight: 20
-}    
+    { name: "rope", weight: 10 },
+    { name: "knife", weight: 8 },
+    { name: "candlestick", weight: 2 },
+    { name: "dumbbell", weight: 30 },
+    { name: "poison", weight: 2 },
+    { name: "axe", weight: 15 },
+    { name: "bat", weight: 13 },
+    { name: "trophy", weight: 25 },
+    { name: "pistol", weight: 20 },   
 ];
 
 
