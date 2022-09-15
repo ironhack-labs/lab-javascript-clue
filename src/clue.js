@@ -84,7 +84,7 @@ const suspectsArray = [
     color: "yellow",
   },
 ];
-console.log("" + suspectsArray[0].firstName);
+//console.log("" + suspectsArray[0].firstName);
 // Rooms Array
 
 const roomsArray = [
@@ -134,7 +134,7 @@ const roomsArray = [
     name: "Patio",
   },
 ];
-console.log("" + roomsArray[8].name);
+//console.log("" + roomsArray[8].name);
 // Weapons Array
 
 const weaponsArray = [
@@ -175,7 +175,7 @@ const weaponsArray = [
     weight: 20,
   },
 ];
-console.log("" + weaponsArray[3].name + " weight : " + weaponsArray[3].weight);
+//console.log("" + weaponsArray[3].name + " weight : " + weaponsArray[3].weight);
 // ITERATION 2
 
 function selectRandom(array) {
@@ -202,22 +202,23 @@ function revealMystery(pickMystery) {
     pickMystery.suspect.firstName +
     " " +
     pickMystery.suspect.lastName +
-    "killed Mr. Boddy using the " +
+    " killed Mr. Boddy using the " +
     pickMystery.weapon.name +
     " in the " +
     pickMystery.room.name +
     "!";
 
-  console.log(
-    "Suspect " +
-      pickMystery.suspect.firstName +
-      " " +
-      pickMystery.suspect.lastName,
+  //   console.log(
+  //     "Suspect " +
+  //       pickMystery.suspect.firstName +
+  //       " " +
+  //       pickMystery.suspect.lastName,
 
-    " weapon " + pickMystery.weapon.name,
-    "room " + pickMystery.room.name
-  );
+  //     " weapon " + pickMystery.weapon.name,
+  //     "room " + pickMystery.room.name
+  //   );
 
+  console.log(string);
   return string;
 }
 revealMystery(pickMystery());
