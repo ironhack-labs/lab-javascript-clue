@@ -161,7 +161,17 @@ function selectRandom(stack) {
     return stack[randomNum]
 }
 
-function pickMystery() {}
+function pickMystery() {
+    let randomSuspect = selectRandom(suspectsArray);
+    let randomRoom = selectRandom(roomsArray);
+    let randomWeapon = selectRandom(weaponsArray);
+    let randomMystery = {
+        suspect: randomSuspect,
+        room: randomRoom,
+        weapon: randomWeapon
+    };       
+    return randomMystery
+}
 
 
 // ITERATION 3
