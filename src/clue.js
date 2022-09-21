@@ -153,7 +153,13 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(stack) {
+    if (!stack.length) return undefined;
+    //Generate a random number
+    let randomNum = Math.floor(Math.random() * stack.length);
+    //make function return that number as an element
+    return stack[randomNum]
+}
 
 function pickMystery() {}
 
@@ -161,4 +167,6 @@ function pickMystery() {}
 // ITERATION 3
 
 function revealMystery() {}
+
+
 
