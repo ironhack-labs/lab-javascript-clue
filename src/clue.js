@@ -156,6 +156,6 @@ function pickMystery() {
 // ITERATION 3
 
 function revealMystery(pickMystery) {
-    return `${suspectsArray.firstName}${suspectsArray.lastname} killed Mr. Boddy using the ${weaponsArray} in the${roomsArray}`
+    return `${pickMystery.suspect.firstName} ${pickMystery.suspect.lastName} killed Mr. Boddy using the ${pickMystery.weapon.name} in the ${pickMystery.room.name}!`
 }
-/*no se hacer el último punto*/
+
