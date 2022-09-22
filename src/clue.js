@@ -184,8 +184,7 @@ function revealMystery(someObj) {
         room : selectRandom(roomsArray)
     }
     
-    let newObj = `${someObj.suspect.firstName} ${someObj.suspect.lastName} mató al Sr. Boddy usando el ${someObj.weapon.name} en la ${someObj.room.name}!"`
+    let newObj = `"${someObj.suspect.firstName} ${someObj.suspect.lastName} killed Mr. Boddy using the ${someObj.weapon.name} in the ${someObj.room.name}!"`
  //No logro que jasmine me habilite la ultima iteracion   
     return newObj
-    
 }
