@@ -163,7 +163,7 @@ function selectRandom(someArr) {
     let randomElem = Math.floor(randomNum)
     return someArr[randomElem]
 }
-selectRandom(suspectsArray)
+
 
 function pickMystery() {
     let newObj = {
@@ -171,13 +171,21 @@ function pickMystery() {
         weapon : selectRandom(weaponsArray),
         room : selectRandom(roomsArray)
     }
-
    return newObj
-    
 }
-pickMystery(suspectsArray)
+
 
 // ITERATION 3
 
-function revealMystery() {}
-
+function revealMystery(someObj) {
+    let someObject = {
+        suspect : selectRandom(suspectsArray),
+        weapon : selectRandom(weaponsArray),
+        room : selectRandom(roomsArray)
+    }
+    
+    let newObj = `${someObj.suspect.firstName} ${someObj.suspect.lastName} mató al Sr. Boddy usando el ${someObj.weapon.name} en la ${someObj.room.name}!"`
+ //No logro que jasmine me habilite la ultima iteracion   
+    return newObj
+    
+}
