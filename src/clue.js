@@ -64,6 +64,9 @@ const suspectsArray = [
 
 const roomsArray = [
     {
+        name: 'Dining Room'
+    },
+    {
         name: 'Conservatory'
     },
     {
@@ -73,38 +76,31 @@ const roomsArray = [
         name: 'Study'
     },
     {
-        name: 'Library'
-        
+        name: 'Library'  
     },
     {
         name: 'Billiard Room'
-
     },
     {
         name: 'Lounge'
-
     },
     {
         name: 'Ballroom'
     },
     {
         name: 'Hall'
-
     },
     {
         name: 'Spa'
     },
     {
         name: 'Living Room'
-
     },
     {
         name: 'Observatory'
-
     },
     {
         name: 'Theater'
-
     },
     {
         name:'Guest House'
@@ -160,10 +156,26 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(someArr) {
+    // random num float
+    let randomNum = Math.random()* someArr.length
+    // random num int
+    let randomElem = Math.floor(randomNum)
+    return someArr[randomElem]
+}
+selectRandom(suspectsArray)
 
-function pickMystery() {}
+function pickMystery() {
+    let newObj = {
+        suspect : selectRandom(suspectsArray),
+        weapon : selectRandom(weaponsArray),
+        room : selectRandom(roomsArray)
+    }
 
+   return newObj
+    
+}
+pickMystery(suspectsArray)
 
 // ITERATION 3
 
