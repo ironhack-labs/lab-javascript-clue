@@ -67,7 +67,7 @@ const suspectsArray = [
     mrGreen, dr0rchid, profPlum, missScarlet, mrsPeacock, mrMustard
 ];
 
-console.log(suspectsArray[5].color)
+// console.log(suspectsArray[5].color)
 
 
 
@@ -159,13 +159,24 @@ const weaponsArray = [
 // ITERATION 2
 
 function selectRandom(arr) {
-    
+    let randomIndex = Math.floor(Math.random() * arr.length)
+    return arr[randomIndex];
 }
 
-function pickMystery() {}
+function pickMystery() {
+    const obj = {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray),
+    }
+    return obj;
+}
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(envelope) {
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+}
 
+console.log(revealMystery(pickMystery()));
