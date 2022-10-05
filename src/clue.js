@@ -2,7 +2,9 @@
 
 // Suspects Array
 
-const suspectsArray = [];
+const suspectsArray = [
+    
+];
 
 // Rooms Array
 
