@@ -162,7 +162,6 @@ const roomsArray = [room1, room2, room3, room4, room5, room6, room7,
     room8, room9, room10, room11, room12, room13, room14, room15]
 
 // ITERATION 2
-
 function selectRandom(arr) {
     return arr[Math.floor(Math.random() * arr.length)]
 }
