@@ -99,11 +99,12 @@ let theWeapons = {selectRandom(weaponsArray)};
 };
 
 // ITERATION 3
+
 revealMystery(suspectsArray)
 revealMystery(roomsArray)
 revealMystery(weaponsArray)
 
-function revealMystery(array) {
-    return (array)
+function revealMystery(envelope) {
+    return `${suspectsArray.firstName} ${suspectsArray.lastName} killed Mr. Boddy using the ${weaponsArray.name} in the ${weaponsArray.name}!`
 }
 
