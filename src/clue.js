@@ -2,7 +2,17 @@
 
 // Suspects Array
 
-const suspectsArray = [];
+const suspectsArray = [
+  {firstName: 'Jacob',
+lastName: 'Green',
+occupation:'Entrepreneur'
+  },
+  {
+    firstName: 'Doctor',
+lastName: 'Orchid',
+occupation: 'Scientist'
+  }
+];
 
 // Rooms Array
 
