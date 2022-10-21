@@ -7,7 +7,7 @@ Use this data to model your game cards into objects.
 ### Suspects
 
 ```
-mrGreen
+"mrGreen
 firstName: Jacob
 lastName: Green
 occupation: Entrepreneur
@@ -69,7 +69,7 @@ occupation: Retired Football player
 age: 62
 description: He is a former football player who tries to get by on his former glory
 image: https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg
-color: yellow
+color: yellow"
 ```
 
 <br>
