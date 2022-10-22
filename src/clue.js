@@ -132,36 +132,26 @@ const roomsArray = [
 function selectRandom(arryCardstack) {
     let cardRandom = Math.floor(Math.random() * arryCardstack.length)
     let cardSelected = arryCardstack[cardRandom]
- 
-    if (arryCardstack.length = 0) {
-        return undefined
-    } else {
        return cardSelected
-    }
+   
 }
 
 
 function pickMystery() {
-    let mySuspectCard = selectRandom(suspectsArray)
-    let myWeaponCard = selectRandom(weaponsArray)
-    let myRommCard = selectRandom(roomsArray)
-    let totalCards = {
-        suspect: mySuspectCard,
-        weapon: myWeaponCard,
-        room:myRommCard
-    }
+    let suspect = selectRandom(suspectsArray)
+    let weapon= selectRandom(weaponsArray)
+    let room = selectRandom(roomsArray)
+
+   return {suspect,weapon,room}
     
-    return totalCards
 }
 
 
 // ITERATION 3
 
-function revealMystery(revealMyCards) {
- 
-    return `${revealMyCards.suspect.firstName} killed Mr. Boddy using the ${revealMyCards.weapon.name} in the ${revealMyCards.room.name} `
- 
-}
-//  revealMystery(pickMystery())    cuando utilizo este para llmar la funcion, el ITERATION 1 pinta rojo
+function revealMystery({ oneSuspect, oneWeapon, oneRoom }) {
+        return "`${oneSuspect.firstName} ${oneSuspect.lastName} killed Mr. Boddy using the ${oneWeapon.name} in the ${oneRoom.name} `"
+    }
+revealMystery(pickMystery())
+//    POR QUE No funciona esta llamada
 
-   
