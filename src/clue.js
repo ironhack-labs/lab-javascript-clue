@@ -121,41 +121,41 @@ const roomsArray = [
 
 
 const rope = {
-    weaponName: "rope",
+    name: "rope",
     weight: 10
 }
 
 const knife = {
-    weaponName: "knife",
+    name: "knife",
     weight: 8
 }
 
 const candlestick = {
-    weaponName: "candlestick",
+    name: "candlestick",
     weight: 2
 }
 const dumbbell = {
-    weaponName: "dumbbell",
+    name: "dumbbell",
     weight: 30
 }
 const poison = {
-    weaponName: "poison",
+    name: "poison",
     weight: 2
 }
 const axe = {
-    weaponName: "axe",
+    name: "axe",
     weight: 15
 }
 const bat = {
-    weaponName: "bat",
+    name: "bat",
     weight: 13
 }
 const trophy = {
-    weaponName: "trophy",
+    name: "trophy",
     weight: 25
 }
 const pistol = {
-    weaponName: "pistol",
+    name: "pistol",
     weight: 20
 }
 const weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
@@ -177,8 +177,8 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {
-    let mystery = pickMystery()
-    return `${mystery.suspect.firstName}  ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.weaponName} in the ${mystery.room.name}`
+function revealMystery(envelope) {
+    // let mystery = pickMystery()
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
 }
 
