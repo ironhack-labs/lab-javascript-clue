@@ -113,7 +113,7 @@ At the beginning of the game, players shuffle each of the card stacks to create 
 #### Random selector
 
 Declare a function named `selectRandom` to randomly select one element from a card stack. The function should expect an `array` as an argument, and should return a random element from the array.
-
+selectRandom tiene que escoger una carta entre todas las arrays - por tanto hay que crear una nested array 
 <br>
 
 #### Create the mystery
