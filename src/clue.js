@@ -138,20 +138,23 @@ function selectRandom(arryCardstack) {
 
 
 function pickMystery() {
-    let suspect = selectRandom(suspectsArray)
-    let weapon= selectRandom(weaponsArray)
-    let room = selectRandom(roomsArray)
+    let mySuspectCard = selectRandom(suspectsArray)
+    let myWeaponCard = selectRandom(weaponsArray)
+    let myRommCard = selectRandom(roomsArray)
+    let totalCards = {
+        suspect: mySuspectCard,
+        weapon: myWeaponCard,
+        room:myRommCard
+    }
 
-   return {suspect,weapon,room}
-    
+    return totalCards
 }
 
 
 // ITERATION 3
 
-function revealMystery({ oneSuspect, oneWeapon, oneRoom }) {
-        return "`${oneSuspect.firstName} ${oneSuspect.lastName} killed Mr. Boddy using the ${oneWeapon.name} in the ${oneRoom.name} `"
+function revealMystery(obj) {
+        return`${ obj.suspect.firstName} ${ obj.suspect.lastName} killed Mr. Boddy using the ${ obj.weapon.name} in the ${ obj.room.name}`
     }
-revealMystery(pickMystery())
-//    POR QUE No funciona esta llamada
+revealMystery( totalCards)
 
