@@ -62,7 +62,9 @@ suspectsArray = [
 ];
 
 // Roomname
-const roomsArray = [
+let roomsArray;
+
+roomsArray = [
 
     { name: 'Café' },
     { name: 'Salón' },
@@ -82,7 +84,9 @@ const roomsArray = [
 
 ];
 
-let weaponsArray = [
+let weaponsArray;
+
+weaponsArray = [
     {
         name: 'Sword',
         weight: 10,
