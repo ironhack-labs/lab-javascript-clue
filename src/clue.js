@@ -150,9 +150,9 @@ function pickMystery() {
 
 
 
-function revealMystery() {
+function revealMystery(envelope) {
 
-    let envelope = pickMystery()
+    
     
     return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
 }
