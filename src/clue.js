@@ -154,10 +154,10 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom(array) {
-  if (array.length === 1) return array[0];
+function selectRandom(unit) {
+  if (unit.length === 1) return unit[0];
 
-  return array[Math.floor(Math.random() * array.length)];
+  return unit[Math.floor(Math.random() * unit.length)];
 }
 
 function pickMystery() {
