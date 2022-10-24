@@ -170,14 +170,6 @@ function pickMystery() {
 
 // ITERATION 3
 
-const revealedMystery = {
-  suspect: pickMystery().suspect,
-  weapon: pickMystery().weapon,
-  room: pickMystery().room,
-};
-
-function revealMystery(revealedMystery) {
-  const { suspect, weapon, room } = revealedMystery;
-
+function revealMystery({ suspect, weapon, room }) {
   return `${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`;
 }
