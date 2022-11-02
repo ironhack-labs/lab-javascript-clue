@@ -4,7 +4,7 @@
 
 const suspectsArray = [
   {
-    firstName: Jacob,
+    firstName: "Jacob",
     lastName: "Green",
     occupation: "Entrepreneur",
     age: 45,
@@ -49,7 +49,7 @@ const suspectsArray = [
     description:
       "She is from a wealthy family and uses her status and money to earn popularity",
     image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
-    color: blue,
+    color: "blue",
   },
   {
     firstName: "Jack",
@@ -100,10 +100,27 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(array) {
+  const index = Math.floor(Math.random() * array.length);
 
-function pickMystery() {}
+  return array[index];
+}
+
+function pickMystery() {
+  const suspect = selectRandom(suspectsArray);
+  const weapon = selectRandom(weaponsArray);
+  const room = selectRandom(roomsArray);
+
+  return { suspect: suspect, weapon: weapon, room: room };
+}
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(envelope) {
+  const firstName = envelope.suspect.firstName;
+  const lastName = envelope.suspect.lastName;
+  const weapon = envelope.weapon.name;
+  const room = envelope.room.name;
+
+  return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${room}!`;
+}
