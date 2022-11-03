@@ -105,14 +105,15 @@ function pickMystery() {
     play.suspect = selectRandom(suspectsArray);
     play.weapon = selectRandom(weaponsArray);
     play.room = selectRandom(roomsArray);
-
     return play;
+
     // another approach
+
     // let suspect = selectRandom(suspectsArray);
     // let weapon = selectRandom(weaponsArray);
     // let room = selectRandom(roomsArray);
-
     // return { suspect, weapon, room }
+
     // another approach
     // return { suspect: selectRandom(suspectsArray), weapon: selectRandom(weaponsArray), room: selectRandom(roomsArray) }
 }
