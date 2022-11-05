@@ -193,10 +193,8 @@ function pickMystery() {
 
 // ITERATION 3
 
-let ojectResult = pickMystery()
-
-function revealMystery() {
-    return `${ojectResult.suspect.firstName} ${ojectResult.suspect.lastName} killed Mr. Boddy using the ${ojectResult.weapon.name} in the ${ojectResult.room.name}!`
+function revealMystery(evelopeMistery = pickMystery()) {
+    return `${evelopeMistery.suspect.firstName} ${evelopeMistery.suspect.lastName} killed Mr. Boddy using the ${evelopeMistery.weapon.name} in the ${evelopeMistery.room.name}!`
 }
 
 

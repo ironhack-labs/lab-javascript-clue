@@ -192,6 +192,7 @@ describe('Function "revealMystery" - Reveal the mystery', () => {
       weapon: { name: 'poison' },
       room: { name: 'Billiard Room' }
     });
+    console.log(message)
     expect(message).toEqual(
       'Victor Plum killed Mr. Boddy using the poison in the Billiard Room!'
     );
