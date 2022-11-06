@@ -183,6 +183,8 @@ describe('Function "revealMystery" - Reveal the mystery', () => {
       weapon: { name: 'abd' },
       room: { name: 'abb' }
     });
+  
+    console.log(message)
     expect(typeof message).toEqual('string');
   });
 
