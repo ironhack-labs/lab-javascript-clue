@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,700|Holtwood+One+SC');
+
+
+body {
+  font-family: "Roboto";
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-family: "Holtwood One SC";
+  font-size: 3.2em;
+  text-transform: uppercase;
+  color: black;
+}
+span {
+  color: red;
+}
+h2 {
+  font-family: "Holtwood One SC";
+  font-size: 1.6em;
+  text-align: center;
+}
+
+button {
+  background-color: red;
+  border: 16;
+  border-radius: 16px;
+  color: black;
+  font-family: "Holtwood One SC";
+  margin-top: 16px;
+  padding: 8px 24px;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mid {
+  width: 50%;
+  max-width: 200px;
+}
