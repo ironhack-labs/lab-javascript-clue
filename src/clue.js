@@ -178,8 +178,5 @@ function pickMystery() {
 // ITERATION 3
 
 function revealMystery(envelop) {
-  const theReveal = `${envelop.suspect.firstName} ${envelop.suspect.lastName} killed Mr. Boddy using the ${envelop.weapon.name} in the ${envelop.room.name}!`;
-//   const theReveal = `${envelop.suspect.firstName} ${envelop.suspect.lastName} killed Mr. Boddy using ${envelop.weapon.name} in the ${envelop.room.name}!`;
-  console.log(theReveal);
-  return theReveal;
+  return `${envelop.suspect.firstName} ${envelop.suspect.lastName} killed Mr. Boddy using the ${envelop.weapon.name} in the ${envelop.room.name}!`;
 }
