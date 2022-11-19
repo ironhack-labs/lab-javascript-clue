@@ -65,9 +65,9 @@ const suspectsArray = [
     }
 ];
 
-// Rooms Array
+// Weapons Array
 
-const roomsArray = [
+const weaponsArray = [
     {
         name: 'rope',
         weight: 10
@@ -106,9 +106,9 @@ const roomsArray = [
     }
 ];
 
-// Weapons Array
+// Rooms Array
 
-const weaponsArray = [
+const roomsArray = [
     {
         name: 'Dining Room'
     },
