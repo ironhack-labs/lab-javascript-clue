@@ -149,14 +149,21 @@ const weaponsArray = [
 // ITERATION 2
 
 function selectRandom(someArray) {
-        }
-    return Math.floor(Math.random()*someArray[i]);
-}
-
-function pickMystery() {}
-
-
-// ITERATION 3
-
-function revealMystery() {}
+    let randomElement = someArray[Math.floor(Math.random())];
+     let value = Object.values(randomElement);
+    return value
+    
+  }
+  
+  selectRandom(roomsArray);
+  console.log (selectRandom(roomsArray))
+  
+  function pickMystery() {
+    let result = {}
+  }
+  
+  
+  // ITERATION 3
+  
+  function revealMystery() {}
 
