@@ -9,7 +9,7 @@ const suspectsArray = [
         Description: 'He has a lot of connections',
         Image: src ='https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
         Color: 'green'
-    }
+    },
     {
         firstName: 'Doctor',
         lastName:  'Orchid',
@@ -18,7 +18,7 @@ const suspectsArray = [
         Description: 'PhD in plan toxicology. Adopted daughter of MediaRecorder. Boddy',
         Image: src = 'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
         Color: 'white'
-    }
+    },
     {
         firstName: 'Victor',
         lastName:'Plum',
@@ -27,16 +27,16 @@ const suspectsArray = [
         Description: 'Billionaire video game designer',
         Image: src = 'https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg',
         Color: 'purple'
-    }
+    },
     {
         firstName: 'Kasandra',
         lastName: 'Scarlet',
-        Occupation:'Actor'
+        Occupation:'Actor',
         Age: 31,
         Description: 'She is an A-list movie star with dark past',
         Image: src = 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
         Color: 'red'
-    }
+    },
     {
         firstName: 'Eleanor',
         lastName: 'Peacock',
@@ -45,7 +45,7 @@ const suspectsArray = [
         Description: 'She is from a wealthy family and uses her status and money to earn popularity',
         Image: src = 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
         Color: 'blue'
-    }
+    },
     {
         firstName: 'Jack',
         lastName: 'Mustard',
@@ -60,46 +60,46 @@ const suspectsArray = [
 const roomsArray = [
     {
         Name: 'Dining room'
-    }
+    },
     {
         Name: 'Conservatory'
-    }
+    },
     {
         Name: 'Kitchen'
-    }
+    },
     {
         Name: 'Study'
-    }
+    },
     {
         Name: 'Library'
-    }
+    },
     {
         Name: 'Billiard Room'
-    }
+    },
     {
         Name: 'Lounge'
-    }
+    },
     {
         Name: 'Ballroom'
-    }
+    },
     {
         Name: 'Hall'
-    }
+    },
     {
         Name: 'Spa'
-    }
+    },
     {
         Name: 'Living room'
-    }
+    },
     {
         Name: 'Observatory'
-    }
+    },
     {
         Name: 'Theater'
-    }
+    },
     {
         Name: 'guest house'
-    }
+    },
     {
         Name: 'patio'
     }
@@ -110,35 +110,35 @@ const weaponsArray = [
     {
         Name: 'rope',
         Weight: 10
-    }
+    },
     {
         Name: 'knife',
         Weight: 8
-    }
+    },
     {
         Name: 'candlestick',
         Weight:2
-    }
+    },
     {
         Name: 'dumbbell',
         Weight: 30
-    }
+    },
     {
         Name: 'poison',
         Weight: 2
-    }
+    },
     {
         Name: 'axe',
         Weight: 15
-    }
+    },
     {
         Name: 'bat',
         Weight: 13
-    }
+    },
     {
         Name: 'trophy',
         Weight: 25
-    }
+    },
     {
         Name: 'pistol',
         Weight: 20
@@ -148,7 +148,10 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(someArray) {
+        }
+    return Math.floor(Math.random()*someArray[i]);
+}
 
 function pickMystery() {}
 
