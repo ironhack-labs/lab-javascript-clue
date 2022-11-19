@@ -156,14 +156,22 @@ function selectRandom(someArray) {
   }
   
   selectRandom(roomsArray);
-  console.log (selectRandom(roomsArray))
   
   function pickMystery() {
-    let result = {}
+    let result = {
+      suspect: selectRandom(suspectsArray),
+      weapon: selectRandom(weaponsArray),
+      room: selectRandom(roomsArray)
+    };
+    return result
   }
-  
+   pickMystery();
   
   // ITERATION 3
   
-  function revealMystery() {}
-
+  function revealMystery(pickMystery) {
+    let FinalObjects = pickMystery();
+     return `${FinalObjects[0]} ${FinalObjects[1]} killed Mr.Boddy using the ${FinalObjects[2]} in the ${FinalObjects[3]}`
+   }
+ 
+ revealMystery(pickMystery)
