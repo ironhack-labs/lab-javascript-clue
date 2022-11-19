@@ -7,21 +7,21 @@ const suspectsArray = [
         Occupation: 'Entrepreneur',
         Age: 45,
         Description: 'He has a lot of connections',
-        Image: src ='https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
+        Image: src = 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
         Color: 'green'
     },
     {
         firstName: 'Doctor',
-        lastName:  'Orchid',
+        lastName: 'Orchid',
         Occupation: 'Scientist',
-        Age:26,
+        Age: 26,
         Description: 'PhD in plan toxicology. Adopted daughter of MediaRecorder. Boddy',
         Image: src = 'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
         Color: 'white'
     },
     {
         firstName: 'Victor',
-        lastName:'Plum',
+        lastName: 'Plum',
         Occupation: 'Designer',
         Age: 22,
         Description: 'Billionaire video game designer',
@@ -31,7 +31,7 @@ const suspectsArray = [
     {
         firstName: 'Kasandra',
         lastName: 'Scarlet',
-        Occupation:'Actor',
+        Occupation: 'Actor',
         Age: 31,
         Description: 'She is an A-list movie star with dark past',
         Image: src = 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
@@ -49,7 +49,7 @@ const suspectsArray = [
     {
         firstName: 'Jack',
         lastName: 'Mustard',
-        Occupation:'Retired football player',
+        Occupation: 'Retired football player',
         Age: 62,
         Description: 'He is a former football player who tries to get by on his former glory',
         Image: src = 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg',
@@ -117,7 +117,7 @@ const weaponsArray = [
     },
     {
         Name: 'candlestick',
-        Weight:2
+        Weight: 2
     },
     {
         Name: 'dumbbell',
@@ -149,29 +149,30 @@ const weaponsArray = [
 // ITERATION 2
 
 function selectRandom(someArray) {
-    let randomElement = someArray[Math.floor(Math.random())];
-     let value = Object.values(randomElement);
+    let randomElement = someArray[Math.floor(Math.random() * someArray.length)];
+    let value = Object.values(randomElement);
     return value
-    
-  }
-  
-  selectRandom(roomsArray);
-  
-  function pickMystery() {
+
+}
+
+function pickMystery() {
     let result = {
-      suspect: selectRandom(suspectsArray),
-      weapon: selectRandom(weaponsArray),
-      room: selectRandom(roomsArray)
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray)
     };
     return result
-  }
-   pickMystery();
-  
-  // ITERATION 3
-  
-  function revealMystery(pickMystery) {
-    let FinalObjects = pickMystery();
-     return `${FinalObjects[0]} ${FinalObjects[1]} killed Mr.Boddy using the ${FinalObjects[2]} in the ${FinalObjects[3]}`
-   }
- 
- revealMystery(pickMystery)
+}
+
+// ITERATION 3
+
+function revealMystery(mystery) {
+    return `${mystery.suspect[0]} ${mystery.suspect[1]} killed Mr.Boddy using the ${mystery.weapon} in the ${mystery.room}`
+}
+
+
+pickMystery();
+
+const mystery = pickMystery();
+revealMystery(mystery)
+
