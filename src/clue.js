@@ -4,7 +4,6 @@
 
 const suspectsArray = [
     {
-        
         firstName: 'Jacob',
         lastName: 'Green',
         occupation: 'Entrepreneur',
@@ -159,9 +158,18 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(array) {
+   return array[Math.floor(Math.random() * array.length)];
+}
 
-function pickMystery() {}
+function pickMystery() {
+    
+    let suspect = selectRandom(suspectsArray).firstName;
+    let weapon = selectRandom(weaponsArray).name;
+    let room = selectRandom(roomsArray).name;
+
+    return {suspect, weapon, room};
+}
 
 
 // ITERATION 3
