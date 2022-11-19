@@ -1,5 +1,5 @@
 // ITERATION 1
-
+console.log("prueba")
 // Suspects Array
 
 const suspectsArray = [];
