@@ -30,7 +30,7 @@ const suspectsArray = [
         age: 22,
         description: 'Billionaire video game designer',
         image: 'https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg',
-        color: purple
+        color: 'purple'
     },
 
     {
