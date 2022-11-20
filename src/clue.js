@@ -4,144 +4,144 @@ const suspectsArray = [
     {
         firstName: 'Jacob',
         lastName: 'Green',
-        Occupation: 'Entrepreneur',
-        Age: 45,
-        Description: 'He has a lot of connections',
-        Image: src = 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
-        Color: 'green'
+        occupation: 'Entrepreneur',
+        age: 45,
+        description: 'He has a lot of connections',
+        image: src = 'https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg',
+        color: 'green'
     },
     {
         firstName: 'Doctor',
         lastName: 'Orchid',
-        Occupation: 'Scientist',
-        Age: 26,
-        Description: 'PhD in plan toxicology. Adopted daughter of MediaRecorder. Boddy',
-        Image: src = 'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
-        Color: 'white'
+        occupation: 'Scientist',
+        age: 26,
+        description: 'PhD in plan toxicology. Adopted daughter of MediaRecorder. Boddy',
+        image: src = 'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
+        color: 'white'
     },
     {
         firstName: 'Victor',
         lastName: 'Plum',
-        Occupation: 'Designer',
-        Age: 22,
-        Description: 'Billionaire video game designer',
-        Image: src = 'https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg',
-        Color: 'purple'
+        occupation: 'Designer',
+        age: 22,
+        description: 'Billionaire video game designer',
+        image: src = 'https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg',
+        color: 'purple'
     },
     {
         firstName: 'Kasandra',
         lastName: 'Scarlet',
-        Occupation: 'Actor',
-        Age: 31,
-        Description: 'She is an A-list movie star with dark past',
-        Image: src = 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
-        Color: 'red'
+        occupation: 'Actor',
+        age: 31,
+        description: 'She is an A-list movie star with dark past',
+        image: src = 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
+        color: 'red'
     },
     {
         firstName: 'Eleanor',
         lastName: 'Peacock',
-        Occupation: 'Socialité',
-        Age: 36,
-        Description: 'She is from a wealthy family and uses her status and money to earn popularity',
-        Image: src = 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
-        Color: 'blue'
+        occupation: 'Socialité',
+        age: 36,
+        description: 'She is from a wealthy family and uses her status and money to earn popularity',
+        image: src = 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
+        color: 'blue'
     },
     {
         firstName: 'Jack',
         lastName: 'Mustard',
-        Occupation: 'Retired football player',
-        Age: 62,
-        Description: 'He is a former football player who tries to get by on his former glory',
-        Image: src = 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg',
-        Color: 'yellow'
+        occupation: 'Retired football player',
+        age: 62,
+        description: 'He is a former football player who tries to get by on his former glory',
+        image: src = 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg',
+        color: 'yellow'
     }
 ];
 
 const roomsArray = [
     {
-        Name: 'Dining room'
+        name: 'Dining room'
     },
     {
-        Name: 'Conservatory'
+        name: 'Conservatory'
     },
     {
-        Name: 'Kitchen'
+        name: 'Kitchen'
     },
     {
-        Name: 'Study'
+        name: 'Study'
     },
     {
-        Name: 'Library'
+        name: 'Library'
     },
     {
-        Name: 'Billiard Room'
+        name: 'Billiard Room'
     },
     {
-        Name: 'Lounge'
+        name: 'Lounge'
     },
     {
-        Name: 'Ballroom'
+        name: 'Ballroom'
     },
     {
-        Name: 'Hall'
+        name: 'Hall'
     },
     {
-        Name: 'Spa'
+        name: 'Spa'
     },
     {
-        Name: 'Living room'
+        name: 'Living room'
     },
     {
-        Name: 'Observatory'
+        name: 'Observatory'
     },
     {
-        Name: 'Theater'
+        name: 'Theater'
     },
     {
-        Name: 'guest house'
+        name: 'guest house'
     },
     {
-        Name: 'patio'
+        name: 'patio'
     }
 ];
 
 
 const weaponsArray = [
     {
-        Name: 'rope',
-        Weight: 10
+        name: 'rope',
+        weight: 10
     },
     {
-        Name: 'knife',
-        Weight: 8
+        name: 'knife',
+        weight: 8
     },
     {
-        Name: 'candlestick',
-        Weight: 2
+        name: 'candlestick',
+        weight: 2
     },
     {
-        Name: 'dumbbell',
-        Weight: 30
+        name: 'dumbbell',
+        weight: 30
     },
     {
-        Name: 'poison',
-        Weight: 2
+        name: 'poison',
+        weight: 2
     },
     {
-        Name: 'axe',
-        Weight: 15
+        name: 'axe',
+        weight: 15
     },
     {
-        Name: 'bat',
-        Weight: 13
+        name: 'bat',
+        weight: 13
     },
     {
-        Name: 'trophy',
-        Weight: 25
+        name: 'trophy',
+        weight: 25
     },
     {
-        Name: 'pistol',
-        Weight: 20
+        name: 'pistol',
+        weight: 20
     }
 ];
 
