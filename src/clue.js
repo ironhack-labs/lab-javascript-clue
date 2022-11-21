@@ -2,8 +2,9 @@
 
 // Suspects Array
 
-const suspectsArray = [{
-    firstName: 'Jacob',
+const suspectsArray = [
+   {
+    firstName: 'Jacob', 
     lastName: 'Green',
     occupation: 'Entrepreneur',
     age: 45,
@@ -56,7 +57,8 @@ const suspectsArray = [{
 
 // Rooms Array
 
-const roomsArray = [{
+const roomsArray = [
+   {
     name: 'Dining Room'
  }, {
     name: 'Conservatory'
@@ -91,7 +93,8 @@ const roomsArray = [{
 
 // Weapons Array
 
-const weaponsArray = [{
+const weaponsArray = [
+   {
     name: 'rope',
     weight: 10,
  }, {
@@ -114,7 +117,7 @@ const weaponsArray = [{
     weight: 13
  }, {
     name: 'trophy',
-    weight: 25
+    weight: 25 
  }, {
     name: 'pistol',
     weight: 20
@@ -124,12 +127,31 @@ const weaponsArray = [{
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom (someArray) {
+  let randomCard = Math.floor(Math.random () * someArray.length);
 
-function pickMystery() {}
+  return someArray [randomCard];
+}
+
+
+selectRandom (suspectsArray)
+
+
+function pickMystery() {
+   let mystery = {} ;
+
+    mystery.suspect = selectRandom(suspectsArray),
+    mystery.weapon = selectRandom(weaponsArray),
+    mystery.room = selectRandom(roomsArray),
+
+    return mystery;
+}
+
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery (mystery) {
 
+ return(`${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`);
+}
