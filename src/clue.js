@@ -7,7 +7,7 @@ const suspectsArray = [
         firstName: "Jacob",
         lastName: "Green",
         occupation: "Entrepreneur",
-        age: "45",
+        age: 45,
         description: "He has a lot of connections",
         image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
         color: "green"
@@ -18,7 +18,7 @@ const suspectsArray = [
         firstName: "Doctor",
         lastName: "Orchid",
         occupation: "Scientist",
-        age: "26",
+        age: 26,
         description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
         image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
         color: "white"
@@ -29,7 +29,7 @@ const suspectsArray = [
         firstName: "Victor",
         lastName: "Plum",
         occupation: "Designer",
-        age: "22",
+        age: 22,
         description: "Billionaire video game designer",
         image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
         color: "purple"
@@ -40,7 +40,7 @@ const suspectsArray = [
         firstName: "Kasandra",
         lastName: "Scarlet",
         occupation: "Actor",
-        age: "31",
+        age: 31,
         description: "She is an A-list movie star with a dark past",
         image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
         color: "red"
@@ -51,7 +51,7 @@ const suspectsArray = [
         firstName: "Eleanor",
         lastName: "Peacock",
         occupation: "Socialité",
-        age: "36",
+        age: 36,
         description: "She is from a wealthy family and uses her status and money to earn popularity",
         image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
         color: "blue"
@@ -62,12 +62,15 @@ const suspectsArray = [
         firstName: "Jack",
         lastName: "Mustard",
         occupation: "Retired Football player",
-        age: "62",
+        age: 62,
         description: "He is a former football player who tries to get by on his former glory",
         image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg",
         color: "yellow"
     }
 ];
+
+// Weapons Array
+
 const weaponsArray = [
     {
         name: "rope",
@@ -77,51 +80,53 @@ const weaponsArray = [
 
     {
         name: "knife",
-        weigth: 8 
+        weight: 8 
     }
     ,
 
     {
         name: "candelesdtick",
-        weigth: 2
+        weight: 2
     }
     ,
 
     {
         name: "dumbbell",
-        weigth: 30 
+        weight: 30 
     }
     ,
 
     {
         name: "poison",
-        weigth: 2
+        weight: 2
     }
     ,
 
     {
         name: "axe",
-        weigth: 15
+        weight: 15
     }
     ,
 
     {
         name: "bat",
-        weigth: 13
+        weight: 13
     }
     ,
 
     {
         name: "trophy",
-        weigth: 25
+        weight: 25
     }
     ,
 
     {
         name: "pistol",
-        weigth: 20
+        weight: 20
     }
 ];
+
+// Rooms Array
 
 const roomsArray = [
     {
@@ -199,23 +204,29 @@ const roomsArray = [
     }
 ];
 
-// Rooms Array
-
-const roomsArray = [];
-
-// Weapons Array
-
-const weaponsArray = [];
-
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
 
-function pickMystery() {}
+
+function pickMystery() {
+    let suspect = selectRandom(suspectsArray);
+    let weapon = selectRandom(weaponsArray);
+    let room = selectRandom(roomsArray);
+    
+    return {suspect, weapon, room};
+}
+
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(objectPicked) {
+    return `${objectPicked.suspect.firstName} ${objectPicked.suspect.lastName} killed Mr. Boddy using the ${objectPicked.weapon.name} in the ${objectPicked.room.name}!`;
+    
+}
 
+console.log(revealMystery(pickMystery()));
