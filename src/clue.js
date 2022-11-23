@@ -164,6 +164,19 @@ function selectRandom(cardArray) {
     return randomElement
 }
 
+/*
+Aunque aparezca como negativo en Jasmine, es la forma más óptima de realizar la función.
+La doble condición de array vacío o inexistente; no es necesario declarar una variable si devolvemos directamente el array.
+
+function selectRandom(cardArray) {
+    if (!cardArray || cardArray.length) {
+        return undefined
+    } else {
+    return cardArray[Math.floor(Math.random() * cardArray.length)]
+    }
+}
+*/
+
 
 function pickMystery() {
     let mysterySuspect = {
