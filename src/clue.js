@@ -177,6 +177,6 @@ function pickMystery() {
 
 function revealMystery() {}
 
-//No me salio el anterior por lo que este no lo puedo hacer
+//No me salio el anterior por lo que este no lo puedo hacer.
 
 
