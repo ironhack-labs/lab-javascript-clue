@@ -95,7 +95,11 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(randomArray) {
+	let randomNumber = Math.floor(Math.random() * randomArray.length);
+
+	return randomArray[randomNumber];
+}
 
 function pickMystery() {}
 
