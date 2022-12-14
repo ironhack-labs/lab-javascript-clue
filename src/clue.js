@@ -61,21 +61,120 @@ const suspectsArray = [
 
 // Rooms Array
 
-const roomsArray = [];
+const roomsArray = [
+    {
+        name: "Dining Room"
+    },
+    {
+        name: "Conservatory"
+    },
+    {
+        name: "Kitchen"
+    },
+    {
+        name: "Study"
+    },
+    {
+        name: "Library"
+    },
+    {
+        name: "Billiard Room"
+    },
+    {
+        name: "Lounge"
+    },
+    {
+        name: "Ballroom"
+    },
+    {
+        name: "Hall"
+    },
+    {
+        name: "Spa"
+    },
+    {
+        name: "Living Room"
+    },
+    {
+        name: "Observatory"
+    },
+    {
+        name: "Theater"
+    },
+    {
+        name: "Guest House"
+    },
+    {
+        name: "Patio"
+    },
+];
 
 // Weapons Array
 
-const weaponsArray = [];
+const weaponsArray = [
+    {
+        name: "rope",
+        weight: 10
+    },
+    {
+        name: "knife",
+        weight: 8
+    },
+    {
+        name: "candlestick",
+        weight: 2
+    },
+    {
+        name: "dumbell",
+        weight: 30
+    },
+    {
+        name: "poison",
+        weight: 2
+    },
+    {
+        name: "axe",
+        weight: 15
+    },
+    {
+        name: "bat",
+        weight: 13
+    },
+    {
+        name: "trophy",
+        weight: 25
+    },
+    {
+        name: "pistol",
+        weight: 20
+    },
+];
 
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(arr) {
+    let item;
+    if (arr === undefined || arr.length == 0) return;
+    item = arr[Math.floor(Math.random()*arr.length)]
+    return item;
+}
 
-function pickMystery() {}
+function pickMystery() {
+    let obj = 
+    {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray)
+    }
+    return obj;
+}
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(obj) {
+    return `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`;
+}
+
 
