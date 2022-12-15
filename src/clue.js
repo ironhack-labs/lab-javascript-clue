@@ -159,13 +159,21 @@ function selectRandom(array) {
         return undefined;
     }
 
-    return array[Math.floor(Math.random * array.lenght)];
+    return array[Math.floor(Math.random() * array.length)];
 }
 
-function pickMystery() {}
+function pickMystery() {
+    return {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray),
+    }
+}
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(envelope) {
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
+}
 
