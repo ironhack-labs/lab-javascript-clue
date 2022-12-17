@@ -31,22 +31,15 @@ git push origin master
 
 <br>
 
-
 ## Test Your Code
 
 This LAB is equipped with unit tests to provide automated feedback on your lab progress. In case you want to check the tests, they are in the `tests/clue.spec.js` file.
 
-
-
 To run the tests and your JavaScript code, open the `SpecRunner.html` file using the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) VSCode extension.
-
-
 
 To see the outputs of the `console.log` in your JavaScript code, open the [Console in the Developer Tools](https://developer.chrome.com/docs/devtools/open/#console).
 
 <br>
-
-
 
 ## Instructions
 
@@ -55,9 +48,6 @@ You will be working in the `src/clue.js` file, which is already loaded in the `S
 To run the tests and your JavaScript code, open the `SpecRunner.html` file using the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) VSCode extension.
 
 <br>
-
-
-
 
 ### Iteration 1: Create the cards
 
@@ -81,11 +71,11 @@ To complete this iteration, you should have an array that looks something like t
 ```javascript
 const suspectsArray = [
   {
-    firstName: 'Jacob',
-    lastName: 'Green',
-    occupation: 'Entrepreneur'
+    firstName: "Jacob",
+    lastName: "Green",
+    occupation: "Entrepreneur",
     // ...
-  }
+  },
   // ...
 ];
 ```
@@ -132,16 +122,10 @@ Declare a function named `revealMystery` that receives an _envelope_ `object` (w
 
 <br>
 
-
-
-
-
 ## Extra Resources
 
 - [Data Structures: Objects and Arrays](http://eloquentjavascript.net/04_data.html)
 - [20 Mind-blowing facts about Cluedo](http://whatculture.com/offbeat/20-mind-blowing-facts-you-didnt-know-about-cluedo)
 - [Cluedo - Wikipedia](https://en.wikipedia.org/wiki/Cluedo)
-
-
 
 **Happy coding!** 💙
