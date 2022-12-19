@@ -1,6 +1,6 @@
 // ITERATION 1
 
-// Suspects Array
+// Suspects Array(6)
 
 const suspectsArray = [
     {
@@ -36,7 +36,7 @@ const suspectsArray = [
         occupation: 'Actor',
         age: 31,
         description: 'She is an A-list movie star with a dark past',
-        image: 'https://www.radiotimes.com/uploads/images/Original/111967.jpg'
+        image: 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
         color: 'red'
     },
     {
@@ -59,7 +59,7 @@ const suspectsArray = [
     }
 ];
 
-// Rooms Array
+// Rooms Array(15)
 
 const roomsArray = [
     {name: 'Dining Room'},
@@ -79,38 +79,69 @@ const roomsArray = [
     {name: 'Patio'}
 ];
 
-// Weapons Array
+// Weapons Array(9)
 
 const weaponsArray = [
-    {name: 'rope',
-    weight: 10},
-    {name: 'knife',
-    weight: 8},
-    {name: 'candlestick',
-    weight: 2},
-    {name: 'dumbbell',
-    weight: 30},
-    {name: 'poison',
-    weight: 2},
-    {name: 'axe',
-    weight: 15},
-    {name: 'bat',
-    weight: 13},
-    {name: 'trophy',
-    weight: 25}
-    {name: 'pistol',
-    weight: 20}
+    {
+        name: 'rope',
+        weight: 10
+    },
+    {
+        name: 'knife',
+        weight: 8
+    },
+    {
+        name: 'candlestick',
+        weight: 2
+    },
+    {
+        name: 'dumbbell',
+        weight: 30
+    },
+    {
+        name: 'poison',
+        weight: 2
+    },
+    {
+        name: 'axe',
+        weight: 15
+    },
+    {
+        name: 'bat',
+        weight: 13
+    },
+    {
+        name: 'trophy',
+        weight: 25
+    },
+    {
+        name: 'pistol',
+        weight: 20
+    }
 ];
 
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(array) {
+    let randomNum = Math.floor(Math.random()*array.length)
 
-function pickMystery() {}
+    return array[randomNum]
+}
+
+function pickMystery() {
+    let mystery = {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray)
+    }
+    return mystery
+}
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(mystery) {
+    return `${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`
+}
 
