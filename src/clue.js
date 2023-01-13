@@ -114,9 +114,9 @@ function pickMystery(Mystery) {
 
 // ITERATION 3
 
-function revealMystery() {
+function revealMystery(fin) {
 
-       let asesino = pickMystery ()
+       let asesino = fin
     //    {suspect: {firstName: , lastName: },
     //     weapon: {name: },
     //     room: {name:  }
