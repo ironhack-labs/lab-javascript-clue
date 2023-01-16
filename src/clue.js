@@ -128,5 +128,5 @@ const suspectsArray = [
         } killed Mr.Boddy using the ${impostor.weapon.name} in the ${
           impostor.room.name
         }!`;
-        console.log(message); }
+        return(message); }
     revealMystery()
