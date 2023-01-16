@@ -115,7 +115,6 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {
-  let revealed = pickMystery();
-  return `${revealed.suspect.firstName} ${revealed.suspect.lastName} killed Mr. Boddy using the ${revealed.weapon.name} in the ${revealed.room.name}!`;
+function revealMystery(envelope) {
+  return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
 }
