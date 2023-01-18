@@ -27,6 +27,7 @@ jasmineRequire.html = function(j$) {
   j$.HtmlSpecFilter = jasmineRequire.HtmlSpecFilter();
 };
 
+
 jasmineRequire.HtmlReporter = function(j$) {
 
   var noopTimer = {
