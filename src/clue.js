@@ -120,4 +120,11 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(envelope) {
+    const firstName = envelope.suspect.firstName;
+    const lastName = envelope.suspect.lastName;
+    const weapon = envelope.weapon.name;
+    const room = envelope.room.name;
+
+    return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${room}!`
+}
