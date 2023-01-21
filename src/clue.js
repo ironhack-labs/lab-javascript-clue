@@ -188,7 +188,6 @@ function pickMystery() {
 
 function revealMystery(newObject) {
 
-
     return `${newObject.suspect.firstName} ${newObject.suspect.lastName} killed Mr. Boddy using the ${newObject.weapon.name} in the ${newObject.room.name}!`
 }
 
