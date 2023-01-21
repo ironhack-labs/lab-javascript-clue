@@ -184,9 +184,30 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() { }
+function selectRandom(array) {
 
-function pickMystery() { }
+    const random = array[Math.floor(Math.random() * array.length)]
+
+    return random
+
+}
+
+
+
+
+function pickMystery() {
+
+
+    const suspect = selectRandom(suspectsArray)
+
+    const room = selectRandom(roomsArray)
+
+    const weapon = selectRandom(weaponsArray)
+
+
+    return { suspect, room, weapon }
+
+}
 
 
 
@@ -194,5 +215,11 @@ function pickMystery() { }
 
 // ITERATION 3
 
-function revealMystery() { }
+function revealMystery() {
+
+    const reveal = pickMystery()
+
+
+    return `${reveal.suspect.firstName} ${reveal.suspect.lastName} killed Mr. Boddy using the ${reveal.weapon.name} in the ${reveal.room.name}!`
+}
 
