@@ -195,6 +195,7 @@ function selectRandom(array) {
 
 
 
+
 function pickMystery() {
 
 
@@ -204,8 +205,10 @@ function pickMystery() {
 
     const weapon = selectRandom(weaponsArray)
 
+    console.log({ suspect, room, weapon })
 
-    return { suspect, room, weapon }
+
+    return ({ suspect, room, weapon })
 
 }
 
@@ -215,11 +218,19 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {
-
-    const reveal = pickMystery()
+function revealMystery(mystery) {
 
 
-    return `${reveal.suspect.firstName} ${reveal.suspect.lastName} killed Mr. Boddy using the ${reveal.weapon.name} in the ${reveal.room.name}!`
+
+    const reveal = `${mystery.suspect.firstName} ${mystery.suspect.lastName} killed Mr. Boddy using the ${mystery.weapon.name} in the ${mystery.room.name}!`
+
+
+    return reveal
+
 }
+
+
+
+
+
 
