@@ -3,7 +3,7 @@
 // Suspects Array
 
 const suspectsArray = [
-    mrGreen = {
+    {
         firstName: 'Jacob',
         lastName: 'Green',
         occupation: 'Entrepreneur',
@@ -13,7 +13,7 @@ const suspectsArray = [
         color: 'green'
     },
 
-    drOrchid = {
+    {
         firstName: 'Doctor',
         lastName: 'Orchid',
         occupation: 'Scientist',
@@ -22,7 +22,7 @@ const suspectsArray = [
         image: 'http://www.radiotimes.com/uploads/images/Original/111967.jpg',
         color: 'white'
     },
-    mrPlum = {
+    {
         firstName: 'Victor',
         lastName: 'Plum',
         occupation: 'Designer',
@@ -32,7 +32,7 @@ const suspectsArray = [
         color: 'purple',
     },
 
-    msScarlet = {
+    {
         firstName: 'Kasandra',
         lastName: 'Scarlet',
         occupation: 'Actor',
@@ -41,7 +41,7 @@ const suspectsArray = [
         image: 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
         color: 'red',
     },
-    msPeacock = {
+    {
         firstName: 'Eleanor',
         lastName: 'Peacock',
         occupation: 'Socialité',
@@ -50,7 +50,7 @@ const suspectsArray = [
         image: 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
         color: 'blue',
     },
-    srMustard =
+
     {
         firstName: 'Jack',
         lastName: 'Mustard',
@@ -166,12 +166,15 @@ function pickMystery() {
         room: selectRandom(roomsArray)
     }
     return misteryObject
+}
 
-    // ITERATION 3
 
-    function revealMystery(object) {
-        const message = `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`
-        console.log(message)
-    }
-    return message
+// ITERATION 3
+
+function revealMystery(object) {
+    const message = `${object.suspect.firstName} ${object.suspect.lastName} killed Mr. Boddy using the ${object.weapon.name} in the ${object.room.name}!`
+    console.log(message)
+    return misteryObject
+}
+
 
