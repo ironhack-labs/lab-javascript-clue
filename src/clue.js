@@ -2,7 +2,7 @@
 
 // Suspects Array
 
-const suspectsArray = [];
+
 
 const mrGreen = {
 firstName: "Jacob",
@@ -59,9 +59,8 @@ age: 62,
 description: "He is a former football player who tries to get by on his former glory",
 image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg",
 color: "yellow"};
-suspectsArray.push(drOrchid);
-suspectsArray.push(mrGreen);
-suspectsArray.push(profPlum,missScarlet,mrsPeacock,mrMustard);
+const suspectsArray = [drOrchid,mrGreen,profPlum,missScarlet,mrsPeacock,mrMustard];
+
 
 
 // Rooms Array
@@ -110,12 +109,31 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(arr) {
+return arr[Math.floor(Math.random() *  arr.length)];
+}
 
-function pickMystery() {}
 
 
-// ITERATION 3
+function pickMystery() {
 
-function revealMystery() {}
+  let objectMystery = {
+    suspect: selectRandom(suspectsArray), 
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom (roomsArray)
+  }
 
+
+return objectMystery
+
+
+}
+let mystery = pickMystery();
+
+function revealMystery(obj) {
+
+  return `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`
+  
+  }
+
+  console.log(revealMystery(mystery))
