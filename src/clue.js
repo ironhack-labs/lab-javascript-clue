@@ -149,8 +149,8 @@ const weaponsArray = [
 
 function selectRandom(arr) {
     //if (!arr.lenght) return undefined;
-    let selectedCard = Math.floor(Math.random() * arr.length); 
-    return arr[selectedCard];
+    let selected = Math.floor(Math.random() * arr.length); 
+    return arr[selected];
 }
 
 function pickMystery() {
