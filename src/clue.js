@@ -95,10 +95,20 @@ const weaponsArray = [
 // ITERATION 2
 
 function selectRandom(cardStackArr) {
-    
+    // create a random number in between 0 and the length of the array - 1
+    let randomNum = Math.floor(Math.random() * (cardStackArr.length));
+
+    // return a random element of the array (= a random card from the selected stack)
+    return cardStackArr[randomNum];
 }
 
-function pickMystery() {}
+// return a random suspect, weapon and room
+function pickMystery() {
+    let suspect = selectRandom(suspectsArray);
+    let weapon = selectRandom(weaponsArray);
+    let room = selectRandom(roomsArray);
+    return { suspect, weapon, room, };
+}
 
 
 // ITERATION 3
