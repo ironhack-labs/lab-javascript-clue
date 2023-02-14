@@ -104,14 +104,16 @@ function selectRandom(cardStackArr) {
 
 // return a random suspect, weapon and room
 function pickMystery() {
-    let suspect = selectRandom(suspectsArray);
-    let weapon = selectRandom(weaponsArray);
-    let room = selectRandom(roomsArray);
-    return { suspect, weapon, room, };
+    let suspectValue = selectRandom(suspectsArray);
+    let weaponValue = selectRandom(weaponsArray);
+    let roomValue = selectRandom(roomsArray);
+    const result = { suspect: suspectValue, weapon: weaponValue, room: roomValue, };
+    return result;
 }
 
 
 // ITERATION 3
 
-function revealMystery() {}
-
+function revealMystery(envelope) {
+    return `<FIRST NAME> <LAST NAME> killed Mr. Boddy using the ${envelope}. in the <ROOM>!`;
+}
