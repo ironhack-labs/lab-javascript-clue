@@ -2,7 +2,7 @@
 
 // Suspects Array
 const suspectsArray = [
-    mrGreen = {
+    {
         firstName: "Jacob",
         lastName: "Green",
         occupation: "Entrepreneur",
@@ -11,7 +11,7 @@ const suspectsArray = [
         image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
         color: "green",
     },
-    drOrchid = {
+    {
         firstName: "Doctor",
         lastName: "Orchid",
         occupation: "Scientist",
@@ -20,7 +20,7 @@ const suspectsArray = [
         image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
         color: "white",
     },
-    profPlum = {
+    {
         firstName: "Victor",
         lastName: "Plum",
         occupation: "Designer",
@@ -29,7 +29,7 @@ const suspectsArray = [
         image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
         color: "purple",
     },
-    missScarlet = {
+    {
         firstName: "Kasandra",
         lastName: "Scarlet",
         occupation: "Actor",
@@ -38,7 +38,7 @@ const suspectsArray = [
         image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
         color: "red",
     },
-    mrsPeacock = {
+    {
         firstName: "Eleanor",
         lastName: "Peacock",
         occupation: "Socialité",
@@ -47,7 +47,7 @@ const suspectsArray = [
         image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
         color: "blue",
     },
-    mrMustard = {
+    {
         firstName: "Jack",
         lastName: "Mustard",
         occupation: "Retired Football player",
@@ -94,8 +94,8 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom(array) {
-
+function selectRandom(cardStackArr) {
+    
 }
 
 function pickMystery() {}
