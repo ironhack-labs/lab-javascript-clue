@@ -115,5 +115,5 @@ function pickMystery() {
 // ITERATION 3
 
 function revealMystery(envelope) {
-    return `<FIRST NAME> <LAST NAME> killed Mr. Boddy using the ${envelope}. in the <ROOM>!`;
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
 }
