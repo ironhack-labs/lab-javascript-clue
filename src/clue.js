@@ -78,40 +78,49 @@ function loadSuspects(data) {
 }
 
 loadSuspects(suspectData);
-console.log(suspectsArray);
 
 // Rooms Array
 
 const roomsArray = [];
 
 const roomData = `
-name: rope --- weight: 10
-name: knife --- weight: 8
-name: candlestick --- weight: 2
-name: dumbbell --- weight: 30
-name: poison --- weight: 2
-name: axe --- weight: 15
-name: bat --- weight: 13
-name: trophy --- weight: 25
-name: pistol --- weight: 20
+name: Dining Room
+name: Conservatory
+name: Kitchen
+name: Study
+name: Library
+name: Billiard Room
+name: Lounge
+name: Ballroom
+name: Hall
+name: Spa
+name: Living Room
+name: Observatory
+name: Theater
+name: Guest House
+name: Patio
 `;
 
 function loadRoom(data) {
     let plainSuspectArray = data.split("\n");
+     if(plainSuspectArray[0] === ""){
+       plainSuspectArray.splice(0,1);
+     }
+     if(plainSuspectArray[plainSuspectArray.length -1] === ""){
+       plainSuspectArray.splice(plainSuspectArray.length -1,1);
+     }
     plainSuspectArray.forEach((suspect) => {
       suspectLines = suspect.split("\n");
-      let suspectObj = {};
-      suspectObj.shortName = suspectLines[0];
-      for (let i = 1; i < suspectLines.length; i++) {
-        suspectObj[suspectLines[i].split(": ")[0]] =
+       let roomObj = {};
+      for(let i = 0; i < suspectLines.length; i++){ 
+        roomObj[suspectLines[i].split(": ")[0]] =
           suspectLines[i].split(": ")[1];
       }
-      roomsArray.push(suspectObj);
+    roomsArray.push(roomObj);
     });
 }
 
 loadRoom(roomData);
-console.log(roomsArray);
 
 // Weapons Array
 
