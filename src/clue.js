@@ -172,7 +172,14 @@ function selectRandom(array) {
     
 }
 
-function pickMystery() {}
+function pickMystery() {
+    mysteryObj = {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray)
+    };
+    return mysteryObj;
+}
 
 
 // ITERATION 3
