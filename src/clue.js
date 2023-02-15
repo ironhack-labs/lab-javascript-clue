@@ -102,19 +102,19 @@ name: Patio
 `;
 
 function loadRoom(data) {
-    let plainSuspectArray = data.split("\n");
-     if(plainSuspectArray[0] === ""){
-       plainSuspectArray.splice(0,1);
+    let plainRoomArray = data.split("\n");
+     if(plainRoomArray[0] === ""){
+        plainRoomArray.splice(0,1);
      }
-     if(plainSuspectArray[plainSuspectArray.length -1] === ""){
-       plainSuspectArray.splice(plainSuspectArray.length -1,1);
+     if(plainRoomArray[plainRoomArray.length -1] === ""){
+        plainRoomArray.splice(plainRoomArray.length -1,1);
      }
-    plainSuspectArray.forEach((suspect) => {
-      suspectLines = suspect.split("\n");
+    plainRoomArray.forEach((room) => {
+      roomLines = room.split("\n");
        let roomObj = {};
-      for(let i = 0; i < suspectLines.length; i++){ 
-        roomObj[suspectLines[i].split(": ")[0]] =
-          suspectLines[i].split(": ")[1];
+      for(let i = 0; i < roomLines.length; i++){ 
+        roomObj[roomLines[i].split(": ")[0]] =
+        roomLines[i].split(": ")[1];
       }
     roomsArray.push(roomObj);
     });
@@ -126,6 +126,39 @@ loadRoom(roomData);
 
 const weaponsArray = [];
 
+const weaponsData = `
+name: rope --- weight: 10
+name: knife --- weight: 8
+name: candlestick --- weight: 2
+name: dumbbell --- weight: 30
+name: poison --- weight: 2
+name: axe --- weight: 15
+name: bat --- weight: 13
+name: trophy --- weight: 25
+name: pistol --- weight: 20
+`;
+
+function loadWeapons(data) {
+    let plainWeaponArray = data.split("\n");
+    if(plainWeaponArray[0] === ""){
+        plainWeaponArray.splice(0,1);
+     }
+     if(plainWeaponArray[plainWeaponArray.length -1] === ""){
+        plainWeaponArray.splice(plainWeaponArray.length -1,1);
+     }
+     plainWeaponArray.forEach((weapon) => {    
+       const splitWeapon = weapon.split("---");
+       const split0 = splitWeapon[0].split(":");
+       const split1 = splitWeapon[1].split(":");
+       let weaponObj = {};
+       weaponObj.name = split0[1];
+       weaponObj.weight = Number(split1[1]);
+       weaponsArray.push(weaponObj);
+     })
+}
+
+
+loadWeapons(weaponsData);
 
 // ITERATION 2
 
