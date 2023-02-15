@@ -66,8 +66,12 @@ function loadSuspects(data) {
       let suspectObj = {};
       suspectObj.shortName = suspectLines[0];
       for (let i = 1; i < suspectLines.length; i++) {
-        suspectObj[suspectLines[i].split(": ")[0]] =
+        if(isNaN(suspectLines[i].split(": ")[1]) === false){
+          suspectObj[suspectLines[i].split(": ")[0]] = Number(suspectLines[i].split(": ")[1]);
+        }else{
+           suspectObj[suspectLines[i].split(": ")[0]] =
           suspectLines[i].split(": ")[1];
+        }
       }
       suspectsArray.push(suspectObj);
     });
