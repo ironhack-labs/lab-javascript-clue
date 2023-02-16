@@ -67,6 +67,7 @@ function loadSuspects(data) {
       suspectObj[suspectLines[i].split(": ")[0]] =
         suspectLines[i].split(": ")[1];
     }
+    suspectObj.age = Number(suspectObj.age);
     suspectsArray.push(suspectObj);
   });
 }
@@ -94,7 +95,7 @@ function loadWeapons(data) {
     let name = weaponLine[0].split("name: ")[1];
     let weight = weaponLine[1].split("weight: ")[1];
     weaponObj["name"] = name;
-    weaponObj["weight"] = weight;
+    weaponObj["weight"] = Number(weight);
 
     weaponsArray.push(weaponObj);
   });
@@ -145,15 +146,19 @@ function selectRandom(card) {
 console.log(selectRandom(suspectsArray));
 
 function pickMystery() {
-  const suspect = selectRandom(suspectsArray).shortName;
-  const weapon = selectRandom(weaponsArray).name;
-  const room = selectRandom(roomsArray).name;
-  console.log(suspect, weapon, room);
-  return { suspect, weapon, room };
-}
+  let mysteryObject = {};
+  mysteryObject.suspect = selectRandom(suspectsArray);
+  mysteryObject.weapon = selectRandom(weaponsArray);
+  mysteryObject.room = selectRandom(roomsArray);
 
-pickMystery();
+  return mysteryObject;
+}
+let mystery = pickMystery();
+console.log(pickMystery());
 
 // ITERATION 3
+function revealMystery(envelope) {
+  return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+}
 
-function revealMystery() {}
+console.log(revealMystery(mystery));
