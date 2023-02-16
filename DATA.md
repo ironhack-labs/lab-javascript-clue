@@ -109,3 +109,20 @@ name: Theater
 name: Guest House
 name: Patio
 ```
+
+
+js
+const = people  
+function loadSuspects(data) {
+  let plainSuspectArray = data.split("\n\n");
+  plainSuspectArray.forEach((suspect) => {
+    suspectLines = suspect.split("\n");
+    let suspectObj = {};
+    suspectObj.shortName = suspectLines[0];
+    for (let i = 1; i < suspectLines.length; i++) {
+      suspectObj[suspectLines[i].split(": ")[0]] =
+        suspectLines[i].split(": ")[1];
+    }
+    suspectsArray.push(suspectObj);
+  });
+} 
