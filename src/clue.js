@@ -3,8 +3,7 @@
 // Suspects Array
 
 const suspectsArray = [
-     suspect1 = {
-        name: "mrGreen",
+    mrGreen = {
         firstName: "Jacob",
         lastName: "Green",
         occupation: "Entrepreneur",
@@ -14,8 +13,7 @@ const suspectsArray = [
         color: "green",
     },
 
-    suspect2 = {
-        name: "drOrchid",
+    drOrchid = {
         firstName: "Doctor",
         lastName: "Orchid",
         occupation: "Scientist",
@@ -26,8 +24,7 @@ const suspectsArray = [
 
     },
 
-    suspect3 = {
-        name: "profPlum",
+    profPlum = {
         firstName: "Victor",
         lastName: "Plum",
         occupation: "Designer",
@@ -37,8 +34,7 @@ const suspectsArray = [
         color: "purple",
     },
 
-    suspect4 = {
-        name: "missScarlet",
+    missScarlet = {
         firstName: "Kasandra",
         lastName: "Scarlet",
         occupation: "Actor",
@@ -49,8 +45,7 @@ const suspectsArray = [
 
     },
 
-    suspect5 = {
-        name:"mrsPeacock",
+    mrsPeacock = {    
         firstName: "Eleanor",
         lastName: "Peacock",
         occupation: "Socialité",
@@ -61,8 +56,7 @@ const suspectsArray = [
 
     },
 
-    suspect6 = {
-        name: "mrMustard",
+    mrMustard = {
         firstName: "Jack",
         lastName: "Mustard",
         occupation: "Retired Football player",
@@ -76,54 +70,67 @@ const suspectsArray = [
 
 // Rooms Array
 
-const roomsArray = [{
-    room1: {name: "Dining Room"},
-    room2: {name:"Conservatory"},
-    room3: {name: "Kitchen"},
-    room4: {name: "Study"},
-    room5: {name: "Library"},
-    room6: {name:"Billiard Room"},
-    room7: {name: "Lounge"},
-    room8: {name: "Ballroom"},
-    room9: {name: "Hall"},
-    room10: {name: "Spa"},
-    room11: {name:"Living Room"},
-    room12: {name: "Observatory"},
-    room13: {name: "Theater"},
-    room14: {name: "Guest House"},
-    room15: {name:"Patio"},
-
-
-
-},
+const roomsArray = [
+    {name: "Dining Room"},
+    {name:"Conservatory"},
+    {name: "Kitchen"},
+    {name: "Study"},
+    {name: "Library"},
+    {name:"Billiard Room"},
+    {name: "Lounge"},
+    {name: "Ballroom"},
+    {name: "Hall"},
+    {name: "Spa"},
+    {name:"Living Room"},
+    {name: "Observatory"},
+    {name: "Theater"},
+    {name: "Guest House"},
+    {name:"Patio"},
 
 ];
 
 // Weapons Array
 
-const weaponsArray = [{
-    weapon1:{name: "rope", weight: "10"},
-    weapon2:{name: "knife", weight: "8"},
-    weapon3:{name: "candlestick", weight: "2"},
-    weapon4:{name: "dumbbell", weight: "30"},
-    weapon5:{name: "poison", weight: "2"},
-    weapon6:{name: "axe", weight: "15"},
-    weapon7:{name: "bat", weight: "13"},
-    weapon8:{name: "trophy", weight: "25"},
-    weapon9:{name: "pistol", weight: "20"},
-}
+const weaponsArray = [
+    {name: "rope", weight: 10},
+    {name: "knife", weight: 8},
+    {name: "candlestick", weight: 2},
+    {name: "dumbbell", weight: 30},
+    {name: "poison", weight: 2},
+    {name: "axe", weight: 15},
+    {name: "bat", weight: 13},
+    {name: "trophy", weight: 25},
+    {name: "pistol", weight: 20},
 
 ];
 
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(arr) {
+    if(arr.length == 0){
+        return undefined;
+    }else{
+    return arr[Math.floor(Math.random() * arr.length)];
+    }
+}
 
-function pickMystery() {}
+function pickMystery() {
+    let obj = {
+        suspect : selectRandom(suspectsArray) ,
+        weapon: selectRandom (weaponsArray) ,
+        room: selectRandom (roomsArray) ,
+
+    }
+    return obj
+
+}
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(envelope) {
+
+    return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${room}!`
+}
 
