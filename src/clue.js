@@ -114,7 +114,13 @@ function selectRandom(arr) {
   return arr[getRandomInt(arr.length)];
 }
 
-function pickMystery() {}
+function pickMystery() {
+  return {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray),
+  };
+}
 
 // ITERATION 3
 
