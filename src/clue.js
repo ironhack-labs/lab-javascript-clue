@@ -101,17 +101,17 @@ const roomsArray = [{
 
 // Weapons Array
 
-const weaponsArray = [
-    {weapon1:{name: "rope", weight: "10"}},
-    {weapon2:{name: "knife", weight: "8"}},
-    {weapon3:{name: "candlestick", weight: "2"}},
-    {weapon4:{name: "dumbbell", weight: "30"}},
-    {weapon5:{name: "poison", weight: "2"}},
-    {weapon6:{name: "axe", weight: "15"}},
-    {weapon7:{name: "bat", weight: "13"}},
-    {weapon8:{name: "trophy", weight: "25"}},
-    {weapon9:{name: "pistol", weight: "20"}},
-
+const weaponsArray = [{
+    weapon1:{name: "rope", weight: "10"},
+    weapon2:{name: "knife", weight: "8"},
+    weapon3:{name: "candlestick", weight: "2"},
+    weapon4:{name: "dumbbell", weight: "30"},
+    weapon5:{name: "poison", weight: "2"},
+    weapon6:{name: "axe", weight: "15"},
+    weapon7:{name: "bat", weight: "13"},
+    weapon8:{name: "trophy", weight: "25"},
+    weapon9:{name: "pistol", weight: "20"},
+}
 
 ];
 
