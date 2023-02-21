@@ -3,7 +3,7 @@
 // Suspects Array
 
 const suspectsArray = [
-    mrGreen = {
+    {
         firstName: "Jacob",
         lastName: "Green",
         occupation: "Entrepreneur",
@@ -13,7 +13,7 @@ const suspectsArray = [
         color: "green",
     },
 
-    drOrchid = {
+    {
         firstName: "Doctor",
         lastName: "Orchid",
         occupation: "Scientist",
@@ -24,7 +24,7 @@ const suspectsArray = [
 
     },
 
-    profPlum = {
+    {
         firstName: "Victor",
         lastName: "Plum",
         occupation: "Designer",
@@ -34,7 +34,7 @@ const suspectsArray = [
         color: "purple",
     },
 
-    missScarlet = {
+    {
         firstName: "Kasandra",
         lastName: "Scarlet",
         occupation: "Actor",
@@ -45,7 +45,7 @@ const suspectsArray = [
 
     },
 
-    mrsPeacock = {    
+    {    
         firstName: "Eleanor",
         lastName: "Peacock",
         occupation: "Socialité",
@@ -56,7 +56,7 @@ const suspectsArray = [
 
     },
 
-    mrMustard = {
+    {
         firstName: "Jack",
         lastName: "Mustard",
         occupation: "Retired Football player",
@@ -116,21 +116,25 @@ function selectRandom(arr) {
 }
 
 function pickMystery() {
-    let obj = {
+    let mystery = {
         suspect : selectRandom(suspectsArray) ,
         weapon: selectRandom (weaponsArray) ,
         room: selectRandom (roomsArray) ,
 
     }
-    return obj
+    return mystery
 
 }
 
 
 // ITERATION 3
 
-function revealMystery(envelope) {
 
-    return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${room}!`
+function revealMystery({suspect,weapon,room}) {
+
+    
+
+
+    return `${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`
 }
 
