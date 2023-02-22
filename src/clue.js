@@ -126,8 +126,11 @@ function pickMystery() {
 // ITERATION 3
 
 function revealMystery(result) {
+  let reveal = `${pickMystery().suspect.firstName.toUpperCase()} ${pickMystery().suspect.lastName.toUpperCase()} killed Mr. Boddy using the ${pickMystery().weapon.name.toUpperCase()} in the ${pickMystery().room.name.toUpperCase()}!`;
+  // console.log(reveal);
+  return reveal; 
+  }
 
-    return `${pickMystery().suspect.firstName} ${pickMystery().suspect.lastName} killed Mr. Boddy using the ${pickMystery().weapon} in the ${pickMystery().room}!`
-}
+  // revealMystery();
 
 
