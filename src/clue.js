@@ -191,21 +191,22 @@ function pickMystery() {
     let weapon = selectRandom(weaponsArray);
     let room = selectRandom(roomsArray);
 
-    let wayOfDeath = 
+    let mistery = 
     {
         suspect: suspect ,
         weapon: weapon ,
         room: room ,
     }
-    return wayOfDeath;
+    return mistery;
 }
 
 
 // ITERATION 3
 
-function revealMystery(wayOfDeath) {
+function revealMystery(obj) {
 
-    return `${wayOfDeath.suspect.firstName} ${wayOfDeath.suspect.lastName} killed Mr. Boddy using the ${wayOfDeath.weapon.name} in the ${wayOfDeath.room.name}`;
+    return `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`;
+
+
 
 }
-
