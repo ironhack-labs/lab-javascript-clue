@@ -154,9 +154,7 @@ const weaponsArray = [
 // ITERATION 2
 
 function selectRandom(array) {
-    for (let i=0; i<array.length; i++) {
-        return array[i];
-    }
+    return array[Math.round(Math.random() * array.length)];
 }
 
 
