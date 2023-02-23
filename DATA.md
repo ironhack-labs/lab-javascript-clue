@@ -52,24 +52,24 @@ color: red
 
 ```
 mrsPeacock
-firstName: Eleanor
-lastName: Peacock
-occupation: Socialité
-age: 36
-description: She is from a wealthy family and uses her status and money to earn popularity
-image: https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg
-color: blue
+firstName: "Eleanor",
+lastName: "Peacock",
+occupation: "Socialité",
+age: "36",
+description: "She is from a wealthy family and uses her status and money to earn popularity",
+image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
+color: "blue",
 ```
 
 ```
 mrMustard
-firstName: Jack
-lastName: Mustard
-occupation: Retired Football player
-age: 62
-description: He is a former football player who tries to get by on his former glory
-image: https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg
-color: yellow
+firstName: "Jack",
+lastName: "Mustard",
+occupation: "Retired Football player",
+age: "62",
+description: "He is a former football player who tries to get by on his former glory",
+image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg",
+color: "yellow"
 ```
 
 <br>
@@ -77,15 +77,15 @@ color: yellow
 ### Weapons
 
 ```
-name: rope --- weight: 10
-name: knife --- weight: 8
-name: candlestick --- weight: 2
-name: dumbbell --- weight: 30
-name: poison --- weight: 2
-name: axe --- weight: 15
-name: bat --- weight: 13
-name: trophy --- weight: 25
-name: pistol --- weight: 20
+{name: "rope", weight: 10},
+{name: "knife", weight: 8},
+{name: "candlestick", weight: 2},
+{name: "dumbbell", weight: 30},
+{name: "poison", weight: 2},
+{name: "axe", weight: 15},
+{name: "bat", weight: 13},
+{name: "trophy", weight: 25},
+{name: "pistol", weight: 20},
 ```
 
 <br>
@@ -93,19 +93,19 @@ name: pistol --- weight: 20
 ### Rooms
 
 ```
-name: Dining Room
-name: Conservatory
-name: Kitchen
-name: Study
-name: Library
-name: Billiard Room
-name: Lounge
-name: Ballroom
-name: Hall
-name: Spa
-name: Living Room
-name: Observatory
-name: Theater
-name: Guest House
-name: Patio
+{name: Dining Room},
+{name: Conservatory},
+{name: Kitchen},
+{name: Study},
+{name: Library},
+{name: Billiard Room},
+{name: Lounge},
+{name: Ballroom},
+{name: Hall},
+{name: Spa},
+{name: Living Room},
+{name: Observatory},
+{name: Theater},
+{name: Guest House},
+{name: Patio},
 ```
