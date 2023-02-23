@@ -104,15 +104,21 @@ function selectRandom(array) {
 	return randomPick;
 }
 
-function pickMystery() {
+const mystery = () => {
 	const randomSuspect = selectRandom(suspectsArray);
 	const randomWeapon = selectRandom(weaponsArray);
 	const randomRoom = selectRandom(roomsArray);
 
 	const mystery = { randomSuspect, randomWeapon, randomRoom };
 	return mystery;
-}
+};
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(mystery) {
+	console.log(
+		`${mystery.randomSuspect.firstName} ${mystery.randomSuspect.lastName} killed Mr. Boddy using the ${mystery.randomWeapon.name} in the ${mystery.randomRoom.name}`
+	);
+}
+
+revealMystery(mystery());
