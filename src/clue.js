@@ -160,10 +160,15 @@ function selectRandom(array) {
     return item;
 }
 
-function pickMystery() {}
-
+function pickMystery() {
+    const randomCards= {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray)
+      }
+    return randomCards
+}
 
 // ITERATION 3
 
 function revealMystery() {}
-
