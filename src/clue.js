@@ -142,15 +142,22 @@ const weaponsArray = [
 function selectRandom(array) {
    
     if (array.length != 0) {
-    console.log(array[Math.floor(array.length * Math.random())]);
+    //console.log(array[Math.floor(array.length * Math.random())]);
     }
     return array[Math.floor(array.length * Math.random())]
 }
 
-//console.log(selectRandom(suspectsArray))
 
+function pickMystery() {
 
-function pickMystery() {}
+    let suspect = suspectsArray[Math.floor(suspectsArray.length * Math.random())]
+    let room = roomsArray[Math.floor(roomsArray.length * Math.random())]
+    let weapon = weaponsArray[Math.floor(weaponsArray.length * Math.random())]
+    
+    //console.log(suspect, room, weapon)
+    return {suspect, room, weapon}
+}
+pickMystery()
 
 // ITERATION 3
 
