@@ -1,7 +1,5 @@
 // ITERATION 1
-
 // Suspects Array
-
 const suspectsArray = [ {
    
         firstName: 'Jacob',
@@ -61,7 +59,6 @@ const suspectsArray = [ {
 
 
 // Rooms Array
-
 const roomsArray = [ {
 
     name: "Dining Room" }, 
@@ -96,7 +93,6 @@ const roomsArray = [ {
 ];
 
 // Weapons Array
-
 const weaponsArray = [ 
     { 
         name: 'rope',
@@ -136,9 +132,7 @@ const weaponsArray = [
     },  
 ];
 
-
 // ITERATION 2
-
 function selectRandom(array) {
    
     if (array.length != 0) {
@@ -147,18 +141,25 @@ function selectRandom(array) {
     return array[Math.floor(array.length * Math.random())]
 }
 
-
 function pickMystery() {
 
     let suspect = suspectsArray[Math.floor(suspectsArray.length * Math.random())]
     let room = roomsArray[Math.floor(roomsArray.length * Math.random())]
     let weapon = weaponsArray[Math.floor(weaponsArray.length * Math.random())]
     
-    //console.log(suspect, room, weapon)
     return {suspect, room, weapon}
 }
 pickMystery()
 
 // ITERATION 3
+let envelop = pickMystery();
 
-function revealMystery() {}
+function revealMystery() {
+     
+    let message = `${envelop.suspect.firstName.toUpperCase()}` + " " + `${envelop.suspect.lastName.toUpperCase()}`+ "killed Mr. Boddy using the " `${weapon.name.toUpperCase()}`+ " in the " `${room.name.toUpperCase()}!`;
+
+    console.log(message)
+    return message;
+    };
+
+revealMystery(envelop)
