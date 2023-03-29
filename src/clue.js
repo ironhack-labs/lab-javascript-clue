@@ -109,5 +109,6 @@ function pickMystery() {}
 
 // ITERATION 3
 
-function revealMystery() {}
-
+function revealMystery(envelope) {
+    return `${suspectsArray[firstName]} ${suspectsArray[lastName]} killed Mr. Boddy using the ${weaponsArray[0]} in the ${roomsArray[0]}!`
+}
