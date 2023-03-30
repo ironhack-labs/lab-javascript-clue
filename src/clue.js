@@ -91,6 +91,7 @@ const weaponsArray = [
 // ITERATION 2
 
 function selectRandom(array) {
+    
     // get random index value
     const randomIndex = Math.floor(Math.random() * array.length);
 
