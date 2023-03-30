@@ -152,14 +152,14 @@ function pickMystery() {
 pickMystery()
 
 // ITERATION 3
-let envelop = pickMystery();
+
+let envelop = pickMystery
 
 function revealMystery() {
-     
-    let message = `${envelop.suspect.firstName.toUpperCase()}` + " " + `${envelop.suspect.lastName.toUpperCase()}`+ "killed Mr. Boddy using the " `${weapon.name.toUpperCase()}`+ " in the " `${room.name.toUpperCase()}!`;
 
-    console.log(message)
-    return message;
+    const message = envelop.suspect.firstName[0] + envelop.suspect.lastName[0] + `killed Mr. Boddy using the` + weapon.name[0] +`in the` + room.name[0] + `!`;
+    console.log(message);
+        return message
     };
 
-revealMystery(envelop)
+    revealMystery(envelop)
