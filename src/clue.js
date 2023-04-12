@@ -1,5 +1,41 @@
 // ITERATION 1
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Suspects Array
 const suspectsArray = [
   {
