@@ -62,35 +62,35 @@ const suspectsArray = [
 // Rooms Array
 
 const roomsArray = [
-    {name: "room1"},
-    {name: "room2"},
-    {name: "room3"},
-    {name: "room4"},
-    {name: "room5"},
-    {name: "room6"},
-    {name: "room7"},
-    {name: "room8"},
-    {name: "room9"},
-    {name: "room10"},
-    {name: "room11"},
-    {name: "room12"},
-    {name: "room13"},
-    {name: "room14"},
-    {name: "room16"}
+    {name: "Basement"},
+    {name: "Bedroom 1"},
+    {name: "Dining room"},
+    {name: "Garage"},
+    {name: "Kitchen"},
+    {name: "Laundry room"},
+    {name: "Attic"},
+    {name: "Bathroom"},
+    {name: "Living room"},
+    {name: "Pool"},
+    {name: "Sitting room"},
+    {name: "Study"},
+    {name: "Bedroom 2"},
+    {name: "Garden"},
+    {name: "Vestibule"}
 ];
 
 // Weapons Array
 
 const weaponsArray = [
-    {name: "sadf", weight: 9},
-    {name: "asf", weight: 8},
-    {name: "asf", weight: 7},
-    {name: "asdf", weight: 6},
-    {name: "asdf", weight: 5},
-    {name: "asf", weight: 4},
-    {name: "asf", weight: 3},
-    {name: "asdf", weight: 2},
-    {name: "asdf", weight: 1},
+    {name: "gun", weight: 10},
+    {name: "knife", weight: 5},
+    {name: "shotgun", weight: 20},
+    {name: "sword", weight: 12},
+    {name: "katana", weight: 5},
+    {name: "rifle", weight: 4},
+    {name: "bate", weight: 3},
+    {name: "fist", weight: 2},
+    {name: "stick", weight: 1},
 ];
 
 
@@ -122,4 +122,5 @@ function pickMystery() {
 function revealMystery(mysteryObj) {
     return `${mysteryObj.suspect.firstName} ${mysteryObj.suspect.lastName} killed Mr. Boddy using the ${mysteryObj.weapon.name} in the ${mysteryObj.room.name}!`
 }
+
 
