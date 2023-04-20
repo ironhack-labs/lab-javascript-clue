@@ -116,7 +116,7 @@ describe('Function "selectRandom" - Find a random element of the array', () => {
   it('should return a random element of the array', () => {
     const mathRandomSpy = spyOn(Math, 'random');
 
-    mathRandomSpy.and.returnValue(0.5);
+    mathRandomSpy.and.returnValue(0.5); 
 
     expect(
       selectRandom(['a', 'ab', 'abb', 'aab', 'aaa', 'sda', 'kas'])
