@@ -115,39 +115,39 @@ const roomsArray = [
 
 const weaponsArray = [
     {
-        name:"rope",
+        name: "rope",
         weight: 10
     },
     {
-        name:"knife",
+        name: "knife",
         weight: 8
     },
     {
-        name:"candlestick",
+        name: "candlestick",
         weight: 2
     },
     {
-        name:"dumbbell",
+        name: "dumbbell",
         weight: 30
     },
     {
-        name:"poison",
+        name: "poison",
         weight: 2
     },
     {
-        name:"axe",
+        name: "axe",
         weight: 15
     },
     {
-        name:"bat",
+        name: "bat",
         weight: 13
     },
     {
-        name:"trophy",
+        name: "trophy",
         weight: 25
     },
     {
-        name:"pistol",
+        name: "pistol",
         weight: 20
     }
 ];
@@ -155,15 +155,31 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom(room) { 
-    
-    
+function selectRandom(arr) {
+
+    const numRandom = Math.floor(Math.random() * arr.length)
+
+    return arr[numRandom]
+}
+console.log(selectRandom(roomsArray));
+
+function pickMystery() {
+    return {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray)
+    }
+
 }
 
-function pickMystery() { }
+console.log(pickMystery())
 
 
 // ITERATION 3
 
-function revealMystery() { }
+function revealMystery() {
+    
+    return `${pickMystery().suspect.firstName} ${pickMystery().suspect.lastName} killed Mr. Boddy using the ${pickMystery().weapon.name} in the ${pickMystery().room.name}!`
+}
+console.log(revealMystery())
 
