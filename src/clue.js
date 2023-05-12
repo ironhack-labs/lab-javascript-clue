@@ -185,3 +185,4 @@ function revealMystery(player) {
     return message;
 
 }
+cluear
