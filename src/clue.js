@@ -142,20 +142,8 @@ function pickMystery() {
   return obj;
 }
 
-console.log(Object.values(pickMystery().suspect));
-
-// object values obje value verir , object key object key verir
 // ITERATION 3
-function revealMystery() {
-  let str = `
-killed Mr. Boddy using the ${pickMystery().weapon.name} in the ${
-    pickMystery().room.name
-  }
-    `;
+function revealMystery(obj) {
+  let str = `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`;
   return str;
 }
-
-console.log(revealMystery());
-console.log(
-  `<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!`
-);
