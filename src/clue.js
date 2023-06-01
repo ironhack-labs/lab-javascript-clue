@@ -133,8 +133,29 @@ function selectRandom(arr) {
   return randomEl;
 }
 
-function pickMystery() {}
+function pickMystery() {
+  let obj = {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray),
+  };
+  return obj;
+}
 
+console.log(Object.values(pickMystery().suspect));
+
+// object values obje value verir , object key object key verir
 // ITERATION 3
+function revealMystery() {
+  let str = `
+killed Mr. Boddy using the ${pickMystery().weapon.name} in the ${
+    pickMystery().room.name
+  }
+    `;
+  return str;
+}
 
-function revealMystery() {}
+console.log(revealMystery());
+console.log(
+  `<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!`
+);
