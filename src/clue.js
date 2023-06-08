@@ -183,9 +183,11 @@ function pickMystery() {
 
 // ITERATION 3
 
-let message = pickMystery();
+let envelope = pickMystery();
 
-function revealMystery(message) {
+function revealMystery(envelope) {
+
+    let message = envelope
 
     return `${message.suspect.firstName} ${message.suspect.lastName} killed Mr. Boddy using the ${message.weapon.name} in the ${message.room.name}!`
 }
