@@ -7,7 +7,7 @@ Use this data to model your game cards into objects.
 ### Suspects
 
 ```
-mrGreen
+mrGreen 
 firstName: Jacob
 lastName: Green
 occupation: Entrepreneur
