@@ -183,15 +183,18 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {
+function revealMystery(randomObject) {
     
-    const suspect = pickMystery().suspect;
-    const room = pickMystery().room.name;
-    const weapon = pickMystery().weapon.name;
+    const suspectFirstName = randomObject.suspect.firstName;
+    const suspectLastName = randomObject.suspect.lastName;
+    const room = randomObject.room.name;
+    const weapon = randomObject.weapon.name;
     
-    return `${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the ${weapon} in the ${room}!`
+    return `${suspectFirstName} ${suspectLastName} killed Mr. Boddy using the ${weapon} in the ${room}!`
 
 }
+
+
 
 
 
