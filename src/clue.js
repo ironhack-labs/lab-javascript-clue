@@ -64,7 +64,7 @@ const suspectsArray = [
       " https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg",
     color: "yellow",
   },
-  //
+  
 ];
 
 // Rooms Array
@@ -169,7 +169,7 @@ function selectRandom(selectArray) {
   if (selectArray.length === 1) {
     return selectArray[0];
   }
-
+//random
   return selectArray[Math.floor(Math.random() * selectArray.length)];
 }
   
