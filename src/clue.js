@@ -147,13 +147,16 @@ function pickMystery() {
 // ITERATION 3
 
 function revealMystery(envelope) {
+  const { suspect, weapon, room } = envelope;
+
+  const message = `${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`;
   
-    const { suspect: suspect, weapon: weapon, room: room } = envelope;
-       
-    const message = `${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`;
-   
-      
-    
-    return message;
-  }
-  
+  return message;
+}
+
+
+const envelope = pickMystery();
+const message = revealMystery(envelope);
+console.log(message);
+
+
