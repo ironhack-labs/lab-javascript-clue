@@ -4,7 +4,7 @@
 
 const suspectsArray = [];
 
-mrGreen ={
+const mrGreen ={
     firstName: "Jacob",
     lastName: "Green",
     occupation: "Entrepreneur",
@@ -14,7 +14,7 @@ mrGreen ={
     color: "green"
 }
 
-drOrchid = {
+const drOrchid = {
     firstName: "Doctor",
     lastName: "Orchid",
     occupation: "Scientist",
@@ -24,7 +24,7 @@ drOrchid = {
     color: "white"
 }
 
-profPlum = {
+const profPlum = {
     firstName: "Victor",
     lastName: "Plum",
     occupation: "Designer",
@@ -34,7 +34,7 @@ profPlum = {
     color: "purple"
 }
 
-missScarlet ={
+const missScarlet ={
     firstName: "Kasandra",
     lastName: "Scarlet",
     occupation: "Actor",
@@ -44,7 +44,7 @@ missScarlet ={
     color: "red"
 }
 
-mrsPeacock = {
+const mrsPeacock = {
     firstName: "Eleanor",
     lastName: "Peacock",
     occupation: "Socialité",
@@ -55,7 +55,7 @@ mrsPeacock = {
 }
 
 
-mrMustard = {
+const mrMustard = {
     firstName: "Jack",
     lastName: "Mustard",
     occupation: "Retired Football player",
@@ -72,55 +72,55 @@ suspectsArray.push(mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMusta
 
 const roomsArray = [];
 
-diningRoom ={
+const diningRoom ={
     name: "Dining Room"
 }
-conservatory = {
+const conservatory = {
     name:"Conservatory"
 }
-kitchen = {
+const kitchen = {
     name: "Kitchen"
 }
 
-study = {
+const study = {
     name: "Study"
 }
 
-library = {
+const library = {
     name: "Library"
 }
 
-billiardRoom ={
+const billiardRoom ={
     name: "Billiard Room"
 }
 
-lounge ={
+const lounge ={
     name: "Lounge"
 }
-ballroom = {
+const ballroom = {
     name:"Ballroom"
 }
-hall = {
+const hall = {
     name: "Hall"
 }
-spa={
+const spa={
     name: "Spa"
 }
 
-livingRoom = {
+const livingRoom = {
     name: "Living Room"
 }
-observatory = {
+const observatory = {
     name: "Observatory"
 }
-theater = {
+const theater = {
     name: "Theater"
 }
 
-guestHouse = {
+const guestHouse = {
     name: "Guest House"
 }
-patio = {
+const patio = {
     name: "Patio"
 }
 
@@ -131,43 +131,43 @@ roomsArray.push(diningRoom, conservatory, kitchen, study, library, billiardRoom,
 
 const weaponsArray = [];
 
-rope = {
+const rope = {
     name: "rope",
     weight: 10
 }
-knife = {
+const knife = {
     name: "knife",
     weight: 8
 }
 
-candlestick={
+const candlestick={
     name: "candlestick",
     weight: 2
 }
 
-dumbbell={
+const dumbbell={
     name: "dumbbell",
     weight: 30
 }
 
-poison ={
+const poison ={
     name: "poison",
     weight: 2
 }
 
-axe = {
+const axe = {
     name: "axe",
     weight: 15
 }
-bat={
+const bat={
     name: "bat",
     weight: 13
 }
-trophy={
+const trophy={
     name: "trophy",
     weight: 25 
 }
-pistol={
+const pistol={
     name: "pistol",
     weight: 20
 }
@@ -188,9 +188,7 @@ function selectRandom(array) {
 // Declare a function named pickMystery that takes no arguments and returns an object with three properties: suspect, weapon and room, each holding as a value a card of that specific type. You can get a random card of each type by calling selectRandom on each card stack.
 
 function pickMystery() {
-    let returnedObject = {
-    
-    }
+    let returnedObject = {}
     returnedObject.suspect = selectRandom(suspectsArray);
     returnedObject.weapon = selectRandom(weaponsArray);
     returnedObject.room = selectRandom(roomsArray);
