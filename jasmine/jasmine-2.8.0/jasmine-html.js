@@ -29,13 +29,13 @@ jasmineRequire.html = function(j$) {
 
 jasmineRequire.HtmlReporter = function(j$) {
 
-  var noopTimer = {
+  let noopTimer = {
     start: function() {},
     elapsed: function() { return 0; }
   };
 
   function HtmlReporter(options) {
-    var env = options.env || {},
+    let env = options.env || {},
       getContainer = options.getContainer,
       createElement = options.createElement,
       createTextNode = options.createTextNode,
@@ -70,15 +70,15 @@ jasmineRequire.HtmlReporter = function(j$) {
       getContainer().appendChild(htmlReporterMain);
     };
 
-    var totalSpecsDefined;
+    let totalSpecsDefined;
     this.jasmineStarted = function(options) {
       totalSpecsDefined = options.totalSpecsDefined || 0;
       timer.start();
     };
 
-    var summary = createDom('div', {className: 'jasmine-summary'});
+    let summary = createDom('div', {className: 'jasmine-summary'});
 
-    var topResults = new j$.ResultsNode({}, '', null),
+    let topResults = new j$.ResultsNode({}, '', null),
       currentParent = topResults;
 
     this.suiteStarted = function(result) {
@@ -102,7 +102,7 @@ jasmineRequire.HtmlReporter = function(j$) {
       currentParent.addChild(result, 'spec');
     };
 
-    var failures = [];
+    let failures = [];
     this.specDone = function(result) {
       if (noExpectations(result) && typeof console !== 'undefined' && typeof console.error !== 'undefined') {
         console.error('Spec \'' + result.fullName + '\' has no expectations.');
@@ -126,19 +126,19 @@ jasmineRequire.HtmlReporter = function(j$) {
       if (result.status == 'failed') {
         failureCount++;
 
-        var failure =
+        let failure =
           createDom('div', {className: 'jasmine-spec-detail jasmine-failed'},
             createDom('div', {className: 'jasmine-description'},
               createDom('a', {title: result.fullName, href: specHref(result)}, result.fullName)
             ),
             createDom('div', {className: 'jasmine-messages'})
           );
-        var messages = failure.childNodes[1];
+        let messages = failure.childNodes[1];
 
-        for (var i = 0; i < result.failedExpectations.length; i++) {
-          var expectation = result.failedExpectations[i];
-          var stringStart = expectation.stack.indexOf("at UserContext.<anonymous>");
-          var shortStackTrace = expectation.stack.slice(stringStart);
+        for (let i = 0; i < result.failedExpectations.length; i++) {
+          let expectation = result.failedExpectations[i];
+          let stringStart = expectation.stack.indexOf("at UserContext.<anonymous>");
+          let shortStackTrace = expectation.stack.slice(stringStart);
           messages.appendChild(createDom('div', {className: 'jasmine-result-message'}, expectation.message));
           messages.appendChild(createDom('div', {className: 'jasmine-stack-trace'}, shortStackTrace));
         }
@@ -153,10 +153,10 @@ jasmineRequire.HtmlReporter = function(j$) {
     };
 
     this.jasmineDone = function(doneResult) {
-      var banner = find('.jasmine-banner');
-      var labName = find('.jasmine-labname');
-      var alert = find('.jasmine-alert');
-      var order = doneResult && doneResult.order;
+      let banner = find('.jasmine-banner');
+      let labName = find('.jasmine-labname');
+      let alert = find('.jasmine-alert');
+      let order = doneResult && doneResult.order;
       labName.appendChild(createDom('img', {src: 'jasmine/jasmine-2.8.0/ironhack-logo.png'}, ''));
       labName.appendChild(createDom('span', {}, 'LAB | JS Clue'));
       alert.appendChild(createDom('span', {className: 'jasmine-duration'}, 'finished in ' + timer.elapsed() / 1000 + 's'));
@@ -189,20 +189,20 @@ jasmineRequire.HtmlReporter = function(j$) {
           )
         ));
 
-      var raiseCheckbox = find('#jasmine-raise-exceptions');
+      let raiseCheckbox = find('#jasmine-raise-exceptions');
 
       raiseCheckbox.checked = !env.catchingExceptions();
       raiseCheckbox.onclick = onRaiseExceptionsClick;
 
-      var throwCheckbox = find('#jasmine-throw-failures');
+      let throwCheckbox = find('#jasmine-throw-failures');
       throwCheckbox.checked = env.throwingExpectationFailures();
       throwCheckbox.onclick = onThrowExpectationsClick;
 
-      var randomCheckbox = find('#jasmine-random-order');
+      let randomCheckbox = find('#jasmine-random-order');
       randomCheckbox.checked = env.randomTests();
       randomCheckbox.onclick = onRandomClick;
 
-      var optionsMenu = find('.jasmine-run-options'),
+      let optionsMenu = find('.jasmine-run-options'),
           optionsTrigger = optionsMenu.querySelector('.jasmine-trigger'),
           optionsPayload = optionsMenu.querySelector('.jasmine-payload'),
           isOpen = /\bjasmine-open\b/;
@@ -216,16 +216,16 @@ jasmineRequire.HtmlReporter = function(j$) {
       };
 
       if (specsExecuted < totalSpecsDefined) {
-        var skippedMessage = 'Ran ' + specsExecuted + ' of ' + totalSpecsDefined + ' specs - run all';
-        var skippedLink = addToExistingQueryString('spec', '');
+        let skippedMessage = 'Ran ' + specsExecuted + ' of ' + totalSpecsDefined + ' specs - run all';
+        let skippedLink = addToExistingQueryString('spec', '');
         alert.appendChild(
           createDom('span', {className: 'jasmine-bar jasmine-skipped'},
             createDom('a', {href: skippedLink, title: 'Run all specs'}, skippedMessage)
           )
         );
       }
-      var statusBarMessage = '';
-      var statusBarClassName = 'jasmine-bar ';
+      let statusBarMessage = '';
+      let statusBarClassName = 'jasmine-bar ';
 
       if (totalSpecsDefined > 0) {
         statusBarMessage += pluralize('spec', specsExecuted) + ', ' + pluralize('failure', failureCount);
@@ -236,7 +236,7 @@ jasmineRequire.HtmlReporter = function(j$) {
         statusBarMessage += 'No specs found';
       }
 
-      var seedBar;
+      let seedBar;
       if (order && order.random) {
         seedBar = createDom('span', {className: 'jasmine-seed-bar'},
           ', randomized with seed ',
@@ -246,36 +246,36 @@ jasmineRequire.HtmlReporter = function(j$) {
 
       alert.appendChild(createDom('span', {className: statusBarClassName}, statusBarMessage, seedBar));
 
-      var errorBarClassName = 'jasmine-bar jasmine-errored';
-      var errorBarMessagePrefix = 'AfterAll ';
+      let errorBarClassName = 'jasmine-bar jasmine-errored';
+      let errorBarMessagePrefix = 'AfterAll ';
 
-      for(var i = 0; i < failedSuites.length; i++) {
-        var failedSuite = failedSuites[i];
-        for(var j = 0; j < failedSuite.failedExpectations.length; j++) {
+      for(let i = 0; i < failedSuites.length; i++) {
+        let failedSuite = failedSuites[i];
+        for(let j = 0; j < failedSuite.failedExpectations.length; j++) {
           alert.appendChild(createDom('span', {className: errorBarClassName}, errorBarMessagePrefix + failedSuite.failedExpectations[j].message));
         }
       }
 
-      var globalFailures = (doneResult && doneResult.failedExpectations) || [];
+      let globalFailures = (doneResult && doneResult.failedExpectations) || [];
       for(i = 0; i < globalFailures.length; i++) {
-        var failure = globalFailures[i];
+        let failure = globalFailures[i];
         alert.appendChild(createDom('span', {className: errorBarClassName}, errorBarMessagePrefix + failure.message));
       }
 
-      var results = find('.jasmine-results');
+      let results = find('.jasmine-results');
       results.appendChild(summary);
 
       summaryList(topResults, summary);
 
       function summaryList(resultsTree, domParent) {
-        var specListNode;
-        for (var i = 0; i < resultsTree.children.length; i++) {
-          var resultNode = resultsTree.children[i];
+        let specListNode;
+        for (let i = 0; i < resultsTree.children.length; i++) {
+          let resultNode = resultsTree.children[i];
           if (filterSpecs && !hasActiveSpec(resultNode)) {
             continue;
           }
           if (resultNode.type == 'suite') {
-            var suiteListNode = createDom('ul', {className: 'jasmine-suite', id: 'suite-' + resultNode.result.id},
+            let suiteListNode = createDom('ul', {className: 'jasmine-suite', id: 'suite-' + resultNode.result.id},
               createDom('li', {className: 'jasmine-suite-detail'},
                 createDom('a', {href: specHref(resultNode.result)}, resultNode.result.description)
               )
@@ -289,7 +289,7 @@ jasmineRequire.HtmlReporter = function(j$) {
               specListNode = createDom('ul', {className: 'jasmine-specs'});
               domParent.appendChild(specListNode);
             }
-            var specDescription = resultNode.result.description;
+            let specDescription = resultNode.result.description;
             if(noExpectations(resultNode.result)) {
               specDescription = 'SPEC HAS NO EXPECTATIONS ' + specDescription;
             }
@@ -330,7 +330,7 @@ jasmineRequire.HtmlReporter = function(j$) {
         setMenuModeTo('jasmine-spec-list');
 
 
-        var failureNode = find('.jasmine-failures');
+        let failureNode = find('.jasmine-failures');
         for (i = 0; i < failures.length; i++) {
           failureNode.appendChild(failures[i]);
         }
@@ -345,7 +345,7 @@ jasmineRequire.HtmlReporter = function(j$) {
 
     function clearPrior() {
       // return the reporter
-      var oldReporter = find('');
+      let oldReporter = find('');
 
       if(oldReporter) {
         getContainer().removeChild(oldReporter);
@@ -353,10 +353,10 @@ jasmineRequire.HtmlReporter = function(j$) {
     }
 
     function createDom(type, attrs, childrenVarArgs) {
-      var el = createElement(type);
+      let el = createElement(type);
 
-      for (var i = 2; i < arguments.length; i++) {
-        var child = arguments[i];
+      for (let i = 2; i < arguments.length; i++) {
+        let child = arguments[i];
 
         if (typeof child === 'string') {
           el.appendChild(createTextNode(child));
@@ -367,7 +367,7 @@ jasmineRequire.HtmlReporter = function(j$) {
         }
       }
 
-      for (var attr in attrs) {
+      for (let attr in attrs) {
         if (attr == 'className') {
           el[attr] = attrs[attr];
         } else {
@@ -379,7 +379,7 @@ jasmineRequire.HtmlReporter = function(j$) {
     }
 
     function pluralize(singular, count) {
-      var word = (count == 1 ? singular : singular + 's');
+      let word = (count == 1 ? singular : singular + 's');
 
       return '' + count + ' ' + word;
     }
@@ -411,7 +411,7 @@ jasmineRequire.HtmlReporter = function(j$) {
       }
 
       if (resultNode.type == 'suite') {
-        for (var i = 0, j = resultNode.children.length; i < j; i++) {
+        for (let i = 0, j = resultNode.children.length; i < j; i++) {
           if (hasActiveSpec(resultNode.children[i])) {
             return true;
           }
@@ -425,8 +425,8 @@ jasmineRequire.HtmlReporter = function(j$) {
 
 jasmineRequire.HtmlSpecFilter = function() {
   function HtmlSpecFilter(options) {
-    var filterString = options && options.filterString() && options.filterString().replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
-    var filterPattern = new RegExp(filterString);
+    let filterString = options && options.filterString() && options.filterString().replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+    let filterPattern = new RegExp(filterString);
 
     this.matches = function(specName) {
       return filterPattern.test(specName);
@@ -464,7 +464,7 @@ jasmineRequire.QueryString = function() {
     };
 
     this.fullStringWithNewParam = function(key, value) {
-      var paramMap = queryStringToParamMap();
+      let paramMap = queryStringToParamMap();
       paramMap[key] = value;
       return toQueryString(paramMap);
     };
@@ -476,23 +476,23 @@ jasmineRequire.QueryString = function() {
     return this;
 
     function toQueryString(paramMap) {
-      var qStrPairs = [];
-      for (var prop in paramMap) {
+      let qStrPairs = [];
+      for (let prop in paramMap) {
         qStrPairs.push(encodeURIComponent(prop) + '=' + encodeURIComponent(paramMap[prop]));
       }
       return '?' + qStrPairs.join('&');
     }
 
     function queryStringToParamMap() {
-      var paramStr = options.getWindowLocation().search.substring(1),
+      let paramStr = options.getWindowLocation().search.substring(1),
         params = [],
         paramMap = {};
 
       if (paramStr.length > 0) {
         params = paramStr.split('&');
-        for (var i = 0; i < params.length; i++) {
-          var p = params[i].split('=');
-          var value = decodeURIComponent(p[1]);
+        for (let i = 0; i < params.length; i++) {
+          let p = params[i].split('=');
+          let value = decodeURIComponent(p[1]);
           if (value === 'true' || value === 'false') {
             value = JSON.parse(value);
           }
