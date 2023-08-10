@@ -22,7 +22,7 @@ const suspectsArray = [
         color: 'white'
     },
     {
-        firstName: 'Victor',
+        firstName: 'Victor' ,
         lastName: 'Plum',
         occupation: 'Designer',
         age: 22,
