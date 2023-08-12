@@ -2,9 +2,8 @@
 
 // Suspects Array
 
- //start curly (opening)
   
- const suspectsArray = [  // first object of 'cardShuffle' object
+ const suspectsArray = [ 
 
  // mrGreen 
  {firstName: "Jacob",
