@@ -20,7 +20,7 @@ color: green
 ```
 drOrchid
 firstName: Doctor
-lastName: Orchid
+lastName: 
 occupation: Scientist
 age: 26
 description: PhD in plant toxicology. Adopted daughter of Mr. Boddy
