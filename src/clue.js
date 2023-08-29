@@ -48,14 +48,25 @@ const weaponsArray = [
 // ITERATION 2
 
 function selectRandom(arr) {
-    const randomSelector = Math.floor (Math.random() * arr.length);
-    return arr(randomSelector);
-}
+    const randomSelector = Math.floor(Math.random() * arr.length);
+    return arr[randomSelector];
+  }
+  
+  const randomSuspect = selectRandom(suspectsArray);
+  console.log("Random Suspect:", randomSuspect);
+
+  const randomRoom = selectRandom(roomsArray);
+  console.log("Random Room:", randomRoom);
+
+  const randomWeapon = selectRandom(weaponsArray);
+  console.log("Random Weapon:", randomWeapon);
+  
+  
+
 
 function pickMystery() {}
 
 
 // ITERATION 3
 
-function revealMystery() {}
-
+function revealMystery() {};
