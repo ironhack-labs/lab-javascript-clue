@@ -64,7 +64,17 @@ function selectRandom(arr) {
   
 
 
-function pickMystery() {}
+function pickMystery() {
+    const suspect = selectRandom(suspectsArray);
+    const weapon = selectRandom(weaponsArray);
+    const room = selectRandom(roomsArray);
+
+    return {
+        suspect: suspect,
+        weapon: weapon,
+        room: room
+    };
+}
 
 
 // ITERATION 3
