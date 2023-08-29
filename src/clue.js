@@ -79,4 +79,9 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {};
+function revealMystery(envelope) {
+    
+
+    const message = `${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`;
+    return message;
+}
