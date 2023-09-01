@@ -141,9 +141,7 @@ const weaponsArray = [
 // ITERATION 2
 
 function selectRandom(array) {
-  const min = 0;
-  const max = array.length - 1;
-  const randomInteger = Math.floor(Math.random() * (max - min + 1)) + min;
+  const randomInteger = Math.floor(Math.random() * array.length);
 
   return array[randomInteger];
 }
