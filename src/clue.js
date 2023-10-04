@@ -147,9 +147,9 @@ function revealMystery(envelope) {
     const suspectFirstName = envelope.suspect.firstName;
     const suspectLastName = envelope.suspect.lastName;
     const weaponName = envelope.weapon.name;
-    const roomName = envelope.room.name;
+    const roomName = envelope.room.name;    
 
-    const revealMessage = `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+    const revealMessage = `${suspectFirstName} ${suspectLastName} killed Mr. Boddy using the ${weaponName} in the ${roomName}!`;
     console.log (revealMessage)
 
     return revealMessage
