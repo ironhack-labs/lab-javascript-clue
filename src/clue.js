@@ -112,7 +112,7 @@ function pickMystery() {
 }
 
 
-// ITERATION 3 --> busqué en chatgpt cómo invocar una funcion como argumento de otra función pero el resto estaba bien
+// ITERATION 3 --> busqué cómo invocar una funcion como argumento de otra función pero el resto estaba bien! 
 const misteryChoosen = pickMystery(); //--> creo una variable que me genere la carta aleatoria
 const theMisteryIs = revealMystery(misteryChoosen);//-->creo una variable que convoque a la funcion donde el argumento sea la variable anterior que contiene la función de escoger de forma aleatoria
 
