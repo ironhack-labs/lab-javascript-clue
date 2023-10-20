@@ -104,12 +104,14 @@ function selectRandom(card) {
   return card[Math.floor(Math.random() * card.length)];
 }
 
-console.log(suspectsArray);
-console.log(roomsArray);
-console.log(weaponsArray);
-
-function pickMystery() {}
+function pickMystery() {
+  return { suspect: selectRandom(suspectsArray), weapon: selectRandom(weaponsArray), room: selectRandom(roomsArray) };
+}
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(envelope) {
+  return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+}
+
+console.log(revealMystery(pickMystery()));
