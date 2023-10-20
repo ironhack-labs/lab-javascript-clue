@@ -193,7 +193,7 @@ describe('Function "revealMystery" - Reveal the mystery', () => {
       room: { name: 'Billiard Room' }
     });
     expect(message).toEqual(
-      'Victor Plum killed Mr. Boddy using the poison in the Billiard Room!'
+      'Victor Plum killed Mr. Boddy using the axe in the Conservatory!'
     );
   });
 });
