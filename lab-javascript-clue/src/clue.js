@@ -95,52 +95,32 @@ const roomsArray = [
 
 // ITERATION 2
 
-function selectRandom(index){
-    if (index.length === 0) {
-        return undefined;
-    }
-
-    if (index.length === 1) {
-        return index[0];
-    }
-
-    for (let i = 0; i < index.length; i++) {
-        return (index[i]);
-    }
-
-    // // No me funciona
-    let randomIndex = Math.floor(Math.random() * index.length);
-    return randomIndex;
+function selectRandom(arr) {
+    let randomItem = arr[Math.floor(Math.random() * arr.length)];
+    return randomItem;
 }
 
-function pickMystery(index) {
+let suspect = selectRandom(suspectsArray)
+let weapon = selectRandom(weaponsArray);
+let room = selectRandom(roomsArray);
 
-    let suspectIndex = Math.floor(Math.random() * suspectsArray.length);
-    let weaponIndex = Math.floor(Math.random() * weaponsArray.length);
-    let roomIndex = Math.floor(Math.random() * roomsArray.length);
-
-    let randomMystery = {
-        suspect: suspectsArray[suspectIndex],
-        weapon: weaponsArray[weaponIndex],
-        room: roomsArray[roomIndex],
-    };
-    return randomMystery;
+function pickMystery() {
+    return {
+        suspect: suspect,
+        weapon: weapon,
+        room: room
+    }
 }
+
+let mystery = pickMystery();
 
 // ITERATION 3
 
-function revealMystery(index) {
-
-    function selectRandom(index) {
-        return index[Math.floor(Math.random() * index.length)];
-    }
-
-    const suspect = selectRandom(suspectsArray);
-    const weapon = selectRandom(weaponsArray);
-    const room = selectRandom(roomsArray);
-
-    return ('${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the  ${weapon.name} in the ${room.name}!');
-    
+function revealMystery(obj) {
+    console.log(`${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`);
+    return `${obj.suspect.firstName} ${obj.suspect.lastName} killed Mr. Boddy using the ${obj.weapon.name} in the ${obj.room.name}!`;
 }
+
+revealMystery(mystery);
 
 
