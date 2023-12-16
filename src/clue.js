@@ -115,9 +115,9 @@ function pickMystery() {
   const room = selectRandom(roomsArray);
 
   const card = {
-    'suspect' : suspect,
-    'weapon' : weapon,
-    'room' : room
+    suspect : suspect,
+    weapon : weapon,
+    room : room
   }
 
   return card;
