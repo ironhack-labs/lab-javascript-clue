@@ -112,21 +112,6 @@ const roomsArray = [
 
 
 ];
-/*name: Dining Room,
-name: Conservatory,
-name: Kitchen,
-name: Study,
-name: Library,
-name: Billiard Room,
-name: Lounge,
-name: Ballroom,
-name: Hall,
-name: Spa,
-name: Living Room,
-name: Observatory,
-name: Theater,
-name: Guest House,
-name: Patio,*/
 
 // Weapons Array
 
@@ -163,7 +148,46 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(arr) {
+    if (arr.length === 0){
+        return undefined
+    }
+let lengthArr=arr.length 
+let indexRandom =Math.floor(Math.random()*lengthArr)
+let carRandom= arr[indexRandom].name || arr[indexRandom].firstName || arr[indexRandom]
+console.log(typeof carRandom)
+
+
+return carRandom
+}
+
+let obj=[{
+    name: `marcos`
+}]
+
+
+
+console.log(selectRandom(obj))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function pickMystery() {}
 
@@ -172,16 +196,3 @@ function pickMystery() {}
 
 function revealMystery() {}
 
-/************************************************** 
-
-
-name: rope --- weight: 10
-name: knife --- weight: 8
-name: candlestick --- weight: 2
-name: dumbbell --- weight: 30
-name: poison --- weight: 2
-name: axe --- weight: 15
-name: bat --- weight: 13
-name: trophy --- weight: 25
-name: pistol --- weight: 20
-```*/
