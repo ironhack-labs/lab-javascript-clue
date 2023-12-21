@@ -123,7 +123,7 @@ const weaponsArray = [
      name: `knife`,  weight: 8
     },
     {   
-     name: ` candlestick`,  weight: 2
+     name: `candlestick`,  weight: 2
     },
     {   
      name: `dumbbell`,  weight: 30
@@ -148,51 +148,72 @@ const weaponsArray = [
 
 // ITERATION 2
 
+
+
 function selectRandom(arr) {
-    if (arr.length === 0){
+        if (arr.length === 0){
         return undefined
     }
-let lengthArr=arr.length 
-let indexRandom =Math.floor(Math.random()*lengthArr)
-let carRandom= arr[indexRandom].name || arr[indexRandom].firstName || arr[indexRandom]
-console.log(typeof carRandom)
+    let lengthArr = arr.length 
+    let indexRandom =Math.floor(Math.random()*lengthArr); console.log(indexRandom)
+    
+    let carRandom= arr[indexRandom].name || arr[indexRandom].firstName || arr[indexRandom]
+    console.log(typeof carRandom)
+    
+    console.log(carRandom)
+    return carRandom
 
-
-return carRandom
 }
 
-let obj=[{
-    name: `marcos`
-}]
+function pickMystery() { 
 
+let suspect=selectRandom(suspectsArray);console.log(suspect)
+let weapon=selectRandom(weaponsArray);console.log(weapon)
+let room=selectRandom(roomsArray);console.log(room)
+let setOfcards=[
+    {suspect:suspect,
+    weapon:weapon,
+    room:room}]
 
-
-console.log(selectRandom(obj))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function pickMystery() {}
-
+return setOfcards
+}
+ console.log(pickMystery())
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery (object){
+    console.log(object)
+   
+    let name= object[0].suspect
+    let firstName=""
+    console.log(name)
+    switch (name) {
+        case `Jacob`:
+            firstName=`Green`
+            break;
+            case  `Doctor`:
+            firstName=`Orchid`
+            break;
+            case  `Victor`:
+            firstName=`Plum`
+            break;
+            case `Kasandra`:
+            firstName=`Scarlet`
+            break;
+            case  `Eleanor`:
+            firstName=`Peacock`
+            break;
+            case  `Jack`:
+            firstName=`Mustard`
+            break;           
+        default:
 
+            break;
+    }
+    
+   
+    return `${object[0].suspect} ${firstName} killed Mr.Boddy using the ${object[0].weapon} in the ${object[0].room}!`
+    
+};      
+
+console.log(revealMystery(pickMystery()))
