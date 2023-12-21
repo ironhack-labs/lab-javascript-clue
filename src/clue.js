@@ -210,9 +210,9 @@ function revealMystery (object){
 
             break;
     }
-    
-   
-    return `${object[0].suspect} ${firstName} killed Mr.Boddy using the ${object[0].weapon} in the ${object[0].room}!`
+    let result=`${object[0].suspect} ${firstName} killed Mr.Boddy using the ${object[0].weapon} in the ${object[0].room}!`
+    console.log(typeof result)
+    return result
     
 };      
 
