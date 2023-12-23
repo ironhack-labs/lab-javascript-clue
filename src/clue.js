@@ -182,7 +182,7 @@ function pickMystery(){
     return setOfcards;
 }
 
-console.log(pickMystery())
+
 
 // ITERATION 3
 
@@ -194,14 +194,11 @@ function revealMystery (object){
     let lastName=name.lastName
     let weapon =object.weapon.name
     let place =object.room.name
-    console.log(lastName)
-    console.log(firstName)
-    console.log(weapon)
-    console.log(place)
-    let result=`${firstName} ${lastName} killed Mr.Boddy using the ${weapon} in the ${place}!`
+    
+    
     return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${place}!`
     
     
-};    //<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!  
+};    
 
-console.log(revealMystery(pickMystery()))
+
