@@ -151,69 +151,57 @@ const weaponsArray = [
 
 
 function selectRandom(arr) {
-        if (arr.length === 0){
-        return undefined
+    if (arr.length === 0) {
+        return undefined;
     }
-    let lengthArr = arr.length 
-    let indexRandom =Math.floor(Math.random()*lengthArr); console.log(indexRandom)
+
+    let lengthArr = arr.length;
+    let indexRandom = Math.floor(Math.random() * lengthArr);
+
     
-    let carRandom= arr[indexRandom].name || arr[indexRandom].firstName || arr[indexRandom]
-    console.log(typeof carRandom)
+    let carRandom = arr[indexRandom];
+
     
-    console.log(carRandom)
-    return carRandom
+    return carRandom;
+    
 
 }
 
-function pickMystery() { 
 
-let suspect=selectRandom(suspectsArray);console.log(suspect)
-let weapon=selectRandom(weaponsArray);console.log(weapon)
-let room=selectRandom(roomsArray);console.log(room)
-let setOfcards=[
-    {suspect:suspect,
-    weapon:weapon,
-    room:room}]
+function pickMystery(){
+    const suspect =selectRandom(suspectsArray) ;console.log(suspect)
+    const weapon =selectRandom(weaponsArray)  ;console.log(weapon)
+    const room = selectRandom(roomsArray) ;console.log(room)
 
-return setOfcards
+    const setOfcards = {
+      suspect  : suspect,
+    weapon  : weapon,
+        room: room
+    }
+    
+    return setOfcards;
 }
- console.log(pickMystery())
+
+console.log(pickMystery())
 
 // ITERATION 3
 
 function revealMystery (object){
-    console.log(object)
+    console.log( typeof object)
    
-    let name= object[0].suspect
-    let firstName=""
-    console.log(name)
-    switch (name) {
-        case `Jacob`:
-            firstName=`Green`
-            break;
-            case  `Doctor`:
-            firstName=`Orchid`
-            break;
-            case  `Victor`:
-            firstName=`Plum`
-            break;
-            case `Kasandra`:
-            firstName=`Scarlet`
-            break;
-            case  `Eleanor`:
-            firstName=`Peacock`
-            break;
-            case  `Jack`:
-            firstName=`Mustard`
-            break;           
-        default:
-
-            break;
-    }
-    let result=`${object[0].suspect} ${firstName} killed Mr.Boddy using the ${object[0].weapon} in the ${object[0].room}!`
-    console.log(typeof result)
-    return result
+    let name= object.suspect
+    let firstName=name.firstName
+    let lastName=name.lastName
+    let weapon =object.weapon.name
+    let place =object.room.name
+    console.log(lastName)
+    console.log(firstName)
+    console.log(weapon)
+    console.log(place)
+    let result=`${firstName} ${lastName} killed Mr.Boddy using the ${weapon} in the ${place}!`
+    return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${place}!`
     
-};      
+    
+};    //<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!  
 
 console.log(revealMystery(pickMystery()))
