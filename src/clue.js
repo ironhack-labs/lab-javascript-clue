@@ -1,7 +1,6 @@
 // ITERATION 1
 
 // Suspects Array
-
 const suspectsArray = [
 	{
 		firstName: "Jacob",
@@ -60,9 +59,6 @@ const suspectsArray = [
 		color: "yellow",
 	},
 ];
-
-// Rooms Array
-
 const roomsArray = [
 	{
 		name: "Dining Room",
@@ -112,7 +108,7 @@ const roomsArray = [
 ];
 
 // Weapons Array
-
+// THIS IS OUR CARDS
 const weaponsArray = [
 	{
 		name: "rope",
@@ -173,11 +169,5 @@ function pickMystery() {
 // ITERATION 3
 
 function revealMystery(pickMystery) {
-	const suspect = pickMystery.suspect;
-	const room = pickMystery.room;
-	const weapon = pickMystery.weapon;
-
-	let reveal = `${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`;
-	console.log(reveal);
-	return reveal;
+	return `${pickMystery.suspect.firstName} ${pickMystery.suspect.lastName} killed Mr. Boddy using the ${pickMystery.weapon.name} in the ${pickMystery.room.name}!`;
 }
