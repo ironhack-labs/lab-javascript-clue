@@ -142,11 +142,7 @@ console.log(pickMystery());
 // ITERATION 3
 
 function revealMystery(envelope) {
-  const randomSuspectFirstName = envelope.suspect.firstName;
-  const randomSuspectLastName = envelope.suspect.lastName;
-  const randomWeapon = envelope.weapon.name;
-  const randomRoom = envelope.room.name;
-  return `${randomSuspectFirstName} ${randomSuspectLastName} killed Mr. Boddy using the ${randomWeapon} in the ${randomRoom}!`;
+  return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
 }
 
 console.log(revealMystery());
