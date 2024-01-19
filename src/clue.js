@@ -2,8 +2,8 @@
 
 // Suspects Array
 
-const suspectsArray = [{
-    
+const suspectsArray = [
+    {
         firstName: `Jacob`,
         lastName: `Green`,
         occupation: `Entrepreneur`,
@@ -118,13 +118,16 @@ function pickMystery() {
         weapon: selectRandom(weaponsArray),
         room: selectRandom(roomsArray)
     };
-    return console.log(mistery)
+    return mistery
 }
 
-pickMystery()
+const envelope = pickMystery()
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(envelope) {
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
+}
+
 
