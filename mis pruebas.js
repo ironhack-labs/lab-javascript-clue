@@ -1,7 +1,3 @@
-// ITERATION 1
-
-// Suspects Array
-
 const suspectsArray = [
     {
         firstName: "Jacob",
@@ -29,7 +25,7 @@ const suspectsArray = [
         age: 22,
         description: "Billionaire video game designer",
         image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
-        color: 'purple',
+        color: purple,
     },
     {
         firstName: "Kasandra",
@@ -56,101 +52,9 @@ const suspectsArray = [
         age: 62,
         description: "He is a former football player who tries to get by on his former glory",
         image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg",
-        color: "yellow",
+        color: yellow,
+    },
+    {
+
     }
-];
-
-// Rooms Array
-
-const roomsArray = [
-
-    { name: "Dining Room" },
-    { name: "Conservatory" },
-    { name: "Kitchen" },
-    { name: "Study" },
-    { name: "Library" },
-    { name: "Billiard Room" },
-    { name: "Lounge" },
-    { name: "Ballroom" },
-    { name: "Hall" },
-    { name: "Spa" },
-    { name: "Living Room" },
-    { name: "Observatory" },
-    { name: "Theater" },
-    { name: "Guest House" },
-    { name: "Patio" }
 ]
-
-// Weapons Array
-
-const weaponsArray = [
-    {
-        name: "rope",
-        weight: 10,
-    },
-
-    {
-        name: "knife",
-        weight: 8
-    },
-
-    {
-        name: "candlestick",
-        weight: 2
-    },
-
-    {
-        name: "dumbbell",
-        weight: 30
-    },
-
-    {
-        name: "poison",
-        weight: 2
-    },
-
-    {
-        name: "axe",
-        weight: 15
-    },
-
-    {
-        name: "bat",
-        weight: 13
-    },
-
-    {
-        name: "trophy",
-        weight: 25
-    },
-
-    {
-        name: "pistol",
-        weight: 2
-    }
-
-]
-
-
-// ITERATION 2
-//array[Math.floor(Math.random() * array.length)];
-
-function selectRandom(min, max,) {
-
-
-
-    const random1 = weaponsArray[Math.floor(Math.random(min - max) * Array.length)]
-    const random2 = suspectsArray[Math.floor(Math.random() * Array.length)]
-    const random3 = roomsArray[Math.floor(Math.random() * Array.length)]
-
-    return [random1 + random2 + random3]
-
-}
-
-function pickMystery() { }
-
-
-// ITERATION 3
-
-function revealMystery() { }
-
