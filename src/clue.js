@@ -100,49 +100,43 @@ const weaponsArray = [
 
 // ITERATION 2
 //Math.floor(Math.random() * room.length)
-function selectRandom(room) {
-  let randomNum = Math.ceil(Math.random() * room.length);
+function selectRandom(arr) {
+  let randomValue = Math.floor(Math.random() * arr.length);
+  //console.log(randomNum);
 
-  if (room.length === 0) {
-    return undefined;
-  } else if (room.length === 1) {
-    return `${room}`;
-  }
+  let randomElem = arr[randomValue];
+  //   console.log(randomElem);
+  return randomElem;
 }
 
 function pickMystery() {
   const randomIndex = Math.floor(Math.random() * suspectsArray.length);
-  let randomSuspect = suspectsArray[randomIndex];
-  let randomWeapon = weaponsArray[randomIndex];
-  let randomRoom = roomsArray[randomIndex];
+  let randomSuspectArr = suspectsArray[randomIndex];
+  let randomWeaponArr = weaponsArray[randomIndex];
+  let randomRoomArr = roomsArray[randomIndex];
   let myObj = {
-    suspect: randomSuspect,
-    weapon: randomWeapon,
-    room: randomRoom,
+    suspect: randomSuspectArr,
+    weapon: randomWeaponArr,
+    room: randomRoomArr,
   };
-
+  console.log(myObj);
   return myObj;
 }
 
 // ITERATION 3
 
 function revealMystery() {
-  //   const randomIndex = Math.floor(Math.random() * weaponsArray.length);
-  //   let randomSuspect = suspectsArray[randomIndex];
-  //   let randomSuspectLastName = randomSuspect.lastName;
-  //   let randomWeapon = weaponsArray[randomIndex].name;
-  //   let randomRoom = roomsArray[randomIndex].name;
-  //   console.log(
-  //     `${randomSuspect.firstName} ${randomSuspectLastName} killed Mr. Boddy using the ${randomWeapon} in the ${randomRoom}`
-  //   );
-  //   return `${randomSuspect.firstName} ${randomSuspectLastName} killed Mr. Boddy using the ${randomWeapon} in the ${randomRoom}`;
-
   let envelope = pickMystery();
-  console.log(
-    envelope.room,
-    envelope.suspect.firstName,
-    envelope.suspect.lastName,
-    envelope.weapon
-  );
-  return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr.Boddy using the ${envelope.weapon} in the ${envelope.room} `;
+  //   console.log(
+  //     envelope.room.name,
+  //     envelope.suspect.firstName,
+  //     envelope.suspect.lastName,
+  //     envelope.weapon.name
+  //   );
+  let firstName = envelope.suspect.firstName;
+  let lastName = envelope.suspect.lastName;
+  let weapon = envelope.weapon.name;
+  let place = envelope.room.name;
+
+  return `${firstName} ${lastName} killed Mr.Boddy using the ${weapon} in the ${place}!`;
 }
