@@ -125,18 +125,24 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {
-  let envelope = pickMystery();
+function revealMystery(envelope) {
+  // let envelope = pickMystery();
   //   console.log(
   //     envelope.room.name,
   //     envelope.suspect.firstName,
   //     envelope.suspect.lastName,
   //     envelope.weapon.name
   //   );
+  // let firstName = envelope.suspect.firstName;
+  // let lastName = envelope.suspect.lastName;
+  // let weapon = envelope.weapon.name;
+  // let place = envelope.room.name;
+
+  // return `${firstName} ${lastName} killed Mr.Boddy using the ${weapon} in the ${place}!`;
+
   let firstName = envelope.suspect.firstName;
   let lastName = envelope.suspect.lastName;
   let weapon = envelope.weapon.name;
   let place = envelope.room.name;
-
-  return `${firstName} ${lastName} killed Mr.Boddy using the ${weapon} in the ${place}!`;
+  return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${place}!`;
 }
