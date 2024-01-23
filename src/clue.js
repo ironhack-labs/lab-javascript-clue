@@ -90,7 +90,30 @@ const roomsArray = [{
 
 // Weapons Array
 
-const weaponsArray = [];
+const weaponsArray = [{
+    name: [
+        {rope: {
+            weight: 10},
+        knife: {
+            weight: 8},
+        candlestick: {
+            weight: 2},
+        dumbbell: {
+            weight: 30},
+        poison: {
+            weight: 2},
+        axe: {
+            weight: 15},
+        bat: {
+            weight: 13},
+        trophy: {
+            weight: 25},
+        pistol: {
+            weight: 20},
+        }
+    ]
+    }
+];
 
 
 // ITERATION 2
