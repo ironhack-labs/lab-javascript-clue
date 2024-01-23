@@ -68,7 +68,25 @@ const suspectsArray = [
 
 // Rooms Array
 
-const roomsArray = [];
+const roomsArray = [{
+    name: {[
+        'Dining Room',
+        'Conservatory',
+        'Kitchen',
+        'Study',
+        'Library',
+        'Billiard Room',
+        'Lounge',
+        'Ballroom',
+        'Hall',
+        'Spa',
+        'Living Room',
+        'Observatory',
+        'Theater',
+        'Guest House',
+        'Patio'
+    ]}
+];
 
 // Weapons Array
 
