@@ -33,17 +33,17 @@ const suspectsArray = [
     description: 'Billionaire video game designer',
     image: 'https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg',
     color: 'purple'
-    }   
+    },  
     
     {
     firstName: 'Kasandra',
     lastName: 'Scarlet',
     occupation: 'Actor',
     age: 31,
-    description: 'She is an A-list movie star with a dark past'
+    description: 'She is an A-list movie star with a dark past',
     image: 'https://www.radiotimes.com/uploads/images/Original/111967.jpg',
     color: 'red'
-    }
+    },
     
     {
     firstName: 'Eleanor',
@@ -53,7 +53,7 @@ const suspectsArray = [
     description: 'She is from a wealthy family and uses her status and money to earn popularity',
     image: 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
     color: 'blue'
-    }
+    },
     
     {
     firstName: 'Jack',
@@ -85,8 +85,9 @@ const roomsArray = [{
         'Theater',
         'Guest House',
         'Patio'
-    ]}
-];
+    ]
+},ç
+]
 
 // Weapons Array
 
@@ -118,7 +119,7 @@ const weaponsArray = [{
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(array) {}
 
 function pickMystery() {}
 
