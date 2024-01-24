@@ -100,19 +100,19 @@ function selectRandom(array) {
     return array[Math.floor(Math.random() * array.length)];
   }
 
-  function pickMystery() {
+function pickMystery() {
     const mystery = {
-    suspect: "",
-    room: "",
-    weapon: ""
-  }
-  mystery.suspect = selectRandom(suspectsArray)
-  mystery.weapon = selectRandom(weaponsArray)
-  mystery.room = selectRandom(roomsArray)
+      suspect: selectRandom(suspectsArray),
+      weapon: selectRandom(weaponsArray),
+      room: selectRandom(roomsArray)
+    }
     return mystery
 }
-
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(envelope) {
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}`
+  }
+  
+  console.log(revealMystery(pickMystery()))
 
