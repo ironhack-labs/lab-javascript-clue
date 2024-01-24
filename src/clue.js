@@ -180,11 +180,49 @@ function pickMystery() {
   return { suspect, weapon, room };
 }
 
-/*Declare a function named pickMystery that takes no arguments
- and returns an object with three properties: suspect, weapon and room, 
- each holding as a value a card of that specific type. You can 
-get a random card of each type by calling selectRandom on each card stack.*/
+console.log(selectRandom(suspectsArray));
+console.log(selectRandom(weaponsArray));
+console.log(selectRandom(roomsArray));
+
+console.log(pickMystery());
 
 // ITERATION 3
 
-function revealMystery() {}
+//   return (
+//     "" +
+//     envelope.suspect.firstName +
+//     " " +
+//     envelope.suspect.lastName +
+//     " killed Mr.Boddy using the " +
+//     envelope.weapon.name +
+//     " in the " +
+//     envelope.room.name +
+//     "!"
+//   );
+// return ("" + envelope.suspect.firstName + " " + envelope.suspect.lastName + " killed Mr.Boddy using the " + envelope.weapon.name + " in the " + envelope.room.name + "!");
+//   let solution = `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr.Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+//   return solution;
+// let message =
+//      "" +
+//      envelope.suspect.firstName +
+//      " " +
+//      envelope.suspect.lastName +
+//      " killed Mr.Boddy using the " +
+//      envelope.weapon.name +
+//      " in the " +
+//      envelope.room.name +
+//      "!"
+//    ;
+
+//    return message;
+function revealMystery(envelope) {
+  return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+}
+
+/*At last, we are ready to reveal the mystery.
+
+Declare a function named revealMystery that receives an envelope object
+ (with the shape of the object returned by pickMystery) as the single argument
+  and returns a revealing message in the following format:
+
+<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!*/
