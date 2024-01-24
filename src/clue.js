@@ -165,9 +165,25 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(array) {
+  // If empty, return undefined. Otherwise, random number between 0 and array length
+  return array.length == 0
+    ? undefined
+    : array[Math.floor(Math.random() * array.length)];
+}
 
-function pickMystery() {}
+function pickMystery() {
+  // Select random suspect, weapon and room. Return object
+  const suspect = selectRandom(suspectsArray);
+  const weapon = selectRandom(weaponsArray);
+  const room = selectRandom(roomsArray);
+  return { suspect, weapon, room };
+}
+
+/*Declare a function named pickMystery that takes no arguments
+ and returns an object with three properties: suspect, weapon and room, 
+ each holding as a value a card of that specific type. You can 
+get a random card of each type by calling selectRandom on each card stack.*/
 
 // ITERATION 3
 
