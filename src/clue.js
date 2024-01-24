@@ -64,11 +64,6 @@ const suspectsArray = [
   },
 ];
 
-console.log(typeof suspectsArray);
-console.log(suspectsArray.length);
-console.log(Array.isArray(suspectsArray));
-
-/*first name, last name, occupation, age, description, image and colo*/
 // Rooms Array
 
 const roomsArray = [
@@ -115,12 +110,9 @@ const roomsArray = [
     name: "Boudoir",
   },
   {
-    name: "Harem",
+    name: "Sauna",
   },
 ];
-
-console.log(typeof roomsArray);
-console.log(roomsArray.length);
 
 // Weapons Array
 
@@ -180,49 +172,8 @@ function pickMystery() {
   return { suspect, weapon, room };
 }
 
-console.log(selectRandom(suspectsArray));
-console.log(selectRandom(weaponsArray));
-console.log(selectRandom(roomsArray));
-
-console.log(pickMystery());
-
 // ITERATION 3
 
-//   return (
-//     "" +
-//     envelope.suspect.firstName +
-//     " " +
-//     envelope.suspect.lastName +
-//     " killed Mr.Boddy using the " +
-//     envelope.weapon.name +
-//     " in the " +
-//     envelope.room.name +
-//     "!"
-//   );
-// return ("" + envelope.suspect.firstName + " " + envelope.suspect.lastName + " killed Mr.Boddy using the " + envelope.weapon.name + " in the " + envelope.room.name + "!");
-//   let solution = `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr.Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
-//   return solution;
-// let message =
-//      "" +
-//      envelope.suspect.firstName +
-//      " " +
-//      envelope.suspect.lastName +
-//      " killed Mr.Boddy using the " +
-//      envelope.weapon.name +
-//      " in the " +
-//      envelope.room.name +
-//      "!"
-//    ;
-
-//    return message;
 function revealMystery(envelope) {
-  return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+  return `${firstName} ${lastName} killed Mr.Boddy using the ${weapon} in the ${place}!`;
 }
-
-/*At last, we are ready to reveal the mystery.
-
-Declare a function named revealMystery that receives an envelope object
- (with the shape of the object returned by pickMystery) as the single argument
-  and returns a revealing message in the following format:
-
-<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!*/
