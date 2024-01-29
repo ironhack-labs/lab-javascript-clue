@@ -21,15 +21,7 @@ const suspectsArray= [
     image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg" ,
     color: "white",
 },
-{
-    firstName: "Victor",
-    lastName: "Plum",
-    occupation: "Designer",
-    age: 22,
-    description: "Billionaire video game designer",
-    image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg ",
-    color: "purple" 
-},
+
 {
     firstName: "Victor",
     lastName: "Plum",
@@ -107,12 +99,34 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(array) {
+    
+    if (array.length===0){
+        return undefined;
+    }
+    const randomCard=Math.floor(Math.random()* array.length);
+    return array[randomCard]
+}
 
-function pickMystery() {}
+console.log(selectRandom(suspectsArray).firstName)
+
+function pickMystery() {
+    return {
+        suspect: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray)
+    }
+}
 
 
 // ITERATION 3
+let envelope={
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray)
+};
 
-function revealMystery() {}
+function revealMystery(envelope) {
+    return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
+}
 
