@@ -14,7 +14,7 @@ body { overflow-y: scroll; }
   margin-left: 10px;
 }
 
-.jasmine_html-reporter { background-color: #eee; padding: 5px; margin: -8px; font-size: 11px; font-family: Monaco, "Lucida Console", monospace; line-height: 14px; color: #333; }
+.jasmine_html-reporter { background-color: #888bb8; padding: 5px; margin: -8px; font-size: 11px; font-family: Monaco, "Lucida Console", monospace; line-height: 14px; color: #333; }
 .jasmine_html-reporter a { text-decoration: none; }
 .jasmine_html-reporter a:hover { text-decoration: underline; }
 .jasmine_html-reporter p, .jasmine_html-reporter h1, .jasmine_html-reporter h2, .jasmine_html-reporter h3, .jasmine_html-reporter h4, .jasmine_html-reporter h5, .jasmine_html-reporter h6 { margin: 0; line-height: 14px; }
@@ -26,7 +26,7 @@ body { overflow-y: scroll; }
 .jasmine_html-reporter .jasmine-version { color: #aaa; }
 .jasmine_html-reporter .jasmine-banner { margin-top: 14px; }
 .jasmine_html-reporter .jasmine-duration { color: #fff; float: right; line-height: 28px; padding-right: 9px; }
-.jasmine_html-reporter .jasmine-symbol-summary { overflow: hidden; *zoom: 1; margin: 14px 0; }
+.jasmine_html-reporter .jasmine-symbol-summary { overflow: hidden; zoom: 1; margin: 14px 0; }
 .jasmine_html-reporter .jasmine-symbol-summary li { display: inline-block; height: 10px; width: 14px; font-size: 16px; }
 .jasmine_html-reporter .jasmine-symbol-summary li.jasmine-passed { font-size: 14px; }
 .jasmine_html-reporter .jasmine-symbol-summary li.jasmine-passed:before { color: #007069; content: "\02022"; }
