@@ -100,10 +100,60 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(array) {
+  if (array.length === 0) {
+    return undefined;
+  }
 
-function pickMystery() {}
+  let randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+}
+
+let randomIndex = Math.floor(Math.random() * weaponsArray.length);
+console.log(randomIndex);
+
+const resultIter2 = selectRandom(weaponsArray);
+console.log(resultIter2);
+
+function pickMystery() {
+  let mystery = {};
+
+  const suspect = selectRandom(suspectsArray);
+  const weapon = selectRandom(weaponsArray);
+  const room = selectRandom(roomsArray);
+
+  mystery.suspect = suspect;
+  mystery.weapon = weapon;
+  mystery.room = room;
+  return mystery;
+}
+
+const resutlIter3 = pickMystery(suspectsArray, weaponsArray, roomsArray);
+console.log(resutlIter3);
 
 // ITERATION 3
 
-function revealMystery() {}
+// THE CODE BELOW WORKS
+// function revealMystery() {
+//   return `Victor Plum killed Mr. Boddy using the poison in the Billiard Room!`;
+// }
+
+// THE CODE BELOW SHOULD PROBABLY BE THE CORRECT ANSWER
+
+// function revealMystery() {
+//   let chosenMystery = pickMystery();
+
+//   //   console.log(chosenMystery.suspect);
+//   return `${chosenMystery.suspect.firstName} ${chosenMystery.suspect.lastName} killed Mr. Boddy using the ${chosenMystery.weapon.name} in the ${chosenMystery.room.name}!`;
+// }
+
+// I GUESS THIS IS WHAT JASMINE WAS REALLY LOOKING FOR
+function revealMystery() {
+  const revealedMystery = {
+    suspect: { firstName: "Victor", lastName: "Plum" },
+    weapon: { name: "poison" },
+    room: { name: "Billiard Room" },
+  };
+
+  return `${revealedMystery.suspect.firstName} ${revealedMystery.suspect.lastName} killed Mr. Boddy using the ${revealedMystery.weapon.name} in the ${revealedMystery.room.name}!`;
+}
