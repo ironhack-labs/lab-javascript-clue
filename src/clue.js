@@ -161,7 +161,3 @@ function pickMystery() {
 function revealMystery(envelop) {
   return `${envelop.suspect.firstName} ${envelop.suspect.lastName} killed Mr. Boddy using the ${envelop.weapon.name} in the ${envelop.room.name}!`
 }
-
-const mystery = pickMystery();
-console.log(revealMystery(mystery));
-
