@@ -150,7 +150,6 @@ describe('Function "pickMystery" - Pick a random mystery', () => {
     const mistery = pickMystery();
 
     expect(Object.keys(mistery).length).toBe(3);
-
     expect(Object.keys(mistery)).toContain('suspect');
     expect(Object.keys(mistery)).toContain('weapon');
     expect(Object.keys(mistery)).toContain('room');
