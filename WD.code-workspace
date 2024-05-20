@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "week3"
+	},
+	"extensions": {
+		"recommendations": [
+			"github.copilot-chat",
+			"github.vscode-pull-request-github"
+		]
+	}
+}
