@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #0b0544 0%, #09636e 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  background: #282c34;
+  color: white;
+  padding: 10px 20px;
+  height: 5vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main {
+  height: 90vh;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+.clue {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #282c34;
+  border-radius: 8px;
+  background: #fcfdff;
+  color: #282c34;
+  width: 90%;
+  height: 33%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+  width: calc((90% - 10px) / 3);
+  height: 45%;
+  border-radius: 8px;
+  box-shadow: #282c34 10px 10px 0px;
+  border-left: #09636e 2px solid;
+  border-top: #09636e 2px solid;
+  opacity: 50%;
+  color: #282c34;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: #282c34 5px 5px 0px;
+  border: none;
+  opacity: 100%;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.g {
+}
+
+.suspect-img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 10%;
+}
+
+.room {
+  width: calc((100% - 80px) / 2);
+}
+
+.room-img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 10%;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border: 1px solid #282c34;
+  border-radius: 8px;
+}
+
+footer {
+  background: #282c34;
+  color: white;
+  padding: 10px 20px;
+  height: 5vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
