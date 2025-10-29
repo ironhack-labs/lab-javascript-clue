@@ -162,7 +162,14 @@ function selectRandom(cardRandom) {
     return cardRandom[Math.floor(Math.random() * cardRandom.length)];
 }
 
-function pickMystery() {}
+function pickMystery() {
+    return card = 
+        {
+            'suspect': selectRandom(suspectsArray),
+            'weapon': selectRandom(weaponsArray),
+            'room': selectRandom(roomsArray)
+        };
+}
 
 
 // ITERATION 3
